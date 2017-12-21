@@ -1,0 +1,2 @@
+﻿content-sensitive   目录关联
+Full text search    全文搜索
