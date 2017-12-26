@@ -1,3 +1,12 @@
-﻿content-sensitive   目录关联
-Full text search    全文搜索
-palettes            调板
+﻿content-sensitive               目录关联
+Full text search                全文搜索
+palettes                        调板
+object                          对象（特指模型对象，根据需要可以译作“物体”）
+Constructive Solid Geometry     构造几何实体
+Polygon Modeling                多边形建模
+Sculpting                       雕刻
+Generators                      生成器
+SDS (Subdivision Surfaces)      细分曲面
+Metaballs                       融球
+Boole                           布尔
+Deformation                     变形器

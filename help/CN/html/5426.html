@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>视图和视口</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "5426"-->
+		<!--VATER_ID "1001"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "Views and Viewports"-->
+		<!--APPS ""-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="1000.html" target="_self">手册</a></span> <span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Views and Viewports",""--><p><span class="HL_group">视图和视口</span></p><p></p>
+<p><!--INDEX "1","3D View",""--></p>
+<p><!--INDEX "1","3D Display",""--></p>
+<p><!--INDEX "1","Display",""--></p>
+<p><!--INDEX "7","3D View",""--><!--PAGE_COMMAND "VIEW_PANEL"--></p>
+<p><a href="45030.html" target="">选项</a><br><a href="5852.html" target="">查看</a><br><a href="5858.html" target="">摄像机</a><br><a href="5860.html" target="">显示</a><br><a href="11082.html" target="">过滤器</a><br><a href="5861.html" target="">面板</a><br><a href="5593.html" target="">The HUD</a><br></p>
+<p>你可以打开任意多个视图面板，每个视图面板有它自己的显示设置。</p>
+<p><!-- ***** Vorschaublock ********** --><div id="004762_pre" style="display: block; width: 300px; float: left; height=1%;">	<a href="javascript:dummy();" onclick="change('004762_pre');change('004762');" style= "float: left;"><img src="../../files/lupe.gif" align="left" border="0"></a>	<a href="javascript:dummy();" onclick="change('004762_pre');change('004762');">	       <img src="../pics/004762.jpg" alt="" width="300" height="230"  border="0" hspace="0" >	     	</a>		<span class="caption"></span></div><div id="004762" style="display: none;z-index:0; width: 1000px; float: left; ">		<a href="javascript:dummy();" onclick="change('004762_pre');change('004762');" style= "float: left;"><img src="../../files/close.gif" align="left" border="0"></a>		<a href="javascript:dummy();" onclick="change('004762_pre');change('004762');"><img src="../pics/004762.jpg" border="0" width="1000" height="767" ></a>		<span class="caption"></span></div><p> </p></p>
+<p>一个视图面板最多可以显示四个视口（一个场景的视图），每个视口都有它自己的显示设置。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>如果摄像机和显示窗中的某个点之间的距离超过100万个单位，视口显示会出错。</div></p>
+<p><img class="pic" src="../pics/012858.jpg" alt="" width="94" height="58"  border="0" hspace="0" ></p>
+<p>At the Viewport’s upper right edge are four icons. If you click and hold on one of the symbols you can move or rotate the camera sideways or in the direction of view - independent of the currently active mode (Tablet users should activate the <span class="command_value">Graphics Tablet</span> option in the <span class="command">Preferences</span> menu’s <span class="command">Input Devices</span> menu). The symbol farthest to the right is for switching the active view.</p>
+<p><RELEASE_140 Orthogonal views can be rotated around the orthographic axis.></p>
+<p>Viewports with an orthogonal view can also be rotated around their orthographic axis The camera will rotate around its angle of view. Simultaneously pressing the <nobr><span class="key">Shift</span></nobr> key will rotate the camera in 15° increments.</p>
+<p></RELEASE_140></p>
+<p>All details regarding interactive camera navigation can be found under <a href="PREFSNAVIGATION-PREF_NAVIGATION_MAIN_GROUP.html#PREF_NAVIGATION_CAMERA" target="_self"><span class="text_id">Camera Mode</span></a>.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Optimizing the display speed in the Viewport","hl_1"--><p><span class="HL_1">优化视口的显示速度</span></p>
+<p><!--INDEX "1","Refresh speed",""--></p>
+<p><!--INDEX "1","Editor speed",""--></p>
+<p><!--INDEX "1","Viewport speed",""--></p>
+<p><!--INDEX "1","Speed optimization",""--></p>
+<p>A scene that contains many elements can be slow to navigate in the viewport. So, what can be done to remedy this?</p>
+<p><ul><li> Is <a href="PREFSOPENGL-PREF_OPENGL_MAIN_GROUP.html" target="">OpenGL shading</a> active?<br>Almost every state-of-the-art graphics card can handle OpenGL shading.<br><br></ul><p><ul><li> Does your scene contain many generators that must be recalculated each time the view in the viewport is changed?<br>CINEMA 4D works the fastest with simple polygons (i.e. those that have not been deformed, subdivided, etc.). Generators include Subdivision Surfaces, Extrude object, parametric primitives, instances, Cloner Objects, etc. All generators can be converted to polygonal objects by applying the <a href="5667.html" target="">Current State to Object</a> or <a href="5664.html" target="">Make Object Editable</a> commands. Subdivision Surface and other Generators can simply be temporarily deactivated (click on the green check mark). Remember that hiding elements will not necessarily help because, internally, the objects must still be rendered. If, for example, you use a Cloner Object to arrange objects around a sphere, this sphere, even though it is hidden, must nevertheless be calculated internally so the Clones can be arranged around it.<br><br></ul><p><ul><li> Keep the number of polygons at a minimum.<br>You can lame the viewport view by creating a single object that contains a million points. Surfaces not visible in the scene do not have to be subdivided very much. Optimizing the number of polygons your objects contain will not only improve your viewport refresh speed, it can also drastically reduce render times!<br><br></ul><p><ul><li> Avoid having too many objects in your scene.<br>CINEMA 4D is optimized for displaying a fewer number of objects with a high polygon count. A scene that contains many objects will slow down the viewport view! Thousands of Null Objects can slow down the viewport view, just as a very complex hierarchy. It may, though, be possible to collapse this hierarchy into a single object. Objects duplicated via instancing or using the Cloner Object will also slow the viewport view much more than a single object made up of these instances or clones (<a href="5666.html" target="">Connect</a>. <br>Let’s take, for example, a house that was imported from a CAD program that has each element as a separate object. This would be a worst case scenario for CINEMA 4D. Optimize such scenes by grouping like objects. For example, 120 windows and 120 window panes can be combined into 2 objects (windows and window panes). The <a href="5666.html" target="">Connect</a> command will work wonders here. Make sure you allow enough time in your workflow for optimizing such a scene. This optimization step is just as important as all subsequent steps you take to finish your scene.<br><br></ul><p><ul><li> Experiment with the various display modes - in particular with the <a href="45030.html#PLUGIN_CMD_13859" target="">Level of Detail</a> setting. The <span class="command">less precise</span> the level of detail, the <span class="command">faster</span> the viewport view will be.<br><br></ul><p><ul><li> The <a href="TDISPLAY.html" target="">display</a> mode can also be defined for object layers via the Display tag. This lets you reduce the effect resource gobbling objects may have.<br><br></ul><p><ul><li> The more objects or elements you can see in your scene, the slower the display will be. Don’t forget that objects can be hidden. Various types of objects and other elements can also be hidden in the viewport’s <span class="command">Filter</span> menu.<br><br></ul><p><ul><li> Not all objects have to be viewed in high quality in the viewport. The display quality can be reduced in the viewport presets <a href="DBASEDRAW-BASEDRAW_GROUP_DISPLAY.html#BASEDRAW_DATA_DISPLAYINACTIVE_ENABLED" target="">Inactive Object</a> Tab, i.e., only the active object can be viewed in high quality and all other objects can be displayed as a cube or other primitive.<br><br></ul><p><ul><li> Complex XPresso Expressions are always being calculated. If a particular Expression is not really required while working with your scene simply deactivate the corresponding XPresso tag.<br><br></ul><p></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
