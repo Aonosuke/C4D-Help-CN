@@ -10,3 +10,6 @@ SDS (Subdivision Surfaces)      细分曲面
 Metaballs                       融球
 Boole                           布尔
 Deformation                     变形器
+collapse                        坍塌（对象的 C 操作，对应 3ds max 的塌陷）
+Level of Detail                 细节级别
+    less precise                较不精确
