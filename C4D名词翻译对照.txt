@@ -1,4 +1,5 @@
-﻿content-sensitive               目录关联
+﻿Tips                            提示
+content-sensitive               目录关联
 Full text search                全文搜索
 palettes                        调板
 object                          对象（特指模型对象，根据需要可以译作“物体”）
@@ -10,6 +11,15 @@ SDS (Subdivision Surfaces)      细分曲面
 Metaballs                       融球
 Boole                           布尔
 Deformation                     变形器
-collapse                        坍塌（对象的 C 操作，对应 3ds max 的塌陷）
+Collapse                        坍塌（对象的 C 操作，对应 3ds max 的塌陷）
 Level of Detail                 细节级别
-    less precise                较不精确
+Picture Viewer                  图片查看器
+Frame All                       框显全部
+Frame Geometry                  框显几何体
+Frame Default                   恢复默认场景
+Frame Selected Elements         框显选取元素
+Frame Selected Objects          框显选择中的对象
+Active Objects                  活动对象
+Film Move                       镜头移动
+Film Magnify                    镜头放大
+Film Zoom                       镜头缩放
