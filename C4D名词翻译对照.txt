@@ -21,5 +21,9 @@ Frame Selected Elements         框显选取元素
 Frame Selected Objects          框显选择中的对象
 Active Objects                  活动对象
 Film Move                       镜头移动
-Film Magnify                    镜头放大
-Film Zoom                       镜头缩放
+Film Magnify                    镜头缩放
+Film Zoom                       镜头推移
+Customize Commands Manager      自定义命令
+Global parameter                全局参数
+Local parameter                 局部参数
+Normals                         法线（特殊名词）
