@@ -28,3 +28,4 @@ Global parameter                全局参数
 Local parameter                 局部参数
 Normals                         法线（特殊名词）
 Isoparm                         等参线
+Backface culling                背面忽略
