@@ -29,3 +29,7 @@ Local parameter                 局部参数
 Normals                         法线（特殊名词）
 Isoparm                         等参线
 Backface culling                背面忽略
+SDS Cage                        细分曲面框架（指被细分曲面前的对象）
+Safe frame                      安全范围
+Render Safe                     渲染安全框
+Film Aspect                     胶片宽高比
