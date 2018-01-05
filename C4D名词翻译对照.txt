@@ -1,4 +1,5 @@
-﻿Tips                            提示
+﻿Viewer                          视图/查看（根据软件图形界面具体使用的名称）
+Tips                            提示
 content-sensitive               目录关联
 Full text search                全文搜索
 palettes                        调板
