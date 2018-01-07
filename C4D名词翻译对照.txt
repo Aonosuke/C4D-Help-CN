@@ -35,3 +35,6 @@ Safe frame                      安全范围
 Render Safe                     渲染安全框
 Film Aspect                     胶片宽高比
 Antialiasing                    抗锯齿
+Frame Buffer                    帧缓冲区（暂定）
+Tile                            图块（暂定）
+Specular                        镜面（暂定）
