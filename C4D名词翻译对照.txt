@@ -38,3 +38,5 @@ Antialiasing                    抗锯齿
 Frame Buffer                    帧缓冲区（暂定）
 Tile                            图块（暂定）
 Specular                        镜面（暂定）
+Selection Assistant             选择助手（暂定）
+Selection Object                选集对象
