@@ -2,7 +2,7 @@
 Tips                            提示
 content-sensitive               目录关联
 Full text search                全文搜索
-palettes                        调板
+palettes                        面板
 object                          对象（特指模型对象，根据需要可以译作“物体”）
 Constructive Solid Geometry     构造几何实体
 Polygon Modeling                多边形建模
