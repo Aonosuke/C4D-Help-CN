@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>自定义命令管理器</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "5224"-->
+		<!--VATER_ID "5220"-->
+		<!--REIHENFOLGE "4"-->
+		<!--TITLE "自定义命令管理器"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5215.html" target="_self">配置</a></span> <span class="link_back"><a href="5220.html" target="_self">图形用户界面</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","自定义命令管理器",""--><p><span class="HL_group">自定义命令管理器</span></p><p></p>
+<p><!--INDEX "7","自定义命令…",""--><!--PAGE_COMMAND "PLUGIN_Cmd_300000186"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_300000186.png" alt="" height="24" width="24" border="1"> </p>
+<p><!--INDEX "7","命令管理器",""--><!--PAGE_COMMAND "DIALOG_COMMANDMANAGER"--></p>
+<p><!--INDEX "1","命令管理器",""--></p>
+<p><!--INDEX "1","键盘快捷键",""--></p>
+<p>自定义命令管理器包含所有的 CINEMA 4D 命令。命令面板中的命令可以链接到<a href="5223.html" target="">图标面板</a>，<a href="5225.html" target="">菜单</a>甚至直接链接到编辑器视图中的 HUD，还用它可以设置键盘<span class="command">快捷键</span>。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>键盘快捷键和热键之间存在一点不同：<ul></p>
+<p><li> 键盘快捷键：按键盘组合键来执行一个特定的命令。</li>
+<li> 热键：当用鼠标操作时必须按住的键（例如，按住数字键<span class="command">1</span>来移动摄像机）。</div></li></ul><p></p>
+<p><div class="image_full" style="max-width:750px"><img  src="../pics/012865.jpg" ><span class="caption"></span></div></p>
+<p>自定义命令管理器由三个部分组成：<ul></p>
+<p><li> 要添加到给定面板所需要的物件。</li>
+<li> 所有命令的列表，包括两个帮助筛选命令的过滤器。</li>
+<li> 创建相应的键盘快捷键所需要的物件。</li></ul><p></p>
+<p><div class="image_full" style="max-width:683px"><img  src="../pics/012866.jpg"  ><span class="caption"></span></div></p>
+<p>如果你想要将一个命令分配到指定的面板，只需要把这个命令拖放到相应的面板中。<span class="command">图标分隔符</span>和<span class="command">组分隔条</span>按钮可以拖放到面板中，放置到两个命令之间，用来在视觉上分隔命令。</p>
+<p>如果你想重新排列或者删除（双击）面板命令或分隔符，启用<span class="command">编辑面板</span>选项，使用<span class="command">新建面板</span>会创建一个新的空白面板。</p>
+<p><RELEASE_115 New palette separator that allows left or right aligned icon groups.></p>
+<p>使用<span class="command">填充空白</span>命令可以创建一个空白区域（水平的或垂直的）它会根据各自图标组的尺寸自动缩放，但是最少会与<span class="command">组分隔条</span>一样大，这个工具可以创建左对齐或右对齐的图标组：</p>
+<p><div class="image_full" style="max-width:753px"><img  src="../pics/024500.jpg"  ><span class="caption"></span></div></p>
+<p></RELEASE_115></p>
+<p><p><div class="hint"><span class="HL_hint">注意：<br></span>不是所有的命令都有代表它的相应的图标。</div></p>
+<p>有两个可用的过滤器，每一个都会显示包含部分或全部输入到过滤器文本框中的关键词的命令，这两个过滤器可以用来快速定位命令或找到哪个键盘快捷键已经被占用。使用过滤器各自名字旁边的<span class="command">x</span>按钮会清除输入的关键词，这时所有的命令和键盘快捷键会被显示（前提是两个过滤器的搜索框都是空的）。</p>
+<p>除了命令的名称和图标（如果可用的话），命令列表中还包含给定命令所对应的特性的名称、指定的键盘快捷键、命令的类型和相应的帮助信息。因为这个列表只作为参考，只有键盘快捷键是可以被编辑的。在列表顶部的标题上点击则会相应地重新排列列表。</p>
+<p>当选择了一个命令时，分配给该命令的键盘快捷键会在命令管理器的左下方显示。</p>
+<p><RELEASE_105 Any Cinema 4D command can be dragged into the editor view as a HUD element.></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","作为 HUD 元素的命令","hl_1"--><p><span class="HL_2">作为 HUD 元素的命令</span></p>
+<p><div class="image_full" style="max-width:369px"><img  src="../pics/018413.jpg"  ><span class="caption"></span></div></p>
+<p>可以直接把命令拖放到编辑器视图中，命令及其图标（可以隐藏）则会显示在 HUD 中，在 HUD 元素上点击即可执行它。</p>
+<p><p><div class="hint"><span class="HL_hint">注意：<br></span>每个新创建的 CINEMA 4D 文件都会通过<a href="5595.html" target="">new.d4d</a>文件指定它自己的 HUD 命令。</div></p>
+<p></RELEASE_105></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","CINEMA 4D 中键盘快捷键的概念","hl_2"--><p><span class="HL_1">CINEMA 4D 中键盘快捷键的概念</span></p>
+<p>每个命令都可以指定任意数量的键盘快捷键，甚至同样的快捷键可以指定给不同的命令，在这种情况下会根据鼠标当前所在的窗口或当前激活的窗口来决定执行哪个命令（必须启用设置的界面菜单中的<span class="command">Shortcut</span>选项）。</p>
+<p>可用的全局和局部命令：<ul></p>
+<p><li> 全局命令可以在 CINEMA 4D 的任何地方生效（例如创建一个立方体）。</li>
+<li> 局部命令只有在如时间线工具栏等给定的管理器中可以使用（例如<span class="command">删除未用轨迹</span>命令在<span class="command">材质管理器</span>中是无效的）。</li></ul><p></p>
+<p>每个管理器都可以指定自己的一套快捷键，它可以独立于其他管理器或全局的快捷键（例如，Ctrl+P 可以执行一个特定的全局命令，也可以在时间线窗口中执行一个完全不同的命令）。</p>
+<p>全局快捷键可以将它们<span class="command">限制</span>到指定的管理器，以此限制它们的<span class="command">全局性</span>。只要鼠标移动到相应的窗口中，这些限制的的快捷键会有比使用了同样组合键的全局快捷键更高的优先级。</p>
+<p>如果这有点让你迷惑，这里有一个简单的示例：</p>
+<p>在默认情况下，数字键<span class="command">1</span> 是被指定给<span class="command">移动摄像机</span>命令的，数字键<span class="command">1</span>也可以限制到<span class="command">材质管理器</span>并执行一个不同的功能（如创建一个新材质）：</p>
+<p><ol><br><li> 在命令管理器中找到并选中<span class="command">新材质</span>命令。<br>
+<li> 在快捷键文本框中点击然后按下数字键<span class="command">1</span>，点击“限制到”按钮会打开一个管理器列表，在里面选择这个命令要限制到哪个管理器。<br>
+<li> 选择<span class="command">材质管理器</span>。<br>
+<li> 点击“添加”以完成，你已经为span class="command">材质管理器</span>创建了一个局部变量。<br></ol><p></p>
+<p>现在，<span class="command">当你的鼠标位于材质管理器中</span>时，如果按下数字键<span class="command">1</span>，就会创建一个新材质（也就是说会执行局部命令<span class="command">新材质</span>，而不是全局命令<span class="command">移动摄像机</span>）。</p>
+<p>在命令管理器的快捷键区有如下选项可用：</p>
+<p><!--INDEX "7","列表","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">列表</span></p>
+<p>显示所选择命令的快捷键列表，选择快捷键来编辑或删除它。</p>
+<p><!--INDEX "7","快捷键","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">快捷键</span></p>
+<p>在这个区域点击并按下相应的键盘按键来设置快捷键，按下的按键会在区域中显示，但是还没有被指定。单击<span class="command">添加</span>或<span class="command">指定</span>来指定选择的快捷键。快捷键可以是单个按键、多次按键组合（例如快速连续按 A键，则是 A~A，见下面）、与下列按键组合的一个键：<nobr><span class="key">Ctrl/Cmd</span></nobr>，<nobr><span class="key">Shift</span></nobr>，<nobr><span class="key">ALT</span></nobr> 或这三个键的组合。</p>
+<p>没有限制到特定管理器或使用了相同名称并限制到单个管理器的全局快捷键不能指定相同的组合键，如果指定了则会出现一个错误信息，点击<span class="command">确定</span>会覆盖已有的快捷键。</p>
+<p>可以使用下列鼠标快捷键：</p>
+<p><ul></p>
+<p><li> 鼠标中键   <span class="command">MMB</span></li><li> 鼠标第4按键   <span class="command">MX1</span></li><li> 鼠标第5按键   <span class="command">MX2</span></li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint">注意：<br></span>确保没有使用指定给操作系统的快捷键（例如<span class="command">Ctrl/Cmd+ALT+DEL</span>）！</p>
+<p>另外，用来创建对象（用来在层级中重新排列对象的<nobr><span class="key">Ctrl/Cmd</span></nobr>，<nobr><span class="key">Shift</span></nobr>，<nobr><span class="key">ALT</span></nobr>，另见<span class="command">对象</span>）的键盘快捷键仍然是保留的，例如，使用 Alt+U 来创建一个挤压对象，新的基础对象会作为当前选择对象（如一个样条）的父对象被创建。</div></p>
+<p><p><div class="hint"><span class="HL_hint">注意2：<br></span>快捷键可以保存到<span class="command">设置</span>目录中的 <span class="command">shortcuttable.res</span> 文件。</div></p>
+<p><!--INDEX "7","限制到","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">限制到</span></p>
+<p>从弹出的列表中选择给定的命令要限制到的管理器，如果这个命令要全局生效，请选择<span class="command">无</span>。如果列表中的选项是灰色的，表示选择的命令无法在指定管理器中生效（也就是说选择的命令已经是一个局部命令了）。</p>
+<p>你可以在这里找到<span class="command">工具覆盖</span>命令，它可以用一个热键覆盖一个一个已有的键盘快捷键。这个命令对作为用户的你没什关系，但是 MAXON 用它来调整已有的热键。</p>
+<p><RELEASE_130 New options in Customize Commands Manager.></p>
+<p><!--INDEX "7","选项模式","no_command_4"--><a id="no_command_4" name="no_command_4"></a>   <span class="c4d_menu_id">选项模式</span></p>
+<p>许多有多个选项的命令（主要在网格菜单中）可用这个模式，你可以用它定义当使用一个特定的命令时，是否应该在一个小对话窗口中显示，或者这个命令是否应该用当前定义的设置来执行（另见<a href="5604.html#opt" target="">网格</a>菜单）。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>这个功能只有通过热键执行命令时才会生效（如果通过图标或菜单执行，这个选项会被忽略），启用了<span class="command">选项</span>模式的热键会显示在热键列表中的方括号中。</div></p>
+<p></RELEASE_130></p>
+<p><!--INDEX "7","指定","no_command_5"--><a id="no_command_5" name="no_command_5"></a>   <span class="c4d_menu_id">指定</span></p>
+<p>点击<span class="command">指定</span>之后，当前选择的快捷键会被新的覆盖。</p>
+<p><!--INDEX "7","添加","no_command_6"--><a id="no_command_6" name="no_command_6"></a>   <span class="c4d_menu_id">添加</span></p>
+<p>将当前快捷键添加到已有的快捷键中，而不会覆盖选择的快捷键。</p>
+<p><!--INDEX "7","删除","no_command_7"--><a id="no_command_7" name="no_command_7"></a>   <span class="c4d_menu_id">删除</span></p>
+<p>删除当前选择的快捷键。</p>
+<p><!--INDEX "7","执行","no_command_8"--><a id="no_command_8" name="no_command_8"></a>   <span class="c4d_menu_id">执行</span></p>
+<p>执行当前选择的快捷键。你可以用这个选项查看是否在成千个可用的快捷键中选择了正确的。</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","层级快捷键","hl_3"--><p><span class="HL_1">层级快捷键</span></p>
+<p>层级快捷键是指依次按两个或以上的按键。当你按下第一个键时会弹出一个菜单，其中列出了你按下按键的层级中所有的命令，按下第二个键来执行想要的命令。你可以自由地配置层级快捷键。</p>
+<p><div class="image_full" style="max-width:900px"><img  src="../pics/001530.jpg"  ><span class="caption">指定一个层级快捷键（图左）然后执行快捷键(图右）。</span></div></p>
+<p>在下面的键盘快捷键框中点击并以此按下两个或以上的按键，每个键之间会加上一个波浪线（<span class="command">~</span>），点击<span class="command">指定</span>按钮。</p>
+
+  </div>  </div>
+</body>
+
+</html>
