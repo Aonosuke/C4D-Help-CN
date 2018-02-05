@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Extrude Object</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40781"-->
+		<!--VATER_ID "40780"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "Extrude Object"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="__tut_1002.html" target="_self">Tutorials</a></span> <span class="link_back"><a href="__tut_40480.html" target="_self">Mechanical Modeling Tutorial</a></span> <span class="link_back"><a href="__tut_40780.html" target="_self">Modeling with Splines and Generator Objects </a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Extrude Object",""--><p><span class="HL_group">Extrude Object</span></p><p></p>
+<p>Objects such as a 3D logo or text basically consist of only an outline whose depth has been increased in order to define a volume for the given object. This is exactly what the <a href="OEXTRUDE.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_5116.png" alt="" height="12" width="12"    border="0"><span class="text_command">Extrude</span></nobr></a> object does (<nobr><span class="menu">Create | Generator</span></nobr>). If a <span class="command">Spline Object</span> is made a Child object of this <span class="command">Extrude</span> object, the <span class="command">Spline object’s</span> shape will be thickened along a given axis. The axis, or axes, along which the <span class="command">Spline object</span> will be extruded is defined by the <span class="command">Extrude</span> object <a href="OEXTRUDE-ID_OBJECTPROPERTIES.html#EXTRUDEOBJECT_MOVE" target="_self"><span class="text_id">Movement</span></a> values. These values represent the <span class="command">X</span>, <span class="command">Y</span> and <span class="command">Z</span> axis, respectively (see image below).</p>
+<p><div class="image_full" style="max-width:825px"><img  src="../pics/__tut_024561.jpg"  ><span class="caption"></span></div></p>
+<p>The <span class="command">Extrude</span> object can modify multiple Splines at once. Make sure the <a href="OEXTRUDE-ID_OBJECTPROPERTIES.html#EXTRUDEOBJECT_HIERARCHIC" target="_self"><span class="text_id">Hierarchical</span></a> option is enabled when doing so. Each Child Spline will be extruded according to its own object axis (see image below).</p>
+<p><div class="image_full" style="max-width:607px"><img  src="../pics/__tut_024562.jpg"  ><span class="caption"></span></div></p>
+<p>Usually the extrusion is completed in a single step. If you want to increase the subdivision of the surfaces created, simply increase the <a href="OEXTRUDE-ID_OBJECTPROPERTIES.html#EXTRUDEOBJECT_SUB" target="_self"><span class="text_id">Subdivision</span></a> value in the <span class="command">Attribute Manager</span>. Increasing the subdivision can, for example, be useful if further modifications of the object are planned. Increasing the subdivision will not affect the extruded surfaces’ shape.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Caps","hl_1"--><p><span class="HL_1">Caps</span></p>
+<p>Cap surfaces can be generated, with or without a rounded edge on <a href="OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_START" target="_self"><span class="text_id">Start</span></a> and <a href="OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_END" target="_self"><span class="text_id">End</span></a> of the object, in order to give an object a more substantial look. The image below shows examples caps surfaces. Note how segments are interpreted in the areas of closed curves (holes), especially around the eyes and mouth. These must however be segments of a single spline object: If multiple separate splines are extruded together using the <span class="command">Hierarchical</span> option, the inner elements will not be recognized as holes.</p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/__tut_024563.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Caps surfaces with rounded edges (Fillets)","hl_2"--><p><span class="HL_1">Caps surfaces with rounded edges (Fillets)</span></p>
+<p>In the Caps tab’s menu, the Start and End parameters offer several options from which to choose for modeling edge and caps of your extruded surface. The <span class="command">Start</span> and <span class="command">End</span> parameters’ Steps values define the Fillet’s subdivision, i.e., the curvature’s accuracy. The <span class="command">Radius</span> values define the size of the Fillet, i.e., how large the curvature is. Furthermore, the<a href="OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_ROUNDING" target="_self"><span class="text_id">Fillet Type</span></a> menu offers various options for shaping the edge of your extruded surface. Experiment a little with the settings to see what all they do. For example, combining a Convex Fillet Type with a Step value of 1 will result in a linear transition between edge and cap surface.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Maintaining the contour","hl_3"--><p><span class="HL_1">Maintaining the contour</span></p>
+<p>A very important option that should be enabled when creating Fillets is the <span class="command">Constrain</span> option. If this option is not enabled, the Fillet’s radius will be added to the extruded object’s total radius, thus altering the actual shape of the Extrude object. Adding the Fillet’s radius to the overall radius prevents Fillets from penetrating surfaces in tight curves but also changes the shape of the Spline. Since changing the Spline’s shape is generally not desired, enabling the <a href="OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_CONSTRAIN" target="_self"><span class="text_id">Constrain</span></a> option will maintain the Spline’s shape and prevent the radius from being increased. However, you may have to make sure that no surfaces are penetrated and reduce the Fillet size if necessary.</p>
+<p>The image below shows the difference between an enabled and a disabled <span class="command">Constrain</span> option. The example on the left has the Constrain option disabled. You can see how the eye and mouth openings were enlarged and the overall size of all objects was increased compared to the example on the right, for which the <span class="command">Constrain</span> option was enabled. Enabling the Constrain option maintains the original Spline shape but can more easily lead to unwanted results with regard to the shape and cap surfaces. In the example on the right, for example, the area between the eye and the edge of the model is far too narrow. If the Radius value were increased any more, the surfaces would begin to intersect.</p>
+<p><div class="image_full" style="max-width:853px"><img  src="../pics/__tut_024564.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Subdividing cap surfaces","hl_4"--><p><span class="HL_1">Subdividing cap surfaces</span></p>
+<p>A wide variety of objects can be created using simple Spline curves in conjunction with <span class="command">Extrude</span> objects, for example gears, I-beams, 3D text and logos, or even a room that can be created by simply extruding a floor plan outline. However, not all objects are created with cap surfaces that are well-suited for subsequent modification. The example on the left of the image below shows how the caps surfaces of our object would look if the <span class="command">Type</span> option were set to <span class="command_value">N-gons</span>. Normally, this setting would result in a caps surface consisting of only a single polygon, as is the case with the circles to the left and right of the head. However, if the Splines contain segments that are interpreted as holes, no <span class="command_value">N-gons</span> can be generated. The <span class="command">Extrude</span> object will then automatically create triangles - with the resulting chaotic structure. You can also set the <span class="command">Type</span> option to <span class="command_value">Triangles</span> or <span class="command_value">Quadrangles</span>. Due to the holes in our model, this would only change the subdivision of the circles’ cap surfaces in our example, as is shown at the center of the image below. If the Generator object will subsequently be deformed, applying the <span class="command_value">N-gons</span>, <span class="command_value">Triangles</span> or <span class="command_value">Quadrangles</span> modes is generally not a good idea because the polygons will be too short and will stretch across the entire surface. Since deformations only affect points, unwanted constrictions and shadow casting will occur.</p>
+<p><div class="image_full" style="max-width:953px"><img  src="../pics/__tut_024565.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","Uniform cap surface subdivision","hl_5"--><p><span class="HL_1">Uniform cap surface subdivision</span></p>
+<p>To solve this problem, the surface will have to be subdivided into surface with a uniform size. This is shown at the right of the image above. To achieve this type of subdivision, select either <span class="command">Dreiecke</span> or <span class="command">Vierecke</span> mode and enable the <a href="OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_REGULAR" target="_self"><span class="text_id">Regular Grid</span></a> option. The only place irregularly-sized polygons are now generated is at the edges. These polygons are generally so small that they will not cause problems when the object is deformed. The newly-created points also let you deform the object locally, as shown in the image below. You can even twist or bend the entire <span class="command">Extrude</span> object.</p>
+<p><div class="image_full" style="max-width:960px"><img  src="../pics/__tut_024566.jpg"  ><span class="caption"></span></div></p>
+<p>Since the aforementioned options can be applied to any caps surfaces on all <span class="command">Generator / Spline object combinations</span> we will not reiterate them in the following.</p>
+<p><a href="__tut_40782.html#path" target="">Continue …</a></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

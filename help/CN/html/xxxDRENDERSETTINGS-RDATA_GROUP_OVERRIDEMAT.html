@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Edit Render Settings: Material Override</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54551"-->
+		<!--VATER_ID "32048"-->
+		<!--REIHENFOLGE "7"-->
+		<!--TITLE "Edit Render Settings: Material Override"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">Render Setting</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">Output</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">Save</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">Multi-Pass</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">Anti-Aliasing</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi_self">Material Override</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">Options</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">Stereoscopic</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Material Override</span></p><p></p>
+<p><PAGE_RELEASE_170 Replace all materials with a single material during rendering.></p>
+<p><div class="image_full" style="max-width:3200px"><img  src="../pics/039642.jpg"  ><span class="caption">From left to right: normal rendering; materials replaced with a gray material; transparency masked out; materials replaced by a texture (e.g., to quickly check the UV maps).</span></div></p>
+<p>Despite great-looking textures, it is sometimes necessary to render a Project very simply by replacing all existing materials with a simple one - also known as <span class="command_value">clay rendering</span>. This is exactly what the <span class="command">Material Override</span> function does. All materials in the Project will be replaced by a material defined here. Projection types defined in Texture tags will not be affected. You can exclude individual materials from being replaced, just as you can prevent material channels from being affected.</p>
+<p>Note that for internal reasons even "empty" Texture tags (those without an assigned material) will use the single override material.</p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_LINK" name="RDATA_MATERIAL_OVERRIDE_LINK"></a> <!--INDEX "8","Custom Material","RDATA_MATERIAL_OVERRIDE_LINK"--><span class="c4d_id">Custom Material</span></p>
+<p>Drag the replacement material into this field. It will only be used during rendering and will not be used for the Viewport display. If this field remains empty, the color defined in the Project Setting’s <span class="command">Color</span> setting will be used and otherwise a default material will be used.</p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE" name="RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE"></a> <!--INDEX "8","Mode","RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE"--><span class="c4d_id">Mode</span><br><a id="RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST" name="RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST"></a> <!--INDEX "8","Materials","RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST"--><span class="c4d_id">Materials</span></p>
+<p>If you want to exclude materials from being replaced, select the desired mode and drag the materials you want to include or exclude into the <span class="command">Materials</span> field.</p>
+<p><!--INDEX "6","Preserve","RDATA_GROUP_OVERRIDEMAT_PRESERVE"--><a id="RDATA_GROUP_OVERRIDEMAT_PRESERVE" name="RDATA_GROUP_OVERRIDEMAT_PRESERVE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Preserve</span></p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_COLOR" name="RDATA_MATERIAL_OVERRIDE_COLOR"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_COLOR","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Diffuse Color","RDATA_MATERIAL_OVERRIDE_COLOR"--><span class="c4d_id">Diffuse Color</span><br><a id="RDATA_MATERIAL_OVERRIDE_LUMINANCE" name="RDATA_MATERIAL_OVERRIDE_LUMINANCE"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_LUMINANCE","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Luminance","RDATA_MATERIAL_OVERRIDE_LUMINANCE"--><span class="c4d_id">Luminance</span><br><a id="RDATA_MATERIAL_OVERRIDE_TRANS" name="RDATA_MATERIAL_OVERRIDE_TRANS"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_TRANS","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Transparency","RDATA_MATERIAL_OVERRIDE_TRANS"--><span class="c4d_id">Transparency</span><br><a id="RDATA_MATERIAL_OVERRIDE_REFL" name="RDATA_MATERIAL_OVERRIDE_REFL"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_REFL","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Reflectance","RDATA_MATERIAL_OVERRIDE_REFL"--><span class="c4d_id">Reflectance</span><br><a id="RDATA_MATERIAL_OVERRIDE_BUMP" name="RDATA_MATERIAL_OVERRIDE_BUMP"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_BUMP","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Bump","RDATA_MATERIAL_OVERRIDE_BUMP"--><span class="c4d_id">Bump</span><br><a id="RDATA_MATERIAL_OVERRIDE_NORM" name="RDATA_MATERIAL_OVERRIDE_NORM"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_NORM","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Normal","RDATA_MATERIAL_OVERRIDE_NORM"--><span class="c4d_id">Normal</span><br><a id="RDATA_MATERIAL_OVERRIDE_ALPHA" name="RDATA_MATERIAL_OVERRIDE_ALPHA"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_ALPHA","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Alpha","RDATA_MATERIAL_OVERRIDE_ALPHA"--><span class="c4d_id">Alpha</span><br><a id="RDATA_MATERIAL_OVERRIDE_DSPL" name="RDATA_MATERIAL_OVERRIDE_DSPL"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_DSPL","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Displacement","RDATA_MATERIAL_OVERRIDE_DSPL"--><span class="c4d_id">Displacement</span></p>
+<p>If not all material properties should be replaced and only specific channels should be excluded (such as Transparency (2nd example from the right in the image above) or Displacement), enable the corresponding option here. These channels will then be assumed by the original material. Note that the <span class="command">Diffuse Color</span> option includes the <span class="command">Color</span> AND <span class="command">Diffuse</span> channels!</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Loft Object</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40783"-->
+		<!--VATER_ID "40780"-->
+		<!--REIHENFOLGE "3"-->
+		<!--TITLE "Loft Object"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="__tut_1002.html" target="_self">Tutorials</a></span> <span class="link_back"><a href="__tut_40480.html" target="_self">Mechanical Modeling Tutorial</a></span> <span class="link_back"><a href="__tut_40780.html" target="_self">Modeling with Splines and Generator Objects </a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Loft Object",""--><p><span class="HL_group">Loft Object</span></p><p></p>
+<p>The <span class="command">Loft</span> object can be used to create really interesting shapes. Not only can it be used with any number of Splines but also any number of differently shaped Splines. We will use the Loft object to add a handle to the cup we just created using the <span class="command">Lathe</span> object.</p>
+<p><a id="__tut_024576" href="../pics/__tut_024576_halvaropenc4d.png"><img src="../pics/__tut_024576_halvaropenc4d.png" ></a><br /><span class="caption"></span></p>
+<p>First, create a <a href="OSPLINECIRCLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_5181.png" alt="" height="12" width="12"    border="0"><span class="text_command">Circle</span></nobr></a> Spline Primitive and enable its <a href="OSPLINECIRCLE-ID_OBJECTPROPERTIES.html#PRIM_CIRCLE_ELLIPSE" target="_self"><span class="text_id">Ellipse</span></a> option - this will let you modify its shape elliptically. Reduce the Circle Spline’s <a href="OSPLINECIRCLE-ID_OBJECTPROPERTIES.html#PRIM_CIRCLE_RADIUSY" target="_self"><span class="text_id">Radius Y</span></a> value to create a slight elliptical shape and position the circle in front of the cup in the front viewport where you want the handle to begin. Leave a little space between the Spline and the cup’s outer wall.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Projecting Splines","hl_1"--><p><span class="HL_1">Projecting Splines</span></p>
+<p>In order to match the Spline’s to that of the cup we will project it onto the cup. First, the Spline must be <span class="command">made editable</span> (<span class="command">c key</span>). After doing so, select the function <a href="TOOLSPLINEPROJECT.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_450000046.png" alt="" height="12" width="12"    border="0"><span class="text_command">Project</span></nobr></a>(<nobr><span class="menu">Mesh | Spline</span></nobr>). In the <span class="command">Attribute Manager</span>, leave the <span class="command">Mode</span> option set to <span class="command_value">View</span> (assuming you are still in the front viewport - if not, then switch to it now) and click on the <span class="command">Apply button</span> to project the Spline. The Spline will be projected onto the cup’s surface without having to manually move a single point.</p>
+<p>Copy the Spline, rotate the copy <span class="command_value">180°</span> around its <span class="command">X</span> axis and place it at the bottom of the cup where the handle should end. Project this Spline onto the surface of the cup. Now both ends of the <span class="command">Loft</span> object we want to create have been defined. Next we will add a few more ellipses that the <span class="command">Loft</span> object will follow to shape the handle. Create four additional Splines and position them as shown in the image below. Note the orientation of each ellipse’s axis.</p>
+<p><div class="image_full" style="max-width:1100px"><img  src="../pics/__tut_024573.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Applying a Loft object","hl_2"--><p><span class="HL_1">Applying a Loft object</span></p>
+<p>Create a <a href="OLOFT.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_5107.png" alt="" height="12" width="12"    border="0"><span class="text_command">Loft</span></nobr></a> and make the previously creates Splines Child objects of this <span class="command">Loft</span> object. Make sure the Splines are placed in the correct hierarchical order, from top Spline to bottom Spline, in the <span class="command">Object Manager</span>. Naming your objects accordingly will help keep a better overview of which object is where. To rename an object simply double-click on its name in the <span class="command">Object Manager</span>. In addition to the order of the Splines themselves, the order of the points within a Spline also plays a role in the generation of the <span class="command">Loft</span> object surface. The first point of the first Spline will be connected with the first point of the second Spline and so on. If Splines run in different directions the loft surface can be twisted. The <span class="command">Loft</span> object is the only <span class="command">Generator</span> object for which the <span class="command">Intermediate Points</span> of Splines (Child objects) do not play a role. Instead, the <span class="command">Loft</span> object uses a unique, uniform subdivision in the rotational direction of the Spline (<a href="OLOFT-ID_OBJECTPROPERTIES.html#LOFTOBJECT_SUBX" target="_self"><span class="text_id">Mesh Subdivision U</span></a>) and in the direction of the Spline’s cross-section (<a href="OLOFT-ID_OBJECTPROPERTIES.html#LOFTOBJECT_SUBY" target="_self"><span class="text_id">Mesh Subdivision V</span></a>). If the <a href="OLOFT-ID_OBJECTPROPERTIES.html#LOFTOBJECT_ADAPTIVEY" target="_self"><span class="text_id">Subdivision per Segment</span></a> option is enabled the <span class="command">Subdivision V</span> will be generated between neighboring Splines. Otherwise a uniform subdivision will be generated over the entire <span class="command">Loft</span> object surface. Since all parameters can be modified at will you can experiment with them until you achieve the desired result. The image below illustrates our scene’s current structure in the <span class="command">Object Manager</span> and an example of how parameters can be defined in the <span class="command">Attribute Manager</span>.</p>
+<p><div class="image_full" style="max-width:707px"><img  src="../pics/__tut_024574.jpg"  ><span class="caption"></span></div></p>
+<p>The image below shows the rendered <span class="command">Loft</span> object. The Splines were adjusted further to refine the shape of the handle. To do so, simply select one of the Splines used to create the <span class="command">Loft</span> object and move, rotate or scale it accordingly.</p>
+<p><div class="image_full" style="max-width:748px"><img  src="../pics/__tut_024575.jpg"  ><span class="caption"></span></div></p>
+<p>Here you can take a look at the result: <a id="__tut_024577" href="../pics/__tut_024577_halvaropenc4d.png"><img src="../pics/__tut_024577_halvaropenc4d.png" ></a><br /><span class="caption"></span></p>
+<p><a href="__tut_40784.html#path" target="">Continue …</a></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

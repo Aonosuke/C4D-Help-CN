@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Render Queue</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "43084"-->
+		<!--VATER_ID "5697"-->
+		<!--REIHENFOLGE "8"-->
+		<!--TITLE "Render Queue"-->
+		<!--APPS "11 16 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Render Queue",""--><p><span class="HL_group">Render Queue</span></p><p></p>
+<p><PAGE_RELEASE_120 The Render Queue replaces batch rendering.></p>
+<p><!--INDEX "7","Render Queue...",""--><!--PAGE_COMMAND "PLUGIN_Cmd_465003500"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003500.png" alt="" height="24" width="24" border="1"> </p>
+<p><!--INDEX "7","Render Manager",""--><!--PAGE_COMMAND "DIALOG_RENDERMANAGER"--></p>
+<p><div class="image_full" style="max-width:1100px"><img  src="../pics/030144.jpg"  ><span class="caption">The <span class="command">Start Rendering</span> command is located in the <span class="command">Job</span> menu.</span></div></p>
+<p>If you worked with the Batch Renderer in the past, the new Render Queue performs a similar function but with far more available functions and more comfort.</p>
+<p>For example:<ul></p>
+<p><li> You can render almost any number of files consecutively without supervision</li><li> You can easily redirect save paths, select cameras, Takes and render settings - without opening the file itself</li><li> Extensive Render Queue configurations can be saved as presets</li><li> Log files can be saved and viewed</li><li> Rendered images are displayed in a preview window during rendering</li><li> The rendering of animations (individual frames - not videos!) can be interrupted and later continued automatically at the same location</li><li> Simultaneous rendering in the Picture Viewer and Render Queue</li><li> Scenes can be rendered without opening them in the Viewport, which saves memory</li></ul><p></p>
+<p>The top part of the <span class="command">Queue Manager</span> is reserved for displaying the job list. So how can scene files be added to this list?<ul></p>
+<p><li> Using the various <span class="command">File</span> menu commands.</li><li> Per drag & drop from the Explorer/Finder/Content Browser</li></ul><p></p>
+<p>As soon as a file is in the job list the check box in the second column can be used to enable or disable rendering. Multiple jobs can be selected using the usual hotkeys (<nobr><span class="key">Shift</span></nobr>: from-to selection; <nobr><span class="key">Ctrl/Cmd</span></nobr>: select/deselect individual  jobs. Jobs can be moved to another location in the list or deleted from the list. Selected jobs can be duplicated by pressing the <nobr><span class="key">Ctrl/Cmd</span></nobr> key.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note that the Queue Manager only uses saved scenes. Scenes that are open in Cinema 4D that have been modified and not yet saved cannot be used.</div></p>
+<p><p><div class="hint"><span class="HL_hint">Tip 2:<br></span>If, after a while, you should encounter problems with regard to the Sleep or Log Out functions, even though Cinema 4D still has several hours to render, simply disable the option "Log out after XX minutes of inactivity" (Mac OS: System Preferences / Security) or extend the time allowed before you will be logged out. You can also extend the time for the "Require password XX after sleep or screen saver begins" setting.</div></p>
+<p>The job list contains the following information:</p>
+<p><span class="command">Pos.</span>: All jobs are consecutively numbered.</p>
+<p><span class="command">Render yes/no</span>: All jobs with an enabled check box will be rendered in order from the top of the list to the bottom as soon as <span class="command">Start Rendering</span> is selected from the <nobr><span class="menu">Jobs</span></nobr> menu.</p>
+<p><RELEASE_150 Render jobs in the Render Queue can be rendered via Team Render.></p>
+<p><span class="command">Team</span>: Here you can define which jobs should be rendered using Team Render.</p>
+<p></RELEASE_150></p>
+<p><span class="command">Status R</span>: Displays a job’s current status</p>
+<p><span class="command_value">In Queue/R</span>: ready to render</p>
+<p><span class="command_value">In Progress</span>: is being rendered</p>
+<p><span class="command_value">Take</span>: the Take selected for rendering (this selection can be made further below in the dialog window)</p>
+<p><span class="command_value">Finished</span>: render completed successfully</p>
+<p><span class="command_value">Stopped</span>: render was halted before being completed</p>
+<p><span class="command_value">Error</span>: error occurred during rendering</p>
+<p><span class="command">Camera</span>: This is the scene file’s camera from which the scene is rendered (can be selected at the bottom of the Queue Manager)</p>
+<p><span class="command">Render Settings</span>: The Render Settings with which the file is rendered. These can also be selected at the bottom of the Queue Manager.</p>
+<p><span class="command">Message</span>: Pertinent messages are displayed here, e.g., if a file is missing, information for saving, etc.</p>
+<p>An existing job list will be maintained even if you close Cinema 4D. The list will reappear when Cinema 4D is restarted and the Queue Manager is opened.</p>
+<p>At the bottom of the Queue Manager you will find information pertaining to the selected job, a preview of the last frame rendered and the following settings and buttons:</p>
+<p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><!--INDEX "8","Take","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Take</span></p>
+<p>This selection menu shows all <a href="54507.html" target="">Takes</a> that are in the selected job file. The render cameras and render settings defined in the Take will be set automatically by the following two selection menus.</p>
+<p></p></div></p>
+<p><!--INDEX "8","Render Settings","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">Render Settings</span></p>
+<p>This drop-down list contains all Render Settings for the selected job. Select the Render Settings with which you want to render the job. By default, the Render Settings active in the scene will be used.</p>
+<p><!--INDEX "8","Camera","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">Camera</span></p>
+<p>This drop-down menu contains all cameras contained in the selected job scene (including the Perspective view) and Stage objects. Select the camera from whose view you want to render the scene. If a Stage object is selected its animated cameras will be used.</p>
+<p><!--INDEX "8","Output Path","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">Output Path</span></p>
+<p>Here you can define a save path different from the save path defined in the selected job scene. If you do not select a different save path the path defined in the scene will be used. The Queue Manager will check if the exact save path and name are used by other jobs and will modify the name automatically (to prevent one job from overwriting another).</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Wouldn’t is be practical if file and path names would, for example, orient themselves according to Project names or render resolutions so you wouldn’t have to change file/path names each time you change the resolution, for example, in order not to overwrite existing files? This is what the <a href="54506.html" target="">Variable Path and File Names</a> are for. These also work in conjunction with the <span class="command">Protocol</span> setting described below.</div></p>
+<p><!--INDEX "8","Multi-Pass Image","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">Multi-Pass Image</span></p>
+<p>If Multi-Passes are defined in a scene (or a Multi-Pass save path) an alternative, separate Multi-Pass save path and name can be entered here.</p>
+<p><!--INDEX "8","Log","no_id_6"--><a id="no_id_6" name="no_id_6"></a> <span class="no_id">Log</span></p>
+<p>A log file can be created for each job processed by the Queue Manager. Its save path is defined in this field. The log file is always displayed in the <span class="command">Logfile</span> tab, even if the log itself is not saved. The saving function of the log file can be disabled in the Program Settings.</p>
+<p><!--INDEX "8","Texture Errors","no_id_7"--><a id="no_id_7" name="no_id_7"></a> <span class="no_id">Texture Errors</span></p>
+<p>If a job scene is missing textures their names will be displayed here.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Logfile tab","hl_1"--><p><span class="HL_1">Logfile tab</span></p>
+<p>Information pertaining to the selected job(s) rendered, your system, the scene and the render result are displayed here. In the <nobr><span class="menu">Show|Filter</span></nobr>menu you can select one of the three logs to display.</p>
+<p>In the <nobr><span class="menu">Preferences …</span></nobr> menu’s <span class="command">Renderer</span> settings you can define if the log file should be permanently saved. Otherwise this file will only by saved temporarily - as long as the given job remains in the job list.</p>
+<p><!--INDEX "8","Update button","no_id_8"--><a id="no_id_8" name="no_id_8"></a> <span class="no_id">Update button</span></p>
+<p>This button can be pressed during rendering to display the most current log stats.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","File menu","hl_2"--><p><span class="HL_1">File menu</span></p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003518"--><!--COMMAND "PLUGIN_Cmd_465003518"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003518.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003518" name="PLUGIN_Cmd_465003518"></a>   <span class="c4d_menu_id">Open...</span></p>
+<p>From this menu you can open any Cinema 4D file, which will then be added to the job list. Files can also be added to the job list via drag & drop from the Explorer/Finder/Content Browser.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003511"--><!--COMMAND "PLUGIN_Cmd_465003511"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003511.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003511" name="PLUGIN_Cmd_465003511"></a>   <span class="c4d_menu_id">Add Current Project</span></p>
+<p>This command loads the scene currently in the Viewport into the job list. The command is also available separately in the Render Menu’s main menu.</p>
+<p><a id="TAKE" name="TAKE"></a></p>
+<p><a id="RELEASE_170_2" name="RELEASE_170_2"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><!--INDEX "7","Open With All Takes","PLUGIN_CMD_431000099"--><!--COMMAND "PLUGIN_CMD_431000099"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000099.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000099" name="PLUGIN_CMD_431000099"></a>   <span class="c4d_menu_id">Open With All Takes</span><br><!--INDEX "7","Open With Marked Takes","PLUGIN_CMD_431000100"--><!--COMMAND "PLUGIN_CMD_431000100"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000100.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000100" name="PLUGIN_CMD_431000100"></a>   <span class="c4d_menu_id">Open With Marked Takes</span></p>
+<p>Use these commands to open a Project file for which either all or marked Takes will be placed into the Render Queue as separate jobs. If no Take is selected, the <span class="command">Main</span> Take will be used.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note also the <span class="command">Take Manager’s</span> <span class="command">Render</span> menu, which can also be used to render multiple Takes without using the Render Queue (see <a href="5701.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12099.png" alt="" height="12" width="12"    border="0"><span class="text_command">Render to Picture Viewer</span></nobr></a> for example).</div></p>
+<p><!--INDEX "7","Add Project With Marked Takes","PLUGIN_CMD_431000097"--><!--COMMAND "PLUGIN_CMD_431000097"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000097.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000097" name="PLUGIN_CMD_431000097"></a>   <span class="c4d_menu_id">Add Project With All Takes</span><br><!--INDEX "7","Add Project With All Takes","PLUGIN_CMD_431000098"--><!--COMMAND "PLUGIN_CMD_431000098"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000098.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000098" name="PLUGIN_CMD_431000098"></a>   <span class="c4d_menu_id">Add Project With Marked Takes</span></p>
+<p>Use these commands to place all or marked Takes in the currently open Projects into the Render Queue as separate jobs. If no Take is marked, the <span class="command">Main</span> Take will be used.</p>
+<p></p></div></p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003516"--><!--COMMAND "PLUGIN_Cmd_465003516"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003516.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003516" name="PLUGIN_Cmd_465003516"></a>   <span class="c4d_menu_id">Revert to Saved</span></p>
+<p>If you have modified the path, cameras and/or Render Settings at the bottom of the Queue Manager this command will reset the corresponding element to its saved state in the scene.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003526"--><!--COMMAND "PLUGIN_Cmd_465003526"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003526.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003526" name="PLUGIN_Cmd_465003526"></a>   <span class="c4d_menu_id">Load Preset...</span><br><!--INDEX "7","","PLUGIN_Cmd_465003527"--><!--COMMAND "PLUGIN_Cmd_465003527"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003527.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003527" name="PLUGIN_Cmd_465003527"></a>   <span class="c4d_menu_id">Save Preset...</span></p>
+<p>Complex (and of course less complex) Queue Manager configurations can be saved as presets in the Content Browser (Presets/User/Queue Manager Preset) and accessed at any time.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Jobs menu","hl_3"--><p><span class="HL_1">Jobs menu</span></p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003513"--><!--COMMAND "PLUGIN_Cmd_465003513"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003513.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003513" name="PLUGIN_Cmd_465003513"></a>   <span class="c4d_menu_id">Start Rendering</span></p>
+<p>Starts the render process for all activated jobs in the order in which they are listed.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003515"--><!--COMMAND "PLUGIN_Cmd_465003515"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003515.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003515" name="PLUGIN_Cmd_465003515"></a>   <span class="c4d_menu_id">Stop Rendering</span></p>
+<p>Stops the render process. The process can be restarted using the previous command. Partially rendered movies will, however, be rendered again from the beginning (as opposed to individually rendered images, whose rendering will continue from the point at which it was halted).</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003510"--><!--COMMAND "PLUGIN_Cmd_465003510"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003510.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003510" name="PLUGIN_Cmd_465003510"></a>   <span class="c4d_menu_id">Delete</span></p>
+<p>Deletes all selected jobs from the job list.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003519"--><!--COMMAND "PLUGIN_Cmd_465003519"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003519.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003519" name="PLUGIN_Cmd_465003519"></a>   <span class="c4d_menu_id">Clear All</span></p>
+<p>Deletes all jobs from the job list.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003512"--><!--COMMAND "PLUGIN_Cmd_465003512"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003512.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003512" name="PLUGIN_Cmd_465003512"></a>   <span class="c4d_menu_id">Edit Project</span></p>
+<p>Loads all selected scenes into Cinema 4D where they can subsequently be edited. Don’t forget to save the scene so the Queue Manager can render the most current version of the scene.</p>
+<p><!--INDEX "7","Texture Errors","PLUGIN_Cmd_465003533"--><!--COMMAND "PLUGIN_Cmd_465003533"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003533.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003533" name="PLUGIN_Cmd_465003533"></a>   <span class="c4d_menu_id">Texture Errors</span></p>
+<p>If enabled, render jobs that are missing textures (and only these) will be stopped. The Queue Manager will automatically continue with the next job. If disabled, jobs will be rendered despite any missing textures.</p>
+<p><RELEASE_130 New Check Textures option for Render Queue.></p>
+<p><!--INDEX "7","Check Textures","PLUGIN_Cmd_465003534"--><!--COMMAND "PLUGIN_Cmd_465003534"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003534.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003534" name="PLUGIN_Cmd_465003534"></a>   <span class="c4d_menu_id">Check Textures</span></p>
+<p>Use this option to check if any textures are missing (if the option is enabled, an error message will appear in the Jobs List) when loading new Jobs. Since looking for textures can take a long time - depending on the Project - this option can remain disabled. The Project will still be rendered.</p>
+<p></RELEASE_130></p>
+<p><!--INDEX "7","Preferences …","PLUGIN_Cmd_465003520"--><!--COMMAND "PLUGIN_Cmd_465003520"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003520.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003520" name="PLUGIN_Cmd_465003520"></a>   <span class="c4d_menu_id">Preferences...</span></p>
+<p>Calls up the Preferences for the Queue Manager.</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Show/Filter","hl_4"--><p><span class="HL_1">Show/Filter</span></p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003517"--><!--COMMAND "PLUGIN_Cmd_465003517"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003517.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003517" name="PLUGIN_Cmd_465003517"></a>   <span class="c4d_menu_id">Open in Picture Viewer...</span></p>
+<p>Displays the finished image/image sequence in the Picture Viewer.</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003521"--><!--COMMAND "PLUGIN_Cmd_465003521"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003521.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003521" name="PLUGIN_Cmd_465003521"></a>   <span class="c4d_menu_id">Open Image in Finder/Explorer</span></p>
+<p>Jumps to the rendered images in the Explorer (Windows) or Finder (Mac OS).</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003528"--><!--COMMAND "PLUGIN_Cmd_465003528"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003528.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003528" name="PLUGIN_Cmd_465003528"></a>   <span class="c4d_menu_id">Open Multi-Pass Image in Finder/Explorer</span></p>
+<p>Jumps to the finished Multi-Pass images in the Explorer (Windows) or Finder (Mac OS).</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003523"--><!--COMMAND "PLUGIN_Cmd_465003523"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003523.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003523" name="PLUGIN_Cmd_465003523"></a>   <span class="c4d_menu_id">Open Log</span></p>
+<p>Opens the log file (the same one displayed in the Logfile tab) of the selected job in your system’s default browser.</p>
+<p>Filter Log</p>
+<p><!--INDEX "7","","PLUGIN_Cmd_465003530"--><!--COMMAND "PLUGIN_Cmd_465003530"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003530.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003530" name="PLUGIN_Cmd_465003530"></a>   <span class="c4d_menu_id">System</span><br><!--INDEX "7","","PLUGIN_Cmd_465003531"--><!--COMMAND "PLUGIN_Cmd_465003531"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003531.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003531" name="PLUGIN_Cmd_465003531"></a>   <span class="c4d_menu_id">Render</span><br><!--INDEX "7","","PLUGIN_Cmd_465003532"--><!--COMMAND "PLUGIN_Cmd_465003532"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_465003532.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_465003532" name="PLUGIN_Cmd_465003532"></a>   <span class="c4d_menu_id">Project</span></p>
+<p>Here you can define which information should be shown in the Logfile tab. The <span class="command">System</span> information is for the most part of less interest. You can simply disable this display.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

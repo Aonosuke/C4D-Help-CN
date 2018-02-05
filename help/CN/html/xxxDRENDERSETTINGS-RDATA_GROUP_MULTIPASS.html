@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Edit Render Settings: Multi-Pass</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32055"-->
+		<!--VATER_ID "32048"-->
+		<!--REIHENFOLGE "8"-->
+		<!--TITLE "Edit Render Settings: Multi-Pass"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">Render Setting</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">Output</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">Save</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi_self">Multi-Pass</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">Anti-Aliasing</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">Material Override</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">Options</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">Stereoscopic</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Multi-Pass</span></p><p></p>
+<p><!--INDEX "1","Multi-Pass",""--></p>
+<p><!--INDEX "1","Multi-Pass",""--></p>
+<p><!--INDEX "1","Compositing",""--></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>When using <a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">Linear Workflow</span></a> in conjunction with Mult-Passes we recommend that you render with at least 16-bit color depth. If this is not possible, disable the Linear Workflow option to restore the normal Cinema 4D R12 properties (reason: Multi-Passes are saved with a linear profile. QuickTime cannot imbed color profiles and would therefore be read incorrectly when imported into external applications).</div></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>When using multiple Multi-Passes, it is not recommended that these be saved as separate QuickTime videos. Due to a QuickTime limitation, these can quickly reach their limits. Use single frames instead (which is actually the recommended render output method).</div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General Information","hl_1"--><p><span class="HL_2">General Information</span></p>
+<p>Cinema 4D offers numerous output formats and options. The Multi-Pass rendering and RLE/RPF bitmap format make it possible to edit rendered images in a wide variety of ways and with a variety of applications, including Photoshop and BodyPaint 3D in which Multi-Pass layers can be used.</p>
+<p>The tried and true TIF format (Tagged Image File), for example, can contain an alpha mask, which in turn can be used to mask objects.</p>
+<p>You can also edit or embed other image-specific information such as shadows, lighting, transparent surfaces and more. This is made possible by the RLA and RPF output formats. The Photoshop PSD format can also be used to include this information. An 8-bit channel is added to the normal image information which, for example, only includes the image's shaded regions, which in turn can be used as effects masks in such programs as Photoshop or Combustion.</p>
+<p>This makes adding or accentuating shading, brightening of illuminated image regions or complex compositing for animation possible in an efficient and professional manner. In addition, separate channels can be created for different light sources, which allows for very precise control and modification of lighting conditions - and this in a rendered image!</p>
+<p>Working with these additional channels does not demand that much more time. For example, Multi-Pass rendering makes it possible to render a scene with two or more different lighting scenarios. When the image or animation is renders, all you have to do is disable the layer with the lighting scenario you don't want to keep. Reflections, specular highlights and parts of the ambient illumination you create for the scene can also be disabled, added or otherwise manipulated - for either single images or animations. This can eliminate the need for numerous render tests, thereby saving you a lot of time.</p>
+<p>Scenes from previous versions of Cinema 4D that include simulated GI can now be viewed with real GI and both versions can be compared in a single image. Products can be illuminated with multiple lighting scenarios and rendered simultaneously. A single image can contain multiple layers, each with a different lighting scenario. The channels that are not needed can then be disabled or removed in an image editing program (e.g., BodyPaint 3D).</p>
+<p>Video effects can be limited or applied to specific layers. This list of possibilities is great and offers you a wide variety of methods for editing images and animations in addition to the ones mentioned above.</p>
+<p>The settings described on this page are global and require further modification for specific objects.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","How to use Multi-Pass","hl_2"--><p><span class="HL_2">How to use Multi-Pass</span></p>
+<p>So, how do you define which channels should be rendered? There are two ways in which to do this:<ul></p>
+<p><li> Click on the <span class="command">Multi-Pass</span> button</li><li> Right-click on <span class="command">Multi-Pass</span></li>A menu will appear that contains all necessary commands. If a channel is enabled, it will appear as a sub-item of "Multi-Pass" itself and can be disabled there as well.</p>
+<p></ul><p></p>
+<p>The items in the <span class="command">Channels</span> drop-down list are:</p>
+<p><!--INDEX "7","Add Image Layers","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">Add Image Layers</span></p>
+<p>Adds to the selection list all image layers that form the composite image. These layers are: Ambient, Diffuse, Shadow, Reflection/Specular (both in the Reflectance channel), Refraction, Atmosphere and Atmosphere (Multiply). All the other image layers (see <span class="command_value">The layers</span> below) may be used for visual effects but are not actually part of the composite image.</p>
+<p>If you have the Advanced Render module installed, Global illumination and Photon Caustics layers are also added to the selection list by this command.</p>
+<p><!--INDEX "7","Add Material Layers/Add All","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">Add Material Layers/Add All</span></p>
+<p>Selects all image and material layers simultaneously.</p>
+<p>Selects all channels that contain the prefix, <span class="command">Material</span>. These are the scene’s material channels. The Multi-Pass channels contain information regarding the scene’s corresponding material channel (e.g., the <span class="command">Material Color Pass</span> channel contains the material color for every object in the scene).</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>These special channels are irrelevant for the normal user. Plugin developers can, however, make use of these channels.</div></p>
+<p>The following material layers can be selected: Color, Diffusion, Luminance, Transparency, Reflection, Environment, Specular, Specular Color, Normals and UVW.</p>
+<p><!--INDEX "7","Remove","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">Remove</span></p>
+<p>Channels can be selected using the mouse (multiple selections in combination with the Shift or <nobr><span class="key">Ctrl/Cmd</span></nobr> keys can also be made).</p>
+<p>This command deletes all selected channels.</p>
+<p><!--INDEX "7","Remove All","no_command_4"--><a id="no_command_4" name="no_command_4"></a>   <span class="c4d_menu_id">Remove All</span></p>
+<p>Empties the selection list.</p>
+<p><!--INDEX "7","Blend Channel","no_command_5"--><a id="no_command_5" name="no_command_5"></a>   <span class="c4d_menu_id">Blend Channel</span></p>
+<p>Creates a blended layer. For example, you can blend <span class="command">Shadow</span>, <span class="command">Global illumination</span> and <span class="command">Photon Caustics</span> as a single layer. After choosing this command, a dialog opens. Enable the channels you want to blend and click OK.</p>
+<p><div class="image_full" style="max-width:278px"><img  src="../pics/003880.jpg"  ><span class="caption">Blend Channel options.</span></div></p>
+<p><!--INDEX "7","Object Buffer","no_command_6"--><a id="no_command_6" name="no_command_6"></a>   <span class="c4d_menu_id">Object Buffer</span></p>
+<p>Enabling this channel will open the following dialog:</p>
+<p><div class="image_full" style="max-width:357px"><img  src="../pics/003881.jpg"  ><span class="caption"></span></div></p>
+<p>This creates a mask layer for objects that use a specified ID number in their Compositing tags. After choosing this command, the Object Buffer dialog open. Enter the desired ID number and click OK.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003882.jpg"  ><span class="caption">The sphere appears in both object buffers since its Compositing tag has two IDs (ID=1 and ID=2).</span></div></p>
+<p>The cube’s Compositing tag was assigned the ID <span class="command">1</span> and the sphere’s Compositing tag was assigned two IDs: <span class="command">1</span> and <span class="command">2</span>. To the right are two alpha channels that were created as a result of two object channels (the first with Group ID <span class="command">1</span>, the second with Group ID <span class="command">2</span>) being defined in the Multi-Pass settings.</p>
+<p><!--INDEX "7","RGBA Image","no_command_7"--><a id="no_command_7" name="no_command_7"></a>   <span class="c4d_menu_id">RGBA Image</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003883.jpg"  ><span class="caption">The final rendering.</span></div></p>
+<p>Contains the image information as we know it. Red, green and blue plus an alpha mask, depending on the bitmap used. The <span class="command">Save</span> settings define whether or not the alpha mask should be calculated and made part of the image.</p>
+<p><!--INDEX "7","Ambient","no_command_8"--><a id="no_command_8" name="no_command_8"></a>   <span class="c4d_menu_id">Ambient</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003884.jpg"  ><span class="caption">Merely a gray surface: The ambient illumination.</span></div></p>
+<p>This channel shows on the one hand how regions of the image illuminated by ambient light are affected by an <a href="OENVIRONMENT.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_5106.png" alt="" height="12" width="12"    border="0"><span class="text_command">Environment</span></nobr></a> object. It also shows all objects that appear as lights (e.g., those with a material with an active <span class="command">Luminance</span> channel or textures loaded in the <span class="command">Environment</span> channel.</p>
+<p> 	</p>
+<p><!--INDEX "7","Diffuse","no_command_9"--><a id="no_command_9" name="no_command_9"></a>   <span class="c4d_menu_id">Diffuse</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/019993.jpg"  ><span class="caption"></span></div></p>
+<p>Renders the scene’s diffuse lighting. The illumination is rendered without specular highlights and reflexion, and based solely on shading (shadows but no explicit shadows!).</p>
+<p><!--INDEX "7","Specular","no_command_10"--><a id="no_command_10" name="no_command_10"></a>   <span class="c4d_menu_id">Specular</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003885.jpg"  ><span class="caption">An example of specular dispersion.</span></div></p>
+<p>Displays the areas of the image in which specular highlights appear.</p>
+<p>Note also <a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">Specular Multi-Pass settings</a>.</p>
+<p><!--INDEX "7","Shadow","no_command_11"--><a id="no_command_11" name="no_command_11"></a>   <span class="c4d_menu_id">Shadow</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003886.jpg"  ><span class="caption">The main light source’s shadow.</span></div></p>
+<p>Displays the shaded areas of the image.</p>
+<p><!--INDEX "7","Reflection","no_command_12"--><a id="no_command_12" name="no_command_12"></a>   <span class="c4d_menu_id">Reflection</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003887.jpg"  ><span class="caption">The reflective surfaces and the objects reflected in them.</span></div></p>
+<p>Displays all reflective surfaces.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note that the reflection from SLA shaders such as Mabel, Cheen, etc. will not be included.</div></p>
+<p>Separate <a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">Specular Multi-Pass settings</a> are also available.</p>
+<p><!--INDEX "7","Refraction","no_command_13"--><a id="no_command_13" name="no_command_13"></a>   <span class="c4d_menu_id">Refraction</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003888.jpg"  ><span class="caption">Transparent surfaces and the objects behind them.</span></div></p>
+<p>Creates a channel that displays all transparent surfaces, including refraction, and the objects that lie behind these surfaces.</p>
+<p><!--INDEX "7","Global Illumination","no_command_14"--><a id="no_command_14" name="no_command_14"></a>   <span class="c4d_menu_id">Global Illumination</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003889.jpg"  ><span class="caption">The Diffuse pass of the rendered image.</span></div></p>
+<p>If GI is selected and set up accordingly in the Render Settings the effects of this channel and those of the dispersed light will be displayed.</p>
+<p><!--INDEX "7","Caustics","no_command_15"--><a id="no_command_15" name="no_command_15"></a>   <span class="c4d_menu_id">Caustics</span></p>
+<p>If enabled for Multi-Pass rendering, the typical refraction reflexes that are created when light passes through a transparent or reflective surface can be saved separately to this layer.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Cinema 4D offers <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">two types</a> of caustics. In the <span class="command">Caustics</span> Multi-Pass channel only the photon caustics (these can be found in the light’s <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_CAUSTIC_ENABLE" target="_self"><span class="text_id">Surface Caustics</span></a> and <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_VOLCAUSTIC_ENABLE" target="_self"><span class="text_id">Volume Caustics</span></a> settings) are separated. GI caustics (<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> and <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" target="_self"><span class="text_id">Reflective Caustics</span></a> in the Edit Render Settings menu) will appear in the <span class="command">Global Illumination</span> Multi-Pass channel.</div></p>
+<p><!--INDEX "7","Atmosphere","no_command_16"--><a id="no_command_16" name="no_command_16"></a>   <span class="c4d_menu_id">Atmosphere</span></p>
+<p><!--INDEX "7","Atmosphere (Multiplied)","no_command_17"--><a id="no_command_17" name="no_command_17"></a>   <span class="c4d_menu_id">Atmosphere (Multiplied)</span></p>
+<p><div class="image_full" style="max-width:1492px"><img  src="../pics/003891.jpg"  ><span class="caption">At left the normal rendered image, at right the Multi-Pass "atmosphere"</span></div></p>
+<p>All volumetric image elements will be saved in this channel. These can include:<ul></p>
+<p><li> Fog, volumetric clouds, rainbows, etc. from the Physical Sky.</li><li> PyroCluster effects. </li></ul><p></p>
+<p><!--INDEX "7","Material","no_command_18"--><a id="no_command_18" name="no_command_18"></a>   <span class="c4d_menu_id">Material</span></p>
+<p>Other channels with the prefix, <span class="command">Material</span>, serve to create additional channels for a given material channel relating to the entire scene. These channels are irrelevant for normal use of Cinema 4D.</p>
+<p><!--INDEX "7","Illumination","no_command_19"--><a id="no_command_19" name="no_command_19"></a>   <span class="c4d_menu_id">Illumination</span></p>
+<p>This channel displays the distribution of brightness (incl. shadows) throughout the scene as if all objects were white. Only the dispersion of light on the objects’ surfaces will be displayed.</p>
+<p><a id="TIEFE" name="TIEFE"></a></p>
+<p><!--INDEX "7","Depth","no_command_20"--><a id="no_command_20" name="no_command_20"></a>   <span class="c4d_menu_id">Depth</span></p>
+<p><div class="image_full" style="max-width:1517px"><img  src="../pics/003892.jpg"  ><span class="caption">The DOF is controlled using the settings in the <span class="command">Object</span> and <span class="command">Details</span> tabs</span></div></p>
+<p>This option lets you create depth maps (grayscale images that define Project elements in relation to their distance from the camera’s focal distance). Objects on the focal plane (defined using <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">Focus Distance</span></a>) will be colored black. The farther away to the focal plane an object lies, the lighter it will be - up to and including white. What is this good for? Using depth maps, third-party applications can quickly calculate a fairly accurate depth of field.</p>
+<p>A focal plane can be defined in the camera settings (<a href="OCAMERA-ID_GROUP_SETTINGS.html#CAMERAOBJECT_FRONTBLUR" target="_self"><span class="text_id">DOF Map Front Blur</span></a>), in which front and back regions can be defined in which a black-to-white grayscale gradient can be defined.</p>
+<p>A physically correct depth of field can be calculated using the <a href="VPXMBSAMPLER.html" target="">Physical Renderer</a>.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>The contrast of the grayscale Depth channel is controlled by the camera’s blur settings. For full contrast, set the Start value for Front Blur to immediately before the object closest to the camera. Set the End value for Rear Blur to immediately after the object farthest from the camera. The easiest way to set these values is to drag the camera’s handles in the viewport.</div></p>
+<p><!--INDEX "7","Post Effects","no_command_21"--><a id="no_command_21" name="no_command_21"></a>   <span class="c4d_menu_id">Post Effects</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/003893.jpg"  ><span class="caption">From top left to bottom left: Highlights (AR), Glow (AR), Specular, and Diffusion, each as a separate Post Effects pass.</span></div></p>
+<p>The Post Effects channel makes it possible to render a variety of post effects (PyroCluster, lens effects, vector motion blur, highlights, glow effects, glow) as separate passes.</p>
+<p><a id="NORM" name="NORM"></a></p>
+<p><!--INDEX "7","Material Normals","no_command_22"--><a id="no_command_22" name="no_command_22"></a>   <span class="c4d_menu_id">Material Normals</span></p>
+<p>Not to be confused with normal maps, these normal components are rendered as RGB (<span class="command_value">X=red, Y=green, Z=blue</span>) without antialiasing. This is designed for compatibility with other applications.</p>
+<p><!--INDEX "7","Material UVW","no_command_23"--><a id="no_command_23" name="no_command_23"></a>   <span class="c4d_menu_id">Material UVW</span></p>
+<p>This channel renders objects (without antialiasing), according to their UVW coordinates, in a green-red-blue gradient: <span class="command">U=red</span>, <span class="command">V=green</span>, <span class="command">W=blue</span>. Applications such as After Effects can easily work with these files.</p>
+<p><!--INDEX "7","Motion Vector","no_command_24"--><a id="no_command_24" name="no_command_24"></a>   <span class="c4d_menu_id">Motion Vector</span></p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/012898.jpg"  ><span class="caption">A <span class="command">Motion Vector</span> <span class="command">Multi-Pass</span>. Left: A slowly rotating propeller; right: A propeller rotating faster.</p>
+<p></span></div></p>
+<p><span class="command">Motion Vector</span> lets you output color-coded motion vectors. Depending on the direction of movement, each object pixel will be colored accordingly <span class="command">red=X</span>; <span class="command">green=Y</span>; blue is not used). Third party applications, such as ReelSmart Motion Blur for example, can calculate motion blur based on these colors. The maximum length can be defined using the Motion Scale setting (Render Settings …  / Options page).</p>
+<p><!--INDEX "7","Ambient Occlusion","no_command_25"--><a id="no_command_25" name="no_command_25"></a>   <span class="c4d_menu_id">Ambient Occlusion</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003894.jpg"  ><span class="caption"></span></div></p>
+<p>You can generate an Ambient Occlusion pass for the entire scene, in accordance with the Ambient Occlusion options in the Render Settings.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note that AO passes on objects that lie behind refracted, transparent materials will fail, i.e., Ambient Occlusion will simply be ignored.</div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/023779.jpg"  ><span class="caption">Ambient Occlusion will not work as a Multi-Pass for objects that lie behind refracted, transparent surfaces.</span></div></p>
+<p><a id="RDATA_MULTIPASS_LIGHTS" name="RDATA_MULTIPASS_LIGHTS"></a> <!--INDEX "8","Separate Lights","RDATA_MULTIPASS_LIGHTS"--><span class="c4d_id">Separate Lights</span></p>
+<p>Use Separate Lights to choose which light sources have their own separate layers.</p>
+<p>The following options are available:</p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_NONE" name="RDATA_MULTIPASS_LIGHTS_NONE"></a><!--INDEX "10","None","RDATA_MULTIPASS_LIGHTS_NONE"--><span class="c4d_id_cycle">None</span></p>
+<p>No separate layers.</p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_ALL" name="RDATA_MULTIPASS_LIGHTS_ALL"></a><!--INDEX "10","All","RDATA_MULTIPASS_LIGHTS_ALL"--><span class="c4d_id_cycle">All</span></p>
+<p>Each light has separate layers.</p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_SELECTED" name="RDATA_MULTIPASS_LIGHTS_SELECTED"></a><!--INDEX "10","Selected","RDATA_MULTIPASS_LIGHTS_SELECTED"--><span class="c4d_id_cycle">Selected</span></p>
+<p>Separate layers for all lights whose Separate Pass option is enabled (General tab).</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Light instances do not work in conjunction with <span class="command">Separate Lights</span>.</div></p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE" name="RDATA_MULTIPASS_LIGHTMODE"></a> <!--INDEX "8","Mode","RDATA_MULTIPASS_LIGHTMODE"--><span class="c4d_id">Mode</span></p>
+<p>Use Mode to control how the diffuse, specular and shadow  information is layered for each light source that has its own layers.</p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL" name="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"></a><!--INDEX "10","1 Channel","RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"--><span class="c4d_id_cycle">1 Channel</span><br><a id="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"></a><!--INDEX "10"," Diffuse+Specular+Shadow","RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"--><span class="c4d_id_cycle"> Diffuse+Specular+Shadow</span></p>
+<p>Adds one blended layer for Diffuse, Specular and Shadow.</p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"></a><!--INDEX "10","2 Channels","RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"--><span class="c4d_id_cycle">2 Channels</span><br><a id="" name=""></a><!--INDEX "10","Diffuse+Specular+Shadow",""--><span class="c4d_id_cycle">Diffuse+Specular+Shadow</span></p>
+<p>Adds one blended layer for Diffuse and Specular, and one layer for Shadow.</p>
+<p><a id="" name=""></a><!--INDEX "10","3 Channels",""--><span class="c4d_id_cycle">3 Channels</span><br><a id="" name=""></a><!--INDEX "10","Diffuse+Specular+Shadow",""--><span class="c4d_id_cycle">Diffuse+Specular+Shadow</span></p>
+<p>Adds one Diffuse layer, one Specular layer and one Shadow layer.</p>
+<p><a id="RDATA_MULTIPASS_SHADOWCORRECTION" name="RDATA_MULTIPASS_SHADOWCORRECTION"></a> <!--INDEX "8","Shadow Correction","RDATA_MULTIPASS_SHADOWCORRECTION"--><span class="c4d_id">Shadow Correction</span></p>
+<p>When rendering Multi-Passes with shadows switched on, slight artifacts such as bright lines may appear at object edges due to antialiasing. To prevent these artifacts from appearing, enable this option.</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/003895.jpg"  ><span class="caption">Enable <span class="command">Shadow Correction</span> to prevent artifacts from appearing at the edges of objects.</span></div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

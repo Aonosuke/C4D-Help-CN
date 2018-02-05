@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Lathe Object</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40782"-->
+		<!--VATER_ID "40780"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "Lathe Object"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="__tut_1002.html" target="_self">Tutorials</a></span> <span class="link_back"><a href="__tut_40480.html" target="_self">Mechanical Modeling Tutorial</a></span> <span class="link_back"><a href="__tut_40780.html" target="_self">Modeling with Splines and Generator Objects </a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Lathe Object",""--><p><span class="HL_group">Lathe Object</span></p><p></p>
+<p>Numerous axially symmetrical objects can be created by rotating a profile shape around their axes. Some examples are drinking glasses, bottles, a winding staircase or even a snail’s shell. These shapes can be created using the <span class="command">Lathe</span> object in conjunction with a <span class="command">Spline object</span>. In our example we will create a <nobr><span class="text_id_cycle">Linear</span></nobr> Spline object in the front Viewport (XY view) and use the world coordinate system’s <span class="command">Y</span> axis as the symmetry axis. Start by creating a Spline, as shown in the image below.</p>
+<p><div class="image_full" style="max-width:958px"><img  src="../pics/__tut_024567.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Creating an outline","hl_1"--><p><span class="HL_1">Creating an outline</span></p>
+<p>You can either create the outline manually or first create the outer line and use the <a href="5622.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_14003.png" alt="" height="12" width="12"    border="0"><span class="text_command">Create Outline</span></nobr></a> function (<nobr><span class="menu">Mesh | Spline</span></nobr>). When using the latter method simply select the function and click + drag in the Viewport to create the outline. The Distance value can be defined manually for more exact placement. When creating a Spline, the axis symbol may lie in the way of placing a point. The axis symbol can be turned on or off by pressing <span class="command">Alt + d</span> on your keyboard. Since we will be rotating this Spline around the <span class="command">Y</span> axis to create our object, its inner points must lie precisely on the symmetry axis. Select each point separately and set its <span class="command">X</span> position to <span class="command_value">0</span> in the <span class="command">Coordinate Manager</span>, as shown at the center of the image below. Select the two center points at the right of the object, as shown at the right of the image below, and give them a soft interpolation via the <a href="5612.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_12191.png" alt="" height="12" width="12"    border="0"><span class="text_command">Soft Interpolation</span></nobr></a> command (<nobr><span class="menu">Mesh | Spline</span></nobr>). This will automatically add tangents to these points that can be used to create a rounded curve. The <span class="command">Soft Interpolation</span> command can also be accessed from the menu that appears when you click with the right mouse button in an empty part of the Viewport.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Chamfering points","hl_2"--><p><span class="HL_1">Chamfering points</span></p>
+<p>These points can be further edited by dragging the handles at the end of each tangent. If you want to create a small curvature, using the Chamfer function would be the best option. To do so, select the points you want to chamfer and select the <a href="TOOLSPLINECHAMFER.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_450000043.png" alt="" height="12" width="12"    border="0"><span class="text_command">Chamfer</span></nobr></a> tool’s <a href="TOOLSPLINECHAMFER-MDATA_MAINGROUP.html#MDATA_SPLINE_CHAMFERRADIUS" target="_self"><span class="text_id">Radius</span></a> value in the <span class="command">Attribute Manager</span> (<nobr><span class="menu">Mesh | Spline</span></nobr> or right-click in the Viewport). The curvature’s radius can also be defined manually via the <span class="command">Chamfer</span> tool’s <span class="command">Radius</span> value in the <span class="command">Attribute Manager</span>. Select the points and modify them, as shown in the image below. We recommend manually entering a Radius value since it can be easy to inadvertently add unwanted chamfers when using the mouse.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Controlling subdivision","hl_3"--><p><span class="HL_1">Controlling subdivision</span></p>
+<p>Once you have shaped the Spline to fit your needs, create a <a href="OLATHE.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_5117.png" alt="" height="12" width="12"    border="0"><span class="text_command">Lathe</span></nobr></a> from the <nobr><span class="menu">Create | Generators</span></nobr> menu and make the Spline object a Child object of the <span class="command">Lathe</span> object in the <span class="command">Object Manager</span>. At the right of the image above you can see the result. A pretty bulky object has been created that can be modified via the Spline points. The <span class="command">Lathe</span> object object will automatically maintain the voluminous shape. </p>
+<p><div class="image_full" style="max-width:958px"><img  src="../pics/__tut_024568.jpg"  ><span class="caption"></span></div></p>
+<p>The overall shape of the object will be influence by the location and number of Spline points and by the <a href="OLATHE-ID_OBJECTPROPERTIES.html#LATHEOBJECT_SUB" target="_self"><span class="text_id">Subdivision</span></a> value. In the image below you can see how the level of detail is increased when the Angle option is set from Adaptive to Subdivided mode. Increasing the <a href="OSPLINE-ID_OBJECTPROPERTIES.html#SPLINEOBJECT_ANGLE" target="_self"><span class="text_id">Angle</span></a> value will reduce the number of surfaces at the small chamfers to a reasonable number.</p>
+<p><div class="image_full" style="max-width:1057px"><img  src="../pics/__tut_024569.jpg"  ><span class="caption"></span></div></p>
+<p>In the next image you can see how the <span class="command">Lathe</span> object object’s <span class="command">Subdivision</span> value can be used to increase the number of surfaces that run in the direction of rotation.</p>
+<p><div class="image_full" style="max-width:1056px"><img  src="../pics/__tut_024570.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Creating unusual shapes","hl_4"--><p><span class="HL_1">Creating unusual shapes</span></p>
+<p>Often, shapes must be modeled that are not closed or comprised of simple rotation objects, e.g., a baking form or the rail of a spiral staircase. This is something the <span class="command">Lathe</span> object can handle as well. The <span class="command">Angle</span> value can be used to generate rotations of less than <span class="command_value">360°</span>, as shown in the image below. At the left of the image you can still see the open endings of our <span class="command">Spline Object</span> - no cap surfaces were generated. This can be corrected by simply closing our <span class="command">Spline object</span>. To do so, simply enable the Spline object’s <a href="OSPLINE-ID_OBJECTPROPERTIES.html#SPLINEOBJECT_CLOSED" target="_self"><span class="text_id">Close Spline</span></a> option in the <span class="command">Attribute Manager</span>. How to fine-tune the <span class="command">Generator</span> object’s</span> caps surfaces and edges was already explained above.</p>
+<p><div class="image_full" style="max-width:764px"><img  src="../pics/__tut_024571.jpg"  ><span class="caption"></span></div></p>
+<p>The <span class="command">Lathe</span> object <a href="OLATHE-ID_OBJECTPROPERTIES.html#LATHEOBJECT_MOVE" target="_self"><span class="text_id">Movement</span></a> value can be used to offset the Spline during rotation. Entering an <span class="command">Angle</span> value of greater (even far greater) than <span class="command_value">360°</span> can result in interesting shapes being created, as shown in the image below. The <a href="OLATHE-ID_OBJECTPROPERTIES.html#LATHEOBJECT_SCALE" target="_self"><span class="text_id">Scaling</span></a> value can also be used to modify the scale of the Spline shape in the course of the rotation. These methods can be used to, for example, model a snail’s shell or a screw.</p>
+<p><div class="image_full" style="max-width:764px"><img  src="../pics/__tut_024572.jpg"  ><span class="caption"></span></div></p>
+<p><a href="__tut_40783.html#path" target="">Continue …</a></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Sweep Object</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40784"-->
+		<!--VATER_ID "40780"-->
+		<!--REIHENFOLGE "4"-->
+		<!--TITLE "Sweep Object"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="__tut_1002.html" target="_self">Tutorials</a></span> <span class="link_back"><a href="__tut_40480.html" target="_self">Mechanical Modeling Tutorial</a></span> <span class="link_back"><a href="__tut_40780.html" target="_self">Modeling with Splines and Generator Objects </a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Sweep Object",""--><p><span class="HL_group">Sweep Object</span></p><p></p>
+<p>Objects such as piping, hoses, cables, or even paper clips or springs can be created using a uniform cross-section that follows a defined path. This is what the <a href="OSWEEP.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_5118.png" alt="" height="12" width="12"    border="0"><span class="text_command">Sweep</span></nobr></a> object does. As with the other <span class="command">Generator</span> objects, Splines must also be made Child objects of the <span class="command">Sweep</span> object. The order in which the Child objects lie in the hierarchy is important. The cross-section Spline must lie at the top of the hierarchy and below it the path Spline. The image below illustrates the proper order using a <a href="" target="_self"><span class="text_command"></span></a> Spline used in conjunction with a <a href="OSPLINECIRCLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_5181.png" alt="" height="12" width="12"    border="0"><span class="text_command">Circle</span></nobr></a> cross-section. This method lets you easily create wires, hoses, cables and similar objects. In the image below, a Freehand Spline was created in the front view and a scaled down Circle Spline Primitive was used as the cross-section.</p>
+<p><div class="image_full" style="max-width:752px"><img  src="../pics/__tut_024578.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Defining a Sweep object","hl_1"--><p><span class="HL_1">Defining a Sweep object</span></p>
+<p>The <span class="command">Sweep</span> object object’s <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_SCALE" target="_self"><span class="text_id">End Scale</span></a> and <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_ROTATE" target="_self"><span class="text_id">End Rotation</span></a> parameters let you modify the cross-section along the path. The <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_STARTGROWTH" target="_self"><span class="text_id">Start Growth</span></a> and <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_GROWTH" target="_self"><span class="text_id">End Growth</span></a> parameters let you define in percent where the along the path the <span class="command">Sweep</span> object object should begin and where it should end. Setting the <span class="command">Start Growth</span> value to <span class="command_value">50%</span> and the <span class="command">End Growth</span> value to <span class="command_value">100%</span> will result in the <span class="command">Sweep</span> object object beginning at the path’s mid point and continuing to its end. Splines must be setup in the <span class="command">XY view</span>, i.e., front viewport, before applying the <span class="command">Sweep</span> object. Most of the <span class="command">Sweep</span> object parameters are for modifying the orientation or scaling of the cross-section along the path. The <span class="command">Constant Cross Section</span> option, for example, automatically scales the cross-section at locations where the path makes an abrupt change of direction, in order to maintain the cross-section’s integrity. The Rail options make it possible to calculate additional Spline curves that lie below the path Spline in the <span class="command">Sweep</span> object hierarchy. This allows the cross-section to be scaled or rotated individually and any point along the path. However, this can be done even more comfortably using the parameters in the Details menu below.</p>
+<p> </p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Varying the profile","hl_2"--><p><span class="HL_1">Varying the profile</span></p>
+<p>The Details menu contains two curves that can be used to adjust the cross-section’s <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_SPLINESCALE" target="_self"><span class="text_id">Scale</span></a> or rotation along the Spline. An example of what this can look like is shown in the image below. The length of the curve represents the length of the path. The curve’s amplitude (vertical position) defines the scaling along the path.</p>
+<p><div class="image_full" style="max-width:976px"><img  src="../pics/__tut_024579.jpg"  ><span class="caption"></span></div></p>
+<p>New points can be added by simply clicking on the curve. Points can be deleted by dragging them up out of the graph window. Click on the arrow to the left of each graph to make additional parameters available for that graph. These parameters can be used to define the exact position of a given point or the curve’s tension.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Modifying the cross-section rotation","hl_3"--><p><span class="HL_1">Modifying the cross-section rotation</span></p>
+<p>The same principle is applied for rotating the cross-section along the path using the <a href="OSWEEP-ID_OBJECTPROPERTIES.html#SWEEPOBJECT_SPLINEROTATION" target="_self"><span class="text_id">Rotation</span></a> curve. In order to make this effect more apparent we substituted a <span class="command">Flower - Spline Primitive</span> for the Circle Spline in the image below. The Rotation curve works just like the <span class="command">Scale</span> curve with the exception that its zero point lies at the (horizontal) center of the curve. The <span class="command">From</span> and <span class="command">To</span> values define the rotational range of the effect. The top edge of the graph represents the To value and the bottom edge of the graph represents the From value. As you can see at the top left of the image below, fairly sharp angles can result. This is due to the fact that a path Spline’s <span class="command">Intermediate Points</span> are included in the calculation of the rotation. The more uniform and closer together the intermediate points lie, the softer the rotation will be. The example at the bottom shows what the <span class="command">Sweep</span> object looks like after the path Spline’s <span class="command">Intermediate Points</span> setting was set to <span class="command_value">Uniform</span> and its <a href="OSPLINE-ID_OBJECTPROPERTIES.html#SPLINEOBJECT_SUB" target="_self"><span class="text_id">Number</span></a> value has been raised.</p>
+<p><div class="image_full" style="max-width:839px"><img  src="../pics/__tut_024580.jpg"  ><span class="caption"></span></div></p>
+<p><a href="__tut_40480.html#path" target="">Back to overview</a></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
