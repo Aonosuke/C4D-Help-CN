@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>交互式区域渲染(IRR)</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "10974"-->
+		<!--VATER_ID "5697"-->
+		<!--REIHENFOLGE "9"-->
+		<!--TITLE "交互式区域渲染(IRR)"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D 程序文档</a></span> <span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","交互式区域渲染",""--><p><span class="HL_group">交互式区域渲染</span></p><p></p>
+<p><img class="cmd_icon" src="../icons/PLUGIN_Cmd_430000021.png" alt=""   height="24" width="24"    border="1"> </p>
+<p><!--INDEX "7","交互式区域渲染",""--><!--PAGE_COMMAND "PLUGIN_Cmd_430000021"--></p>
+<p><div class="image_full" style="max-width:946px"><img  src="../pics/012893.jpg"  ><span class="caption">在边框上点击右键会打开选择菜单。</span></div></p>
+<p>交互式区域渲染（下文简称 IRR）是一个有效且实用的工具，它能极大地提高测试渲染的速度。IRR 可以自由地放置和缩放，并按照设定的分辨率保持渲染状态。IRR 会自动与场景一起保存。当选择了新的区域后，该区域会重新渲染，编辑对象或做出其他任何修改都会影响渲染状态。</p>
+<p>即使在低分辨率下，IRR 提供的的预览都会提供看上去类似最终渲染的效果。IRR 可以使用区域边框的手柄来缩放和移动，在 IRR 右边框上你可以找到一个三角形滑块，你可以用它调节渲染的分辨率，当然，渲染质量越高，预览要花费的时间也越长。</p>
+<p>当滑块移动到顶部时会使用最好的渲染质量。</p>
+<p>在 IRR 边框上点击右键会打开一个选择菜单。</p>
+<p><p><div class="hint"><span class="HL_hint">提示<br></span>
+	当使用了投影为软阴影的灯光时，贴图会在缓存在场景路径下的 <span class="command">illum</span> 文件夹中，这只是为了加快渲染速度，如果不需要你可以删掉这个文件夹。</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示 2<br></span>
+	IRR 不能与 CineMan 一起使用，它会使用 CINEMA 4D 渲染引擎。</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示 3<br></span>
+	注意，IRR 可以被<a href="32186.html" target="">草绘</a>覆盖。</div></p>
+<p>在 IRR 边框上点击右键会打开一个包含相关设置的菜单。</p>
+<p><!--INDEX "8","Alpha 模式","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Alpha 模式</span></p>
+<p>根据是否启用了这个选项，会决定在选择的渲染区域中是渲染正常的视窗背景（如果启用，则会生成一个略微抗锯齿的物件）还是一个黑色背景（所有区域会正常在 alpha 通道中渲染为黑色）。</p>
+<p><p><div class="hint"><span class="HL_hint">提示<br></span>如果要看到物理天空的 2D 云（CINEMA 4D Studio），应该禁用这个选项，因为 Alpha 通道会无视 2D 云。</div></p>
+<p><!--INDEX "8","锁定到视图","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">锁定到视图</span></p>
+<p>如果启用它，当你切换视窗是，IRR 不会在新的视窗中显示；如果禁用，IRR 会在你切换的视窗中显示。</p>
+<p><!--INDEX "7","交互式区域渲染设置…","PLUGIN_Cmd_430000041"--><!--COMMAND "PLUGIN_Cmd_430000041"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_430000041.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_430000041" name="PLUGIN_Cmd_430000041"></a>   <span class="c4d_menu_id">交互式区域渲染设置…</span></p>
+<p><!--INDEX "8","启用","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">启用</span></p>
+<p>启用或禁用 IRR 渲染。</p>
+<p><!--INDEX "8","细节","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">细节</span></p>
+<p>定义渲染分辨率质量，你也可以用 IRR 右侧的滑块来交互地调节。</p>
+<p><!--INDEX "8","锁定到视图","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">锁定到视图</span></p>
+<p>见上文。</p>
+<p><!--INDEX "8","Alpha 模式","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Alpha 模式</span></p>
+<p>见上文。</p>
+<p><!--INDEX "8","配件覆盖","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">配件覆盖</span></p>
+<p><div class="image_full" style="max-width:710px"><img  src="../pics/012895.jpg"  ><span class="caption">左：<span class="command">配件覆盖</span>启用；右：禁用。</p>
+<p></span></div></p>
+<p>如果启用，配件和坐标轴会覆盖显示在 IRR 渲染区域中，如果禁用，则不会显示（但是会存在于渲染区域后面并且可以使用它们）。</p>
+<p><!--INDEX "7","保存交互式区域渲染…","PLUGIN_Cmd_430000031"--><!--COMMAND "PLUGIN_Cmd_430000031"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_430000031.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_430000031" name="PLUGIN_Cmd_430000031"></a>   <span class="c4d_menu_id">保存交互式区域渲染…</span></p>
+<p>如果需要的话这个命令可以通过键盘快捷键来执行。</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","在 BodyPaint 3D 中的限制","hl_1"--><p><span class="HL_1">在 BodyPaint 3D 中的限制</span></p>
+<p>IRR 在 3D Paint 模式下无效。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
