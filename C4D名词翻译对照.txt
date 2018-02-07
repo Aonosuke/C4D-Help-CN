@@ -43,3 +43,5 @@ Selection Object                选集对象
 Shortcut hierarchies            层级快捷键
 Quick Access                    快速选择
 Mechanical Modeling             机械建模
+Frame Output			帧输出
+Animation output		动画输出
