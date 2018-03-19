@@ -37,52 +37,58 @@
 <p><li> <span class="command">./xy/beauty</span> 会保存一个名为 <span class="command_value">beauty</span> 的文件到场景文件路径下的 <span class="command_value">xy</span> 文件夹。</li>
 <li> <span class="command">../xy/beauty</span> 会调到场景文件所保存的路径的上一级。在这个示例中，一个名为 <span class="command_value">beauty</span> 的文件会被保存到名为 <span class="command_value">xy</span> 的父级文件夹中。</li></p></div></p>
 <p></ul>
-<p><p><div class="hint"><span class="HL_hint">在设置路径时，记住一下几点，避免从一个操作系统移动到另一个时出现文件名问题：文件名最多使用22个字符。例如，Mac OS 9.1 有如下限制：文件名长度最大为31个字符，其中4个字符用作扩展名（如 <span class="command">*.tif</span>）、5个字符用作输出帧序列时的序号（如 <span class="command">_0023</span>）。同样，只在文件名中使用如下字符： <span class="command">A - Z</span>、<span class="command">a - z</span>、<span class="command">0</span>-<span class="command">9</span>、<span class="command">_</span>。一些特殊字符也是有效的，但是通常应该避免使用特殊字符来保证最大的兼容性。</span></div></p>
+<p><p><div class="hint">在设置路径时，记住一下几点，避免从一个操作系统移动到另一个时出现文件名问题：文件名最多使用22个字符。例如，Mac OS 9.1 有如下限制：文件名长度最大为31个字符，其中4个字符用作扩展名（如 <span class="command">*.tif</span>）、5个字符用作输出帧序列时的序号（如 <span class="command">_0023</span>）。同样，只在文件名中使用如下字符： <span class="command">A - Z</span>、<span class="command">a - z</span>、<span class="command">0</span>-<span class="command">9</span>、<span class="command">_</span>。一些特殊字符也是有效的，但是通常应该避免使用特殊字符来保证最大的兼容性。</div></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>如果你想要文件名和路径名自动参考工程名或设定的渲染分辨率，可以使用<a href="54506.html" target="">可变路径和文件名</a>，这样每次渲染不同分辨率时你就不用修改文件名或路径名了，还可以避免覆盖已有的文件。</div></p>
-<p><a id="RDATA_FORMAT" name="RDATA_FORMAT"></a> <!--AM_JUMP "RDATA_FORMAT","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Format","RDATA_FORMAT"--><span class="c4d_id">Format</span><br><a id="RDATA_SAVEOPTIONS" name="RDATA_SAVEOPTIONS"></a> <!--AM_JUMP "RDATA_SAVEOPTIONS","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Options...","RDATA_SAVEOPTIONS"--><span class="c4d_id">Options...</span></p>
-<p>This button is ghosted unless Format is set to <span class="command">AVI Movie</span> (Windows) or <span class="command">QuickTime Movie</span> (Windows and Macintosh).</p>
-<p>If you click this button, a dialog opens that gives you access to various codecs and their settings. If the dialog does not open, check that you have the latest version of QuickTime installed.</p>
-<p>If QuickTime is installed on a Windows system numerous additional formats will be made available. These are listed below. Depending on the format chosen, clicking on the "Options" button to the right will make that format’s options available for modification (e.g., JPEG compression or codecs for video formats). </p>
+<p><a id="RDATA_FORMAT" name="RDATA_FORMAT"></a> <!--AM_JUMP "RDATA_FORMAT","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","格式","RDATA_FORMAT"--><span class="c4d_id">格式</span><br><a id="RDATA_SAVEOPTIONS" name="RDATA_SAVEOPTIONS"></a> <!--AM_JUMP "RDATA_SAVEOPTIONS","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","选项…","RDATA_SAVEOPTIONS"--><span class="c4d_id">选项…</span></p>
+<p>这个按钮只有当格式设置为 <span class="command">AVI 影片</span>（Windows）或 <span class="command">QuickTime 影片</span>（Windows 和 Macintosh）时才可用。</p>
+<p>点击这个按钮会打开一个对话框，在这里可以进行各种编码和其他设置。如果没有打开对话框，请检查是否安装了最新版本的 QuickTime。</p>
+<p>如果在 Windows 上安装了 QuickTime，则会有额外的几种可用的格式，列表如下。根据选择的格式，点击右侧的“选项”按钮可以对格式的选项进行修改（例如为视频格式使用 JPEG 压缩）。</p>
 <p>         </div>     </div> </div></p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","The following applies to RLA/RPF:","hl_1"--><p><span class="HL_3">The following applies to RLA/RPF:</span></p>
-<p>The RPF format is a further development of the RLA format. Both formats can be used to assign numerous channels to an image that can be used by compositing applications such as After Effects® or Combustion®.</p>
-<p>The RPF format contains the following channels (RLA contains only the channels <span class="command">Z</span> through <span class="command">Coverage</span>):</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","以下应用于 RLA/RPF：","hl_1"--><p><span class="HL_3">以下应用于 RLA/RPF：</span></p>
+<p>RPF 格式是一种由 RLA 发展而来的格式。这两种格式都可以用来给图像分配多个通道，便于在 After Effects® 或 Combustion® 等后期合成软件中使用。</p>
+<p>RPF 格式包含如下通道（RLA 只通过 <span class="command">Coverage</span> 包含 <span class="command">Z</span> 通道）：</p>
 <p><!--INDEX "8","Z","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Z</span></p>
-<p>Information on camera <-> object distance. Useful for depth-of-field effects.</p>
-<p><!--INDEX "8","Object","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">Object</span></p>
-<p>Enables different materials to be used in post-editing.</p>
-<p><!--INDEX "8","UV Coordinates","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">UV Coordinates</span></p>
-<p>Information on UV coordinates so that new textures can be mapped correctly during post-editing.</p>
-<p><!--INDEX "8","Normal","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">Normal</span></p>
-<p>Direction information regarding objects and textures.</p>
-<p><!--INDEX "8","Non-Clamped Color","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">Non-Clamped Color</span></p>
-<p>Information on object color. Can extend beyond RGB gamut.</p>
-<p><!--INDEX "8","Coverage","no_id_6"--><a id="no_id_6" name="no_id_6"></a> <span class="no_id">Coverage</span></p>
-<p>Antialiasing information for object edges.</p>
-<p><!--INDEX "8","Object ID (RPF only)","no_id_7"--><a id="no_id_7" name="no_id_7"></a> <span class="no_id">Object ID (RPF only)</span></p>
+<p>相机与对象的距离信息，用来制作景深效果。</p>
+<p><!--INDEX "8","对象","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">对象</span></p>
+<p>在后期编辑中可以使用不同材质。</p>
+<p><!--INDEX "8","UV 坐标","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">UV 坐标</span></p>
+<p>UV 坐标的信息，用来在后期编辑中将纹理贴图置入到正确的地方。</p>
+<p><!--INDEX "8","正常","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">正常</span></p>
+<p>关于对象和纹理的方向信息。</p>
+<p><!--INDEX "8","无限颜色","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">无限颜色</span></p>
+<p>对象颜色的信息，可超过 RGB 色域。</p>
+<p><!--INDEX "8","覆盖","no_id_6"--><a id="no_id_6" name="no_id_6"></a> <span class="no_id">覆盖</span></p>
+<p>对象边缘的抗锯齿信息。</p>
+<p><!--INDEX "8","对象标识（仅 RPF）","no_id_7"--><a id="no_id_7" name="no_id_7"></a> <span class="no_id">对象标识（仅 RPF）</span></p>
 <p>Enables the clear identification of objects.</p>
-<p><!--INDEX "8","Color (RPF only)","no_id_8"--><a id="no_id_8" name="no_id_8"></a> <span class="no_id">Color (RPF only)</span></p>
-<p>Object color information.</p>
-<p><!--INDEX "8","Transparency (RPF only)","no_id_9"--><a id="no_id_9" name="no_id_9"></a> <span class="no_id">Transparency (RPF only)</span></p>
-<p>Object transparency information.</p>
-<p><!--INDEX "8","Subpixel Weight","no_id_10"--><a id="no_id_10" name="no_id_10"></a> <span class="no_id">Subpixel Weight</span></p>
-<p>Information on the color of subpixels.</p>
-<p><!--INDEX "8","Subpixel Mask","no_id_11"--><a id="no_id_11" name="no_id_11"></a> <span class="no_id">Subpixel Mask</span></p>
-<p>Information that links subpixels to their objects.</p>
-<p><a id="RDATA_FORMATDEPTH" name="RDATA_FORMATDEPTH"></a> <!--AM_JUMP "RDATA_FORMATDEPTH","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Depth","RDATA_FORMATDEPTH"--><span class="c4d_id">Depth</span></p>
-<p>Defines the bit depth per color channel. Choose either <span class="command">8 bits per channel</span> (for 24-bit color),  <span class="command">16 bits per channel</span> (for 48-bit color) or <span class="command">32 bits per channel</span> (96-bit color). A list of supported color depths for each format and other details can be found <a href="6198.html" target="">here</a>.</p>
+<p><!--INDEX "8","颜色（仅 RPF）","no_id_8"--><a id="no_id_8" name="no_id_8"></a> <span class="no_id">颜色（仅 RPF）</span></p>
+<p>对象的颜色信息。</p>
+<p><!--INDEX "8","透明度（仅 RPF）","no_id_9"--><a id="no_id_9" name="no_id_9"></a> <span class="no_id">透明度（仅 RPF）</span></p>
+<p>对象的透明度信息。</p>
+<p><!--INDEX "8","子多边形权重","no_id_10"--><a id="no_id_10" name="no_id_10"></a> <span class="no_id">子多边形权重</span></p>
+<p>亚像素的颜色信息。</p>
+<p><!--INDEX "8","子多边形蒙版","no_id_11"--><a id="no_id_11" name="no_id_11"></a> <span class="no_id">子多边形蒙版</span></p>
+<p>链接到对象的亚像素的信息。</p>
+<p><a id="RDATA_FORMATDEPTH" name="RDATA_FORMATDEPTH"></a> <!--AM_JUMP "RDATA_FORMATDEPTH","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","深度","RDATA_FORMATDEPTH"--><span class="c4d_id">深度</span></p>
+<p>设置每个颜色通道的位深，可以选择 <span class="command">8 位/通道</span>（24 位色）、<span class="command">16 位/通道</span>（48 位色）或 <span class="command">32 位/通道</span>（96 位色）。每种格式支持的颜色深度和其他信息参见<a href="6198.html" target="">此表</a>。</p>
 <p><!--INDEX "1","HDR",""--></p>
-<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","HDRI Formats","hl_2"--><p><span class="HL_2">HDRI Formats</span></p>
-<p><p><div class="hint"><span class="HL_hint">Tip<br></span>In the following, HDR images are discussed. These does not exclusively mean ,radiance (HDR)’ but also includes OpenEXR and all other formats that can handle images with a high dynamic range.</div></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","HDRI 格式","hl_2"--><p><span class="HL_2">HDRI 格式</span></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>In the following, HDR images are discussed. These does not exclusively mean ,radiance (HDR)’ but also includes OpenEXR and all other formats that can handle images with a high dynamic range.</div></p>
 <p>The standard version of Cinema 4D can output, load, and render HDR images (e.g., if you want to use HDRI textures for reflections).</p>
 <p>This lets you take full advantage of maximum color and brightness when outputting your Cinema 4D images. Internally, Cinema 4D renders with substantially higher color and brightness (98-bit / pixel) than can be realized on a conventional RGB image.</p>
 <p>This limitation does not exist for images rendered to the HDRI format.</p>
 <p>The following formats are able to read this color depth:<ul></p>
-<p><li> Radiance (HDR)</li><li> OpenEXR</li><li> BodyPaint 3D (rendered with 32-bit/channel)</li><li> TIFF (rendered with 32-bit/channel)</li><li> PSD (rendered with 32-bit/channel). These images can only be opened with Photoshop CS2.</li></ul><p></p>
+<p><li> Radiance (HDR)</li>
+<li> OpenEXR</li>
+<li> BodyPaint 3D (rendered with 32-bit/channel)</li>
+<li> TIFF (rendered with 32-bit/channel)</li>
+<li> PSD (rendered with 32-bit/channel). These images can only be opened with Photoshop CS2.</li></ul><p></p>
 <p>Using applications that can work with these formats will put you at a great advantage.</p>
 <p>So, what is all this good for?</p>
 <p>Well, there are several uses:</p>
-<p><ol><li>  HDR formats can be used as photo processing formats when compositing. Ordinary monitors or printers, though, cannot display this depth of color; they use conventional color depth.<br><br>One disadvantage of conventional color depths is the limitation in brightness. For example, an RGB value of 255, 255, 255 for the color white is as good as it gets. Let’s say you want to darken an image in post-production that contains a white area, e.g., a surface brightly lit by sunlight through a window. The white area will turn gray, even though the actual color of the surface should start showing through.<br><br><div class="image_full" style="max-width:800px"><img  src="../pics/003825.jpg"  ><span class="caption">Above, the original image; center, the original image darkened in Photoshop output as TIFF; below, the original image output in 32-bit, darkened using the appropriate software.</span></div><br>As you can see in the example above, the HDR image can be darkened (e.g., using Cinema 4D’s <span class="command">Exposure</span> setting) without having to worry about the white surface turning gray, as is the case with the conventional image formats. The above scene was lit exclusively per GI with a very bright light (<span class="command_value">400%</span>).<br><br><p><div class="hint"><span class="HL_hint"></span>The depiction of HDR images is only an interpretation of color data that cannot actually be depicted with conventional technology.</div><br>When you render an image in HDR in the Picture Viewer or in the editor view, a special HDR antialiasing mode will be used. At first glance, the image will look flawed. This is due to the fact that the display of the image must be reduced to the limited color range of your monitor. If rendered using a conventional format, the image will be perfectly antialiased since antialiasing takes effect when the color depth is reduced to 8-bit or 16-bit. 32-bit antialiasing is rendered without color limitations, i.e., a smoothed pixel can have a brightness value greater than 100% and will therefore be depicted as white. Correct 32-bit antialiasing will not be visible but it’s there, internally.<br><br><li> HDR image formats (in particular the HDR formats: HDR (Radiance) and OpenEXR) can be used to render particularly sharp reflections. Simply lay the HDR image in a Sky object’s <span class="command">Luminance</span> material channel, for example. Cinema 4D will take into account the high level of brightness when rendering.<br><br><li> HDR image formats (in particular the HDR formats: HDR (Radiance) and OpenEXR) are good for use as so-called <span class="command">Image Based Lighting</span>, i.e., the lighting of scenes via GI, exclusively with textures, without the use of light sources.<br></ol><p></p>
+<p><ol><li>  HDR formats can be used as photo processing formats when compositing. Ordinary monitors or printers, though, cannot display this depth of color; they use conventional color depth.<br><br>One disadvantage of conventional color depths is the limitation in brightness. For example, an RGB value of 255, 255, 255 for the color white is as good as it gets. Let’s say you want to darken an image in post-production that contains a white area, e.g., a surface brightly lit by sunlight through a window. The white area will turn gray, even though the actual color of the surface should start showing through.<br><br><div class="image_full" style="max-width:800px"><img  src="../pics/003825.jpg"  ><span class="caption">Above, the original image; center, the original image darkened in Photoshop output as TIFF; below, the original image output in 32-bit, darkened using the appropriate software.</span></div><br>As you can see in the example above, the HDR image can be darkened (e.g., using Cinema 4D’s <span class="command">Exposure</span> setting) without having to worry about the white surface turning gray, as is the case with the conventional image formats. The above scene was lit exclusively per GI with a very bright light (<span class="command_value">400%</span>).<br><br><p><div class="hint"><span class="HL_hint"></span>The depiction of HDR images is only an interpretation of color data that cannot actually be depicted with conventional technology.</div><br>When you render an image in HDR in the Picture Viewer or in the editor view, a special HDR antialiasing mode will be used. At first glance, the image will look flawed. This is due to the fact that the display of the image must be reduced to the limited color range of your monitor. If rendered using a conventional format, the image will be perfectly antialiased since antialiasing takes effect when the color depth is reduced to 8-bit or 16-bit. 32-bit antialiasing is rendered without color limitations, i.e., a smoothed pixel can have a brightness value greater than 100% and will therefore be depicted as white. Correct 32-bit antialiasing will not be visible but it’s there, internally.<br><br>
+<li> HDR image formats (in particular the HDR formats: HDR (Radiance) and OpenEXR) can be used to render particularly sharp reflections. Simply lay the HDR image in a Sky object’s <span class="command">Luminance</span> material channel, for example. Cinema 4D will take into account the high level of brightness when rendering.<br><br>
+<li> HDR image formats (in particular the HDR formats: HDR (Radiance) and OpenEXR) are good for use as so-called <span class="command">Image Based Lighting</span>, i.e., the lighting of scenes via GI, exclusively with textures, without the use of light sources.<br></ol><p></p>
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","The classic HDR formats","hl_3"--><p><span class="HL_2">The classic HDR formats</span></p>
 <p>Both of the classic (whereby the term classic is relative in the fast-moving IT world) HDR formats, Radiance (HDR) and OpenEXR, that are used in numerous rendering pipelines, are now supported by Cinema 4D.</p>
 <p>Radiance HDR is the older of the two formats and will most likely eventually be replaced by OpenEXR. Even though OpenEXR exhibits less dynamic breadth compared to HDR (Radiance) (which is basically irrelevant in everyday use, otherwise OpenEXR would not be used in so many Hollywood productions), it can be compressed to a much smaller file size.</p>
@@ -97,7 +103,7 @@
 <p>Instead of overwhelming you with technical details we will give you a general description. The compression methods available either cause a lot of loss, cause color information to be lost or are loss-free (the first 5 in the list below) and maintain the entire dynamic scope.</p>
 <p>Especially images that need major or frequent editing, 16-bit float comma compression should not be used because it can quickly lead to imprecise or limited color ranges.</p>
 <p>Which compression method is best for your particular purpose should be ascertained by conducting tests to determine the most acceptable correlation between quality, file size and speed of editing.</p>
-<p><div class="in-prime in-visualize in-broadcast in-studio in-bodypaint3d " align="left">     <div class="only_marker" align ="right">         <div class="only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D         </div>              <div class="only_body" align="left">             <a id="RDATA_NAMEFORMAT" name="RDATA_NAMEFORMAT"></a> <!--AM_JUMP "RDATA_NAMEFORMAT","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Name","RDATA_NAMEFORMAT"--><span class="c4d_id">Name</span></p>
+<p><div class="only_body" align="left"><!--AM_JUMP "RDATA_NAMEFORMAT","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Name","RDATA_NAMEFORMAT"--><span class="c4d_id">Name</span></p>
 <p>Many editing programs accept picture sequences. However, they tend to use different naming conventions.</p>
 <p>Some programs expect the filename to end with a number, others an extension. Some programs can cope only with three-digit numbers.</p>
 <p>Use this menu to set the sequential numbering and/or lettering style required by your editor. In the example names below, <span class="command_value">0000</span> represents any sequential number, <span class="command">TIF</span> represents any three-letter extension.</p>
@@ -208,7 +214,7 @@
 <p>This is where you set the save path for the file.</p>
 <p>Multi-layer files require much more space than single-layer files. Prior to rendering, check that you have sufficient storage space, especially when rendering Multi-Pass animations.</p>
 <p>A relative path must be entered here when rendering with Team Render.</p>
-<p><a id="RDATA_MULTIPASS_SAVEFORMAT" name="RDATA_MULTIPASS_SAVEFORMAT"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEFORMAT","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Format","RDATA_MULTIPASS_SAVEFORMAT"--><span class="c4d_id">Format</span><br><a id="RDATA_MULTIPASS_SAVEOPTIONS" name="RDATA_MULTIPASS_SAVEOPTIONS"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEOPTIONS","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Options...","RDATA_MULTIPASS_SAVEOPTIONS"--><span class="c4d_id">Options...</span></p>
+<p><a id="RDATA_MULTIPASS_SAVEFORMAT" name="RDATA_MULTIPASS_SAVEFORMAT"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEFORMAT","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","Format","RDATA_MULTIPASS_SAVEFORMAT"--><span class="c4d_id">Format</span><br><a id="RDATA_MULTIPASS_SAVEOPTIONS" name="RDATA_MULTIPASS_SAVEOPTIONS"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEOPTIONS","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","选项…","RDATA_MULTIPASS_SAVEOPTIONS"--><span class="c4d_id">选项…</span></p>
 <p>This button is greyed out unless the format chosen has extra options. Click Options to access these.</p>
 <p><a id="RDATA_MULTIPASS_FILENAME" name="RDATA_MULTIPASS_FILENAME"></a> <!--AM_JUMP "RDATA_MULTIPASS_FILENAME","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","File","RDATA_MULTIPASS_FILENAME"--><span class="c4d_id">File</span></p>
 <p>This path defines where the rendered still or animation will be saved. Note for animations in particular that a location is selected that offers enough disk space for the entire animation.</p>
