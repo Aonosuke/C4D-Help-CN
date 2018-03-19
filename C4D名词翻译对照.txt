@@ -47,3 +47,5 @@ Frame Output			        帧输出
 Animation output		        动画输出
 Proximal Shader                 接近着色器
 Variable Path and File Names    可变路径和文件名
+lighting scenario               光照条件
+Oversample                      超采样
