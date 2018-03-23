@@ -174,7 +174,7 @@
 <p></RELEASE_110></p>
 <p><!--INDEX "6","QuickTime VR 选项","RDATA_GROUP_QUICKTIMEVR"--><a id="RDATA_GROUP_QUICKTIMEVR" name="RDATA_GROUP_QUICKTIMEVR"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>QuickTime VR 选项</span></p>
 <p><div class="image_full" style="max-width:1248px"><img  src="../pics/003896.jpg"  ><span class="caption"></span></div></p>
-<p>你可以利用这个页面上的选项来创建 QuickTime 全景和 QuickTime VR 影片。</p>
+<p>你可以利用这个页面上的选项来创建 QuickTime 虚拟全景和 QuickTime 虚拟对象影片。</p>
 <p><p><div class="hint"><span class="HL_hint"></span>镜头效果不能与 QuickTime 虚拟影片一起使用。</div></p>
 <p><p><div class="hint"><span class="HL_hint"></span>如果安装了可选的 Team Render 组件，注意，QuickTime 虚拟对象和全景影片不能使用 Team Render 或物理渲染器来进行渲染。</div></p>
 <p>QuickTime 虚拟技术将一系列水平环绕画面进行 360° 无缝合成，让你可以自由的在虚拟场景中移动和缩放。</p>
@@ -215,127 +215,143 @@
 <p><a id="MP" name="MP"></a></p>
 <p><!--INDEX "6","多通道图像","RDATA_GROUP_SAVEMULTIPASSIMAGE"--><a id="RDATA_GROUP_SAVEMULTIPASSIMAGE" name="RDATA_GROUP_SAVEMULTIPASSIMAGE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>多通道图像</span></p>
 <p><a id="RDATA_MULTIPASS_SAVEIMAGE" name="RDATA_MULTIPASS_SAVEIMAGE"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEIMAGE","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","保存","RDATA_MULTIPASS_SAVEIMAGE"--><span class="c4d_id">保存</span></p>
-<p>Multi-pass rendering makes it easy for you to post-edit your renders in compositing software such as Adobe After Effects, Photoshop and Combustion. With Multi-Pass you can split the CINEMA 4D rendering into separate layers such as shadows, reflections, highlights and each separate light source. You can save the layers in RLA, RPF, Photoshop (PSD) and BodyPaint 3D (B3D) format.</p>
-<p>Suppose you have rendered a complex movie and the reflections look too strong. With Multi-Pass, there’s no need to re-render the CINEMA 4D scene. Instead, simply reduce the opacity of the reflections layer in your compositing package. Or why not include alternative lighting setups in the same rendering? You will then be able to select the best setup during post-editing.</p>
-<p>Multi-pass is ideal for trying out various lighting setups for your rendering The setups will be rendered more quickly as a single Multi-Pass file than as separate projects.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>When rendering Multi-Pass via Team Render a relative <span class="command">path</span>, not an absolute path must be defined.</div></p>
+<p>多通道渲染让你可以很方便地在合成软件中编辑你的渲染图像或视频，如 Adobe Effects、Photoshop、Combustion 等。利用多通道，你可以将 CINEMA 4D 渲染分成单独的图层，如投影、反射、高光和单独的光源。你可以将这些图层保存为 RLA、RPF、Photoshop（PSD）或 BodyPaint 3D (B3D) 格式。</p>
+<p>假设你渲染了一个复杂的影片，但是它的反射太强了。利用多通道，你不需要重新渲染这个场景，而只用在合成软件中减少反射图层的不透明度。或者你也可以在同一个渲染中包含其他的光照配置，这样你就可以在后期处理中选择最佳配置了。</p>
+<p>对于在渲染中尝试使用各种不同的光照配置来说，使用多通道是一个理想的做法。这些配置作为一个多通道文件被渲染要比作为单独的工程快得多。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>当通过 Team Render 渲染多通道时，需要设置一个相对<span class="command">路径</span>，而不是绝对路径。</div></p>
 <p><a id="RDATA_MULTIPASS_FILENAME" name="RDATA_MULTIPASS_FILENAME"></a> <!--AM_JUMP "RDATA_MULTIPASS_FILENAME","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","文件","RDATA_MULTIPASS_FILENAME"--><span class="c4d_id">文件</span></p>
-<p>This is where you set the save path for the file.</p>
-<p>Multi-layer files require much more space than single-layer files. Prior to rendering, check that you have sufficient storage space, especially when rendering Multi-Pass animations.</p>
-<p>A relative path must be entered here when rendering with Team Render.</p>
+<p>你可以在这里设置文件的保存路径。</p>
+<p>多通道文件比单图层文件需要更多的存储空间，因此在渲染之前，检查你是否有足够的空间，尤其是渲染多通道动画时。</p>
+<p>当通过 Team Render 渲染时，必须输入一个相对路径。</p>
 <p><a id="RDATA_MULTIPASS_SAVEFORMAT" name="RDATA_MULTIPASS_SAVEFORMAT"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEFORMAT","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","格式","RDATA_MULTIPASS_SAVEFORMAT"--><span class="c4d_id">格式</span><br><a id="RDATA_MULTIPASS_SAVEOPTIONS" name="RDATA_MULTIPASS_SAVEOPTIONS"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEOPTIONS","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","选项…","RDATA_MULTIPASS_SAVEOPTIONS"--><span class="c4d_id">选项…</span></p>
-<p>This button is greyed out unless the format chosen has extra options. Click Options to access these.</p>
+<p>只有当选择的格式有额外选项时才可以使用这个按钮。点击“选项”来打开这些设置。</p>
 <p><a id="RDATA_MULTIPASS_FILENAME" name="RDATA_MULTIPASS_FILENAME"></a> <!--AM_JUMP "RDATA_MULTIPASS_FILENAME","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","文件","RDATA_MULTIPASS_FILENAME"--><span class="c4d_id">文件</span></p>
-<p>This path defines where the rendered still or animation will be saved. Note for animations in particular that a location is selected that offers enough disk space for the entire animation.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Use <a href="54506.html" target="">可变路径和文件名</a> to automatically associate file and path names with, for example, the type of Multi-Pass that is defined.</div></p>
-<p>See also <span class="command">File</span> above regarding file names and paths.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>To output the passes in Photoshop 7 format, set Format to Photoshop (PSD), click the Options button and enable the Photoshop 7 option in the dialog that appears. This will ensure the Linear Dodge blend mode is used where appropriate.</div></p>
+<p>这个路径定义了渲染的图片或动画保存的地方。特别注意对于完整的动画要选择有足够磁盘空间的文件夹。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>使用<a href="54506.html" target="">可变路径和文件名</a>可以自动将文件命和路径名与设定的多通道类型组合起来。</div></p>
+<p>相关的文件名和路径可以参考<span class="command">文件</span>。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>要输出 Photoshop 7 中的通道，请将格式设置为 Photoshop (PSD)，点击选项按钮，在对话框中启用 Photoshop 7 选项。这能确保在合适的地方使用线性减淡混合模式。</div></p>
 <p>         </div>     </div> </div></p>
 <p><a id="RDATA_MULTIPASS_SAVEDEPTH" name="RDATA_MULTIPASS_SAVEDEPTH"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEDEPTH","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","深度","RDATA_MULTIPASS_SAVEDEPTH"--><span class="c4d_id">深度</span></p>
-<p>Sets the channel depth to 8, 16 or 32 bits.</p>
+<p>设置通道深度为 8、16 或 32 位。</p>
 <p><a id="RDATA_MULTIPASS_SAVEONEFILE" name="RDATA_MULTIPASS_SAVEONEFILE"></a> <!--AM_JUMP "RDATA_MULTIPASS_SAVEONEFILE","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","多层文件","RDATA_MULTIPASS_SAVEONEFILE"--><span class="c4d_id">多层文件</span></p>
-<p>If this option is enabled, all layers are saved in a multi-layer file. In addition, you must set <span class="command">Format</span> on the <span class="command">Output</span> page to Photoshop (PSD), BodyPaint 3D (B3D) or TIFF. If the option is disabled, CINEMA 4D creates a separate file for each pass using the Format setting on the <span class="command">Save</span> page. A suffix is added to each of the filenames to differentiate them.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>The image may look different when viewed in another application depending on which blend modes are supported. This can be due to non-existing mix modes or other factors.</div></p>
-<p><p><div class="hint"><span class="HL_hint">提示2：<br></span>Note that 32-bit multi-layers can be problematic in conjunction with a disabled <a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">线性工作流程</span></a> option due to the fact that Photoshop can only import *.psd files correctly but cannot display them correctly. As soon as 线性工作流程 is enabled or other bit depths are used, it will work correctly.</div></p>
+<p>如果启用了该选项，所有的图层都会保存在一个多通道文件中。另外，你必须设置<span class="command">格式</span>为 Photoshop (PSD)、BodyPaint 3D (B3D) 或 TIFF。如果禁用了该选项，CINEMA 4D 会根据设置的格式为每个通道创建一个单的文件，每个文件名后面会添加一个后缀来作为区别。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：</span>根据支持的混合模式的不同，图像在别的软件中查看时可能会有所不同，这可能是因为缺少混合模式或其他功能。</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示2：<br></span>注意，在禁用<a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">线性工作流程</span></a>时使用32位多图层时可能会出错，这是因为 Photoshop 只能正确地导入 *.psd 文件但不能正确地显示它们。只要启用线性工作流程或使用其他深度，就没有问题了。</div></p>
 <p><a id="RDATA_MULTIPASS_SUFFIX" name="RDATA_MULTIPASS_SUFFIX"></a> <!--AM_JUMP "RDATA_MULTIPASS_SUFFIX","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","图层名称作为后缀名","RDATA_MULTIPASS_SUFFIX"--><span class="c4d_id">图层名称作为后缀名</span></p>
-<p>If your chosen format does not support multi-layers, each layer will be saved as a separate file. If this option is enabled, the name of the layer, such as <span class="command">_diffuse</span> or <span class="command">_refraction</span>, is added after the filenames.</p>
+<p>如果你选择了不支持多图层的格式，每个图层会被保存为单独的文件。如果启用了这个选项，图层的名称，如<span class="command">_漫射</span>或<span class="command">_反射</span>，会被添加到文件名后面。</p>
 <p><a id="RELEASE_170_2" name="RELEASE_170_2"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><a id="RDATA_MULTIPASS_USERNAMES" name="RDATA_MULTIPASS_USERNAMES"></a> <!--AM_JUMP "RDATA_MULTIPASS_USERNAMES","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","用户定义层名称","RDATA_MULTIPASS_USERNAMES"--><span class="c4d_id">用户定义层名称</span></p>
-<p>If this option is enabled, the Multi-Pass names that you defined (double-click on the Multi-Pass name to rename it) will be used instead of the default Multi-Pass names.</p>
+<p>如果启用了这个选项，你设定的多通道名称（在多通道名称上双击）会替代默认的名称。</p>
 <p></p></div></p>
 <p><a id="RDATA_MULTIPASS_STRAIGHTALPHA" name="RDATA_MULTIPASS_STRAIGHTALPHA"></a> <!--AM_JUMP "RDATA_MULTIPASS_STRAIGHTALPHA","RDATA_GROUP_SAVEMULTIPASSIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","直接 Alpha","RDATA_MULTIPASS_STRAIGHTALPHA"--><span class="c4d_id">直接 Alpha</span></p>
-<p>This option is only available if you have activated the <span class="command">Alpha Channel</span> option. Whether or not you activate <span class="command">Straight Alpha</span> does not play a role.</p>
-<p>With the <span class="command">Straight (Unmultiply Alpha)</span> (<span class="command">Multi-Pass</span> tab) option you define whether or not the corresponding Multi-Passes should be <span class="command">pre-multiplied</span> with reference to the alpha channel that is saved.</p>
+<p>这个选项只有在启用了 <span class="command">Alpha 通道</span> 选项时可用。</p>
+<p>通过<span class="command">直接（非叠加）Alpha</span>（<span class="command">多通道</span>便签页）选项，你可以设定相应的多通道是否与对应的 alpha 通道进行<span class="command">预叠加</span>。</p>
 <p><!--INDEX "6","合成方案文件","RDATA_GROUP_PROJECTFILE"--><a id="RDATA_GROUP_PROJECTFILE" name="RDATA_GROUP_PROJECTFILE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>合成方案文件</span></p>
 <p><!--INDEX "1","After Effects",""--></p>
 <p><!--INDEX "1","Aftereffects",""--></p>
-<p><div class="image_full" style="max-width:1524px"><img  src="../pics/003829.jpg"  ><span class="caption">A compositing project file is made up of multiple layers. Each layer can be edited separately.</span></div></p>
+<p><div class="image_full" style="max-width:1524px"><img  src="../pics/003829.jpg"  ><span class="caption">一个合成的工程文件是由多个层组成的，每个层都可以单独编辑。</span></div></p>
 <p><a id="COMP" name="COMP"></a></p>
-<p>Cinema 4D supports the following video compositing programs:</p>
+<p>CINEMA 4D 支持如下视频编辑软件：</p>
 <p><ul></p>
-<p><li> Adobe After Effects (CS3 or higher): Multi-Pass files, camera data, lights and Null Objects (see also <a href="50775.html" target="">After Effects</a> with regard to the various exchange possibilities).</li>
-<li> The Foundry Nuke (tested for v 6.3 and higher): Multi-Pass files. Camera data, lights, objects via separate FBX file.</li>
-<li> Apple Final Cut Pro (4.0 or higher; Cinema 4D Mac version only): Multi-Pass files.</li><RELEASE_115 Export of camera data, lights and Objects now also for Apple Motion 3.></p>
-<p><li> Apple Motion Version 3: Multi-Pass files, camera data, lights and objects as NULL objects.</li></RELEASE_115></p>
-<p><li> Appke Shake Versions 3.5 and 4: Multi-Pass files.</li><li> eyeon’s Digital Fusion from V5.0: Multi-Pass files.</li></ul><p></p>
-<p>Cinema 4D can render various <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target="">Multi-Passes</a> and save them as separate files (bitmaps or videos). The passes can then be loaded into one of the compositing packages listed above. In the compositing package, you can then edit the passes separately and apply a wealth of effects to them.</p>
-<p>Other compositing applications can open the file without plugins.</p>
-<p>You can also export Cinema 4D’s camera and lights, including animation, and edit them in After Effects or Combustion.</p>
-<p>The following camera data is supported:<ul></p>
-<p><li> Camera position.</li>
-<li> Camera orientation.</li>
-<li> Focal length.</li>
-<li> Camera to target distance (provided the CINEMA 4D scene used a target camera).</li>
-The following types of light are supported:</p>
-<p><li> Point.</li>
-<li> Parallel.</li>
-<li> Spot.</li></ul><p></p>
+<p><li> Adobe After Effects（CS3 或更高版本）：多通道文件、摄像机数据、灯光和空对象（关于各种文件交换的方式，参见<a href="50775.html" target="">After Effects</a>）。</li>
+<li> Foundry Nuke（已测试 v 6.3 或更高版本）：多通道文件、摄像机数据、灯光、通过单独 FBX 文件保存的对象。</li>
+<li> Apple Final Cut Pro（4.0 或更高版本，仅 CINEMA 4D Mac 版）：多通道文件。</li><RELEASE_115 Export of camera data, lights and Objects now also for Apple Motion 3.>
+<li> Apple Motion 3：多通道文件，摄像机数据、灯光和空对象。</li></RELEASE_115>
+<li> Apple Shake 3.5 和 4：多通道文件。</li>
+<li> eyeon Digital Fusion （V5.0 或更高版本）：多通道文件。</li></ul><p></p>
+<p>CINEMA 4 可以渲染各种<a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target="">多通道</a>并且将它们保存为单独的文件（位图或视频）。这些通道可以载入到上面列出的合成软件中，你可以单独地编辑这些通道并使用各种效果。</p>
+<p>其他一些合成软件也可以打开这些文件而不需要插件。</p>
+<p>你也可以导出带有动画的 CINEMA 4D 的摄像机和灯光，然后在 After Effects 或 Combustion 中编辑它们。</p>
+<p>支持以下摄像机数据：<ul></p>
+<p><li> 摄像机位置</li>
+<li> 摄像机方向</li>
+<li> 焦距</li>
+<li> 摄像机的目标距离（前提是使用了目标摄像机）</li></p>
+<p>支持以下灯光类型：
+<li> 点光</li>
+<li> 平行光</li>
+<li> 聚光灯</li></ul><p></p>
 <p><a id="hl_8" name="hl_8"></a><!--INDEX "3","导出多通道文件","hl_8"--><p><span class="HL_2">导出多通道文件</span></p>
-<p>To export the Multi-Passes from Cinema 4D:</p>
-<p><ol><br><li>  In the <span class="text_id">Render Setting</span>, on the <span class="command">Multi-Pass</span> page, use the Channels drop-down list to choose which passes should be rendered. Disable the <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_MULTIPASS_SAVEONEFILE" target="_self"><span class="text_id">Multi-Layer File</span></a> option (each pass must be saved as a separate file) in the <span class="command">Save</span> tab.<br><br>Set Format to the desired file format, such as QuickTime Movie.<br><br>Set Path to the path where the passes should be saved.<br><br><li> Make sure that the <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_MULTIPASS_SAVEIMAGE" target="_self"><span class="text_id">Save</span></a> option in the <span class="command">Multi-Pass</span> sub-menu is enabled and choose your compositing application. Render the image or animation. Select the same save path as in the <span class="command">常规图像</span> sub-menu so the compositing file lands in the same directory as all related files.<br><br>If <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_PROJECTFILELOCAL" target="_self"><span class="text_id">Relative</span></a> is enabled (<span class="command">Save page</span>), the start and end time of the Cinema 4D animation will also be transferred (with After Effects, version CS3 or higher is required for this functionality). Otherwise, the animations will always begin at frame 0 in the compositing program.<br><br><RELEASE_140><br><a id="RDATA_PROJECTFILEFBX" name="RDATA_PROJECTFILEFBX"></a> <!--AM_JUMP "RDATA_PROJECTFILEFBX","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","Save FBX File","RDATA_PROJECTFILEFBX"--><span class="c4d_id">Save FBX File</span><br>If you create a compositing file for Nuke, it will not contain 3D information for cameras, lights or objects. If this option is enabled, this information can be extracted from a <a href="5310.html" target="">FBX</a> file. A separate FBX file will then be written.<br></RELEASE_140><br><br>Pressing the <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_PROJECTFILESAVE" target="_self"><span class="text_id">保存方案文件…</span></a> button lets you create a compositing file without having to render the entire scene. However, this only makes sense if all passes have already been rendered. For example, if you have already rendered a complete animation using Team Render, including all Multi-Passes, you can press this button to generate the correct compositing file.<br><br><li> Import the compositing file put out by Cinema 4D into your compositing application.<br></ol><p></p>
-<p>To import the Multi-Passes into your compositing package:</p>
-<p><div class="image_full" style="max-width:731px"><img  src="../pics/003831.jpg"  ><span class="caption">The project in Cinema 4D.</span></div></p>
+<p>要从 CINEMA 4D 中导出多通道文件：</p>
+<p><ol><br><li> 在<span class="text_id">渲染设置</span>左边栏的<span class="command">多通道</span>下拉菜单中选择要渲染的通道。禁用<span class="command">保存</span>标签页中的<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_MULTIPASS_SAVEONEFILE" target="_self"><span class="text_id">多层文件</span></a>选项（每个通道必须保存为单独的文件）。<br><br>
+设置想要导出的文件格式，如 QuickTime 影片。<br><br>
+设置保存这些通道的路径。<br><br>
+<li> 确认<span class="command">多通道</span>子菜单中的<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_MULTIPASS_SAVEIMAGE" target="_self"><span class="text_id">保存</span></a>选项是勾选的，然后选择合成软件。渲染图像或动画。在<span class="command">常规图像</span>子菜单中选择相同的保存路径，这样合成文件就可以与所有的相关文件保存在相同的文件夹中。<br><br>
+如果启用了<span class="command">保存</span>标签页中的<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_PROJECTFILELOCAL" target="_self"><span class="text_id">相对</span></a>选项，那么 CINEMA 4D 动画的开始和结束时间也会被转换（需要 After Effects CS3 或更高版本），否则导出的动画总是从0帧开始。<br><br><RELEASE_140><br>
+<a id="RDATA_PROJECTFILEFBX" name="RDATA_PROJECTFILEFBX"></a> <!--AM_JUMP "RDATA_PROJECTFILEFBX","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","保存 FBX 文件","RDATA_PROJECTFILEFBX"--><span class="c4d_id">保存 FBX 文件</span><br>
+如果为 Nuke 创建了一个合成文件，它将不会包含摄像机、灯光或对对象的 3D 信息。如果启用了这个选项，这些信息可以通过一个 <a href="5310.html" target="">FBX</a> 文件导出，CINEMA 4D 会创建一个单独的 FXB 文件。<br></RELEASE_140><br><br>
+点击<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_PROJECTFILESAVE" target="_self"><span class="text_id">保存方案文件…</span></a>按钮可以创建创建一个合成文件但不必渲染整个场景。但是这只在已经渲染了所有通道的情况下有用。例如，如果你已经使用 Team Render 渲染了完整的动画，并包括全部多通道，那么你可以点击这个按钮来生成正确的合成文件。<br><br>
+<li> 将通过 CINEMA 4D 输出的合成文件导入到合成软件中。<br></ol><p></p>
+<p>要将多通道文件导入到合成软件中：</p>
+<p><div class="image_full" style="max-width:731px"><img  src="../pics/003831.jpg"  ><span class="caption">CINEMA 4D 的工程。</span></div></p>
 <p><a id="AE" name="AE"></a></p>
 <p><!--INDEX "10","After Effects","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">After Effects</span></p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Note that After Effects is only designed for use with the <a href="50775.html" target="">exchange</a> described above in point 2.</div></p>
-<p>In After Effects, import the <span class="command">.aec</span> file (File / Import / File).</p>
-<p><div class="image_full" style="max-width:443px"><img  src="../pics/003832.jpg"  ><span class="caption">The project in After Effects.</span></div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，After Effects 只能与上面第2点中描述的<a href="50775.html" target="">文件交换</a>配合使用。</div></p>
+<p>在 After Effects 中，导入 <span class="command">.aec</span> 文件（文件 | 导入 | 文件）。</p>
+<p><div class="image_full" style="max-width:443px"><img  src="../pics/003832.jpg"  ><span class="caption">After Effects 中的工程。</span></div></p>
 <p><div class="image_full" style="max-width:1404px"><img  src="../pics/003833.jpg"  ><span class="caption"></span></div></p>
-<p>For After Effects you must copy the following plugin (located in the Cinema 4D program directory in the "Exchange Plugins/aftereffects/importer" folder; select the one that corresponds to your operating system and After Effects version) into the After Effects plugin directory (if this does not exist, use the "Effect" folder):<ul></p>
-<p><li> PC: "C4Dimporter.aex"</li><li> Mac OS: "C4Dimporter.plugin" (may have to be unzipped first)</li></ul><p></p>
-<p>Other compositing applications can load the data without a plugin.</p>
-<p>Additional functionality:<ul></p>
-<p><li> Shadow density assigned to light sources will also be exported (animated)</li><li> The "render status" in the <span class="command">对象管理器</span> will be taken into consideration. In the following example, only Object <span class="command_value">2</span> will be exported:</li><div class="image_limit" style="max-width: 119px"><img  src="../pics/024527.jpg"  ><span class="caption"></span></div></p>
-<p><li> All existing cameras will be exported (if not disabled by the "render status" described above)</li><li> XRefs are supported (i.e. will be exported)</li><li> Logical naming of lights and directories in After Effects</li><li> See also <a href="COMPOSITING3DTAG-ID_TAGPROPERTIES.html" target="">here</a></li><RELEASE_130 After Effects supports Stereoscopy and Stage object.></p>
-<p><li> Stereoscopy is supported: numerous stereoscopic channels and Multi-Passes (see also <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target="">Stereoscopy</a>) will be loaded into After Effects in the correct combination and clearly named.</li><li> The <a href="OSTAGE.html" target="">Stage object</a> will be evaluated with regard to cameras.</li></RELEASE_130></p>
+<p>你需要将下列插件（位于 CINEMA 4D 程序目录的“Exchange Plugins/aftereffects/importer”文件夹中，选择对应你的操作系统和 After Effect 版本的插件）复制到 After Effects 的插件目录中（如果这个目录不存在，请使用“Effect”文件夹）：<ul></p>
+<p><li> PC：“C4Dimporter.aex”</li>
+<li> Mac OS：“C4Dimporter.plugin”（需要先解压）</li></ul><p></p>
+<p>其他合成软件可以加载这些数据而不需要插件。</p>
+<p>额外功能：<ul></p>
+<p><li> 分配给光源的投影密度也可以被导出（活动的）</li>
+<li> <span class="command">对象管理器</span>中的“渲染状态”也会影响导出。在下面的示例中，只有对象 <span class="command_value">2</span> 会被导出：</li><div class="image_limit" style="max-width: 119px"><img  src="../pics/024527.jpg"  ><span class="caption"></span></div></p>
+<p><li> 所有现有的摄像机都会被导出（如果没有在“渲染状态”中禁用）</li>
+<li> 支持 XRefs（会被导出）</li>
+<li> After Effects 中的目录和灯光的逻辑命名</li>
+<li> 参见<a href="COMPOSITING3DTAG-ID_TAGPROPERTIES.html" target="">这里</a></li><RELEASE_130 After Effects supports Stereoscopy and Stage object.></p>
+<p><li> 支持立体：很多立体通道和多通道（参见<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target="">立体</a>）都会以正确的组合和明确的命令被加载到 After Effects 中。</li>
+<li> <a href="OSTAGE.html" target="">舞台对象</a>会根据摄像机进行计算。</li></RELEASE_130></p>
 <p></ul><p></p>
-<p>See <a href="50775.html" target="">After Effects</a> for more information about the connectivity of After Effects and Cinema 4D.</p>
+<p>要获取关于 After Effects 和 CINEMA 4D 文件交换的更多信息，参见 <a href="50775.html" target="">After Effects</a>。</p>
 <p><RELEASE_120 Numerous additions for After Effects export.><ul></p>
-<p><li> Color, shadow density, angle and intensity animations of light sources are supported</li><li> Unicode is supported.</li></RELEASE_120></p>
+<p><li> 支持颜色、投影密度、角度和光源的亮度动画。</li>
+<li> 支持 Unicode。</li></RELEASE_120></p>
 <p></ul><p></p>
 <p><a id="LIN" name="LIN"></a></p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Make sure that the "Linear" Working Space color (which only works if a work space color exists; this should be set to sRGB) is enabled in After Effects when using <a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">线性工作流程</span></a>.</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>当使用<a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">线性工作流程</span></a>时，确保在 After Effects 中启用了“线性”工作空间颜色（它只在有工作空间色彩空间的情况下可用，且应该被设置为 sRGB）。</div></p>
 <p><div class="image_full" style="max-width:534px"><img  src="../pics/031238.jpg"  ><span class="caption"></span></div></p>
 <p><!--INDEX "10","Motion","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">Motion</span></p>
 <p><div class="image_full" style="max-width:277px"><img  src="../pics/003834.jpg"  ><span class="caption"></span></div></p>
 <p><div class="image_full" style="max-width:1024px"><img  src="../pics/003835.jpg"  ><span class="caption"></span></div></p>
 <p><RELEASE_140 Multi-Pass files, including the entire Project file, can now be output for The Foundry Nuke.></p>
 <p><!--INDEX "10","Nuke","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">Nuke</span></p>
-<p>Open the corresponding <span class="command">*.nk</span>-file:</p>
+<p>打开相应的 <span class="command">*.nk</span> 文件：</p>
 <p><div class="image_full" style="max-width:335px"><img  src="../pics/035675.jpg"  ><span class="caption"></span></div></p>
 <p><div class="image_full" style="max-width:1011px"><img  src="../pics/035676.jpg"  ><span class="caption"></span></div></p>
 <p> </RELEASE_140></p>
 <p><!--INDEX "10","Final Cut Pro","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Final Cut Pro</span></p>
-<p>In Final Cut Pro, import the <span class="command">.xml</span> file (File / Import / XML) and ignore the alert that appears.</p>
+<p>在 Final Cut Pro 中，导入 <span class="command">.xml</span> 文件（文件 | 导入 | XML），忽略出现的警告。</p>
 <p><div class="image_full" style="max-width:585px"><img  src="../pics/003838.jpg"  ><span class="caption"></span></div></p>
-<p><div class="image_full" style="max-width:850px"><img  src="../pics/003839.jpg"  ><span class="caption">The project in Final Cut Pro.</span></div></p>
+<p><div class="image_full" style="max-width:850px"><img  src="../pics/003839.jpg"  ><span class="caption">Final Cut Pro 中的工程。</span></div></p>
 <p><!--INDEX "10","Digital Fusion","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">Digital Fusion</span></p>
-<p>Use the <span class="command">Open</span> command to open the <span class="command">*.comp</span> file exported from Cinema 4D.</p>
+<p>使用<span class="command">打开</span>命令打开从 CINEMA 4D 中导出的 <span class="command">*.comp</span> 文件。</p>
 <p><div class="image_full" style="max-width:270px"><img  src="../pics/012896.jpg"  ><span class="caption"></span></div></p>
 <p><div class="image_full" style="max-width:1564px"><img  src="../pics/012897.jpg"  ><span class="caption"></span></div></p>
 <p><RELEASE_130></p>
 <p><a id="RDATA_PROJECTFILEMARKER" name="RDATA_PROJECTFILEMARKER"></a> <!--AM_JUMP "RDATA_PROJECTFILEMARKER","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","包括时间线标记","RDATA_PROJECTFILEMARKER"--><span class="c4d_id">包括时间线标记</span></p>
-<p>If you have set <a href="TLMARKER.html" target="">Marker</a> in the Timeline, these will be included in the compositing file, including their names.</p>
+<p>如果你在时间线中设置了 <a href="TLMARKER.html" target="">标记</a>，那么它们会被包含到合成文件中，包括它们的名称。</p>
 <p></RELEASE_130></p>
 <p><a id="RDATA_PROJECTFILEDATA" name="RDATA_PROJECTFILEDATA"></a> <!--AM_JUMP "RDATA_PROJECTFILEDATA","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","包括3D数据","RDATA_PROJECTFILEDATA"--><span class="c4d_id">包括3D数据</span></p>
-<p>Use this setting to define whether cameras, lights or objects should be exported. Objects other than lights and cameras will be exported as Null Objects if an <a href="COMPOSITING3DTAG.html" target="">External Compositing</a> tag has been assigned to them (see below).</p>
+<p>使用这个设置来设定是否需要导出摄像机、灯光或对象。如果给灯光和摄像机以外的对象分配了<a href="COMPOSITING3DTAG.html" target="">外部合成</a>标签，那么它们会被导出为空对象（见下文）。</p>
 <p><a id="RDATA_PROJECTFILELOCAL" name="RDATA_PROJECTFILELOCAL"></a> <!--AM_JUMP "RDATA_PROJECTFILELOCAL","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","相对","RDATA_PROJECTFILELOCAL"--><span class="c4d_id">相对</span></p>
-<p>Let’s say your scene contains two animated cameras. The first camera is animated from frame <span class="command_value">20</span> to frame <span class="command_value">50</span>, the second from frame <span class="command_value">2</span> to frame <span class="command_value">117</span>. The <span class="command">相对</span> setting would be used to decide between which frames the animation should run in the compositing application: Between <span class="command_value">20</span> and <span class="command_value">50</span> or <span class="command_value">2</span> and <span class="command_value">117</span> (<span class="command">相对</span> active) or between <span class="command_value">0</span> and <span class="command_value">30</span> and <span class="command_value">0</span> and <span class="command_value">115</span> (<span class="command">相对</span> not active, animation begins at frame <span class="command_value">0</span>). Of course this setting is not restricted to animated cameras.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Movies will be imported faster than picture sequences.</div></p>
-<p><p><div class="hint"><span class="HL_hint"></span>The compositing programs will import the composition correctly provided that the compositing program is on the same computer as CINEMA 4D. When importing into After Effects, the compositing project file must be in the same folder as the passes; otherwise, the picture sequences or videos must be replaced manually.</div></p>
-<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","General Information","hl_9"--><p><span class="HL_1">General Information</span></p>
-<p>Compositing programs import compositions with no further ado as long as Cinema 4D and the compositing program are located on the same computer. Otherwise the compositing file and all files linked must lie in the same directory (applies to After Effects) or the images/videos must be replaced manually in the compositing program. </p>
-<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","Limitations","hl_10"--><p><span class="HL_1">Limitations</span><ul></p>
-<p><li> NET cannot write the compositing project file. For network rendering, generate the project file manually by clicking the Save button on the Save page of the render settings. You can save the project file at any time — even before you have rendered the passes. Missing passes are represented by stand-in frames in After Effects, which you can replace at any stage.</li>
-<li> QTVR cannot be used with compositing project files (QTVR does not support Multi-Passes).</li>
-<li> B3D image sequences are not supported.</li></ul><p></p>
+<p>假设你的场景有两个活动摄像机，第一个摄像机活动范围为第<span class="command_value">20</span>帧到第<span class="command_value">50</span>帧，第二个为第<span class="command_value">2</span>帧到第<span class="command_value">117</span>帧。<span class="command">相对</span>设置可以用来决定在合成软件中动画的帧范围：是<span class="command_value">20</span>到<span class="command_value">50</span>帧和<span class="command_value">2</span>到<span class="command_value">117</span>帧（启用<span class="command">相对</span>），还是<span class="command_value">0</span>到<span class="command_value">30</span>帧和<span class="command_value">0</span>到<span class="command_value">115</span>帧（禁用<span class="command">相对</span>）。当然，这个设置不会限制活动照相机。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>导入影片比图片序列要更快。</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>合成软件可以正确地导入合成方案，前提是这个软件与 CINEMA 4D 安装在同一台电脑上。当导入到 After Effects 中时，合成方案文件必须与通道文件在同一个文件夹中，否则需要手动移除图片序列或视频。</div></p>
+<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","通用信息","hl_9"--><p><span class="HL_1">通用信息</span></p>
+<p>只要合成软件和 CINEMA 4D 在同一台电脑上，导入合成文件就不需要额外的工作，否则合成文件和所有链接的文件必须位于同一目录下（对于 After Effects），或者需要在合成软件中手动移除图像或视频。</p>
+<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","限制","hl_10"--><p><span class="HL_1">限制</span><ul></p>
+<p><li> 网络不能写入合成方案文件。对于网络渲染，可以通过点击渲染设置保存页面的保存按钮手动生成方案文件。你可以在任何时候保存方案文件——即使在渲染通道之前。缺失的通道会在 After Effects 中表示为替代帧，你可以在任意舞台替换它们。</li>
+<li> QuickTime VR 不能使用合成方案文件（QuickTime 不支持多通道）。</li>
+<li> 不支持 B3D 图像序列。</li></ul><p></p>
 <p><a id="RDATA_PROJECTFILE" name="RDATA_PROJECTFILE"></a> <!--AM_JUMP "RDATA_PROJECTFILE","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","保存","RDATA_PROJECTFILE"--><span class="c4d_id">保存</span></p>
-<p>Define whether or not compositing files should be saved (this does not work when rendering via Team Render).</p>
+<p>定义是否保存合成文件（在通过 Team Render 渲染时不可用）。</p>
 <p><a id="RDATA_PROJECTFILETYPE" name="RDATA_PROJECTFILETYPE"></a> <!--AM_JUMP "RDATA_PROJECTFILETYPE","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","目标程序","RDATA_PROJECTFILETYPE"--><span class="c4d_id">目标程序</span></p>
-<p>Select your target compositing application. Cinema 4D will automatically output the compositing files in the correct format.</p>
+<p>选择目标合成软件。CINEMA 4D 会自动输出合成文件为正确的格式。</p>
 <p><a id="RDATA_PROJECTFILESAVE" name="RDATA_PROJECTFILESAVE"></a> <!--AM_JUMP "RDATA_PROJECTFILESAVE","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","保存方案文件…","RDATA_PROJECTFILESAVE"--><span class="c4d_id">保存方案文件…</span></p>
-<p>Lets you create "compositing" files without having to render the entire scene. However, this only makes sense if you have already rendered all passes.</p>
-<p>If you have already rendered a large animation, incl. Multi-Passes, using Team Render, clicking this button will create the corresponding compositing file.</p>
-<p>Note, however, that the renderer must still be started in the background, which can take quite a while when using the Physical Renderer. You can work around this by using the Standard Renderer, which requires a much shorter preparation time.</p>
+<p>让你可以创建“合成”文件而不用渲染整个场景。但是这只有在你已经渲染的所有通道的情况下有用。</p>
+<p>如果你已经通过 Team Render 渲染了一个包含多通道的大型动画，点击这个按钮可以创建相应的合成文件。</p>
+<p>注意，渲染器仍然会在后台启动，在使用物理渲染器时会花费相当一段时间。你可以通过使用标准渲染器解决这个问题，它所需要的准备时间短得多。</p>
 <p>         </div>     </div> </div></p>
 <p>
 

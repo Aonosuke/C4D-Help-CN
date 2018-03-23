@@ -50,3 +50,5 @@ Variable Path and File Names    可变路径和文件名
 pre-multiplied                  预叠加
 lighting scenario               光照条件
 Oversample                      超采样
+Logical Naming                  逻辑命名
+compositing project file        合成档案文件
