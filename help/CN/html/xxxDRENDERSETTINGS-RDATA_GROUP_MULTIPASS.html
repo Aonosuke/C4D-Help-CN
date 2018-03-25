@@ -47,114 +47,114 @@
 <li> 在<span class="command">多通道</span>上单击右键</li>
 这时会出现一个包含所有可用命令的菜单，如果一个通道可用，则它会作为“多通道”的一个子项目出现，你也可以在这些子项目处禁用它们。</p>
 <p></ul><p></p>
-<p><span class="command">通道</span>下拉列表中的项目有：</p>
-<p><!--INDEX "7","Add Image Layers","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">Add Image Layers</span></p>
-<p>将合成图像中所有的图层添加到选择列表中。这些图层包括：Ambient, Diffuse, Shadow, Reflection/Specular (both in the Reflectance channel), Refraction, Atmosphere and Atmosphere (Multiply). All the other image layers (see <span class="command_value">The layers</span> below) may be used for visual effects but are not actually part of the composite image.</p>
-<p>If you have the Advanced Render module installed, Global illumination and Photon Caustics layers are also added to the selection list by this command.</p>
-<p><!--INDEX "7","Add Material Layers/Add All","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">Add Material Layers/Add All</span></p>
-<p>Selects all image and material layers simultaneously.</p>
-<p>Selects all channels that contain the prefix, <span class="command">Material</span>. These are the scene’s material channels. The Multi-Pass channels contain information regarding the scene’s corresponding material channel (e.g., the <span class="command">Material Color Pass</span> channel contains the material color for every object in the scene).</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>These special channels are irrelevant for the normal user. Plugin developers can, however, make use of these channels.</div></p>
-<p>The following material layers can be selected: Color, Diffusion, Luminance, Transparency, Reflection, Environment, Specular, Specular Color, Normals and UVW.</p>
-<p><!--INDEX "7","Remove","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">Remove</span></p>
-<p>Channels can be selected using the mouse (multiple selections in combination with the Shift or <nobr><span class="key">Ctrl/Cmd</span></nobr> keys can also be made).</p>
-<p>This command deletes all selected channels.</p>
-<p><!--INDEX "7","Remove All","no_command_4"--><a id="no_command_4" name="no_command_4"></a>   <span class="c4d_menu_id">Remove All</span></p>
-<p>Empties the selection list.</p>
-<p><!--INDEX "7","Blend Channel","no_command_5"--><a id="no_command_5" name="no_command_5"></a>   <span class="c4d_menu_id">Blend Channel</span></p>
-<p>Creates a blended layer. For example, you can blend <span class="command">Shadow</span>, <span class="command">Global illumination</span> and <span class="command">Photon Caustics</span> as a single layer. After choosing this command, a dialog opens. Enable the channels you want to blend and click OK.</p>
-<p><div class="image_full" style="max-width:278px"><img  src="../pics/003880.jpg"  ><span class="caption">Blend Channel options.</span></div></p>
-<p><!--INDEX "7","Object Buffer","no_command_6"--><a id="no_command_6" name="no_command_6"></a>   <span class="c4d_menu_id">Object Buffer</span></p>
-<p>Enabling this channel will open the following dialog:</p>
+<p><span class="command">多通道</span>下拉列表中的项目有：</p>
+<p><!--INDEX "7","增加图像图层","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">增加图像图层</span></p>
+<p>将合成图像中所有的图层添加到选择列表中。这些图层包括：环境光、漫射、投影、反射/高光（这两个都在反射通道中）、折射率、大气和大气（正片叠底）。其他图像图层（参见下文的<span class="command_value">图层</span>）可以用来制作视觉特效，但是不是合成图像的一部分。</p>
+<p>如果你安装了高级渲染组件，全局光照和焦散图层也会添加到选择列表中。</p>
+<p><!--INDEX "7","增加材质图层/增加全部","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">增加材质图层/增加全部</span></p>
+<p>同时选择全部图像和材质图层。</p>
+<p>选择全部包含<span class="command">材质</span>前缀的通道，有场景的材质通道。根据场景相应的材质通道（如<span class="command">材质颜色</span>通道包含场景中每个对象的材质颜色），多通道会包含各种信息。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>这些特殊的通道对普通用户用处不大。但是插件开发者可以使用这些通道。</div></p>
+<p>以下材质图层可供选择：颜色、漫射、发光、透明、反射、环境、高光、高光色、法线和 UVW。</p>
+<p><!--INDEX "7","删除","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">删除</span></p>
+<p>可以用鼠标对通道进行选择（按住 Shift 或 <nobr><span class="key">Ctrl/Cmd</span></nobr> 点击可以多选）。</p>
+<p>这个命令会删除所有选中的通道。</p>
+<p><!--INDEX "7","全部删除","no_command_4"--><a id="no_command_4" name="no_command_4"></a>   <span class="c4d_menu_id">全部删除</span></p>
+<p>清空选择列表。</p>
+<p><!--INDEX "7","混合通道","no_command_5"--><a id="no_command_5" name="no_command_5"></a>   <span class="c4d_menu_id">混合通道</span></p>
+<p>创建一个一个混合图层。例如，你可以将<span class="command">投影</span>、<span class="command">全局光照</span>和<span class="command">焦散</span>混合为一个单独的图层。</p>
+<p><div class="image_full" style="max-width:278px"><img  src="../pics/003880.jpg"  ><span class="caption">混合通道选项。</span></div></p>
+<p><!--INDEX "7","对象缓存","no_command_6"--><a id="no_command_6" name="no_command_6"></a>   <span class="c4d_menu_id">对象缓存</span></p>
+<p>启用这个通道会打开如下对话框：</p>
 <p><div class="image_full" style="max-width:357px"><img  src="../pics/003881.jpg"  ><span class="caption"></span></div></p>
-<p>This creates a mask layer for objects that use a specified ID number in their Compositing tags. After choosing this command, the Object Buffer dialog open. Enter the desired ID number and click OK.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003882.jpg"  ><span class="caption">The sphere appears in both object buffers since its Compositing tag has two IDs (ID=1 and ID=2).</span></div></p>
-<p>The cube’s Compositing tag was assigned the ID <span class="command">1</span> and the sphere’s Compositing tag was assigned two IDs: <span class="command">1</span> and <span class="command">2</span>. To the right are two alpha channels that were created as a result of two object channels (the first with Group ID <span class="command">1</span>, the second with Group ID <span class="command">2</span>) being defined in the Multi-Pass settings.</p>
-<p><!--INDEX "7","RGBA Image","no_command_7"--><a id="no_command_7" name="no_command_7"></a>   <span class="c4d_menu_id">RGBA Image</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003883.jpg"  ><span class="caption">The final rendering.</span></div></p>
-<p>Contains the image information as we know it. Red, green and blue plus an alpha mask, depending on the bitmap used. The <span class="command">Save</span> settings define whether or not the alpha mask should be calculated and made part of the image.</p>
-<p><!--INDEX "7","Ambient","no_command_8"--><a id="no_command_8" name="no_command_8"></a>   <span class="c4d_menu_id">Ambient</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003884.jpg"  ><span class="caption">Merely a gray surface: The ambient illumination.</span></div></p>
-<p>This channel shows on the one hand how regions of the image illuminated by ambient light are affected by an <a href="OENVIRONMENT.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_5106.png" alt="" height="12" width="12"    border="0"><span class="text_command">Environment</span></nobr></a> object. It also shows all objects that appear as lights (e.g., those with a material with an active <span class="command">Luminance</span> channel or textures loaded in the <span class="command">Environment</span> channel.</p>
+<p>这会为对象创建一个蒙版图层，这些对象要在合成标签中指定缓存 ID 号。选择这个命令后会出现对象缓存窗口，然后输入群组 ID。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003882.jpg"  ><span class="caption">球体在两个对象缓存中都出现了，因为它的合成标签中有个两个缓存 ID（ID=1 和 ID=2）。</span></div></p>
+<p>立方体的合成标签分配了缓存 ID <span class="command">1</span>，球体的合成标签指定了两个缓存 ID：<span class="command">1</span> 和 <span class="command">2</span>。右边显示了两个 alpha 通道，它们是在多通道设置中定义的两个对象的通道（第一个群组 ID 为 <span class="command">1</span>，第二个群组 ID 为 <span class="command">2</span>）创建的。</p>
+<p><!--INDEX "7","RGBA 图像","no_command_7"--><a id="no_command_7" name="no_command_7"></a>   <span class="c4d_menu_id">RGBA 图像</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003883.jpg"  ><span class="caption">最终渲染。</span></div></p>
+<p>包含我们所知道的图像信息，根据使用的位图，有红、绿、蓝再加一个 alpha 蒙版。<span class="command">保存</span>设置定义了是否计算 alpha 蒙版以及是否作为图像的一部分。</p>
+<p><!--INDEX "7","环境光","no_command_8"--><a id="no_command_8" name="no_command_8"></a>   <span class="c4d_menu_id">环境光</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003884.jpg"  ><span class="caption">几乎是一个灰色的表面：环境光照明。</span></div></p>
+<p>这个通道一方面展示了被环境光照亮的图像区域是如何被<a href="OENVIRONMENT.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_5106.png" alt="" height="12" width="12"    border="0"><span class="text_command">环境</span></nobr></a>对象影响的，它还展示了所有作为光源出现的对象（例如那些材质中启用了<span class="command">发光</span>通道或在<span class="command">环境</span>通道中加载了纹理）。</p>
 <p> 	</p>
-<p><!--INDEX "7","Diffuse","no_command_9"--><a id="no_command_9" name="no_command_9"></a>   <span class="c4d_menu_id">Diffuse</span></p>
+<p><!--INDEX "7","漫射","no_command_9"--><a id="no_command_9" name="no_command_9"></a>   <span class="c4d_menu_id">漫射</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/019993.jpg"  ><span class="caption"></span></div></p>
-<p>Renders the scene’s diffuse lighting. The illumination is rendered without specular highlights and reflexion, and based solely on shading (shadows but no explicit shadows!).</p>
-<p><!--INDEX "7","Specular","no_command_10"--><a id="no_command_10" name="no_command_10"></a>   <span class="c4d_menu_id">Specular</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003885.jpg"  ><span class="caption">An example of specular dispersion.</span></div></p>
-<p>Displays the areas of the image in which specular highlights appear.</p>
-<p>Note also <a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">Specular Multi-Pass settings</a>.</p>
-<p><!--INDEX "7","Shadow","no_command_11"--><a id="no_command_11" name="no_command_11"></a>   <span class="c4d_menu_id">Shadow</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003886.jpg"  ><span class="caption">The main light source’s shadow.</span></div></p>
-<p>Displays the shaded areas of the image.</p>
-<p><!--INDEX "7","Reflection","no_command_12"--><a id="no_command_12" name="no_command_12"></a>   <span class="c4d_menu_id">Reflection</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003887.jpg"  ><span class="caption">The reflective surfaces and the objects reflected in them.</span></div></p>
-<p>Displays all reflective surfaces.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Note that the reflection from SLA shaders such as Mabel, Cheen, etc. will not be included.</div></p>
-<p>Separate <a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">Specular Multi-Pass settings</a> are also available.</p>
-<p><!--INDEX "7","Refraction","no_command_13"--><a id="no_command_13" name="no_command_13"></a>   <span class="c4d_menu_id">Refraction</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003888.jpg"  ><span class="caption">Transparent surfaces and the objects behind them.</span></div></p>
-<p>Creates a channel that displays all transparent surfaces, including refraction, and the objects that lie behind these surfaces.</p>
-<p><!--INDEX "7","Global Illumination","no_command_14"--><a id="no_command_14" name="no_command_14"></a>   <span class="c4d_menu_id">Global Illumination</span></p>
-<p><div class="image_full" style="max-width:400px"><img  src="../pics/003889.jpg"  ><span class="caption">The Diffuse pass of the rendered image.</span></div></p>
-<p>If GI is selected and set up accordingly in the Render Settings the effects of this channel and those of the dispersed light will be displayed.</p>
-<p><!--INDEX "7","Caustics","no_command_15"--><a id="no_command_15" name="no_command_15"></a>   <span class="c4d_menu_id">Caustics</span></p>
+<p>渲染场景的漫射光。光照不会渲染出高光和反射，而只基于着色（有阴影但是不是确切的投影）。</p>
+<p><!--INDEX "7","高光","no_command_10"--><a id="no_command_10" name="no_command_10"></a>   <span class="c4d_menu_id">高光</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003885.jpg"  ><span class="caption">一个高光的示例。</span></div></p>
+<p>显示图片中出现高光的区域。</p>
+<p>参见<a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">多通道高光设置</a>。</p>
+<p><!--INDEX "7","投影","no_command_11"--><a id="no_command_11" name="no_command_11"></a>   <span class="c4d_menu_id">投影</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003886.jpg"  ><span class="caption">主光源的投影。</span></div></p>
+<p>显示图像中的投影区域。</p>
+<p><!--INDEX "7","反射","no_command_12"--><a id="no_command_12" name="no_command_12"></a>   <span class="c4d_menu_id">反射</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003887.jpg"  ><span class="caption">反射的表面和反射在其中的对象。</span></div></p>
+<p>显示所有反射的表面。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，不包含从诸如 Mabel、Cheen 等 SLA 着色器产生的投影。</div></p>
+<p>单独的<a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">多通道高光设置</a>也是可用的。</p>
+<p><!--INDEX "7","折射率","no_command_13"--><a id="no_command_13" name="no_command_13"></a>   <span class="c4d_menu_id">折射率</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003888.jpg"  ><span class="caption">透明的表面及其后方的对象。</span></div></p>
+<p>创建一个显示所有透明表面的通道，包含折射和位于这些表面后面的对象。</p>
+<p><!--INDEX "7","全局光照","no_command_14"--><a id="no_command_14" name="no_command_14"></a>   <span class="c4d_menu_id">全局光照</span></p>
+<p><div class="image_full" style="max-width:400px"><img  src="../pics/003889.jpg"  ><span class="caption">渲染图像的漫射通道。</span></div></p>
+<p>如果选择了全局光照并根据渲染设置相应地设置，则会显示这个通道和散射光的效果。</p>
+<p><!--INDEX "7","焦散","no_command_15"--><a id="no_command_15" name="no_command_15"></a>   <span class="c4d_menu_id">焦散</span></p>
 <p>If enabled for Multi-Pass rendering, the typical refraction reflexes that are created when light passes through a transparent or reflective surface can be saved separately to this layer.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Cinema 4D offers <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">two types</a> of caustics. In the <span class="command">Caustics</span> Multi-Pass channel only the photon caustics (these can be found in the light’s <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_CAUSTIC_ENABLE" target="_self"><span class="text_id">Surface Caustics</span></a> and <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_VOLCAUSTIC_ENABLE" target="_self"><span class="text_id">Volume Caustics</span></a> settings) are separated. GI caustics (<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> and <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" target="_self"><span class="text_id">Reflective Caustics</span></a> in the Edit Render Settings menu) will appear in the <span class="command">Global Illumination</span> Multi-Pass channel.</div></p>
-<p><!--INDEX "7","Atmosphere","no_command_16"--><a id="no_command_16" name="no_command_16"></a>   <span class="c4d_menu_id">Atmosphere</span></p>
-<p><!--INDEX "7","Atmosphere (Multiplied)","no_command_17"--><a id="no_command_17" name="no_command_17"></a>   <span class="c4d_menu_id">Atmosphere (Multiplied)</span></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Cinema 4D offers <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">two types</a> of caustics. In the <span class="command">焦散</span> Multi-Pass channel only the photon caustics (these can be found in the light’s <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_CAUSTIC_ENABLE" target="_self"><span class="text_id">Surface Caustics</span></a> and <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_VOLCAUSTIC_ENABLE" target="_self"><span class="text_id">Volume Caustics</span></a> settings) are separated. GI caustics (<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> and <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" target="_self"><span class="text_id">Reflective Caustics</span></a> in the Edit Render Settings menu) will appear in the <span class="command">全局光照</span> Multi-Pass channel.</div></p>
+<p><!--INDEX "7","大气","no_command_16"--><a id="no_command_16" name="no_command_16"></a>   <span class="c4d_menu_id">大气</span></p>
+<p><!--INDEX "7","大气（正片叠底）","no_command_17"--><a id="no_command_17" name="no_command_17"></a>   <span class="c4d_menu_id">大气（正片叠底）</span></p>
 <p><div class="image_full" style="max-width:1492px"><img  src="../pics/003891.jpg"  ><span class="caption">At left the normal rendered image, at right the Multi-Pass "atmosphere"</span></div></p>
 <p>All volumetric image elements will be saved in this channel. These can include:<ul></p>
 <p><li> Fog, volumetric clouds, rainbows, etc. from the Physical Sky.</li><li> PyroCluster effects. </li></ul><p></p>
-<p><!--INDEX "7","Material","no_command_18"--><a id="no_command_18" name="no_command_18"></a>   <span class="c4d_menu_id">Material</span></p>
-<p>Other channels with the prefix, <span class="command">Material</span>, serve to create additional channels for a given material channel relating to the entire scene. These channels are irrelevant for normal use of Cinema 4D.</p>
-<p><!--INDEX "7","Illumination","no_command_19"--><a id="no_command_19" name="no_command_19"></a>   <span class="c4d_menu_id">Illumination</span></p>
+<p><!--INDEX "7","材质","no_command_18"--><a id="no_command_18" name="no_command_18"></a>   <span class="c4d_menu_id">材质</span></p>
+<p>Other channels with the prefix, <span class="command">材质</span>, serve to create additional channels for a given material channel relating to the entire scene. These channels are irrelevant for normal use of Cinema 4D.</p>
+<p><!--INDEX "7","光照","no_command_19"--><a id="no_command_19" name="no_command_19"></a>   <span class="c4d_menu_id">光照</span></p>
 <p>This channel displays the distribution of brightness (incl. shadows) throughout the scene as if all objects were white. Only the dispersion of light on the objects’ surfaces will be displayed.</p>
 <p><a id="TIEFE" name="TIEFE"></a></p>
-<p><!--INDEX "7","Depth","no_command_20"--><a id="no_command_20" name="no_command_20"></a>   <span class="c4d_menu_id">Depth</span></p>
+<p><!--INDEX "7","深度","no_command_20"--><a id="no_command_20" name="no_command_20"></a>   <span class="c4d_menu_id">深度</span></p>
 <p><div class="image_full" style="max-width:1517px"><img  src="../pics/003892.jpg"  ><span class="caption">The DOF is controlled using the settings in the <span class="command">Object</span> and <span class="command">Details</span> tabs</span></div></p>
 <p>This option lets you create depth maps (grayscale images that define Project elements in relation to their distance from the camera’s focal distance). Objects on the focal plane (defined using <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">Focus Distance</span></a>) will be colored black. The farther away to the focal plane an object lies, the lighter it will be - up to and including white. What is this good for? Using depth maps, third-party applications can quickly calculate a fairly accurate depth of field.</p>
 <p>A focal plane can be defined in the camera settings (<a href="OCAMERA-ID_GROUP_SETTINGS.html#CAMERAOBJECT_FRONTBLUR" target="_self"><span class="text_id">DOF Map Front Blur</span></a>), in which front and back regions can be defined in which a black-to-white grayscale gradient can be defined.</p>
-<p>A physically correct depth of field can be calculated using the <a href="VPXMBSAMPLER.html" target="">Physical Renderer</a>.</p>
+<p>A physically correct depth of field can be calculated using the <a href="VPXMBSAMPLER.html" target="">物理渲染器</a>.</p>
 <p><p><div class="hint"><span class="HL_hint"></span>The contrast of the grayscale Depth channel is controlled by the camera’s blur settings. For full contrast, set the Start value for Front Blur to immediately before the object closest to the camera. Set the End value for Rear Blur to immediately after the object farthest from the camera. The easiest way to set these values is to drag the camera’s handles in the viewport.</div></p>
 <p><!--INDEX "7","Post Effects","no_command_21"--><a id="no_command_21" name="no_command_21"></a>   <span class="c4d_menu_id">Post Effects</span></p>
 <p><div class="image_full" style="max-width:800px"><img  src="../pics/003893.jpg"  ><span class="caption">From top left to bottom left: Highlights (AR), Glow (AR), Specular, and Diffusion, each as a separate Post Effects pass.</span></div></p>
 <p>The Post Effects channel makes it possible to render a variety of post effects (PyroCluster, lens effects, vector motion blur, highlights, glow effects, glow) as separate passes.</p>
 <p><a id="NORM" name="NORM"></a></p>
-<p><!--INDEX "7","Material Normals","no_command_22"--><a id="no_command_22" name="no_command_22"></a>   <span class="c4d_menu_id">Material Normals</span></p>
+<p><!--INDEX "7","材质法线","no_command_22"--><a id="no_command_22" name="no_command_22"></a>   <span class="c4d_menu_id">材质法线</span></p>
 <p>Not to be confused with normal maps, these normal components are rendered as RGB (<span class="command_value">X=red, Y=green, Z=blue</span>) without antialiasing. This is designed for compatibility with other applications.</p>
-<p><!--INDEX "7","Material UVW","no_command_23"--><a id="no_command_23" name="no_command_23"></a>   <span class="c4d_menu_id">Material UVW</span></p>
+<p><!--INDEX "7","材质 UVW","no_command_23"--><a id="no_command_23" name="no_command_23"></a>   <span class="c4d_menu_id">材质 UVW</span></p>
 <p>This channel renders objects (without antialiasing), according to their UVW coordinates, in a green-red-blue gradient: <span class="command">U=red</span>, <span class="command">V=green</span>, <span class="command">W=blue</span>. Applications such as After Effects can easily work with these files.</p>
-<p><!--INDEX "7","Motion Vector","no_command_24"--><a id="no_command_24" name="no_command_24"></a>   <span class="c4d_menu_id">Motion Vector</span></p>
-<p><div class="image_full" style="max-width:500px"><img  src="../pics/012898.jpg"  ><span class="caption">A <span class="command">Motion Vector</span> <span class="command">Multi-Pass</span>. Left: A slowly rotating propeller; right: A propeller rotating faster.</p>
+<p><!--INDEX "7","运动矢量","no_command_24"--><a id="no_command_24" name="no_command_24"></a>   <span class="c4d_menu_id">运动矢量</span></p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/012898.jpg"  ><span class="caption">A <span class="command">运动矢量</span> <span class="command">Multi-Pass</span>. Left: A slowly rotating propeller; right: A propeller rotating faster.</p>
 <p></span></div></p>
-<p><span class="command">Motion Vector</span> lets you output color-coded motion vectors. Depending on the direction of movement, each object pixel will be colored accordingly <span class="command">red=X</span>; <span class="command">green=Y</span>; blue is not used). Third party applications, such as ReelSmart Motion Blur for example, can calculate motion blur based on these colors. The maximum length can be defined using the Motion Scale setting (Render Settings …  / Options page).</p>
-<p><!--INDEX "7","Ambient Occlusion","no_command_25"--><a id="no_command_25" name="no_command_25"></a>   <span class="c4d_menu_id">Ambient Occlusion</span></p>
+<p><span class="command">运动矢量</span> lets you output color-coded motion vectors. Depending on the direction of movement, each object pixel will be colored accordingly <span class="command">red=X</span>; <span class="command">green=Y</span>; blue is not used). Third party applications, such as ReelSmart Motion Blur for example, can calculate motion blur based on these colors. The maximum length can be defined using the Motion Scale setting (Render Settings …  / Options page).</p>
+<p><!--INDEX "7","环境吸收","no_command_25"--><a id="no_command_25" name="no_command_25"></a>   <span class="c4d_menu_id">环境吸收</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003894.jpg"  ><span class="caption"></span></div></p>
 <p>You can generate an Ambient Occlusion pass for the entire scene, in accordance with the Ambient Occlusion options in the Render Settings.</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>Note that AO passes on objects that lie behind refracted, transparent materials will fail, i.e., Ambient Occlusion will simply be ignored.</div></p>
 <p><div class="image_full" style="max-width:480px"><img  src="../pics/023779.jpg"  ><span class="caption">Ambient Occlusion will not work as a Multi-Pass for objects that lie behind refracted, transparent surfaces.</span></div></p>
-<p><a id="RDATA_MULTIPASS_LIGHTS" name="RDATA_MULTIPASS_LIGHTS"></a> <!--INDEX "8","Separate Lights","RDATA_MULTIPASS_LIGHTS"--><span class="c4d_id">Separate Lights</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTS" name="RDATA_MULTIPASS_LIGHTS"></a> <!--INDEX "8","分离灯光","RDATA_MULTIPASS_LIGHTS"--><span class="c4d_id">分离灯光</span></p>
 <p>Use Separate Lights to choose which light sources have their own separate layers.</p>
 <p>The following options are available:</p>
-<p><a id="RDATA_MULTIPASS_LIGHTS_NONE" name="RDATA_MULTIPASS_LIGHTS_NONE"></a><!--INDEX "10","None","RDATA_MULTIPASS_LIGHTS_NONE"--><span class="c4d_id_cycle">None</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_NONE" name="RDATA_MULTIPASS_LIGHTS_NONE"></a><!--INDEX "10","无","RDATA_MULTIPASS_LIGHTS_NONE"--><span class="c4d_id_cycle">无</span></p>
 <p>No separate layers.</p>
-<p><a id="RDATA_MULTIPASS_LIGHTS_ALL" name="RDATA_MULTIPASS_LIGHTS_ALL"></a><!--INDEX "10","All","RDATA_MULTIPASS_LIGHTS_ALL"--><span class="c4d_id_cycle">All</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_ALL" name="RDATA_MULTIPASS_LIGHTS_ALL"></a><!--INDEX "10","全部","RDATA_MULTIPASS_LIGHTS_ALL"--><span class="c4d_id_cycle">全部</span></p>
 <p>Each light has separate layers.</p>
-<p><a id="RDATA_MULTIPASS_LIGHTS_SELECTED" name="RDATA_MULTIPASS_LIGHTS_SELECTED"></a><!--INDEX "10","Selected","RDATA_MULTIPASS_LIGHTS_SELECTED"--><span class="c4d_id_cycle">Selected</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTS_SELECTED" name="RDATA_MULTIPASS_LIGHTS_SELECTED"></a><!--INDEX "10","选取对象","RDATA_MULTIPASS_LIGHTS_SELECTED"--><span class="c4d_id_cycle">选取对象</span></p>
 <p>Separate layers for all lights whose Separate Pass option is enabled (General tab).</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>Light instances do not work in conjunction with <span class="command">Separate Lights</span>.</div></p>
-<p><a id="RDATA_MULTIPASS_LIGHTMODE" name="RDATA_MULTIPASS_LIGHTMODE"></a> <!--INDEX "8","Mode","RDATA_MULTIPASS_LIGHTMODE"--><span class="c4d_id">Mode</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE" name="RDATA_MULTIPASS_LIGHTMODE"></a> <!--INDEX "8","模式","RDATA_MULTIPASS_LIGHTMODE"--><span class="c4d_id">模式</span></p>
 <p>Use Mode to control how the diffuse, specular and shadow  information is layered for each light source that has its own layers.</p>
-<p><a id="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL" name="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"></a><!--INDEX "10","1 Channel","RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"--><span class="c4d_id_cycle">1 Channel</span><br><a id="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"></a><!--INDEX "10"," Diffuse+Specular+Shadow","RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"--><span class="c4d_id_cycle"> Diffuse+Specular+Shadow</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL" name="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"></a><!--INDEX "10","1 通道","RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"--><span class="c4d_id_cycle">1 通道</span><br><a id="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"></a><!--INDEX "10"," 漫射+高光+投影","RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"--><span class="c4d_id_cycle"> 漫射+高光+投影</span></p>
 <p>Adds one blended layer for Diffuse, Specular and Shadow.</p>
-<p><a id="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"></a><!--INDEX "10","2 Channels","RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"--><span class="c4d_id_cycle">2 Channels</span><br><a id="" name=""></a><!--INDEX "10","Diffuse+Specular+Shadow",""--><span class="c4d_id_cycle">Diffuse+Specular+Shadow</span></p>
+<p><a id="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"></a><!--INDEX "10","2 通道","RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"--><span class="c4d_id_cycle">2 通道</span><br><a id="" name=""></a><!--INDEX "10","漫射+高光+投影",""--><span class="c4d_id_cycle">漫射+高光,投影</span></p>
 <p>Adds one blended layer for Diffuse and Specular, and one layer for Shadow.</p>
-<p><a id="" name=""></a><!--INDEX "10","3 Channels",""--><span class="c4d_id_cycle">3 Channels</span><br><a id="" name=""></a><!--INDEX "10","Diffuse+Specular+Shadow",""--><span class="c4d_id_cycle">Diffuse+Specular+Shadow</span></p>
+<p><a id="" name=""></a><!--INDEX "10","3 Channels",""--><span class="c4d_id_cycle">3 Channels</span><br><a id="" name=""></a><!--INDEX "10","漫射+高光+投影",""--><span class="c4d_id_cycle">漫射,高光,投影</span></p>
 <p>Adds one Diffuse layer, one Specular layer and one Shadow layer.</p>
-<p><a id="RDATA_MULTIPASS_SHADOWCORRECTION" name="RDATA_MULTIPASS_SHADOWCORRECTION"></a> <!--INDEX "8","Shadow Correction","RDATA_MULTIPASS_SHADOWCORRECTION"--><span class="c4d_id">Shadow Correction</span></p>
+<p><a id="RDATA_MULTIPASS_SHADOWCORRECTION" name="RDATA_MULTIPASS_SHADOWCORRECTION"></a> <!--INDEX "8","投影修正","RDATA_MULTIPASS_SHADOWCORRECTION"--><span class="c4d_id">投影修正</span></p>
 <p>When rendering Multi-Passes with shadows switched on, slight artifacts such as bright lines may appear at object edges due to antialiasing. To prevent these artifacts from appearing, enable this option.</p>
-<p><div class="image_full" style="max-width:444px"><img  src="../pics/003895.jpg"  ><span class="caption">Enable <span class="command">Shadow Correction</span> to prevent artifacts from appearing at the edges of objects.</span></div></p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/003895.jpg"  ><span class="caption">Enable <span class="command">投影修正</span> to prevent artifacts from appearing at the edges of objects.</span></div></p>
 <p>
 
 </p>
