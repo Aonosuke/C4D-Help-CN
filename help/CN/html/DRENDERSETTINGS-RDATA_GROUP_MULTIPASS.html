@@ -119,43 +119,43 @@
 <p>可以通过<a href="VPXMBSAMPLER.html" target="">物理渲染器</a>来计算得到物理上正确的景深。</p>
 <p><p><div class="hint"><span class="HL_hint"></span>灰度景深通道的对比度可以通过摄像机的模糊设置来控制。对于全对比，需要把前景模糊的开始数值设置到最接近摄像机的对象前面，把背景模糊的结束数值设置为最原理摄像机的对象后面。设置这些数值最简答的方法是在视窗中拖动摄像机的手柄。</div></p>
 <p><!--INDEX "7","后期效果","no_command_21"--><a id="no_command_21" name="no_command_21"></a>   <span class="c4d_menu_id">后期效果</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/003893.jpg"  ><span class="caption">From top left to bottom left: Highlights (AR), Glow (AR), Specular, and Diffusion, each as a separate Post Effects pass.</span></div></p>
-<p>The Post Effects channel makes it possible to render a variety of post effects (PyroCluster, lens effects, vector motion blur, highlights, glow effects, glow) as separate passes.</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/003893.jpg"  ><span class="caption">左上到左下：高光（AR）、辉光（AR）、反射、漫射，每个都是一个单独的后期效果通道。</span></div></p>
+<p>后期效果让你可以渲染各种效果（PyroCluster、镜头效果、矢量运动模糊、高光、辉光效果）为单独的通道。</p>
 <p><a id="NORM" name="NORM"></a></p>
 <p><!--INDEX "7","材质法线","no_command_22"--><a id="no_command_22" name="no_command_22"></a>   <span class="c4d_menu_id">材质法线</span></p>
-<p>Not to be confused with normal maps, these normal components are rendered as RGB (<span class="command_value">X=red, Y=green, Z=blue</span>) without antialiasing. This is designed for compatibility with other applications.</p>
+<p>别对法线贴图感到迷惑，这些法线组件会被渲染为没有抗锯齿的 RGB（<span class="command_value">X=红色，Y=绿色，Z=蓝色</span>），这项功能是设计用来兼容其他软件的。</p>
 <p><!--INDEX "7","材质 UVW","no_command_23"--><a id="no_command_23" name="no_command_23"></a>   <span class="c4d_menu_id">材质 UVW</span></p>
-<p>This channel renders objects (without antialiasing), according to their UVW coordinates, in a green-red-blue gradient: <span class="command">U=red</span>, <span class="command">V=green</span>, <span class="command">W=blue</span>. Applications such as After Effects can easily work with these files.</p>
+<p>这个通道会根据对象的 UVW 坐标来进行渲染，结果为绿-红-蓝渐变：<span class="command">U=红色</span>，<span class="command">V=绿色</span>，<span class="command">W=蓝色</span>。像 After Effects 这种软件可以很方便地使用这些文件。</p>
 <p><!--INDEX "7","运动矢量","no_command_24"--><a id="no_command_24" name="no_command_24"></a>   <span class="c4d_menu_id">运动矢量</span></p>
-<p><div class="image_full" style="max-width:500px"><img  src="../pics/012898.jpg"  ><span class="caption">A <span class="command">运动矢量</span> <span class="command">Multi-Pass</span>. Left: A slowly rotating propeller; right: A propeller rotating faster.</p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/012898.jpg"  ><span class="caption">一个多通道<span class="command">运动矢量</span> <span class="command"></span>。左：一个慢速旋转的螺旋桨；右：一个快速旋转的螺旋桨。</p>
 <p></span></div></p>
-<p><span class="command">运动矢量</span> lets you output color-coded motion vectors. Depending on the direction of movement, each object pixel will be colored accordingly <span class="command">red=X</span>; <span class="command">green=Y</span>; blue is not used). Third party applications, such as ReelSmart Motion Blur for example, can calculate motion blur based on these colors. The maximum length can be defined using the Motion Scale setting (Render Settings …  / Options page).</p>
+<p><span class="command">运动矢量</span>可以输出用颜色表示的运动矢量，根据运动的方向赋予对象像素颜色：<span class="command">红色=X</span>，<span class="command">绿色=Y</span>，蓝色没有被使用。第三方软件，如 ReelSmart Motion Blur，可以根据这些颜色来计算运动模糊。使用运动比例设置（渲染设置 | 选项标签页）可以设定最大长度。</p>
 <p><!--INDEX "7","环境吸收","no_command_25"--><a id="no_command_25" name="no_command_25"></a>   <span class="c4d_menu_id">环境吸收</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003894.jpg"  ><span class="caption"></span></div></p>
-<p>You can generate an Ambient Occlusion pass for the entire scene, in accordance with the Ambient Occlusion options in the Render Settings.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Note that AO passes on objects that lie behind refracted, transparent materials will fail, i.e., Ambient Occlusion will simply be ignored.</div></p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/023779.jpg"  ><span class="caption">Ambient Occlusion will not work as a Multi-Pass for objects that lie behind refracted, transparent surfaces.</span></div></p>
+<p>你可以为整个场景生成一个环境吸收通道，它与渲染设置中的环境吸收选项一致。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，如果对象位于折射透明材质后方，其环境吸收通道是无效的，也就是会忽略该对象的环境吸收。</div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/023779.jpg"  ><span class="caption">环境吸收不会作用于位于折射透明表面后方的对象。</span></div></p>
 <p><a id="RDATA_MULTIPASS_LIGHTS" name="RDATA_MULTIPASS_LIGHTS"></a> <!--INDEX "8","分离灯光","RDATA_MULTIPASS_LIGHTS"--><span class="c4d_id">分离灯光</span></p>
-<p>Use Separate Lights to choose which light sources have their own separate layers.</p>
-<p>The following options are available:</p>
+<p>使用分离灯光可以选择哪些光源可以有自己单独的图层。</p>
+<p>有如下可用选项：</p>
 <p><a id="RDATA_MULTIPASS_LIGHTS_NONE" name="RDATA_MULTIPASS_LIGHTS_NONE"></a><!--INDEX "10","无","RDATA_MULTIPASS_LIGHTS_NONE"--><span class="c4d_id_cycle">无</span></p>
-<p>No separate layers.</p>
+<p>没有单独的图层。</p>
 <p><a id="RDATA_MULTIPASS_LIGHTS_ALL" name="RDATA_MULTIPASS_LIGHTS_ALL"></a><!--INDEX "10","全部","RDATA_MULTIPASS_LIGHTS_ALL"--><span class="c4d_id_cycle">全部</span></p>
-<p>Each light has separate layers.</p>
+<p>每个灯管都有单独的图层。</p>
 <p><a id="RDATA_MULTIPASS_LIGHTS_SELECTED" name="RDATA_MULTIPASS_LIGHTS_SELECTED"></a><!--INDEX "10","选取对象","RDATA_MULTIPASS_LIGHTS_SELECTED"--><span class="c4d_id_cycle">选取对象</span></p>
-<p>Separate layers for all lights whose Separate Pass option is enabled (General tab).</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Light instances do not work in conjunction with <span class="command">Separate Lights</span>.</div></p>
+<p>在灯光对象的常规标签中启用了“分离通道”选项的灯光会有单独的图层。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>灯光实例不能与<span class="command">分离灯光</span>一起使用。</div></p>
 <p><a id="RDATA_MULTIPASS_LIGHTMODE" name="RDATA_MULTIPASS_LIGHTMODE"></a> <!--INDEX "8","模式","RDATA_MULTIPASS_LIGHTMODE"--><span class="c4d_id">模式</span></p>
-<p>Use Mode to control how the diffuse, specular and shadow  information is layered for each light source that has its own layers.</p>
+<p>使用模式可以控制每个有单独图层光源的漫射、反射和投影信息如何分层。</p>
 <p><a id="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL" name="RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"></a><!--INDEX "10","1 通道","RDATA_MULTIPASS_LIGHTMODE_1CHANNEL"--><span class="c4d_id_cycle">1 通道</span><br><a id="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"></a><!--INDEX "10"," 漫射+高光+投影","RDATA_MULTIPASS_LIGHTMODE_2CHANNELS"--><span class="c4d_id_cycle"> 漫射+高光+投影</span></p>
-<p>Adds one blended layer for Diffuse, Specular and Shadow.</p>
+<p>为漫射、反射和投影添加一个混合的图层。</p>
 <p><a id="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS" name="RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"></a><!--INDEX "10","2 通道","RDATA_MULTIPASS_LIGHTMODE_3CHANNELS"--><span class="c4d_id_cycle">2 通道</span><br><a id="" name=""></a><!--INDEX "10","漫射+高光+投影",""--><span class="c4d_id_cycle">漫射+高光,投影</span></p>
-<p>Adds one blended layer for Diffuse and Specular, and one layer for Shadow.</p>
+<p>为漫射和反射添加一个混合图层，投影为单独一个图层。</p>
 <p><a id="" name=""></a><!--INDEX "10","3 Channels",""--><span class="c4d_id_cycle">3 Channels</span><br><a id="" name=""></a><!--INDEX "10","漫射+高光+投影",""--><span class="c4d_id_cycle">漫射,高光,投影</span></p>
-<p>Adds one Diffuse layer, one Specular layer and one Shadow layer.</p>
+<p>分别为漫射、反射和投影添加单独的图层。</p>
 <p><a id="RDATA_MULTIPASS_SHADOWCORRECTION" name="RDATA_MULTIPASS_SHADOWCORRECTION"></a> <!--INDEX "8","投影修正","RDATA_MULTIPASS_SHADOWCORRECTION"--><span class="c4d_id">投影修正</span></p>
-<p>When rendering Multi-Passes with shadows switched on, slight artifacts such as bright lines may appear at object edges due to antialiasing. To prevent these artifacts from appearing, enable this option.</p>
-<p><div class="image_full" style="max-width:444px"><img  src="../pics/003895.jpg"  ><span class="caption">Enable <span class="command">投影修正</span> to prevent artifacts from appearing at the edges of objects.</span></div></p>
+<p>当在渲染多通道时启用了投影，由于抗锯齿的原因，会在对象边缘出现轻微的瑕疵，如一些明亮的线条。要防止出现这些瑕疵，可以启用这个选项。</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/003895.jpg"  ><span class="caption">启用<span class="command">投影修正</span>来防止对象边缘出现瑕疵。</span></div></p>
 <p>
 
 </p>

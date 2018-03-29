@@ -37,7 +37,6 @@ Film Aspect                     胶片宽高比
 Antialiasing                    抗锯齿
 Frame Buffer                    帧缓冲区（暂定）
 Tile                            图块（暂定）
-Specular                        镜面（暂定）
 Selection Assistant             选择助手（暂定）
 Selection Object                选集对象
 Shortcut hierarchies            层级快捷键
@@ -52,3 +51,4 @@ lighting scenario               光照条件
 Oversample                      超采样
 Logical Naming                  逻辑命名
 compositing project file        合成档案文件
+Ambient Occlusion               环境吸收

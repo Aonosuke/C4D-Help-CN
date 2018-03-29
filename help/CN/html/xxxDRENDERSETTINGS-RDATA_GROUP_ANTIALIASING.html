@@ -38,7 +38,7 @@
 <p>解决这些问题的一个方案是将每个像素分解为亚像素，并且为每个亚像素单独计算样本（及色值）。这个过程也被称为“超采样”（或“采样”）。</p>
 <p>第二步是根据设定的像素周围半径，来统计这些亚像素的色值（通过后面描述的 filter 来实现）。</p>
 <p><a id="RDATA_ANTIALIASING" name="RDATA_ANTIALIASING"></a> <!--INDEX "8","抗锯齿","RDATA_ANTIALIASING"--><span class="c4d_id">抗锯齿</span></p>
-<p><div class="image_full" style="max-width:685px"><img  src="../pics/031330.jpg"  ><span class="caption">From left to right: None, Geometry (the slightly blurred texture is a result of the antialiasing filters) and Best antialiasing.</span></div></p>
+<p><div class="image_full" style="max-width:685px"><img  src="../pics/031330.jpg"  ><span class="caption">从左至右：无、几何体、最佳From left to right: None, Geometry (the slightly blurred texture is a result of the antialiasing filters) and Best antialiasing.</span></div></p>
 <p><a id="RDATA_ANTIALIASING_NONE" name="RDATA_ANTIALIASING_NONE"></a><!--INDEX "10","None","RDATA_ANTIALIASING_NONE"--><span class="c4d_id_cycle">None</span></p>
 <p>The image to be output will be calculated without antialiasing (any existing Render tags with differing settings will be ignored). Step-like structures will be recognizable at object and color edges.</p>
 <p>This mode is particularly suited for fast test renderings for which quality does not play a role.</p>
