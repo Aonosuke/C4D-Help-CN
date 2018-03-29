@@ -97,27 +97,28 @@
 <p>创建一个显示所有透明表面的通道，包含折射和位于这些表面后面的对象。</p>
 <p><!--INDEX "7","全局光照","no_command_14"--><a id="no_command_14" name="no_command_14"></a>   <span class="c4d_menu_id">全局光照</span></p>
 <p><div class="image_full" style="max-width:400px"><img  src="../pics/003889.jpg"  ><span class="caption">渲染图像的漫射通道。</span></div></p>
-<p>如果选择了全局光照并根据渲染设置相应地设置，则会显示这个通道和散射光的效果。</p>
+<p>如果选择了全局光照并根据渲染设置进行相应的设置，则会显示这个通道和散射光的效果。</p>
 <p><!--INDEX "7","焦散","no_command_15"--><a id="no_command_15" name="no_command_15"></a>   <span class="c4d_menu_id">焦散</span></p>
-<p>If enabled for Multi-Pass rendering, the typical refraction reflexes that are created when light passes through a transparent or reflective surface can be saved separately to this layer.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Cinema 4D offers <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">two types</a> of caustics. In the <span class="command">焦散</span> Multi-Pass channel only the photon caustics (these can be found in the light’s <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_CAUSTIC_ENABLE" target="_self"><span class="text_id">Surface Caustics</span></a> and <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_VOLCAUSTIC_ENABLE" target="_self"><span class="text_id">Volume Caustics</span></a> settings) are separated. GI caustics (<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> and <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" target="_self"><span class="text_id">Reflective Caustics</span></a> in the Edit Render Settings menu) will appear in the <span class="command">全局光照</span> Multi-Pass channel.</div></p>
+<p>如果在多通道渲染中启用了焦散，当光通过透明或反射表面时，产生的典型折射反射可以单独保存到这一层。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>CINEMA 4D 提供了<a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">两种</a>焦散的类型。在多通道<span class="command">焦散</span>中只有光子焦散（你可以在灯光对象的<a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_CAUSTIC_ENABLE" target="_self"><span class="text_id">表面焦散</span></a>和<a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html#LIGHT_VOLCAUSTIC_ENABLE" target="_self"><span class="text_id">体积焦散</span></a>设置中找到它），全局光照焦散（渲染设置全局光照设置中的<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">折射焦散</span></a>和<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" target="_self"><span class="text_id">反射焦散</span></a>）则会出现在多通道的<span class="command">全局光照</span>通道中。</div></p>
 <p><!--INDEX "7","大气","no_command_16"--><a id="no_command_16" name="no_command_16"></a>   <span class="c4d_menu_id">大气</span></p>
 <p><!--INDEX "7","大气（正片叠底）","no_command_17"--><a id="no_command_17" name="no_command_17"></a>   <span class="c4d_menu_id">大气（正片叠底）</span></p>
-<p><div class="image_full" style="max-width:1492px"><img  src="../pics/003891.jpg"  ><span class="caption">At left the normal rendered image, at right the Multi-Pass "atmosphere"</span></div></p>
-<p>All volumetric image elements will be saved in this channel. These can include:<ul></p>
-<p><li> Fog, volumetric clouds, rainbows, etc. from the Physical Sky.</li><li> PyroCluster effects. </li></ul><p></p>
+<p><div class="image_full" style="max-width:1492px"><img  src="../pics/003891.jpg"  ><span class="caption">左边是正常渲染的图像，右边则是添加了多通道“大气”</span></div></p>
+<p>所有体积图像元素都会保存到这个通道中，它们包括：<ul></p>
+<p><li> 来自物理天空的烟雾、体积云、彩虹等。</li>
+<li> PyroCluster 效果。 </li></ul><p></p>
 <p><!--INDEX "7","材质","no_command_18"--><a id="no_command_18" name="no_command_18"></a>   <span class="c4d_menu_id">材质</span></p>
-<p>Other channels with the prefix, <span class="command">材质</span>, serve to create additional channels for a given material channel relating to the entire scene. These channels are irrelevant for normal use of Cinema 4D.</p>
+<p>带有<span class="command">材质</span>前缀的其他通道可以用来创建跟整个场景相关的给定材质的额外通道。这些通道与正常的 CINEMA 4D 使用无关。</p>
 <p><!--INDEX "7","光照","no_command_19"--><a id="no_command_19" name="no_command_19"></a>   <span class="c4d_menu_id">光照</span></p>
-<p>This channel displays the distribution of brightness (incl. shadows) throughout the scene as if all objects were white. Only the dispersion of light on the objects’ surfaces will be displayed.</p>
+<p>这个通道会显示整个场景中光照的散布（包括投影）,它看起来好像所有对象都是白色的。只有对象表面的光色散会被显示。</p>
 <p><a id="TIEFE" name="TIEFE"></a></p>
 <p><!--INDEX "7","深度","no_command_20"--><a id="no_command_20" name="no_command_20"></a>   <span class="c4d_menu_id">深度</span></p>
-<p><div class="image_full" style="max-width:1517px"><img  src="../pics/003892.jpg"  ><span class="caption">The DOF is controlled using the settings in the <span class="command">Object</span> and <span class="command">Details</span> tabs</span></div></p>
-<p>This option lets you create depth maps (grayscale images that define Project elements in relation to their distance from the camera’s focal distance). Objects on the focal plane (defined using <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">Focus Distance</span></a>) will be colored black. The farther away to the focal plane an object lies, the lighter it will be - up to and including white. What is this good for? Using depth maps, third-party applications can quickly calculate a fairly accurate depth of field.</p>
-<p>A focal plane can be defined in the camera settings (<a href="OCAMERA-ID_GROUP_SETTINGS.html#CAMERAOBJECT_FRONTBLUR" target="_self"><span class="text_id">DOF Map Front Blur</span></a>), in which front and back regions can be defined in which a black-to-white grayscale gradient can be defined.</p>
-<p>A physically correct depth of field can be calculated using the <a href="VPXMBSAMPLER.html" target="">物理渲染器</a>.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>The contrast of the grayscale Depth channel is controlled by the camera’s blur settings. For full contrast, set the Start value for Front Blur to immediately before the object closest to the camera. Set the End value for Rear Blur to immediately after the object farthest from the camera. The easiest way to set these values is to drag the camera’s handles in the viewport.</div></p>
-<p><!--INDEX "7","Post Effects","no_command_21"--><a id="no_command_21" name="no_command_21"></a>   <span class="c4d_menu_id">Post Effects</span></p>
+<p><div class="image_full" style="max-width:1517px"><img  src="../pics/003892.jpg"  ><span class="caption">使用摄像机的<span class="command">对象</span>和<span class="command">细节</span>标签中的设置来控制景深</span></div></p>
+<p>这个选项让你可以创建景深映射（根据与摄像机焦距的距离来定义工程元素的灰度图）。位于焦平面的对象（通过<a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">焦距</span></a>定义）会显示为黑色。一个对象离焦平面越远，则显示结果越亮——最高为白色。它有什么用处呢？使用景深映射，第三方软件可以快速计算一个相当精确的景深。</p>
+<p>焦平面可以在摄像机设置中进行定义（<a href="OCAMERA-ID_GROUP_SETTINGS.html#CAMERAOBJECT_FRONTBLUR" target="_self"><span class="text_id">景深映射-前景模糊</span></a>），通过它可以设置灰度渐变的前景和背景区域。</p>
+<p>可以通过<a href="VPXMBSAMPLER.html" target="">物理渲染器</a>来计算得到物理上正确的景深。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>灰度景深通道的对比度可以通过摄像机的模糊设置来控制。对于全对比，需要把前景模糊的开始数值设置到最接近摄像机的对象前面，把背景模糊的结束数值设置为最原理摄像机的对象后面。设置这些数值最简答的方法是在视窗中拖动摄像机的手柄。</div></p>
+<p><!--INDEX "7","后期效果","no_command_21"--><a id="no_command_21" name="no_command_21"></a>   <span class="c4d_menu_id">后期效果</span></p>
 <p><div class="image_full" style="max-width:800px"><img  src="../pics/003893.jpg"  ><span class="caption">From top left to bottom left: Highlights (AR), Glow (AR), Specular, and Diffusion, each as a separate Post Effects pass.</span></div></p>
 <p>The Post Effects channel makes it possible to render a variety of post effects (PyroCluster, lens effects, vector motion blur, highlights, glow effects, glow) as separate passes.</p>
 <p><a id="NORM" name="NORM"></a></p>
