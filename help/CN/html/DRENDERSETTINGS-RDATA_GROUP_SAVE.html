@@ -158,7 +158,7 @@
 <p><p><div class="hint"><span class="HL_hint">注意！<br></span>CINEMA 4D R11.5 之前的版本使用不同于 alpha 通道输出的方式来处理透明表面（通过 alpha 蒙版或<span class="command">透明度</span>通道）。</p>
 <p>示例：一个带有 alpha 蒙版的材质可以用来在平面上创建一个孔，这个平面位于一个巨大的作为背景的球体里面。渲染结果如下面的左图所示。假设你现在想要输出场景为一个 alpha 通道，其中只包含带孔的平面。要实现这一点，给背景（也就是球体）添加一个<span class="command">合成</span>标签。在先前版本的 CINEMA 4D 中，你要做的是禁用<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYCAMERA" target="_self"><span class="text_id">摄像机可见</span></a>选项。在 R11.5 及以上版本中，你还需要禁用<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYTRANSPARENCY" target="_self"><span class="text_id">透明度可见</span></a>选项来生成 alpha 通道图片，如下面的右图所示：</p>
 <p><div class="image_full" style="max-width:960px"><img  src="../pics/025933.jpg"  ><span class="caption">要生成如右图所示的 alpha 通道，上面提到的两个选项都必须在<span class="command">合成</span>标签中被禁用。</span></div></p>
-<p>这么做的原因在于渲染器的优化，现在渲染器会使用光线跟踪来计算平面透明表面（包括 alpha 蒙版）。光线跟踪必须通过<span class="command">合成</span>标签明确地指定，位于透明对象后方的物体不可见。</div></p>
+<p>这么做的原因在于渲染器的优化，现在渲染器会使用光影追踪来计算平面透明表面（包括 alpha 蒙版）。光影追踪必须通过<span class="command">合成</span>标签明确地指定，位于透明对象后方的物体不可见。</div></p>
 <p><a id="RDATA_SEPARATEALPHA" name="RDATA_SEPARATEALPHA"></a> <!--AM_JUMP "RDATA_SEPARATEALPHA","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","分离 Alpha","RDATA_SEPARATEALPHA"--><span class="c4d_id">分离 Alpha</span></p>
 <p>Alpha 通道通常包含在支持 alpha 通道的图像格式中，这也就意味着它们是作为图像文件的一部分来保存的。但是，如果你想要将 alpha 通道保存为一个单独的文件，可以启用这个选项。这时除了彩色图片（如 <span class="command">room.tif</span>），你还会得到一个包含 alpha 通道的文件（如 <span class="command">A_room.tif</span>）。</p>
 <p><RELEASE_120 Separate alpha channel files are saved in the same image format as the rendered image.></p>

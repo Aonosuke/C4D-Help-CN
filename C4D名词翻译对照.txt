@@ -52,3 +52,6 @@ Oversample                      超采样
 Logical Naming                  逻辑命名
 compositing project file        合成档案文件
 Ambient Occlusion               环境吸收
+diffuse reflexion               漫反射
+anistrophy                      各向异性
+Clip Negative Component         剪辑负成分
