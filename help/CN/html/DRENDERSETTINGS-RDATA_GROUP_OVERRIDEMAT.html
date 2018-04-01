@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>编辑渲染设置：材质覆写</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54551"-->
+		<!--VATER_ID "32048"-->
+		<!--REIHENFOLGE "7"-->
+		<!--TITLE "编辑渲染设置：材质覆写"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi_self">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>材质覆写</span></p><p></p>
+<p><PAGE_RELEASE_170 Replace all materials with a single material during rendering.></p>
+<p><div class="image_full" style="max-width:3200px"><img  src="../pics/039642.jpg"  ><span class="caption">从左至右：正常渲染、灰色材质渲染、增加透明材质、纹理替代材质（如快速检查 UV 贴图）。</span></div></p>
+<p>虽然材质的效果显著，但是有时候你需要用一个简单的材质替代所有现有的材质进行简易的工程渲染，被称为<span class="command_value">白模渲染</span>，这就是<span class="command">材质覆写</span>功能所能实现的。工程中的所有材质都被替换为这里设定的材质。纹理标签中的设定的投射类型对此不会产生影响，你可以单独排除被替代的材质（使其不被替换），就像防止材质通道被影响一样。</p>
+<p>注意，由于内部原因，即使是“空”纹理标签（没有指定材质）也会使用单一的覆写材质。</p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_LINK" name="RDATA_MATERIAL_OVERRIDE_LINK"></a> <!--INDEX "8","自定义材质","RDATA_MATERIAL_OVERRIDE_LINK"--><span class="c4d_id">自定义材质</span></p>
+<p>拖放替换材质到这个框里，它只会在渲染中使用而不会在视窗显示中使用。如果留空，那么会使用在工程设置中设定的<span class="command">颜色</span>，否则会使用默认材质。</p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE" name="RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE"></a> <!--INDEX "8","模式","RDATA_MATERIAL_OVERRIDE_EXCLUSION_MODE"--><span class="c4d_id">模式</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST" name="RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST"></a> <!--INDEX "8","材质","RDATA_MATERIAL_OVERRIDE_EXCLUSION_LIST"--><span class="c4d_id">材质</span></p>
+<p>如果要排除要被替换的材质，可以选择想要的模式然后拖动要包含或排除的材质到<span class="command">材质</span>框。</p>
+<p><!--INDEX "6","保持","RDATA_GROUP_OVERRIDEMAT_PRESERVE"--><a id="RDATA_GROUP_OVERRIDEMAT_PRESERVE" name="RDATA_GROUP_OVERRIDEMAT_PRESERVE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>保持</span></p>
+<p><a id="RDATA_MATERIAL_OVERRIDE_COLOR" name="RDATA_MATERIAL_OVERRIDE_COLOR"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_COLOR","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","漫射颜色","RDATA_MATERIAL_OVERRIDE_COLOR"--><span class="c4d_id">漫射颜色</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_LUMINANCE" name="RDATA_MATERIAL_OVERRIDE_LUMINANCE"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_LUMINANCE","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","自发光","RDATA_MATERIAL_OVERRIDE_LUMINANCE"--><span class="c4d_id">自发光</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_TRANS" name="RDATA_MATERIAL_OVERRIDE_TRANS"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_TRANS","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","透明度","RDATA_MATERIAL_OVERRIDE_TRANS"--><span class="c4d_id">透明度</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_REFL" name="RDATA_MATERIAL_OVERRIDE_REFL"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_REFL","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","反射率","RDATA_MATERIAL_OVERRIDE_REFL"--><span class="c4d_id">反射率</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_BUMP" name="RDATA_MATERIAL_OVERRIDE_BUMP"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_BUMP","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","凹凸","RDATA_MATERIAL_OVERRIDE_BUMP"--><span class="c4d_id">凹凸</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_NORM" name="RDATA_MATERIAL_OVERRIDE_NORM"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_NORM","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","法线","RDATA_MATERIAL_OVERRIDE_NORM"--><span class="c4d_id">法线</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_ALPHA" name="RDATA_MATERIAL_OVERRIDE_ALPHA"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_ALPHA","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","Alpha","RDATA_MATERIAL_OVERRIDE_ALPHA"--><span class="c4d_id">Alpha</span><br>
+<a id="RDATA_MATERIAL_OVERRIDE_DSPL" name="RDATA_MATERIAL_OVERRIDE_DSPL"></a> <!--AM_JUMP "RDATA_MATERIAL_OVERRIDE_DSPL","RDATA_GROUP_OVERRIDEMAT_PRESERVE","RDATA_GROUP_OVERRIDEMAT"--><!--INDEX "8","置换","RDATA_MATERIAL_OVERRIDE_DSPL"--><span class="c4d_id">置换</span></p>
+<p>如果不想替换所有材质特性，并只排除指定的通道（如透明度（上图中的第三张图）或置换），可以在这里勾选相应的选项，然后这些通道就会保持原始材质的特定。注意，<span class="command">漫射颜色</span>选项包含了<span class="command">颜色</span>和<span class="command">漫射</span>通道！</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

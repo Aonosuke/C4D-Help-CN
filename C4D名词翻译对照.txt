@@ -46,12 +46,15 @@ Frame Output			        帧输出
 Animation output		        动画输出
 Proximal Shader                 接近着色器
 Variable Path and File Names    可变路径和文件名
-pre-multiplied                  预叠加
-lighting scenario               光照条件
+Pre-multiplied                  预叠加
+Lighting scenario               光照条件
 Oversample                      超采样
 Logical Naming                  逻辑命名
-compositing project file        合成档案文件
+Compositing project file        合成档案文件
 Ambient Occlusion               环境吸收
-diffuse reflexion               漫反射
-anistrophy                      各向异性
+Diffuse reflexion               漫反射
+Anistrophy                      各向异性
 Clip Negative Component         剪辑负成分
+Clay rendering                  白模渲染
+Irradiance                      辐照
+Subsurface Scattering           次表面散射
