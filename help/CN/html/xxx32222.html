@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>First Steps</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32222"-->
+		<!--VATER_ID "32219"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "First Steps"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="32219.html" target="_self">Global Illumination</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","First Steps",""--><p><span class="HL_group">First Steps</span></p><p></p>
+<p><PAGE_RELEASE_110></p>
+<p>What should you do if you want to light a scene using Global Illumination? Which workflow leads me quickly to the best results?</p>
+<p><ol><br><li> Activate Global Illumination in the Render Settings ("Effects … " button).<br><li> Set <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_PRESETS" target="_self"><span class="text_id">Preset</span></a> to an appropriate setting. Any subsequent test renderings must be done at a reasonable rate of speed. Otherwise the test render phase could turn into an arduous process. Follow these steps to make sure this does not happen:<ul><br><li> Render at lower <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html#RDATA_XRES_VIRTUAL" target="">resolutions</a> (e.g., 320 x 240 is often sufficient to check the brightness of a scene or part of a scene) or:<br><li> Use the <a href="OSNIPER.html" target="">Interactive Render Region</a> (IRR) at a lower resolution.<br><li> First, concentrate on the brightness, light dispersion and similar elements. <br>Determine if you need additional light sources. The <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_GAMMA_VALUE" target="_self"><span class="text_id">Gamma</span></a> value (<span class="command">General</span> tab) can be increased, if necessary (keep in mind also the Color Mapping parameter <a href="VPCOLORMAPPING-ID_VIDEOPOSTPROPERTIES.html" target="">here</a> and <a href="32220.html#32bit" target="">here</a>).<br><li> Once you are satisfied with the lighting of your scene you can turn your attention to the GI quality. First, check to see if you can implement <a href="32221.html" target="">Portals</a> or Polygon/Area Lights. This can improve the render quality and shorten the render time enormously.<br><li> Now begin increasing the GI quality by defining a higher quality Preset - or by adjusting individual settings.<br></ul></ol><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Error Correction","hl_1"--><p><span class="HL_1">Error Correction</span></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","GI shadows not rendered precisely enough?","hl_2"--><p><span class="HL_2">GI shadows not rendered precisely enough?</span></p>
+<p>For Portals and Polygon Lights activate the <a href="VPGISETUP-GI_GROUP_GENERAL.html" target="">Force Per-Pixel</a> option.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Spotty renderings?","hl_3"--><p><span class="HL_2">Spotty renderings?</span></p>
+<p>In most cases, raising the <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">Samples</span></a> value (<span class="command">General</span> tab) will help.</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Rendering takes too long?","hl_4"--><p><span class="HL_2">Rendering takes too long?</span></p>
+<p>Are the <a href="VPGISETUP-GI_GROUP_GENERAL.html" target="">Samples</a>, <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DENSITY_QUALITY" target="">Records Density</a> or values too high? Is one or more of the following activated (these options improve image quality but slow rendering): <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DISTANCE_MAP_ENABLED" target="">Distance map</a> for Polygon Lights/Portals activated? <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> activated (<span class="command">Options</span> tab)?</p>
+<p>Have you activated <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_PRIMARY_METHOD" target="_self"><span class="text_id">Primary Method</span></a> and <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_SECONDARY_METHOD" target="_self"><span class="text_id">Secondary Method</span></a> <nobr><span class="text_id_cycle">Quasi-Monte Carlo (QMC)</span></nobr> modes? 2 times <span class="command_value">QMC</span> produces the best quality but is by far the slowest GI mode.</p>
+<p>Are the values for <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">Samples</span></a> or <a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_QUALITY" target="_self"><span class="text_id">Record Density</span></a> too high? Is <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_FORCE" target="_self"><span class="text_id">Force Per-Pixel</span></a> enabled for polygon lights/portals? Check your <a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">Refractive Caustics</span></a> settings.</p>
+<p>Maybe you’ve enabled the saving and loading of overly large radiosity maps (<span class="command">Cache</span> tab).</p>
+<p>Unfortunately there are innumerable more reasons for slow rendering.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

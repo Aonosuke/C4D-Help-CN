@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Ambient Occlusion: Cache</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52271"-->
+		<!--VATER_ID "32082"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "Ambient Occlusion: Cache"-->
+		<!--APPS "11 16 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="5714.html" target="_self">Effects</a></span> <span class="link_back"><a href="VPAMBIENTOCCLUSION.html" target="_self">Ambient Occlusion</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPAMBIENTOCCLUSION.html">Ambient Occlusion</a> </span><p></p><a href="VPAMBIENTOCCLUSION-ID_VIDEOPOSTPROPERTIES.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="VPAMBIENTOCCLUSION-VPAMBIENTOCCLUSION_GROUP_CACHE.html" target=""><span class="c4d_group_navi_self">Cache</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Cache</span></p><p></p>
+<p><PAGE_RELEASE_150 Faster Ambient Occlusion calculation via cache.></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General","hl_1"--><p><span class="HL_2">General</span></p>
+<p>With the introduction of Cinema 4D R15, 2 types of Ambient Occlusion calculation are available:<ul></p>
+<p><li> the usual "brut force" method, which checks the environment’s visibility for each individual pixel</li><li> the faster method via cache, which only checks certain points’ visibility and interpolates all others in-between.</li></ul><p></p>
+<p>The latter works internally in a similar fashion as the <a href="VPGISETUP-GI_GROUP_IC2.html" target="">Irradiance Cache</a> GI mode and can also be controlled using similar settings. The advantages of using this method:<ul></p>
+<p><li> the AO calculation is much faster</li><li> the cache can be cached and used again (this is very useful because AO is independent on material and lighting), i.e., if you want to render different views of a given object using AO, the previously checked regions can be re-used by loading the cache and only having the new regions calculated. However, this only works if no changes have been made to objects’ geometry, spacing between objects or anything else that can affect AO.</li></ul><p></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Ambient Occlusion and Team Render","hl_2"--><p><span class="HL_2">Ambient Occlusion and Team Render</span></p>
+<p>If Team Render should use existing AO cache files, make sure that these cache files (in the scene’s ,illum’ folder with an *.ao extension) are also uploaded and the <span class="command">Auto Load</span> option described below is enabled.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Settings","hl_3"--><p><span class="HL_2">Settings</span></p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_QUALITY" name="VPAMBIENTOCCLUSION_CACHE_QUALITY"></a> <!--INDEX "8","Record Density","VPAMBIENTOCCLUSION_CACHE_QUALITY"--><span class="c4d_id">Record Density</span></p>
+<p>Don’t let the numerous settings described below confuse you. Because AO works similar to <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target="">Irradiance Cache</a>, the settings are for the most part the same. In most cases, you will only have to adjust the <span class="command">Record Density</span> setting. This setting defines the subordinate parameters accordingly (only modify these separately if the AO is consistently wrong or if it does not appear to be precise enough).</p>
+<p>A brief statement about how the AO cache works: During rendering, several pre-calculations take place (pre-passes), during which the Project is analyzed in order to check the regions most important for the camera ("shading points" in corners, concave regions, etc.) for visibility of the environment and to calculate an AO value:</p>
+<p><div class="image_full" style="max-width:791px"><img  src="../pics/037072.jpg"  ><span class="caption">The AO shading points will be arranged on neuralgic locations and saved to the AO cache.</span></div></p>
+<p>All AO values will be cached to an AO cache and can be saved as a file for later use.</p>
+<p>In a second step, the selectively located AO values will be interpolated and smoothed.</p>
+<p>The following settings primarily serve to disperse the shading points (reminder: the <span class="command">Basic</span> tab’s settings define inter alia how many samples will be generated hemispherically at each shading point, their length and the effects’s color).</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_ENABLE" name="VPAMBIENTOCCLUSION_CACHE_ENABLE"></a> <!--INDEX "8","Enable Cache","VPAMBIENTOCCLUSION_CACHE_ENABLE"--><span class="c4d_id">Enable Cache</span></p>
+<p>If disabled, AO will work as in previous versions of Cinema 4D (&lt;R15): The environement’s visibility will be calculated for each pixel. If enabled, the AO cache described in the previous paragraph will be used.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_SAMPLES" name="VPAMBIENTOCCLUSION_CACHE_SAMPLES"></a> <!--INDEX "8","Samples","VPAMBIENTOCCLUSION_CACHE_SAMPLES"--><span class="c4d_id">Samples</span> <span class="range">[16..16384]</span></p>
+<p><div class="image_full" style="max-width:1100px"><img  src="../pics/037073.jpg"  ><span class="caption">Left: small <span class="command">Samples</span> value. Right: larger <span class="command">Samples</span> value. Model by Steen Winther.</span></div></p>
+<p>This is the number of samples that are emitted hemispherically from each shading point. If the AO looks spotty, this is the value that should be increased.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_RATE_MIN" name="VPAMBIENTOCCLUSION_CACHE_RATE_MIN"></a> <!--INDEX "8","Min Rate","VPAMBIENTOCCLUSION_CACHE_RATE_MIN"--><span class="c4d_id">Min Rate</span> <span class="range">[-8..4]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_RATE_MAX" name="VPAMBIENTOCCLUSION_CACHE_RATE_MAX"></a> <!--INDEX "8","Max Rate","VPAMBIENTOCCLUSION_CACHE_RATE_MAX"--><span class="c4d_id">Max Rate</span> <span class="range">[-8..4]</span></p>
+<p><div class="image_full" style="max-width:616px"><img  src="../pics/037074.jpg"  ><span class="caption">-8/-8 (left) and -8/+4 (right) for <span class="command">Min. Rate</span> and <span class="command">Max. Rate</span>, respectively.</span></div></p>
+<p>These two settings can, for the most part, be ignored. The effect they have is barely visible. The "worst" setting for <span class="command">Min. Rate</span> and <span class="command">Max. Rate</span> (<span class="command_value">-8</span> <i>for each</i>) differs only slightly from their "best" settings (<span class="command_value">-8</span> <i>and</i> <span class="command_value">+4</span><i>, respectively</i> (see image).</p>
+<p>Nevertheless, their function should be mentioned: While the pre-passes are being rendered (the phase in which th squares are at first large and become increasingly smaller) the dispersion of the render density is defined. This is an adaptive process that places particular emphasis on the critical regions. The difference between the <span class="command">Min. Rate</span> and the <span class="command">Max. Rate</span> defines the number of pre-passes.</p>
+<p><div class="image_full" style="max-width:3204px"><img  src="../pics/037075.jpg"  ><span class="caption"><span class="command_value">-7</span> and <span class="command_value">0</span> for <span class="command">Min. Rate</span> and <span class="command">Max. Rate</span>, respectively.</span></div></p>
+<p>A value of <span class="command_value">0</span> will result in full image resolution (pixel size 1*1) and a value of <span class="command_value">-1</span> will produce a pixel size of 2*2, <span class="command_value">-2</span> = 4*4 and so on. The <span class="command">Min. Rate</span> value should therefore be less than or equal to the <span class="command">Max. Rate</span> value. Positive values can also be used, which will allow cacheing in the sub-pixel regions (this could, for example be useful in conjunction with <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html#MATERIAL_DISPLACEMENT_SUBPOLY" target="">Subpolygon Displacement</a> if details get lost).</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_DENSITY" name="VPAMBIENTOCCLUSION_CACHE_DENSITY"></a> <!--INDEX "8","Density","VPAMBIENTOCCLUSION_CACHE_DENSITY"--><span class="c4d_id">Density</span> <span class="range">[10..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_DETAILS" name="VPAMBIENTOCCLUSION_CACHE_DETAILS"></a> <!--INDEX "8","Minimum Spacing","VPAMBIENTOCCLUSION_CACHE_DETAILS"--><span class="c4d_id">Minimum Spacing</span> <span class="range">[0..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT" name="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"></a> <!--INDEX "8","Maximum Spacing","VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"--><span class="c4d_id">Maximum Spacing</span> <span class="range">[0..1000%]</span></p>
+<p>It’s better to describe these three settings together because all three work together and, to put it simply, they define the general shading point density at critical and non-critical areas:<ul></p>
+<p><li> <span class="command">Density</span>: The general shading point density in consideration of the following to settings.</li><li> <span class="command">Minimum Spacing</span>: The shading point density at critical areas (e.g., corners).</li><li> <span class="command">Maximum Spacing</span>: The shading point density at non-critical areas (e.g., planar surfaces without elements that block the view).</li>Various values for this setting can be seen if you take a look at the GI’s <a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_DENSITY" target="_self"><span class="text_id">Density</span></a> setting. The shading point dispersion is exactly that of the AO cache dispersion.</p>
+<p></ul><p></p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_SMOOTHING" name="VPAMBIENTOCCLUSION_CACHE_SMOOTHING"></a> <!--INDEX "8","Smoothing","VPAMBIENTOCCLUSION_CACHE_SMOOTHING"--><span class="c4d_id">Smoothing</span> <span class="range">[0..1000%]</span></p>
+<p>All of the setting just described revolve around the placement of shading points and their calculation.</p>
+<p>AO was ascertained selectively at numerous locations within the Project. The selective dispersion must be turned into a flat dispersion for rendering. A smoothing algorithm does this as follows: For each pixel to be rendered on an object’s surface, the AO cache is checked for those instances nearest to that pixel and their values will be interpolated for that pixel.</p>
+<p>In brief: Values that are too low will result in spotty AO; higher values will result in more homogenous renderings (but even these iron out <a href="VPAMBIENTOCCLUSION-VPAMBIENTOCCLUSION_GROUP_CACHE.html#VPAMBIENTOCCLUSION_CACHE_SAMPLES" target="_self"><span class="text_id">Samples</span></a> that are too low). Generally speaking, higher values take into consideration more shading points for the rendered pixel.</p>
+<p>Paradoxically, extremely large values will also lead to spotty results.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_SCALE" name="VPAMBIENTOCCLUSION_CACHE_SCALE"></a> <!--INDEX "8","Screen Scale","VPAMBIENTOCCLUSION_CACHE_SCALE"--><span class="c4d_id">Screen Scale</span></p>
+<p>If disabled, the output size for rendering is irrelevant for ascertaining the shading point density. It will remain constant, regardless if you render at a resolution of 80*80 or 3000*3000. For the former it would be too large and for the latter too small.</p>
+<p>If enabled, the shading point density will be linked to the output size for rendering. This will result in a more flexible and adaptive shading point density.</p>
+<p><!--INDEX "6","Cache File","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE"--><a id="VPAMBIENTOCCLUSION_GROUP_CACHE_FILE" name="VPAMBIENTOCCLUSION_GROUP_CACHE_FILE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Cache File</span></p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_FLUSH" name="VPAMBIENTOCCLUSION_CACHE_FILE_FLUSH"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_FLUSH","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Flush Cache(s)","VPAMBIENTOCCLUSION_CACHE_FILE_FLUSH"--><span class="c4d_id">Flush Cache(s)</span></p>
+<p>Clicking on this button will delete all saved AO cache files for this Project from your cahe. This should be done for the project modifications mentioned above to avoid incorrect results. If the <span class="command">Auto Load</span> option is disabled, you don’t have to delete the cache because cache files will be ignored.</p>
+<p>At the right of the button the number of Records and the size of the cache are shown, i.e., if Cinema 4D has found an appropriate saved cache.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_LOCK" name="VPAMBIENTOCCLUSION_CACHE_FILE_LOCK"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_LOCK","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Skip Prepass (If Present)","VPAMBIENTOCCLUSION_CACHE_FILE_LOCK"--><span class="c4d_id">Skip Prepass (If Present)</span></p>
+<p>A brief statement about how the AO cache works: Assuming no previously saved cache is available when you render; the complete cache must be calculated anew. This is done in several pre-passes during which everything in the Project is analyzed, regions are defined that will receive additional attention during rendering, etc., before the actual cached information is rendered in color. This takes some time to complete. However, if a cache is already available, a lot of information still has to be checked but this step can be skipped by enabling the <span class="command">Skip Prepass (If Present)</span> option. This will speed up rendering.</p>
+<p>In case no cache exists, it will be calculated regardless of whether or not this option is enabled.</p>
+<p>If a cache already exists but the angle of view has changed in the meantime (or if you calculated the AO for very small images but subsequently want to render very large images), we suggest that you do not enable this option because incorrect calculation may otherwise occur.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_AUTOLOAD" name="VPAMBIENTOCCLUSION_CACHE_FILE_AUTOLOAD"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_AUTOLOAD","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Auto Load","VPAMBIENTOCCLUSION_CACHE_FILE_AUTOLOAD"--><span class="c4d_id">Auto Load</span></p>
+<p>If the <span class="command">Auto Save</span> option was used to save a cache file, the <span class="command">Auto Load</span> option can be enabled to load this cache. If no cache exists, a new cache will be calculated.</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_AUTOSAVE" name="VPAMBIENTOCCLUSION_CACHE_FILE_AUTOSAVE"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_AUTOSAVE","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Auto Save","VPAMBIENTOCCLUSION_CACHE_FILE_AUTOSAVE"--><span class="c4d_id">Auto Save</span></p>
+<p>If enabled, the cache file will automatically be saved. If no new save path is defined, it will be saved to an "illum" folder in your Project’s directory. The file name will have an ".ao" extension. If a cache is calculated for each frame of animation (<span class="command">Full Animation Mode</span> enabled), your files will be named "filename0000x.ao".</p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_ANIMATION" name="VPAMBIENTOCCLUSION_CACHE_FILE_ANIMATION"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_ANIMATION","VPAMBIENTOCCLUSION_GROUP_CACHE_FILE","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Full Animation Mode","VPAMBIENTOCCLUSION_CACHE_FILE_ANIMATION"--><span class="c4d_id">Full Animation Mode</span></p>
+<p>If enabled, the cache will be calculated anew for each frame of animation and saved with individualized names. If disabled, the same cache will be used for an entire animation (if <span class="command">Auto Save</span> and <span class="command">Auto Load</span> are enabled). The latter works only for animations in which nothing has been modified that affects AO (e.g., object animations)! Otherwise incorrect calculations can occur. If object positions or shapes change, the <span class="command">Full Animation Mode</span> option should be enabled.</p>
+<p>Note that when saving caches, the Full Animation Mode saves a large number of files, which can result in a lot of memory being required.</p>
+<p><!--INDEX "6","Cache File Location","VPAMBIENTOCCLUSION_GROUP_CACHE_LOCATION"--><a id="VPAMBIENTOCCLUSION_GROUP_CACHE_LOCATION" name="VPAMBIENTOCCLUSION_GROUP_CACHE_LOCATION"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Cache File Location</span></p>
+<p><a id="VPAMBIENTOCCLUSION_CACHE_FILE_PATH_ENABLED" name="VPAMBIENTOCCLUSION_CACHE_FILE_PATH_ENABLED"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_PATH_ENABLED","VPAMBIENTOCCLUSION_GROUP_CACHE_LOCATION","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Custom Location","VPAMBIENTOCCLUSION_CACHE_FILE_PATH_ENABLED"--><span class="c4d_id">Custom Location</span><br><a id="VPAMBIENTOCCLUSION_CACHE_FILE_PATH" name="VPAMBIENTOCCLUSION_CACHE_FILE_PATH"></a> <!--AM_JUMP "VPAMBIENTOCCLUSION_CACHE_FILE_PATH","VPAMBIENTOCCLUSION_GROUP_CACHE_LOCATION","VPAMBIENTOCCLUSION_GROUP_CACHE"--><!--INDEX "8","Location","VPAMBIENTOCCLUSION_CACHE_FILE_PATH"--><span class="c4d_id">Location</span></p>
+<p>Enable this option and select a path to which you want to save your cache if you want to save it to a specific location.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

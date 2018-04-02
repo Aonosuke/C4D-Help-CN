@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Lens Distortion</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54549"-->
+		<!--VATER_ID "5714"-->
+		<!--REIHENFOLGE "14"-->
+		<!--TITLE "Lens Distortion"-->
+		<!--APPS "14"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="5714.html" target="_self">Effects</a></span>
+
+<div class="in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Studio  </div>
+<!--INDEX "4","Lens Distortion",""--><p><span class="HL_atom">Lens Distortion </span><p></p><a href="VPPHLENSDISTORT-ID_VIDEOPOSTPROPERTIES.html" target="">Basic</a><!--NO_SEARCH_END--><!--INDEX "2","Lens Distortion",""--><p><span class="HL_group">Lens Distortion</span></p><p></p>
+<p><PAGE_RELEASE_170 A distortion post effect is also part of the Lens Distortion functionality.></p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/039665.jpg"  ><span class="caption">Left without, right with the Lens Distortion post effect. Note how the 3D objects (if you can make them out …) have been distorted accordingly.</span></div></p>
+<p>The Lens Distortion post effect (note that this is a real render effect despite its categorization as a post effect) is based on a lens profile that was loaded (see also <a href="TOOLLENSDISTORTION.html" target="">Lens Distortion tool</a> with regard to this). When rendered, all 3D objects will be distorted according to this lens profile, just as if the scene were filmed using a real-world camera with lens distortion.</p>
+<p>This serves to believably adapt 3D objects to distorted image material.</p>
+<p><a id="SHADER" name="SHADER"></a></p>
+<p>The following applies in conjunction with the Lens Distortion shader:</p>
+<p><div class="image_full" style="max-width:1548px"><img  src="../pics/039666.jpg"  ><span class="caption">If the Lens Distortion post effect is enabled, the Lens Distortion shader will be disabled and vice-versa.</span></div></p>
+<p>Only then will the rendered 3D objects match the image. The background object - as an only exception - will itself be ignored by the Lens Distortion post effect. It most often already has the image assigned to it, which makes an additional distortion superfluous.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note that texturing via camera projection may not work with this function because regions that lie outside of the camera projection can become visible when rendered with the Lens Distortion post effect.</div></p>
+<p><p><div class="hint"><span class="HL_hint">Tip 2:<br></span>If you want to achieve a fisheye effect, this can be done using this shader. Simply create a pseudo lens profile (<span class="command">Lens Distortion Model</span> <span class="command_value">3DE Radial Fisheye Degree 8</span> with higher <span class="command">Quartic</span> and <span class="command">Quadratic</span> values) and load it:</p>
+<p><div class="image_full" style="max-width:1362px"><img  src="../pics/039667.jpg"  ><span class="caption">Model: Steen Winther</span></div></div></p>
+<p>Of course you don’t have to only use a pseudo lens profile. If you use the Lens Distortion tool with a fisheye view in order to make the lens distortion as realistic-looking as possible you will have a fairly realistic-looking fisheye effect.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

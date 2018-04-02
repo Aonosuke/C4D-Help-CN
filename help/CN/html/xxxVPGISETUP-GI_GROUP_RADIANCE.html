@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>GI Setup: Radiosity Maps</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52458"-->
+		<!--VATER_ID "32075"-->
+		<!--REIHENFOLGE "4"-->
+		<!--TITLE "GI Setup: Radiosity Maps"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="32219.html" target="_self">Global Illumination</a></span> <span class="link_back"><a href="VPGISETUP.html" target="_self">GI Setup</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPGISETUP.html">GI Setup</a> </span><p></p><a href="VPGISETUP-GI_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">General</span></a> <a href="VPGISETUP-GI_GROUP_IC2.html" target=""><span class="c4d_group_navi">Irradiance Cache</span></a> <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target=""><span class="c4d_group_navi">Irradiance Cache (Legacy)</span></a> <a href="VPGISETUP-GI_GROUP_RADIANCE.html" target=""><span class="c4d_group_navi_self">Radiosity Maps</span></a> <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html" target=""><span class="c4d_group_navi">Light Mapping</span></a> <a href="VPGISETUP-GI_GROUP_CACHES.html" target=""><span class="c4d_group_navi">Cache Files</span></a> <a href="VPGISETUP-GI_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">Options</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Radiosity Maps</span></p><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Radiosity Maps","hl_1"--><p><span class="HL_1">Radiosity Maps</span></p>
+<p>When using the Secondary Method, Radiosity Maps are a quick and easy to use function that is particularly well-suited for preview renderings. The newer <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html" target="">Light Mapping</a> can also fast and also offer higher diffuse depth.</p>
+<p>Simply put, illumination (Cinema 4D light sources, Area lights, sky) from the angle of view of the camera on polygons is calculated internally as special textures (Radiosity Maps) during the GI calculation. These are then used during the primary GI calculation for faster rendering. This method has several advantages and disadvantages:</p>
+<p><span class="command">Advantages</span>:<ul></p>
+<p><li> GI calculation is faster</li><li> Radiosity Maps can be saved (see <a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_RADIANCE_AUTOLOAD" target="_self"><span class="text_id">Auto Load</span></a>) and re-used.</li></ul><p></p>
+<p><span class="command">Disadvantages</span>:<ul></p>
+<p><li> The actual diffuse depth (number of diffused light reflections) is <span class="command_value">1</span> (<span class="command_value">2</span> in the case of Area lights and/or skies), which darkens the rendering. This can in turn be offset by increasing the <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_GAMMA_VALUE" target="_self"><span class="text_id">Gamma</span></a> value to a certain degree.</li><li> More memory is required</li><li> When using simplified geometry (e.g., single-polygon walls without thickness), light can seep through. This can be prevented by modeling more realistically, i.e., giving walls a thickness.</li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Radiosity Maps can also be calculated when Light Maps are calculated (see <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_RADIANCE" target="_self"><span class="text_id">Build Radiosity Maps</span></a>), which circumvent the limitations regarding minimum Record Density.</div></p>
+<p>Radiosity Maps can be made visible (<a id="GI_SETUP_DATA_RADIANCE_MODE" name="GI_SETUP_DATA_RADIANCE_MODE"></a> <!--INDEX "8","Mode","GI_SETUP_DATA_RADIANCE_MODE"--><span class="c4d_id">Mode</span> <nobr><span class="text_id_cycle">Visualize Shading</span></nobr>).</p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/036168.jpg"  ><span class="caption">At left a Radiosity Map of poor quality, at right of better quality (made visible using <span class="command_value">Visualize Shading</span> mode). Project setup: A blue Spot light shines from the top left and a white GI Area light from the right.</span></div></p>
+<p>Radiosity Maps should have a light dispersion that is as homogenous as possible - as shown on the right of the image above.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Render Example, QMC+RM Method","hl_2"--><p><span class="HL_2">Render Example, QMC+RM Method</span></p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/036169.jpg"  ><span class="caption">Render times and conditions differ according to the Project.</span></div></p>
+<p>In the example above, the render time was greatly reduced while achieving a similar result. The use of Radiosity Maps darkens (reduces diffuse depth) the corners and shadows somewhat.</p>
+<p>Radiosity Maps are supplemented during rendering, which means that when the camera views previously unseen regions, the Radiosity Maps will be updated and supplemented directly.</p>
+<p><a id="GI_SETUP_DATA_RADIANCE_SCALE" name="GI_SETUP_DATA_RADIANCE_SCALE"></a> <!--INDEX "8","Map Density","GI_SETUP_DATA_RADIANCE_SCALE"--><span class="c4d_id">Map Density</span> <span class="range">[10..1000%]</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/036170.jpg"  ><span class="caption">Increasing <span class="command">Map Density</span> values from left to right, here with intentionally poor Sampling settings so the Texels are more visible (made visible using the <span class="command_value">Visualize Shading</span> mode).</span></div></p>
+<p>Use this setting to define the Radiosity Map resolution. The higher the value, the smaller the Texels will be (the small squares for which a uniform color/brightness is ascertained) and the higher the quality of the Radiosity Map will be (with correspondingly longer render times and increased memory requirements).</p>
+<p>You can make Texels visible without complicated calculations by setting <a href="VPGISETUP-GI_GROUP_RADIANCE.html#GI_SETUP_DATA_RADIANCE_MODE" target="_self"><span class="text_id">Mode</span></a> <nobr><span class="text_id_cycle">Visualize Texels</span></nobr> and rendering the Project.</p>
+<p><div class="image_full" style="max-width:165px"><img  src="../pics/036171.jpg"  ><span class="caption"></span></div></p>
+<p> </p>
+<p>If the Texels are too large and light seeps through, as in the example above (they reach into regions that are actually covered by shadows), reducing the size of the Texels can help alleviate this problem.</p>
+<p><a id="GI_SETUP_DATA_RADIANCE_SAMPLES" name="GI_SETUP_DATA_RADIANCE_SAMPLES"></a> <!--INDEX "8","Sampling Subdivisions","GI_SETUP_DATA_RADIANCE_SAMPLES"--><span class="c4d_id">Sampling Subdivisions</span> <span class="range">[1..16]</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/036172.jpg"  ><span class="caption">At left a smaller <span class="command">Sampling Subdivisions</span> value, at right a larger value (made visible using the <span class="command_value">Visualize Shading</span> mode).</span></div></p>
+<p>This setting can be seen as a type of antialiasing for Texels (analog to pixels). A value of <span class="command_value">2</span> will divide a square Texel into quarters and a color will be calculated for each quarter and averaged for that Texel. A value of <span class="command_value">3</span> will divide the Texel into 9 equal parts and so on. Higher values will result in better quality and correspondingly longer render times and greater memory usage.</p>
+<p><a id="GI_SETUP_DATA_RADIANCE_MODE" name="GI_SETUP_DATA_RADIANCE_MODE"></a> <!--INDEX "8","Mode","GI_SETUP_DATA_RADIANCE_MODE"--><span class="c4d_id">Mode</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/036173.jpg"  ><span class="caption">Left: <span class="command_value">Texel</span> mode; right: <span class="command_value">Shading</span> mode (made visible using <span class="command_value">Visualize Shading</span>).</span></div></p>
+<p><a id="GI_SETUP_RADIANCE_MODE_NORMAL" name="GI_SETUP_RADIANCE_MODE_NORMAL"></a><!--INDEX "10","Normal","GI_SETUP_RADIANCE_MODE_NORMAL"--><span class="c4d_id_cycle">Normal</span></p>
+<p>This is the normal render mode in which no Texels will be shown. This mode should be used for final renderings.</p>
+<p><a id="GI_SETUP_RADIANCE_MODE_POINTS" name="GI_SETUP_RADIANCE_MODE_POINTS"></a><!--INDEX "10","Visualize Texels","GI_SETUP_RADIANCE_MODE_POINTS"--><span class="c4d_id_cycle">Visualize Texels</span></p>
+<p>Displays the Texels in a grayscale pattern, independent of any illumination (see left half of above image).</p>
+<p><a id="GI_SETUP_RADIANCE_MODE_SHADED" name="GI_SETUP_RADIANCE_MODE_SHADED"></a><!--INDEX "10","Visualize Shading","GI_SETUP_RADIANCE_MODE_SHADED"--><span class="c4d_id_cycle">Visualize Shading</span></p>
+<p>This mode is the most comprehensive because it simultaneously shows the Texel dispersion and shaded Texels (in consideration of light, color and shadows, etc. (See right half of above image)).</p>
+<p><a id="GI_SETUP_RADIANCE_MODE_SHADED_FRONT" name="GI_SETUP_RADIANCE_MODE_SHADED_FRONT"></a><!--INDEX "10","Visualize Shading (Front)","GI_SETUP_RADIANCE_MODE_SHADED_FRONT"--><span class="c4d_id_cycle">Visualize Shading (Front)</span><br><a id="GI_SETUP_RADIANCE_MODE_SHADED_BACK" name="GI_SETUP_RADIANCE_MODE_SHADED_BACK"></a><!--INDEX "10","Visualize Shading (Back)","GI_SETUP_RADIANCE_MODE_SHADED_BACK"--><span class="c4d_id_cycle">Visualize Shading (Back)</span></p>
+<p>Use these settings to display the shading on the front or back sides of polygons.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Radiosity Sampling Settings","hl_3"--><p><span class="HL_1">Radiosity Sampling Settings</span></p>
+<p><div class="image_full" style="max-width:2000px"><img  src="../pics/036174.jpg"  ><span class="caption">Various combinations of <span class="command">Area Sampling</span> and <span class="command">Sky Sampling</span> (made visible using <span class="command_value">Visualize Shading</span>).</span></div></p>
+<p><a id="GI_SETUP_DATA_RADIANCE_AREA_ENABLE" name="GI_SETUP_DATA_RADIANCE_AREA_ENABLE"></a> <!--INDEX "8","Area Sampling","GI_SETUP_DATA_RADIANCE_AREA_ENABLE"--><span class="c4d_id">Area Sampling</span><br><a id="GI_SETUP_DATA_RADIANCE_AREA_SAMPLES" name="GI_SETUP_DATA_RADIANCE_AREA_SAMPLES"></a> <!--INDEX "8","Sample Count","GI_SETUP_DATA_RADIANCE_AREA_SAMPLES"--><span class="c4d_id">Sample Count</span> <span class="range">[1..4096]</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/036175.jpg"  ><span class="caption"><span class="command">Sample Count</span> from bottom to top: <span class="command_value">10</span>, <span class="command_value">100</span>, <span class="command_value">1000</span>.</span></div></p>
+<p>If this option is enabled, GI Area lights will also be included in the calculation of Radiosity Maps (and only for these!) and samples added (defined by the <span class="command">Sample Count</span> setting). This option should always be enabled.</p>
+<p><a id="GI_SETUP_DATA_RADIANCE_SKY_ENABLE" name="GI_SETUP_DATA_RADIANCE_SKY_ENABLE"></a> <!--INDEX "8","Sky Sampling","GI_SETUP_DATA_RADIANCE_SKY_ENABLE"--><span class="c4d_id">Sky Sampling</span><br><a id="GI_SETUP_DATA_RADIANCE_SKY_SAMPLES" name="GI_SETUP_DATA_RADIANCE_SKY_SAMPLES"></a> <!--INDEX "8","Sample Count","GI_SETUP_DATA_RADIANCE_SKY_SAMPLES"--><span class="c4d_id">Sample Count</span> <span class="range">[1..4096]</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/036176.jpg"  ><span class="caption"><span class="command">Sample Count</span> from bottom to top: <span class="command_value">10</span>, <span class="command_value">100</span>, <span class="command_value">1000</span>.</span></div></p>
+<p>If this option is enabled, the sky will also be included in the calculation of Radiosity Maps (<a href="OSKY.html" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_5105.png" alt="" height="12" width="12"    border="0"><span class="text_command">Sky</span></nobr></a> and <a href="5798.html#PLUGIN_CMD_1011145" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_1011145.png" alt="" height="12" width="12"    border="0"><span class="text_command">Physical Sky</span></nobr></a>) and samples added (defined by the <span class="command">Sample Count</span> setting). This option should always be enabled.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

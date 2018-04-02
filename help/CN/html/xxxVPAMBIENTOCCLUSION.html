@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Ambient Occlusion</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32082"-->
+		<!--VATER_ID "5714"-->
+		<!--REIHENFOLGE "5"-->
+		<!--TITLE "Ambient Occlusion"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="5714.html" target="_self">Effects</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--INDEX "4","Ambient Occlusion",""--><p><span class="HL_atom">Ambient Occlusion </span><p></p><a href="VPAMBIENTOCCLUSION-ID_VIDEOPOSTPROPERTIES.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="VPAMBIENTOCCLUSION-VPAMBIENTOCCLUSION_GROUP_CACHE.html" target=""><span class="c4d_group_navi">Cache</span></a><!--NO_SEARCH_END--><!--INDEX "2","Ambient Occlusion",""--><p><span class="HL_group">Ambient Occlusion</span></p><p></p>
+<p><div class="image_full" style="max-width:1620px"><img  src="../pics/037068.jpg"  ><span class="caption">Left rendered without, center with Ambient Occlusion. Only light sources are 2 lights with hard shadows.</span></div></p>
+<p>Ambient Occlusion (AO) determines the degree to which each visible surface point is exposed and darkens it accordingly. Imagine a scene without a floor that is evenly lit by the sky surrounding it. For each visible area, AO will determine the degree to which it <span class="command_value">sees</span> the sky (more precisely: the degree to which each visible point within a hemisphere (with adjustable radius) has an unobstructed view of the sky).</p>
+<p>Corner areas, holes, ridges, etc. (or objects lying close to one another) will <span class="command_value">see</span> less sky and will be darker by default:</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/037067.jpg"  ><span class="caption">The less sky an area sees, the darker it will be.</span></div></p>
+<p>AO is conveniently used as a simplified Global Illumination method to quickly create shadowed areas at corresponding locations.</p>
+<p>AO can be defined at 2 locations within Cinema 4D:</p>
+<p><ul></p>
+<p><li> In the Render Settings menu (<span class="command">Effect</span> button) for the entire Project. AO can also be output as a Multi-Pass channel.</li><li> As a Channel shader (material settings: Texture) in the Effect menu. The shader should be used in the Diffuse channel. Other material channels are also suited for special effects (e.g., for applying dirt textures in corners).</li></ul><p></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

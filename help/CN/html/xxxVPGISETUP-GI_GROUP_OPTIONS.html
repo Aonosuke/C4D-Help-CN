@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>GI Setup: Options</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52460"-->
+		<!--VATER_ID "32075"-->
+		<!--REIHENFOLGE "7"-->
+		<!--TITLE "GI Setup: Options"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="32219.html" target="_self">Global Illumination</a></span> <span class="link_back"><a href="VPGISETUP.html" target="_self">GI Setup</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPGISETUP.html">GI Setup</a> </span><p></p><a href="VPGISETUP-GI_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">General</span></a> <a href="VPGISETUP-GI_GROUP_IC2.html" target=""><span class="c4d_group_navi">Irradiance Cache</span></a> <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target=""><span class="c4d_group_navi">Irradiance Cache (Legacy)</span></a> <a href="VPGISETUP-GI_GROUP_RADIANCE.html" target=""><span class="c4d_group_navi">Radiosity Maps</span></a> <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html" target=""><span class="c4d_group_navi">Light Mapping</span></a> <a href="VPGISETUP-GI_GROUP_CACHES.html" target=""><span class="c4d_group_navi">Cache Files</span></a> <a href="VPGISETUP-GI_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi_self">Options</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Options</span></p><p></p>
+<p><PAGE_RELEASE_110></p>
+<p><a id="GI_SETUP_DATA_EXTRA_DEBUG_LEVEL" name="GI_SETUP_DATA_EXTRA_DEBUG_LEVEL"></a> <!--INDEX "8","Debug Information Level","GI_SETUP_DATA_EXTRA_DEBUG_LEVEL"--><span class="c4d_id">Debug Information Level</span></p>
+<p>This menu lets you determine if a ".GIInfo000" file, that can be opened in a text editor, should be saved at the same location at which the scene file is saved. This file contains information regarding render time and required memory, which is of less importance to you but can be very helpful if you need to contact our support team.</p>
+<p><a id="GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF" name="GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF"></a> <!--INDEX "8","Glass/Mirror Optimization","GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF"--><span class="c4d_id">Glass/Mirror Optimization</span> <span class="range">[50..100%]</span></p>
+<p>Due its transparent nature, the effect GI has on glass is barely visible and can therefore unnecessarily take up render capacity. This can be abated using the <span class="command">Glass/Mirror Optimization</span> parameter. GI will ignore all materials with a transparency or reflection greater than the value defined in this parameter. For example, a lot of render time can be saved when visualizing a structure containing numerous large glass surfaces.</p>
+<p>This parameter has no effect on Caustics!</p>
+<p>Materials with a <span class="command">Brightness</span> value (in the <span class="command">Transparency</span> or <span class="command">Reflectance</span> channels) greater than the value defined in this parameter will not be illuminated by GI. This may result in somewhat darker (but faster) renderings.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>In order for this parameter to work, the material channel "Color" must be disabled and no texture should be present in the Transparency channel.</p>
+<p>To be exact: The value defined in this parameter is compared to the product of the transparency brightness and color.</div></p>
+<p><a id="CAUSTICS" name="CAUSTICS"></a></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","GI Caustics","hl_1"--><p><span class="HL_1">GI Caustics</span></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","What are Caustics?","hl_2"--><p><span class="HL_2">What are Caustics?</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/020169.jpg"  ><span class="caption">Note the marked refracted GI Caustics.</span></div> </p>
+<p>In the real world, caustics occur everywhere where light is clustered or reflected by refraction (see image above) or mirroring (e.g., on a metal ring).</p>
+<p>There are two types of caustics in Cinema 4D:<ul></p>
+<p><li> Photon caustics in earlier versions of Cinema 4D: Faster than GI Caustics but must be generated using individual light sources.</li><li> Irradiance Cache GI Caustics: In conjunction with <span class="command">Primary Method</span> <span class="command_value">IR</span> not very precise but affect all luminous surfaces within a scene (a small but render-intensive tip: Assign a Compositing tag to the object receiving caustics and activate the tag’s <a href="TCOMPOSITING-COMPOSITINGTAG_GROUPGI.html#COMPOSITINGTAG_GIQMC" target="">Enable Forced QMC Sampling</a> option).</li></ul><p></p>
+<p>To generate caustics in previous versions of Cinema 4D (see also <a href="VPCAUSTICS.html" target="">here</a>) it was necessary to create light source objects from which photons were beamed throughout the scene. GI Caustics on the other hand uses any light source it can get its hands on (exception: Only the reflected light of regular Cinema 4D light sources, can be included; use <a href="32221.html" target="">Polygon Lights</a> instead).</p>
+<p>GI Caustics require bright light (e.g., HDRI images with very bright regions or Polygon Lights) to come to fruition. Otherwise you can increase the strength of the <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target="">Generate GI</a> parameter in the glass material’s "Illumination" channel.</p>
+<p><a id="GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" name="GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS"></a> <!--INDEX "8","Refractive Caustics","GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS"--><span class="c4d_id">Refractive Caustics</span><br><a id="GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" name="GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS"></a> <!--INDEX "8","Reflective Caustics","GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS"--><span class="c4d_id">Reflective Caustics</span></p>
+<p>individually enables or disables Refractive and Reflective Caustics.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip regarding reflected GI Caustics:<br></span>Reflected GI Caustics always require an active <span class="command">Reflection</span> material channel.  Otherwise you can achieve the best quality caustics if <span class="command">GI Mode</span> is set to <span class="command_value">QMC</span>.</div></p>
+<p><a id="GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY" name="GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY"></a> <!--INDEX "8","Diffuse Illumination Only","GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY"--><span class="c4d_id">Diffuse Illumination Only</span></p>
+<p><div class="image_full" style="max-width:682px"><img  src="../pics/020168.jpg"  ><span class="caption">At top: normal rendering. Bottom: Rendering with active <span class="command">Diffuse Illumination Only</span> option (the sun is a real light source which means that its effects will be rendered following the first reflection).</span></div></p>
+<p>Activating this option deactivates textures, reflections, light from surfaces illuminated directly by light sources, etc. All bothersome elements will be deactivated and only the brightness dispersion calculated by GI will be rendered. This is also lets you judge the quality of the GI.</p>
+<p>This option should, however, definitely be deactivated for the final rendering.</p>
+<p><a id="GI_SETUP_DATA_EXTRA_HIDE_pre-pass" name="GI_SETUP_DATA_EXTRA_HIDE_pre-pass"></a> </p>
+<p>Normally the various pre-passes will be shown in the Viewport or Picture Viewer during rendering (for the simple reason of seeing that something is actually happening during the rendering process). This requires additional render time that can be saved, especially when rendering animations, by activating this option.</p>
+<p><RELEASE_150 The Irradiance Cache’s shading points’ display can be disabled.></p>
+<p><a id="GI_SETUP_DATA_EXTRA_SHOW_SAMPLES" name="GI_SETUP_DATA_EXTRA_SHOW_SAMPLES"></a> <!--INDEX "8","Show Samples","GI_SETUP_DATA_EXTRA_SHOW_SAMPLES"--><span class="c4d_id">Show Samples</span></p>
+<p>Shading points are displayed during the prepass phase for Irradiance Cache calculations. Sometimes these can be irritating when trying to assess the prepasses. To avoid this, disable the shading points’ display. The render time will be reduced slightly and the final render result will not be affected.</p>
+<p></RELEASE_150></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Variable Path and File Names ("Tokens")</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54506"-->
+		<!--VATER_ID "49620"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "Variable Path and File Names ("Tokens")"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">Render Menu</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">Edit Render Settings</a></span> <span class="link_back"><a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target="_self">Save</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Variable Path and File Names ("Tokens")",""--><p><span class="HL_group">Variable Path and File Names ("Tokens")</span></p><p></p>
+<p><PAGE_RELEASE_170 Variable path and file names (Tokens) can be used to name rendered files according to specific criteria and save them to specific paths.></p>
+<p>With the introduction of Cinema 4D R17, variable path and file names (Tokens) can be used in the following locations when saving renderings:<ul></p>
+<p><li> In the Render Settings’ <span class="command">Save</span> tab’s <span class="command">File</span> input fields for either normal or multi-pass images.</li><li> In the <span class="command">-oimage</span> and <span class="command">-omultipass</span> commands’ command lines.</li></ul><p></p>
+<p>What is a Token used for? Tokens are simple text variables used in path and file names. When rendered or displayed in the Picture Viewer they will be replaced by project attributes such as project name, camera currently being used, which take, etc.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Example","hl_1"--><p><span class="HL_1">Example</span></p>
+<p>The following example should shed some light on how this works:</p>
+<p><div class="image_full" style="max-width:1136px"><img  src="../pics/039583.jpg"  ><span class="caption"></span></div></p>
+<p>Note the file path in the above image: <span class="command_value">Results/$take/$rs</span>. The variables <span class="command_value">$take</span> and <span class="command_value">$rs</span> (a list with all available Tokens can be found below) are Tokens. A file path’s last Token (here $rs for the render setting name) is always the file name and preceding Tokens (in this example $take for the take name) represent directory names. These do not have to be pre-existing directories! Cinema 4D will create them if they do not already exist.</p>
+<p>On the right side of the above image, 12 takes are marked in the <span class="command">Attribute Manager</span> window that have various names and different render settings (which are marked on the left (<span class="command_value">Small Resolution</span>, <span class="command_value">Normal Resolution</span> and <span class="command_value">Large Resolution</span>). If all 12 takes are rendered, each directory name ($take) would be replaced by the take name (e.g., <span class="command_value">Analog</span>) and the rendered image saved at that location. The image’s file name ($rs) will also be replaced by the name of the respective render setting.</p>
+<p><a id="TOKEN" name="TOKEN"></a></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Tokens","hl_2"--><p><span class="HL_1">Tokens</span></p>
+<p>The following Tokens can be used:<ul></p>
+<p><li> <span class="command">$prj</span>: Project file name</li><li> <span class="command">$camera</span>: Current camera name</li><li> <span class="command">$take</span>: Current take name</li><li> <span class="command">$pass</span>: Multi-Pass or object channel name (the defined multi-pass names). Primarily to be used as directory name.</li><li> <span class="command">$userpass</span>: Multi-Pass or object channel name (the multi-passes renamed via double-click in the Render Settings (opened Multi-Pass tree view). Primarily to be used as a directory name.</li><li> <span class="command">$frame</span>: Current animation frame</li><li> <span class="command">$rs</span>: Current Render Setting name</li><li> <span class="command">$res</span>: Image resolution (e.g., 800*600: <span class="command_value">800X600</span>)</li><li> <span class="command">$range</span>: Animation range (e.g., from frame 23 to 76; <span class="command_value">23_76</span>)</li><li> <span class="command">$fps</span>: Frame rate</li></ul><p></p>
+<p>Object channel refers to the Compositing tag’s <a href="TCOMPOSITING-COMPOSITINGTAG_GROUPOBJBUFFER.html" target="">Object Channels</a> that are used to render Alpha channels of specific objects as separate Multi-Passes.</p>
+<p>These Tokens, which can also be used in combination with any series of characters (e.g., <span class="command_value">Camera_$cameraXY1</span>), can be used to create complex directory structures. Especially in combination with the Take function (see <a href="54507.html" target="">Take Manager</a>), which makes various project states at the point of rendering available, ,procedural’ file and path names can be generated, which, for example, generate directories named in accordance with the file name. Subsequent re-rendering will not overwrite existing paths/files, which is a handy feature when working with complex projects (of course the Token system also works with multi-passes).</p>
+<p>Note that multi-pass file names already contain their own names, which causes numerous seemingly superfluous Tokens such as <span class="command">$pass</span> or <span class="command">$userpass</span> to appear. However, these can also be used to name directories.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
