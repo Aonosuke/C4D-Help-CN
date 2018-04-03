@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>可变路径和文件名（“标记”）</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54506"-->
+		<!--VATER_ID "49620"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "可变路径和文件名（“标记”）"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target="_self">保存</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","可变路径和文件名（“标记”）",""--><p><span class="HL_group">可变路径和文件名（“标记”）</span></p><p></p>
+<p><PAGE_RELEASE_170 Variable path and file names (Tokens) can be used to name rendered files according to specific criteria and save them to specific paths.></p>
+<p>从 CINEMA R17 开始, 在保存渲染时可变路径和文件名（标记）可以在以下地方使用：<ul></p>
+<p><li> 在渲染设置<span class="command">保存</span>标签页的<span class="command">文件</span>输入框中，普通和多通道图像可用。</li>
+<li> 在 <span class="command">-oimage</span> 和 <span class="command">-omultipass</span> 命令的命令行中。</li></ul><p></p>
+<p>标记的作用是什么？它是用在路径和文件名中的可变文本。当渲染或在图片查看器中显示时，它们会用如工程名称、当前摄像机、场次等工程属性替换路径和文件名。</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","示例","hl_1"--><p><span class="HL_1">示例</span></p>
+<p>下面的案例对理解如何使用标记有所帮助：</p>
+<p><div class="image_full" style="max-width:1136px"><img  src="../pics/039583.jpg"  ><span class="caption"></span></div></p>
+<p>注意上图中的文件路径：<span class="command_value">Results/$take/$rs</span>。可变的 <span class="command_value">$take</span> 和 <span class="command_value">$rs</span> 就是标记（可以在下面找到全部可用的标记列表）。一个文件路径最后的标记（这里是表示渲染设置名称的 $rs）总是文件名，之前的标记（在这个示例中是表示场次名称的 $take）则表示目录名称。这不需要现存的目录，如果不存在则 CINEMA 4D 会创建它们。</p>
+<p>在上图的右边，<span class="command">属性管理器</span>窗口中标记了 12 个场次，它们有不同的名称和渲染设置（标记在左边：<span class="command_value">Small Resolution</span>、<span class="command_value">Normal Resolution</span> 和 <span class="command_value">Large Resolution</span>）。如果渲染了全部 12 个场次，每个目录名称（$take）会被场次名称替换（如 <span class="command_value">Analog</span>），而渲染的图像会保存在这些地方。图像的文件名（$rs）也会被相应地渲染设置名称所替代。</p>
+<p><a id="TOKEN" name="TOKEN"></a></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","标记","hl_2"--><p><span class="HL_1">标记</span></p>
+<p>可用的标记如下：<ul></p>
+<p><li> <span class="command">$prj</span>：工程文件名称</li>
+<li> <span class="command">$camera</span>：当前摄像机名称</li>
+<li> <span class="command">$take</span>：当前场次名称</li>
+<li> <span class="command">$pass</span>：多通道或对象通道名称（定义的多通道名称）。主要用作目录名称。</li>
+<li> <span class="command">$userpass</span>：多通道或对象通道名称（打开多通道树形图，通过在渲染设置中双击重命名多通道）。主要用作目录名称。</li>
+<li> <span class="command">$frame</span>：当前动画帧</li>
+<li> <span class="command">$rs</span>：当前渲染设置名称</li>
+<li> <span class="command">$res</span>：图像分辨率（如 800*600：<span class="command_value">800×600</span>）</li>
+<li> <span class="command">$range</span>：动画范围（如从 23 帧到 76 帧：<span class="command_value">23_76</span>）</li>
+<li> <span class="command">$fps</span>：帧率</li></ul><p></p>
+<p>对象通道是指合成标签的<a href="TCOMPOSITING-COMPOSITINGTAG_GROUPOBJBUFFER.html" target="">对象通道</a>，它用来渲染特殊对象的 Alpha 通道为单独的多通道。</p>
+<p>这些标记也可以与任意字符串（如 <span class="command_value">Camera_$cameraXY1</span>）组合使用，来创建复杂的目录结构。尤其是与场次功能一起使用（参见<a href="54507.html" target="">场次管理器</a>），它让在渲染中的各种工程状态下可以生成“程序”文件和路径名称，如根据文件名生成目录名称。之后重新渲染不会覆盖现有的路径/文件，这在复杂工程中十分方便（当然场次系统也能与多通道一起使用）。</p>
+<p>注意，多通道文件名称已经包含了其自身的名称，这会显示很多看起来多余的标记，如<span class="command">$pass</span> 或 <span class="command">$userpass</span>，但是，它们也可以用来命名目录。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
