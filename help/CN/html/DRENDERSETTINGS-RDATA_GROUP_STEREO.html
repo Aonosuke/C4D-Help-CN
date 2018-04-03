@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>编辑渲染设置：立体</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "44660"-->
+		<!--VATER_ID "32048"-->
+		<!--REIHENFOLGE "9"-->
+		<!--TITLE "编辑渲染设置：立体"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi_self">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>立体</span></p><p></p>
+<p><PAGE_RELEASE_130 Stereoscopic render settings.></p>
+<p><div class="image_full" style="max-width:1012px"><img  src="../pics/031358.jpg"  ><span class="caption">如果透过 3D 立体眼镜（红-青）观看这副图像，你会感觉它几乎是在伸向你。</span></div></p>
+<p>多年来，在图象、电影和视频的 3D 显示方面已有数种尝试。最近——主要是因为大量 3D 电影的出现——一个新的 3D 繁荣期已经到来。在这些原因之中，主要是由于技术进步使 3D 图像和电影的颜色变得真实，同时消除了对人眼的疲劳感。大部分技术的共同点是它们基本记录了同一个场景的两幅图像，它们之间有轻微的透视偏移（即左右“眼”各自的图像）。这两幅图像在显示时，必须让左眼只接受到左图像，而右眼只接受到右图像（通过使用特制的眼镜来实现）。剩下的工作或多或少是自动的：大脑将这两个图像合并为一个图像。</p>
+<p>当然，这也是 CINEMA 4D 擅长的。在场景中放置任意数量的摄像机来从所有可能角度进行渲染，我们已经让实现这一点变得容易。</p>
+<p><div class="image_full" style="max-width:1588px"><img  src="../pics/031359.jpg"  ><span class="caption">两幅不同透视的图像被合并来创造一副立体的图像。</span></div></p>
+<p>CINEMA 4D 使用了以下技术：</p>
+<p><span class="command">立体 (Anaglyph)</span>（渲染和视窗）：这是最广为人知的方式，从50年代起就被用在电影院中。一副图像的颜色信息通过两色眼镜（以前是红-绿、现在主要是红-青）进行分离。优点：简单、眼镜便宜。缺点：颜色范围很大程度上受限。</p>
+<p><span class="command">快门</span>（仅视窗）：质量最高的方式，通过使用与显示器同步的特殊眼镜，使画面轮流在左右眼显示。优点：最好的质量、真彩色再生。缺点：昂贵（特殊硬件、显示器必须达到120Hz）。</p>
+<p><span class="command">交错</span>（渲染和视窗）：这种方式需要一个带有偏振滤镜的显示器和带有偏振镜片的眼镜。因为两幅图像被编码到单张图像中（例如，左眼为偶数线、右眼为奇数线），分辨率会减半。优点：眼镜便宜、良好的色彩再生。缺点：需要特殊显示器、分辨率降低。</p>
+<p><span class="command">Side-by-Side</span>（渲染和视窗）：左右眼画面被切换并压缩为一个普通的画面尺寸。一些电视机使用这项技术来实现高清 3D，因为放送带宽与高清带宽相同。终端设备必须能够解码这种双重图像并依次显示它们（通常与快门眼镜一起使用）。缺点：分辨率降低、技术昂贵（需要特殊硬件）。</p>
+<p><span class="command">自动立体</span>：对于自动立体技术，在<a href="OCAMERA-ID_GROUP_STEREO.html#CAMERAOBJECT_STEREO_EYESEPARATION" target="_self"><span class="text_id">双眼分离</span></a>数值范围内的任意数量视图都可以为左右眼进行渲染（自动渲染的<span class="command">通道</span>设置可以在<span class="command">渲染设置</span>的<span class="command">立体</span>菜单中找到）。</p>
+<p>在 CINEMA 4D 中，一个场景可以立体地显示在视窗中（对此需要 3D 立体眼镜和特殊硬件，包括快门眼镜）或者渲染为立体格式。</p>
+<p>CINEMA 4D 中的立体效果可以按如下步骤进行创建：</p>
+<p><ol><br><li> 渲染立体场景所需要的参数可以在<span class="command">立体摄像机</span>的<a href="OCAMERA-ID_GROUP_STEREO.html" target="">立体</a>标签中找到。当然，对于给定的视图，这个摄像机必须是被选中的。<br>
+<li> 如果想要立体地显示场景，对给定的视图必须在视窗的<span class="command">选项</span>菜单中启用<a href="45030.html#PLUGIN_CMD_17863" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_17863.png" alt="" height="12" width="12"    border="0"><span class="text_command">立体</span></nobr></a>。更多的设置可以在视窗<span class="command">配置视图</span>设置中的<span class="command">立体</span>标签中找到。<br>
+<li> 如果想要渲染立体效果，可以在渲染设置的<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target="">立体</a>菜单中找到可用的选项，并在这里设置双重图像如何被编码和渲染。<br>
+<li> 在图片查看器的<a href="5878.html#stereo" target="">立体</a>标签中，你可以找到一个选择菜单，用它可以设定在图片查看器中显示什么内容（例如，立体图像或仅左眼图像）。你也可以在这里交互地调整两个摄像机视图为单个立体图像。<br></ol><p></p>
+<p>不能在视窗中渲染立体图像。</p>
+<p><a id="RDATA_STEREO_CALCRESULT" name="RDATA_STEREO_CALCRESULT"></a> <!--INDEX "8","计算立体图像","RDATA_STEREO_CALCRESULT"--><span class="c4d_id">计算立体图像</span></p>
+<p>你可以在这里设定立体图像如何被渲染（以及显示在图片查看器中）和保存（这个是在渲染设置的<span class="command">保存</span>菜单中定义的）。</p>
+<p><div class="image_full" style="max-width:1699px"><img  src="../pics/031375.jpg"  ><span class="caption">左图是 2 通道的立体设置；右图是 5 通道的立体设置。</span></div></p>
+<p>与使用 2 通道的立体技术相比，多通道技术让你可以渲染多个摄像机视图，它们可以作为通道（或流）被外部程序编辑，然后自动立体播放设备就可以使用两个匹配的通道来观看这些图像（可以根据观看角度来更改）。</p>
+<p><a id="RDATA_STEREO_CALCRESULT_S" name="RDATA_STEREO_CALCRESULT_S"></a><!--INDEX "10","独立通道","RDATA_STEREO_CALCRESULT_S"--><span class="c4d_id_cycle">独立通道</span></p>
+<p>根据设定的通道数量，可以渲染数个摄像机视图。通道 1 可以一直作为左眼视野，而通道 X 可以一直作为右眼视野。如果<span class="command">通道</span>设置大于 <span class="command_value">2</span>，那么会在这些视图之间渲染额外的视图。如果想要之后在图片查看器中查看或使用外部程序，可以选择这个模式。</p>
+<p><a id="RDATA_STEREO_CALCRESULT_R" name="RDATA_STEREO_CALCRESULT_R"></a><!--INDEX "10","合并立体图像","RDATA_STEREO_CALCRESULT_R"--><span class="c4d_id_cycle">合并立体图像</span></p>
+<p>会仅使用左右眼视图（没有其他通道）来渲染立体图像。这是正常渲染所使用的模式。</p>
+<p><a id="RDATA_STEREO_CALCRESULT_SR" name="RDATA_STEREO_CALCRESULT_SR"></a><!--INDEX "10","独立通道与合并图像","RDATA_STEREO_CALCRESULT_SR"--><span class="c4d_id_cycle">独立通道与合并图像</span></p>
+<p>在左右眼视图（或任意数量的额外中间摄像机视图）之外，会创建一个由这些视图合并而成的立体图像。</p>
+<p><a id="RDATA_STEREO_CALCRESULT_SINGLE" name="RDATA_STEREO_CALCRESULT_SINGLE"></a><!--INDEX "10","单一通道","RDATA_STEREO_CALCRESULT_SINGLE"--><span class="c4d_id_cycle">单一通道</span></p>
+<p>只有在<span class="command">单一通道</span>中定义的通道会被计算。如果你只想渲染一个单摄像机视图，推荐使用这个模式。</p>
+<p><a id="RDATA_STEREO_SINGLECHANNEL" name="RDATA_STEREO_SINGLECHANNEL"></a> <!--INDEX "8","单一通道","RDATA_STEREO_SINGLECHANNEL"--><span class="c4d_id">单一通道</span> <span class="range">[1..2147483647]</span></p>
+<p>如果选择了这个选项，你可以定义哪个通道会被渲染。<span class="command_value">1</span> 表示渲染左眼视图，而<span class="command">通道</span>中定义的数值表示右眼视图。这两个数值之间（包括这两个）的值表示中间摄像机视图，具体描述参见<a href="OCAMERA-ID_GROUP_STEREO.html#CAMERAOBJECT_STEREO_PLACEMENT" target="_self"><span class="text_id">置换</span></a>。</p>
+<p><a id="RDATA_STEREO_CALCULATE_ORIGINAL" name="RDATA_STEREO_CALCULATE_ORIGINAL"></a> <!--INDEX "8","非立体图像","RDATA_STEREO_CALCULATE_ORIGINAL"--><span class="c4d_id">非立体图像</span></p>
+<p>如果需要在立体（或自动立体）视图之外计算正常的摄像机视图（即在摄像机的<span class="command">坐标</span>标签中设定的视图），可以启用这个选项。</p>
+<p><a id="RDATA_STEREO_SAVE_FOLDER" name="RDATA_STEREO_SAVE_FOLDER"></a> <!--INDEX "8","使用文件夹保存","RDATA_STEREO_SAVE_FOLDER"--><span class="c4d_id">使用文件夹保存</span></p>
+<p>若启用，单独的通道和立体图像会分别保存到其各自的文件夹，这个文件夹位于渲染设置<span class="command">保存</span>标签中设定的目录中。路径名称会添加到文件名中。</p>
+<p>另一方面，单个图像不会保存到额外的文件夹中。</p>
+<p><a id="RDATA_STEREO_CHANNELS" name="RDATA_STEREO_CHANNELS"></a> <!--INDEX "8","通道","RDATA_STEREO_CHANNELS"--><span class="c4d_id">通道</span> <span class="range">[1..2147483647]</span></p>
+<p>你可以在这里设定任意数量的通道（=中间摄像头数量）。关于这些摄像头如何排布，参见<a href="OCAMERA-ID_GROUP_STEREO.html#CAMERAOBJECT_STEREO_PLACEMENT" target="_self"><span class="text_id">置换</span></a>。</p>
+<p><a id="RDATA_STEREO_MODE" name="RDATA_STEREO_MODE"></a> <!--INDEX "8","模式","RDATA_STEREO_MODE"--><span class="c4d_id">模式</span></p>
+<p><a id="RDATA_STEREO_MODE_ANAGLYPH" name="RDATA_STEREO_MODE_ANAGLYPH"></a><!--INDEX "10","立体 (Anaglyph)","RDATA_STEREO_MODE_ANAGLYPH"--><span class="c4d_id_cycle">立体 (Anaglyph)</span></p>
+<p>这是50年代以来应用在影院中最广为人知的方式，一个图像的颜色信息通过两色眼镜（曾经使用红-绿玻璃，现在一般使用红-青玻璃）被分开。优点：简单、眼镜便宜。缺点：颜色范围在一定程度上受到限制。</p>
+<p><a id="RDATA_STEREO_MODE_SIDEBYSIDE" name="RDATA_STEREO_MODE_SIDEBYSIDE"></a><!--INDEX "10","Side-by-Side","RDATA_STEREO_MODE_SIDEBYSIDE"--><span class="c4d_id_cycle">Side-by-Side</span></p>
+<p>左右图像被切换和压缩成一个正常的图像大小。一些电视使用这种技术用于高清 3D，因为传输带宽与 HD 带宽相同。终端设备必须可以解码这些双重图像，并依次连续显示它们（通常与快门眼镜一起使用）。缺点：分辨率降低，技术昂贵（需要特殊硬件）。</p>
+<p><a id="RDATA_STEREO_MODE_INTERLACED" name="RDATA_STEREO_MODE_INTERLACED"></a><!--INDEX "10","交错","RDATA_STEREO_MODE_INTERLACED"--><span class="c4d_id_cycle">交错</span></p>
+<p>这种方式需要带有偏振滤光镜的监视器和带有偏振玻璃的眼镜。由于图片被编码为单一图片（例如左眼全部偶数线、右眼全部奇数线），分辨率会减半。优点：眼镜便宜，色彩还原好。缺点：需要特殊监视器，分辨率降低。</p>
+<p><a id="RDATA_STEREO_PARALLAX" name="RDATA_STEREO_PARALLAX"></a> <!--INDEX "8","附加视差(像素)","RDATA_STEREO_PARALLAX"--><span class="c4d_id">附加视差(像素)</span> <span class="range">[0..2147483647]</span></p>
+<p>按设定的像素值来移动左右眼图像，这可以用来增加立体效果。</p>
+<p><a id="RDATA_STEREO_SWAP" name="RDATA_STEREO_SWAP"></a> <!--INDEX "8","交换左/右","RDATA_STEREO_SWAP"--><span class="c4d_id">交换左/右</span></p>
+<p>启用后左右眼图像会被互换。</p>
+<p><!--INDEX "6","立体 (Anaglyph)","RDATA_GROUP_STEREO_ANA"--><a id="RDATA_GROUP_STEREO_ANA" name="RDATA_GROUP_STEREO_ANA"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>立体 (Anaglyph)</span></p>
+<p><a id="RDATA_STEREO_ANAGLYPH_SYSTEM_FULL" name="RDATA_STEREO_ANAGLYPH_SYSTEM_FULL"></a> <br><a id="RDATA_STEREO_ANAGLYPH_SYSTEM_NON_FULL" name="RDATA_STEREO_ANAGLYPH_SYSTEM_NON_FULL"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_SYSTEM_NON_FULL","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","系统","RDATA_STEREO_ANAGLYPH_SYSTEM_NON_FULL"--><span class="c4d_id">系统</span></p>
+<p>当使用<span class="command_value">立体 (Anaglyph)</span>模式时，立体色彩的编码的颜色可以在这里设置。两种颜色都要与你使用的 3D 立体眼镜镜片相同。如果你的客户没有提供色彩信息，请使用<span class="command_value">红-青</span>，这是最常用的颜色组合，而且与早期的红-绿、红-蓝颜色相比，可以显示大量的颜色。</p>
+<p>你可以使用<span class="command_value">自定义</span>选项来创建你自己的颜色组合（但是很难找到与之相匹配的眼镜）。</p>
+<p>如果<span class="command">算法</span>被设置为<span class="command_value">全部</span>之外的任何参数，你只能设置左眼的颜色，右眼颜色会自动设置为左眼的互补色。</p>
+<p><a id="RDATA_STEREO_ANAGLYPH_COL_LEFT" name="RDATA_STEREO_ANAGLYPH_COL_LEFT"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_COL_LEFT","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","左","RDATA_STEREO_ANAGLYPH_COL_LEFT"--><span class="c4d_id">左</span><br><a id="RDATA_STEREO_ANAGLYPH_COL_RIGHT" name="RDATA_STEREO_ANAGLYPH_COL_RIGHT"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_COL_RIGHT","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","右","RDATA_STEREO_ANAGLYPH_COL_RIGHT"--><span class="c4d_id">右</span></p>
+<p>你可以在这里为立体色彩编码单独设置颜色（<span class="command">系统</span>必须被设置为<span class="command_value">自定义</span>）。左眼颜色必须与眼镜左边镜片的颜色相同。V</p>
+<p><a id="RDATA_STEREO_ANAGLYPH_METHOD" name="RDATA_STEREO_ANAGLYPH_METHOD"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_METHOD","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","算法","RDATA_STEREO_ANAGLYPH_METHOD"--><span class="c4d_id">算法</span></p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/031372.jpg"  ><span class="caption">可用的不同算法（红-蓝立体色下选择<span class="command_value">全部</span>选项）。模型由 DOSCH 提供。</span></div></p>
+<p>利用这项设置的选项，你可以影响立体图像的颜色。一个立体技术的问题是原始场景的色彩偏差，一些颜色在观众眼睛不受压迫的情况下无法显示（使用红-青编码的红色），建议是使用<span class="command_value">优化</span>选项，因为它带来的“观看体验”的压力最小。</p>
+<p>在<span class="command">算法</span>设置为<span class="command_value">全部</span>时，应该使用<span class="command_value">红-蓝</span>或<span class="command_value">红-绿</span>模式。</p>
+<p>下表是根据立体图像的预期质量从坏到好排列的：</p>
+<p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_FULL" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_FULL"></a><!--INDEX "10","全部","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_FULL"--><span class="c4d_id_cycle">全部</span></p>
+<p>最老的（也是质量最差的）立体显示算法，因为显示效果黯淡且单调。这个模式是为<span class="command_value">红-蓝</span>或<span class="command_value">红-绿</span>立体技术设计的。</p>
+<p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_GRAY" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_GRAY"></a><!--INDEX "10","灰","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_GRAY"--><span class="c4d_id_cycle">灰</span></p>
+<p>立体图像通过眼镜（不是为红-蓝或红-绿设计的）会显示为灰度图像，要得到更明亮的画面请设置为<span class="command_value">全部</span>。</p>
+<p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF"></a><!--INDEX "10","半色","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF"--><span class="c4d_id_cycle">半色</span><br>
+<a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR"></a><!--INDEX "10","颜色","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR"--><span class="c4d_id_cycle">颜色</span></p>
+<p>与之前描述的选项相比，这两个模式只允许生成一种限制的颜色，在使用红-青编码时可以生成很好的蓝、绿和黄色调。如果选择<span class="command_value">颜色</span>算法，会产生“视网膜竞争”，也就是说，红色表面（红-青）会让左眼传递最大量的颜色强度到大脑，而右眼只能看见“黑色”，这回为眼睛带来繁重的压力（可以在上面图片中的的红色花瓶上观察到）。这种影响可以通过选择<span class="command_value">半色</span>来减轻。但是红色会变暗到认不出它本来的颜色。</p>
+<p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED"></a><!--INDEX "10","优化","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED"--><span class="c4d_id_cycle">优化</span></p>
+<p>这个模式类似于<span class="command_value">半色</span>模式，但是它提供更好的色彩再生，并且会减少视网膜竞争的影响（见上文）。</p>
+<p><!--INDEX "6","Side-by-Side","RDATA_GROUP_STEREO_SBS"--><a id="RDATA_GROUP_STEREO_SBS" name="RDATA_GROUP_STEREO_SBS"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Side-by-Side</span></p>
+<p><a id="RDATA_STEREO_SBS_ALIGN" name="RDATA_STEREO_SBS_ALIGN"></a> <!--AM_JUMP "RDATA_STEREO_SBS_ALIGN","RDATA_GROUP_STEREO_SBS","RDATA_GROUP_STEREO"--><!--INDEX "8","对齐","RDATA_STEREO_SBS_ALIGN"--><span class="c4d_id">对齐</span></p>
+<p>这个模式定义两个图像部分是否相互对齐（水平方向或垂直方向）。</p>
+<p><a id="RDATA_STEREO_SBS_LEFT_MX" name="RDATA_STEREO_SBS_LEFT_MX"></a> <!--AM_JUMP "RDATA_STEREO_SBS_LEFT_MX","RDATA_GROUP_STEREO_SBS","RDATA_GROUP_STEREO"--><!--INDEX "8","左镜像 X","RDATA_STEREO_SBS_LEFT_MX"--><span class="c4d_id">左镜像 X</span><br><a id="RDATA_STEREO_SBS_LEFT_MY" name="RDATA_STEREO_SBS_LEFT_MY"></a> <!--AM_JUMP "RDATA_STEREO_SBS_LEFT_MY","RDATA_GROUP_STEREO_SBS","RDATA_GROUP_STEREO"--><!--INDEX "8","左镜像 Y","RDATA_STEREO_SBS_LEFT_MY"--><span class="c4d_id">左镜像 Y</span><br><a id="RDATA_STEREO_SBS_RIGHT_MX" name="RDATA_STEREO_SBS_RIGHT_MX"></a> <!--AM_JUMP "RDATA_STEREO_SBS_RIGHT_MX","RDATA_GROUP_STEREO_SBS","RDATA_GROUP_STEREO"--><!--INDEX "8","右镜像 X","RDATA_STEREO_SBS_RIGHT_MX"--><span class="c4d_id">右镜像 X</span><br><a id="RDATA_STEREO_SBS_RIGHT_MY" name="RDATA_STEREO_SBS_RIGHT_MY"></a> <!--AM_JUMP "RDATA_STEREO_SBS_RIGHT_MY","RDATA_GROUP_STEREO_SBS","RDATA_GROUP_STEREO"--><!--INDEX "8","右镜像 Y","RDATA_STEREO_SBS_RIGHT_MY"--><span class="c4d_id">右镜像 Y</span></p>
+<p>如果<span class="command">模式</span>设置为 <span class="command_value">Side-by-Side</span>，你会得到双眼图像沿 <span class="command">X</span> 或 <span class="command">Y</span> 轴的镜像选项。</p>
+<p><!--INDEX "6","交错","RDATA_GROUP_STEREO_INTER"--><a id="RDATA_GROUP_STEREO_INTER" name="RDATA_GROUP_STEREO_INTER"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>交错</span></p>
+<p><a id="RDATA_STEREO_INTERLACED_TYPE" name="RDATA_STEREO_INTERLACED_TYPE"></a> <!--AM_JUMP "RDATA_STEREO_INTERLACED_TYPE","RDATA_GROUP_STEREO_INTER","RDATA_GROUP_STEREO"--><!--INDEX "8","类型","RDATA_STEREO_INTERLACED_TYPE"--><span class="c4d_id">类型</span></p>
+<p>如果<span class="command">模式</span>设置为<span class="command_value">交错</span>，你可以定义编码是通过偏移线（<span class="command_value">水平</span>）还是列（<span class="command_value">垂直</span>）。另外还有一种称为<span class="command_value">棋盘格</span>的模式，它结合了以上两种模式。</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","获取好的立体图像的几点建议","hl_1"--><p><span class="HL_1">获取好的立体图像的几点建议</span></p>
+<p>	在创建立体图像时有几条规则需要遵守。要让立体效果易于观看而没有任何不适的影响或对观众眼睛造成压力，这是有必要的。因此需要遵循如下的指导建议。</p>
+<p><ul></p>
+<p><li> 景深：通常建议使用大景深（即少量模糊）。普通的 2D 技术是用小景深让背景位于焦距之外。一面位于锐利物体后面的模糊的墙会让其表面看上去很平坦。这种技术与立体技术形成对比。</li>
+<li> 对象距离：3D 效果很大取决于观众与投射平面（显示器、荧幕、纸张等）的距离，观众距离投射平面越远，3D 效果越强烈（所能感受到的近端对象和远端对象之间的深度）。这一点在创建立体空间时需要注意。</li>
+<li> 虚影是当一只眼睛接收到另一只眼睛的图像信息时产生的（导致重叠）。这在高对比图像中尤其需要注意（尤其是立体图像）。因此，你需要尽可能在图像中避免这种高对比的情况。较小的视差值也可以减少重影。</li>
+<li> 当对象在图像边缘被切断时经常会在眼睛中产生重叠。但是，由于总会有对象位于图像的边缘，那么它不应该是图像中最重要的对象，它是当前注意力的焦点，不应该被切断。</li>
+<li> 对于视频来说，要给予眼睛时间来适应强烈的视差变化（在不同的设置之间），这一点很重要。因此应当避免短而快的镜头切换。</li>
+<li> 避免夸张：不断飞向观众的电锯或类似的场景会让眼睛十分疲劳。这种视觉把戏应当深思熟虑、谨慎使用。</li>
+<li> 阅读<a href="OCAMERA-ID_GROUP_STEREO.html" target="">摄像机</a>、<a href="DBASEDRAW-BASEDRAW_GROUP_STEREO.html" target="">视窗</a>和立体的描述。你可以在这里找到更多的指导。</li></ul><p></p>
+<p>如你所看到的，创建好的立体故乡是一项有挑战的任务，并且需要考虑很多方面。但在所有的专业领域不都是这样的吗？</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","立体的限制","hl_2"--><p><span class="HL_1">立体的限制</span></p>
+<p>注意，立体摄像机的子对象不会渲染在立体中。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

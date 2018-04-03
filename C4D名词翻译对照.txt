@@ -58,3 +58,5 @@ Clip Negative Component         剪辑负成分
 Clay rendering                  白模渲染
 Irradiance                      辐照
 Subsurface Scattering           次表面散射
+Auto-stereoscopic               自动立体
+Ghosting                        重影
