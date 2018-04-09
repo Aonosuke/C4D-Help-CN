@@ -28,7 +28,7 @@
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
 <span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi_self">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>立体</span></p><p></p>
 <p><PAGE_RELEASE_130 Stereoscopic render settings.></p>
-<p><div class="image_full" style="max-width:1012px"><img  src="../pics/031358.jpg"  ><span class="caption">如果透过 3D 立体眼镜（红-青）观看这副图像，你会感觉它几乎是在伸向你。</span></div></p>
+<p><div class="image_full" style="max-width:1012px"><img  src="../pics/031358.jpg"  ><span class="caption">如果透过 3D 立体眼镜（红-青）观看这副图像，你会感觉它几乎是在向飞来。</span></div></p>
 <p>多年来，在图象、电影和视频的 3D 显示方面已有数种尝试。最近——主要是因为大量 3D 电影的出现——一个新的 3D 繁荣期已经到来。在这些原因之中，主要是由于技术进步使 3D 图像和电影的颜色变得真实，同时消除了对人眼的疲劳感。大部分技术的共同点是它们基本记录了同一个场景的两幅图像，它们之间有轻微的透视偏移（即左右“眼”各自的图像）。这两幅图像在显示时，必须让左眼只接受到左图像，而右眼只接受到右图像（通过使用特制的眼镜来实现）。剩下的工作或多或少是自动的：大脑将这两个图像合并为一个图像。</p>
 <p>当然，这也是 CINEMA 4D 擅长的。在场景中放置任意数量的摄像机来从所有可能角度进行渲染，我们已经让实现这一点变得容易。</p>
 <p><div class="image_full" style="max-width:1588px"><img  src="../pics/031359.jpg"  ><span class="caption">两幅不同透视的图像被合并来创造一副立体的图像。</span></div></p>
@@ -83,7 +83,7 @@
 <p>你可以使用<span class="command_value">自定义</span>选项来创建你自己的颜色组合（但是很难找到与之相匹配的眼镜）。</p>
 <p>如果<span class="command">算法</span>被设置为<span class="command_value">全部</span>之外的任何参数，你只能设置左眼的颜色，右眼颜色会自动设置为左眼的互补色。</p>
 <p><a id="RDATA_STEREO_ANAGLYPH_COL_LEFT" name="RDATA_STEREO_ANAGLYPH_COL_LEFT"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_COL_LEFT","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","左","RDATA_STEREO_ANAGLYPH_COL_LEFT"--><span class="c4d_id">左</span><br><a id="RDATA_STEREO_ANAGLYPH_COL_RIGHT" name="RDATA_STEREO_ANAGLYPH_COL_RIGHT"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_COL_RIGHT","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","右","RDATA_STEREO_ANAGLYPH_COL_RIGHT"--><span class="c4d_id">右</span></p>
-<p>你可以在这里为立体色彩编码单独设置颜色（<span class="command">系统</span>必须被设置为<span class="command_value">自定义</span>）。左眼颜色必须与眼镜左边镜片的颜色相同。V</p>
+<p>你可以在这里为立体色彩编码单独设置颜色（<span class="command">系统</span>必须被设置为<span class="command_value">自定义</span>）。左眼颜色必须与眼镜左边镜片的颜色相同。</p>
 <p><a id="RDATA_STEREO_ANAGLYPH_METHOD" name="RDATA_STEREO_ANAGLYPH_METHOD"></a> <!--AM_JUMP "RDATA_STEREO_ANAGLYPH_METHOD","RDATA_GROUP_STEREO_ANA","RDATA_GROUP_STEREO"--><!--INDEX "8","算法","RDATA_STEREO_ANAGLYPH_METHOD"--><span class="c4d_id">算法</span></p>
 <p><div class="image_full" style="max-width:1600px"><img  src="../pics/031372.jpg"  ><span class="caption">可用的不同算法（红-蓝立体色下选择<span class="command_value">全部</span>选项）。模型由 DOSCH 提供。</span></div></p>
 <p>利用这项设置的选项，你可以影响立体图像的颜色。一个立体技术的问题是原始场景的色彩偏差，一些颜色在观众眼睛不受压迫的情况下无法显示（使用红-青编码的红色），建议是使用<span class="command_value">优化</span>选项，因为它带来的“观看体验”的压力最小。</p>
@@ -95,7 +95,7 @@
 <p>立体图像通过眼镜（不是为红-蓝或红-绿设计的）会显示为灰度图像，要得到更明亮的画面请设置为<span class="command_value">全部</span>。</p>
 <p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF"></a><!--INDEX "10","半色","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_HALF"--><span class="c4d_id_cycle">半色</span><br>
 <a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR"></a><!--INDEX "10","颜色","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_COLOR"--><span class="c4d_id_cycle">颜色</span></p>
-<p>与之前描述的选项相比，这两个模式只允许生成一种限制的颜色，在使用红-青编码时可以生成很好的蓝、绿和黄色调。如果选择<span class="command_value">颜色</span>算法，会产生“视网膜竞争”，也就是说，红色表面（红-青）会让左眼传递最大量的颜色强度到大脑，而右眼只能看见“黑色”，这回为眼睛带来繁重的压力（可以在上面图片中的的红色花瓶上观察到）。这种影响可以通过选择<span class="command_value">半色</span>来减轻。但是红色会变暗到认不出它本来的颜色。</p>
+<p>与之前描述的选项相比，这两个模式只允许生成一种限制的颜色，在使用红-青编码时可以生成很好的蓝、绿和黄色调。如果选择<span class="command_value">颜色</span>算法，会产生“视网膜竞争”，也就是说，红色表面（红-青）会让左眼传递最大量的颜色强度到大脑，而右眼只能看见“黑色”，这会给眼睛带来繁重的压力（可以在上面图片中的的红色花瓶上观察到）。这种影响可以通过选择<span class="command_value">半色</span>来减轻。但是红色会变暗到认不出它本来的颜色。</p>
 <p><a id="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED" name="BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED"></a><!--INDEX "10","优化","BASEDRAW_STEREO_MODE_ANAGLYPH_METHOD_OPTIMIZED"--><span class="c4d_id_cycle">优化</span></p>
 <p>这个模式类似于<span class="command_value">半色</span>模式，但是它提供更好的色彩再生，并且会减少视网膜竞争的影响（见上文）。</p>
 <p><!--INDEX "6","Side-by-Side","RDATA_GROUP_STEREO_SBS"--><a id="RDATA_GROUP_STEREO_SBS" name="RDATA_GROUP_STEREO_SBS"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Side-by-Side</span></p>

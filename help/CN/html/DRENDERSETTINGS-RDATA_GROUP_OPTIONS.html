@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>编辑渲染设置：选项</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32054"-->
+		<!--VATER_ID "32048"-->
+		<!--REIHENFOLGE "6"-->
+		<!--TITLE "编辑渲染设置：选项"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi_self">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>选项</span></p><p></p>
+<p><a id="RDATA_OPTION_TRANSPARENCY" name="RDATA_OPTION_TRANSPARENCY"></a> <!--INDEX "8","透明","RDATA_OPTION_TRANSPARENCY"--><span class="c4d_id">透明</span></p>
+<p><div class="image_full" style="max-width:1281px"><img  src="../pics/020131.jpg"  ><span class="caption">激活透明、折射率、反射和投影选项的各种状态。如果所有四个选项都不启用，渲染的速度会非常快，虽然结果很不真实。</span></div></p>
+<p>这个选项定义了是否在计算中包含<span class="command">透明</span>或 <span class="command">Alpha</span> 通道。</p>
+<p><a id="RDATA_OPTION_REFRACTION" name="RDATA_OPTION_REFRACTION"></a> <!--INDEX "8","折射率","RDATA_OPTION_REFRACTION"--><span class="c4d_id">折射率</span></p>
+<p>定义了在渲染透明材质时是否包含折射率参数。像玻璃或水这种材质只有使用了折射看上去才会真实，但是渲染时间也会相应增加。如果场景中不包含折射光线的材质则不需要额外的渲染时间。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>位于透明对象后面的另一个透明对象可能会渲染成黑色。如果出现了这种情况，请增加跟踪深度值。</div></p>
+<p><a id="RDATA_OPTION_REFLECTION" name="RDATA_OPTION_REFLECTION"></a> <!--INDEX "8","反射","RDATA_OPTION_REFLECTION"--><span class="c4d_id">反射</span></p>
+<p>定义了是否计算反射。如果禁用这个选项，对象就只会渲染为其基本色。这个选项可以与<span class="command">限制反射仅为地板/天空</span>选项一起使用。</p>
+<p><a id="RDATA_OPTION_SHADOW" name="RDATA_OPTION_SHADOW"></a> <!--INDEX "8","投影","RDATA_OPTION_SHADOW"--><span class="c4d_id">投影</span></p>
+<p>全局定义是否在渲染中计算投影。记住，在任何场景中投影都是最重要的元素之一，如果一个场景不渲染投影，它会缺乏对比而且看上去很平。激活<span class="command">限制投影为柔和</span>选项会只渲染软阴影（其渲染速度较快）。</p>
+<p><RELEASE_110 Only render soft shadows.></p>
+<p><a id="RDATA_LIMITSHADOW" name="RDATA_LIMITSHADOW"></a> <!--INDEX "8","限制投影为柔和","RDATA_LIMITSHADOW"--><span class="c4d_id">限制投影为柔和</span></p>
+<p>启用这个选项会只渲染软阴影。渲染硬阴影或区域阴影需要更大量的计算。另外，软阴影通常比硬阴影更加真实。</p>
+<p></RELEASE_110></p>
+<p><a id="RDATA_THRESHOLD" name="RDATA_THRESHOLD"></a> <!--INDEX "8","光线阈值","RDATA_THRESHOLD"--><span class="c4d_id">光线阈值</span> <span class="range">[0..100%]</span></p>
+<p>这项数值有助于优化渲染时间。处理复杂的场景，尤其是那些包含许多反射和透明表面时，<span class="command_value">90%</span> 的进程光线只贡献了低于 <span class="command_value">10%</span> 的整体图片亮度和颜色。假设将阈值设为 <span class="command_value">15%</span>，光线会在其亮度低于这个值时停止从摄像机到场景的运动。</p>
+<p>对于反射/透明，通常这个数值越大，会纳入计算的细小反射/折射的程度越大，渲染时间也越长。</p>
+<p><a id="RDATA_RAYDEPTH" name="RDATA_RAYDEPTH"></a> <!--INDEX "8","跟踪深度","RDATA_RAYDEPTH"--><span class="c4d_id">跟踪深度</span> <span class="range">[0..500]</span></p>
+<p><span class="command">跟踪深度</span>决定了渲染器会穿过多少层透明对象（或使用 alpha 通道使其不可见的区域）。跟踪深度设置得越低，可以穿过的对象数量就越少。那些不能穿过的区域会被渲染为黑色。</p>
+<p>将<span class="command">跟踪深度</span>设为 <span class="command_value">1</span> 表示，对于一个像素，当光线碰到场景中的一个物体之后就会停止计算，因此不会看到透明度和 alpha 通道。</p>
+<p>将其设为 <span class="command_value">2</span> 表示，当光线碰到一个表面之后，会为透明度计算第二道光线。跟踪深度越高，进入场景中的光线就行进得越远，渲染的内容也更多。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003875.jpg"  ><span class="caption">结果中包含了透明度和 alpha 通道，并在追踪深度为 2、4、8 时进行渲染，这个参数最大可以设置为 500。</span></div></p>
+<p><a id="RDATA_REFLECTIONDEPTH" name="RDATA_REFLECTIONDEPTH"></a> <!--INDEX "8","反射深度","RDATA_REFLECTIONDEPTH"--><span class="c4d_id">反射深度</span> <span class="range">[1..200]</span></p>
+<p>当一道光线被发送到场景中时，它可以被反射面反射。在某些情况下，如两面对立放置的镜子，这道光线可能会被困在两面镜子之间永远反射，这时光线追踪就永远都无法完成渲染计算。为了防止这种情况，你可以设置最大的反射光线的最大值。</p>
+<p>你还可以使用<span class="command">反射深度</span>来限制渲染图片的时间。通常，只有第一次产生的反射是重要的，之后发声的反射对图像质量的作用很小，但是增加的渲染时间却相当长。</p>
+<p>反射深度设为 <span class="command">1</span> 表示，对于一个像素，当光线碰到场景中的一个物体后就会停止计算。因此不会看到反射。</p>
+<p>将其设为 <span class="command">2</span> 表示，当光线碰到一个表面之后，会为反射计算第二道光线。反射深度越高，进入场景中的光线就行进得越远，渲染的内容也更多。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003876.jpg"  ><span class="caption">结果中包含了反射对象，闭关在反射深度为 2、4、8 时进行渲染。</p>
+<p></span></div></p>
+<p><a id="RDATA_SHADOWDEPTH" name="RDATA_SHADOWDEPTH"></a> <!--INDEX "8","投影深度","RDATA_SHADOWDEPTH"--><span class="c4d_id">投影深度</span> <span class="range">[0..500]</span></p>
+<p><span class="command">投影深度</span>与<span class="command">反射深度</span>类似，如果如果一个表面的点位于另一物体的阴影中，这个选项将使用额外的阴影光线来检查哪个阴影会从对象表面被投射，其投射方向为光源方向。</p>
+<p><span class="command">投影深度</span>设置定义了用什么投影深度来计算可见的阴影。例如，如果将数值降为 <span class="command_value">2</span>，则不会对反射、透明和折射光线计算投影。</p>
+<p>下面的示例是将<span class="command">投影深度</span>分别设为 <span class="command_value">2</span>、<span class="command_value">4</span>、<span class="command_value">8</span> 来进行渲染的。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003877.jpg"  ><span class="caption"></span></div></p>
+<p><a id="RDATA_LIMITREFLECTION" name="RDATA_LIMITREFLECTION"></a> <!--INDEX "8","限制反射仅为地板/天空","RDATA_LIMITREFLECTION"--><span class="c4d_id">限制反射仅为地板/天空</span></p>
+<p>启用这个选项会让光影追踪只在反射表面（不会在其他对象上）计算地板和天空的反射。这种方式对计算的要求不高，因此推荐用在时间比较紧急的情况下。</p>
+<p><a id="RDATA_LOD" name="RDATA_LOD"></a> <!--INDEX "8","细节级别","RDATA_LOD"--><span class="c4d_id">细节级别</span> <span class="range">[0..1000%]</span></p>
+<p>这个参数会影响支持细节降低的对象的显示，这些对象包括融球、全部基础几何体和全部样条生成器对象。</p>
+<p>但如果一个对象在显示标签中定义了自己的细节级别，那么会继续使用它自己的设置。</p>
+<p>如果将这个参数设为 100%，对象会显示完整的细节。</p>
+<p>如果将这个参数设为 50%，对象会只显示它们一半的常规细节（细分曲面）。</p>
+<p>你还可以输入大于 100% 的数值来增加细分曲面数。</p>
+<p><a id="RDATA_ENABLEBLURRY" name="RDATA_ENABLEBLURRY"></a> <!--INDEX "8","模糊","RDATA_ENABLEBLURRY"--><span class="c4d_id">模糊</span></p>
+<p>使用这个选项可以启用/禁用<span class="command">反射</span>（使用<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#rough" target="">粗糙度</a>产生的模糊反射效果）和<span class="command">透明</span>材质通道的模糊效果。</p>
+<p><a id="RDATA_GLOBALBRIGHTNESS" name="RDATA_GLOBALBRIGHTNESS"></a> <!--INDEX "8","全局亮度","RDATA_GLOBALBRIGHTNESS"--><span class="c4d_id">全局亮度</span> <span class="range">[0..100000%]</span></p>
+<p>这项设置让你可以同时为场景中的所有光源设置全局亮度。设为 100% 会使用每个灯光所设置的强度，设为 50% 则会使每个灯光强度减半，当设为 <span class="command_value">200%</span> 会让每个灯光的强度增加为两倍。</p>
+<p><a id="RDATA_LIMITSHADOW" name="RDATA_LIMITSHADOW"></a> <!--INDEX "8","限制投影为柔和","RDATA_LIMITSHADOW"--><span class="c4d_id">限制投影为柔和</span></p>
+<p>启用这个选项后会只渲染软阴影。渲染硬阴影或区域阴影会需要更多计算资源。另外，通常软阴影比硬阴影要更加真实。</p>
+<p><a id="RDATA_CACHESHADOWMAPS" name="RDATA_CACHESHADOWMAPS"></a> <!--INDEX "8","缓存投影贴图","RDATA_CACHESHADOWMAPS"--><span class="c4d_id">缓存投影贴图</span></p>
+<p>CINEMA 4D 需要为场景中的每个产生了软阴影的灯光计算投影贴图。投影贴图决定了阴影会在哪里被渲染。根据场景的复杂程度，投影贴图的计算会增加相当多的渲染时间。在许多情况下，你都可以通过启用<span class="command">缓存投影贴图</span>选项来加快渲染速度。</p>
+<p>如果启用了缓存投影贴图选项，投影贴图会在你第一次渲染的时候被保存到 <span class="command">Illum</span> 文件夹中，文件名为 <span class="command">**.c4d.smap</span>。你会在你的场景文件夹中找到 <span class="command">Illum</span> 文件夹，如果该文件夹不存在，则会自动创建一个。</p>
+<p>在启用这个选项的情况下，如果你从另一个角度渲染场景或渲染一个摄像机动画，CINEMA 4D 会再次使用保存的投影贴图，这样就节省了渲染时间。如果禁用该选项，CINEMA 4D 会在每次渲染的时候都计算投影贴图。</p>
+<p>缓存投影贴图选项十分智能。例如，假设场景中有三个产生软阴影的灯光，然后你改变了其中一个灯光的参数，CINEMA 4D 会为这个灯光重新计算投影贴图来保证正确的结果，并重复使用另外两个灯光的投影贴图缓存来节省时间。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>只有在灯光和和全部被照亮的对象都没有移动的情况下，才应当使用缓存投影贴图选项，这个选项主要适合用在摄像机动画中。</div></p>
+<p>在投影贴图需要花很长时间进行计算的情况下，缓存投影贴图选项非常有用。你可以通过观察 CINEMA 4D 渲染场景时的状态栏来获取计算投影贴图所花费的时间——当渲染投影贴图时会在状态栏中显示“<span class="command">渲染投影贴图</span>”。</p>
+<p>要从硬盘中删除投影贴图缓存，选择“渲染 | 清空光照缓存”。但是请注意，这个命令同时也会删除全部保存的全局光照或焦散解析（高级渲染模组）。</p>
+<p><a id="RDATA_MOTIONLENGTH" name="RDATA_MOTIONLENGTH"></a> <!--INDEX "8","运动比例","RDATA_MOTIONLENGTH"--><span class="c4d_id">运动比例</span> <span class="range">[1..65536]</span></p>
+<p>使用这项设置可以定义在渲染<span class="command">运动矢量</span>多通道时的最大矢量长度。如果设置的值太低，会出现剪切；如果设置得太高，结果会不准确。</p>
+<p><a id="RDATA_ACTIVEOBJECTONLY" name="RDATA_ACTIVEOBJECTONLY"></a> <!--INDEX "8","仅激活对象","RDATA_ACTIVEOBJECTONLY"--><span class="c4d_id">仅激活对象</span></p>
+<p>如果启用了这个选项，那么只有选择的对象会被渲染。</p>
+<p><a id="RDATA_AUTOLIGHT" name="RDATA_AUTOLIGHT"></a> <!--INDEX "8","默认灯光","RDATA_AUTOLIGHT"--><span class="c4d_id">默认灯光</span></p>
+<p>如果你在场景中没有设定光源，CINEMA 4D 会使用一个默认灯光来渲染场景。这个默认灯光位于摄像机 Z 轴偏 H=15° 的角度上（即摄像机左边 15°）。默认灯光让你可以查看对象而不需要设置一个灯光。一旦在场景中创建了一个光源（不包括带有 HDRI 纹理的天空对象），默认灯光会自动失效。</p>
+<p><RELEASE_110 Auto Light must no longer be disabled when using GI.></p>
+<p>注意，如果使用 GI 进行渲染，默认灯光会自动失效。</p>
+<p></RELEASE_110></p>
+<p><a id="RDATA_TEXTURES" name="RDATA_TEXTURES"></a> <!--INDEX "8","纹理","RDATA_TEXTURES"--><span class="c4d_id">纹理</span></p>
+<p>使用这个选项，你可以在渲染中启用或禁用纹理（只有位图和着色器不受影响）。例如，你可以在进行测试渲染或使用线描渲染器时禁用纹理。</p>
+<p>如果启用了这个选项，位图纹理会被渲染（扫描线、光影追踪、卡通颜色）。</p>
+<p>如果<span class="command">纹理</span>选项被禁用，位图会被替换为黑色。</p>
+<p><a id="RDATA_TEXTUREERROR" name="RDATA_TEXTUREERROR"></a> <!--INDEX "8","显示纹理错误","RDATA_TEXTUREERROR"--><span class="c4d_id">显示纹理错误</span></p>
+<p>如果在渲染场景时 CINEMA 4D 找不到纹理，会出现一个警告窗口。如果禁用了纹理选项并确认警告，则会继续渲染而忽略丢失的纹理。</p>
+<p>如果启用了这个选项，渲染会在出现警告之后取消。如果要渲染好几个场景（批量渲染），则会开始渲染接下来的任务。</p>
+<p><a id="RDATA_VOLUMETRICLIGHTING" name="RDATA_VOLUMETRICLIGHTING"></a> <!--INDEX "8","测定体积光照","RDATA_VOLUMETRICLIGHTING"--><span class="c4d_id">测定体积光照</span></p>
+<p>如果你想要在可见的光照中产生投影，请启用这个选项。由于这个效果需要大量计算，你可能需要在测试渲染中禁用这个选项来加快速度。</p>
+<p><a id="RDATA_USELOD" name="RDATA_USELOD"></a> <!--INDEX "8","使用显示标签细节级别","RDATA_USELOD"--><span class="c4d_id">使用显示标签细节级别</span></p>
+<p>如果其启用这个选项，渲染器会使用显示标签中指定的细节级别。</p>
+<p><a id="RDATA_SHOWHUD" name="RDATA_SHOWHUD"></a> <!--INDEX "8","渲染 HUD","RDATA_SHOWHUD"--><span class="c4d_id">渲染 HUD</span></p>
+<p><div class="image_full" style="max-width:732px"><img  src="../pics/003878.jpg"  ><span class="caption"></span></div></p>
+<p>启用这个选项可以在渲染的图像或动画中显示 HUD。这在要在渲染中显示如帧时间等信息时很有用。要了解如何使用 HUD，请查看 <a href="5593.html" target="">HUD</a>。</p>
+<p><a id="RDATA_RENDERDOODLE" name="RDATA_RENDERDOODLE"></a> <!--INDEX "8","渲染草绘","RDATA_RENDERDOODLE"--><span class="c4d_id">渲染草绘</span></p>
+<p><RELEASE_110 Doodles can also be integrated into renderings.></p>
+<p><a id="RDATA_RENDERDOODLE" name="RDATA_RENDERDOODLE"></a> <!--INDEX "8","渲染草绘","RDATA_RENDERDOODLE"--><span class="c4d_id">渲染草绘</span></p>
+<p>定义在渲染输出中是否包含<a href="32186.html" target="">草绘</a>功能。</p>
+<p></RELEASE_110></p>
+<p><a id="RDATA_ENABLESPD" name="RDATA_ENABLESPD"></a> <!--INDEX "8","次多边形置换","RDATA_ENABLESPD"--><span class="c4d_id">次多边形置换</span></p>
+<p>如果你拥有 CINEMA 4D Visualize 或 Studio 组件，你可以使用这个选项来对整个场景全局禁用次多边形置换，而不用单独地对每个次多边形置换材质进行设置。这个选项可以在测试渲染中快速地开关。</p>
+<p><a id="RDATA_POSTEFFECTS_ENABLE" name="RDATA_POSTEFFECTS_ENABLE"></a> <!--INDEX "8","后期效果","RDATA_POSTEFFECTS_ENABLE"--><span class="c4d_id">后期效果</span></p>
+<p>全局启用或禁用后期效果。</p>
+<p><RELEASE_150 Only one global option for noise distribution.></p>
+<p><a id="RDATA_NOISE_LOCK" name="RDATA_NOISE_LOCK"></a> <!--INDEX "8","同等噪点分布","RDATA_NOISE_LOCK"--><span class="c4d_id">同等噪点分布</span></p>
+<p>CINEMA 4D 渲染器有多种效果（如果使用了较低的值）会产生颗粒感，这经常被看作“噪点”。这里有一些例子：<ul></p>
+<p><li> 区域阴影</li>
+<li> 次表面散射（在<span class="command_value">直接</span>模式中）</li>
+<li> 景深</li>
+<li> 动态模糊</li>
+<li> 物理渲染器中的通用采样</li>
+<li> GI 和环境吸收等。</li></ul><p></p>
+<p>如果启用了这个选项，噪点会在每个渲染图像中随机分布，这也就意味着连续渲染的图像，即使没有运动的设置，也会有随机的噪点分布。这反映了真实世界中的胶片或数码相机中的图像传感器的特点。这个选项应该在动画中禁用，因为它会产生不自然的效果。</p>
+<p>但是，如果你想要渲染一个跟另一个尽可能有所区别的静帧，那么应该启用这个选项。不过请注意，其他效果（如多线程）仍然会产生随机效果。你可以在如 GI 渲染中看到这种情况，即使开启了同等噪点分布，渲染结果也会有轻微的不同。</p>
+<p></RELEASE_150></p>
+<p><RELEASE_140 Global option for disabling Subsurface Scattering for rendering.></p>
+<p><a id="RDATA_SSS" name="RDATA_SSS"></a> <!--INDEX "8","次表面散射","RDATA_SSS"--><span class="c4d_id">次表面散射</span></p>
+<p>对整个工程启用或禁用<a href="XXMBSUBSURFACE.html" target="">次表面散射</a>。</p>
+<p></RELEASE_140></p>
+<p><RELEASE_115 New, optimized bucket rendering.></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","区块渲染","hl_1"--><p><span class="HL_1">区块渲染</span></p>
+<p><div class="image_full" style="max-width:633px"><img  src="../pics/024505.jpg"  ><span class="caption">每个进程核心会渲染一个“区块”。在上面的示例中，一个四核处理器正在运行。</span></div></p>
+<p>从 CINEMA 4D R11.5 开始，渲染是使用“区块”来完成的，每个方形区域使用单个进程或进程核心分别进行计算。在使用多进程渲染实例时，与之前的“渲染线”方式相比，这是一种优化的渲染方式。另外，对内存的利用也得到了优化，尤其是渲染高分辨率的图像时。</p>
+<p><a id="RDATA_BUCKETSEQUENCE" name="RDATA_BUCKETSEQUENCE"></a> <!--INDEX "8","区块顺序","RDATA_BUCKETSEQUENCE"--><span class="c4d_id">区块顺序</span></p>
+<p>在这里设置区块如何渲染图像。使用哪种顺序完全取决与你，各种顺序之间并没有优劣差别。</p>
+<p><a id="RDATA_AUTOMATICBUCKETSIZE" name="RDATA_AUTOMATICBUCKETSIZE"></a> <!--INDEX "8","自动尺寸","RDATA_AUTOMATICBUCKETSIZE"--><span class="c4d_id">自动尺寸</span><br><a id="RDATA_BUCKETSIZEX" name="RDATA_BUCKETSIZEX"></a> <!--INDEX "8","区块宽度","RDATA_BUCKETSIZEX"--><span class="c4d_id">区块宽度</span> <span class="range">[8..256]</span><br><a id="RDATA_BUCKETSIZEY" name="RDATA_BUCKETSIZEY"></a> <!--INDEX "8","区块高度","RDATA_BUCKETSIZEY"--><span class="c4d_id">区块高度</span> <span class="range">[8..256]</span></p>
+<p>使用这些设置可以定义区块的尺寸，建议使用<span class="command">自动尺寸</span>选项。自动区块尺寸（取决于使用的 CPU 数量以及图像的尺寸）的范围为 8×8 到 64×64。</p>
+<p>过小或过大的区块会比一个合适的区块尺寸渲染得要慢。</p>
+<p>通常来说，较小的区块所需要的内存比较大的区块要少。</p>
+<p></RELEASE_115></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

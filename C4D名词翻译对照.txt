@@ -60,3 +60,6 @@ Irradiance                      辐照
 Subsurface Scattering           次表面散射
 Auto-stereoscopic               自动立体
 Ghosting                        重影
+Cel Renderer                    线描渲染器
+General Sampling                通用采样
+Basic Properties                基本属性
