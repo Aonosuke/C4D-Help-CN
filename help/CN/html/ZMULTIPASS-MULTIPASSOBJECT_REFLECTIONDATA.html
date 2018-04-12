@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>多通道：反射</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52790"-->
+		<!--VATER_ID "52789"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "多通道：反射"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target="_self">多通道</a></span> <span class="link_back"><a href="ZMULTIPASS.html" target="_self">多通道</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="ZMULTIPASS.html">多通道</a> </span><p></p><a href="ZMULTIPASS-MULTIPASSOBJECT_REFLECTIONDATA.html" target=""><span class="c4d_group_navi_self">多通道</span></a> <a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target=""><span class="c4d_group_navi">多通道</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>多通道</span></p><p></p>
+<p><PAGE_RELEASE_160 Expanded Multi-Pass settings for reflections and specular highlights.></p>
+<p><a id="MP" name="MP"></a></p>
+<p>你可以用这里的几项设置来输出复杂反射通道的独立图层。下面描述的设置对反射和高光都是可用的。</p>
+<p><a id="MULTIPASSOBJECT_REFLECTION_MATERIALS" name="MULTIPASSOBJECT_REFLECTION_MATERIALS"></a> <!--INDEX "8","分离材质","MULTIPASSOBJECT_REFLECTION_MATERIALS"--><span class="c4d_id">分离材质</span></p>
+<p>你可以从以下几项中选择：<ul></p>
+<p><li> <span class="command">无</span>：工程中所有的反射和高光都会合并输出到一个单多通道层中，没有额外的分离层。</li>
+<li> <span class="command">所选</span>：只有启用了<span class="command">分离通道</span>选项（<span class="command">反射</span>通道的层标签页）的材质会单独输出分离的层。</li>
+<li> <span class="command">全部</span>：每个反射材质都会输出分离的层。</li></ul><p></p>
+<p><a id="MULTIPASSOBJECT_REFLECTION_LAYERS" name="MULTIPASSOBJECT_REFLECTION_LAYERS"></a> <!--INDEX "8","分离层","MULTIPASSOBJECT_REFLECTION_LAYERS"--><span class="c4d_id">分离层</span></p>
+<p>如果你想要在材质分层之外将反射单独分层，你可以选择以下设置：<ul></p>
+<p><li> <span class="command">无</span>：所有反射层会被合并。</li>
+<li> <span class="command">所选</span>：只有启用了<span class="command">分离通道</span>选项（<span class="command">反射</span>通道的层标签页）的材质会单独输出分离的层。</li>
+<li> <span class="command">全部</span>：每个反射层都会输出分离的层。</li></ul><p></p>
+<p><a id="MULTIPASSOBJECT_REFLECTION_MODE" name="MULTIPASSOBJECT_REFLECTION_MODE"></a> <!--INDEX "8","模式","MULTIPASSOBJECT_REFLECTION_MODE"--><span class="c4d_id">模式</span></p>
+<p>你可以在这里定义每个反射层的反射程度（如高光有与反射类似的行为）：</p>
+<p><div class="image_full" style="max-width:851px"><img  src="../pics/038346.jpg"  ><span class="caption">左下方的反射物有两个反射层，名称分别为“Clearcoat”和“Metallic”，上面是它们在 Photoshop 中的多通道层。</span></div></p>
+<p>请注意右边案例的特殊情况（Channel 3）：</p>
+<p><div class="image_full" style="max-width:695px"><img  src="../pics/038972.jpg"  ><span class="caption"></span></div></p>
+<p>除了<span class="command">反射</span>层（所有反射都被合并了）外，<span class="command">Reflection_Mat_1</span> 文件夹中还有 3 个层，如果点击眼睛图标让这个文件夹可见，那么 <span class="command">Copper_combined</span> 层（有且仅有这个层）会变成可见。为什么？因为这个层是由 <span class="command">Copper_Multiply</span> 和 <span class="command">Copper_Reflection_Base</span> 层组成的。如果文件夹中的另外两个层是可见的，那么你会得到两个激活的反射。</p>
+<p>还需要注意的是，由于内部原因，合并层并不完全与合成图像一致。</p>
+<p>高光多通道的用法同上。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
