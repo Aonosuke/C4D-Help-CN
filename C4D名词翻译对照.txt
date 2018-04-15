@@ -63,3 +63,4 @@ Ghosting                        重影
 Cel Renderer                    线描渲染器
 General Sampling                通用采样
 Basic Properties                基本属性
+Pre Pass                        预解算
