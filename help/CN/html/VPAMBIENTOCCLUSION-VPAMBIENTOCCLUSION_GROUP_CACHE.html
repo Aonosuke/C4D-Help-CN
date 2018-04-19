@@ -40,7 +40,7 @@
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","设置","hl_3"--><p><span class="HL_2">设置</span></p>
 <p><a id="VPAMBIENTOCCLUSION_CACHE_QUALITY" name="VPAMBIENTOCCLUSION_CACHE_QUALITY"></a> <!--INDEX "8","记录密度","VPAMBIENTOCCLUSION_CACHE_QUALITY"--><span class="c4d_id">记录密度</span></p>
 <p>不要对后文中描述的大量设置感到迷惑，因为环境吸收与<a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target="">辐照缓存</a>的原理类似，大部分设置都是相同的。在大部分情况下，你只需要调节<span class="command">记录密度</span>设置,这项设置相应地定义了下级参数（只有在环境吸收总是出错或者精确度不够的情况下才需要单独修改这些参数）。</p>
-<p>环境吸收工作原理的简述：在渲染过程中，会进行一些预计算（预解算），在这期间会对工程进行分析，以此来检查摄像机中最重要的区域（边角上的“着色点”、凹面区域等）的环境可见度，然后计算环境吸收数值：</p>
+<p>环境吸收工作原理的简述：在渲染过程中，会进行一些预计算（预解算），在这期间会对工程进行分析，以此来检查摄像机中最重要的区域（角落上的“着色点”、凹面区域等）的环境可见度，然后计算环境吸收数值：</p>
 <p><div class="image_full" style="max-width:791px"><img  src="../pics/037072.jpg"  ><span class="caption">环境吸收着色点会被安排在节点处并保存到环境吸收缓存中。</span></div></p>
 <p>全部环境吸收数值会被缓存到环境吸收缓存中并保存为一个文件，以供之后使用。</p>
 <p>在第二步中，选择性计算的环境吸收数值会被插值和平滑。</p>
@@ -59,7 +59,7 @@
 <p><a id="VPAMBIENTOCCLUSION_CACHE_DENSITY" name="VPAMBIENTOCCLUSION_CACHE_DENSITY"></a> <!--INDEX "8","密度","VPAMBIENTOCCLUSION_CACHE_DENSITY"--><span class="c4d_id">密度</span> <span class="range">[10..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_DETAILS" name="VPAMBIENTOCCLUSION_CACHE_DETAILS"></a> <!--INDEX "8","最小间距","VPAMBIENTOCCLUSION_CACHE_DETAILS"--><span class="c4d_id">最小间距</span> <span class="range">[0..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT" name="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"></a> <!--INDEX "8","最大间距","VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"--><span class="c4d_id">最大间距</span> <span class="range">[0..1000%]</span></p>
 <p>这三项设置一起说比较好，因为它们总是共同运作，简单的说，它们定义了一般着色点在关键和非关键区域的密度：<ul></p>
 <p><li> <span class="command">密度</span>：一般着色点的密度会考虑到以下设置。</li>
-<li> <span class="command">最小间距</span>：关键区域的着色点密度（如边角处）。</li>
+<li> <span class="command">最小间距</span>：关键区域的着色点密度（如角落处）。</li>
 <li> <span class="command">最大间距</span>：非关键区域的着色点密度（如没有遮挡物的平面表面）。</li>
 这项设置的各种数值你也会在全局光照的<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_DENSITY" target="_self"><span class="text_id">密度</span></a>设置中看到。着色点分布其实就是环境吸收缓存的分布。</p>
 <p></ul><p></p>
