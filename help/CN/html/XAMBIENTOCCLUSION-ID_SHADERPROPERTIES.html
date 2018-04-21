@@ -57,13 +57,13 @@
 <p><span class="command">采样精度</span>设置决定了分布的采样位置和数量，以此来实现可能的最佳效果。在关键区域，采样数量会使用<span class="command">最大取样值</span>。</p>
 <p>因此，<span class="command">采样精度</span>设置对关键区域有最大的影响（因为在这些区域使用更高的值会有更多的采样），而对非关键区域的影响较少，这些地方会使用<span class="command">最小取样值</span>。</p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","示例：","hl_1"--><p><span class="HL_3">示例：</span></p>
-<p>下面的场景是使用这项设置的各种数值来进行渲染的：</p>
+<p>下面的场景是改变各种设置的参数来进行渲染的：</p>
 <p><ul></p>
 <p><li> 左列：最大取样值</li>
 <li> 中列：采样精度</li>
 <li> 右列：最大光线长度</li></ul><p></p>
 <p>相应的渲染时间（每一列）被标注在每幅图像上，这样你就能知道改变这项设置会怎样影响渲染时间了。</p>
-<p><div class="image_full" style="max-width:1440px"><img  src="../pics/004202.jpg"  ><span class="caption">所有图像中一致的是：<span class="command">最小光线长度 </span> <span class="command">0</span>，<span class="command">散射</span> <span class="command">100</span>，<span class="command">对比</span> <span class="command">10</span>。</span></div></p>
+<p><div class="image_full" style="max-width:1440px"><img  src="../pics/004202.jpg"  ><span class="caption">所有图像中相同的是：<span class="command">最小光线长度 </span> <span class="command">0</span>，<span class="command">散射</span> <span class="command">100</span>，<span class="command">对比</span> <span class="command">10</span>。</span></div></p>
 <p><a id="AMBIENTOCCLUSIONSHADER_MINSAMPLES" name="AMBIENTOCCLUSIONSHADER_MINSAMPLES"></a> <!--INDEX "8","最小取样值","AMBIENTOCCLUSIONSHADER_MINSAMPLES"--><span class="c4d_id">最小取样值</span> <span class="range">[1..10000]</span></p>
 <p>使用这项设置来定义用在非关键区域的采样数量。</p>
 <p><a id="AMBIENTOCCLUSIONSHADER_MAXSAMPLES" name="AMBIENTOCCLUSIONSHADER_MAXSAMPLES"></a> <!--INDEX "8","最大取样值","AMBIENTOCCLUSIONSHADER_MAXSAMPLES"--><span class="c4d_id">最大取样值</span> <span class="range">[1..10000]</span></p>
