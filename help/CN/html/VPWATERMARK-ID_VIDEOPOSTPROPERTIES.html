@@ -31,12 +31,13 @@
 <p><!--INDEX "6","文本属性","VP_WATERMARK_TEXT"--><a id="VP_WATERMARK_TEXT" name="VP_WATERMARK_TEXT"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>文本属性</span></p>
 <p><a id="VP_WATERMARK_TEXT_ENABLE" name="VP_WATERMARK_TEXT_ENABLE"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_ENABLE","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","启用","VP_WATERMARK_TEXT_ENABLE"--><span class="c4d_id">启用</span></p>
 <p>启用或禁用显示文本框。</p>
-<p><a id="VP_WATERMARK_TEXT_SHOWLABELS" name="VP_WATERMARK_TEXT_SHOWLABELS"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_SHOWLABELS","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","显示标签","VP_WATERMARK_TEXT_SHOWLABELS"--><span class="c4d_id">显示标签</span></p>
-<p>启用或禁用以下 8 个选项：</p>
 <p><a id="VP_WATERMARK_TEXT_DYNAMICLAYOUT" name="VP_WATERMARK_TEXT_DYNAMICLAYOUT"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_DYNAMICLAYOUT","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","动态界面","VP_WATERMARK_TEXT_DYNAMICLAYOUT"--><span class="c4d_id">动态界面</span></p>
 <p>若启用，文本框条目将被排序，因此将使用最少的列数（否则顺序将直接反映对话框窗口选项的顺序）。</p>
+<p><a id="VP_WATERMARK_TEXT_SHOWLABELS" name="VP_WATERMARK_TEXT_SHOWLABELS"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_SHOWLABELS","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","显示标签","VP_WATERMARK_TEXT_SHOWLABELS"--><span class="c4d_id">显示标签</span></p>
+<p>是否以下 8 个参数的标签（勾选则显示相应的参数名称，否则只显示参数）：</p>
 <p><a id="VP_WATERMARK_TEXT_TIMECODE" name="VP_WATERMARK_TEXT_TIMECODE"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_TIMECODE","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","时间码","VP_WATERMARK_TEXT_TIMECODE"--><span class="c4d_id">时间码</span><br>
-<a id="VP_WATERMARK_TEXT_render time" name="VP_WATERMARK_TEXT_render time"></a> <br><a id="VP_WATERMARK_TEXT_ACTIVECAMERA" name="VP_WATERMARK_TEXT_ACTIVECAMERA"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_ACTIVECAMERA","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","激活摄像机","VP_WATERMARK_TEXT_ACTIVECAMERA"--><span class="c4d_id">激活摄像机</span><br>
+<a id="VP_WATERMARK_TEXT_RENDERTIME" name="VP_WATERMARK_TEXT_RENDERTIME"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_RENDERTIME","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","渲染时间","VP_WATERMARK_TEXT_RENDERTIME"--><span class="c4d_id">渲染时间</span><br>
+<a id="VP_WATERMARK_TEXT_ACTIVECAMERA" name="VP_WATERMARK_TEXT_ACTIVECAMERA"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_ACTIVECAMERA","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","激活摄像机","VP_WATERMARK_TEXT_ACTIVECAMERA"--><span class="c4d_id">激活摄像机</span><br>
 <a id="VP_WATERMARK_TEXT_DATE" name="VP_WATERMARK_TEXT_DATE"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_DATE","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","日期","VP_WATERMARK_TEXT_DATE"--><span class="c4d_id">日期</span><br>
 <a id="VP_WATERMARK_TEXT_SCENENAME" name="VP_WATERMARK_TEXT_SCENENAME"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_SCENENAME","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","工程名称","VP_WATERMARK_TEXT_SCENENAME"--><span class="c4d_id">工程名称</span><br>
 <a id="VP_WATERMARK_TEXT_POLYCOUNT" name="VP_WATERMARK_TEXT_POLYCOUNT"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_POLYCOUNT","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","面数","VP_WATERMARK_TEXT_POLYCOUNT"--><span class="c4d_id">面数</span><br>
@@ -94,72 +95,72 @@
 <p><span class="command">$gidiffdepth</span>：<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_DIFFUSE_DEPTH" target="_self"><span class="text_id">漫射深度</span></a>。</p>
 <p><span class="command">$giaccuracy</span>：<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_THRESHOLD" target="_self"><span class="text_id">精度</span></a>。</p>
 <p><span class="command">$gisamples</span>：<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT" target="_self"><span class="text_id">采样数量</span></a>。</p>
-<p><span class="command">$gidensity</span>: A combination of the <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DENSITY_QUALITY" target="_self"><span class="text_id">Record Density</span></a> settings, in the following order: <span class="command">Min./Max. Rate</span>, <span class="command">Radius</span>, <span class="command">Minimum Radius</span>, <span class="command">Density Control</span>. In the rendered image, this would appear as follows: "-3/0/40%/12.5/60%".</p>
+<p><span class="command">$gidensity</span>：在下列命令中与<a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DENSITY_QUALITY" target="_self"><span class="text_id">记录密度</span></a>设置结合使用：<span class="command">最小/最大比率</span>，<span class="command">半径</span>，<span class="command">最小半径</span>，<span class="command">密度控制</span>。在渲染的图像中，它会以如下方式显示：“-3/0/40%/12.5/60%”。</p>
 <p><span class="command">$gismphemi</span></p>
-<p>Displays if <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_ENABLED" target="_self"><span class="text_id">Hemispherical Sampling</span></a> is defined.</p>
+<p>如果设定了<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_ENABLED" target="_self"><span class="text_id">半球采样</span></a>，则会被显示。</p>
 <p><span class="command">$gismparea</span></p>
-<p>Displays if <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_ENABLED" target="_self"><span class="text_id">Discrete Area Sampling</span></a> , "Force Per Pixel" or a custom 采样数量 is defined.</p>
+<p>如果设定了<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_ENABLED" target="_self"><span class="text_id">离散面积采样</span></a>、强制每像素或自定义的采样数量，则会被显示。</p>
 <p><span class="command">$gismpsky</span></p>
-<p>Displays if <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_SKY_ENABLED" target="_self"><span class="text_id">Discrete Sky Sampling</span></a> , Force Per Pixel or a custom 采样数量 is defined.</p>
+<p>如果设定了<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_SKY_ENABLED" target="_self"><span class="text_id">离散天空采样</span></a>、强制每像素或自定义的采样数量，则会被显示。</p>
 <p><span class="command">$gismpradmap</span></p>
-<p>Displays if <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_SECONDARY_METHOD" target="_self"><span class="text_id">Secondary Method</span></a> <nobr><span class="text_id_cycle">Radiosity Maps</span></nobr> is defined.</p>
+<p>如果<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_SECONDARY_METHOD" target="_self"><span class="text_id">二次反弹算法</span></a>的<nobr><span class="text_id_cycle">辐射贴图</span></nobr>选项，则会被显示。</p>
 <p><a id="hl_4" name="hl_4"></a><!--INDEX "3","物理渲染器","hl_4"--><p><span class="HL_3">物理渲染器</span></p>
-<p><span class="command">$phymblur</span>: A combination of the following 3 values (in the following order) <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_MOTION" target="_self"><span class="text_id">Motion Subdivisions</span></a>, <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_DEFORMATION" target="_self"><span class="text_id">Deformation Subdivisions</span></a> and  <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_HAIR" target="_self"><span class="text_id">Hair Subdivisions</span></a>.</p>
-<p><span class="command">$physampling</span>: A combination of the following 4 values (in the following order) <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES" target="_self"><span class="text_id">Sampling Subdivisions</span></a>, <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_MIN" target="_self"><span class="text_id">Shading Subdivisions (Min)</span></a>, <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_MAX" target="_self"><span class="text_id">Shading Subdivisions (Max)</span></a> and <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_ERROR" target="_self"><span class="text_id">Shading Error Threshold</span></a>.</p>
-<p><span class="command">$phyblurry</span>: A combination of the following 3 values (in the following order) <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_SHADING" target="_self"><span class="text_id">Blurriness Subdivision (Max)</span></a>, <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_LIGHT" target="_self"><span class="text_id">Shadow Subdivision (Max)</span></a>, <a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_AO" target="_self"><span class="text_id">Ambient Occlusion Subdivision (Max)</span></a>.</p>
+<p><span class="command">$phymblur</span>：下列三个数值的组合（按以下顺序）：<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_MOTION" target="_self"><span class="text_id">运动细分</span></a>、<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_DEFORMATION" target="_self"><span class="text_id">变形细分</span></a>和<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_MOTION_SAMPLES_HAIR" target="_self"><span class="text_id">毛发细分</span></a>。</p>
+<p><span class="command">$physampling</span>：下列四个数值的组合（按以下顺序）：<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES" target="_self"><span class="text_id">采样细分</span></a>、<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_MIN" target="_self"><span class="text_id">着色细分（最小）</span></a>、<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_MAX" target="_self"><span class="text_id">着色细分（最大）</span></a>和<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_SHADING_ERROR" target="_self"><span class="text_id">着色错误阈值</span></a>。</p>
+<p><span class="command">$phyblurry</span>：下列三个数值的组合（按以下顺序）：<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_SHADING" target="_self"><span class="text_id">模糊细分（最大）)</span></a>，<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_LIGHT" target="_self"><span class="text_id">阴影细分（最大）</span></a>，<a href="VPXMBSAMPLER-ID_VIDEOPOSTPROPERTIES.html#VP_XMB_RAYTRACING_SAMPLES_BLURRY_AO" target="_self"><span class="text_id">环境吸收细分（最大）</span></a>.</p>
 <p><RELEASE_140></p>
 <p><a id="hl_5" name="hl_5"></a><!--INDEX "3","摄像机","hl_5"--><p><span class="HL_3">摄像机</span></p>
-<p>Values that change over time (e.g., animated focal length values) will of course be displayed correctly for the corresponding image.</p>
-<p><span class="command">$camname</span>: The name of the active camera</p>
-<p><span class="command">$camfl</span>: The <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERA_FOCUS" target="_self"><span class="text_id">Focal Length</span></a>.</p>
-<p><span class="command">$camtdst</span>: The <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">Focus Distance</span></a>.</p>
-<p><span class="command">$camwb</span>: The <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_WHITE_BALANCE_TEMPERATURE" target="_self"><span class="text_id">White Balance (K)</span></a>.</p>
-<p><span class="command">$camfn</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_FNUMBER_VALUE" target="_self"><span class="text_id">F-Stop (f/#)</span></a>.</p>
-<p><span class="command">$camiso</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_ISO_VALUE" target="_self"><span class="text_id">ISO</span></a> value.</p>
-<p><span class="command">$camgain</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_GAIN_VALUE" target="_self"><span class="text_id">Gain (dB)</span></a> value.</p>
-<p><span class="command">$camsht</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_SHUTTER_SPEED_VALUE" target="_self"><span class="text_id">Shutter Speed (s)</span></a>.</p>
-<p><span class="command">$camdstrt</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_LENS_DISTORTION_CUBIC" target="_self"><span class="text_id">Lens Distortion - Cubic</span></a>.</p>
-<p><span class="command">$camab</span>: The <a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_CHROMATIC_ABERRATION_STRENGTH" target="_self"><span class="text_id">Chromatic Aberration</span></a>.</p>
+<p>随时间变化的数值（如变化的焦距数值）会在显示在对应的图像中。</p>
+<p><span class="command">$camname</span>：活动摄像机的名称。</p>
+<p><span class="command">$camfl</span>：<a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERA_FOCUS" target="_self"><span class="text_id">焦距</span></a>。</p>
+<p><span class="command">$camtdst</span>：<a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_TARGETDISTANCE" target="_self"><span class="text_id">焦点距离</span></a>。</p>
+<p><span class="command">$camwb</span>：<a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_WHITE_BALANCE_TEMPERATURE" target="_self"><span class="text_id">白平衡（K）</span></a>。</p>
+<p><span class="command">$camfn</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_FNUMBER_VALUE" target="_self"><span class="text_id">物理相机：光圈（f/#）</span></a>。</p>
+<p><span class="command">$camiso</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_ISO_VALUE" target="_self"><span class="text_id">物理相机：ISO</span></a>数值。</p>
+<p><span class="command">$camgain</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_GAIN_VALUE" target="_self"><span class="text_id">物理相机：增益（dB）</span></a>数值。</p>
+<p><span class="command">$camsht</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_SHUTTER_SPEED_VALUE" target="_self"><span class="text_id">物理相机：快门速度（秒）</span></a>。</p>
+<p><span class="command">$camdstrt</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_LENS_DISTORTION_CUBIC" target="_self"><span class="text_id">物理相机：镜头畸变</span></a>。</p>
+<p><span class="command">$camab</span>：<a href="OCAMERA-ID_GROUP_LENS.html#CAMERAOBJECT_CHROMATIC_ABERRATION_STRENGTH" target="_self"><span class="text_id">物理相机：色散</span></a>。</p>
 <p></RELEASE_140></p>
 <p><a id="hl_6" name="hl_6"></a><!--INDEX "3","统计","hl_6"--><p><span class="HL_3">统计</span></p>
-<p>Values that change over time (e.g., animated focal length values) will of course be displayed correctly for the corresponding image.</p>
-<p><span class="command">$render time</span>: Render time per image (e.g., 12:34:56).</p>
-<p><span class="command">$polycnt</span>: The number of polygons for the rendered Project.</p>
+<p>随时间变化的数值（如变化的焦距数值）会在显示在对应的图像中。</p>
+<p><span class="command">$render time</span>：每张图像的渲染时间（如：12:34:56）。</p>
+<p><span class="command">$polycnt</span>：渲染的工程的多边形数量。</p>
 <p><RELEASE_140></p>
-<p><span class="command">$objcnt</span>: The total number of active and visible objects in the Project (i.e., disabled objects and those hidden for rendering will not be counted; Cloner objects and objects duplicated via Array will also be excluded).</p>
-<p><span class="command">$lightcnt</span> :The number of active light sources in the rendered Project (i.e., disabled lights and those hidden for rendering will not be counted; cloned lights and those duplicated via Array will also be excluded).</p>
-<p><span class="command">$starttime</span>: The time at which rendering began</p>
-<p><span class="command">$startdate</span>: The date on which rendering began</p>
+<p><span class="command">$objcnt</span>：工程中活动和可见的对象总数（禁用的对象和渲染不可见的对象不会计算在内；克隆对象和通过阵列复制的对象则会被包含在内）。</p>
+<p><span class="command">$lightcnt</span>：工程中活动的光源数量（禁用的灯光和渲染不可见的灯光不会计算在内；克隆的灯光和通过阵列复制的灯光则会被包含在内）。</p>
+<p><span class="command">$starttime</span>：渲染开始的时间。</p>
+<p><span class="command">$startdate</span>：渲染开始的日期。</p>
 <p></RELEASE_140</p>
 <p><a id="VP_WATERMARK_TEXT_BG_OPACITY" name="VP_WATERMARK_TEXT_BG_OPACITY"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_BG_OPACITY","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","背景可见度","VP_WATERMARK_TEXT_BG_OPACITY"--><span class="c4d_id">背景可见度</span> <span class="range">[0..100%]</span></p>
-<p>The text box background is made up of a colored bar whose opacity can be defined here. If <span class="command_value">0%</span> is defined, the background will be transparent and only the text will be displayed.</p>
+<p>文本框背景是由色条构成的，你可以在这里对它进行设置。如果将数值设为<span class="command_value">0%</span>，背景会变为透明而只显示文本。</p>
 <p><a id="VP_WATERMARK_TEXT_POS_Y" name="VP_WATERMARK_TEXT_POS_Y"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_POS_Y","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","垂直对齐","VP_WATERMARK_TEXT_POS_Y"--><span class="c4d_id">垂直对齐</span></p>
-<p>Here you can define if the text box should be displayed at the top or at the bottom of the image.</p>
+<p>可以在这里设置文本框显示在图像的顶部还是底部。</p>
 <p><a id="VP_WATERMARK_TEXT_FONT" name="VP_WATERMARK_TEXT_FONT"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_FONT","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","字体","VP_WATERMARK_TEXT_FONT"--><span class="c4d_id">字体</span></p>
-<p>Here you can select a font for the text. It is recommended that a san-serif font be selected that is not too thin. If possible, the font type should be bold, if available. This makes the text easier to read.</p>
+<p>可以在这里设置文本的字体。推荐使用不过于纤细的无衬线字体。可能的话，可以将字体设置为粗体，这会让文字更易读。</p>
 <p><a id="VP_WATERMARK_TEXT_COLOR" name="VP_WATERMARK_TEXT_COLOR"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_COLOR","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","颜色","VP_WATERMARK_TEXT_COLOR"--><span class="c4d_id">颜色</span></p>
-<p>Here you can define the text color.</p>
+<p>可以在这里设置文本颜色。</p>
 <p><a id="VP_WATERMARK_TEXT_BG_COLOR" name="VP_WATERMARK_TEXT_BG_COLOR"></a> <!--AM_JUMP "VP_WATERMARK_TEXT_BG_COLOR","VP_WATERMARK_TEXT","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","背景颜色","VP_WATERMARK_TEXT_BG_COLOR"--><span class="c4d_id">背景颜色</span></p>
-<p>Here you can define the background color for the text box.</p>
+<p>可以在这里设置文本框的背景色。</p>
 <p><!--INDEX "6","图像属性","VP_WATERMARK_IMG"--><a id="VP_WATERMARK_IMG" name="VP_WATERMARK_IMG"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>图像属性</span></p>
 <p><a id="VP_WATERMARK_IMG_ENABLE" name="VP_WATERMARK_IMG_ENABLE"></a> <!--AM_JUMP "VP_WATERMARK_IMG_ENABLE","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","启用","VP_WATERMARK_IMG_ENABLE"--><span class="c4d_id">启用</span></p>
-<p>Enable this option if you want to include a bitmap in the rendered image.</p>
+<p>如果想在渲染的图像中添加位图，可以启用这个选项。</p>
 <p><a id="VP_WATERMARK_IMG_FILENAME" name="VP_WATERMARK_IMG_FILENAME"></a> <!--AM_JUMP "VP_WATERMARK_IMG_FILENAME","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","文件名","VP_WATERMARK_IMG_FILENAME"--><span class="c4d_id">文件名</span></p>
-<p>Load the bitmap (any image format supported by Cinema 4D) that you want to include in the rendered image here. If you want to use a logo or similar graphic, make sure it has been masked correctly using an alpha channel. This will ensure that only the logo and not its background will be seen.</p>
+<p>在这里加载想要添加到渲染图像中的位图（任何 CINEMA 4D 支持的图像格式）。如果想要使用 LOGO 或类似的图形，确认它正确使用了 alpha 通道，这样可以保证只会显示 LOGO 而不会看到背景。</p>
 <p><a id="VP_WATERMARK_IMG_OPACITY" name="VP_WATERMARK_IMG_OPACITY"></a> <!--AM_JUMP "VP_WATERMARK_IMG_OPACITY","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","可见度","VP_WATERMARK_IMG_OPACITY"--><span class="c4d_id">可见度</span> <span class="range">[0..100%]</span></p>
-<p>Use this value to define the bitmap’s opacity.</p>
+<p>使用这项数值来定义位图的可见度。</p>
 <p><a id="VP_WATERMARK_IMG_BLENDMODE" name="VP_WATERMARK_IMG_BLENDMODE"></a> <!--AM_JUMP "VP_WATERMARK_IMG_BLENDMODE","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","混合模式","VP_WATERMARK_IMG_BLENDMODE"--><span class="c4d_id">混合模式</span></p>
 <p>参见<a href="11718.html" target="">混合模式</a>。</p>
 <p><a id="VP_WATERMARK_IMG_POS_X" name="VP_WATERMARK_IMG_POS_X"></a> <!--AM_JUMP "VP_WATERMARK_IMG_POS_X","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","水平对齐","VP_WATERMARK_IMG_POS_X"--><span class="c4d_id">水平对齐</span><br><a id="VP_WATERMARK_IMG_POS_Y" name="VP_WATERMARK_IMG_POS_Y"></a> <!--AM_JUMP "VP_WATERMARK_IMG_POS_Y","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","垂直对齐","VP_WATERMARK_IMG_POS_Y"--><span class="c4d_id">垂直对齐</span></p>
-<p>Here you can define how the bitmap should be positioned: at the edge or centered.</p>
+<p>这里可以设置位图的位置：在边缘还是中心。</p>
 <p><a id="VP_WATERMARK_IMG_MARGIN" name="VP_WATERMARK_IMG_MARGIN"></a> <!--AM_JUMP "VP_WATERMARK_IMG_MARGIN","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","页边距","VP_WATERMARK_IMG_MARGIN"--><span class="c4d_id">页边距</span> <span class="range">[0..2147483647]</span></p>
-<p>if the bitmap is not positioned directly at the center and lies at the edge of the rendered image, this value can be used to define the distance from the edge you want the bitmap to be.</p>
+<p>如果图像不位于渲染图像的边缘或中心，可以使用这个数值来设定位图到图像边缘的距离。</p>
 <p><a id="VP_WATERMARK_IMG_SCALE" name="VP_WATERMARK_IMG_SCALE"></a> <!--AM_JUMP "VP_WATERMARK_IMG_SCALE","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","缩放","VP_WATERMARK_IMG_SCALE"--><span class="c4d_id">缩放</span> <span class="range">[0.1..1000%]</span></p>
-<p>Use this value to scale the bitmap. A value of <span class="command_value">100%</span> will scale the bitmap over the entire surface. Lesser values decrease and greater values increase the scale of the bitmap.</p>
+<p>使用这项数值来缩放位图。如果设为<span class="command_value">100%</span>，会将位图缩放到整个表面。较低数值会减少位图的缩放比例，较高数值则会增加。</p>
 <p><a id="VP_WATERMARK_IMG_SCALE_ASPECT" name="VP_WATERMARK_IMG_SCALE_ASPECT"></a> <!--AM_JUMP "VP_WATERMARK_IMG_SCALE_ASPECT","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","保持宽高比","VP_WATERMARK_IMG_SCALE_ASPECT"--><span class="c4d_id">保持宽高比</span></p>
-<p>Enable this option to ensure that the bitmap’s aspect ratio is maintained when scaled.</p>
+<p>启用这个选项来确保在缩放时保持宽高比。</p>
 <p><a id="VP_WATERMARK_IMG_SCALE_KEEPSIZE" name="VP_WATERMARK_IMG_SCALE_KEEPSIZE"></a> <!--AM_JUMP "VP_WATERMARK_IMG_SCALE_KEEPSIZE","VP_WATERMARK_IMG","ID_VIDEOPOSTPROPERTIES"--><!--INDEX "8","保持原始尺寸","VP_WATERMARK_IMG_SCALE_KEEPSIZE"--><span class="c4d_id">保持原始尺寸</span></p>
-<p>If enabled, the bitmap will retain its original size and will be added to the rendered image with this size.</p>
+<p>若启用，位图会保持其原始尺寸并按该尺寸添加到渲染的图像中。</p>
 <p>
 
 </p>
