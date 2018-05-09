@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>提示和技巧</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32220"-->
+		<!--VATER_ID "32219"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "提示和技巧"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="32219.html" target="_self">全局光照</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","提示和技巧",""--><p><span class="HL_group">提示和技巧</span></p><p></p>
+<p><PAGE_RELEASE_110></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","那么光线实际来自哪里？","hl_1"--><p><span class="HL_1">那么光线实际来自哪里？</span></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","示例 1","hl_2"--><p><span class="HL_2">示例 1</span></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/020170.jpg"  ><span class="caption"></span></div></p>
+<p>对象被放置并添加了纹理/颜色，且完成了轻微反射的地面之后，你不需要成为一名火箭科学家来照亮场景。</p>
+<p>在这个场景中，除<a href="5798.html" target="">物理天空</a>外的光源只有左侧的两个辉光灯。</p>
+<p><div class="image_full" style="max-width:1199px"><img  src="../pics/020171.jpg"  ><span class="caption">场景中使用的物理天空和两个多边形灯光。</span></div></p>
+<p>房间的前面和背面是开放的，可以让大量的光线进入，两种类型的光通过这些开放的面进入房间，它们都来自于物理天空：<ul></p>
+<p><li> 投下区域阴影的黄色阳光</li>
+<li> 通过天空半球发射的偏蓝色天光。</li>
+左侧墙上的两个多边形灯光（应用了发光材质的对象）对房间的整体光照影响很小，而通过右侧电视机所发出的光几乎可以忽略不计。</p>
+<p></ul><p></p>
+<p>这几个光源足够在这个场景中实现真实的光照效果，而大量的工作是由全局光照完成的，使用的<span class="command">预设</span>为<span class="command_value">室内-高品质（高漫射深度）</span>。</p>
+<p>使用的天空对象轻微提高了<a href="OSKYSHADER-ID_SKY_GROUP_PHYSICAL_SKY.html#SKY_REAL_SKY_SKY_INTENSITY" target="">天空</a>的数值并大幅提高了<a href="OSKYSHADER-ID_SKY_GROUP_PHYSICAL_SUN.html#SKY_REAL_SKY_SUN_INTENSITY" target="">太阳</a>的数值。</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","示例 2","hl_3"--><p><span class="HL_2">示例 2</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/020172.jpg"  ><span class="caption">场景由 Holger Schömann 提供。</span></div> </p>
+<p>除了地面瓷砖的散布反射和置换生成的地毯，场景中还使用了 HDRI 光照设置。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/020173.jpg"  ><span class="caption">光线只能通过窗户和天井进入房间。</span></div></p>
+<p>这个房间有两个相当大的开口，光线可以通过它们进入——天井和窗户中的天光。两个开口都被设定为 <a href="32221.html" target="">GI 入口</a>，这样就可以将全局光照计算集中在正确的区域。光线是由<a href="OSKY.html" target="">天空</a>对象的 <a href="11801.html" target="">HDRI</a> 纹理生成的。</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","示例 3","hl_4"--><p><span class="HL_2">示例 3</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/020174.jpg"  ><span class="caption">使用了4个区域光来照亮花瓶。</span></div></p>
+<p>是什么让这个花瓶渲染效果这么好？实际上并没有什么特别的（除了优秀的场景本身……）：场景是通过四个略微偏蓝和偏橙的<a href="OLIGHT-LIGHT_GROUP_GENERAL.html#LIGHT_TYPE" target="">区域</a>光照亮的，并在“细节”标签页中将衰减设置为“平方倒数”。这种衰减类型很重要，因为它是模拟真实世界中光线衰减最准确的。另外，对这几个区域光启用了<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SHOWINREFLECTION" target="">反射可见</a>，这样可以在花瓶表面看到区域光的反射。</p>
+<p>如你在上图中所看到的，使用全局光照（<span class="command">辐照缓存+辐照缓存</span>，<span class="command">漫射深度</span> = 3）可以实现均匀和舒服的光线散布。</p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","室外场景","hl_5"--><p><span class="HL_1">室外场景</span></p>
+<p><div class="image_full" style="max-width:981px"><img  src="../pics/020176.jpg"  ><span class="caption">左图：<span class="command">漫射深度</span> = <span class="command_value">1</span>；右图：漫射深度 = 3。可见的差别很小，但是渲染时间的差别很大。</span></div></p>
+<p>对主要被天空照亮的室外场景来说，<span class="command">漫射深度</span>设为<span class="command_value">1</span>将足够了，因为天空会从每一个方向发射光线，并且几乎所有对象的表面都能“看到”天空并被它的光线照亮。</p>
+<p><a id="32BIT" name="32BIT"></a></p>
+<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","颜色映射和32位渲染","hl_6"--><p><span class="HL_1">颜色映射和32位渲染</span></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/020177.jpg"  ><span class="caption">左图是一张正常的8位渲染图；右图是使用颜色映射渲染的图像。唯一的光源是一个多边形灯光（使用了发光材质的对象）。场景由 Holger Schömann 提供。</span></div></p>
+<p>要实现理想的渲染效果，平衡渲染图像中的亮度十分重要。很多时候场景中的亮度并不均匀，或者有不合适的亮度对比。如果场景被渲染得太暗，有时候艺术家倾向于提高光源的亮度，这时会发现一些区域会被照得过于明亮了。</p>
+<p>有两种方法可以避免这种情况：<ul></p>
+<p><li> <a href="VPCOLORMAPPING-ID_VIDEOPOSTPROPERTIES.html" target="">颜色映射</a></li>
+<li> 使用<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_FORMATDEPTH" target="">32位</a>渲染并之后在可以编辑32位图像的软件中进行处理，图像编辑软件需要提供必要的编辑32位颜色深度的工具。</li></ul><p></p>
+<p>两种方法所做的工作基本相同：它们用高颜色深度来渲染图片然后将其转换为8位图像。</p>
+<p><a id="GLAS" name="GLAS"></a></p>
+<p><a id="hl_7" name="hl_7"></a><!--INDEX "3","从全局光照中排除玻璃","hl_7"--><p><span class="HL_1">从全局光照中排除玻璃</span></p>
+<p><div class="image_full" style="max-width:751px"><img  src="../pics/020179.jpg"  ><span class="caption">可以用不同的方法将透明物体从全局光照中排除。从左到右渲染时间依次增加。注意中间图像中的阴影被渲染得很暗。</span></div></p>
+<p>根据场景的不同，从全局光照中排除对象的方式有：<ul></p>
+<p><li> 使用合成标签（<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYGI" target="_self"><span class="text_id">全局光照可见</span></a>选项）… </li>
+<li> 或者在材质通道中（<a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html#gi" target="">接收全局光照</a>选项或对焦散使用<span class="command">产生全局光照</span>）对特定材质“阻止”全局光照（根据<span class="command">接收全局光照</span>选项，这会对透明材质自动产生影响。参见<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF" target="">玻璃/镜子优化</a>）。</li></ul><p></p>
+<p>由于玻璃的透明度，它可以轻易地从全局光照中排除。这样做产生的效果很小，并会因此会减少渲染时间。</p>
+<p>你需要根据一个基本准则来来做出决定：对玻璃对象应用全局光照是否在最终渲染图像中会有明显或重要的差别。使用上面的图像作为参考。</p>
+<p><a id="hl_8" name="hl_8"></a><!--INDEX "3","全局光照和烘焙对象","hl_8"--><p><span class="HL_1">全局光照和烘焙对象</span></p>
+<p>参见<a href="5739.html#" target="">烘焙对象</a>。</p>
+<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","全局光照和高光","hl_9"--><p><span class="HL_1">全局光照和高光</span></p>
+<p>注意，当只使用全局光照来照亮场景（不使用灯光对象而只使用发光对象）时，材质的高光颜色通道会被忽略。为什么会这样呢？</p>
+<p>使用常见的、通常是球形（也很小）的光源时，这两种效果都能让材质渲染效果逼真，在真实世界中，高光只不过是区域光的反射。</p>
+<p>对于全局光照的计算来说，这意味着：高光是通过反射通道和发光物的大小/颜色来调整的。</p>
+<p>当然，你也可以创建额外的光源，这样在特定的对象上产生更多的高光。这可能与真实全局光照的原则不一致，但是还是得由最终渲染的效果来决定。</p>
+<p><a id="GIANI" name="GIANI"></a></p>
+<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","全局光照和动画","hl_10"--><p><span class="HL_1">全局光照和动画</span></p>
+<p>全局光照和动画是技术上的挑战。如果单张图像花费很长时间来使用全局光照进行渲染，那么用一系列这样的图像来渲染一段动画会需要非常长的渲染时间。另外，如果辐照缓存设置得太低，它可能会变得闪烁。</p>
+<p>在用全局光照创建动画时，你应该遵守以下规则：<ul></p>
+<p><li>使用 辐照缓存+辐照缓存 / 辐照缓存+准蒙特卡洛 时：如果闪烁发生在对象表面上，可能是<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">采样</span></a>太低（甚至需要四位数）。另一方面，如果闪烁发生对象周围的小区域上，则是<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_QUALITY" target="_self"><span class="text_id">记录密度</span></a>太低。在这种情况下，减少<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_MAX_LIMIT" target="_self"><span class="text_id">最大间距</span></a>应该会有帮助。如果没有用，可以使用更高的<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_QUALITY" target="_self"><span class="text_id">记录密度</span></a>设置。</li>
+<li> 如果基本光线映射质量太低，闪烁甚至会发生在最优的辐照缓存+光线映射设置下（参见下面的优化光线映射）。</li>
+<li> 准蒙特卡洛+准蒙特卡洛不会闪烁（渲染时间会相应增加，这也是时间最长的）。</li></ul><p></p>
+<p><a id="CAMAN" name="CAMAN"></a></p>
+<p><a id="hl_11" name="hl_11"></a><!--INDEX "3","摄像机动画和全动画","hl_11"--><p><span class="HL_2">摄像机动画和全动画</span></p>
+<p>辐照缓存提供以下动画类型：<ul></p>
+<p><li> <span class="command">使用摄像机路径</span>：只有摄像机是运动的，其他所有工程元素都会保持不变，因为没有物体和灯光的运动。这让辐照缓存变得很容易，因为它可以在整个动画中使用一个单一的、没有闪烁的缓存。必须禁用<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_ANIMATION" target="_self"><span class="text_id">全动画模式</span></a>（如果使用了光线映射，需要启用<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_PATH_CAMERA" target="_self"><span class="text_id">使用摄像机路径</span></a>）。你也可以使用一些技巧（参见<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_PREPASS" target="_self"><span class="text_id">仅进行预解算</span></a>）来得到想要的结果。</li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint">注意：<br></span>当通过 Team Render 来渲染时，只有优先分发单一缓存进行渲染时，使用缓存才是有效的。这个缓存可以之后被分发到渲染客户端（启用了<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_AUTOLOAD" target="_self"><span class="text_id">自动加载</span></a>选项）。</div></p>
+<p><ul></p>
+<p><li> <span class="command">全动画</span>：对与有对象/灯光运动的光照环境，必须对每个图像渲染一个独立的缓存。如果你不想加载或保存全局光照缓存文件，可以对所有使用的缓存类型禁用<span class="command">自动保存</span>和<span class="command">自动加载/span>（<span class="command">缓存文件</span>标签页）。禁用所有关于摄像机动画的选项（如对光线映射禁用<span class="command">使用摄像机路径</span>）。</li></ul><p></p>
+<p>如果想要加载/保存缓存文件，必须对所有使用的缓存类型启用<span class="command">自动加载</span>、<span class="command">自动保存</span>和<span class="command">全动画模式</span>。</p>
+<p><a id="TR" name="TR"></a></p>
+<p><a id="hl_12" name="hl_12"></a><!--INDEX "3","全局光照缓存和 Team Render","hl_12"--><p><span class="HL_2">全局光照缓存和 Team Render</span></p>
+<p>全局光照和 Team Render 是怎么一起工作的？</p>
+<p><a id="hl_13" name="hl_13"></a><!--INDEX "3","静帧","hl_13"--><p><span class="HL_3">静帧</span></p>
+<p>对于静帧图像，不需要修改设置，使用默认渲染设置（不是这里的<a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target="">渲染设置</a>），所有渲染客户端会参与渲染单一缓存文件，在渲染过程中它会被所有渲染客户端所使用。</p>
+<p><a id="hl_14" name="hl_14"></a><!--INDEX "3","动画","hl_14"--><p><span class="HL_3">动画</span></p>
+<p>首先你要确定渲染的是一个摄像机动画还是一个全动画（参见上文这两者的区别）。<ul></p>
+<p><li> <span class="command">全动画</span>：它可以直接发送到 Team Render 进行渲染。确认在<span class="command">缓存文件</span>标签页中启用了<span class="command">全动画</span>选项。</li>
+<li> <span class="command">摄像机动画</span>：所有缓存必须首先在本地进行预计算（这是唯一不会产生闪烁的方法），然后就可以在 Team Render 中渲染场景了，包括缓存文件。</li></ul><p></p>
+<p>下面的过程会应用到两种方式中：如果要在 Team Render 中使用的预计算缓存文件存在，必须启用<span class="command">缓存文件</span>标签页中的<span class="command">自动加载</span>选项。</p>
+<p>如果使用了不需要缓存的准蒙特卡洛渲染，也可以直接发送到 Team Render。</p>
+<p><a id="LM" name="LM"></a></p>
+<p><a id="hl_15" name="hl_15"></a><!--INDEX "3","优化光线映射","hl_15"--><p><span class="HL_2">优化光线映射</span></p>
+<p>不幸的是，光线映射并不总是从一个动画帧延续到下一帧。另外，会出现意外的光线溢出，它会对全局光照计算产生负面影响。请尝试以下的方法：<ul></p>
+<p><li> 尝试使用<span class="command">光线映射</span>标签页中的<span class="command">预过滤</span>（较快）和<span class="command">插值算法</span>（较慢）。光线映射会在一定程度上被平滑，这会减小与之后光线映射之间的差别。更大的<span class="command">采样数量</span>也会有所帮助，因为这也能产生平滑的效果。</li>
+<li> 单多边形的墙面会产生溢光（细小的亮斑）。确保墙壁有合适的体积（即厚度）。</li>
+<li> 如果在使用辐照缓存+光线映射时，在转角/斜面处出现了大范围的闪烁，请增加<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_PATH_COUNT" target="_self"><span class="text_id">光线数量（预乘1000）</span></a>。如果闪烁只发生在独立的小区域，减少<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_PATH_SCALE_SCREEN" target="_self"><span class="text_id">采样尺寸</span></a>会有所帮助（可能需要增加<span class="command">光线数量（预乘1000）</span>进行补偿）。</li></ul><p></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
