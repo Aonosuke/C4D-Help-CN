@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>渲染案例</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52453"-->
+		<!--VATER_ID "32219"-->
+		<!--REIHENFOLGE "4"-->
+		<!--TITLE "渲染案例"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="32219.html" target="_self">全局光照</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","渲染案例",""--><p><span class="HL_group">渲染案例</span></p><p></p>
+<p>你可以在这里找到一些渲染案例，它们各自使用了不同的全局光照方式。</p>
+<p>下面的场景是由穿过两扇窗户的天空照亮的，这两扇窗户被设置为 GI 入口，并且在背面的墙上有一个点光源。唯一的变量是全局光照方式，剩下的其他设置为中等质量。有些渲染中出现了杂斑，可以使用更高的采样来提高它的质量。</p>
+<p>注意，渲染时间只是作为指标，并会在其他工程中变化。（如果启用了<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_RADIANCE" target="_self"><span class="text_id">建立辐射贴图</span></a>，在使用辐照缓存+光线映射和准蒙特卡洛+光线映射的情况下，渲染时间会戏剧性地减少）。100%的渲染时间是最准确的准蒙特卡洛+准蒙特卡洛。</p>
+<table  border="0" cellspacing="10" cellpadding="0"><TR><TD><div class="image_full" style="max-width:800px"><img  src="../pics/037286.jpg"  ><span class="caption"></span></div></TD><TD><div class="image_full" style="max-width:802px"><img  src="../pics/037287.jpg"  ><span class="caption"></span></div></TD></TR></TABLE>
+<table  border="0" cellspacing="10" cellpadding="0"><TR><TD><div class="image_full" style="max-width:800px"><img  src="../pics/037288.jpg"  ><span class="caption"></span></div></TD><TD><div class="image_full" style="max-width:800px"><img  src="../pics/037289.jpg"  ><span class="caption"></span></div></TD></TR></TABLE>
+<p>比较各种方式，可以注意到以下几点：<ul></p>
+<p><li> 与准蒙特卡洛（作为首次反弹算法）相比，简化的辐照缓存的渲染结果相似，而速度要快得多。</li>
+<li> 在使用光线映射时，由于大量的光线反射，室内空间被渲染得比较明亮。反之…</li>
+<li> …其他的二次反弹算法渲染结果较暗，即使它们允许最高的8次反射并且渲染时间更长。</li>
+<li> 首次反弹算法使用准蒙特卡洛会让投影准确。</li>
+<li> 辐照缓存+准蒙特卡洛容易出现闪烁。</li></ul><p></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

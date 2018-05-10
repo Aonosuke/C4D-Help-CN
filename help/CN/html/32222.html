@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>第一步</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32222"-->
+		<!--VATER_ID "32219"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "第一步"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="32219.html" target="_self">全局光照</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","第一步",""--><p><span class="HL_group">第一步</span></p><p></p>
+<p><PAGE_RELEASE_110></p>
+<p>如果你想要用全局光照来照亮场景，要如何操作呢？怎样的工作流程能快速地得到最好的效果？</p>
+<p><ol><br><li> 在渲染设置中激活全局光照（点击“效果…”按钮）。<br>
+<li> 设置合适的<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_PRESETS" target="_self"><span class="text_id">预设</span></a>。所有的后续测试渲染都应该以合理的速度进行，否则测试渲染阶段会变成一个艰难的过程。遵循下面的步骤来避免这种情况的发生：<ul><br>
+<li> 以低<a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html#RDATA_XRES_VIRTUAL" target="">分辨率</a>进行渲染（例如，通常 320×240 就足够检查场景或部分场景的亮度）。或者：<br>
+<li> 以低分辨率使用<a href="OSNIPER.html" target="">交互式区域渲染</a>(IRR)。<br>
+<li> 首先要关注的是亮度、光线分布和相似的元素。<br>决定是否需要额外的光源。如果需要的话，可以增加 <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_GAMMA_VALUE" target="_self"><span class="text_id">Gamma</span></a> 值（<span class="command">常规</span>标签页）。还需要注意<a href="VPCOLORMAPPING-ID_VIDEOPOSTPROPERTIES.html" target="">这个</a>以及<a href="32220.html#32bit" target="">这个</a>颜色映射参数。<br>
+<li> 当你对场景的光照感到满意，你就可以将注意力转移到全局光照的质量上。首先，检查是否可以使用 <a href="32221.html" target="">GI 入口</a>或多边形/区域灯光。这可以提高渲染质量并显著缩短渲染时间。<br>
+<li> 现在，可以通过设定高质量的预设，或调节单项设置来提高全局光照质量。<br></ul></ol><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","纠错","hl_1"--><p><span class="HL_1">纠错</span></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","全局光照阴影渲染得不够精确？","hl_2"--><p><span class="HL_2">全局光照阴影渲染得不够精确？</span></p>
+<p>对于 GI 入口和多边形灯光，启用<a href="VPGISETUP-GI_GROUP_GENERAL.html" target="">强制每像素</a>选项。</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","渲染出现杂斑？","hl_3"--><p><span class="HL_2">渲染出现杂斑？</span></p>
+<p>在大部分情况下，提高<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">采样</span></a>值（<span class="command">常规</span>标签页）会有所帮助。</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","渲染时间太长？","hl_4"--><p><span class="HL_2">渲染时间太长？</span></p>
+<p>是否<a href="VPGISETUP-GI_GROUP_GENERAL.html" target="">采样</a>, <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DENSITY_QUALITY" target="">记录密度</a>或者其数值太高？是否启用了一个或多个下列选项（这些选项会提高图像质量但是减慢渲染速度）：对多边形灯光/GI 入口启用了<a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DISTANCE_MAP_ENABLED" target="">距离信息</a>？启用了<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">折射焦散</span></a>（<span class="command">选项</span>标签页）？</p>
+<p>是否将<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_PRIMARY_METHOD" target="_self"><span class="text_id">首次反弹算法</span></a>和<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_SECONDARY_METHOD" target="_self"><span class="text_id">二次反弹算法</span></a>设置为<nobr><span class="text_id_cycle">准蒙特卡洛（QMC）</span></nobr>模式？2次 <span class="command_value">QMC</span> 会得到最好的质量，但这是目前最慢的全局光照模式。</p>
+<p>是否<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">采样</span></a>或<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_QUALITY" target="_self"><span class="text_id">记录密度</span></a>的数值过高？是否对多边形灯光/GI 入口启用了<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_FORCE" target="_self"><span class="text_id">强制每像素</span></a>？检查你的<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" target="_self"><span class="text_id">折射焦散</span></a>设置。</p>
+<p>可能你对过大的辐射贴图启用了自动保存和载入（<span class="command">缓存</span>标签页）。</p>
+<p>不幸的是，还有很多其他各种各样减慢渲染速度的原因。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
