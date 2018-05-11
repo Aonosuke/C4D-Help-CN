@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 		<meta name="generator" content="WICKIE">
-		<title>GI 入口和多边形灯光：功能和布置</title>
+		<title>GI 入口和多边形灯光：功能与布置</title>
 		<meta name="FORMATTER" content="wickie">
 		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
 		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
@@ -13,7 +13,7 @@
 		<!--PAGE_ID "32221"-->
 		<!--VATER_ID "32219"-->
 		<!--REIHENFOLGE "3"-->
-		<!--TITLE "GI 入口和多边形灯光：功能和布置"-->
+		<!--TITLE "GI 入口和多边形灯光：功能与布置"-->
 		<!--APPS "16 14 15 10 11"-->
 		<!--TYP ""-->
 	</head>
@@ -26,27 +26,27 @@
 
 <div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<!--NO_SEARCH_END--><!--INDEX "2","GI 入口和多边形灯光：功能和布置",""--><p><span class="HL_group">GI 入口和多边形灯光：功能和布置</span></p><p></p>
+<!--NO_SEARCH_END--><!--INDEX "2","GI 入口和多边形灯光：功能与布置",""--><p><span class="HL_group">GI 入口和多边形灯光：功能与布置</span></p><p></p>
 <p><PAGE_RELEASE_110></p>
-<p><div class="image_full" style="max-width:1161px"><img  src="../pics/020181.jpg"  ><span class="caption">Improved quality with the application of GI Portals. Above a QMC rendering with <span class="command">Diffuse Depth</span> set to <span class="command_value">2</span>. Double render time at top as opposed to GI portal with fewer <span class="command">Samples</span>.</span></div></p>
+<p><div class="image_full" style="max-width:1161px"><img  src="../pics/020181.jpg"  ><span class="caption">使用 GI 入口来提高渲染质量。上面的准蒙特卡洛渲染中<span class="command">漫射深度</span>设为<span class="command_value">2</span>。与下图中使用了较低<span class="command">采样</span>的 GI 入口相比，上图的渲染花费了两倍的时间。</span></div></p>
 <p>Simply stated, Global Illumination is calculated based on randomly dispersed rays that are "beamed" at innumerable points in the scene to determine the brightness or color of each particular area. By nature, many rays will reach areas of a given point that are irrelevant to its illumination. It is much more important that a great number of rays are concentrated in areas at which light enters the scene, which makes the calculation of light and shadow much more precise.</p>
-<p><div class="image_full" style="max-width:785px"><img  src="../pics/020182.jpg"  ><span class="caption">The Rays are concentrated on the GI Portals and Polygon Lights (<span class="command">Diffuse Depth</span> = <span class="command_value">2</span>).</span></div></p>
+<p><div class="image_full" style="max-width:785px"><img  src="../pics/020182.jpg"  ><span class="caption">The Rays are concentrated on the GI Portals and Polygon Lights (<span class="command">漫射深度</span> = <span class="command_value">2</span>).</span></div></p>
 <p>Windows, lamps or other light-emitting objects (e.g., televisions) can be used as objects at which GI Portals or Polygon Lights can be placed in order to optimize GI calculation.</p>
 <p>Hence, GI Portals and Polygon Lights are primarily effective when placed where light is emitted from smaller surfaces, as is most often the case indoors where light enters a room through a window or door. Portals are useless in conjunction with an outdoor sky illumination.</p>
 <p>The different application areas of GI Portals and Polygon Lights:<ul></p>
 <p><li> GI Portals: Openings in walls through which light (e.g., from outdoors) enters the room. These Portals’ materials must have the <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html#MATERIAL_GLOBALILLUM_PORTAL" target="_self"><span class="text_id">GI Portal</span></a>option enabled (<span class="command">Illumination</span> material channel).</li><li> Polygon Lights: Objects that are designed to emit light (GI only), such as lamps. These objects (also called "Polygon Lights") contain a material with an active <span class="command">Luminance</span> channel and with the <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html#MATERIAL_GLOBALILLUM_AREA" target="_self"><span class="text_id">GI Area Light</span></a> option enabled.</li></ul><p></p>
 <p>In the following instances additional rays will be beamed to the Portal or Area light. The number of rays that are beamed is defined using the <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_ENABLED" target="_self"><span class="text_id">Discrete Area Sampling</span></a> or <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_SKY_ENABLED" target="_self"><span class="text_id">Discrete Sky Sampling</span></a> option. Light maps also benefit if no further settings are available.</p>
-<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>In order for GI Portals to function, <span class="command">Transparency</span> should NOT be deactivated in the Render Settings!</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>In order for GI Portals to function, <span class="command">Transparency</span> should NOT be deactivated in the Render Settings!</div></p>
 <p>Portals and Polygon Lights are not necessary when rendering outdoor scenes in which the light primarily comes from a hemisphere-shaped sky.</p>
 <p><p><div class="hint"><span class="HL_hint">Tip<br></span>Note that the use of GI Portals and Polygon Lights increases image quality with regard to light and shadow. This makes it possible to lower the common GI settings to achieve the same or better quality (fewer samples) and thereby reduce render times.</div></p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Where Should GI Portals be Placed?","hl_1"--><p><span class="HL_1">Where Should GI Portals be Placed?</span></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","GI 入口应在放在哪里？","hl_1"--><p><span class="HL_1">GI 入口应在放在哪里？</span></p>
 <p><div class="image_full" style="max-width:800px"><img  src="../pics/020183.jpg"  ><span class="caption"></span></div></p>
-<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Due to changes in the algorithm (new in R12), we recommend creating 1 separate object for each GI Portal (instead of creating a GI Portal as an object with several non-adjacent polygons dispersed throughout the room (e.g., each window). Otherwise the render times will increase greatly.</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>Due to changes in the algorithm (new in R12), we recommend creating 1 separate object for each GI Portal (instead of creating a GI Portal as an object with several non-adjacent polygons dispersed throughout the room (e.g., each window). Otherwise the render times will increase greatly.</div></p>
 <p>GI Portals should be placed/fitted at the windows. When placed at windows with a crossbar frame, multiple GI Portals will increase overall quality.</p>
 <p>GI Portals generally consist of single polygon surfaces (e.g., a <span class="command">Plane Primitive</span>) that is placed at the location at which light enters the room through a relatively narrow opening. The direction in which the Normals face is irrelevant. Fit the shape of each GI Portal to match the corresponding window or opening. If a GI Portal is too large, e.g., if it stretches into a surrounding wall, artefacting can result (particularly noticeable in QMC mode). Imprecise GI Portals result in less accurate and "grainier" the GI.</p>
 <p>Multiple GI Portals should be applied to windows with a crossbar frame (see above image) for more precise results. Applying a single GI Portal would cover the crossbars and therefore look less realistic.</p>
 <p>On the other hand it would be overdoing it, for example, to assign individual GI Portals to each pane of a window with a honeycomb frame or a stained glass window. In such instances you should consider excluding such fine structures from the GI calculation (e.g., using the <a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYGI" target="">Compositing tag</a>).</p>
-<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>artefacting can occur in regions next to a GI Portal (e.g., a window frame). In such instances, moving the GI Portal farther behind the opening (e.g., farther to the outside when applied to a window) can prevent this from happening.</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>artefacting can occur in regions next to a GI Portal (e.g., a window frame). In such instances, moving the GI Portal farther behind the opening (e.g., farther to the outside when applied to a window) can prevent this from happening.</div></p>
 <p> </p>
 <p>
 
