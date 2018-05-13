@@ -31,7 +31,7 @@
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","那么光线实际来自哪里？","hl_1"--><p><span class="HL_1">那么光线实际来自哪里？</span></p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","示例 1","hl_2"--><p><span class="HL_2">示例 1</span></p>
 <p><div class="image_full" style="max-width:1200px"><img  src="../pics/020170.jpg"  ><span class="caption"></span></div></p>
-<p>对象被放置并添加了纹理/颜色，且完成了轻微反射的地面之后，你不需要成为一名火箭科学家来照亮场景。</p>
+<p>对象被放置并添加了纹理/颜色，且完成了轻微反射的地面之后，你就可以照亮场景了。</p>
 <p>在这个场景中，除<a href="5798.html" target="">物理天空</a>外的光源只有左侧的两个辉光灯。</p>
 <p><div class="image_full" style="max-width:1199px"><img  src="../pics/020171.jpg"  ><span class="caption">场景中使用的物理天空和两个多边形灯光。</span></div></p>
 <p>房间的前面和背面是开放的，可以让大量的光线进入，两种类型的光通过这些开放的面进入房间，它们都来自于物理天空：<ul></p>
@@ -65,7 +65,7 @@
 <p><a id="hl_7" name="hl_7"></a><!--INDEX "3","从全局光照中排除玻璃","hl_7"--><p><span class="HL_1">从全局光照中排除玻璃</span></p>
 <p><div class="image_full" style="max-width:751px"><img  src="../pics/020179.jpg"  ><span class="caption">可以用不同的方法将透明物体从全局光照中排除。从左到右渲染时间依次增加。注意中间图像中的阴影被渲染得很暗。</span></div></p>
 <p>根据场景的不同，从全局光照中排除对象的方式有：<ul></p>
-<p><li> 使用合成标签（<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYGI" target="_self"><span class="text_id">全局光照可见</span></a>选项）… </li>
+<p><li> 使用合成标签（<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYGI" target="_self"><span class="text_id">全局光照可见</span></a>选项） </li>
 <li> 或者在材质通道中（<a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html#gi" target="">接收全局光照</a>选项或对焦散使用<span class="command">产生全局光照</span>）对特定材质“阻止”全局光照（根据<span class="command">接收全局光照</span>选项，这会对透明材质自动产生影响。参见<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF" target="">玻璃/镜子优化</a>）。</li></ul><p></p>
 <p>由于玻璃的透明度，它可以轻易地从全局光照中排除。这样做产生的效果很小，并会因此会减少渲染时间。</p>
 <p>你需要根据一个基本准则来来做出决定：对玻璃对象应用全局光照是否在最终渲染图像中会有明显或重要的差别。使用上面的图像作为参考。</p>
@@ -86,10 +86,10 @@
 <p><a id="CAMAN" name="CAMAN"></a></p>
 <p><a id="hl_11" name="hl_11"></a><!--INDEX "3","摄像机动画和全动画","hl_11"--><p><span class="HL_2">摄像机动画和全动画</span></p>
 <p>辐照缓存提供以下动画类型：<ul></p>
-<p><li> <span class="command">使用摄像机路径</span>：只有摄像机是运动的，其他所有工程元素都会保持不变，因为没有物体和灯光的运动。这让辐照缓存变得很容易，因为它可以在整个动画中使用一个单一的、没有闪烁的缓存。必须禁用<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_ANIMATION" target="_self"><span class="text_id">全动画模式</span></a>（如果使用了光线映射，需要启用<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_PATH_CAMERA" target="_self"><span class="text_id">使用摄像机路径</span></a>）。你也可以使用一些技巧（参见<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_PREPASS" target="_self"><span class="text_id">仅进行预解算</span></a>）来得到想要的结果。</li></ul><p></p>
+<p><li> <span class="command">使用摄像机路径</span>：只有摄像机是运动的，其他所有工程元素都会保持不变，因为没有物体和灯光的运动。这让辐照缓存变得很容易，因为它会在整个动画中使用单一的、没有闪烁的缓存。必须禁用<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_ANIMATION" target="_self"><span class="text_id">全动画模式</span></a>（如果使用了光线映射，需要启用<a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html#GI_SETUP_DATA_LIGHT_MAPPING_PATH_CAMERA" target="_self"><span class="text_id">使用摄像机路径</span></a>）。你也可以使用一些技巧（参见<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_PREPASS" target="_self"><span class="text_id">仅进行预解算</span></a>）来得到想要的结果。</li></ul><p></p>
 <p><p><div class="hint"><span class="HL_hint">注意：<br></span>当通过 Team Render 来渲染时，只有优先分发单一缓存进行渲染时，使用缓存才是有效的。这个缓存可以之后被分发到渲染客户端（启用了<a href="VPGISETUP-GI_GROUP_CACHES.html#GI_SETUP_DATA_CACHE_AUTOLOAD" target="_self"><span class="text_id">自动加载</span></a>选项）。</div></p>
 <p><ul></p>
-<p><li> <span class="command">全动画</span>：对与有对象/灯光运动的光照环境，必须对每个图像渲染一个独立的缓存。如果你不想加载或保存全局光照缓存文件，可以对所有使用的缓存类型禁用<span class="command">自动保存</span>和<span class="command">自动加载/span>（<span class="command">缓存文件</span>标签页）。禁用所有关于摄像机动画的选项（如对光线映射禁用<span class="command">使用摄像机路径</span>）。</li></ul><p></p>
+<p><li> <span class="command">全动画</span>：对于有对象/灯光运动的光照环境，必须对每个图像渲染一个独立的缓存。如果你不想加载或保存全局光照缓存文件，可以对所有使用的缓存类型禁用<span class="command">自动保存</span>和<span class="command">自动加载</span>（<span class="command">缓存文件</span>标签页）。禁用所有关于摄像机动画的选项（如对光线映射禁用<span class="command">使用摄像机路径</span>）。</li></ul><p></p>
 <p>如果想要加载/保存缓存文件，必须对所有使用的缓存类型启用<span class="command">自动加载</span>、<span class="command">自动保存</span>和<span class="command">全动画模式</span>。</p>
 <p><a id="TR" name="TR"></a></p>
 <p><a id="hl_12" name="hl_12"></a><!--INDEX "3","全局光照缓存和 Team Render","hl_12"--><p><span class="HL_2">全局光照缓存和 Team Render</span></p>
