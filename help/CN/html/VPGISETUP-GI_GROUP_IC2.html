@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>全局光照设置：辐照缓存</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52457"-->
+		<!--VATER_ID "32075"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "全局光照设置：辐照缓存"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="32219.html" target="_self">全局光照</a></span> <span class="link_back"><a href="VPGISETUP.html" target="_self">全局光照设置</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPGISETUP.html">全局光照设置</a> </span><p></p><a href="VPGISETUP-GI_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">常规</span></a> <a href="VPGISETUP-GI_GROUP_IC2.html" target=""><span class="c4d_group_navi_self">辐照缓存</span></a> <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target=""><span class="c4d_group_navi">辐照缓存（传统）</span></a> <a href="VPGISETUP-GI_GROUP_RADIANCE.html" target=""><span class="c4d_group_navi">辐射贴图</span></a> <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html" target=""><span class="c4d_group_navi">光线映射</span></a> <a href="VPGISETUP-GI_GROUP_CACHES.html" target=""><span class="c4d_group_navi">缓存文件</span></a> <a href="VPGISETUP-GI_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">Options</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>辐照缓存</span></p><p></p>
+<p><PAGE_RELEASE_150 GI: New, faster and improved 辐照缓存.></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","常规信息","hl_1"--><p><span class="HL_1">常规信息</span></p>
+<p>从 CINEMA 4D R15 开始引入了一种新的辐照缓存算法（下文称为<span class="command">新辐照缓存</span>）。这种算法与其他算法（它们在<span class="command_value">辐照缓存（传统）</span>全局光照模式中仍然可用）相比有以下优点：<ul></p>
+<p><li> 在接触投影（即物体边角与它产生的投影相交的地方）等小细节处的质量更高（使用在纯<a href="VPGISETUP-GI_GROUP_GENERAL.html#qmc" target="">准蒙特卡洛</a>渲染质量下的正确设置）。</li></ul><p></p>
+<p><div class="image_full" style="max-width:1333px"><img  src="../pics/037311.jpg"  ><span class="caption">新辐照缓存算法可以提升接触投影的渲染（如左图中标记的地方）。模型由 Steen Winther 提供。</span></div></p>
+<p><ul></p>
+<p><li> 新算法加快了渲染速度。</li>
+<li> 新辐照缓存与 <a href="52632.html" target="">Team Render</a> 一起使用最佳，这还能提升动画质量（例如会减少闪烁）和速度（参见<a href="32220.html#giani" target="">全局光照与动画</a>）。</li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>这个页面的所有图像是使用辐照缓存作为<span class="command">首次</span>和<span class="command">二次</span>反弹算法来渲染的。</div></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3",""辐照缓存"是什么？","hl_2"--><p><span class="HL_2">"辐照缓存"是什么？</span></p>
+<p>在辐照缓存渲染过程中会进行几次预解算，它会分析场景来确认最重要的间接照明区域（即“着色点”，这些点会在预解算过程中显示；在使用低<a href="VPGISETUP-GI_GROUP_IC2.html#GI_SETUP_DATA_IC2_DENSITY" target="_self"><span class="text_id">密度</span></a>值时变得很明显）。下面是更多细节：</p>
+<p><div class="image_full" style="max-width:967px"><img  src="../pics/037312.jpg"  ><span class="caption">着色点的亮度和色值。</span></div></p>
+<p>这些着色点的亮度和色值会被保存到辐照缓存中，它们被称为“输入（Entry）”，这个缓存可以并且应该被保存（使用<span class="command">缓存文件</span>标签页的设置），这样它们就可以被重复利用了（例如在摄像机视角改变的情况下）。缓存只能在渲染到图片查看器的情况下重复使用（即在视窗中渲染时不可用）。</p>
+<p>这些辐照缓存输入会在最终渲染时进行插值，来计算位于间接光照着色点之间的像素。</p>
+<p><div class="image_full" style="max-width:967px"><img  src="../pics/037313.jpg"  ><span class="caption">通过插值来保证均匀的光线散布。</span></div></p>
+<p>不过使用辐照缓存算法的缺点同样需要注意：当在有限的着色点之间进行插值时，光影的细节会丢失（但是没有之前版本的严重）。在这一点上，使用<a href="VPGISETUP-GI_GROUP_GENERAL.html#qmc" target="">准蒙特卡洛</a>算法较有优势。</p>
+<p>记住，在光影分布方面，准蒙特卡洛算法能得到最佳的全局光照效果（也是最慢的），而辐照缓存则尽可能产生跟准蒙特卡洛接近的渲染结果。</p>
+<p>在动画中使用辐照缓存更容易产生闪烁。新的辐照缓存算法会减少闪烁。一般来说，如果场景中有非常明亮的小型<a href="32221.html" target="">多边形灯光</a>，辐照缓存会容易产生闪烁，而均匀的大型光源（如从各个方向均匀发射光线的天空）则比较适合辐照缓存。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>下面的设置也可以在新的<a href="VPAMBIENTOCCLUSION-VPAMBIENTOCCLUSION_GROUP_CACHE.html" target="">环境吸收</a>设置中找到，其功能的基本原则是相同的（不过环境吸收的记录密度只有1）。</div></p>
+<p>提示：如果出现斑点状的渲染结果，最有效的方法是将<span class="command">记录密度</span>设为更高的数值，提高<span class="command">二次反弹算法</span>的设置也会有所帮助。但是如果使用了质量很低的光线映射，提高辐照缓存设置也无能为力。</p>
+<p><a id="GI_SETUP_DATA_IC2_QUALITY" name="GI_SETUP_DATA_IC2_QUALITY"></a> <!--INDEX "8","记录密度","GI_SETUP_DATA_IC2_QUALITY"--><span class="c4d_id">记录密度</span></p>
+<p>下面的大部分设置只用来微调。在多数情况下，<span class="command">记录密度</span>设置的<span class="command_value">低</span>、<span class="command_value">中</span>和<span class="command_value">高</span>与下面相应的数值组合使用就足够了。<span class="command_value">预览</span>模式可以为最终渲染结果提供快速预览。当手动修改了记录密度时，选项会变成<span class="command_value">自定义</span>。</p>
+<p>一般来说，只有在要显示多边形灯光（GI 入口）的硬投影等情况下（而不想使用速度较慢的<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_AREA_FORCE" target="_self"><span class="text_id">强制每像素</span></a>），才必须要修改记录密度。</p>
+<p><a id="GI_SETUP_DATA_IC2_RATE_MIN" name="GI_SETUP_DATA_IC2_RATE_MIN"></a> <!--INDEX "8","最小比率","GI_SETUP_DATA_IC2_RATE_MIN"--><span class="c4d_id">最小比率</span> <span class="range">[-8..4]</span><br><a id="GI_SETUP_DATA_IC2_RATE_MAX" name="GI_SETUP_DATA_IC2_RATE_MAX"></a> <!--INDEX "8","最大比率","GI_SETUP_DATA_IC2_RATE_MAX"--><span class="c4d_id">最大比率</span> <span class="range">[-8..4]</span></p>
+<p>当使用辐照缓存进行渲染时，会首先进行数次预处理计算（出现方块并不断变小的阶段）。在这个阶段中，着色点的散布会确定，这是一个自适应的过程，会对关键区域进行特别强调：角落、阴影边缘等。<span class="command">最小比率</span>和<span class="command">最大比率</span>之间的差别决定了预处理的数量（另见<a href="VPAMBIENTOCCLUSION-VPAMBIENTOCCLUSION_GROUP_CACHE.html#VPAMBIENTOCCLUSION_CACHE_RATE_MIN" target="_self"><span class="text_id">最小比率</span></a>）。</p>
+<p>数值为<span class="command_value">0</span>时会产生一个全分辨路的图像（像素尺寸 1×1），而数值为<span class="command_value">-1</span>时产生的像素尺寸为 2×2，<span class="command_value">-2</span>=4×4，依此类推。逻辑上来说，<span class="command">最小比率</span>应该总是小于<span class="command">最大比率</span>。你也可以使用正值，这会允许计算亚像素（这对于<a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html#MATERIAL_DISPLACEMENT_SUBPOLY" target="">次多边形置换</a>很有用，如果细节丢失的话）。最后，这些设置没有之前版本辐照缓存中的那么重要，只要数值设置合理（<span class="command">最大比率</span> 不小于<span class="command_value">0</span>），渲染时间和质量不会有很大差别。一般情况下将<span class="command">最小比率</span>设为负数、<span class="command">最大比率</span>设为<span class="command_value">0</span>是不错的选择。</p>
+<p><a id="GI_SETUP_DATA_IC2_DENSITY" name="GI_SETUP_DATA_IC2_DENSITY"></a> <!--INDEX "8","密度","GI_SETUP_DATA_IC2_DENSITY"--><span class="c4d_id">密度</span> <span class="range">[10..1000%]</span><br><a id="GI_SETUP_DATA_IC2_DETAILS" name="GI_SETUP_DATA_IC2_DETAILS"></a> <!--INDEX "8","最小间距","GI_SETUP_DATA_IC2_DETAILS"--><span class="c4d_id">最小间距</span> <span class="range">[0..1000%]</span><br><a id="GI_SETUP_DATA_IC2_MAX_LIMIT" name="GI_SETUP_DATA_IC2_MAX_LIMIT"></a> <!--INDEX "8","最大间距","GI_SETUP_DATA_IC2_MAX_LIMIT"--><span class="c4d_id">最大间距</span> <span class="range">[0..1000%]</span></p>
+<p><div class="image_full" style="max-width:1014px"><img  src="../pics/037314.jpg"  ><span class="caption"><span class="command">密度</span>从下到上递增。</span></div></p>
+<p><span class="command">密度</span>用来调节着色点的整体分布，它的数值越高，着色点的密度就越高。</p>
+<p>将这三个设置放在一起讲是因为，这三者共同影响关键区域和非关键区域的着色点密度：<ul></p>
+<p><li> <span class="command">密度</span>：整体着色点密度会考虑下面两项设置。</li>
+<li> <span class="command">最小间距</span>：在关键区域的着色点密度（如角落、投影）。</li>
+<li> <span class="command">最大间距</span>：在非关键区域的着色点密度（如平面）。</li></ul><p></p>
+<p>下图演示了上述设置的效果：</p>
+<p><div class="image_full" style="max-width:2069px"><img  src="../pics/037315.jpg"  ><span class="caption">不同的<span class="command">密度</span>、<span class="command">最小间距</span>和<span class="command">最大间距</span>设置。</span></div></p>
+<p>着色点密度是怎样影响最终渲染图像的？对于一个清晰渲染的图像而言，在关键区域需要高着色点数量而在其他区域只需要中等密度。如果你确保了每个着色点都有尽可能多的<a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">采样</span></a>，一般就不会出错。</p>
+<p><a id="GI_SETUP_DATA_IC2_SMOOTHING" name="GI_SETUP_DATA_IC2_SMOOTHING"></a> <!--INDEX "8","平滑","GI_SETUP_DATA_IC2_SMOOTHING"--><span class="c4d_id">平滑</span> <span class="range">[0..1000%]</span></p>
+<p>上面描述的设置是围绕着色点的位置和计算的。间接照明会在场景中大量地点被确定，这种亮度的逐点分布在渲染时必须转换成一种平滑的分布。一种平滑算法会按以下方法实现它：对一个给定对象上要渲染的每个点，辐照缓存会被扫描来找到它们要插值的亮度和色值的近似值。</p>
+<p><span class="command">平滑</span>数值越大，用在插值上的着色点就越多。这个设置表示一个阈值，它决定了是否在其近似值中使用某个缓存。较小的数值通常会产生锐利（经常也会产生更多斑点）的结果，而较大的数值会在更大的区域进行插值，这会产生更加统一的照明效果，但同时也会丢失小细节。一般来说<span class="command">平滑</span>设置一般不需要改动。</p>
+<p><a id="GI_SETUP_DATA_IC2_COLOR" name="GI_SETUP_DATA_IC2_COLOR"></a> <!--INDEX "8","细化颜色","GI_SETUP_DATA_IC2_COLOR"--><span class="c4d_id">细化颜色</span> <span class="range">[0..1000%]</span></p>
+<p><div class="image_full" style="max-width:924px"><img  src="../pics/037316.jpg"  ><span class="caption">注意箭头处，在使用高<span class="command">细化颜色</span>值时投影的边缘更加明确。</span></div></p>
+<p>增加这项设置的数值会提升在全局光照变化明显区域（如明亮的多边形灯光的全局光照投影）的渲染质量，这些区域会生成额外的着色点（相应地会增加渲染时间）。注意：你需要将记录密度增加到足够大，这样光线的散布才会均匀，否则在全局光照变化明显的地方会出现斑状区域。</p>
+<p>提高细化颜色的数值还会提高全局光照焦散的效果！</p>
+<p><div class="image_full" style="max-width:822px"><img  src="../pics/037317.jpg"  ><span class="caption">一个类似准蒙特卡洛的焦散渲染（右图），它只花了一部分时间来渲染。</span></div></p>
+<p><a id="GI_SETUP_DATA_IC2_SCALE" name="GI_SETUP_DATA_IC2_SCALE"></a> <!--INDEX "8","屏幕比例","GI_SETUP_DATA_IC2_SCALE"--><span class="c4d_id">屏幕比例</span></p>
+<p>在之前版本的辐照缓存中，着色点的散布与渲染图像的尺寸无关。也就是说，在 80×80 像素的图像中用到的预处理与 1024×768 像素的一样。启用<span class="command">屏幕比例</span>选项会让着色点密度适应于图像的分辨率。这意味着高分辨率的图像会产生更多缓存。因此小图像会渲染得更快而大图像会较慢，但也意味着大图像有更多细节。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

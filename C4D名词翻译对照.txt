@@ -66,3 +66,4 @@ Basic Properties                基本属性
 Pre Pass                        预解算
 Color Bleeding                  渗色
 Primary Sampler                 首次采样器
+Subpolygon Displacement         次多边形置换
