@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>全局光照设置：选项</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52460"-->
+		<!--VATER_ID "32075"-->
+		<!--REIHENFOLGE "7"-->
+		<!--TITLE "全局光照设置：选项"-->
+		<!--APPS "16 14 15 10 11"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="32219.html" target="_self">Global Illumination</a></span> <span class="link_back"><a href="VPGISETUP.html" target="_self">GI Setup</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPGISETUP.html">全局光照设置</a> </span><p></p><a href="VPGISETUP-GI_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">常规</span></a> <a href="VPGISETUP-GI_GROUP_IC2.html" target=""><span class="c4d_group_navi">辐照缓存</span></a> <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target=""><span class="c4d_group_navi">辐照缓存（传统）</span></a> <a href="VPGISETUP-GI_GROUP_RADIANCE.html" target=""><span class="c4d_group_navi">辐射贴图</span></a> <a href="VPGISETUP-GI_GROUP_LIGHT_MAPPING.html" target=""><span class="c4d_group_navi">光线映射</span></a> <a href="VPGISETUP-GI_GROUP_CACHES.html" target=""><span class="c4d_group_navi">缓存文件</span></a> <a href="VPGISETUP-GI_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi_self">选项</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Options</span></p><p></p>
+<p><PAGE_RELEASE_110></p>
+<p><a id="GI_SETUP_DATA_EXTRA_DEBUG_LEVEL" name="GI_SETUP_DATA_EXTRA_DEBUG_LEVEL"></a> <!--INDEX "8","调试报告级别","GI_SETUP_DATA_EXTRA_DEBUG_LEVEL"--><span class="c4d_id">调试报告级别</span></p>
+<p>这个选项可以让你选择是否在场景所在文件夹中保存一个名为“.GIInfo000”的文件，它可以在文本编辑器中打开。这个文件包含了渲染时间和所需内存的相关信息，这可能对你不怎么重要，但是在你需要联系我们支持小组时会非常有用。</p>
+<p><a id="GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF" name="GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF"></a> <!--INDEX "8","玻璃/镜反射 优化","GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF"--><span class="c4d_id">玻璃/镜反射 优化</span> <span class="range">[50..100%]</span></p>
+<p>由于玻璃的透明特性，全局光照在玻璃上的效果几乎不可见，但仍会占用不必要的渲染资源。这时可以通过<span class="command">玻璃/镜反射 优化</span>参数来减少资源消耗。全局光照会忽略透明度或反射大于设定数值的材质。例如在渲染一个包含很多大型玻璃表面的建筑物时可以节省大量时间。</p>
+<p>这个参数对焦散不会产生影响！</p>
+<p><span class="command">亮度</span>（<span class="command">透明</span>或<span class="command">反射</span>通道中）大于这里设置的参数的材质不会被全局光照所照亮，这可能会让渲染结果较暗（但是更快）。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>要让这里设置的参数生效，不能使用材质的“颜色”通道，并且在透明通道中不能使用纹理。</p>
+<p>准确地说，这个参数设置的值会与透明的亮度和颜色的乘积进行对比。</div></p>
+<p><a id="CAUSTICS" name="CAUSTICS"></a></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","全局光照焦散","hl_1"--><p><span class="HL_1">全局光照焦散</span></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","焦散是什么？","hl_2"--><p><span class="HL_2">焦散是什么？</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/020169.jpg"  ><span class="caption">注意标记除的折射全局光照焦散.</span></div> </p>
+<p>在真实世界中，焦散会发生在光线通过折射（见上图）或镜面（如金属环）被聚集或反射的地方。</p>
+<p>CINEMA 4D 中有两种焦散：<ul></p>
+<p><li> CINEMA 4D 早期版本的光子焦散：比全局光照焦散要快，但是要使用独立的光源来生成。</li>
+<li> 辐照缓存全局光照焦散：与<span class="command">初次反弹算法</span><span class="command_value">辐照缓存</span>一起使用，不是非常准确，但是会对场景中所有发光表面产生影响（密集渲染时的提示：给接收焦散的对象添加一个合成标签，并激活其<a href="TCOMPOSITING-COMPOSITINGTAG_GROUPGI.html#COMPOSITINGTAG_GIQMC" target="">启用强制QMC采样</a>选项）。</li></ul><p></p>
+<p>要在之前版本的 CINEMA 4D 中生成焦散（另见<a href="VPCAUSTICS.html" target="">这里</a>），需要创建一个光源，它发射的光子穿过场景。另一方面全局光照焦散则会使用所有有效的光源（例外：只有常规 CINEMA 4D 光源的反射光会被包含在内，使用<a href="32221.html" target="">多边形灯光</a>来替代）。</p>
+<p>全局光照焦散需要明亮的灯光（如带有非常明亮区域的 HDRI 图像或多边形灯光）来实现效果。或者你可以在玻璃材质的“光照”通道中增加<a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target="">产生全局光照</a>的强度参数。</p>
+<p><a id="GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS" name="GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS"></a> <!--INDEX "8","折射焦散","GI_SETUP_DATA_EXTRA_REFRACTIVECAUSTICS"--><span class="c4d_id">折射焦散</span><br><a id="GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS" name="GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS"></a> <!--INDEX "8","反射焦散","GI_SETUP_DATA_EXTRA_REFLECTIVECAUSTICS"--><span class="c4d_id">反射焦散</span></p>
+<p>单独启用或禁用折射和反射焦散。</p>
+<p><p><div class="hint"><span class="HL_hint">关于反射全局光照焦散的提示：<br></span>反射全局光照焦散总是需要一个激活的<span class="command">反射</span>材质通道。另外，在<span class="command">全局光照模式</span>设为<span class="command_value">准蒙特卡洛</span>时会得到最佳的焦散效果。</div></p>
+<p><a id="GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY" name="GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY"></a> <!--INDEX "8","仅漫射照明","GI_SETUP_DATA_EXTRA_DIFFUSE_ONLY"--><span class="c4d_id">仅漫射照明</span></p>
+<p><div class="image_full" style="max-width:682px"><img  src="../pics/020168.jpg"  ><span class="caption">上图：正常渲染。下图：激活<span class="command">仅漫射照明</span>选项进行渲染（太阳是一个真实光源，这意味着在经过第一次反射后会对它的效果进行渲染）。</span></div></p>
+<p>激活这个选项会使物体表面被光源直接照亮的纹理、反射、光线失去效果。所有干扰元素会失效，只有被全局光照计算的亮度漫射会被渲染。这也能让你判断全局光照的质量。</p>
+<p>但是在最终渲染中一定不能激活这个选项。</p>
+<p><a id="GI_SETUP_DATA_EXTRA_HIDE_pre-pass" name="GI_SETUP_DATA_EXTRA_HIDE_pre-pass"></a> </p>
+<p><RELEASE_150 The Irradiance Cache’s shading points’ display can be disabled.></p>
+<p><a id="GI_SETUP_DATA_EXTRA_SHOW_SAMPLES" name="GI_SETUP_DATA_EXTRA_SHOW_SAMPLES"></a> <!--INDEX "8","显示采样点","GI_SETUP_DATA_EXTRA_SHOW_SAMPLES"--><span class="c4d_id">显示采样点</span></p>
+<p>通常，渲染过程中的各种预处理过程会显示在视窗或图片查看器中（一个简单的理由是查看在渲染过程中实际发生了什么）。这需要额外的渲染时间，通过激活这个选项可以省下这段时间，尤其是在渲染动画时。</p><p>在预处理阶段，会显示辐照缓存计算中所用到的着色点。有时，在尝试评估预处理时这会让人心烦。要避免这一点，可以禁用着色点的显示。渲染时间会略微减少而不会影响最终渲染的结果。</p>
+<p></RELEASE_150></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
