@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>镜头失真</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "54549"-->
+		<!--VATER_ID "5714"-->
+		<!--REIHENFOLGE "14"-->
+		<!--TITLE "镜头失真"-->
+		<!--APPS "14"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="5714.html" target="_self">效果</a></span>
+
+<div class="in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Studio  </div>
+<!--INDEX "4","镜头失真",""--><p><span class="HL_atom">镜头失真 </span><p></p><a href="VPPHLENSDISTORT-ID_VIDEOPOSTPROPERTIES.html" target="">基本</a><!--NO_SEARCH_END--><!--INDEX "2","镜头失真",""--><p><span class="HL_group">镜头失真</span></p><p></p>
+<p><PAGE_RELEASE_170 A distortion post effect is also part of the 镜头失真 functionality.></p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/039665.jpg"  ><span class="caption">左图未开启镜头失真效果，右图开启。注意 3D 对象（如果你能分辨出的话）是如何变形的。</span></div></p>
+<p>镜头失真效果（注意，这是一个真实渲染效果，虽然它被归类为后期效果）基于一个加载的镜头特征文件（另见与之相关的<a href="TOOLLENSDISTORTION.html" target="">镜头失真工具</a>）。在渲染时，所有 3D 对象会根据这个镜头特征文件进行变形，就像使用真实世界中的有镜头失真的摄像机拍摄的场景一样。</p>
+<p><a id="SHADER" name="SHADER"></a></p>
+<p>下图使用了镜头失真着色器：</p>
+<p><div class="image_full" style="max-width:1548px"><img  src="../pics/039666.jpg"  ><span class="caption">如果启用了镜头失真效果，镜头失真着色器就会失效。反之亦然。</span></div></p>
+<p>只有这样渲染的 3D 对象会匹配图像。背景对象会被镜头失真效果忽略。通常分配给它的图像中已经包含失真，这会使额外的失真变得多余。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，通过摄像机投射的纹理在此功能下可能会失效，因为在镜头失真效果下进行渲染时会看到位于摄像机投射范围之外的区域。</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示2：<br></span>如果你想要鱼眼效果，用这个着色器可以实现。创建一个虚拟的镜头特征文件（<span class="command">镜头失真模型</span> <span class="command_value">3DE Radial Fisheye Degree 8</span>，高 <span class="command">Quartic</span> 和 <span class="command">Quadratic</span> 值）并加载它：</p>
+<p><div class="image_full" style="max-width:1362px"><img  src="../pics/039667.jpg"  ><span class="caption">模型：Steen Winther</span></div></div></p>
+<p>当然，不一定需要通过创建虚拟镜头特征文件。如果使用带有鱼眼的镜头失真工具来产生尽可能真实的镜头失真，你会得到一个相当不错的鱼眼效果。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
