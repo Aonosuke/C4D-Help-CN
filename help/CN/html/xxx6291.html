@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Texture settings</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "6291"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "3"-->
+		<!--TITLE "Texture settings"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Texture settings",""--><p><span class="HL_group">Texture settings</span></p><p></p>
+<p> </p>
+<p>Most material channels enable you to load a texture. You can select a two-dimensional picture or shader. Your selection will be used as a texture. Cinema 4D can read the following formats: <a href="6198.html" target="">image formats</a>, <a href="6199.html" target="">movie formats</a></p>
+<p><RELEASE_120 Loaded textures can be up to 128,000 x 128,000 pixels large.></p>
+<p>Textures up to 16,000 x 16,000 (32-bit application version) and 128,000 x 128,000 pixels (64-bit application version) can be loaded.</p>
+<p></RELEASE_120></p>
+<p><a id="ABS" name="ABS"></a></p>
+<p>The following might be displayed when an image or a video is loaded:</p>
+<p><div class="image_full" style="max-width:484px"><img  src="../pics/030084.jpg"  ><span class="caption"></span></div></p>
+<p>Depending on which option you select, the texture/movie will be linked to an absolute or a relative path. This means:</p>
+<p>If you select <span class="command">No</span>, the "path" to the texture will be saved as an absolute path, i.e., this is the directory path in which Cinema 4D will look for the texture for rendering. This is, however, problematic when the scene file is passed on to another artist, for example and the texture will not be found on the other computer. In most cases it is better to use relative paths (via the <a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">Save Project with Assets...</span></nobr></a> command you can turn an absolute path into a relative path).</p>
+<p>If you select <span class="command">Yes</span> the texture/movie will be saved to the "tex" folder at the location of the scene file. If you pass the scene file, including this directory, on to another artist the textures can be easily found on the other computer. Textures with relative paths will also be searched for <a href="PREFSFILES-PREF_FILE_MAIN_GROUP.html#path" target="">here</a>.</p>
+<p><RELEASE_140 New functionality for copying materials with linked textures to other Projects.></p>
+<p>If you copy materials (with linked relative texture paths) to another Project where they then cannot be found, a prompt will appear asking if an absolute texture path (to the original path) should be defined. If you answer with <span class="command">No</span>, the textures must be copied manually to the known Cinema 4D (relative) paths.</p>
+<p></RELEASE_140></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Because it can be very difficult to re-link dozens or even hundreds of textures, or assign them absolute or relative paths, the <a href="52276.html" target="">Texture Manager</a> has been created with which this can be done quite easily.</div></p>
+<p>You can load a texture using the triangle button, Texture box or three dots button. Click the button or box and use the menu or file selection dialog that appears to load the texture.</p>
+<p>Once you have loaded a texture, its preview will appear below the Texture box with three numbers shown immediately below the preview. These numbers specify the width, height and color depth of the texture. If you click on the preview picture or the name of the texture or shader, the picture/shader will be loaded into the Material Editor. You can then edit the picture externally or edit the shader’s settings.</p>
+<p><div class="image_full" style="max-width:457px"><img  src="../pics/004295.jpg"  ><span class="caption"></span></div></p>
+<p>Click on the triangle button next to the Texture box to open a menu that allows you to load bitmaps and load channel shaders. The menu also contains the following commands:</p>
+<p><!--INDEX "7","Clear","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">Clear</span></p>
+<p>Removes the texture/image from the material channel.</p>
+<p><!--INDEX "7","Load Image","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">Load Image</span></p>
+<p>Opens a file selection dialog that allows you to load an image into the material channel. You can also load images by clicking on the three dots button on the far right of <span class="command">Texture</span>.</p>
+<p><!--INDEX "7","Create New Texture","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">Create New Texture</span></p>
+<p>The BodyPaint 3D <span class="command">New Texture</span> dialog window will open in which you can create a new texture using a bitmap</p>
+<p><!--INDEX "7","Edit","no_command_4"--><a id="no_command_4" name="no_command_4"></a>   <span class="c4d_menu_id">Edit</span></p>
+<p>Loads the shader’s parameters or image’s parameters (see above) into the Material Editor.</p>
+<p><!--INDEX "7","Edit Image","no_command_5"--><a id="no_command_5" name="no_command_5"></a>   <span class="c4d_menu_id">Edit Image</span></p>
+<p>Opens the image in the default image editing application specified for your computer. For example, choosing Edit Image for a JPEG will open the image in Photoshop if Photoshop is installed and is the default image editor for JPEGs.</p>
+<p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><!--INDEX "7","Locate Image …","no_command_6"--><a id="no_command_6" name="no_command_6"></a>   <span class="c4d_menu_id">Locate Image …</span></p>
+<p>This command opens the image in your operating system’s Explorer/Finder. If the image is located in a Content Browser library, it will be opened there.</p>
+<p></p></div></p>
+<p><!--INDEX "7","Reload Image","no_command_7"--><a id="no_command_7" name="no_command_7"></a>   <span class="c4d_menu_id">Reload Image</span></p>
+<p>Suppose that, after loading an image into the Texture pane, you then edit the image in an image editor. In such cases, use Reload Image to update the texture in the Texture pane. Note to BodyPaint 3D users: you cannot reload images that are being used by BodyPaint 3D (such as if you are rendering to the Picture Viewer).</p>
+<p><!--INDEX "7","Copy Shader, Paste Shader","no_command_8"--><a id="no_command_8" name="no_command_8"></a>   <span class="c4d_menu_id">Copy Shader, Paste Shader</span></p>
+<p>These commands allow you to copy and paste shader settings from one material channel to another. For example, you can copy a shader from the <span class="command">Color</span> channel and paste it into the <span class="command">Bump</span> channel with the same settings. This saves you from having to set the parameters multiple times.</p>
+<p><!--INDEX "7","Load / Save Preset","no_command_9"--><a id="no_command_9" name="no_command_9"></a>   <span class="c4d_menu_id">Load / Save Preset</span></p>
+<p>These options let you save shaders to or load them from a list of presets located in the Content Browser’s <span class="command">Presets / User</span> folder (for multiple shaders of the same type, they will be numbered sequentially when saved). Here, the same applies as previously mentioned: If a shader contains a bitmap, the corresponding preset will only function if Cinema 4D can later find the bitmap (see <a href="PREFSFILES-PREF_FILE_MAIN_GROUP.html#path" target="">Texture Paths</a>).</p>
+<p>Shaders can also be added to the <span class="command">Presets / User</span> folder via drag & drop. Presets can also be dragged onto the Material Editor.</p>
+<p><!--INDEX "7","Bitmaps","no_command_10"--><a id="no_command_10" name="no_command_10"></a>   <span class="c4d_menu_id">Bitmaps</span></p>
+<p>Here you will find a list of all the bitmap that are currently loaded in RAM. Select a bitmap’s name from this list to load the bitmap into the Texture box.</p>
+<p><!--INDEX "7","Shaders","no_command_11"--><a id="no_command_11" name="no_command_11"></a>   <span class="c4d_menu_id">Shaders</span></p>
+<p>You will find a list of shaders in the lower part of the menu, including those of any plugins installed.</p>
+<p><!--INDEX "8","Three dots button, Texture box","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Three dots button, Texture box</span></p>
+<p><div class="image_full" style="max-width:36px"><img  src="../pics/004297.jpg"  ><span class="caption"></span></div></p>
+<p>To load a bitmap into the material channel, click the Texture box or three dots button and use the file selection dialog that opens to load the bitmap. See <a href="XBITMAP.html" target="">Bitmap Shader</a>.</p>
+<p><a id="INT" name="INT"></a></p>
+<p><!--INDEX "8","Sampling","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">Sampling</span> </p>
+<p>Use <span class="command">Sampling</span> to control how the texture’s pixels are interpolated. <span class="command">MIP</span> and <span class="command">SAT</span> are the best choices for animation or for objects in still pictures that extend towards the horizon, such as floors.</p>
+<p><span class="command">Square</span>, <span class="command">Alias 1</span>, <span class="command">Alias 2</span> and <span class="command">Alias 3</span> should, in general, be used for still pictures only — they generate crisp, sharp textures, but are too sharp for animation and if animated will be likely to flicker. <span class="command">MIP</span> and <span class="command">SAT</span>, on the other hand, blur the texture slightly to allow flicker-free animation.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004304.jpg"  ><span class="caption">Example texture.</span></div></p>
+<p><!--INDEX "10","None","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">None</span></p>
+<p>When <span class="command">Sampling</span> is set to <span class="command_value">None</span>, the original texture values are used without interpolation. This method is fast, but often produces poor results and in general is best avoided. Textures tend to look jagged with None interpolation. You can try to reduce the <span class="command">jaggies</span> by using a high antialiasing setting.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004305.jpg"  ><span class="caption">None.</span></div></p>
+<p><!--INDEX "10","Circle","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">Circle</span> </p>
+<p><span class="command">Circle</span> sampling uses a circle of texture pixels (the ones surrounding the intermediate value). Textures that are enlarged at render time tend to look more natural with this type than with the None type. However, as the examples demonstrate, straight lines are problematic and tend to look frayed. In addition, the texture is very jagged near the horizon. <span class="command">Circle</span> sampling is, however, a good choice for very small textures (e.g., 3 x 3 pixels), because it helps the pixels to blend softly.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004306.jpg"  ><span class="caption">Circle.</span></div></p>
+<p><!--INDEX "10","Square","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">Square</span></p>
+<p><span class="command">Square</span> uses a square of texture pixels (the ones surrounding the intermediate value). This leads to a softer transition between texture pixels than with <span class="command">None</span>. The picture quality is good.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004307.jpg"  ><span class="caption">Square.</span></div></p>
+<p><!--INDEX "10","Alias 1, Alias 2, Alias 3","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Alias 1, Alias 2, Alias 3</span></p>
+<p><span class="command">Alias 1</span>, <span class="command">Alias 2</span> and <span class="command">Alias 3</span> blend the texture more strongly than Circle and Square. <span class="command">Alias 3</span> blends the most, <span class="command">Alias 1</span> the least. In the example above, the texture is difficult to recognize with <span class="command">Alias 3</span> because it is so small (16 x 16). <span class="command">Alias3</span> can give smoother results than <span class="command">Alias 1</span>, but it also takes longer to calculate.</p>
+<p>However, even <span class="command_value">Alias 3</span> cannot prevent jaggies near the horizon!</p>
+<p><div class="image_full" style="max-width:915px"><img  src="../pics/004308.jpg"  ><span class="caption">Alias 1, Alias 2, Alias 3.</span></div></p>
+<p><!--INDEX "10","MIP","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">MIP</span> </p>
+<p><span class="command">MIP</span> stands for <span class="command">multum in parvo</span>, which is Latin for <span class="command">many things in a small place</span>. When many texture pixels effectively lie within a single screen pixel an approximation is made based on the (known) texture pixel values. This results in very smooth blending. <span class="command">MIP</span> is the default sampling type.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004309.jpg"  ><span class="caption">MIP.</span></div></p>
+<p><!--INDEX "10","SAT","no_cycle_id_6"--><a id="no_cycle_id_6" name="no_cycle_id_6"></a> <span class="no_cycle_id">SAT</span> </p>
+<p><span class="command">SAT</span> is short for <span class="command">summed area tables</span> and it does an even better approximation than MIP mapping. As with MIP mapping, the approximation is based on the texture pixels that lie within a single screen pixel. SAT is the highest-quality sampling type.</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004310.jpg"  ><span class="caption">SAT.</span></div></p>
+<p> </p>
+<p><p><div class="hint"><span class="HL_hint"></span>SAT mapping works with textures up to 4,000 x 4,000 pixels. Cinema 4D switches to MIP mapping automatically if you try to use SAT mapping with textures over this limit.</div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","MIP / SAT","hl_1"--><p><span class="HL_1">MIP / SAT</span></p>
+<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping are especially important for high-quality animation and for objects in stills that extend towards the horizon, such as a sea. <span class="command">MIP</span> mapping is the default sampling type.</p>
+<p>The following two pictures demonstrate <span class="command">MIP</span> / <span class="command">SAT</span> mapping. The tiled texture used Circle sampling. Although the quality is generally good, the quality rapidly deteriorates towards the horizon.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004311.jpg"  ><span class="caption">Figure 1: Rendered with MIP sampling.</span></div></p>
+<p>This unwanted effect is the result of perspective distortion. Each screen pixel representing the floor near the horizon contains perhaps hundreds or even thousands of texture pixels.</p>
+<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping approximate a value using these pixels. Only an approximation is made, since calculating the exact value would increase the render time greatly. Figure 2 shows Edge antialiasing with 2 x 2 oversampling. The material used <span class="command">SAT</span> sampling. The image quality is much improved, including the reflection on the sphere.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004312.jpg"  ><span class="caption">Figure 2: Rendered with SAT sampling.</span></div></p>
+<p>The downside to <span class="command">MIP</span> and <span class="command">SAT</span> mapping is that they require extra memory. <span class="command">MIP</span> mapping needs an extra byte of memory per texture pixel, <span class="command">SAT</span> mapping requires an extra 12 bytes per texture pixel. Although <span class="command">SAT</span> mapping produces better render quality than <span class="command">MIP</span> mapping, <span class="command">MIP</span> mapping uses much less RAM and hence is the default interpolation type.</p>
+<p>As a rule of thumb, use <span class="command">MIP</span> mapping initially and switch over to <span class="command">SAT</span> mapping if required. Cinema 4D’s shaders use <span class="command">SAT</span> mapping automatically without consuming additional memory.</p>
+<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping affect the render time. On the one hand, <span class="command">MIP</span> and <span class="command">SAT</span> mapping take slightly longer to render. On the other hand, you may be able to reduce the antialiasing setting.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Enable MIP Falloff to enhance the MIP/SAT mapping effect for bump maps. This will reduce the strength of the bump map with increasing distance from the camera.</div></p>
+<p><!--INDEX "8","Blur Offset, Blur Scale","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">Blur Offset, Blur Scale</span></p>
+<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping only approximate the optimum computation, since a precise computation would increase the render time greatly. <span class="command">SAT</span> mapping is more accurate than <span class="command">MIP</span> mapping. But sometimes these approximations can make a texture too blurred or too sharp.</p>
+<p>So the <span class="command">Blur Offset</span> and <span class="command">Blur Scale</span> options enable you to blur or sharpen the mapping. <span class="command">Blur Offset</span> softens a texture. <span class="command">Blur Scale</span> fine-tunes the strength of the MIP/SAT mapping. A positive value increases the blur; a negative value weakens it. A strong value blurs detail but helps prevent flickering during animation. A weaker value brings out more detail but, increases the risk of flickering.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>With floors, try a positive blur strength of about <span class="command_value">+20%</span>. Floors tend to suffer most from perspective distortion, so they require special treatment.</div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

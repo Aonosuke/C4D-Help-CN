@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Material Properties / Material Editor: Luminance</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3511"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "8"-->
+		<!--TITLE "Material Properties / Material Editor: Luminance"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">Material</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">Color</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">Diffusion</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi_self">Luminance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">Transparency</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">Reflectance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">Environment</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">Fog</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">Bump</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">Normal</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">Glow</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">Displacement</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">Illumination</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">Editor</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">Assign</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Luminance</span></p><p></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004321.jpg"  ><span class="caption"></span></div></p>
+<p>A luminescent object can be seen even when there are no lights in the scene. It is self-illuminated.</p>
+<p>You can use the three dots button to load an image that is to act as a luminance map. The brighter a pixel in the luminance map, the more luminescent the corresponding region of the material. If you have chosen a Luminance Color and loaded a texture (luminance map) as well, the color will be added at 100% strength to the texture. If you want to see the result without the chosen color, set Mix Strength to 0%.</p>
+<p>Luminescent materials are used to help simulate objects that seem to be self-illuminated in the real world, such as the windows of an office block at night, neon writing or a TV screen.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004322.jpg"  ><span class="caption"></span></div> </p>
+<p>With GI enabled the illuminating object can radiate light, as seen in the image below.</p>
+<p><div class="image_full" style="max-width:682px"><img  src="../pics/019995.jpg"  ><span class="caption">A texture in the Luminance channel can illuminate the rest of the scene if GI is enabled.</span></div></p>
+<p><a id="MATERIAL_LUMINANCE_COLOR" name="MATERIAL_LUMINANCE_COLOR"></a> <!--INDEX "8","Color","MATERIAL_LUMINANCE_COLOR"--><span class="c4d_id">Color</span></p>
+<p>You can specify a color on most of the material channel pages using a color chooser. </p>
+<p><a id="MATERIAL_LUMINANCE_BRIGHTNESS" name="MATERIAL_LUMINANCE_BRIGHTNESS"></a> <!--INDEX "8","Brightness","MATERIAL_LUMINANCE_BRIGHTNESS"--><span class="c4d_id">Brightness</span> <span class="range">[0..10000%]</span></p>
+<p>Use this setting to adjust the brightness of a channel’s color. The <span class="command">Brightness</span> setting functions somewhat like a multiplier and can be set to greater than <span class="command">100%</span>.</p>
+<p>This parameter is also important in conjunction with Global Illumination lighting because it is used to adjust the brightness of the reflected light. If you load a texture the brightness of the reflected light should be defined using the <span class="command">Strength</span> parameter ("Generate GI" "Illumination" tab).</p>
+<p><a id="MATERIAL_LUMINANCE_SHADER" name="MATERIAL_LUMINANCE_SHADER"></a> <!--INDEX "8","Texture","MATERIAL_LUMINANCE_SHADER"--><span class="c4d_id">Texture</span></p>
+<p>Here an image texture or a 2D shader can be defined. Refer to the <a href="6291.html" target="">Textures</a> chapter for details.</p>
+<p><a id="MATERIAL_LUMINANCE_TEXTUREMIXING" name="MATERIAL_LUMINANCE_TEXTUREMIXING"></a> <!--INDEX "8","Mix Mode","MATERIAL_LUMINANCE_TEXTUREMIXING"--><span class="c4d_id">Mix Mode</span></p>
+<p>Use these parameters to mix the color and texture panes using one of four modes. The default mode for all channels is Normal, except for the Environment page, which uses Multiply as the default mode. Not all channels have Mix settings. If you load a texture or a 2D shader, it is placed on a layer above the color (i.e. the texture is placed on top of the color). </p>
+<p><a id="MATERIAL_TEXTUREMIXING_NORMAL" name="MATERIAL_TEXTUREMIXING_NORMAL"></a><!--INDEX "10","Normal","MATERIAL_TEXTUREMIXING_NORMAL"--><span class="c4d_id_cycle">Normal</span></p>
+<p>In normal mode, the <span class="command">Mix Strength</span> sets the opacity of the texture. If the value is set to <span class="command_value">100%</span>, you will see the texture only (remember, the texture is the top layer, so if it is opaque you will not see the color underneath). If the value is set to <span class="command_value">70%</span>, the result is <span class="command_value">70%</span> of the texture and <span class="command_value">30%</span> of the color.</p>
+<p>For example, if a texture pixel of RGB 255/0/0 (red) is used with a color value of RGB 255/255/0 (yellow) with the Mix Strength set to <span class="command_value">50%</span>, the resultant color is 255/128/0 (orange).</p>
+<p><a id="MATERIAL_TEXTUREMIXING_ADD" name="MATERIAL_TEXTUREMIXING_ADD"></a><!--INDEX "10","Add","MATERIAL_TEXTUREMIXING_ADD"--><span class="c4d_id_cycle">Add</span></p>
+<p>The texture’s RGB value is added to the color’s RGB value. Color channel values cannot exceed the maximum of RGB 255. So if a texture pixel of RGB 0/255/255 (cyan) is added to a color value of 255/255/0 (yellow), the result is 255/255/255 (white).</p>
+<p><a id="MATERIAL_TEXTUREMIXING_SUBTRACT" name="MATERIAL_TEXTUREMIXING_SUBTRACT"></a><!--INDEX "10","Subtract","MATERIAL_TEXTUREMIXING_SUBTRACT"--><span class="c4d_id_cycle">Subtract</span></p>
+<p>The color’s RGB value is subtracted from the texture’s RGB value. Thus if a texture pixel is RGB 255/255/255 (white) and the color value is 255/0/0 (red), subtracting with Mix Strength set to 100% gives the result 0/255/255 (cyan).</p>
+<p><a id="MATERIAL_TEXTUREMIXING_MULTIPLY" name="MATERIAL_TEXTUREMIXING_MULTIPLY"></a><!--INDEX "10","Multiply","MATERIAL_TEXTUREMIXING_MULTIPLY"--><span class="c4d_id_cycle">Multiply</span></p>
+<p>The RGB value of the texture is multiplied by the RGB value of the color. For example RGB 255/128/0 (orange) multiplied by RGB 0/255/0 (green) results in RGB 0/128/0 (dark green).</p>
+<p><a id="MATERIAL_LUMINANCE_TEXTURESTRENGTH" name="MATERIAL_LUMINANCE_TEXTURESTRENGTH"></a> <!--INDEX "8","Mix Strength","MATERIAL_LUMINANCE_TEXTURESTRENGTH"--><span class="c4d_id">Mix Strength</span> <span class="range">[0..100%]</span></p>
+<p><span class="command">Mix Strength</span> defines the mixing proportion between the texture and color panes or between the brightness and transparency (depending on which mode is selected) of the texture to be mixed.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Texture Manager</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "52276"-->
+		<!--VATER_ID "6291"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "Texture Manager"-->
+		<!--APPS "11 16 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span> <span class="link_back"><a href="6291.html" target="_self">Texture settings</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Texture Manager",""--><p><span class="HL_group">Texture Manager</span></p><p></p>
+<p><!--INDEX "7","Texture Manager",""--><!--PAGE_COMMAND "DIALOG_TEXTUREMANAGERDIALOG"--></p>
+<p><PAGE_RELEASE_150 New Texture Manager for easily locating and assigning missing textures.></p>
+<p><!--INDEX "7","Texture Manager...",""--><!--PAGE_COMMAND "PLUGIN_CMD_1029486"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029486.png" alt="" height="24" width="24" border="1"> </p>
+<p><div class="image_full" style="max-width:556px"><img  src="../pics/037076.jpg"  ><span class="caption"></span></div></p>
+<p>Everyone knows the error messages when rendering if textures cannot be found. Textures that were logically saved to a certain directory can no longer be found. This can happen if a Project is copied, opened on a different computer, Content Browser content is not available in a new Cinema 4D version and so on.</p>
+<p>The Texture Manager helps you deal with this issue by listing all textures within a given Project and shows whether or not they can be located in its <a href="PREFSFILES-PREF_FILE_MAIN_GROUP.html#path" target="">Search Paths</a>. The Texture Manager also has numerous additional functions with which textures can be relinked. For example, the <span class="command">Replace</span> function can be used to replace all JPEG texture paths with TIFF texture paths of the same name:</p>
+<p><div class="image_full" style="max-width:241px"><img  src="../pics/037077.jpg"  ><span class="caption"></span></div></p>
+<p>Relative and absolute texture paths are referred to in the following. Details regarding these terms can be found <a href="6291.html" target="">here</a>.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Example: What steps can be taken if a Project is loaded and textures are missing when the Project is rendered?","hl_1"--><p><span class="HL_2">Example: What steps can be taken if a Project is loaded and textures are missing when the Project is rendered?</span></p>
+<p>For the most common case that the original texture folder has been relocated and the texture paths must be directed to this new folder, proceed as follows:</p>
+<p><ol><br><li> Select the <nobr><span class="menu">Edit | Select Missing Textures</span></nobr> command. This will select all textures that cannot be found.<br><li> Select <nobr><span class="menu">Edit | Relink Textures</span></nobr>. A selection window will open.<br><li> Navigate to the folder in which your textures lie and click on <span class="command">Open</span>. Done. All textures will now be properly linked.<br><li> If you want, you can now save the Project with ALL textures (in a sub-directory named "tex”) using the  <a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">Save Project with Assets...</span></nobr></a> command (e.g., if you want to zip the Project).<br></ol><p></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","General","hl_2"--><p><span class="HL_1">General</span></p>
+<p><div class="image_full" style="max-width:1457px"><img  src="../pics/037078.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Texture List","hl_3"--><p><span class="HL_2">Texture List</span></p>
+<p>The Texture List displays all textures in the currently open Project, including several of the properties described below. Note that double-clicking on an item (name, path or other property) will let you edit it directly without, for example, having to switch to the <span class="command">Material Manager</span> in order to define a new texture path.</p>
+<p>Multiple textures can be selected or deselected using the <nobr><span class="key">Shift</span></nobr> or <nobr><span class="key">Ctrl/Cmd</span></nobr> keys (you can also drag a selection box using your mouse). Commands that can be applied to the selected items will be applied to the selection only.</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Status","hl_4"--><p><span class="HL_3">Status</span></p>
+<p>Three texture states are available:<ul></p>
+<p><li> Green check mark: Texture found, no problems</li><li> Red X: Texture not found, must be re-linked</li><li> Warning symbol: Texture found in search path (’tex’ folder, etc.) but false absolute or relative path. The renderer will display an error message when started. Texture must be re-linked (e.g., via the <span class="command">Localize</span> command).</li></ul><p></p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","Texture","hl_5"--><p><span class="HL_3">Texture</span></p>
+<p>Displays the texture’s file name.</p>
+<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","Suggested Path","hl_6"--><p><span class="HL_3">Suggested Path</span></p>
+<p>This is the absolute texture path saved in the material. If the path is relative, only the file name will be displayed.</p>
+<p><a id="hl_7" name="hl_7"></a><!--INDEX "3","Real Path","hl_7"--><p><span class="HL_3">Real Path</span></p>
+<p>Displays the actual, complete path, including those of textures with relative texture paths. For absolute paths, this represents the previously described Suggested Path.</p>
+<p><a id="hl_8" name="hl_8"></a><!--INDEX "3","New File Path","hl_8"--><p><span class="HL_3">New File Path</span></p>
+<p>If you use the <span class="command">Replace</span> function to change paths, this column serves as a type of preview (prior to the <span class="command">Replace</span> button being clicked on) of the new path. In the image above you can see how the "Textures” directory has been replaced by "Images” in the <span class="command">New File Path</span> column.</p>
+<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","Material","hl_9"--><p><span class="HL_3">Material</span></p>
+<p>Displays the corresponding material’s name and icon. You can double-click on the icon to open the material in the <span class="command">Material Manager</span>.</p>
+<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","Channel","hl_10"--><p><span class="HL_3">Channel</span></p>
+<p>Displays the material channel to which the texture belongs.</p>
+<p><a id="hl_11" name="hl_11"></a><!--INDEX "3","Layer","hl_11"--><p><span class="HL_3">Layer</span></p>
+<p>Displays the <a href="11074.html" target="">Cinema 4D layer</a>on which the material to which the texture belongs lies.</p>
+<p><a id="RELEASE_160_1" name="RELEASE_160_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 16</p><p><a id="hl_12" name="hl_12"></a><!--INDEX "3","RMB context menu","hl_12"--><p><span class="HL_3">RMB context menu</span></p>
+<p>If you right-click on a found texture, a menu with the following commands will be made available:<ul></p>
+<p><li> <span class="command">Show File in Explorer/Finder</span>: The file will be shown in the explorer/finder where it can be opened for modification, if necessary.</li><li> <span class="command">Open File in Explorer/Finder</span>: The file will be opened using the standard application defined by your operating system.</li><li> <span class="command">Open File in Picture Viewer</span>: The file will be loaded into the Cinema 4D <span class="command">Picture Viewer</span>.</li></p></div></p>
+<p></ul><p></p>
+<p><a id="hl_13" name="hl_13"></a><!--INDEX "3","Preview Image and Replace Function","hl_13"--><p><span class="HL_2">Preview Image and Replace Function</span></p>
+<p>A preview image of the selected texture - if found - will be displayed at the bottom left of the Texture Manager window.</p>
+<p>At the right you will find the <span class="command">Replace</span> functions, which can be used to select a different texture path, directory or name. This works as follows (for demonstration purposes only a single texture will be used):</p>
+<p>Assuming you have only one texture in the target directory: "/Users/olibecker/Desktop/Bunny/Textur/Bunny.jpg"</p>
+<p>2 years later you open the Project and the texture can no longer be located because the directory with the texture has been moved here:</p>
+<p>"/Users/olibecker/Desktop/archived Projects/xxx/Texture/Bunny.jpg"</p>
+<p>To redirect to the new path, enter "Bunny” into the <span class="command">Replace</span> field and "archived Projects” into the <span class="command">With</span> field (<span class="command_value">Full Path</span> or <span class="command_value">Directory</span> must be defined in the drop-down menu below). If textures are selected, a new absolute path will be displayed in the corresponding <span class="command">New File Path</span> column. If you click on the <span class="command">Replace</span> button, all paths for the selected materials will be modified.</p>
+<p>The <span class="command">Replace</span> function uses the part of the old path (or texture name) that is defined in the <span class="command">With</span> field.</p>
+<p>This makes it possible to replace old paths with new paths for multiple textures simultaneously.</p>
+<p>In the selection menu you can define which part of the path should be used by the <span class="command">Replace</span> function. The path can be set up as follows:</p>
+<p><div class="image_full" style="max-width:255px"><img  src="../pics/037079.jpg"  ><span class="caption"></span></div></p>
+<p>The characters described <a href="52276.html#an" target="">here</a> can be used in the <span class="command">Replace</span> field: <span class="command">*</span> (any text); <span class="command">?</span> (any or individual character); <span class="command">#</span> (any or individual number).</p>
+<p>Example: These settings can be used to replace all texture names with date prefixes with textures of the same name with the prefix "final_”.</p>
+<p><div class="image_full" style="max-width:796px"><img  src="../pics/037080.jpg"  ><span class="caption"></span></div></p>
+<p>Of course this works especially well if you adhere to basic naming conventions when naming paths and textures (e.g., date suffixes, sequential numbering or adding a "low_” prefix that corresponds to, for example, low-res images that can later be replace with high-res images - which of course will have the prefix "high_”). Using naming conventions makes it easy to replace textures or define new paths.</p>
+<p><a id="hl_14" name="hl_14"></a><!--INDEX "3","Menu","hl_14"--><p><span class="HL_2">Menu</span></p>
+<p><a id="hl_15" name="hl_15"></a><!--INDEX "3","Edit Menu","hl_15"--><p><span class="HL_1">Edit Menu</span></p>
+<p>All of the commands described below only affect the texture paths within Cinema 4D - no changes are made to the texture files themselves. The following still applies: all textures hidden from the filter will not be affected (exception: <span class="command">Deselect All</span>).</p>
+<p><!--INDEX "7","Select All","PLUGIN_CMD_1029813"--><!--COMMAND "PLUGIN_CMD_1029813"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029813.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029813" name="PLUGIN_CMD_1029813"></a>   <span class="c4d_menu_id">Select All</span></p>
+<p>Selects all textures displayed in the <span class="command">Texture</span> column.</p>
+<p><!--INDEX "7","Deselect All","PLUGIN_CMD_1029814"--><!--COMMAND "PLUGIN_CMD_1029814"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029814.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029814" name="PLUGIN_CMD_1029814"></a>   <span class="c4d_menu_id">Deselect All</span></p>
+<p>Deselects all textures (incl. those hidden from the filter).</p>
+<p><!--INDEX "7","Select Missing Textures","PLUGIN_CMD_1029815"--><!--COMMAND "PLUGIN_CMD_1029815"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029815.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029815" name="PLUGIN_CMD_1029815"></a>   <span class="c4d_menu_id">Select Missing Textures</span></p>
+<p>All textures displayed in the list that have not been located will be selected.</p>
+<p><!--INDEX "7","Invert All","PLUGIN_CMD_1029817"--><!--COMMAND "PLUGIN_CMD_1029817"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029817.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029817" name="PLUGIN_CMD_1029817"></a>   <span class="c4d_menu_id">Invert All</span></p>
+<p>Select this command to invert the selection: selected textures will be deselected and deselected will be selected.</p>
+<p><!--INDEX "7","Select Textures of Active Materials","PLUGIN_CMD_1029816"--><!--COMMAND "PLUGIN_CMD_1029816"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029816.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029816" name="PLUGIN_CMD_1029816"></a>   <span class="c4d_menu_id">Select Textures of Active Materials</span></p>
+<p>All textures of currently selected materials in the <span class="command">Material Manager</span> will be selected.</p>
+<p><!--INDEX "7","Show in <span class="command">Attribute Manager</span>","PLUGIN_CMD_1029818"--><!--COMMAND "PLUGIN_CMD_1029818"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029818.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029818" name="PLUGIN_CMD_1029818"></a>   <span class="c4d_menu_id">Show in Attribute Manager</span></p>
+<p>This option (this is not a command) defines whether or not the materials of textures selected in the Texture Manager should be displayed in the <span class="command">Attribute Manager</span>.</p>
+<p><!--INDEX "7","Localize Filenames","PLUGIN_CMD_1029819"--><!--COMMAND "PLUGIN_CMD_1029819"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029819.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029819" name="PLUGIN_CMD_1029819"></a>   <span class="c4d_menu_id">Localize Filenames</span><br><!--INDEX "7","Globalize Filenames","PLUGIN_CMD_1029820"--><!--COMMAND "PLUGIN_CMD_1029820"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029820.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029820" name="PLUGIN_CMD_1029820"></a>   <span class="c4d_menu_id">Globalize Filenames</span></p>
+<p><div class="image_full" style="max-width:1052px"><img  src="../pics/037093.jpg"  ><span class="caption">Both commands create or delete entire file paths.</span></div></p>
+<p><span class="command">Localize Filename</span> removes the texture paths from all selected textures and uses only the file name. This in essence turns an absolute path into a relative path (that looks for <a href="6291.html" target="">here</a> >). This happens automatically if you save a Project using the <a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">Save Project with Assets...</span></nobr></a> command.</p>
+<p><span class="command">Globalize Filename</span> turns relative paths into absolute paths (if only a name and no path exists in the given material) for all selected textures. The entire file path will then be used.</p>
+<p><!--INDEX "7","Relink Textures …","PLUGIN_CMD_1029821"--><!--COMMAND "PLUGIN_CMD_1029821"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029821.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029821" name="PLUGIN_CMD_1029821"></a>   <span class="c4d_menu_id">Relink Textures...</span></p>
+<p>Selecting this command will relink selected textures with textures of the same name in the selected directory. Depending on the location, absolute (outside of Cinema 4D’s search paths …) or relative (… within Cinema 4D’s search paths) will be created.</p>
+<p>This command can be useful if no textures at all can be found. This is mostly the case if the texture directory is at a completely different location. In this case, simply select all textures, call up this command and select the correct directory. All texture paths will then be redirected accordingly and you’re ready to render.</p>
+<p><!--INDEX "7","Replace texture(s) with …","PLUGIN_CMD_1029822"--><!--COMMAND "PLUGIN_CMD_1029822"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029822.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029822" name="PLUGIN_CMD_1029822"></a>   <span class="c4d_menu_id">Replace Texture(s) with...</span></p>
+<p>Lets you assign a single new file to selected textures.</p>
+<p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p></p>
+<p><!--INDEX "7","Clear Textures","PLUGIN_CMD_1034807"--><!--COMMAND "PLUGIN_CMD_1034807"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1034807.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1034807" name="PLUGIN_CMD_1034807"></a>   <span class="c4d_menu_id">Clear Textures</span></p>
+<p>Use this command to delete all links to the selected textures. Texture links to non-existent files - which are marked by a red x in the Texture Manager - can, for example, be eliminated in disabled material channels.</p>
+<p></p></div></p>
+<p><a id="hl_16" name="hl_16"></a><!--INDEX "3","View menu","hl_16"--><p><span class="HL_1">View menu</span></p>
+<p><!--INDEX "7","Search Bar","PLUGIN_CMD_1029823"--><!--COMMAND "PLUGIN_CMD_1029823"--><a id="PLUGIN_CMD_1029823" name="PLUGIN_CMD_1029823"></a>   <span class="c4d_menu_id">Search Bar</span></p>
+<p>Selecting this command will display a search bar in the Texture Manager, which can be used to filter through hundreds of textures, if necessary.</p>
+<p>Select the type of filter from the drop-down menu next to the text field.</p>
+<p>No elements will be selected using the text field. This is a real-time filter into which you simply enter text. Each element whose name is comprised even in part of the text in the text field will be displayed. Capitalization also applies. Clicking on the <span class="command_value">x</span> to the left of the text field will clear the field and all elements will be displayed.</p>
+<p>Three special characters can be used (as well as in the <span class="command">Replace</span> text field below):</p>
+<p><a id="AN" name="AN"></a><ul></p>
+<p><li> <span class="command">*</span> Placeholder for any text</li><li> <span class="command">?</span> Placeholder for an individual character</li><li> <span class="command">#</span> Placeholder for any digit, or multiple digits using successive ,#’ (see example below)</li></ul><p></p>
+<p>The following examples will shed more light on this:</p>
+<p><div class="image_full" style="max-width:1147px"><img  src="../pics/037094.jpg"  ><span class="caption"></span></div></p>
+<p>At the left is an unfiltered texture list followed by the following filter types from left to right:</p>
+<p><ul></p>
+<p><li> <span class="command">##.</span>: All elements containing at least 2 numbers followed by a point are displayed.</li><li> <span class="command">e*n</span>: All elements beginning with a lowercase e, followed by any text and ending with a lowercase n are shown.</li><li> <span class="command">o?o</span>: All elements beginning and ending with a lowercase o with any SINGLE letter or number in-between.</li></ul><p></p>
+<p><!--INDEX "7","Texture","PLUGIN_CMD_1029824"--><!--COMMAND "PLUGIN_CMD_1029824"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029824.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029824" name="PLUGIN_CMD_1029824"></a>   <span class="c4d_menu_id">Texture</span><br><!--INDEX "7","Suggested Path","PLUGIN_CMD_1029825"--><!--COMMAND "PLUGIN_CMD_1029825"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029825.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029825" name="PLUGIN_CMD_1029825"></a>   <span class="c4d_menu_id">Suggested Path</span><br><!--INDEX "7","Real Path","PLUGIN_CMD_1029826"--><!--COMMAND "PLUGIN_CMD_1029826"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029826.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029826" name="PLUGIN_CMD_1029826"></a>   <span class="c4d_menu_id">Real Path</span><br><!--INDEX "7","New File Path","PLUGIN_CMD_1029827"--><!--COMMAND "PLUGIN_CMD_1029827"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029827.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029827" name="PLUGIN_CMD_1029827"></a>   <span class="c4d_menu_id">New File Path</span><br><!--INDEX "7","Materials","PLUGIN_CMD_1029828"--><!--COMMAND "PLUGIN_CMD_1029828"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029828.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029828" name="PLUGIN_CMD_1029828"></a>   <span class="c4d_menu_id">Materials</span><br><!--INDEX "7","Channel","PLUGIN_CMD_1029829"--><!--COMMAND "PLUGIN_CMD_1029829"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029829.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029829" name="PLUGIN_CMD_1029829"></a>   <span class="c4d_menu_id">Channel</span><br><!--INDEX "7","Layer","PLUGIN_CMD_1029830"--><!--COMMAND "PLUGIN_CMD_1029830"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029830.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029830" name="PLUGIN_CMD_1029830"></a>   <span class="c4d_menu_id">Layer</span></p>
+<p>Use these options to define which columns should be displayed in the Texture Manager.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

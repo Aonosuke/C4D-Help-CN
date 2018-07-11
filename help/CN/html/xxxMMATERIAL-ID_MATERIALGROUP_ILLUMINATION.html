@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Material Properties / Material Editor: Illumination</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3523"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "21"-->
+		<!--TITLE "Material Properties / Material Editor: Illumination"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">Material</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">Color</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">Diffusion</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">Luminance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">Transparency</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">Reflectance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">Environment</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">Fog</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">Bump</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">Normal</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">Glow</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">Displacement</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi_self">Illumination</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">Editor</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">Assign</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Illumination</span></p><p></p>
+<p><div class="in-visualize in-studio " align="left">     <div class="only_marker" align ="right">         <div class="only_apps">             Function available in CINEMA 4D Visualize, Studio         </div>              <div class="only_body" align="left">             The following parameters (with the exception of <span class="command">Model</span> and beyond) can be used to include or exclude individual materials from GI or GI and Photon caustics, or to adjust settings that control the strength of the effects. If, for example, you have a Project with many transparent objects it would be very laborious to calculate caustics for each object. Here you can define the objects for which caustics should be calculated.</p>
+<p>On this page, you will find settings that adjust the diffuse falloff, level and roughness of the material, as well as the general illumination mode setting (this greatly affects how highlights react to the light in the scene and can make a big difference when it comes to making a material look more like, say, brick instead of like plastic). Some of these parameters apply to Oren-Nayar mode only and will be ghosted when you use Blinn or Phong mode.</p>
+<p><a id="MATERIAL_GLOBALILLUM_GENERATE" name="MATERIAL_GLOBALILLUM_GENERATE"></a> <!--INDEX "8","Generate GI","MATERIAL_GLOBALILLUM_GENERATE"--><span class="c4d_id">Generate GI</span></p>
+<p>Deactivate this setting if a given material should not have an effect on other objects.</p>
+<p><a id="MATERIAL_GLOBALILLUM_GENERATE_STRENGTH" name="MATERIAL_GLOBALILLUM_GENERATE_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_GLOBALILLUM_GENERATE_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[0..10000%]</span></p>
+<p>Use this setting to define how strong a given material will <span class="command">emit</span>. The default value is 100% and values up to 10000% can be entered.</p>
+<p><a id="MATERIAL_GLOBALILLUM_RECEIVE" name="MATERIAL_GLOBALILLUM_RECEIVE"></a> <!--INDEX "8","Receive GI","MATERIAL_GLOBALILLUM_RECEIVE"--><span class="c4d_id">Receive GI</span></p>
+<p>Deactivate this option if a given material should not receive brightness or color from other objects.</p>
+<p><a id="MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH" name="MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[0..10000%]</span></p>
+<p>When active you can define to what degree a given material will receive color and brightness of other materials.</p>
+<p><a id="MATERIAL_GLOBALILLUM_SATURATION" name="MATERIAL_GLOBALILLUM_SATURATION"></a> <!--INDEX "8","Saturation","MATERIAL_GLOBALILLUM_SATURATION"--><span class="c4d_id">Saturation</span> <span class="range">[0..1000%]</span></p>
+<p>Use this setting to fine-tune the saturation of textures used for GI. Contrary to the previously described <span class="command">Saturation</span>, this setting affects only the receiving of GI, not the radiation of it.</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004088.jpg"  ><span class="caption">An area of high saturation is in the center.</span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","GI Portals, Polygon Lights","hl_1"--><p><span class="HL_1">GI Portals, Polygon Lights</span></p>
+<p>The following six parameters only pertain to <a href="32219.html" target="">GI calculation</a>.</p>
+<p>By defining GI Portals or Polygon Lights (objects with an active <span class="command">Luminance</span> material channel) as light emitting elements (i.e. not normal Cinema 4D light sources but luminous areas: GI Portals (e.g., for a light emitting sky), Polygon Lights (any geometry)) - these are especially important for the calculation of light and shadow - the light shadow quality will be improved. The use of GI Portals and GI Area Lights is described <a href="32221.html" target="">here</a>.</p>
+<p><RELEASE_130 GI Area light option for Physical Renderer’s GI mode.></p>
+<p><a id="MATERIAL_GLOBALILLUM_AREA" name="MATERIAL_GLOBALILLUM_AREA"></a> <!--INDEX "8","GI Area Light","MATERIAL_GLOBALILLUM_AREA"--><span class="c4d_id">GI Area Light</span></p>
+<p>If this option is enabled, the way in which a (luminous) object is included in the GI calculation will be optimized. This option should be enabled if the object serves as an Area light. Additional information can be found under <a href="32221.html" target="">GI Portals and Polygon Lights: Function and Placement</a> and <a href="VPGISETUP-GI_GROUP_GENERAL.html#samp" target="">Sampling</a>.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>In Cinema 4D versions prior to R14, this option was exclusively for use with the Physical Renderer’s GI. This is no longer the case!</div></p>
+<p></RELEASE_130></p>
+<p><a id="MATERIAL_GLOBALILLUM_PORTAL" name="MATERIAL_GLOBALILLUM_PORTAL"></a> <!--INDEX "8","GI Portal","MATERIAL_GLOBALILLUM_PORTAL"--><span class="c4d_id">GI Portal</span></p>
+<p>Activating this option will define the object to which it is assigned as a GI Portal (make sure you also activate the Transparency channel).</p>
+<p>GI Portals are usually single-polygon surfaces (e.g., primitive <span class="command">Plane</span>) that are placed where light passes through relatively narrow openings. The direction in which the Normals show is irrelevant. Further details can be found <a href="32221.html" target="">here</a>.</p>
+<p>If you do not want to make corresponding changes to the light-reflecting object itself, you can influence the light passing through the GI Portal by changing the <span class="command">Color</span> or <span class="command">Brightness</span> settings in the Transparency channel.</p>
+<p><a id="PPQMC" name="PPQMC"></a></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The following Caustics parameters apply exclusively to the photon caustics and not to the GI caustics. The differences between these types of caustics is described <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">here</a>.</div></p>
+<p><a id="MATERIAL_CAUSTICS_GENERATE" name="MATERIAL_CAUSTICS_GENERATE"></a> <!--INDEX "8","Generate Caustics","MATERIAL_CAUSTICS_GENERATE"--><span class="c4d_id">Generate Caustics</span></p>
+<p>Enable this option to activate Photon caustics generation for the active material. Make sure that either the Transparency (for caustics that result from light breaking through water in a glass) or Reflection (for caustics resulting from light reflecting from a curved object) material channels is active.</p>
+<p><p><div class="hint"><span class="HL_hint">Note:<br></span>Only the Generate parameter is relevant when using volume caustics.</div></p>
+<p><a id="MATERIAL_CAUSTICS_GENERATE_STRENGTH" name="MATERIAL_CAUSTICS_GENERATE_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_CAUSTICS_GENERATE_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[0..10000%]</span></p>
+<p>Use the input box to set the strength of the effect.</p>
+<p><a id="MATERIAL_CAUSTICS_RECEIVE" name="MATERIAL_CAUSTICS_RECEIVE"></a> <!--INDEX "8","Receive Caustics","MATERIAL_CAUSTICS_RECEIVE"--><span class="c4d_id">Receive Caustics</span></p>
+<p>This enables/disables the reception of surface Photon caustics for the material.</p>
+<p><a id="MATERIAL_CAUSTICS_RECEIVE_STRENGTH" name="MATERIAL_CAUSTICS_RECEIVE_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_CAUSTICS_RECEIVE_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[0..10000%]</span></p>
+<p>Use the input box to set the strength of the effect.</p>
+<p><a id="MATERIAL_CAUSTICS_SAMPLERADIUS" name="MATERIAL_CAUSTICS_SAMPLERADIUS"></a> <!--INDEX "8","Radius","MATERIAL_CAUSTICS_SAMPLERADIUS"--><span class="c4d_id">Radius</span> <span class="range">[0..+∞m]</span></p>
+<p>This specifies how close photons must be to one another in order to be interpolated. Higher values tend to produce better results but they also take longer to render.</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004056.jpg"  ><span class="caption">Radius = 1; individual photons can be seen as points of light because they are not interpolated together.</span></div></p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004057.jpg"  ><span class="caption">Radius = 10.</span></div></p>
+<p><div class="image_full" style="max-width:443px"><img  src="../pics/039489.jpg"  ><span class="caption">Radius = 100.</span></div></p>
+<p>Larger values would only make the Photon Caustics appear more blurred.</p>
+<p>If the defined value is too small, individual photons will become visible. This might make for an interesting visual effect but is not suited for realistic renderings. Larger values will combine and interpolate photons accordingly, which produces a realistic caustics effect.</p>
+<p><a id="MATERIAL_CAUSTICS_SAMPLES" name="MATERIAL_CAUSTICS_SAMPLES"></a> <!--INDEX "8","Samples","MATERIAL_CAUSTICS_SAMPLES"--><span class="c4d_id">Samples</span> <span class="range">[1..10000]</span></p>
+<p>This defines the maximum number of photons within the Radius that are used to calculate the effect. For example, if you enter a value of 100, up to 100 photons will be evaluated — any photons in excess of this number are ignored. Samples and Radius both affect the quality of the effect.</p>
+<p>To summarize: more samples per radius means a more accurate image. Increasing the Radius means more blur but a longer render time also.</p>
+<p><a id="MATERIAL_ILLUMINATION_MODEL_BLINN" name="MATERIAL_ILLUMINATION_MODEL_BLINN"></a><!--INDEX "10","Blinn","MATERIAL_ILLUMINATION_MODEL_BLINN"--><span class="c4d_id_cycle">Blinn</span></p>
+<p>This makes Blinn a better choice for metals and other materials where you need more accurate highlights.</p>
+<p>         </div>     </div> </div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

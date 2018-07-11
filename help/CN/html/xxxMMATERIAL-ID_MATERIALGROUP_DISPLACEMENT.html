@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Material Properties / Material Editor: Displacement</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3521"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "19"-->
+		<!--TITLE "Material Properties / Material Editor: Displacement"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">Material</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">Color</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">Diffusion</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">Luminance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">Transparency</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">Reflectance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">Environment</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">Fog</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">Bump</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">Normal</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">Glow</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi_self">Displacement</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">Illumination</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">Editor</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">Assign</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Displacement</span></p><p></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004370.jpg"  ><span class="caption"></span></div></p>
+<p>Displacement is similar to Bump, the difference being that here the object is actually (not just apparently) deformed. This difference is best seen at object edges. In the sphere example below, the left half of the sphere uses bump mapping, while the right half uses displacement mapping.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004371.jpg"  ><span class="caption"></span></div></p>
+<p>A bump map was used on the left half of the sphere and a displacement map on the right half. You can see that the edge of the sphere with the bump map applied is smooth and that the displacement edge is deformed. The slight deformation also leads to shadow effects within the object surface itself.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General Information","hl_1"--><p><span class="HL_1">General Information</span><ul></p>
+<p><li> Always disable the <span class="command">Perfect Sphere</span> option when creating a sphere. Leaving this option enabled will prevent a displacement map from being calculated.</li><li> If several displacement materials are assigned to a given object, the <span class="command">maximum</span> values will always be used. Example: An object has 2 different displacement materials on 2 selections. The first displacement material has a subdivision level of <span class="command_value">4</span> and the second <span class="command_value">6</span>. The entire object has a subdivision level of <span class="command_value">6</span>. Even though the entire object is subdivided, the displacement will only be applied to the defined selections.</li><li> If problems should occur when using the RGB (X, Y, Z local) mode, such as no local displacement, enabling the Texture tag’s <span class="command">Use UVW for Bump</span> option can help.</li><li> Please also not the following functions:</li>- <a href="49938.html" target="">Sculpting</a></p>
+<p>- <a href="TBAKETEXTURE-ID_BAKEOPTIONS.html#dis" target="">Bake Texture</a></p>
+<p>which can be used to create displacement textures.</p>
+<p></ul><p></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004178.jpg"  ><span class="caption"></span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_STRENGTH" name="MATERIAL_DISPLACEMENT_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_DISPLACEMENT_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[-100..100%]</span></p>
+<p>This slider allows you to adjust the maximum displacement defined by the <span class="command">Height</span> setting (the <span class="command">Strength</span> and <span class="command">Height</span> values will be multiplied together to control the maximum displacement).</p>
+<p><a id="MATERIAL_DISPLACEMENT_HEIGHT" name="MATERIAL_DISPLACEMENT_HEIGHT"></a> <!--INDEX "8","Height","MATERIAL_DISPLACEMENT_HEIGHT"--><span class="c4d_id">Height</span> <span class="range">[-∞..+∞m]</span></p>
+<p>Defines the height of the displacement, which can be modified by <span class="command">Strength</span> value.</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE" name="MATERIAL_DISPLACEMENT_TYPE"></a> <!--INDEX "8","Type","MATERIAL_DISPLACEMENT_TYPE"--><span class="c4d_id">Type</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_INTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_INTENSITY"></a><!--INDEX "10","Intensity","MATERIAL_DISPLACEMENT_TYPE_INTENSITY"--><span class="c4d_id_cycle">Intensity</span></p>
+<p><div class="image_full" style="max-width:645px"><img  src="../pics/004372.jpg"  ><span class="caption">Intensity mode (top) and Intensity (Centered) mode (bottom).</span></div></p>
+<p>In the <span class="command">Intensity</span> mode, the displacement takes place in the positive direction. Black parts in the displacement map produce no displacement, white parts produce maximum displacement.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004373.jpg"  ><span class="caption">Intensity mode.</span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"></a><!--INDEX "10","Intensity (Centered)","MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"--><span class="c4d_id_cycle">Intensity (Centered)</span></p>
+<p>In the Intensity (Centered) mode, the displacement can take place in both positive and negative directions. A gray value of 50% results in no displacement. White produces maximum positive displacement, while black produces maximum negative displacement.</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_REDGREEN" name="MATERIAL_DISPLACEMENT_TYPE_REDGREEN"></a><!--INDEX "10","Red / Green","MATERIAL_DISPLACEMENT_TYPE_REDGREEN"--><span class="c4d_id_cycle">Red / Green</span></p>
+<p>The displacement can take place in the negative or positive direction according to the red and green values in the texture. Green values raise the displacement, red values lower the displacement. A black color results in no displacement, it is purely the red and green components that control the displacement. A pure green (RGB: 0,255,0) and a pure red (RGB 255,0,0) lead to maximum displacement in the positive and negative directions respectively.</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL" name="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"></a><!--INDEX "10","RGB (XYZ Object)","MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"--><span class="c4d_id_cycle">RGB (XYZ Object)</span><br><a id="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD" name="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"></a><!--INDEX "10","RGB (XYZ World)","MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"--><span class="c4d_id_cycle">RGB (XYZ World)</span></p>
+<p><RELEASE_140 Displacement now also includes the RGB mode (XYZ Tangent).></p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT" name="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"></a><!--INDEX "10","RGB (XYZ Tangent)","MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"--><span class="c4d_id_cycle">RGB (XYZ Tangent)</span></p>
+<p>These modes control the displacement spatially according to the texture’s RGB components. The components define the following directions:</p>
+<p><ul></p>
+<p><li> Red: X</li><li> Green: Y</li><li> Blue: Z</li></ul><p></p>
+<p>Depending on the mode selected, different coordinate systems will be used for deformation. The most flexible and recommended mode is <span class="command_value">RGB (XYZ Tangent)</span> (of course as long as the displacement texture was also created in this mode!) because this allows object deformations (e.g., via Deformers) that won’t result in faulty deformations, as can be the case with other modes. This mode is indispensable specially in conjunction with character animation, is brought to life by moving joints.</p>
+<p><div class="image_full" style="max-width:1175px"><img  src="../pics/036194.jpg"  ><span class="caption"></span></div></p>
+<p>The cylinder in the image above as a displacement texture applied to it and was deformed using a Bend deformer. The displacement texture created using <span class="command_value">RGB (XYZ Object</span> mode at the top right is faulty; the displacement texture at the bottom right is correct and was created using <span class="command_value">RGB (XYZ Tangent)</span> mode.</p>
+<p></RELEASE_140></p>
+<p><a id="MATERIAL_DISPLACEMENT_SHADER" name="MATERIAL_DISPLACEMENT_SHADER"></a> <!--INDEX "8","Texture","MATERIAL_DISPLACEMENT_SHADER"--><span class="c4d_id">Texture</span></p>
+<p>Here an image texture or a 2D shader can be defined. Refer to the <a href="6291.html" target="">Textures</a> chapter for details.</p>
+<p><a id="SUBPOLYD" name="SUBPOLYD"></a></p>
+<p><!--INDEX "6","Sub Polygon Displacement","ID_MATERIALGROUP_SUBPOLY"--><a id="ID_MATERIALGROUP_SUBPOLY" name="ID_MATERIALGROUP_SUBPOLY"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Sub Polygon Displacement</span></p>
+<p><p><div class="hint"><span class="HL_hint"></span>Only included in Cinema 4D Visualize, Studio.</div></p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY" name="MATERIAL_DISPLACEMENT_SUBPOLY"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Sub Polygon Displacement","MATERIAL_DISPLACEMENT_SUBPOLY"--><span class="c4d_id">Sub Polygon Displacement</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/023778.jpg"  ><span class="caption">Images of all Noise types in conjunction with SPD can also be found <a href="XSLANOISE.html" target="">here</a>.</span></div></p>
+<p>This activates SPD. If the option is disabled, normal displacement will be used (only existing object points will be affected). See <a href="5786.html" target="">Advanced Render / Sub-polygon Displacement</a>.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION" name="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Subdivision Level","MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"--><span class="c4d_id">Subdivision Level</span> <span class="range">[1..12]</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004169.jpg"  ><span class="caption">Balls of slime (two sphere primitives with their Render Perfect option disabled) with a subdivision of 2,4 and 8 (from bottom to top).</span></div></p>
+<p>This is where you determine the SPD subdivision. This goes for the entire object to which the material has been applied. It can be well worth the trouble to delete the object’s hidden sides in order to reduce the number of surfaces that must be subdivided.</p>
+<p>As is often the case, higher values produce better results but add to the render time.</p>
+<p>Note that you may need to change this value for each object. If you set the same SPD value for a Cube primitive and a Plane primitive, for example, the results will be different because the standard Cube has six polygons and the standard Plane 400. The same applies to an object that contains various subdivisions such as a character that has many more polygons for her face than for her legs. If you use the same SPD values for these parts, the nose polygons will be just as strongly subdivided as the much bigger polygons for the legs.</p>
+<p>For each existing polygon, the following polygon count will be calculated internally:</p>
+<p><ul></p>
+<p><li> Triangle: (2 to the power of Subdivision Level) * (2 to the power of Subdivision Level) / 2</li></ul><p><ul></p>
+<p><li> Quadrangle: (2 to the power of Subdivision Level) * (2 to the power of Subdivision Level)</li></ul><p></p>
+<p>A Subdivision Level of 8 would result in the following (internal) polygon count:</p>
+<p>Cube: 6*256*256 = 393,216 polygons.</p>
+<p>Plane: 400*256*256 = 26,214,400 polygons.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUND","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Round Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"--><span class="c4d_id">Round Geometry</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004170.jpg"  ><span class="caption">Round Geometry disabled (left) and enabled (right).</span></div></p>
+<p>Since SPD cannot calculate a normal Phong shading when it is applied, a special algorithm similar to that of the Subdivision Surface is used to ensure that the object is rounded before the SPD is rendered.</p>
+<p>This is specially designed to smooth surfaces that appear facetted after SPD rendering. Contours (polygon edges that have no adjoining polygons) remain unaffected if Round Contours is disabled.</p>
+<p>Since this can also cause unexpected results, as seen in the following example, you can also disable the option.</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004171.jpg"  ><span class="caption">Round Geometry disabled (left) and enabled (right).</span></div></p>
+<p>To apply the earth texture to this platonic body (icosahedron) without smoothing, simply disable the option.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Round Geometry and Subdivision Surface","hl_2"--><p><span class="HL_1">Round Geometry and Subdivision Surface</span></p>
+<p>As mentioned above, <span class="command">Round Geometry</span> uses an algorithm similar to the one used by Subdivision Surface. In some cases, you can do without Subdivision Surface entirely and use SPD to smooth instead. If you use SPD and Subdivision Surface on the same object, keep in mind that the subdivisions will be multiplied because the SPD subdivision will be applied to the object after it has been subdivided by Subdivision Surface.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Round Contour","MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"--><span class="c4d_id">Round Contour</span></p>
+<p>If this option is enabled, contours (polygons that have at least one adjoining polygon missing) will also be rounded. Disable the option for objects whose contours would be adversely affected by the smoothing, such as is pictured below where the Plane should retain its shape.</p>
+<p><div class="image_full" style="max-width:1143px"><img  src="../pics/004172.jpg"  ><span class="caption">Round Contours enabled (left) and disabled (right).</span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING" name="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Map Rounded Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"--><span class="c4d_id">Map Rounded Geometry</span></p>
+<p>This option determines whether the rounded geometry should be used to define the texture coordinates. In most cases this will lead to more intuitive results. It can also lead to fewer artifacts.</p>
+<p>Because the calculation can take up to 10% longer and in some cases the projection must be onto the non-rounded geometry, you have the option to disable this feature.</p>
+<p><div class="image_full" style="max-width:933px"><img  src="../pics/004173.jpg"  ><span class="caption">The texture with SPD (bottom left). Map Rounded Geometry enabled (left) and disabled (right).</span></div></p>
+<p>For this example, an SPD texture was applied to a Plane consisting of only one polygon with Round Geometry and Round Contours both enabled. The result on the left is what can normally be expected: the texture’s density has not been changed in the rounded areas. In contrast, the result pictured on the right shows that the texture was projected prior to rounding and was squashed during the rounding process.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT" name="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Map Resulting Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"--><span class="c4d_id">Map Resulting Geometry</span></p>
+<p>Use this setting to define how the texture should be projected:</p>
+<p><ul></p>
+<p><li> Before applying the Sub-polygon Displacement (setting not active).</li></ul><p><ul></p>
+<p><li> After applying the Sub-polygon Displacement (setting active).</li></ul><p></p>
+<p>So what does this mean, exactly? Since applying the SPD will result in a new geometry being created, this would depend on when the subsequent texture projections should be applied (with the exception of displacement since this channel is a prerequisite for the effect itself). Different effects can result, depending on the shader, bitmap and method of projection used. In the example below, a texture was placed onto a layer as an initial step:</p>
+<p><div class="image_full" style="max-width:1462px"><img  src="../pics/004174.jpg"  ><span class="caption">Various projection effects: Left <span class="command">Map Resulting Geometry</span> not active, right <span class="command">Map Resulting Geometry</span> active.</span></div></p>
+<p>When mapping a cube you can clearly see how the colors are projected, depending on whether or not <span class="command">Map Resulting Geometry</span> has been activated. In contrast, no difference can be seen when using UVW Mapping since SPDs do not change any UV coordinates.</p>
+<p>3D-based shaders (e.g., noise, wood, rust, etc.) behave differently. Since they do not require UV coordinates, they can also be used to texture the edges of extreme displacements, as seen in the UVW mapping example below:</p>
+<p><div class="image_full" style="max-width:900px"><img  src="../pics/004175.jpg"  ><span class="caption">A 3D noise shader was used. Left: <span class="command">Map Resulting Geometry</span> not active; right <span class="command">Map Resulting Geometry</span> active.</span></div></p>
+<p>In general, activating this option is not recommended for animated objects that change their shape (normal position or rotation animations are o.k.) since it can cause textures to jump.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES" name="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Keep Original Edges","MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"--><span class="c4d_id">Keep Original Edges</span></p>
+<p><div class="image_full" style="max-width:421px"><img  src="../pics/004176.jpg"  ><span class="caption">From left to right: Keep Original Edges enabled, disabled, still disabled but with a lower Subdivision Level.</span></div></p>
+<p>If this option is enabled, hard Phong edges will remain hard. If the option is disabled, the edges will be rounded according to the subdivision Level.</p>
+<p>The effects of this option mostly occur only when the Round Geometry option is disabled.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION" name="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Best Distribution","MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"--><span class="c4d_id">Best Distribution</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004177.jpg"  ><span class="caption">Best Distribution enabled (left) and disabled (right).</span></div></p>
+<p>As you can see in the example above, the enabled Best Distribution option changes the direction of the displacements towards the Phong edges. The closer a displacement is to the edge, the closer it is brought to this edge and the closer it follows the virtually rounded Phong normal.</p>
+<p>What this is all good for: In most cases, this setting will ensure a soft, uninterrupted transition of the SPD over phong edges.</p>
+<p>If Best Distribution is deactivated (only makes sense if one of the intensity modes is set in the Type setting) each displacement will point up perpendicularly. This can lead to inflated displacements at the edges. This is a result of displacements that overlap edges and basically stand at a right angle to each other will have the space between them filled. Activate this option if modeling cities that are viewed from a greater distance or, for example, castle stones.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

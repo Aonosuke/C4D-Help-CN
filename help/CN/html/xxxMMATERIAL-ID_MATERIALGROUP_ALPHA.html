@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Material Properties / Material Editor: Alpha</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3517"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "15"-->
+		<!--TITLE "Material Properties / Material Editor: Alpha"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">Material Manager</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">Material Properties / Material Editor</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">Material</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">Color</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">Diffusion</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">Luminance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">Transparency</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">Reflectance</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">Environment</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">Fog</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">Bump</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">Normal</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi_self">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">Glow</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">Displacement</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">Illumination</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">Editor</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">Assign</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Alpha</span></p><p></p>
+<p><!--INDEX "1","Alpha",""--></p>
+<p><!--INDEX "1","Alpha channel",""--></p>
+<p><!--INDEX "1","Genlocking",""--></p>
+<p><a id="LEAF" name="LEAF"></a></p>
+<p><div class="image_full" style="max-width:1110px"><img  src="../pics/023751.jpg"  ><span class="caption">The image on the left was created by projecting a leaf texture  onto a slightly uneven polygon surface. In the image on the right, the Alpha channel was activated, which "stamped" out the leaf surface. Scene © Milan Soukup</span></div></p>
+<p>An alpha channel enables you to use an image to mask out areas of the material, allowing any background to show through. This is useful for faking detail in 3D. The idea is to define areas of the material that effectively become non-existent so that any underlying materials or objects show through. A classic example would be a 3D tree. Rather than modeling the individual tree, a picture of a tree can be added to an object and an alpha used to cut out the shape of the tree.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Many of Cinema 4D’s <a href="5812.html" target="">shaders</a> have built-in alpha channels.</div></p>
+<p>If you notice black areas when rendering objects that have multiple alpha materials, increase the <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html#RDATA_RAYDEPTH" target="">Ray Depth</a> value on the <span class="command">Options</span> page of the render settings.</p>
+<p>If you apply a material with a Cinema 4D Alpha channel to an object and the object has no underlying material, the object will be non-existent at the points where the alpha allows the underlying material to show through.</p>
+<p>Suppose you want to place a scanned picture of a tree into a scene. First, you should create a material, enable the <span class="command">Color</span> channel, choose a picture of a tree as the color texture and then assign this material to, perhaps, a rectangular polygon.</p>
+<p>If you render this scene, you should see the tree on the rectangle polygon. However, the area around the tree is probably not transparent, but blue if the scanned picture has a blue sky background (Figure 1).</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004352.jpg"  ><span class="caption">Figure 1.</span></div></p>
+<p>Now edit the tree material, enable the Alpha channel, switch to the Alpha page and load the <span class="command">Tree</span> texture there. First, disable the <span class="command">Soft</span> option. Ctrl+click on the area you want to mask — in our case, the blue sky around the tree (Figure 2). </p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004353.jpg"  ><span class="caption">Figure 2.</span></div></p>
+<p>Cinema 4D sets the color sliders to this color and masks according to the picture. The tree is now shown without the surrounding background (provided that you have Gouraud Shading or Quick Shading on). You can now select a slightly different color on the Alpha page and see the effect immediately. However, some background may be left around the leaves, branches and the trunk. So the result is not quite right yet.</p>
+<p>For a more accurate result, create an alpha channel in your image editor and integrate this into the tree image; for details on how to do this, consult you image editor’s help. Load this picture into the Alpha channel and enable <span class="command">Soft</span> and <span class="command">Image Alpha</span>. The texture is now masked cleanly (Figure 3).</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004354.jpg"  ><span class="caption">Figure 3.</span></div></p>
+<p>Two materials were used to create the intricate box below: A reflective gold material and a matt wood. To make the wood visible, one of the two colors was cut out from a scanned black-and-white picture.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004355.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Alpha Channel and Antialiasing Filter","hl_1"--><p><span class="HL_3">Alpha Channel and Antialiasing Filter</span></p>
+<p><div class="image_full" style="max-width:1108px"><img  src="../pics/034786.jpg"  ><span class="caption">The <span class="command">Sinc</span> antialiasing filter enlarged to make over-exposed areas visible.</span></div></p>
+<p>Depending on the <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTER" target="_self"><span class="text_id">Filter</span></a> Antialias settings, the Alpha channel can end up being smoothed as well. This can result in problems in subsequent compositing, especially when the <span class="command">Sinc</span> filter, which can - as pictured above - "overshoot", i.e., generate an edge, is used. Antialiasing filters can, depending on their settings, extend their effect beyond the edge of an object. This can be minimized by either selecting a different filter or by using smaller <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTERSIZEX" target="_self"><span class="text_id">Filter Width</span></a> and <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTERSIZEY" target="_self"><span class="text_id">Filter Height</span></a> values.</p>
+<p><a id="MATERIAL_ALPHA_COLOR" name="MATERIAL_ALPHA_COLOR"></a> <!--INDEX "8","Color","MATERIAL_ALPHA_COLOR"--><span class="c4d_id">Color</span><br><a id="MATERIAL_ALPHA_DELTA" name="MATERIAL_ALPHA_DELTA"></a> <!--INDEX "8","Delta","MATERIAL_ALPHA_DELTA"--><span class="c4d_id">Delta</span> </p>
+<p>Clipping is often attempted with texture images that are antialiased; this produces a bright border around an object caused by the antialiasing of colors between the main texture and the alpha color; you can remove this border by adjusting the deviation sliders.</p>
+<p>You can use clip mapping (also sometimes called <span class="command">genlocking</span>) to mask particular areas with a <span class="command">Color</span> value. Using this method, you pick the color from the selected image that you wish to become transparent. The downside is that often the areas you wish to become transparent contain several colors and the resulting alpha can leave a seam around the object. However, by setting the <span class="command">Delta</span> color, you can define by how much the color may deviate; this can help to reduce the seam.</p>
+<p>Use alpha channels built in to the texture to mask areas softly and more accurately (see <span class="command_value">Image Alpha</span> below).</p>
+<p><a id="MATERIAL_ALPHA_INVERT" name="MATERIAL_ALPHA_INVERT"></a> <!--INDEX "8","Invert","MATERIAL_ALPHA_INVERT"--><span class="c4d_id">Invert</span></p>
+<p>This option simply inverts the alpha, so transparent and solid areas are reversed. This works for both clipped images and images with built-in alpha channels.</p>
+<p><a id="MATERIAL_ALPHA_SOFT" name="MATERIAL_ALPHA_SOFT"></a> <!--INDEX "8","Soft","MATERIAL_ALPHA_SOFT"--><span class="c4d_id">Soft</span></p>
+<p>This enables you to fade textures and materials from one to another, which gives you even more ways of creating realistic-looking objects. With <span class="command">Soft</span> enabled (the default setting), the <span class="command">Color</span> and <span class="command">Delta</span> settings lose their meaning. The texture map is now used to decide which ranges should be faded. A white texture pixel in the image means that here the material is to be <span class="command_value">100%</span> opaque. If the texture pixel is black, the underlying material shines through <span class="command_value">100%</span>.</p>
+<p><a id="MATERIAL_ALPHA_IMAGEALPHA" name="MATERIAL_ALPHA_IMAGEALPHA"></a> <!--INDEX "8","Image Alpha","MATERIAL_ALPHA_IMAGEALPHA"--><span class="c4d_id">Image Alpha</span></p>
+<p>With <span class="command">Image Alpha</span> enabled, you can use any existing alpha channel of the loaded image. Alpha channels of the TIF, TGA, PICT, Photoshop PSD and QuickTime MOV image formats are supported (as well as all QuickTime supported formats). If no alpha channel is present in the image, the Image Alpha option will be ignored. Use the Invert function to invert the alpha channel without having to rework the texture in your image editor.</p>
+<p><a id="MATERIAL_ALPHA_PREMULTIPLIED" name="MATERIAL_ALPHA_PREMULTIPLIED"></a> <!--INDEX "8","Pre-multiplied","MATERIAL_ALPHA_PREMULTIPLIED"--><span class="c4d_id">Pre-multiplied</span></p>
+<p>Enable this option if you are using a texture with a premultiplied alpha channel. Certain graphics applications only produce this type of alpha channel.</p>
+<p><a id="MATERIAL_ALPHA_SHADER" name="MATERIAL_ALPHA_SHADER"></a> <!--INDEX "8","Texture","MATERIAL_ALPHA_SHADER"--><span class="c4d_id">Texture</span></p>
+<p>Here an image texture or a 2D shader can be defined. Refer to the <a href="6291.html" target="">Textures</a> chapter for details.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
