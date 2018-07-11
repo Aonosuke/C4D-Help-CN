@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>次帧运动模糊：基本属性</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "4715"-->
+		<!--VATER_ID "4714"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "次帧运动模糊：基本属性"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5697.html" target="_self">渲染菜单</a></span> <span class="link_back"><a href="DRENDERSETTINGS.html" target="_self">编辑渲染设置</a></span> <span class="link_back"><a href="5714.html" target="_self">效果</a></span> <span class="link_back"><a href="VPSCENEMOTIONBLUR.html" target="_self">次帧运动模糊</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<span class="HL_atom"><a href="VPSCENEMOTIONBLUR.html">次帧运动模糊</a> </span><p></p><!--NO_SEARCH_END--><p class="c4d_group"><span>基本属性</span></p><p></p>
+<p><a id="VP_SMBSUB" name="VP_SMBSUB"></a> <!--INDEX "8","采样","VP_SMBSUB"--><span class="c4d_id">采样</span></p>
+<p>启用次帧运动模糊后，在不同亮度的相关帧中，渲染会计算并覆盖中间过渡图像。使用这里的下拉菜单可以为每一帧选择中间过渡图像数量，设置的数值越高，渲染的时间也越长。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>次帧运动模糊也会模糊投影、反射等等，而对象运动模糊不会模糊这些元素。</div></p>
+<p>如果运动速度很快，你可能需要设置更高的值来避免频闪现象（见下图）。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003869.jpg"  ><span class="caption"></span></div></p>
+<p>如果在场景中使用次帧运动模糊，可能需要减少抗锯齿的数量。图像中的静止元素可以很完美地抗锯齿，但是运动元素不会。通常运动中的物体不需要抗锯齿，要知道 <span class="command">16 次</span>运动模糊意味着有16张中间帧，在这种情况下即使没有抗锯齿最后的效果也没什么不同。当然你也可以添加抗锯齿，虽然使用 <span class="command">9 次</span>或更高的运动模糊让这没什么必要，而且会增加渲染时间。</p>
+<p>启用次帧运动模糊时采样数所对应的抗锯齿类型（设为<span class="command">最佳</span>时）：</p>
+<p><a id="VP_SMBSUB_5" name="VP_SMBSUB_5"></a><!--INDEX "10","5 次","VP_SMBSUB_5"--><span class="c4d_id_cycle">5 次</span></p>
+<p><span class="command">5 次</span> 次帧运动模糊 - AA <span class="command">最佳</span></p>
+<p><a id="VP_SMBSUB_9" name="VP_SMBSUB_9"></a><!--INDEX "10","9 次","VP_SMBSUB_9"--><span class="c4d_id_cycle">9 次</span></p>
+<p><span class="command">9 次</span> 次帧运动模糊 - AA <span class="command">几何体</span></p>
+<p><a id="VP_SMBSUB_16" name="VP_SMBSUB_16"></a><!--INDEX "10","16 次","VP_SMBSUB_16"--><span class="c4d_id_cycle">16 次</span></p>
+<p><span class="command">16 次</span> 次帧运动模糊 - AA <span class="command">几何体</span></p>
+<p><a id="VP_SMBSUB_25" name="VP_SMBSUB_25"></a><!--INDEX "10","25 次","VP_SMBSUB_25"--><span class="c4d_id_cycle">25 次</span></p>
+<p><span class="command">25 次</span> 次帧运动模糊 - AA <span class="command">几何体</span></p>
+<p><RELEASE_115 Higher samples possible for 次帧运动模糊.></p>
+<p><a id="VP_SMBSUB_36" name="VP_SMBSUB_36"></a><!--INDEX "10","36 次","VP_SMBSUB_36"--><span class="c4d_id_cycle">36 次</span></p>
+<p><span class="command">36 次</span> 次帧运动模糊 - AA <span class="command">几何体</span></p>
+<p><a id="VP_SMBSUB_49" name="VP_SMBSUB_49"></a><!--INDEX "10","49 次","VP_SMBSUB_49"--><span class="c4d_id_cycle">49 次</span></p>
+<p><span class="command">49 次</span> 次帧运动模糊 - AA <span class="command">几何体</span></p>
+<p></RELEASE_115></p>
+<p><p><div class="hint"><span class="HL_hint"></span>同时使用场渲染和次帧运动模糊时请仔细考虑，因为场效果经常失效，不止如此，自动的次帧运动模糊抗锯齿在不使用场的情况下效果更高，而且可以节省渲染时间。</div></p>
+<p><a id="VP_SMBDITHER" name="VP_SMBDITHER"></a> <!--INDEX "8","抖动","VP_SMBDITHER"--><span class="c4d_id">抖动</span> <span class="range">[0..100%]</span></p>
+<p>你可以使用这个选项让屏幕运动模糊产生抖动，这有助于避免频闪效果而且往往还可以使用更低的次帧运动模糊设置，但是抖动可能会产生轻微的噪点。禁用抖动可以减少渲染时对内存的需求（设为0%）。</p>
+<p><a id="VP_SMBAARESTRICTION" name="VP_SMBAARESTRICTION"></a> <!--INDEX "8","抗锯齿限制","VP_SMBAARESTRICTION"--><span class="c4d_id">抗锯齿限制</span></p>
+<p>如果启用这个选项，当采样设为9或更高时，CINEMA 4D 会自动在最佳和几何体之间切换抗锯齿，因为几何体抗锯齿渲染更快，而最佳抗锯齿不需要高采样值。</p>
+<p><a id="VP_SMBCAMERAOFFSET" name="VP_SMBCAMERAOFFSET"></a> <!--INDEX "8","摄像机偏移","VP_SMBCAMERAOFFSET"--><span class="c4d_id">摄像机偏移</span></p>
+<p>CINEMA 4D 会稍稍偏移摄像机来让每个中间帧图像产生抗锯齿效果，这会产生产生轻微的模糊。如果不需要这个效果（例如你要渲染一张用来印刷的图片），请禁用该选项。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
