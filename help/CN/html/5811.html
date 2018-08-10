@@ -44,58 +44,51 @@
 <p>选择所有使用所选材质的纹理标签。</p>
 <p><a id="RELEASE_180_1" name="RELEASE_180_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p></p>
 <p><!--INDEX "7","选择相似反射率的材质","PLUGIN_CMD_18063"--><!--COMMAND "PLUGIN_CMD_18063"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_18063.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_18063" name="PLUGIN_CMD_18063"></a>   <span class="c4d_menu_id">选择相似反射率的材质</span></p>
-<p>When an material is selected, this command can be used to select all other matierals with the same Reflectance channel structure. These can then be edited simultaneously. More information about this feature can be found under <a href="5808.html#multiselection" target="">Multiple Selection in the Reflectance Channel</a></p>
+<p>当一个材质被选中时，这个命令可以用来选择其他所有具有相同反射通道结构的材质，然后它们可以同时被编辑。这个特性的更多信息参见<a href="5808.html#multiselection" target="">在反射通道中多选</a>。</p>
 <p></p></div></p>
 <p><!--INDEX "7","渲染材质","PLUGIN_Cmd_12252"--><!--COMMAND "PLUGIN_Cmd_12252"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_12252.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_12252" name="PLUGIN_Cmd_12252"></a>   <span class="c4d_menu_id">渲染材质</span><br><!--INDEX "7","渲染全部","PLUGIN_Cmd_12253"--><!--COMMAND "PLUGIN_Cmd_12253"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_12253.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_12253" name="PLUGIN_Cmd_12253"></a>   <span class="c4d_menu_id">渲染全部</span></p>
-<p>These commands redraw the thumbnails of the selected materials or all materials. </p>
-<p>Most of the time you will not need to use this command because new materials are rendered automatically. However, when you save a scene, the thumbnails are compressed to reduce the scene’s file size. When you load a scene, you may notice artifacts in some of the thumbnails. In such cases, use this command to redraw the thumbnails. You will also need to use this command when importing foreign data formats such as DXF and 3D Studio R4.</p>
-<p>To abort the rendering of the thumbnails, press the <nobr><span class="key">Esc</span></nobr> key.</p>
+<p>这两个命令会重绘所选材质或全部材质的缩略图。</p>
+<p>大部分时间你不需要使用这个命令，因为新材质会会自动被渲染。但是在保存场景时，缩略图会被压缩来减少场景文件的尺寸。而在加载场景时，你会注意到一些缩略图出现错误，在这种情况下，使用这两个命令来重绘缩略图。在导入外部数据格式，如 DXF 或 3D Studio 时，也会需要使用这个命令。</p>
+<p>可以按 <nobr><span class="key">Esc</span></nobr> 键取消渲染缩略图。</p>
 <p><!--INDEX "7","排列材质","PLUGIN_Cmd_12333"--><!--COMMAND "PLUGIN_Cmd_12333"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_12333.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_12333" name="PLUGIN_Cmd_12333"></a>   <span class="c4d_menu_id">排列材质</span></p>
-<p>Arranges the material list in alphabetical order.</p>
-<p>You can also sort materials manually using Drag & drop. Drag the material that you want to reposition and drop it in the new position. The insertion is right-justified. In other words, the material will be placed to the right of the material onto which you drop it. If the target position of the material is outside the visible range of the <span class="command">材质管理器</span>, you can scroll by moving the mouse pointer to the upper or lower edge of the window.</p>
+<p>按字母顺序排列材质列表。</p>
+<p>也可以通过拖放手动排列材质。如果材质的目标位置在<span class="command">材质管理器</span>可见范围之外，可以将鼠标移动到管理器窗口的上下边缘来滚动列表。</p>
 <p><a id="MATERIALGRUPPEN" name="MATERIALGRUPPEN"></a> </p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","材质和层","hl_1"--><p><span class="HL_2">材质和层</span></p>
-<p><div class="image_full" style="max-width:499px"><img  src="../pics/012903.jpg"  ><span class="caption">The layers in the Layer Manager and the <span class="command">材质管理器</span> will correspond.</span></div></p>
-<p>Cinema 4D’s layer system also encompasses materials. If materials are assigned to layers in the <span class="command">对象管理器</span> via the Layer Manager the corresponding layer name will also be displayed in the <span class="command">材质管理器</span>.</p>
-<p>Alternatively a new layer can be created in the <span class="command">材质管理器</span> using the <span class="command">Add to New Layer</span> command. All currently selected materials will be assigned to this layer. The layer color will be displayed as a small triangle at the top left.</p>
-<p>Cinema 4D’s layer system lets you quickly organize materials for an easy overview. Clicking on the corresponding tab will display all materials assigned to a given layer. Multiple tags can be selected at once.</p>
-<p>To move materials simply Drag & drop them onto a different layer: Drag the material(s) onto a different Material tab. Furthermore, the tabs <span class="command">All</span> and <span class="command">No Layer</span> are available. Selecting the <span class="command">All</span> tab will display all materials contained in the scene. Selecting <span class="command">No Layer</span> will display all materials not assigned to a layer. To rename a layer simply double-click its current name and enter a new name.</p>
-<p>When copying materials into a new scene, any assigned layers will also be copied.</p>
+<p><div class="image_full" style="max-width:499px"><img  src="../pics/012903.jpg"  ><span class="caption"><span class="command">材质管理器</span>会与层管理器中的层保持一致。</span></div></p>
+<p>CINEMA 4D 的层系统也是围绕材质来设计的。如果材质通过层管理器被指定到层，那么会在<span class="command">材质管理器</span>中显示对应层的名称。</p>
+<p>另外，可以在<span class="command">材质管理器</span>中使用<span class="command">加入新层</span>命令来创建新层，所有当前选择的层都会被分配到这个层，层的颜色标记会以一个小三角形显示在材质缩略图的左上角。</p>
+<p>CINEMA 4D 的层系统可以快速组织材质，易于浏览。点击相应的标签会显示被分配到这个层的所有材质。可以一次选择多个标签。</p>
+<p>可以通过拖放材质到不同的层标签来移动它们：拖动它们到层标签上，当材质管理器窗口切换为该层时，将材质放到标签下的窗口中。另外，<span class="command">全部</span>和<span class="command">无层</span>标签也是可用的。选择<span class="command">全部</span>标签会显示场景中包含的所有材质。选择<span class="command">无层</span>则会显示没有分配到层的材质。要重命名一个层，只需要在它当前的名称上双击然后输入新名称。</p>
+<p>当复制材质到新场景时，所有分配的层都会被复制。</p>
 <p><!--INDEX "7","加入到层","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">加入到层</span></p>
-<p>A material will be assigned to a specific layer.</p>
+<p>材质会被分配给一个指定层。</p>
 <p><!--INDEX "7","加入新层","PLUGIN_Cmd_200000146"--><!--COMMAND "PLUGIN_Cmd_200000146"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_200000146.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_200000146" name="PLUGIN_Cmd_200000146"></a>   <span class="c4d_menu_id">加入新层</span></p>
-<p>A new layer will be created to which the material will be assigned.</p>
+<p>材质会被分配给一个新层。</p>
 <p><!--INDEX "7","从层移除","PLUGIN_Cmd_200000147"--><!--COMMAND "PLUGIN_Cmd_200000147"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_200000147.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_200000147" name="PLUGIN_Cmd_200000147"></a>   <span class="c4d_menu_id">从层移除</span></p>
-<p>Removes a material from any layer to which it may be assigned.</p>
+<p>材质会从它所分配的层中被移除。</p>
 <p><!--INDEX "7","层管理器…","no_command_2"--><a id="no_command_2" name="no_command_2"></a>   <span class="c4d_menu_id">层管理器…</span></p>
 <p>打开<a href="11074.html" target="">层管理器</a>。</p>
 <p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><!--INDEX "7","场次分配","no_command_3"--><a id="no_command_3" name="no_command_3"></a>   <span class="c4d_menu_id">场次分配</span></p>
-<p>Here you will fine a list of all available <a href="54507.html" target="">Take Assignment</a>. Select a Take (or multiple Takes) to make all settings overridable for the selected items. This is the same effect as if you were to drag and drop objects or tags into the <span class="command">Take Manager</span>.</p>
+<p>这里包含一个所有可用<a href="54507.html" target="">场次分配</a>的列表。选择一个或多个场次来覆写所选对象的设置。这与将对象或标签拖放到<span class="command">场次管理器</span>中的效果相同。</p>
 <p><!--INDEX "7","从当前场次移除","PLUGIN_CMD_431000147"--><!--COMMAND "PLUGIN_CMD_431000147"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000147.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000147" name="PLUGIN_CMD_431000147"></a>   <span class="c4d_menu_id">从当前场次移除</span></p>
-<p>All overridden settings will be deleted (and the object or tag will be deleted completely from the current Take in the override tree).</p>
+<p>删除所有覆写设置（对象和标签会从覆写树的当前场次中被彻底删除）。</p>
 <p><!--INDEX "7","从所有场次中移除","PLUGIN_CMD_431000153"--><!--COMMAND "PLUGIN_CMD_431000153"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_431000153.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_431000153" name="PLUGIN_CMD_431000153"></a>   <span class="c4d_menu_id">从所有场次中移除</span></p>
-<p>All overridden settings will be deleted (and the object or tag will be deleted completely from all Takes in the override tree).</p>
+<p>删除所有覆写设置（对象和标签会从覆写树的所有场次中被彻底删除）。</p>
 <p></p></div></p>
 <p><!--INDEX "7","材质交换器…","PLUGIN_Cmd_1015650"--><!--COMMAND "PLUGIN_Cmd_1015650"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_1015650.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_1015650" name="PLUGIN_Cmd_1015650"></a>   <span class="c4d_menu_id">材质交换器…</span></p>
-<p>What does this function do?</p>
-<p>Suppose you have exported a scene from your CAD package complete with various materials. You import the scene into Cinema 4D. You then decide that you want to replace the materials with better quality Cinema 4D materials — that’s exactly what this function does.</p>
-<p>First you need a Cinema 4D reference scene that contains all the new materials you want to use in place of the original materials. Note that these new materials must be named exactly the same as the original materials they are to replace.</p>
-<p>When you call the function, you will be prompted to select this reference scene. After doing so, you can then choose to replace either all like-named materials or you can opt to replace specific materials only, in which case a dialog will appear, allowing you to choose exactly which materials will be replaced.</p>
-<p><!--INDEX "7","新材质层…","PLUGIN_Cmd_16722"--><!--COMMAND "PLUGIN_Cmd_16722"--><a id="PLUGIN_Cmd_16722" name="PLUGIN_Cmd_16722"></a>   <span class="c4d_menu_id"></span></p>
-<p>Creates a new material group. Use the dialog that opens to name the group. You will see a tab for the new material group appear at the top of the <span class="command">材质管理器</span>.</p>
-<p>If this is the first group you have created, two other tabs will also be created at the same time: <span class="command">All</span> and <span class="command">Others</span>. The <span class="command">All</span> group contains all the materials in the scene. The <span class="command">Others</span> group contains materials not yet assigned to one of the groups you have created.</p>
-<p>To rename a material group, double-click the tab’s name and enter the new name into the dialog that appears. You cannot rename the <span class="command">All</span> and <span class="command">Others</span> groups.</p>
-<p><!--INDEX "7","删除材质层","PLUGIN_Cmd_16723"--><!--COMMAND "PLUGIN_Cmd_16723"--><a id="PLUGIN_Cmd_16723" name="PLUGIN_Cmd_16723"></a>   <span class="c4d_menu_id"></span></p>
-<p>Deletes the selected material groups and moves their materials to the Others group (the materials themselves are not deleted).</p>
-<p>You cannot remove the All and Others groups. They will be deleted automatically if you remove all other groups.</p>
+<p>这个功能有什么用？</p>
+<p>假设你从 CAD 导出了一个包含各种材质的场景，然后将其导入到 CINEMA 4D。这时你希望用更高质量的 CINEMA 4D 材质来替换原来的材质，那么就可以使用这项功能。</p>
+<p>首先你需要一个 CINEMA 4D 参考场景，它包含所有用来替换原材质的新材质。注意，这些新材质名称必须与它们所要替换的原材质完全一致。</p>
+<p>当使用这个功能时，你会被提示选择参考场景。完成之后，你可以选择替换所有名称相同的材质，或者只替换指定的材质，这时会出现一个窗口让你选择要替换的材质。</p>
 <p><!--INDEX "7","删除未使用材质","PLUGIN_Cmd_12168"--><!--COMMAND "PLUGIN_Cmd_12168"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_12168.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_12168" name="PLUGIN_Cmd_12168"></a>   <span class="c4d_menu_id">删除未使用材质</span></p>
-<p>Deletes all unused materials.</p>
+<p>删除所有未使用的材质。</p>
 <p></RELEASE_120></p>
 <p><!--INDEX "7","删除重复材质","PLUGIN_Cmd_12211"--><!--COMMAND "PLUGIN_Cmd_12211"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_12211.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_12211" name="PLUGIN_Cmd_12211"></a>   <span class="c4d_menu_id">删除重复材质</span></p>
-<p>Deletes all identical materials (i.e. materials that have the exact same settings) except the one that is closest to the top left corner on the materials list in the <span class="command">材质管理器</span>. </p>
+<p>删除所有重复的材质（即设置完全相同的材质），仅保留位于材质列表中最靠近左上角的一个。</p>
 <p><RELEASE_120 Command for loading textures for all materials.></p>
 <p><!--INDEX "7","重载所有贴图","PLUGIN_Cmd_200000273"--><!--COMMAND "PLUGIN_Cmd_200000273"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_200000273.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_Cmd_200000273" name="PLUGIN_Cmd_200000273"></a>   <span class="c4d_menu_id">重载所有贴图</span></p>
-<p>For materials with textures loaded that are edited outside of Cinema 4D, Cinema 4D must be informed when changes have been made to these textures, which is what this command does.</p>
+<p>对于加载了纹理的材质，如果这些纹理在 CINEMA 4D 外部进行编辑，则需要告诉 CINEMA 4D 纹理被改变，使用这个命令来重载纹理贴图。</p>
 <p>
 
 </p>
