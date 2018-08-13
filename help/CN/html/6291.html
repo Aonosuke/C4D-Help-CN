@@ -77,43 +77,43 @@
 <p><!--INDEX "8","采样","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">采样</span> </p>
 <p>使用<span class="command">采样</span>来控制纹理的像素插值。对于动画或向地平线延伸（如地面）的静帧物体来说，<span class="command">MIP</span> 和 <span class="command">SAT</span> 是最佳的选择。</p>
 <p><span class="command">平方</span>、<span class="command">Alias 1</span>、<span class="command">Alias 2</span> 和 <span class="command">Alias 3</span> 一般只用在静态图片中，它们会产生干脆锐利的纹理，但是对于动画来说太过于锐利，容易造成动画画面闪烁。而 <span class="command">MIP</span> 和 <span class="command">SAT</span> 会轻微模糊贴图来避免闪烁。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004304.jpg"  ><span class="caption">Example texture.</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004304.jpg"  ><span class="caption">示例纹理。</span></div></p>
 <p><!--INDEX "10","无","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">无</span></p>
-<p>When <span class="command">采样</span> is set to <span class="command_value">无</span>, the original texture values are used without interpolation. This method is fast, but often produces poor results and in general is best avoided. Textures tend to look jagged with None interpolation. You can try to reduce the <span class="command">jaggies</span> by using a high antialiasing setting.</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004305.jpg"  ><span class="caption">None.</span></div></p>
+<p>当<span class="command">采样</span>设为<span class="command_value">无</span>时，不会对原始贴图进行插值。这种方式的渲染速度快，但是往往效果不好，所以通常不使用它。在不插值的情况下纹理容易产生锯齿，可以使用高抗锯齿设置来减少这种情况。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004305.jpg"  ><span class="caption">无。</span></div></p>
 <p><!--INDEX "10","圆环","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">圆环</span> </p>
-<p><span class="command">圆环</span> sampling uses a circle of texture pixels (the ones surrounding the intermediate value). Textures that are enlarged at render time tend to look more natural with this type than with the None type. However, as the examples demonstrate, straight lines are problematic and tend to look frayed. In addition, the texture is very jagged near the horizon. <span class="command">圆环</span> sampling is, however, a good choice for very small textures (e.g., 3 x 3 pixels), because it helps the pixels to blend softly.</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004306.jpg"  ><span class="caption">Circle.</span></div></p>
+<p><span class="command">圆环</span>采样使用采样点周围环形区域的像素，使用这种模式渲染时间会增加，而效果看上去比使用“无”模式更加自然。但是正如示例中演示的，直线显示会出现问题，看上去像破损了一样。另外，在地平线附近贴图的锯齿也很严重。不过，<span class="command">圆环</span>采样对于非常小的贴图（如 3 × 3 像素）来说是一个不错的选择，它会让像素自然地混合。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004306.jpg"  ><span class="caption">圆环。</span></div></p>
 <p><!--INDEX "10","平方","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">平方</span></p>
-<p><span class="command">平方</span> uses a square of texture pixels (the ones surrounding the intermediate value). This leads to a softer transition between texture pixels than with <span class="command">None</span>. The picture quality is good.</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004307.jpg"  ><span class="caption">Square.</span></div></p>
-<p><!--INDEX "10","Alias 1, Alias 2, Alias 3","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Alias 1, Alias 2, Alias 3</span></p>
-<p><span class="command">Alias 1</span>, <span class="command">Alias 2</span> and <span class="command">Alias 3</span> blend the texture more strongly than Circle and Square. <span class="command">Alias 3</span> blends the most, <span class="command">Alias 1</span> the least. In the example above, the texture is difficult to recognize with <span class="command">Alias 3</span> because it is so small (16 x 16). <span class="command">Alias3</span> can give smoother results than <span class="command">Alias 1</span>, but it also takes longer to calculate.</p>
-<p>However, even <span class="command_value">Alias 3</span> cannot prevent jaggies near the horizon!</p>
-<p><div class="image_full" style="max-width:915px"><img  src="../pics/004308.jpg"  ><span class="caption">Alias 1, Alias 2, Alias 3.</span></div></p>
+<p><span class="command">平方</span>采样使用采样点周围正方形区域的像素，这会在贴图的像素之间产生比<span class="command">无</span>模式更加柔和的过度，图片质量也很好。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004307.jpg"  ><span class="caption">平方。</span></div></p>
+<p><!--INDEX "10","Alias 1、Alias 2、Alias 3","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Alias 1、Alias 2、Alias 3</span></p>
+<p><span class="command">Alias 1</span>、<span class="command">Alias 2</span> 和 <span class="command">Alias 3</span> 的混合强度比环形和平方更高，其中<span class="command">Alias 3</span> 的混合强度最高，<span class="command">Alias 1</span> 最低。在下图的示例中，使用 <span class="command">Alias 3</span> 都快无法分辨贴图了，因为其尺寸很小（16 × 16）。<span class="command">Alias 3</span> 可以产生比 <span class="command">Alias 1</span> 更平滑的结果，但是也会花费更多计算时间。</p>
+<p>然而，即使是 <span class="command">Alias 3</span> 也无法避免地平线附近的锯齿！</p>
+<p><div class="image_full" style="max-width:915px"><img  src="../pics/004308.jpg"  ><span class="caption">Alias 1、Alias 2、Alias 3。</span></div></p>
 <p><!--INDEX "10","MIP","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">MIP</span> </p>
-<p><span class="command">MIP</span> stands for <span class="command">multum in parvo</span>, which is Latin for <span class="command">many things in a small place</span>. When many texture pixels effectively lie within a single screen pixel an approximation is made based on the (known) texture pixel values. This results in very smooth blending. <span class="command">MIP</span> is the default sampling type.</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004309.jpg"  ><span class="caption">MIP.</span></div></p>
+<p><span class="command">MIP</span> 表示 <span class="command">multum in parvo</span>，这是 <span class="command">many things in a small place（小范围内的大量物体）</span> 的拉丁文。当许多贴图位于单个屏幕像素范围内时，会基于这些已知的贴图像素计算近似值，像素混合十分平滑。<span class="command">MIP</span> 是默认的采样类型。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004309.jpg"  ><span class="caption">MIP。</span></div></p>
 <p><!--INDEX "10","SAT","no_cycle_id_6"--><a id="no_cycle_id_6" name="no_cycle_id_6"></a> <span class="no_cycle_id">SAT</span> </p>
-<p><span class="command">SAT</span> is short for <span class="command">summed area tables</span> and it does an even better approximation than MIP mapping. As with MIP mapping, the approximation is based on the texture pixels that lie within a single screen pixel. SAT is the highest-quality sampling type.</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004310.jpg"  ><span class="caption">SAT.</span></div></p>
+<p><span class="command">SAT</span> 是 <span class="command">summed area tables（总和面积表）</span> 的缩写，它可以产生比 MIP 更好的近似计算结果。与 MIP 类似，近似计算是根据位于单个屏幕像素内的贴图像素来计算的。SAT 是质量最高的采样类型。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004310.jpg"  ><span class="caption">SAT。</span></div></p>
 <p> </p>
-<p><p><div class="hint"><span class="HL_hint"></span>SAT mapping works with textures up to 4,000 x 4,000 pixels. Cinema 4D switches to MIP mapping automatically if you try to use SAT mapping with textures over this limit.</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>SAT 支持的贴图最高分辨率是 4,000 × 4,000 像素，如果你设置为 SAT 采样却使用了超过这个尺寸的贴图，CINEMA 4D 会自动切换为 MIP 采样模式。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","MIP / SAT","hl_1"--><p><span class="HL_1">MIP / SAT</span></p>
-<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping are especially important for high-quality animation and for objects in stills that extend towards the horizon, such as a sea. <span class="command">MIP</span> mapping is the default sampling type.</p>
-<p>The following two pictures demonstrate <span class="command">MIP</span> / <span class="command">SAT</span> mapping. The tiled texture used Circle sampling. Although the quality is generally good, the quality rapidly deteriorates towards the horizon.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004311.jpg"  ><span class="caption">Figure 1: Rendered with MIP sampling.</span></div></p>
-<p>This unwanted effect is the result of perspective distortion. Each screen pixel representing the floor near the horizon contains perhaps hundreds or even thousands of texture pixels.</p>
-<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping approximate a value using these pixels. Only an approximation is made, since calculating the exact value would increase the render time greatly. Figure 2 shows Edge antialiasing with 2 x 2 oversampling. The material used <span class="command">SAT</span> sampling. The image quality is much improved, including the reflection on the sphere.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004312.jpg"  ><span class="caption">Figure 2: Rendered with SAT sampling.</span></div></p>
-<p>The downside to <span class="command">MIP</span> and <span class="command">SAT</span> mapping is that they require extra memory. <span class="command">MIP</span> mapping needs an extra byte of memory per texture pixel, <span class="command">SAT</span> mapping requires an extra 12 bytes per texture pixel. Although <span class="command">SAT</span> mapping produces better render quality than <span class="command">MIP</span> mapping, <span class="command">MIP</span> mapping uses much less RAM and hence is the default interpolation type.</p>
-<p>As a rule of thumb, use <span class="command">MIP</span> mapping initially and switch over to <span class="command">SAT</span> mapping if required. Cinema 4D’s shaders use <span class="command">SAT</span> mapping automatically without consuming additional memory.</p>
-<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping affect the render time. On the one hand, <span class="command">MIP</span> and <span class="command">SAT</span> mapping take slightly longer to render. On the other hand, you may be able to reduce the antialiasing setting.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Enable MIP Falloff to enhance the MIP/SAT mapping effect for bump maps. This will reduce the strength of the bump map with increasing distance from the camera.</div></p>
+<p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图对于高质量动画和延伸向地平线的静物（如海洋）尤为重要。</p>
+<p>下面的两幅图片演示了 <span class="command">MIP</span> / <span class="command">SAT</span> 贴图。地板使用的是圆环采样，尽管整体质量还不错，但是随着向地平线延伸，它的质量迅速下降。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004311.jpg"  ><span class="caption">图1：使用 MIP 采样渲染。</span></div></p>
+<p>这种糟糕的效果由于透视变形造成的，每个屏幕像素代表了靠近地平线的那些包含成百上千个贴图像素的地板。</p>
+<p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图使用这些像素来计算近似值。由于计算准确值会大量增加渲染时间，因此只会计算一个近似值。图2 设置了 2 × 2 超采样的边缘抗锯齿，材质使用 <span class="command">SAT</span> 采样。图片质量提升很大，包括球面上的反射。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004312.jpg"  ><span class="caption">图2：使用 SAT 采样渲染。</span></div></p>
+<p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图的缺点是它们需要更多的内存。<span class="command">MIP</span> 贴图对每个纹理像素需要额外1字节内存，而 <span class="command">SAT</span> 需要额外12字节。虽然 <span class="command">SAT</span> 贴图产生的渲染质量比 <span class="command">MIP</span> 更好，但 <span class="command">MIP</span> 贴图使用的内存更少，因此它是默认的插值类型。</p>
+<p>根据经验，可以默认使用 <span class="command">MIP</span> 贴图，如果需要则更改为 <span class="command">SAT</span> 贴图。CINEMA 4D 着色器会自动使用  <span class="command">SAT</span> 贴图而不需要消耗额外的内存。</p>
+<p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图会影响渲染时间。一方面，<span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图会略微增加渲染时间。另一方面，你可能需要减少抗锯齿设置。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>启用 MIP 衰减来强化 MIP / SAT 贴图对凹凸贴图的影响，这在增加摄像机距离时会减少凹凸贴图的强度。</div></p>
 <p><!--INDEX "8","模糊偏移、模糊程度","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">模糊偏移、模糊程度</span></p>
-<p><span class="command">MIP</span> and <span class="command">SAT</span> mapping only approximate the optimum computation, since a precise computation would increase the render time greatly. <span class="command">SAT</span> mapping is more accurate than <span class="command">MIP</span> mapping. But sometimes these approximations can make a texture too blurred or too sharp.</p>
-<p>So the <span class="command">模糊偏移</span> and <span class="command">模糊程度</span> options enable you to blur or sharpen the mapping. <span class="command">模糊偏移</span> softens a texture. <span class="command">模糊程度</span> fine-tunes the strength of the MIP/SAT mapping. A positive value increases the blur; a negative value weakens it. A strong value blurs detail but helps prevent flickering during animation. A weaker value brings out more detail but, increases the risk of flickering.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>With floors, try a positive blur strength of about <span class="command_value">+20%</span>. Floors tend to suffer most from perspective distortion, so they require special treatment.</div></p>
+<p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图只会近似优化计算，因为【表情】精确的计算会大量增加渲染时间。<span class="command">SAT</span> 贴图比 <span class="command">MIP</span> 要准确，但是有时候近似计算会让贴图过于模糊或过于锐利。</p>
+<p>因此可以用<span class="command">模糊偏移</span>和<span class="command">模糊程度</span>选项来模糊或锐化贴图。<span class="command">模糊偏移</span>会模糊贴图，<span class="command">模糊程度</span>则可以微调 MIP 和 SAT 贴图的强度。正值会增加模糊程度，负值则减弱。较高的值会模糊细节，但是在动画中有助于防止出现闪烁。较低的值会保留更多细节，但是会增加闪烁的风险。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>在有地面的情况下，可以将模糊程度设为约 <span class="command_value">+20%</span> 的正值，地面受到透视变形的影响最大，因此需要特殊处理。</div></p>
 <p>
 
 </p>
