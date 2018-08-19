@@ -68,3 +68,4 @@ Color Bleeding                  渗色
 Primary Sampler                 首次采样器
 Subpolygon Displacement         次多边形置换
 Timeslider                      时间滑动条（暂定）
+RMB context menu                右键菜单

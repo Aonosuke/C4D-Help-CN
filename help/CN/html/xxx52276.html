@@ -35,84 +35,92 @@
 <p>贴图管理器可以用来处理这种问题，它会将工程内的贴图列出来然后显示它们是否位于其<a href="PREFSFILES-PREF_FILE_MAIN_GROUP.html#path" target="">搜索路径</a>下。贴图管理器也有很多其他功能，利用它们可以重新链接贴图。例如，<span class="command">替换</span>功能可以用同路径下的 TIFF 贴图替换同名的 JPEG 贴图：</p>
 <p><div class="image_full" style="max-width:241px"><img  src="../pics/037077.jpg"  ><span class="caption"></span></div></p>
 <p>下面介绍了相对和绝对路径。更多细节可以参考<a href="6291.html" target="">这里</a>。</p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","示例：当渲染场景时贴图丢失该采取什么方法？","hl_1"--><p><span class="HL_2">示例：当渲染场景时贴图丢失该采取什么方法？</span></p>
-<p>For the most common case that the original texture folder has been relocated and the texture paths must be directed to this new folder, proceed as follows:</p>
-<p><ol><br><li> Select the <nobr><span class="menu">编辑 | 选择丢失的纹理</span></nobr> command. This will select all textures that cannot be found.<br><li> Select <nobr><span class="menu">Edit | Relink Textures</span></nobr>. A selection window will open.<br><li> Navigate to the folder in which your textures lie and click on <span class="command">Open</span>. Done. All textures will now be properly linked.<br><li> If you want, you can now save the Project with ALL textures (in a sub-directory named "tex”) using the  <a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">Save Project with Assets...</span></nobr></a> command (e.g., if you want to zip the Project).<br></ol><p></p>
-<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","General","hl_2"--><p><span class="HL_1">General</span></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","示例：当渲染场景时贴图丢失该怎么办？","hl_1"--><p><span class="HL_2">示例：当渲染场景时贴图丢失该采取什么方法？</span></p>
+<p>对于因为移动贴图文件夹而需要重新链接贴图的情况，操作方法如下：</p>
+<p><ol><br><li> 选择<nobr><span class="menu">编辑 | 选择丢失的纹理</span></nobr>命令。它会选中所有丢失的纹理。<br>
+<li> 选择<nobr><span class="menu">编辑 | 重链接纹理</span></nobr>，这时会打开一个选择窗口。<br>
+<li> 找到贴图所在的文件夹然后点击<span class="command">打开</span>就行了，所有贴图都会正确链接。<br>
+<li> 如果需要（如打包工程时），可以使用<a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">保存工程(包含资源)…</span></nobr></a>命令将所有贴图与项目保存到一个文件夹中（贴图被保存在名为“tex”的子文件夹中）。<br></ol><p></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","概览","hl_2"--><p><span class="HL_1">概览</span></p>
 <p><div class="image_full" style="max-width:1457px"><img  src="../pics/037078.jpg"  ><span class="caption"></span></div></p>
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","贴图列表","hl_3"--><p><span class="HL_2">贴图列表</span></p>
-<p>The Texture List displays all textures in the currently open Project, including several of the properties described below. Note that double-clicking on an item (name, path or other property) will let you edit it directly without, for example, having to switch to the <span class="command">材质管理器</span> in order to define a new texture path.</p>
-<p>Multiple textures can be selected or deselected using the <nobr><span class="key">Shift</span></nobr> or <nobr><span class="key">Ctrl/Cmd</span></nobr> keys (you can also drag a selection box using your mouse). Commands that can be applied to the selected items will be applied to the selection only.</p>
+<p>贴图列表显示了当前打开工程中的所有贴图，包括下面描述几种属性。注意，在条目（名称、路径或其他属性）上双击可以直接编辑它（如更改贴图路径），而不需要打开<span class="command">材质管理器</span>。</p>
+<p>使用 <nobr><span class="key">Shift</span></nobr> 键或 <nobr><span class="key">Ctrl/Cmd</span></nobr> 键可以多选或取消选择多个贴图（或者用鼠标拖一个选择框），选择后所进行的操作只会应用在选中的贴图上。</p>
 <p><a id="hl_4" name="hl_4"></a><!--INDEX "3","状态","hl_4"--><p><span class="HL_3">状态</span></p>
-<p>Three texture states are available:<ul></p>
-<p><li> Green check mark: Texture found, no problems</li><li> Red X: Texture not found, must be re-linked</li><li> Warning symbol: Texture found in search path (’tex’ folder, etc.) but false absolute or relative path. The renderer will display an error message when started. Texture must be re-linked (e.g., via the <span class="command">Localize</span> command).</li></ul><p></p>
+<p>状态分为三种：<ul></p>
+<p><li> 绿勾：贴图正确链接，没有错误。</li>
+<li> 红叉：贴图丢失，必须重新链接。</li>
+<li> 警告符号：贴图在搜索路径中可以找到（“tex”文件夹等），但是不在绝对或相对路径中，渲染器会在渲染开始时弹出错误信息。贴图必须重链接（如通过<span class="command">本地化</span>命令）。</li></ul><p></p>
 <p><a id="hl_5" name="hl_5"></a><!--INDEX "3","纹理","hl_5"--><p><span class="HL_3">纹理</span></p>
-<p>Displays the texture’s file name.</p>
+<p>显示贴图的文件名。</p>
 <p><a id="hl_6" name="hl_6"></a><!--INDEX "3","建议路径","hl_6"--><p><span class="HL_3">建议路径</span></p>
-<p>This is the absolute texture path saved in the material. If the path is relative, only the file name will be displayed.</p>
+<p>这是材质中贴图保存的绝对路径。如果是相对路径，则只会显示文件名。</p>
 <p><a id="hl_7" name="hl_7"></a><!--INDEX "3","绝对路径","hl_7"--><p><span class="HL_3">绝对路径</span></p>
-<p>Displays the actual, complete path, including those of textures with relative texture paths. For absolute paths, this represents the previously described 建议路径.</p>
+<p>显示了准确完整的路径，包括相对路径贴图。对于绝对路径，它与之前的建议路径相同。</p>
 <p><a id="hl_8" name="hl_8"></a><!--INDEX "3","新文件路径","hl_8"--><p><span class="HL_3">新文件路径</span></p>
-<p>If you use the <span class="command">Replace</span> function to change paths, this column serves as a type of preview (prior to the <span class="command">Replace</span> button being clicked on) of the new path. In the image above you can see how the "Textures” directory has been replaced by "Images” in the <span class="command">新文件路径</span> column.</p>
-<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","Material","hl_9"--><p><span class="HL_3">Material</span></p>
-<p>Displays the corresponding material’s name and icon. You can double-click on the icon to open the material in the <span class="command">材质管理器</span>.</p>
+<p>如果使用了<span class="command">替换</span>功能来更改路径，这一栏会显示新的贴图路径（点击<span class="command">替换</span>按钮之前）。在上图的<span class="command">新文件路径</span>栏中，“Texture”目录已经被“Images”替换了。</p>
+<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","材质","hl_9"--><p><span class="HL_3">材质</span></p>
+<p>显示当前材质的名称和图标。双击图标可以在<span class="command">材质管理器</span>中打开材质。</p>
 <p><a id="hl_10" name="hl_10"></a><!--INDEX "3","通道","hl_10"--><p><span class="HL_3">通道</span></p>
-<p>Displays the material channel to which the texture belongs.</p>
+<p>显示贴图所在的材质通道。</p>
 <p><a id="hl_11" name="hl_11"></a><!--INDEX "3","层","hl_11"--><p><span class="HL_3">层</span></p>
-<p>Displays the <a href="11074.html" target="">Cinema 4D layer</a>on which the material to which the texture belongs lies.</p>
-<p><a id="RELEASE_160_1" name="RELEASE_160_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 16</p><p><a id="hl_12" name="hl_12"></a><!--INDEX "3","RMB context menu","hl_12"--><p><span class="HL_3">RMB context menu</span></p>
-<p>If you right-click on a found texture, a menu with the following commands will be made available:<ul></p>
-<p><li> <span class="command">在浏览器/查找器中显示文件</span>: The file will be shown in the explorer/finder where it can be opened for modification, if necessary.</li><li> <span class="command">在浏览器/查找器中打开文件</span>: The file will be opened using the standard application defined by your operating system.</li><li> <span class="command">在图像浏览器中打开文件</span>: The file will be loaded into the Cinema 4D <span class="command">Picture Viewer</span>.</li></p></div></p>
+<p>显示贴图所属材质所在的<a href="11074.html" target="">层</a>。</p>
+<p><a id="RELEASE_160_1" name="RELEASE_160_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 16</p><p><a id="hl_12" name="hl_12"></a><!--INDEX "3","右键菜单","hl_12"--><p><span class="HL_3">右键菜单</span></p>
+<p>在一个正常状态的材质上点击右键会弹出菜单，其中包括以下命令有：<ul></p>
+<p><li> <span class="command">在浏览器/查找器中显示文件</span>：会在文件夹中显示贴图文件。</li>
+<li> <span class="command">在浏览器/查找器中打开文件</span>：会用系统默认程序打开贴图文件。</li>
+<li> <span class="command">在图像浏览器中打开文件</span>：在<span class="command">图片查看器</span>中打开贴图文件。</li></p></div></p>
 <p></ul><p></p>
 <p><a id="hl_13" name="hl_13"></a><!--INDEX "3","预览图像和替换功能","hl_13"--><p><span class="HL_2">预览图像和替换功能</span></p>
-<p>A preview image of the selected texture - if found - will be displayed at the bottom left of the 贴图管理器 window.</p>
-<p>At the right you will find the <span class="command">Replace</span> functions, which can be used to select a different texture path, directory or name. This works as follows (for demonstration purposes only a single texture will be used):</p>
-<p>Assuming you have only one texture in the target directory: "/Users/olibecker/Desktop/Bunny/Textur/Bunny.jpg"</p>
-<p>2 years later you open the Project and the texture can no longer be located because the directory with the texture has been moved here:</p>
+<p>选中贴图的预览图片（未丢失）会显示在贴图管理器窗口的左下角。</p>
+<p>它的右边是<span class="command">替换</span>功能，它可以用来修改贴图路径、目录或名称。步骤如下（为了便于演示只使用了一个贴图）：</p>
+<p>假设目标目录中只有一个贴图：</p>
+<p>"/Users/olibecker/Desktop/Bunny/Textur/Bunny.jpg"</p>
+<p>过了几年打开这个工程之后发现纹理丢失，因为贴图文件夹被移动到了：</p>
 <p>"/Users/olibecker/Desktop/archived Projects/xxx/Texture/Bunny.jpg"</p>
-<p>To redirect to the new path, enter "Bunny” into the <span class="command">Replace</span> field and "archived Projects” into the <span class="command">With</span> field (<span class="command_value">Full Path</span> or <span class="command_value">Directory</span> must be defined in the drop-down menu below). If textures are selected, a new absolute path will be displayed in the corresponding <span class="command">新文件路径</span> column. If you click on the <span class="command">Replace</span> button, all paths for the selected materials will be modified.</p>
-<p>The <span class="command">Replace</span> function uses the part of the old path (or texture name) that is defined in the <span class="command">With</span> field.</p>
-<p>This makes it possible to replace old paths with new paths for multiple textures simultaneously.</p>
-<p>In the selection menu you can define which part of the path should be used by the <span class="command">Replace</span> function. The path can be set up as follows:</p>
+<p>要重新定位到新路径，在<span class="command">替换</span>框中输入“Bunny”、在<span class="command">使用</span>框中输入“archived Projects”（需要在下拉菜单中选择<span class="command_value">完整路径</span>或<span class="command_value">目录</span>）。如果选择了贴图，会在相应的<span class="command">新文件路径</span>栏中显示新的绝对路径。点击<span class="command">替换</span>按钮后，所有选择的贴图路径都会被修改。</p>
+<p><span class="command">替换</span>会在<span class="command">使用</span>框中使用部分旧路径（或文件名）。</p>
+<p>这可以同时替换多个贴图的路径。</p>
+<p>选择菜单中可以设置路径中的哪个部分要替换。路径可以按如下方式来设置：</p>
 <p><div class="image_full" style="max-width:255px"><img  src="../pics/037079.jpg"  ><span class="caption"></span></div></p>
-<p>The characters described <a href="52276.html#an" target="">here</a> can be used in the <span class="command">Replace</span> field: <span class="command">*</span> (any text); <span class="command">?</span> (any or individual character); <span class="command">#</span> (any or individual number).</p>
-<p>Example: These settings can be used to replace all texture names with date prefixes with textures of the same name with the prefix "final_”.</p>
+<p><span class="command">替换</span>框中可以使用<a href="52276.html#an" target="">这里</a>描述的字符：<span class="command">*</span>（表示任意文本）； <span class="command">?</span>（表示任意字符);<span class="command">#</span>（表示任意数字）。</p>
+<p>示例：用“final_”前缀来替换所有贴图文件名中的日期前缀。</p>
 <p><div class="image_full" style="max-width:796px"><img  src="../pics/037080.jpg"  ><span class="caption"></span></div></p>
-<p>Of course this works especially well if you adhere to basic naming conventions when naming paths and textures (e.g., date suffixes, sequential numbering or adding a "low_” prefix that corresponds to, for example, low-res images that can later be replace with high-res images - which of course will have the prefix "high_”). Using naming conventions makes it easy to replace textures or define new paths.</p>
+<p>这在遵循基本命名惯例来命名路径和文件名时非常有用（如日期后缀、序列号或表示低分辨率的“low_”前缀）。</p>
 <p><a id="hl_14" name="hl_14"></a><!--INDEX "3","菜单","hl_14"--><p><span class="HL_2">菜单</span></p>
 <p><a id="hl_15" name="hl_15"></a><!--INDEX "3","编辑菜单","hl_15"--><p><span class="HL_1">编辑菜单</span></p>
-<p>All of the commands described below only affect the texture paths within Cinema 4D - no changes are made to the texture files themselves. The following still applies: all textures hidden from the filter will not be affected (exception: <span class="command">Deselect All</span>).</p>
+<p>下面描述的所有命令都只会影响到 CINEMA 4D 中的贴图路径，而不会改变贴图文件本身。另外，所有被过滤器隐藏的贴图不会被影响（例外：<span class="command">取消选择</span>）。</p>
 <p><!--INDEX "7","全部选择","PLUGIN_CMD_1029813"--><!--COMMAND "PLUGIN_CMD_1029813"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029813.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029813" name="PLUGIN_CMD_1029813"></a>   <span class="c4d_menu_id">全部选择</span></p>
-<p>Selects all textures displayed in the <span class="command">Texture</span> column.</p>
+<p>选择显示的所有贴图。</p>
 <p><!--INDEX "7","取消选择","PLUGIN_CMD_1029814"--><!--COMMAND "PLUGIN_CMD_1029814"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029814.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029814" name="PLUGIN_CMD_1029814"></a>   <span class="c4d_menu_id">取消选择</span></p>
-<p>Deselects all textures (incl. those hidden from the filter).</p>
+<p>取消所有选择的贴图（包括被过滤器隐藏的贴图）。</p>
 <p><!--INDEX "7","选择丢失的纹理","PLUGIN_CMD_1029815"--><!--COMMAND "PLUGIN_CMD_1029815"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029815.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029815" name="PLUGIN_CMD_1029815"></a>   <span class="c4d_menu_id">选择丢失的纹理</span></p>
-<p>All textures displayed in the list that have not been located will be selected.</p>
+<p>选择所有丢失的贴图。</p>
 <p><!--INDEX "7","反选","PLUGIN_CMD_1029817"--><!--COMMAND "PLUGIN_CMD_1029817"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029817.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029817" name="PLUGIN_CMD_1029817"></a>   <span class="c4d_menu_id">反选</span></p>
-<p>Select this command to invert the selection: selected textures will be deselected and deselected will be selected.</p>
+<p>这个命令可以反转选择：选中的贴图会被取消选择，而未被选择的贴图会被选中。</p>
 <p><!--INDEX "7","选择当前材质的纹理","PLUGIN_CMD_1029816"--><!--COMMAND "PLUGIN_CMD_1029816"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029816.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029816" name="PLUGIN_CMD_1029816"></a>   <span class="c4d_menu_id">选择当前材质的纹理</span></p>
-<p>All textures of currently selected materials in the <span class="command">材质管理器</span> will be selected.</p>
+<p><span class="command">材质管理器</span>中当前选择的材质的所有贴图都会被选中。</p>
 <p><!--INDEX "7","在属性管理器中显示","PLUGIN_CMD_1029818"--><!--COMMAND "PLUGIN_CMD_1029818"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029818.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029818" name="PLUGIN_CMD_1029818"></a>   <span class="c4d_menu_id">在属性管理器中显示</span></p>
-<p>This option (this is not a command) defines whether or not the materials of textures selected in the 贴图管理器 should be displayed in the <span class="command">Attribute Manager</span>.</p>
-<p><!--INDEX "7","本地化文件名","PLUGIN_CMD_1029819"--><!--COMMAND "PLUGIN_CMD_1029819"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029819.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029819" name="PLUGIN_CMD_1029819"></a>   <span class="c4d_menu_id">本地化文件名</span><br><!--INDEX "7","本地化文件名","PLUGIN_CMD_1029820"--><!--COMMAND "PLUGIN_CMD_1029820"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029820.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029820" name="PLUGIN_CMD_1029820"></a>   <span class="c4d_menu_id">本地化文件名</span></p>
-<p><div class="image_full" style="max-width:1052px"><img  src="../pics/037093.jpg"  ><span class="caption">Both commands create or delete entire file paths.</span></div></p>
-<p><span class="command">本地化文件名</span> removes the texture paths from all selected textures and uses only the file name. This in essence turns an absolute path into a relative path (that looks for <a href="6291.html" target="">here</a> >). This happens automatically if you save a Project using the <a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">Save Project with Assets...</span></nobr></a> command.</p>
-<p><span class="command">Globalize Filename</span> turns relative paths into absolute paths (if only a name and no path exists in the given material) for all selected textures. The entire file path will then be used.</p>
+<p>这个选项（而不是命令）决定是否在<span class="command">属性管理器</span>中显示贴图管理器中选择的贴图所属的材质。</p>
+<p><!--INDEX "7","本地化文件名","PLUGIN_CMD_1029819"--><!--COMMAND "PLUGIN_CMD_1029819"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029819.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029819" name="PLUGIN_CMD_1029819"></a>   <span class="c4d_menu_id">本地化文件名</span><br><!--INDEX "7","全局化文件名","PLUGIN_CMD_1029820"--><!--COMMAND "PLUGIN_CMD_1029820"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029820.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029820" name="PLUGIN_CMD_1029820"></a>   <span class="c4d_menu_id">全局化文件名</span></p>
+<p><div class="image_full" style="max-width:1052px"><img  src="../pics/037093.jpg"  ><span class="caption">这两个命令会创建或删除整个文件路径。</span></div></p>
+<p><span class="command">本地化文件名</span>会删除所有选择则贴图的路径而只用其文件名，这本质上就是将绝对路径转换为相对路径（参见<a href="6291.html" target="">这里</a>）。在使用<a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">保存工程(包含资源)…</span></nobr></a>命令来保存工程时，也会将贴图路径转换为相对路径。</p>
+<p><span class="command">全局化文件名</span>会将相对路径转换为绝对路径（如果制定的贴图只有文件名而没有路径），这时会使用完整的文件路径。</p>
 <p><!--INDEX "7","重链接纹理…","PLUGIN_CMD_1029821"--><!--COMMAND "PLUGIN_CMD_1029821"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029821.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029821" name="PLUGIN_CMD_1029821"></a>   <span class="c4d_menu_id">重链接纹理…</span></p>
-<p>Selecting this command will relink selected textures with textures of the same name in the selected directory. Depending on the location, absolute (outside of Cinema 4D’s 搜索路径 …) or relative (… within Cinema 4D’s 搜索路径) will be created.</p>
-<p>This command can be useful if no textures at all can be found. This is mostly the case if the texture directory is at a completely different location. In this case, simply select all textures, call up this command and select the correct directory. All texture paths will then be redirected accordingly and you’re ready to render.</p>
+<p>选择这个命令会用选择的目录中的同名贴图来重新链接贴图。根据贴图所在位置，会创建绝对路径（位于 CINEMA 4D 的搜索路径之外）或相对路径（位于 CINEMA 4D 的搜索路径内）。</p>
+<p>这个命令主要用在贴图位于工程目录以外的情况下，选择所有纹理然后使用这个命令，选择正确的目录。所有贴图路径都会被重新链接。</p>
 <p><!--INDEX "7","替换纹理自…","PLUGIN_CMD_1029822"--><!--COMMAND "PLUGIN_CMD_1029822"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029822.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029822" name="PLUGIN_CMD_1029822"></a>   <span class="c4d_menu_id">替换纹理自…</span></p>
-<p>Lets you assign a single new file to selected textures.</p>
+<p>指定一个新文件给选择的贴图。</p>
 <p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p></p>
 <p><!--INDEX "7","清除纹理","PLUGIN_CMD_1034807"--><!--COMMAND "PLUGIN_CMD_1034807"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1034807.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1034807" name="PLUGIN_CMD_1034807"></a>   <span class="c4d_menu_id">清除纹理</span></p>
-<p>Use this command to delete all links to the selected textures. Texture links to non-existent files - which are marked by a red x in the 贴图管理器 - can, for example, be eliminated in disabled material channels.</p>
+<p>使用这个命令来删除所有选择的贴图的链接。被清除的贴图会从失效的材质通道中删除（而不是显示为纹理丢失）。</p>
 <p></p></div></p>
 <p><a id="hl_16" name="hl_16"></a><!--INDEX "3","查看菜单","hl_16"--><p><span class="HL_1">查看菜单</span></p>
 <p><!--INDEX "7","搜索栏","PLUGIN_CMD_1029823"--><!--COMMAND "PLUGIN_CMD_1029823"--><a id="PLUGIN_CMD_1029823" name="PLUGIN_CMD_1029823"></a>   <span class="c4d_menu_id">搜索栏</span></p>
 <p>Selecting this command will display a search bar in the 贴图管理器, which can be used to filter through hundreds of textures, if necessary.</p>
 <p>Select the type of filter from the drop-down menu next to the text field.</p>
 <p>No elements will be selected using the text field. This is a real-time filter into which you simply enter text. Each element whose name is comprised even in part of the text in the text field will be displayed. Capitalization also applies. Clicking on the <span class="command_value">x</span> to the left of the text field will clear the field and all elements will be displayed.</p>
-<p>Three special characters can be used (as well as in the <span class="command">Replace</span> text field below):</p>
+<p>Three special characters can be used (as well as in the <span class="command">替换</span> text field below):</p>
 <p><a id="AN" name="AN"></a><ul></p>
 <p><li> <span class="command">*</span> Placeholder for any text</li><li> <span class="command">?</span> Placeholder for an individual character</li><li> <span class="command">#</span> Placeholder for any digit, or multiple digits using successive ,#’ (see example below)</li></ul><p></p>
 <p>The following examples will shed more light on this:</p>
