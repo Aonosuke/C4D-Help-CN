@@ -83,7 +83,7 @@
 <p>这可以同时替换多个贴图的路径。</p>
 <p>选择菜单中可以设置路径中的哪个部分要替换。路径可以按如下方式来设置：</p>
 <p><div class="image_full" style="max-width:255px"><img  src="../pics/037079.jpg"  ><span class="caption"></span></div></p>
-<p><span class="command">替换</span>框中可以使用<a href="52276.html#an" target="">这里</a>描述的字符：<span class="command">*</span>（表示任意文本）； <span class="command">?</span>（表示任意字符);<span class="command">#</span>（表示任意数字）。</p>
+<p><span class="command">替换</span>框中可以使用<a href="52276.html#an" target="">这里</a>描述的字符：<span class="command">*</span>（表示任意文本）；<span class="command">?</span>（表示任意字符)；<span class="command">#</span>（表示任意数字）。</p>
 <p>示例：用“final_”前缀来替换所有贴图文件名中的日期前缀。</p>
 <p><div class="image_full" style="max-width:796px"><img  src="../pics/037080.jpg"  ><span class="caption"></span></div></p>
 <p>这在遵循基本命名惯例来命名路径和文件名时非常有用（如日期后缀、序列号或表示低分辨率的“low_”前缀）。</p>
@@ -117,19 +117,23 @@
 <p></p></div></p>
 <p><a id="hl_16" name="hl_16"></a><!--INDEX "3","查看菜单","hl_16"--><p><span class="HL_1">查看菜单</span></p>
 <p><!--INDEX "7","搜索栏","PLUGIN_CMD_1029823"--><!--COMMAND "PLUGIN_CMD_1029823"--><a id="PLUGIN_CMD_1029823" name="PLUGIN_CMD_1029823"></a>   <span class="c4d_menu_id">搜索栏</span></p>
-<p>Selecting this command will display a search bar in the 贴图管理器, which can be used to filter through hundreds of textures, if necessary.</p>
-<p>Select the type of filter from the drop-down menu next to the text field.</p>
-<p>No elements will be selected using the text field. This is a real-time filter into which you simply enter text. Each element whose name is comprised even in part of the text in the text field will be displayed. Capitalization also applies. Clicking on the <span class="command_value">x</span> to the left of the text field will clear the field and all elements will be displayed.</p>
-<p>Three special characters can be used (as well as in the <span class="command">替换</span> text field below):</p>
+<p>选择这个命令会在贴图管理器中显示搜索栏，你可以用它来过滤贴图。</p>
+<p>从文本框旁边的下来菜单中选择过滤器类型。</p>
+<p>使用文本框时不会有贴图被选择。这是一个实时过滤器，在文本框中输入文字，如果贴图文件名中包含输入的文字，则会显示在管理器中。点击左侧的 <span class="command_value">x</span> 键会清空文本框，这是则会显示所有贴图。</p>
+<p>可以使用三个特殊字符（在下面的<span class="command">替换</span>文本框中也能使用）：</p>
 <p><a id="AN" name="AN"></a><ul></p>
-<p><li> <span class="command">*</span> Placeholder for any text</li><li> <span class="command">?</span> Placeholder for an individual character</li><li> <span class="command">#</span> Placeholder for any digit, or multiple digits using successive ,#’ (see example below)</li></ul><p></p>
-<p>The following examples will shed more light on this:</p>
+<p><li> <span class="command">*</span> 表示任意文本的占位符</li>
+<li> <span class="command">?</span> 表示单个字符的占位符</li>
+<li> <span class="command">#</span> 表示任意单个数字或一串数字的占位符（见下例）</li></ul><p></p>
+<p>下面的示例说明了占位符的用法：</p>
 <p><div class="image_full" style="max-width:1147px"><img  src="../pics/037094.jpg"  ><span class="caption"></span></div></p>
-<p>At the left is an unfiltered texture list followed by the following filter types from left to right:</p>
+<p>最左边没有输入过滤文本，往右依次是下列过滤类型：</p>
 <p><ul></p>
-<p><li> <span class="command">##.</span>: All elements containing at least 2 numbers followed by a point are displayed.</li><li> <span class="command">e*n</span>: All elements beginning with a lowercase e, followed by any text and ending with a lowercase n are shown.</li><li> <span class="command">o?o</span>: All elements beginning and ending with a lowercase o with any SINGLE letter or number in-between.</li></ul><p></p>
+<p><li> <span class="command">##.</span>：会显示所有包含至少2个数字且后面接一个小数点的项。</li>
+<li> <span class="command">e*n</span>：会显示所有以小写 e 开头、小写 n 结尾的项。</li>
+<li> <span class="command">o?o</span>：会显示所有以小写 o 为开头和结尾，且中间只包含一个字母或数字的项。</li></ul><p></p>
 <p><!--INDEX "7","纹理","PLUGIN_CMD_1029824"--><!--COMMAND "PLUGIN_CMD_1029824"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029824.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029824" name="PLUGIN_CMD_1029824"></a>   <span class="c4d_menu_id">纹理</span><br><!--INDEX "7","建议路径","PLUGIN_CMD_1029825"--><!--COMMAND "PLUGIN_CMD_1029825"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029825.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029825" name="PLUGIN_CMD_1029825"></a>   <span class="c4d_menu_id">建议路径</span><br><!--INDEX "7","绝对路径","PLUGIN_CMD_1029826"--><!--COMMAND "PLUGIN_CMD_1029826"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029826.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029826" name="PLUGIN_CMD_1029826"></a>   <span class="c4d_menu_id">绝对路径</span><br><!--INDEX "7","新文件路径","PLUGIN_CMD_1029827"--><!--COMMAND "PLUGIN_CMD_1029827"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029827.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029827" name="PLUGIN_CMD_1029827"></a>   <span class="c4d_menu_id">新文件路径</span><br><!--INDEX "7","材质","PLUGIN_CMD_1029828"--><!--COMMAND "PLUGIN_CMD_1029828"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029828.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029828" name="PLUGIN_CMD_1029828"></a>   <span class="c4d_menu_id">材质</span><br><!--INDEX "7","通道","PLUGIN_CMD_1029829"--><!--COMMAND "PLUGIN_CMD_1029829"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029829.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029829" name="PLUGIN_CMD_1029829"></a>   <span class="c4d_menu_id">通道</span><br><!--INDEX "7","层","PLUGIN_CMD_1029830"--><!--COMMAND "PLUGIN_CMD_1029830"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_1029830.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_1029830" name="PLUGIN_CMD_1029830"></a>   <span class="c4d_menu_id">层</span></p>
-<p>Use these options to define which columns should be displayed in the 贴图管理器.</p>
+<p>使用这些选项来设定过滤器文本要查找的类型。</p>
 <p>
 
 </p>
