@@ -70,3 +70,4 @@ Subpolygon Displacement         次多边形置换
 Timeslider                      时间滑动条（暂定）
 RMB context menu                右键菜单
 More differences to the old system      与旧版本的更多区别
+Gel                             凝胶

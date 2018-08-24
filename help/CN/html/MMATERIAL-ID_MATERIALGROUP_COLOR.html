@@ -32,18 +32,18 @@
 <p>如果想要只看见颜色而不看见贴图，可以将混合强度设为 0%。</p>
 <p><div class="image_full" style="max-width:863px"><img  src="../pics/004316.jpg"  ><span class="caption"></span></div></p>
 <p><a id="MATERIAL_COLOR_COLOR" name="MATERIAL_COLOR_COLOR"></a> <!--INDEX "8","颜色","MATERIAL_COLOR_COLOR"--><span class="c4d_id">颜色</span></p>
-<p>在大部分材质通道页面，可以使用取色器来选取颜色。 </p>
+<p>在大部分材质通道页面，可以使用取色器来选取颜色。</p>
 <p><a id="MATERIAL_COLOR_BRIGHTNESS" name="MATERIAL_COLOR_BRIGHTNESS"></a> <!--INDEX "8","亮度","MATERIAL_COLOR_BRIGHTNESS"--><span class="c4d_id">亮度</span> <span class="range">[0..10000%]</span></p>
 <p>使用该设置来调整通道颜色的亮度。<span class="command">亮度</span>可以看作是一个乘数，并且可以设为大于<span class="command">100%</span>。</p>
 <p><a id="MATERIAL_COLOR_SHADER" name="MATERIAL_COLOR_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_COLOR_SHADER"--><span class="c4d_id">纹理</span></p>
 <p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
 <p><a id="MATERIAL_COLOR_TEXTUREMIXING" name="MATERIAL_COLOR_TEXTUREMIXING"></a> <!--INDEX "8","混合模式","MATERIAL_COLOR_TEXTUREMIXING"--><span class="c4d_id">混合模式</span></p>
-<p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。注意，所有通道都有混合模式，如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
+<p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。不是所有通道都有混合模式。如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
 <p><a id="MATERIAL_TEXTUREMIXING_NORMAL" name="MATERIAL_TEXTUREMIXING_NORMAL"></a><!--INDEX "10","标准","MATERIAL_TEXTUREMIXING_NORMAL"--><span class="c4d_id_cycle">标准</span></p>
-<p>标注模式下，<span class="command">混合强度</span>表示贴图的透明度。如果数值设为 <span class="command_value">100%</span>，那么就只能看到贴图（记住，贴图位于顶层，因此如果它是不透明的，则无法见到它下面的颜色）。如果数值设为 <span class="command_value">70%</span>，则结果是 <span class="command_value">70%</span> 的贴图加上 <span class="command_value">30%</span> 的颜色。</p>
+<p>标准模式下，<span class="command">混合强度</span>表示贴图的透明度。如果数值设为 <span class="command_value">100%</span>，那么就只能看到贴图（记住，贴图位于顶层，因此如果它是不透明的，则无法见到它下面的颜色）。如果数值设为 <span class="command_value">70%</span>，则结果是 <span class="command_value">70%</span> 的贴图加上 <span class="command_value">30%</span> 的颜色。</p>
 <p>例如，通道的颜色为 RGB 255/255/0（黄色），贴图的一个像素色值为 RGB 255/0/0（红色），混合强度设为 <span class="command_value">50%</span>，则最终这个像素显示的颜色为 255/128/0（橙色）。</p>
 <p><a id="MATERIAL_TEXTUREMIXING_ADD" name="MATERIAL_TEXTUREMIXING_ADD"></a><!--INDEX "10","添加","MATERIAL_TEXTUREMIXING_ADD"--><span class="c4d_id_cycle">添加</span></p>
-<p>贴图的 RGB 值会加到颜色的 RGB 值上，最大值不会超过 255，因此如果贴图像素色值为 RGB 0/255/255（青色），添加到颜色色值 255/255/0（黄色）上，则结果为255/255/255（白色）。</p>
+<p>贴图的 RGB 值会加到颜色的 RGB 值上，最大值为 255，因此如果贴图像素色值为 RGB 0/255/255（青色），添加到颜色色值 255/255/0（黄色）上，则结果为255/255/255（白色）。</p>
 <p><a id="MATERIAL_TEXTUREMIXING_SUBTRACT" name="MATERIAL_TEXTUREMIXING_SUBTRACT"></a><!--INDEX "10","减去","MATERIAL_TEXTUREMIXING_SUBTRACT"--><span class="c4d_id_cycle">减去</span></p>
 <p>颜色的 RGB 值会减去贴图的 RGB 值。因此如果贴图像素色值为 RGB 255/255/255（白色），颜色色值为 255/0/0（红色），混合强度为100%，则显示结果为 0/255/255（青色）。</p>
 <p><a id="MATERIAL_TEXTUREMIXING_MULTIPLY" name="MATERIAL_TEXTUREMIXING_MULTIPLY"></a><!--INDEX "10","正片叠底","MATERIAL_TEXTUREMIXING_MULTIPLY"--><span class="c4d_id_cycle">正片叠底</span></p>
