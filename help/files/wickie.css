@@ -170,7 +170,7 @@ img.text_cmd_icon                                   { float: none; width: auto; 
   .studio       .in-studio            .only_apps        { display: none; }
 
 /* apps info-Zeile Seiten-Header */
-.page_only_apps                                         { color: blue; font-size: xx-small; text-align: right; }
+.page_only_apps                                         { color: blue; font-size: xx-small; text-align: right; opacity: 0; }
   .lite         .in-lite-page         .page_only_apps,
   .prime        .in-prime-page        .page_only_apps,
   .visualize    .in-visualize-page    .page_only_apps,

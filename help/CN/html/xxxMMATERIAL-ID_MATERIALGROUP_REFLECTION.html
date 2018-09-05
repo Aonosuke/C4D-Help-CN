@@ -246,63 +246,179 @@
 <p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
 <p><a id="REFLECTION_LAYER_TRANS_MIX_MODE" name="REFLECTION_LAYER_TRANS_MIX_MODE"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_MODE","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","混合模式","REFLECTION_LAYER_TRANS_MIX_MODE"--><span class="c4d_id">混合模式</span></p>
 <p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。不是所有通道都有混合模式。如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
-<p><a id="REFLECTION_LAYER_TRANS_MIX_STRENGTH" name="REFLECTION_LAYER_TRANS_MIX_STRENGTH"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_STRENGTH","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","混合强度","REFLECTION_LAYER_TRANS_MIX_STRENGTH"--><span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_TRANS_MIX_STRENGTH" name="REFLECTION_LAYER_TRANS_MIX_STRENGTH"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_STRENGTH","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","混合强度","REFLECTION_LAYER_TRANS_MIX_STRENGTH"-->
+	<span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
 <p><span class="command">混合强度</span>决定了贴图和颜色的混合比例。</p>
 <p><a id="REP" name="REP"></a></p>
 <p><a id="hl_11" name="hl_11"></a><!--INDEX "3","层各向异性","hl_11"--><p><span class="HL_2">层各向异性</span></p>
 <p><div class="image_full" style="max-width:1800px"><img  src="../pics/038349.jpg"  ><span class="caption">左图：无各向异性；右图：不同粗糙度设置的各向异性。一个带有 HDR 图像的天空对象用来创造反射环境。</span></div></p>
 <p>各向异性是当许多微小的划痕按照一定的方向排列在物体表面时产生的（如涂刷金属），这时高光和反射会被“拖”到这些划痕的方向上。除了微小的划痕，方向一致的凸起也会造成这样的效果。 </p>
 <p>要创建各向异性效果，需要将<span class="command">类型</span>设置为<span class="command_value">各向异性</span>， <span class="command">粗糙度</span>和<span class="command">各向异性</span>的数值要大于<span class="command_value">0%</span>，还要确认环境中有足够的反射，带有 HDRI 纹理的天空对象就非常适合用作反射环境。为了避免你对<span class="command">各向异性</span>的图案在物体上的投射方式感到困惑：这个过程遵循投射的正常法则。作为测试，可以将<span class="command">划痕</span>设为<span class="command_value">主级</span>，这时在材质编辑器顶部会显示出相应的预览，想象这个预览图被作为纹理进行投射。</p>
-<p><a id="REFLECTION_LAYER_ANISO_PROJECTION" name="REFLECTION_LAYER_ANISO_PROJECTION"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","重投射","REFLECTION_LAYER_ANISO_PROJECTION"--><span class="c4d_id">重投射</span></p>
+<p><a id="REFLECTION_LAYER_ANISO_PROJECTION" name="REFLECTION_LAYER_ANISO_PROJECTION"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","重投射","REFLECTION_LAYER_ANISO_PROJECTION"-->
+	<span class="c4d_id">重投射</span></p>
 <p><div class="image_full" style="max-width:893px"><img  src="../pics/038273.jpg"  ><span class="caption"><span class="command_value">放射</span>是专门用在圆形面上的。圆柱体的底面和侧面分别使用了不同的材质（(<span class="command">平面</span>和<span class="command">放射</span>）。</span></div></p>
 <p>划痕的矢量切线决定了划痕的方向，它可以用两种方式投射到物体上：<ul></p>
 <p><li> <span class="command">无</span>：划痕会不经变形直接投射到物体上。</li>
 <li> <span class="command">平面</span>：划痕会被缩放、旋转和位移。</li>
 <li> <span class="command">放射</span>：划痕会被弯曲成环形，例如用来模拟上图中的圆形面外观。<span class="command">图案</span>框中可以加载图像、<span class="command">偏移</span>值可以调节投射位置、不同的<span class="command">计数</span>值可以用来创建各种有趣的漩涡、对称的效果，不过上图示例中的效果只有在不使用<span class="command">图案</span>设置的情况下才能创建出来。</li></ul><p></p>
-<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_SCALE" name="REFLECTION_LAYER_ANISO_PROJECTION_SCALE"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_SCALE","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","缩放","REFLECTION_LAYER_ANISO_PROJECTION_SCALE"--><span class="c4d_id">缩放</span> <span class="range">[0..10000%]</span></p>
-<p>This value defines the size of the <span class="command">Pattern</span> or <span class="command">Scratches</span> selected.</p>
-<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_ANGLE" name="REFLECTION_LAYER_ANISO_PROJECTION_ANGLE"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_ANGLE","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","角度","REFLECTION_LAYER_ANISO_PROJECTION_ANGLE"--><span class="c4d_id">角度</span> <span class="range">[0..5729.578°]</span></p>
-<p>This setting is used to rotate the anisotropic microscopic scratches (and, if defined, the parallel ridges). The rotational axis is defined by the <span class="command">偏移 U/V</span> values.</p>
-<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U" name="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","偏移 U","REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U"--><span class="c4d_id">偏移 U</span> <span class="range">[-1000..1000%]</span><br><a id="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V" name="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","偏移 V","REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V"--><span class="c4d_id">偏移 V</span> <span class="range">[-1000..1000%]</span></p>
-<p>These settings are used to move the Pattern/Scratches in the U and V directions, respectively. For the effect on the disc in the image above, both values were set to <span class="command_value">50%</span>, which means that the rotational axis lies at the center of the circular scratches.</p>
+<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_SCALE" name="REFLECTION_LAYER_ANISO_PROJECTION_SCALE"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_SCALE","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","缩放","REFLECTION_LAYER_ANISO_PROJECTION_SCALE"-->
+	<span class="c4d_id">缩放</span> <span class="range">[0..10000%]</span></p>
+<p>这项数值决定了This value defines the size of the <span class="command">Pattern</span> or <span class="command">Scratches</span> selected.</p>
+<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_ANGLE" name="REFLECTION_LAYER_ANISO_PROJECTION_ANGLE"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_ANGLE","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","角度","REFLECTION_LAYER_ANISO_PROJECTION_ANGLE"-->
+<span class="c4d_id">角度</span> <span class="range">[0..5729.578°]</span></p>
+<p>这个设置用来旋转各向异性的微观划痕（或平行的凸起），其旋转轴是由<span class="command">偏移 U/V</span> 值决定的。</p>
+<p><a id="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U" name="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","偏移 U","REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_U"-->
+	<span class="c4d_id">偏移 U</span> <span class="range">[-1000..1000%]</span><br>
+	<a id="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V" name="REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","偏移 V","REFLECTION_LAYER_ANISO_PROJECTION_OFFSET_V"-->
+	<span class="c4d_id">偏移 V</span> <span class="range">[-1000..1000%]</span></p>
+<p>这两项设置用来在 U 和 V 方向上移动图案/划痕。对上图中的圆盘效果，两个值都可以设置为 <span class="command_value">50%</span>，表示旋转轴位于圆柱底面的中心。</p>
 <p><!--INDEX "8","计数","no_id_8"--><a id="no_id_8" name="no_id_8"></a> <span class="no_id">计数</span></p>
-<p><div class="image_full" style="max-width:1339px"><img  src="../pics/038274.jpg"  ><span class="caption">Increasing <span class="command">计数</span> values from left to right.</span></div></p>
-<p>When applying this setting, a <span class="command">Pattern</span> should be selected first. The <span class="command">计数</span> value then defines the number of ‘threads’ that converge at the center defined by the <span class="command">偏移 U/V</span> settings.</p>
-<p><a id="REFLECTION_LAYER_ANISO_PATTERN" name="REFLECTION_LAYER_ANISO_PATTERN"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_PATTERN","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","图案模式","REFLECTION_LAYER_ANISO_PATTERN"--><span class="c4d_id">图案模式</span></p>
-<p>This setting can be used to create common anisotropic materials such as carbon, brushed metal, etc. In addition, textures can be used to create numerous other patterns.</p>
+<p><div class="image_full" style="max-width:1339px"><img  src="../pics/038274.jpg"  ><span class="caption"> <span class="command">计数</span>值从左至右递增。</span></div></p>
+<p>使用这项设置时，需要先选择一种<span class="command">图案模式</span>，这时<span class="command">计数</span>决定了汇集到（由<span class="command">偏移 U/V</span> 定义的）中心的“图案”数量。</p>
+<p><a id="REFLECTION_LAYER_ANISO_PATTERN" name="REFLECTION_LAYER_ANISO_PATTERN"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_PATTERN","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","图案模式","REFLECTION_LAYER_ANISO_PATTERN"-->
+	<span class="c4d_id">图案模式</span></p>
+<p>这项设置用来创建如木炭、涂刷金属等普通各向异性材质，另外还可以通过加载纹理创造出各种各样的其他图案。</p>
 <p><!--INDEX "10","无","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">无</span></p>
-<p>Linear scratches whose orientation will remain constant will be created.</p>
-<p><!--INDEX "10","环形","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">环形</span><br><!--INDEX "10","立方体","no_cycle_id_6"--><a id="no_cycle_id_6" name="no_cycle_id_6"></a> <span class="no_cycle_id">立方体</span><br><!--INDEX "10","对角线","no_cycle_id_7"--><a id="no_cycle_id_7" name="no_cycle_id_7"></a> <span class="no_cycle_id">对角线</span><br><!--INDEX "10","点阵","no_cycle_id_8"--><a id="no_cycle_id_8" name="no_cycle_id_8"></a> <span class="no_cycle_id">点阵</span><br><!--INDEX "10","自定义","no_cycle_id_9"--><a id="no_cycle_id_9" name="no_cycle_id_9"></a> <span class="no_cycle_id">自定义</span></p>
+<p>会产生线性的划痕，划痕的方向保持不变。</p>
+<p><!--INDEX "10","环形","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">环形</span><br>
+<!--INDEX "10","立方体","no_cycle_id_6"--><a id="no_cycle_id_6" name="no_cycle_id_6"></a> <span class="no_cycle_id">立方体</span><br>
+<!--INDEX "10","对角线","no_cycle_id_7"--><a id="no_cycle_id_7" name="no_cycle_id_7"></a> <span class="no_cycle_id">对角线</span><br>
+<!--INDEX "10","点阵","no_cycle_id_8"--><a id="no_cycle_id_8" name="no_cycle_id_8"></a> <span class="no_cycle_id">点阵</span><br>
+<!--INDEX "10","自定义","no_cycle_id_9"--><a id="no_cycle_id_9" name="no_cycle_id_9"></a> <span class="no_cycle_id">自定义</span></p>
 <p><div class="image_full" style="max-width:823px"><img  src="../pics/038275.jpg"  ><span class="caption">从左至右：无、环形、立方体、对角线、点阵、自定义。</span></div></p>
-<p><span class="command_value">点阵</span>和<span class="command_value">立方体</span> are well-suited for creating carbon fiber surfaces:</p>
-<p><div class="image_full" style="max-width:712px"><img  src="../pics/038277.jpg"  ><span class="caption">The fitting pattern can be used to create a carbon fiber material. Here, an additional reflective layer was added to the anisotropy layer.</span></div></p>
-<p><a id="REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL" name="REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","最大角度","REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL"--><span class="c4d_id">最大角度</span> <span class="range">[0..5729.578°]</span><br><a id="REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK" name="REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:1017px"><img  src="../pics/038276.jpg"  ><span class="caption">The texture on the left produces the scratch pattern on the right (<span class="command">最大角度</span> set to <span class="command_value">90°</span>).</span></div></p>
-<p>Instead of using a default pattern, you can also use a custom pattern. To do so, create a black texture with a white pattern on it.</p>
-<p>Grayscale values will also be evaluated, whereby <span class="command">最大角度</span> will represent the scratches’ angle at white regions. Note that you will not see the difference if a scratch is rotated 180°.</p>
-<p><a id="REFLECTION_LAYER_ANISO_MIRROR" name="REFLECTION_LAYER_ANISO_MIRROR"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_MIRROR","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","镜像","REFLECTION_LAYER_ANISO_MIRROR"--><span class="c4d_id">镜像</span></p>
-<p>This setting offers options that let you mirror the <span class="command">Pattern</span> in the U and or V directions (with the exception of <span class="command_value">Custom</span> patterns).</p>
-<p><a id="REFLECTION_LAYER_ANISO_SCRATCHES" name="REFLECTION_LAYER_ANISO_SCRATCHES"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_SCRATCHES","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","划痕","REFLECTION_LAYER_ANISO_SCRATCHES"--><span class="c4d_id">划痕</span></p>
-<p><div class="image_full" style="max-width:1400px"><img  src="../pics/038278.jpg"  ><span class="caption">Primary and secondary scratches in <span class="command">平面</span> and <span class="command">放射</span> modes.</span></div></p>
+<p><span class="command_value">点阵</span>和<span class="command_value">立方体</span>非常适合创建碳纤维的表面：</p>
+<p><div class="image_full" style="max-width:712px"><img  src="../pics/038277.jpg"  >
+	<span class="caption">合适的图案可以用来创建碳纤维材质，在这张图中除了各向异性层外还加上了一个反射层。</span></div></p>
+<p><a id="REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL" name="REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","最大角度","REFLECTION_LAYER_ANISO_VALUE_CUSTOMREAL"-->
+	<span class="c4d_id">最大角度</span> <span class="range">[0..5729.578°]</span><br>
+	<a id="REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK" name="REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_CUSTOMLINK"--><span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:1017px"><img  src="../pics/038276.jpg"  >
+	<span class="caption">左边的纹理会产生右图中的划痕图案（<span class="command">最大角度</span>设为 <span class="command_value">90°</span>）。</span></div></p>
+<p>除了默认的图案，还可以使用自定义图案，你要做的是创建一个带有白色图案的黑色纹理。</p>
+<p><span class="command">最大角度</span>表示白色区域的划痕角度，而灰色部分也会相应地产生对应角度的划痕。注意，如果划痕旋转180°则看不出跟之前有任何区别。</p>
+<p><a id="REFLECTION_LAYER_ANISO_MIRROR" name="REFLECTION_LAYER_ANISO_MIRROR"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_MIRROR","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","镜像","REFLECTION_LAYER_ANISO_MIRROR"-->
+	<span class="c4d_id">镜像</span></p>
+<p>这项设置让你可以在 U 或 V 方向上镜像<span class="command">图案</span>（除<span class="command_value">自定义</span>图案外）。</p>
+<p><a id="REFLECTION_LAYER_ANISO_SCRATCHES" name="REFLECTION_LAYER_ANISO_SCRATCHES"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_SCRATCHES","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","划痕","REFLECTION_LAYER_ANISO_SCRATCHES"-->
+	<span class="c4d_id">划痕</span></p>
+<p><div class="image_full" style="max-width:1400px"><img  src="../pics/038278.jpg"  >
+	<span class="caption"><span class="command">平面</span>和<span class="command">放射</span>模式下的主级和次级划痕。</span></div></p>
 <p>Besides anisotropic microscopic scratches that can uniformly deform specular highlights/reflections, additional, even larger ridges can also be defined. There are primary ridges that run parallel to the microscopic scratches and secondary ridges (these make less sense in conjunction with <span class="command">重投射</span> <span class="command_value">放射</span>) that run in a perpendicular direction. Both ridge types can be applied simultaneously, as shown at the top right of the image above.</p>
-<p><a id="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL" name="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","各向异性","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"--><span class="c4d_id">各向异性</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK" name="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL" name="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","各向异性","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"-->
+	<span class="c4d_id">各向异性</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK" name="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>Use this value to define the over strength of the anisotropy effect. A value of <span class="command_value">0%</span> will disable the effect.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL" name="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","方向","REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL"--><span class="c4d_id">方向</span> <span class="range">[0..5729.578°]</span><br><a id="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK" name="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:850px"><img  src="../pics/038279.jpg"  ><span class="caption">Various <span class="command">方向</span> values. Note the changes at the marked locations.</span></div></p>
+<p><a id="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL" name="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","方向","REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL"-->
+	<span class="c4d_id">方向</span> <span class="range">[0..5729.578°]</span><br>
+	<a id="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK" name="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:850px"><img  src="../pics/038279.jpg"  >
+	<span class="caption">Various <span class="command">方向</span> values. Note the changes at the marked locations.</span></div></p>
 <p>This setting is a little more difficult to comprehend than the others. It regulates a property that does not actually exist in the real world: it rotates the vector tangent scratches mentioned <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#rep" target="">above</a>. What effect does this have? It changes the reflective behavior. This makes it possible to fine-tune the anisotropy effect without having to change the position of the light source.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","主级振幅","REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL"--><span class="c4d_id">主级振幅</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","次级振幅","REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL"--><span class="c4d_id">次级振幅</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK" name="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK" name="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:1400px"><img  src="../pics/038280.jpg"  ><span class="caption">Small and large values for amplitude, scale and length.</span></div></p>
+<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","主级振幅","REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL"-->
+	<span class="c4d_id">主级振幅</span> <span class="range">[0..10000%]</span><br
+	><a id="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","次级振幅","REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDEREAL"-->
+	<span class="c4d_id">次级振幅</span><span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK" name="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK"></a>
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDELINK"--><span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK" name="REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:1400px"><img  src="../pics/038280.jpg"  
+	><span class="caption">Small and large values for amplitude, scale and length.</span></div></p>
 <p>These values are used to define the ridge depth. Note that you can also enter values in excess of <span class="command_value">100%</span> to create very deep ridges.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","主级缩放","REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL"--><span class="c4d_id">主级缩放</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","次级缩放","REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL"--><span class="c4d_id">次级缩放</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK" name="REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK" name="REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK"--><span class="c4d_id">纹理</span></p>
-<p>These settings are used to define the ridge width.</p>
+<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","主级缩放","REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL"-->
+	<span class="c4d_id">主级缩放</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","次级缩放","REFLECTION_LAYER_SECONDARY_VALUE_SCALEREAL"-->
+	<span class="c4d_id">次级缩放</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK" name="REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_SCALELINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK" name="REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p>这些设置用来设置凸起的宽度。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","主级长度","REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL"--><span class="c4d_id">主级长度</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","次级长度","REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL"--><span class="c4d_id">次级长度</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK" name="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK" name="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","主级长度","REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL"-->
+	<span class="c4d_id">主级长度</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","次级长度","REFLECTION_LAYER_SECONDARY_VALUE_LENGTHREAL"-->
+	<span class="c4d_id">次级长度</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK" name="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_LENGTHLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK" name="REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>These values are used to define the ridge length. Very high values lead to concentric (radial) or long ridges with a uniform depth (Planar), very small values lead to very short ridges.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","主级衰减","REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL"--><span class="c4d_id">主级衰减</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","次级衰减","REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL"--><span class="c4d_id">次级衰减</span> <span class="range">[0..10000%]</span><br><a id="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK" name="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK" name="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","主级衰减","REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL"-->
+	<span class="c4d_id">主级衰减</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL" name="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","次级衰减","REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONREAL"-->
+	<span class="c4d_id">次级衰减</span> <span class="range">[0..10000%]</span><br>
+	<a id="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK" name="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK" name="REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>These settings are similar to MIP Mapping for calculating ridge patterns based on their distance from the UV dimensions. In essence, they control the smoothing of the ridges. Small values produce more grainy but faster results and larger value produce correspondingly more blurred and slower results. Note that very large values can be entered here.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="TEXTIL" name="TEXTIL"></a></p>
