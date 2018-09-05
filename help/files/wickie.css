@@ -178,3 +178,11 @@ img.text_cmd_icon                                   { float: none; width: auto; 
   .bodypaint3d  .in-bodypaint3d-page  .page_only_apps,
   .studio       .in-studio-page       .page_only_apps   { display: none; }
 
+   
+@media print, screen and (max-width: 720px) {
+  html {    font-size: 14px; }
+}
+  
+@media print, screen and (max-width: 480px) {
+  html {    font-size: 16px; }
+}
