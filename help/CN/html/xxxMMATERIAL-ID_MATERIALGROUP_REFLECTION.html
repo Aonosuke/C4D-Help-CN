@@ -38,17 +38,22 @@
 <li> <a href="#sampling" target="">层采样</a> </li>
 <li> <a href="#trans" target="">层 * 透明度 *</a></li>
 <li> <a href="#general" target="">其他标签</a> </li></ul><p></p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","概述","hl_1"--><p><span class="HL_1">概述</span></p>
+<p><a id="hl_1" name="hl_1"></a>
+	<!--INDEX "3","概述","hl_1"-->
+	<p><span class="HL_1">概述</span></p>
 <p>新的<span class="command">反射</span>是之前版本的威力加强版。从 R16 版本起进行了如下修改：<ul></p>
 <p><li> 因为属性相似，反射和高光通道被合并了。</li>
 <li> 反射/高光可以调整层顺序。</li>
 <li> 每个反射通道都有大量参数可供设置，其中许多在单独通道（如凹凸、法线等）或着色器（如菲涅耳反射）中也可进行设置。</li>
 <li> 许多属性现在都可以添加纹理了。</li>
 <li> 增加的新功能包括：多种反射模型、各向异性、织物、反射边缘的颜色溢出等。</li></ul><p></p>
-<p><div class="image_full" style="max-width:1921px"><img  src="../pics/038257.jpg"  ><span class="caption">使用反射通道可以呈现优秀的层叠反射性划痕漆面或布料质感。</span></div></p>
+<p><div class="image_full" style="max-width:1921px"><img  src="../pics/038257.jpg"  >
+	<span class="caption">使用反射通道可以呈现优秀的层叠反射性划痕漆面或布料质感。</span></div></p>
 <p>简而言之，<span class="command">反射</span>通道几乎可以实现任何反射效果。诸如汽车或金属漆这样的材质现在可以轻易地创建，它们是由多个反射效果不同的反射层所组成的。而且，还有许多预置材质可以用来创建各种真实的反射金属表面。</p>
 <p><a id="DIFFUS" name="DIFFUS"></a></p>
-<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","与之前版本的其他差别","hl_2"--><p><span class="HL_1">与之前版本的其他差别</span></p>
+<p><a id="hl_2" name="hl_2"></a>
+	<!--INDEX "3","与之前版本的其他差别","hl_2"-->
+	<p><span class="HL_1">与之前版本的其他差别</span></p>
 <p><span class="command">反射</span>通道与普通的材质系统多少有一定区别：</p>
 <p>传统材质有：<ul></p>
 <p><li> 颜色通道，反射真实光源（漫射）。</li>
@@ -57,8 +62,11 @@
 <p>对于创建材质来说，这三个通道是最重要的（其他通道基本只用来创建特殊效果或加强效果）。如你所见，这些通道都会产生反射，虽然它们的名称不同。</p>
 <p>从 CINEMA R16 开始，这三个反射效果（以及每个层都有其独立的 Alpha、凹凸或法线通道）被整合为了一个单独的通道（但是仍然可以使用之前的工作流，所有之前版本的功能都仍然被保留：参见下面的<span class="command_value">提示</span>）。因此，现在只用一个<span class="command">反射</span>通道就创建材质了，这也意味着在一些情况下不需要颜色通道了。当然，也不能一概而论。</p>
 <p>一方面，之前的版本对于如车漆、层叠高光这样的特殊效果很难实现，而用现在的反射通道则很容易。另一方面，全局光照的功能基于颜色通道的设置（而不是反射通道），因此不能不使用颜色通道。另外，真实的漫反射渲染比使用颜色通道来生成要复杂得多。</p>
-<p><div class="hint"><span class="HL_hint">提示：<br></span>旧版本的材质仍然可以加载，高光和反射设置会保留，它们的层名称分别为“高光-标准”和“反射-标准”，得到的渲染效果几乎与之前相同（哑光反射上可能会有轻微不同）。因此可以在这两个层中进行与之前一样的操作，它们的类型分别为<span class="command_value">反射（传统）</span>和<span class="command_value">高光 - Blinn/Phong（传统）</span>。哑光效果现在可以用<span class="command">粗糙度</span>进行设置。</div></p>
-<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","如何创建金属材质外观？","hl_3"--><p><span class="HL_1">如何创建金属材质外观？</span></p>
+<p><div class="hint"><span class="HL_hint">提示：<br>
+</span>旧版本的材质仍然可以加载，高光和反射设置会保留，它们的层名称分别为“高光-标准”和“反射-标准”，得到的渲染效果几乎与之前相同（哑光反射上可能会有轻微不同）。因此可以在这两个层中进行与之前一样的操作，它们的类型分别为<span class="command_value">反射（传统）</span>和<span class="command_value">高光 - Blinn/Phong（传统）</span>。哑光效果现在可以用<span class="command">粗糙度</span>进行设置。</div></p>
+<p><a id="hl_3" name="hl_3"></a>
+	<!--INDEX "3","如何创建金属材质外观？","hl_3"-->
+	<p><span class="HL_1">如何创建金属材质外观？</span></p>
 <p>下面用一个带有两个层示例来说明：一个透明涂层叠加在金属闪光效果上。</p>
 <p><ol><br><li> 创建一个新材质，进入<span class="command">颜色</span>通道并设置颜色，如暗红色。<br>
 <li> 切换到<span class="command">反射</span>通道的<span class="command">层</span>标签，双击<span class="command">默认高光</span>（双击层名称而不是双击标签），将其命名为“Metallic”。设置层的<span class="command">类型</span>为 <span class="command_value">Beckmann</span>。<br>
@@ -69,7 +77,9 @@
 <li> 返回<span class="command">层</span>标签，然后点击<span class="command">添加…</span>按钮添加一个新的 <span class="command_value">Beckmann</span> 层。双击这个层的名称将其重命名为“Clearcoat”。<br>
 <li> 切换到<span class="command">层菲涅耳</span>菜单，设置<span class="command">菲涅耳</span>为<span class="command_value">绝缘体</span>。设置<span class="command">预置</span>为<span class="command_value">玻璃</span>。完成。如果现在渲染对象（包括置于天空对象的 HDR 图像），会得到下面的结果：<br><br>
 <div class="image_full" style="max-width:916px"><img  src="../pics/038258.jpg"  ><span class="caption">反射环境的金属车漆。</span></div><br></ol><p></p>
-<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","在哪里添加颜色、凹凸和高光纹理？","hl_4"--><p><span class="HL_1">在哪里添加颜色、凹凸和高光纹理？</span></p>
+<p><a id="hl_4" name="hl_4"></a>
+	<!--INDEX "3","在哪里添加颜色、凹凸和高光纹理？","hl_4"-->
+	<p><span class="HL_1">在哪里添加颜色、凹凸和高光纹理？</span></p>
 <p><div class="image_full" style="max-width:1720px"><img  src="../pics/038259.jpg"  ><span class="caption"></span></div></p>
 <p>通常可以设置单独的颜色、凹凸或高光贴图。</p>
 <p>加载方法如下：<ul></p>
@@ -77,41 +87,65 @@
 <li> 加载凹凸纹理到<span class="command">凹凸强度</span>菜单的<span class="command">自定义纹理</span>框中（<span class="command_value">自定义凹凸贴图</span>模式）。</li>
 <li> 添加高光贴图到层颜色菜单的<span class="command">纹理</span>框中。</li></ul><p></p>
 <p>如果想要得到最好的凹凸纹理效果，可以将<span class="command">凹凸强度</span>模式设为<span class="command_value">自定义法线贴图</span>，把贴图加载到<span class="command">自定义纹理</span>框中。</p>
-<p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 17</p><p><!--INDEX "8","层排列","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">层排列</span> </p>
+<p><a id="RELEASE_170_1" name="RELEASE_170_1"></a><p><div class="release_marker" align="left">
+	<p class="release" align="right">RELEASE 17</p><p>
+	<!--INDEX "8","层排列","no_id_1"-->
+	<a id="no_id_1" name="no_id_1"></a> <span class="no_id">层排列</span> </p>
 <p>这个功能需要与场次<span class="command">场次</span>功能一起使用（参见<a href="54507.html" target="">场次管理器</a>）。点击右键可以覆写，在新场次中更改层的排列。</p>
 </div></p>
 <p><a id="LAYER" name="LAYER"></a></p>
-<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","层标签","hl_5"--><p><span class="HL_1">层标签</span></p>
+<p><a id="hl_5" name="hl_5"></a>
+	<!--INDEX "3","层标签","hl_5"-->
+	<p><span class="HL_1">层标签</span></p>
 <p>这里显示了当前选择材质的反射层列表。每个层都可以设置层名称、重新排列层顺序（按住 <nobr><span class="key">Cmd/Ctrl</span></nobr> 键拖放可以复制层）、使用混合模式设置与其他层的组合效果。</p>
 <p>最多可以设置16层。当创建新材质时会默认创建<span class="command">默认高光</span>层，它对应 R16 之前版本的高光通道（通过点击<span class="command">添加…</span>按钮并选择可用的类型来添加反射层）。</p>
 <p>如果启用了<span class="command">透明</span>通道，<span class="command">反射</span>通道的<span class="command">层</span>标签中会显示<span class="command">* 透明度 *</span>层（对于全内部反射，这个层会控制全反射的设置）。</p>
 <p>需要多少个层？像现实世界一样多。例如，假设一个对象有金属车漆和透明涂层，那么它的材质就需要一个表现金属表面的各向异性反射层，还要一个轻微反射效果的透明涂层。它们可以像真实世界中的那样叠加——从底到顶。</p>
-<p><div class="image_full" style="max-width:1000px"><img  src="../pics/038260.jpg"  ><span class="caption">第一层表现了涂刷金属，第二层则是透明涂层。</span></div></p>
-<p><!--INDEX "8","添加","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">添加</span></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/038260.jpg"  >
+	<span class="caption">第一层表现了涂刷金属，第二层则是透明涂层。</span></div></p>
+<p><!--INDEX "8","添加","no_id_2"-->
+	<a id="no_id_2" name="no_id_2"></a> <span class="no_id">添加</span></p>
 <p>点击这个按钮可以添加一个新层，这时会弹出一个菜单，从中选择<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#type" target="">类型</a>。如果不想要各向异性效果或编织品质感，可以选择 <span class="command_value">Beckmann</span> 选项。详情请点击前面的链接。</p>
-<p><!--INDEX "8","移除","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">移除</span></p>
+<p><!--INDEX "8","移除","no_id_3"-->
+	<a id="no_id_3" name="no_id_3"></a> <span class="no_id">移除</span></p>
 <p>点击这个按钮会从列表中移除当前选择的层。</p>
-<p><!--INDEX "8","复制/粘贴","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">复制/粘贴</span></p>
+<p><!--INDEX "8","复制/粘贴","no_id_4"-->
+	<a id="no_id_4" name="no_id_4"></a> <span class="no_id">复制/粘贴</span></p>
 <p>使用这两个按钮可以复制和粘贴层，包括层的所有设置。</p>
 <p>在层上点击右键会弹出菜单，其中有以下命令：</p>
-<p><!--INDEX "8","复制","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">复制</span></p>
+<p><!--INDEX "8","复制","no_id_5"-->
+	<a id="no_id_5" name="no_id_5"></a> <span class="no_id">复制</span></p>
 <p>复制选择的层为一个新层，并将其置于列表顶部。</p>
 <p>点击层左侧的眼睛图标可以开关该层。双击层名称可以对其重命名。</p>
 <p>层名称右侧的选择菜单可以让你在两种模式之间选择：<ul></p>
 <p><li> <span class="command">普通</span>：为所有反射层选择这个模式。右侧的滑块可以调节层不透明度。设为 <span class="command_value">100%</span> 会完全覆盖下面的层。例外：启用遮罩或菲涅耳会让底下的层穿透显示出来。</li>
 <li> <span class="command">添加</span>：如果高光层是唯一的，请选择这个模式（多个高光可以堆叠）。右侧的滑块可以调节层不透明度。</li></ul><p></p>
-<p><a id="REFLECTION_LAYER_GLOBAL_REFLECTION" name="REFLECTION_LAYER_GLOBAL_REFLECTION"></a> <!--AM_JUMP "REFLECTION_LAYER_GLOBAL_REFLECTION","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","全局反射亮度","REFLECTION_LAYER_GLOBAL_REFLECTION"--><span class="c4d_id">全局反射亮度</span> <span class="range">[0..1000%]</span></p>
+<p><a id="REFLECTION_LAYER_GLOBAL_REFLECTION" name="REFLECTION_LAYER_GLOBAL_REFLECTION"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_GLOBAL_REFLECTION","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","全局反射亮度","REFLECTION_LAYER_GLOBAL_REFLECTION"-->
+	<span class="c4d_id">全局反射亮度</span> <span class="range">[0..1000%]</span></p>
 <p>与<span class="command_value">每层</span>可以单独设置的<span class="command">反射强度</span>相比，<span class="command">全局反射亮度</span>设置规定了所有反射的强度。例如你创建了一个复杂的多层反射，每个反射都有其自己的反射强度，但是在渲染时整体的反射太过强烈，这时就可以用这个滑块调低反射强度而不同单独调节每个反射设置。</p>
-<p><a id="REFLECTION_LAYER_GLOBAL_SPECULAR" name="REFLECTION_LAYER_GLOBAL_SPECULAR"></a> <!--AM_JUMP "REFLECTION_LAYER_GLOBAL_SPECULAR","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","全局高光亮度","REFLECTION_LAYER_GLOBAL_SPECULAR"--><span class="c4d_id">全局高光亮度</span> <span class="range">[0..1000%]</span></p>
+<p><a id="REFLECTION_LAYER_GLOBAL_SPECULAR" name="REFLECTION_LAYER_GLOBAL_SPECULAR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_GLOBAL_SPECULAR","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","全局高光亮度","REFLECTION_LAYER_GLOBAL_SPECULAR"-->
+	<span class="c4d_id">全局高光亮度</span> <span class="range">[0..1000%]</span></p>
 <p>与全局反射亮度设置可以调节材质整体反射类似，<span class="command">全局高光亮度</span>设置同样可以调节高光亮度。</p>
-<p><a id="REFLECTION_LAYER_GLOBAL_SEPARATE_PASS" name="REFLECTION_LAYER_GLOBAL_SEPARATE_PASS"></a> <!--AM_JUMP "REFLECTION_LAYER_GLOBAL_SEPARATE_PASS","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","分离通道","REFLECTION_LAYER_GLOBAL_SEPARATE_PASS"--><span class="c4d_id">分离通道</span></p>
+<p><a id="REFLECTION_LAYER_GLOBAL_SEPARATE_PASS" name="REFLECTION_LAYER_GLOBAL_SEPARATE_PASS"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_GLOBAL_SEPARATE_PASS","REFLECTION_LAYER_GLOBAL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","分离通道","REFLECTION_LAYER_GLOBAL_SEPARATE_PASS"-->
+	<span class="c4d_id">分离通道</span></p>
 <p>这个选项在与多通道（参见<a href="ZMULTIPASS-MULTIPASSOBJECT_SPECULARDATA.html" target="">这里</a>）一起使用时很有用。如果想要在分离通道中输出指定的材质，可以启用这个选项。</p>
 <p><!--INDEX "8","修复线性色彩空间","no_id_6"--><a id="no_id_6" name="no_id_6"></a> <span class="no_id">修复线性色彩空间</span></p>
 <p>首先，这个选项只有在打开使用 CINEMA 4D R16 版本创建的工程时才会出现，之后这个选项将会被禁用。出现这种情况的原因是 R16 版本中的 BUG，反射通道中的纹理不会正确地计算（sRGB 替代线性）。这在新版本中会自动进行。这个选项会可以保证旧工程文件的渲染与新文件一致（然后选项会被禁用）。</p>
 <p><a id="GENERAL" name="GENERAL"></a></p>
-<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","其他标签","hl_6"--><p><span class="HL_1">其他标签</span></p>
-<p><!--INDEX "8","预览","no_id_7"--><a id="no_id_7" name="no_id_7"></a> <span class="no_id">预览</span></p>
-<p><div class="image_full" style="max-width:903px"><img  src="../pics/038261.jpg"  ><span class="caption">可用的预览类型，可以在<span class="command">类型</span>菜单中进行选择。</p>
+<p><a id="hl_6" name="hl_6"></a>
+	<!--INDEX "3","其他标签","hl_6"--><p>
+	<span class="HL_1">其他标签</span></p>
+<p><!--INDEX "8","预览","no_id_7"-->
+	<a id="no_id_7" name="no_id_7"></a> 
+	<span class="no_id">预览</span></p>
+<p><div class="image_full" style="max-width:903px"><img  src="../pics/038261.jpg"  >
+	<span class="caption">可用的预览类型，可以在<span class="command">类型</span>菜单中进行选择。</p>
 <p></span></div></p>
 <p>预览显示了当前层的设置效果。从左至右：<ul></p>
 <p><li> 层预览：显示层设置的整体效果。</li>
@@ -122,10 +156,15 @@
 <li> 当<span class="command">类型</span>为<span class="command_value">Irawan（织物）</span>时设置的图案。</li>
 <li> 当启用<span class="command">距离减淡</span>时的反射衰减。</li></ul><p></p>
 <p><a id="TYPE" name="TYPE"></a></p>
-<p><a id="REFLECTION_LAYER_MAIN_DISTRIBUTION" name="REFLECTION_LAYER_MAIN_DISTRIBUTION"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_DISTRIBUTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","类型","REFLECTION_LAYER_MAIN_DISTRIBUTION"--><span class="c4d_id">类型</span></p>
-<p><div class="image_full" style="max-width:2500px"><img  src="../pics/038262.jpg"  ><span class="caption">不同<span class="command">粗糙度</span>下各种<span class="command">类型</span>的效果。图中大型的反射物体会反射 HDRI 天空，图中插入的小图显示了来自两个光源的高光。漫射和织物产生的效果与其他的很不相同，因为它们不能单独设置粗糙度（例外：Oren-Nayer）。</span></div></p>
+<p><a id="REFLECTION_LAYER_MAIN_DISTRIBUTION" name="REFLECTION_LAYER_MAIN_DISTRIBUTION"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_DISTRIBUTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","类型","REFLECTION_LAYER_MAIN_DISTRIBUTION"-->
+	<span class="c4d_id">类型</span></p>
+<p><div class="image_full" style="max-width:2500px"><img  src="../pics/038262.jpg"  >
+	<span class="caption">不同<span class="command">粗糙度</span>下各种<span class="command">类型</span>的效果。图中大型的反射物体会反射 HDRI 天空，图中插入的小图显示了来自两个光源的高光。漫射和织物产生的效果与其他的很不相同，因为它们不能单独设置粗糙度（例外：Oren-Nayer）。</span></div></p>
 <p>下面的光照图示说明了光线在不同的表面上是如何反射的，它与光线的入射角和反射角相关（原则上，这是一种确定 BRDF 双向反射分布函数的经验方法）。</p>
-<p><div class="image_full" style="max-width:789px"><img  src="../pics/038263.jpg"  ><span class="caption">上面这些可设置的反射类型只应用在非镜面反射上。</span></div></p>
+<p><div class="image_full" style="max-width:789px"><img  src="../pics/038263.jpg"  >
+	<span class="caption">上面这些可设置的反射类型只应用在非镜面反射上。</span></div></p>
 <p>光线的散布是非镜面反射的结果。如果是镜面反射（<span class="command">粗糙度</span>设为<span class="command_value">0%</span>）则这些类型不会有任何效果。</p>
 <p>下面的内容不会讲解每种类型背后的理论，因为这涉及到很多的数学方面的内容。我们会让解释易于理解：</p>
 <p><a id="LAMBERT" name="LAMBERT"></a></p>
@@ -134,12 +173,16 @@
 <p><li> <span class="command">Beckmann</span>、<span class="command">GGX</span>、<span class="command">Phong</span>、<span class="command">Ward</span>：这几种类型只在从理想反射角度（=入射角）均匀地减弱反射的方式上有所不同，基本上有上图中类型 A 和类型 B 的区别。仔细查看不同类型的渲染示例图片也只能看到非常细微的不同。</li>
 <span class="command">Beckmann</span> 是一种物理真实而且快速的类型，因此在一般情况下是最佳的选择。<span class="command">GGX</span> 的散布效果最好，在模拟金属表面时效果最好（参见上面的渲染效果图，第二行第二列）：亮度逐渐收缩的高光。<span class="command">Ward</span> 最适合如橡胶或皮肤这样的柔软表面。</p>
 <p></ul><p></p>
-<p><div class="image_full" style="max-width:2344px"><img  src="../pics/038265.jpg"  ><span class="caption">真实世界反射模型（© Eric Smit）中的四个最重要的类型，粗糙度为60%。</span></div></p>
+<p><div class="image_full" style="max-width:2344px"><img  src="../pics/038265.jpg"  >
+	<span class="caption">真实世界反射模型（© Eric Smit）中的四个最重要的类型，粗糙度为60%。</span></div></p>
 <p><ul></p>
 <p><li> <span class="command">各向异性</span>会按特定方向反射光束，这会产生变形的反射，例如涂刷或有划痕的金属。</li>
 <li> <span class="command">反射（传统）, 高光 - Blinn/Phong（传统）</span>：这三种类型只有在需要兼容旧版本工程文件时才会使用。推荐使用物理正确的反射类型。在使用<span class="command">高光 - Blinn/Phong（传统）</span>时，可以自由地调整高光（而不用考虑粗糙度）。</li>
 <li> <span class="command">Lambertian（漫射）、Oren-Nayer（漫射）</span>：这两种类型在漫射模型（即完美的非镜面反射）上多少有些不同。它们会产生类似颜色通道的效果（不发生反射）。在使用时要注意，它们不会被全局光照的辐照缓存所缓存，也是只有在有兼容性需求时才会使用。作为替代，应该使用颜色通道，因为渲染速度更快。</li></ul><p></p>
-<p><a id="REFLECTION_LAYER_MAIN_ADDITIVE" name="REFLECTION_LAYER_MAIN_ADDITIVE"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_ADDITIVE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","衰减","REFLECTION_LAYER_MAIN_ADDITIVE"--><span class="c4d_id">衰减</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_ADDITIVE" name="REFLECTION_LAYER_MAIN_ADDITIVE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_ADDITIVE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","衰减","REFLECTION_LAYER_MAIN_ADDITIVE"-->
+	<span class="c4d_id">衰减</span></p>
 <p><div class="image_full" style="max-width:1122px"><img  src="../pics/038266.jpg"  ><span class="caption">球体材质有一个红白条纹的颜色通道，并且其反射通道的<span class="command">层颜色</span>为蓝色。</div></p>
 <p>这个菜单的选项是用来与颜色通道一起使用的：</p>
 <p>这些选项决定了颜色通道在各种的<span class="command">反射强度</span>设置下要如何与层颜色（子菜单层颜色）进行混合。如果没使用颜色通道，那么这些设置不会有任何效果！还需要注意的是，如果使用了旧版本的高光类型，则只有旧版本支持的类型可用（添加和金属）。</p>
@@ -150,27 +193,45 @@
 <li> <span class="command">添加</span>：两个颜色会相加（物理上不正确，必须手动调暗颜色通道）。</li>
 <li> <span class="command">金属</span>：在需要兼容旧版本 CINEMA 4D 工程文件时才会使用，（在旧版本 CINEMA 4D 中，你可以在高光通道的<span class="command">模式</span>设置中找到它，它会使用颜色通道中的颜色给高光着色。）</li></ul><p></p>
 <p><a id="ROUGH" name="ROUGH"></a></p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL" name="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","粗糙度","REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL"--><span class="c4d_id">粗糙度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL" name="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","粗糙度","REFLECTION_LAYER_MAIN_VALUE_ORENNAYARREAL"-->
+	<span class="c4d_id">粗糙度</span> <span class="range">[0..100%]</span></p>
 <p><div class="image_full" style="max-width:1000px"><img  src="../pics/038267.jpg"  ><span class="caption">各种<span class="command">粗糙度</span>的渲染效果（每次增加5%）。</span></div></p>
 <p>在真实世界中，物体表面是由无数微小的反射面所构成的，它们各自有不同的方向，当从一定距离观察时，会产生高光或反射。</p>
 <p>一个完美的抛光（反射）表面是由方向相同的反射表面组成的。表面越粗糙，微小表面的方向就越随机，产生的高光也就越分散、越暗淡。当粗糙度为100%时就会变成类似 Lambertian 的材质（参见上面的<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#lambert" target="">描述</a>）。这种类型的表面会在朝所有方向反射光线，构成良好的漫射材质表现。这也是颜色通道中所定义的：一种没有反射性的漫射材质。你完全可以无视颜色通道，使用层颜色来控制漫射材质颜色（但是会花更多时间来渲染）。</p>
 <p>注意，粗糙度越高，渲染时间也就越长，因为要计算更大反射范围内的反射。</p>
 <p>各向异性（见下文）可以用来减少微小反射面的随机性。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>对于高光和各向异性，<span class="command">粗糙度</span>要大于 <span class="command_value">0%</span>。</div></p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK" name="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK" name="REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_ORENNAYARLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:2610px"><img  src="../pics/039316.jpg"  ><span class="caption">使用纹理可以控制非镜面反射。</span></div></p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_REFLECTION" name="REFLECTION_LAYER_MAIN_VALUE_REFLECTION"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","反射强度","REFLECTION_LAYER_MAIN_VALUE_REFLECTION"--><span class="c4d_id">反射强度</span> <span class="range">[0..10000%]</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_REFLECTION" name="REFLECTION_LAYER_MAIN_VALUE_REFLECTION"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","反射强度","REFLECTION_LAYER_MAIN_VALUE_REFLECTION"-->
+	<span class="c4d_id">反射强度</span> <span class="range">[0..10000%]</span></p>
 <p>这项设置决定了材质反射的强度。上面提到的<span class="command">衰减</span>设置则决定了反射强度与颜色通道的混合方式。</p>
 <p>一般来说，材质的颜色会随着反射强度的增加而减弱（这会出现在除了<span class="command">添加</span>外的所有衰减模式下）。</p>
 <p>如果反射强度设为 <span class="command_value">0%</span>，则材质完全不会反射；如果设为  <span class="command_value">100%</span>，反射效果最强。真实世界中的每种材质都会有一定程度的反射，即使反射量很小。在创建真实材质效果时请记住这一点。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>多个反射层的反射强度组合可以使用<span class="command">层</span>标签中的<span class="command">全局反射亮度</span>滑块一起进行调节。</div></p>
-<p><a id="REFLECTION_LAYER_MAIN_SHADER_REFLECTION" name="REFLECTION_LAYER_MAIN_SHADER_REFLECTION"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_REFLECTION"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_SHADER_REFLECTION" name="REFLECTION_LAYER_MAIN_SHADER_REFLECTION"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_REFLECTION"-->
+	<span class="c4d_id">纹理</span></p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_COLORED_REFLECTION" name="REFLECTION_LAYER_MAIN_COLORED_REFLECTION"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_COLORED_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","着色","REFLECTION_LAYER_MAIN_COLORED_REFLECTION"--><span class="c4d_id">着色</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_COLORED_REFLECTION" name="REFLECTION_LAYER_MAIN_COLORED_REFLECTION"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_COLORED_REFLECTION","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","着色","REFLECTION_LAYER_MAIN_COLORED_REFLECTION"-->
+	<span class="c4d_id">着色</span></p>
 <p>若启用，颜色通道中设置的<span class="command">颜色</span>会用作反射颜色（通常反射色是由层颜色子菜单中的<span class="command">颜色</span>设置决定的）。</p>
 <p><a id="SPEC" name="SPEC"></a></p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_SPECULAR" name="REFLECTION_LAYER_MAIN_VALUE_SPECULAR"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","高光强度","REFLECTION_LAYER_MAIN_VALUE_SPECULAR"--><span class="c4d_id">高光强度</span> <span class="range">[0..10000%]</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_SPECULAR" name="REFLECTION_LAYER_MAIN_VALUE_SPECULAR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","高光强度","REFLECTION_LAYER_MAIN_VALUE_SPECULAR"-->
+	<span class="c4d_id">高光强度</span> <span class="range">[0..10000%]</span></p>
 <p>这项设置决定了高光的强度。高光是一个（简化的、而且渲染快速的）将反射添加到材质而不需要额外渲染时间的处理方式。在真实世界中，高光只是光源在物体表面的反射，如果想要创建照片级真实的场景，可以将高光强度设为 <span class="command_value">0</span> 而只使用 <span class="command">反射强度</span>。</p>
 <p>高光的尺寸和外观（除<span class="command">类型</span> = <span class="command_value">高光 - Blinn/Phong（传统）</span>外）取决于<span class="command">类型</span>，大部分模型中<span class="command">粗糙度</span>必须大于 <span class="command_value">0%</span>，在一些情况下各向异性也是如此。这与 R16 之前的版本有所不同，之前可以对高光进行不真实的高度和宽度设置。如果有需要的话，在新版本中仍然可以这样做：将<span class="command">类型</span>设为<span class="command_value">高光 - Blinn/Phong（传统）</span>。</p>
 <p>场景中的每个光源都会产生高光。注意，高光只能通过真实 CINEMA 4D 光源和区域光（但是与真实的区域光反射在尺寸和其他方面有所不同）产生：</p>
@@ -178,73 +239,180 @@
 <p>注意看右图中小区域光在地面上的反射变得很大，看起来很不真实。注意这两个光源选项<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SHOWINSPECULAR" target="_self"><span class="text_id">在高光中显示</span></a>和<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SHOWINREFLECTION" target="_self"><span class="text_id">反射可见</span></a>，可以单独给每个光源进行设置。</p>
 <p>查看上面的<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#type" target="">类型</a>渲染示例，显示了不同类型和粗糙度设置之间的差别。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>多个反射层的高光强度组合可以使用<span class="command">层</span>标签中的<span class="command">全局反射亮度</span>滑块一起进行调节。</div></p>
-<p><a id="REFLECTION_LAYER_MAIN_SHADER_SPECULAR" name="REFLECTION_LAYER_MAIN_SHADER_SPECULAR"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_SPECULAR"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_SHADER_SPECULAR" name="REFLECTION_LAYER_MAIN_SHADER_SPECULAR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_SPECULAR"-->
+	<span class="c4d_id">纹理</span></p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_COLORED_SPECULAR" name="REFLECTION_LAYER_MAIN_COLORED_SPECULAR"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_COLORED_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","着色","REFLECTION_LAYER_MAIN_COLORED_SPECULAR"--><span class="c4d_id">着色</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_COLORED_SPECULAR" name="REFLECTION_LAYER_MAIN_COLORED_SPECULAR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_COLORED_SPECULAR","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","着色","REFLECTION_LAYER_MAIN_COLORED_SPECULAR"-->
+	<span class="c4d_id">着色</span></p>
 <p>若启用，颜色通道中设置的<span class="command">颜色</span>会用作高光颜色（通常高光色是由层颜色子菜单中的<span class="command">颜色</span>设置决定的）。</p>
-<p><a id="hl_7" name="hl_7"></a><!--INDEX "3","CINEMA 4D 高光设置","hl_7"--><p><span class="HL_2">CINEMA 4D 高光设置</span></p>
+<p><a id="hl_7" name="hl_7"></a>
+	<!--INDEX "3","CINEMA 4D 高光设置","hl_7"-->
+	<p><span class="HL_2">CINEMA 4D 高光设置</span></p>
 <p>以下三项设置只会出现在<span class="command_value">高光 - Blinn/Phong（传统）</span>中：</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL" name="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","宽度","REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL"--><span class="c4d_id">宽度</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK" name="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL" name="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","宽度","REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSREAL"-->
+	<span class="c4d_id">宽度</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK" name="REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_ROUGHNESSLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>这项数值决定了高光的宽度。对非镜面反射可以设置较大的宽度（较小的高光强度）。抛光表面的宽度则应该很小（较大的高光强度）。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL" name="REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","衰减","REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL"--><span class="c4d_id">衰减</span> <span class="range">[-100..100%]</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK" name="REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL" name="REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","衰减","REFLECTION_LAYER_MAIN_VALUE_FALLOFFREAL"-->
+	<span class="c4d_id">衰减</span> <span class="range">[-100..100%]</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK" name="REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_FALLOFFLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p><span class="command">衰减</span>值决定了高光的亮度曲线，从针形到钟形或矩形都可以设置。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_INNERREAL" name="REFLECTION_LAYER_MAIN_VALUE_INNERREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_INNERREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","内部宽度","REFLECTION_LAYER_MAIN_VALUE_INNERREAL"--><span class="c4d_id">内部宽度</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_INNERLINK" name="REFLECTION_LAYER_MAIN_VALUE_INNERLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_INNERLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_INNERLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_INNERREAL" name="REFLECTION_LAYER_MAIN_VALUE_INNERREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_INNERREAL","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","内部宽度","REFLECTION_LAYER_MAIN_VALUE_INNERREAL"-->
+	<span class="c4d_id">内部宽度</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_INNERLINK" name="REFLECTION_LAYER_MAIN_VALUE_INNERLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_INNERLINK","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_VALUE_INNERLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>这项数值决定了高光的内部宽度，它不会受到亮度衰减变化的影响。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="hl_8" name="hl_8"></a><!--INDEX "3","凹凸/法线通道","hl_8"--><p><span class="HL_2">凹凸/法线通道</span></p>
+<p><a id="hl_8" name="hl_8"></a>
+	<!--INDEX "3","凹凸/法线通道","hl_8"-->
+	<p><span class="HL_2">凹凸/法线通道</span></p>
 <p><div class="image_full" style="max-width:602px"><img  src="../pics/038269.jpg"  ><span class="caption">在两个反射层中使用单独的噪波着色器创建金属闪片和划痕。</span></div></p>
 <p>每个反射层都有自己的，且自控的凹凸和法线通道（它们的功能与同名的材质通道类似）。</p>
 <p>反射层凹凸通道的一个常见用途是创建金属车漆中的闪片，这些反射性的微粒是用非常小的<span class="command_value">噪波</span> <span class="command">纹理</span>模拟出来的。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","凹凸强度","REFLECTION_LAYER_MAIN_VALUE_BUMP"--><span class="c4d_id">凹凸强度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","凹凸强度","REFLECTION_LAYER_MAIN_VALUE_BUMP"-->
+	<span class="c4d_id">凹凸强度</span> <span class="range">[0..100%]</span></p>
 <p>使用这个滑块可以调节凹凸效果的强度。如果设为 <span class="command_value">0%</span> 则不会有凹凸效果；设为 <span class="command_value">100%</span> 则效果最强。这个滑块也可以调节法线效果。</p>
 <p>每个层通道都有自己的<span class="command">强度</span>滑块，但是它们的作用方式不同（例如，凹凸贴图的强度滑块还可以使用负值）。</p>
-<p><a id="REFLECTION_LAYER_MAIN_SHADER_BUMP" name="REFLECTION_LAYER_MAIN_SHADER_BUMP"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_BUMP"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_SHADER_BUMP" name="REFLECTION_LAYER_MAIN_SHADER_BUMP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_MAIN_SHADER_BUMP"-->
+	<span class="c4d_id">纹理</span></p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","模式","REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE"--><span class="c4d_id">模式</span></p>
-<p><!--INDEX "10","默认","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">默认</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","模式","REFLECTION_LAYER_MAIN_VALUE_BUMP_MODE"-->
+	<span class="c4d_id">模式</span></p>
+<p><!--INDEX "10","默认","no_cycle_id_1"-->
+	<a id="no_cycle_id_1" name="no_cycle_id_1"></a> 
+	<span class="no_cycle_id">默认</span></p>
 <p>这项设置定义了要使用的凹凸或法线通道的类型（没有指定反射层通道）。</p>
-<p><!--INDEX "10","自定义凹凸贴图","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">自定义凹凸贴图</span></p>
+<p><!--INDEX "10","自定义凹凸贴图","no_cycle_id_2"-->
+	<a id="no_cycle_id_2" name="no_cycle_id_2"></a> 
+	<span class="no_cycle_id">自定义凹凸贴图</span></p>
 <p>如果想要使用自定义的凹凸贴图可以选择这个模式，将贴图加载到<span class="command">自定义纹理</span>框中。也可以加载法线贴图（使用下一个选项；在法线着色器中也可以使用凹凸贴图）得到更好的效果。</p>
-<p><!--INDEX "10","自定义法线贴图","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">自定义法线贴图</span></p>
+<p><!--INDEX "10","自定义法线贴图","no_cycle_id_3"-->
+	<a id="no_cycle_id_3" name="no_cycle_id_3"></a> 
+	<span class="no_cycle_id">自定义法线贴图</span></p>
 <p>如果想要使用自定义的法线贴图可以选择这个模式，将贴图加载到<span class="command">自定义纹理</span>框中。</p>
-<p><a id="REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM" name="REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","自定义纹理","REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM"--><span class="c4d_id">自定义纹理</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM" name="REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","自定义纹理","REFLECTION_LAYER_MAIN_SHADER_BUMP_CUSTOM"-->
+	<span class="c4d_id">自定义纹理</span></p>
 <p>在这里加载自定义凹凸或法线贴图。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","强度","REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP"--><span class="c4d_id">强度</span> <span class="range">[-100..100%]</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","强度","REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM"--><span class="c4d_id">强度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","强度","REFLECTION_LAYER_MAIN_VALUE_BUMP_BUMP"-->
+	<span class="c4d_id">强度</span> <span class="range">[-100..100%]</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","强度","REFLECTION_LAYER_MAIN_VALUE_BUMP_NORM"-->
+	<span class="c4d_id">强度</span> <span class="range">[0..100%]</span></p>
 <p>这两个数值决定了凹凸/法线贴图的强度。详见下面的<a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html#MATERIAL_BUMP_STRENGTH" target="_self"><span class="text_id">强度</span></a>（凹凸）和<a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html#MATERIAL_NORMAL_STRENGTH" target="_self"><span class="text_id">强度</span></a>（法线）。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","MIP 衰减","REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP"--><span class="c4d_id">MIP 衰减</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","MIP 衰减","REFLECTION_LAYER_MAIN_VALUE_BUMP_MIPMAP"-->
+	<span class="c4d_id">MIP 衰减</span></p>
 <p>启用这个选项会减少凹凸贴图在相机方向上的深度（参见<a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html#MATERIAL_BUMP_MIPFALLOFF" target="_self"><span class="text_id">MIP 衰减</span></a>）。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","算法","REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE"--><span class="c4d_id">算法</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","算法","REFLECTION_LAYER_MAIN_VALUE_BUMP_SPACE"-->
+	<span class="c4d_id">算法</span></p>
 <p>这项设置定义了法线贴图的坐标系统。更多信息参见<a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html#MATERIAL_NORMAL_SPACE" target="_self"><span class="text_id">算法</span></a>。</p>
-<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","翻转 X（红）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX"--><span class="c4d_id">翻转 X（红）</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","翻转 Y（绿）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY"--><span class="c4d_id">翻转 Y（绿）</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","翻转 Z（蓝）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ"--><span class="c4d_id">翻转 Z（蓝）</span><br><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP"></a> <!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","交换 Y 与 Z （Y 向上）","REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP"--><span class="c4d_id">交换 Y 与 Z （Y 向上）</span></p>
+<p><a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","翻转 X（红）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEX"-->
+	<span class="c4d_id">翻转 X（红）</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","翻转 Y（绿）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEY"-->
+	<span class="c4d_id">翻转 Y（绿）</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","翻转 Z（蓝）","REFLECTION_LAYER_MAIN_VALUE_BUMP_REVERSEZ"-->
+	<span class="c4d_id">翻转 Z（蓝）</span><br>
+	<a id="REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP" name="REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","交换 Y 与 Z （Y 向上）","REFLECTION_LAYER_MAIN_VALUE_BUMP_SWAP"-->
+	<span class="c4d_id">交换 Y 与 Z （Y 向上）</span></p>
 <p>这些选项用来设置哪个坐标轴使用什么颜色。更多信息参见<a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html#MATERIAL_NORMAL_REVERSEX" target="_self"><span class="text_id">翻转 X（红）</span></a>。</p>
 <p><a id="COLOR" name="COLOR"></a></p>
-<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","层颜色","hl_9"--><p><span class="HL_2">层颜色</span></p>
+<p><a id="hl_9" name="hl_9"></a>
+	<!--INDEX "3","层颜色","hl_9"-->
+	<p><span class="HL_2">层颜色</span></p>
 <p><div class="image_full" style="max-width:1344px"><img  src="../pics/038271.jpg"  ><span class="caption">层颜色菜单中的纹理，白色表示完全反射，黑色表示颜色通道的颜色。</span></div></p>
 <p>这个菜单的设置类似一个反射的颜色滤镜。层颜色和材质颜色通道的颜色会相加。这种方式让你可以使用黑白纹理来设置哪里需要反射（白色=反射，黑色=不反射）。</p>
 <p>还可以在创建有色金属表面时使用层颜色。</p>
-<p><a id="REFLECTION_LAYER_COLOR_COLOR" name="REFLECTION_LAYER_COLOR_COLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_COLOR_COLOR","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","颜色","REFLECTION_LAYER_COLOR_COLOR"--><span class="c4d_id">颜色</span></p>
+<p><a id="REFLECTION_LAYER_COLOR_COLOR" name="REFLECTION_LAYER_COLOR_COLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_COLOR_COLOR","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","颜色","REFLECTION_LAYER_COLOR_COLOR"-->
+	<span class="c4d_id">颜色</span></p>
 <p>设置层过滤器的颜色。默认颜色为白色，这时反射光不会改变颜色。</p>
-<p><a id="REFLECTION_LAYER_COLOR_BRIGHTNESS" name="REFLECTION_LAYER_COLOR_BRIGHTNESS"></a> <!--AM_JUMP "REFLECTION_LAYER_COLOR_BRIGHTNESS","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","亮度","REFLECTION_LAYER_COLOR_BRIGHTNESS"--><span class="c4d_id">亮度</span> <span class="range">[0..10000%]</span></p>
+<p><a id="REFLECTION_LAYER_COLOR_BRIGHTNESS" name="REFLECTION_LAYER_COLOR_BRIGHTNESS"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_COLOR_BRIGHTNESS","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","亮度","REFLECTION_LAYER_COLOR_BRIGHTNESS"-->
+	<span class="c4d_id">亮度</span> <span class="range">[0..10000%]</span></p>
 <p>使用该设置来调整通道颜色的亮度。<span class="command">亮度</span>可以看作是一个乘数，并且可以设为大于<span class="command">100%</span>。</p>
-<p><a id="REFLECTION_LAYER_COLOR_TEXTURE" name="REFLECTION_LAYER_COLOR_TEXTURE"></a> <!--AM_JUMP "REFLECTION_LAYER_COLOR_TEXTURE","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_COLOR_TEXTURE"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_COLOR_TEXTURE" name="REFLECTION_LAYER_COLOR_TEXTURE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_COLOR_TEXTURE","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_COLOR_TEXTURE"-->
+	<span class="c4d_id">纹理</span></p>
 <p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
-<p><a id="REFLECTION_LAYER_COLOR_MIX_MODE" name="REFLECTION_LAYER_COLOR_MIX_MODE"></a> <!--AM_JUMP "REFLECTION_LAYER_COLOR_MIX_MODE","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","混合模式","REFLECTION_LAYER_COLOR_MIX_MODE"--><span class="c4d_id">混合模式</span></p>
+<p><a id="REFLECTION_LAYER_COLOR_MIX_MODE" name="REFLECTION_LAYER_COLOR_MIX_MODE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_COLOR_MIX_MODE","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","混合模式","REFLECTION_LAYER_COLOR_MIX_MODE"-->
+	<span class="c4d_id">混合模式</span></p>
 <p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。不是所有通道都有混合模式。如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
-<p><a id="REFLECTION_LAYER_COLOR_MIX_STRENGTH" name="REFLECTION_LAYER_COLOR_MIX_STRENGTH"></a> <!--AM_JUMP "REFLECTION_LAYER_COLOR_MIX_STRENGTH","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","混合强度","REFLECTION_LAYER_COLOR_MIX_STRENGTH"--><span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_COLOR_MIX_STRENGTH" name="REFLECTION_LAYER_COLOR_MIX_STRENGTH"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_COLOR_MIX_STRENGTH","REFLECTION_LAYER_COLOR_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","混合强度","REFLECTION_LAYER_COLOR_MIX_STRENGTH"-->
+	<span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
 <p><span class="command">混合强度</span>决定了贴图和颜色的混合比例。</p>
 <p><a id="MASK" name="MASK"></a></p>
-<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","层遮罩","hl_10"--><p><span class="HL_2">层遮罩</span></p>
+<p><a id="hl_10" name="hl_10"></a>
+	<!--INDEX "3","层遮罩","hl_10"-->
+	<p><span class="HL_2">层遮罩</span></p>
 <p><div class="image_full" style="max-width:1344px"><img  src="../pics/038272.jpg"  ><span class="caption">两种不同反射层中的层遮罩纹理，白色会完全显示层，黑色则会遮盖。</span></div></p>
 <p>这个菜单的设置可以用来为一个反射层创建 alpha 通道，它决定了该层的可见性。遮罩中白色表示不会遮盖，黑色则表示完全遮盖，灰色则根据其亮度决定层的不透明度。</p>
-<p><a id="REFLECTION_LAYER_TRANS_BRIGHTNESS" name="REFLECTION_LAYER_TRANS_BRIGHTNESS"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_BRIGHTNESS","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","数量","REFLECTION_LAYER_TRANS_BRIGHTNESS"--><span class="c4d_id">数量</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_TRANS_BRIGHTNESS" name="REFLECTION_LAYER_TRANS_BRIGHTNESS"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_TRANS_BRIGHTNESS","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","数量","REFLECTION_LAYER_TRANS_BRIGHTNESS"-->
+	<span class="c4d_id">数量</span> <span class="range">[0..100%]</span></p>
 <p>使用该设置来调整通道颜色的亮度。<span class="command">亮度</span>可以看作是一个乘数，并且可以设为大于<span class="command">100%</span>。</p>
-<p><a id="REFLECTION_LAYER_TRANS_COLOR" name="REFLECTION_LAYER_TRANS_COLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_COLOR","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","颜色","REFLECTION_LAYER_TRANS_COLOR"--><span class="c4d_id">颜色</span></p>
+<p><a id="REFLECTION_LAYER_TRANS_COLOR" name="REFLECTION_LAYER_TRANS_COLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_TRANS_COLOR","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","颜色","REFLECTION_LAYER_TRANS_COLOR"-->
+	<span class="c4d_id">颜色</span></p>
 <p>这项设置用来定义 alpha 的颜色。默认颜色是白色，表示完全显示反射层，不会改变其颜色。 </p>
-<p><a id="REFLECTION_LAYER_TRANS_TEXTURE" name="REFLECTION_LAYER_TRANS_TEXTURE"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_TEXTURE","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_TRANS_TEXTURE"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_TRANS_TEXTURE" name="REFLECTION_LAYER_TRANS_TEXTURE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_TRANS_TEXTURE","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_TRANS_TEXTURE"-->
+	<span class="c4d_id">纹理</span></p>
 <p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
-<p><a id="REFLECTION_LAYER_TRANS_MIX_MODE" name="REFLECTION_LAYER_TRANS_MIX_MODE"></a> <!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_MODE","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","混合模式","REFLECTION_LAYER_TRANS_MIX_MODE"--><span class="c4d_id">混合模式</span></p>
+<p><a id="REFLECTION_LAYER_TRANS_MIX_MODE" name="REFLECTION_LAYER_TRANS_MIX_MODE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_MODE","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","混合模式","REFLECTION_LAYER_TRANS_MIX_MODE"-->
+	<span class="c4d_id">混合模式</span></p>
 <p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。不是所有通道都有混合模式。如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
 <p><a id="REFLECTION_LAYER_TRANS_MIX_STRENGTH" name="REFLECTION_LAYER_TRANS_MIX_STRENGTH"></a>
 	<!--AM_JUMP "REFLECTION_LAYER_TRANS_MIX_STRENGTH","REFLECTION_LAYER_TRANS_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -325,7 +493,7 @@
 	<span class="c4d_id">划痕</span></p>
 <p><div class="image_full" style="max-width:1400px"><img  src="../pics/038278.jpg"  >
 	<span class="caption"><span class="command">平面</span>和<span class="command">放射</span>模式下的主级和次级划痕。</span></div></p>
-<p>Besides anisotropic microscopic scratches that can uniformly deform specular highlights/reflections, additional, even larger ridges can also be defined. There are primary ridges that run parallel to the microscopic scratches and secondary ridges (these make less sense in conjunction with <span class="command">重投射</span> <span class="command_value">放射</span>) that run in a perpendicular direction. Both ridge types can be applied simultaneously, as shown at the top right of the image above.</p>
+<p>除了各向异性的微观划痕会改变高光和反射的外观，较大的凸起也会产生类似的效果。主级凸起与划痕的方向平行，而次级凸起与划痕方向垂直（当<span class="command">重投射</span>设置为 <span class="command_value">放射</span>时不应该使用次级凸起）。你可以同时使用两种凸起类型，如上面右上角中所示。</p>
 <p><a id="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL" name="REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"></a>
 	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","各向异性","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYREAL"-->
@@ -334,7 +502,7 @@
 	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ANISOTROPYLINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p>Use this value to define the over strength of the anisotropy effect. A value of <span class="command_value">0%</span> will disable the effect.</p>
+<p>该数值决定了各向异性效果的强度，当设为 <span class="command_value">0%</span> 时表示不产生效果。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL" name="REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL"></a>
 	<!--AM_JUMP "REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -345,8 +513,8 @@
 	<!--INDEX "8","纹理","REFLECTION_LAYER_ANISO_VALUE_ORIENTATIONLINK"-->
 	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:850px"><img  src="../pics/038279.jpg"  >
-	<span class="caption">Various <span class="command">方向</span> values. Note the changes at the marked locations.</span></div></p>
-<p>This setting is a little more difficult to comprehend than the others. It regulates a property that does not actually exist in the real world: it rotates the vector tangent scratches mentioned <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#rep" target="">above</a>. What effect does this have? It changes the reflective behavior. This makes it possible to fine-tune the anisotropy effect without having to change the position of the light source.</p>
+	<span class="caption">不同的<span class="command">方向</span>数值，注意箭头处的变化。</span></div></p>
+<p>相比其他设置，这项设置理解起来有点困难。它规定了一种在真实世界中并不存在的属性：在<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#rep" target="">上面</a>提到的矢量切线划痕的旋转角度，它会影响反射的外观效果。你可以利用它来微调各向异性效果而不用改变光源的位置。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL"></a>
 	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_AMPLITUDEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -427,120 +595,301 @@
 <p> </p>
 <p>Cloth is most often made of yarn (and this in turn from fibers) that are woven to create a certain pattern. They are made up of structured surfaces that produce characteristic anisotropic specular highlights/reflections. This is why Cinema 4D has its own cloth mode - <span class="command_value">Irawan（织物）</span> - which can be selected in the <span class="command">类型</span> menu.</p>
 <p>The material channel Color can be disabled in conjunction with this mode.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_PRESET" name="REFLECTION_LAYER_CLOTH_PRESET"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_PRESET","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","预置","REFLECTION_LAYER_CLOTH_PRESET"--><span class="c4d_id">预置</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_PRESET" name="REFLECTION_LAYER_CLOTH_PRESET"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_PRESET","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","预置","REFLECTION_LAYER_CLOTH_PRESET"-->
+	<span class="c4d_id">预置</span></p>
 <p>Here you will find a selection of presets with pre-defined values for each respective weave pattern.</p>
 <p>The following presets are available:</p>
-<p><div class="image_full" style="max-width:1236px"><img  src="../pics/038282.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1236px"><img  src="../pics/038282.jpg"  >
+	<span class="caption"></span></div></p>
 <p>If a preset’s settings are changed, it will automatically switch to <span class="command_value">Custom</span> mode.</p>
 <p><a id="KETT" name="KETT"></a></p>
-<p><a id="REFLECTION_LAYER_CLOTH_PATTERN" name="REFLECTION_LAYER_CLOTH_PATTERN"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_PATTERN","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","图案模式","REFLECTION_LAYER_CLOTH_PATTERN"--><span class="c4d_id">图案模式</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_PATTERN" name="REFLECTION_LAYER_CLOTH_PATTERN"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_PATTERN","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","图案模式","REFLECTION_LAYER_CLOTH_PATTERN"-->
+	<span class="c4d_id">图案模式</span></p>
 <p>Woven cloth is made up of various warp and weft threads that are woven perpendicular to each other. When viewed close up, the Cinema 4D weave patterns look like this:</p>
 <p><div class="image_full" style="max-width:3554px"><img  src="../pics/038283.jpg"  ><span class="caption">Various weave patterns. Warp and weft patterns in dark and light gray.</span></div></p>
 <p>When viewed from a distance, these structures blend to form a characteristic cloth, which looks slightly differently, depending on the angle from which it is viewed. This isn’t surprising considering the fact that, in reality, warp and weft threads are made up of different yarn with different reflective properties. Polyester: for example, lining is made of very shiny elements that lie perpendicular to each other and have strong reflective properties (as can be seen at the far right of the image above).</p>
-<p><a id="REFLECTION_LAYER_CLOTH_QUALITY" name="REFLECTION_LAYER_CLOTH_QUALITY"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_QUALITY","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","品质","REFLECTION_LAYER_CLOTH_QUALITY"--><span class="c4d_id">品质</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_QUALITY" name="REFLECTION_LAYER_CLOTH_QUALITY"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_QUALITY","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","品质","REFLECTION_LAYER_CLOTH_QUALITY"-->
+	<span class="c4d_id">品质</span></p>
 <p>Internally, the reflective behavior of the weave pattern is treated like a procedural texture with a strong noise property (analog to the Noise shader, this would reflect a small scale value). When rendered, this texture will be evaluated using various small samples. The three quality levels available here are used to adjust the sample count. The effect this has on render quality is minor (although it has a huge effect on render time) if you do not use the <span class="command_value">Low</span> option, which is designed for creating test renderings.</p>
 <p>The better the antialiasing settings, the less the <span class="command">Quality</span> setting will affect render quality.</p>
 <p>The higher the quality, the sharper the cloth structure will be the more the Moiré pattern is reduced.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL" name="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","方向","REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL"--><span class="c4d_id">方向</span> <span class="range">[0..5729.578°]</span><br><a id="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK" name="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL" name="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","方向","REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONREAL"-->
+	<span class="c4d_id">方向</span> <span class="range">[0..5729.578°]</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK" name="REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_ORIENTATIONLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p>This setting can be used to rotate the cloth structure (rotational axis U/V=0/0). For example, if a pant leg’s pattern lies perpendicular to the leg, this setting can be used to correct this state. Depending on the weave pattern, even small modifications (e.g., 10°) can have a major effect on the rendered result. It’s a good idea to experiment with this setting a little.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","缩放 U","REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL"--><span class="c4d_id">缩放 U</span> <span class="range">[0..100000%]</span><br><a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","缩放 V","REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL"--><span class="c4d_id">缩放 V</span> <span class="range">[0..100000%]</span><br><a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:1800px"><img  src="../pics/038284.jpg"  ><span class="caption">Increasing <span class="command">Scale</span> values from left to right (polyester lining).</span></div></p>
+<p><a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","缩放 U","REFLECTION_LAYER_CLOTH_VALUE_SCALE_UREAL"-->
+	<span class="c4d_id">缩放 U</span> <span class="range">[0..100000%]</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","缩放 V","REFLECTION_LAYER_CLOTH_VALUE_SCALE_VREAL"-->
+	<span class="c4d_id">缩放 V</span> <span class="range">[0..100000%]</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_SCALE_ULINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK" name="REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_SCALE_VLINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:1800px"><img  src="../pics/038284.jpg"  >
+	<span class="caption">Increasing <span class="command">Scale</span> values from left to right (polyester lining).</span></div></p>
 <p>These settings can be used to vary the cloth structure in U and V directions. Normally, the scale values should be the same in both directions to correctly reproduce the cloth’s structure. However, these values can also be made to differ in order to achieve a special look.</p>
 <p>Note that very large values will produce correspondingly unrealistic-looking results.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL" name="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","高光宽度","REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL"--><span class="c4d_id">高光宽度</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK" name="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:705px"><img  src="../pics/038285.jpg"  ><span class="caption">Increasing <span class="command">Highlights</span> values from left to right.</span></div></p>
+<p><a id="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL" name="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","高光宽度","REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSREAL"-->
+	<span class="c4d_id">高光宽度</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK" name="REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_VALUE_HIGHLIGHTSLINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:705px"><img  src="../pics/038285.jpg"  >
+	<span class="caption">Increasing <span class="command">Highlights</span> values from left to right.</span></div></p>
 <p>The <span class="command">Highlightt Width</span> setting defines the ‘width’ of the specular highlight/reflection. Smaller values produce sharp, bright highlights on individual threads; larger values will soften the highlights accordingly (they will become correspondingly darker and more expansive).</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","径向漫射","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR"--><span class="c4d_id">径向漫射</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纬向漫射","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR"--><span class="c4d_id">纬向漫射</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","径向高光","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR"--><span class="c4d_id">径向高光</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纬向高光","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR"--><span class="c4d_id">纬向高光</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","径向漫射","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPCOLOR"-->
+	<span class="c4d_id">径向漫射</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纬向漫射","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTCOLOR"-->
+	<span class="c4d_id">纬向漫射</span><br><a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","径向高光","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPCOLOR"-->
+	<span class="c4d_id">径向高光</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纬向高光","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTCOLOR"-->
+	<span class="c4d_id">纬向高光</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WARPLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK" name="REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_DIFFUSE_WEFTLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WARPLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK" name="REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_CLOTH_COLOR_SPECULAR_WEFTLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:1095px"><img  src="../pics/038287.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
 <p>These color settings can be used to define separate diffuse and specular colors for the warp and weft threads (see <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#kett" target="">Cloth Pattern</a>).</p>
 <p>Make sure that the specular color is always brighter than the diffuse color and that they have a similar tone. A shader or bitmap can be loaded into the <span class="command">Texture</span> field to define the color. Note that the texture will be multiplied with the respective color. If you only want to use the texture to define the color, then set the color for that setting to white.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_SMOOTHING" name="REFLECTION_LAYER_CLOTH_SMOOTHING"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_SMOOTHING","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","平滑","REFLECTION_LAYER_CLOTH_SMOOTHING"--><span class="c4d_id">平滑</span> <span class="range">[0..100%]</span></p>
-<p><div class="image_full" style="max-width:1692px"><img  src="../pics/038289.jpg"  ><span class="caption">Increasing <span class="command">Smoothing</span> value from left to right.</span></div></p>
+<p><a id="REFLECTION_LAYER_CLOTH_SMOOTHING" name="REFLECTION_LAYER_CLOTH_SMOOTHING"></a>
+	 <!--AM_JUMP "REFLECTION_LAYER_CLOTH_SMOOTHING","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	 <!--INDEX "8","平滑","REFLECTION_LAYER_CLOTH_SMOOTHING"-->
+	 <span class="c4d_id">平滑</span> <span class="range">[0..100%]</span></p>
+<p><div class="image_full" style="max-width:1692px"><img  src="../pics/038289.jpg"  >
+	<span class="caption">Increasing <span class="command">Smoothing</span> value from left to right.</span></div></p>
 <p>This setting is for use with the <span class="command_value">Polyester</span> and <span class="command_value">Silk</span> <span class="command">Pattern</span> options only. Generally speaking, the anisotropic specular highlight becomes more blurred - but brighter - with increasing values.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM" name="REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","散射 - 均匀","REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM"--><span class="c4d_id">散射 - 均匀</span> <span class="range">[0..0.1]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM" name="REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","散射 - 均匀","REFLECTION_LAYER_CLOTH_SCATTERING_UNIFORM"-->
+	<span class="c4d_id">散射 - 均匀</span> <span class="range">[0..0.1]</span></p>
 <p>This setting defines the overall specular/反射强度. The larger the value, the brighter/more reflective the cloth will be.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD" name="REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","散射 - 向前","REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD"--><span class="c4d_id">散射 - 向前</span> <span class="range">[0..10]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD" name="REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","散射 - 向前","REFLECTION_LAYER_CLOTH_SCATTERING_FORWARD"-->
+	
+	<span class="c4d_id">散射 - 向前</span> <span class="range">[0..10]</span></p>
 <p>This setting can also be used to adjust specular/highlight strength - but larger values will produce correspondingly smaller effects. More importantly, this setting primarily affects the bright regions of the yarn’s specular highlight and the darker regions will hardly be affected.</p>
 <p><a id="hl_13" name="hl_13"></a><!--INDEX "3","噪点","hl_13"--><p><span class="HL_1">噪点</span></p>
 <p><div class="image_full" style="max-width:1428px"><img  src="../pics/038288.jpg"  ><span class="caption">Various Noise effects (insert: greatly enlarged view).</span></div></p>
 <p>Since just about every cloth has irregularities in its threads and its weave, Cinema 4D offers 3 <span class="command">Noise</span> methods that can be used to simulate such irregularities in cloth:<ul></p>
 <p><li> Yarn color using <span class="command">噪点强度</span></li><li> Shape/orientation of the warp thread’s specular highlight using <span class="command">纱线噪点（径向）</span></li><li> Shape/orientation of the weft thread’s specular highlight using <span class="command">纱线噪点（纬向）</span></li></ul><p></p>
-<p><a id="REFLECTION_LAYER_CLOTH_NOISE_INTENSITY" name="REFLECTION_LAYER_CLOTH_NOISE_INTENSITY"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_INTENSITY","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","噪点强度","REFLECTION_LAYER_CLOTH_NOISE_INTENSITY"--><span class="c4d_id">噪点强度</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_NOISE_INTENSITY" name="REFLECTION_LAYER_CLOTH_NOISE_INTENSITY"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_INTENSITY","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","噪点强度","REFLECTION_LAYER_CLOTH_NOISE_INTENSITY"-->
+	<span class="c4d_id">噪点强度</span> <span class="range">[0..100%]</span></p>
 <p>This setting is used to define the strength of the noise applied to the yarn’s color (the thread color will be brightened and darkened in other regions).</p>
-<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SCALE" name="REFLECTION_LAYER_CLOTH_NOISE_SCALE"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SCALE","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","噪点缩放","REFLECTION_LAYER_CLOTH_NOISE_SCALE"--><span class="c4d_id">噪点缩放</span> <span class="range">[0..1000%]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SCALE" name="REFLECTION_LAYER_CLOTH_NOISE_SCALE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SCALE","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","噪点缩放","REFLECTION_LAYER_CLOTH_NOISE_SCALE"-->
+	<span class="c4d_id">噪点缩放</span> <span class="range">[0..1000%]</span></p>
 <p>This setting is used to define the scale of the noise applied to the yarn’s color. Note that very large values can be used, which will produce a correspondingly spotty cloth.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纱线噪点（径向）","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP"--><span class="c4d_id">纱线噪点（径向）</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纱线噪点（纬向）","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT"--><span class="c4d_id">纱线噪点（纬向）</span> <span class="range">[0..100%]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纱线噪点（径向）","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WARP"-->
+	<span class="c4d_id">纱线噪点（径向）</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纱线噪点（纬向）","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_WEFT"-->
+	<span class="c4d_id">纱线噪点（纬向）</span> <span class="range">[0..100%]</span></p>
 <p>These settings are used to define the strength with which the internal noise affects the shape and size of the specular highlight (see also image above). The larger the value, the greater the deviation from the parallel thread position and the more the look of the cloth will change - e.g., from a silky surface to a rough canvas-type surface.</p>
-<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE"></a> <!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纱线噪点缩放","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE"--><span class="c4d_id">纱线噪点缩放</span> <span class="range">[0..1000%]</span></p>
+<p><a id="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE" name="REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纱线噪点缩放","REFLECTION_LAYER_CLOTH_NOISE_SHAPE_SCALE"-->
+	<span class="c4d_id">纱线噪点缩放</span> <span class="range">[0..1000%]</span></p>
 <p>This setting is used to define the scale of the noise effect. The smaller the value, the faster the deviation from the optimal shape will be. Larger values will slow deviation correspondingly, exactly like scaling a Noise shader.</p>
 <p><a id="FRESNEL" name="FRESNEL"></a></p>
-<p><a id="hl_14" name="hl_14"></a><!--INDEX "3","层菲涅耳","hl_14"--><p><span class="HL_2">层菲涅耳</span></p>
+<p><a id="hl_14" name="hl_14"></a>
+	<!--INDEX "3","层菲涅耳","hl_14"-->
+	<p><span class="HL_2">层菲涅耳</span></p>
 <p><div class="image_full" style="max-width:1044px"><img  src="../pics/038290.jpg"  ><span class="caption"></span></div></p>
 <p>These setting are used to define the degree to which the reflection will increase as the surface normals increase their angle to the surface, which is referred to as Fresnel reflection, which should already be familiar to you from the <a href="XSLAFRESNEL-ID_SHADERPROPERTIES.html" target="">Fresnel-Shader</a> section, which principally works the same.</p>
 <p>Make sure that the reflectance strength is greater than 0. Otherwise no Fresnel effect will appear.</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_MODE" name="REFLECTION_LAYER_FRESNEL_MODE"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_MODE","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","菲涅耳","REFLECTION_LAYER_FRESNEL_MODE"--><span class="c4d_id">菲涅耳</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_MODE" name="REFLECTION_LAYER_FRESNEL_MODE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_MODE","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","菲涅耳","REFLECTION_LAYER_FRESNEL_MODE"-->
+	<span class="c4d_id">菲涅耳</span></p>
 <p>You can select from:<ul></p>
 <p><li> <span class="command">Dielectric</span> for transparent materials such as glass, water, clear coat lacquer, etc.</li>
 <li> <span class="command">Conductor</span> for 不透明, reflective materials such as metal, minerals, etc.</li></ul><p></p>
 <p>Make sure that the material channel Color is disabled for more realistic-looking results. Metal surfaces use reflections almost exclusively.</p>
 <p>A series of presets (primarily for metals) is integrated that are based on real-world values. These cannot be modified individually using the Fresnel settings described below.</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_PRESET" name="REFLECTION_LAYER_FRESNEL_PRESET"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_PRESET","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","预置","REFLECTION_LAYER_FRESNEL_PRESET"--><span class="c4d_id">预置</span><br><a id="REFLECTION_LAYER_FRESNEL_METAL" name="REFLECTION_LAYER_FRESNEL_METAL"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_METAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","预置","REFLECTION_LAYER_FRESNEL_METAL"--><span class="c4d_id">预置</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_PRESET" name="REFLECTION_LAYER_FRESNEL_PRESET"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_PRESET","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","预置","REFLECTION_LAYER_FRESNEL_PRESET"-->
+	<span class="c4d_id">预置</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_METAL" name="REFLECTION_LAYER_FRESNEL_METAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_METAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","预置","REFLECTION_LAYER_FRESNEL_METAL"-->
+	<span class="c4d_id">预置</span></p>
 <p><div class="image_full" style="max-width:1000px"><img  src="../pics/038292.jpg"  ><span class="caption">Example: a selection of <span class="command">Conductor</span> presets.</span></div></p>
 <p>Different materials will be made available for selection depending on the <span class="command">Fresnel</span> mode selected. Select <span class="command_value">Custom</span> if you want to modify the settings yourself.</p>
 <p>Note that the <span class="command">Conductor</span> presets will affect the internal color system (the 层颜色 (层颜色) should be 100% white!).</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","强度","REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL"--><span class="c4d_id">强度</span> <span class="range">[0..100%]</span><br><a id="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK"--><span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:3341px"><img  src="../pics/038293.jpg"  ><span class="caption">Increasing <span class="command">强度</span> values for <span class="command_value">Dielectric</span> and <span class="command_value">Conductor</span> (copper).</span></div></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","强度","REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHREAL"-->
+	<span class="c4d_id">强度</span> <span class="range">[0..100%]</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK"-->
+	<span class="c4d_id">纹理</span></p>
+<p><div class="image_full" style="max-width:3341px"><img  src="../pics/038293.jpg"  >
+	<span class="caption">Increasing <span class="command">强度</span> values for <span class="command_value">Dielectric</span> and <span class="command_value">Conductor</span> (copper).</span></div></p>
 <p>The <span class="command">Strength</span> setting is used to define the reflections strength between <span class="command_value">0%</span> and <span class="command_value">100%</span>.</p>
 <p>The <span class="command">纹理</span> setting can be used to apply the previously described setting to an entire texture. The grayscale values of the texture loaded here control the setting as follows: white represents the setting’s full value and black = <span class="command_value">0</span>. In-between gray values have a corresponding effect.</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_IORREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","折射率（IOR）","REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"--><span class="c4d_id">折射率（IOR）</span> <span class="range">[1..100]</span><br><a id="REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","折射率（IOR）","REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL"--><span class="c4d_id">折射率（IOR）</span> <span class="range">[0..100]</span><br><a id="REFLECTION_LAYER_FRESNEL_VALUE_IORLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_IORLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_IORLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_IORLINK"--><span class="c4d_id">纹理</span><br><a id="REFLECTION_LAYER_FRESNEL_VALUE_ETALINK" name="REFLECTION_LAYER_FRESNEL_VALUE_ETALINK"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ETALINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ETALINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_IORREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","折射率（IOR）","REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"-->
+	<span class="c4d_id">折射率（IOR）</span> <span class="range">[1..100]</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","折射率（IOR）","REFLECTION_LAYER_FRESNEL_VALUE_ETAREAL"-->
+	<span class="c4d_id">折射率（IOR）</span> <span class="range">[0..100]</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_VALUE_IORLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_IORLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_IORLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_IORLINK"-->
+	<span class="c4d_id">纹理</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_VALUE_ETALINK" name="REFLECTION_LAYER_FRESNEL_VALUE_ETALINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ETALINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ETALINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:3341px"><img  src="../pics/038294.jpg"  ><span class="caption">Increasing <span class="command">折射率（IOR）</span> values (dielectric material) from left to right.</span></div></p>
 <p>The IOR is mentioned mainly in conjunction with refractive light effects but it is also a measure for the angle of incidence for a material’s light reflections (regardless if it’s transparent or 不透明). As you can see in the image above, low values cause the material to reflect almost exclusively in regions at which the camera’s angle of view is extremely low. Larger values cause the reflection to move correspondingly more to the frontal regions.</p>
 <p>The <span class="command_value">Conductor</span> mode behaves similarly (however, the increase in reflection that corresponds to the increased IOR is not linear because it is also affected by the <span class="command">吸收</span> value; it is recommended that you use the preset values to achieve a higher degree of realism) but the reflections are generally much more pronounced.</p>
 <p>The <span class="command">Strength</span> slider can be used to seamlessly move from reflection (<span class="command_value">0%</span>) to full Fresnel reflection (<span class="command_value">100%</span>).</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_INVERTED" name="REFLECTION_LAYER_FRESNEL_INVERTED"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_INVERTED","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","反向","REFLECTION_LAYER_FRESNEL_INVERTED"--><span class="c4d_id">反向</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_INVERTED" name="REFLECTION_LAYER_FRESNEL_INVERTED"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_INVERTED","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","反向","REFLECTION_LAYER_FRESNEL_INVERTED"-->
+	<span class="c4d_id">反向</span></p>
 <p>Enable this option to invert the Fresnel reflection. Example (on a sphere): the maximum reflection that is normally at the sphere’s center will be switched to its edges.</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_OPAQUE" name="REFLECTION_LAYER_FRESNEL_OPAQUE"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_OPAQUE","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","不透明","REFLECTION_LAYER_FRESNEL_OPAQUE"--><span class="c4d_id">不透明</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_OPAQUE" name="REFLECTION_LAYER_FRESNEL_OPAQUE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_OPAQUE","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","不透明","REFLECTION_LAYER_FRESNEL_OPAQUE"-->
+	<span class="c4d_id">不透明</span></p>
 <p><div class="image_full" style="max-width:400px"><img  src="../pics/038295.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
 <p>In some cases you might want to prevent the Fresnel effect from neighboring surfaces from affecting a given object. In the image above, a reflective surface with an alpha map lies on top of a red, diffuse layer. The <span class="command">不透明</span> option is disabled at the left: note how the red color from the underlying layer shines through while it is blocked on the right side of the image where the <span class="command">不透明</span> option is enabled.</p>
-<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","吸收","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"--><span class="c4d_id">吸收</span> <span class="range">[0..100]</span><br><a id="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK"></a> <!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK"--><span class="c4d_id">纹理</span></p>
+<p><a id="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","吸收","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"-->
+	<span class="c4d_id">吸收</span> <span class="range">[0..100]</span><br>
+	<a id="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK" name="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK"-->
+	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:3062px"><img  src="../pics/038296.jpg"  ><span class="caption">The <span class="command">吸收</span> effect in conjunction with <span class="command">粗糙度</span> (IOR = 2.97).</span></div></p>
 <p>This setting is only available for the <span class="command">Conductor</span> mode. Increasing values will produce correspondingly stronger overall reflections. This setting can be used to fine-tune the degree of reflection.</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="SAMPLING" name="SAMPLING"></a></p>
-<p><a id="hl_15" name="hl_15"></a><!--INDEX "3","层采样","hl_15"--><p><span class="HL_2">层采样</span></p>
-<p><a id="REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT" name="REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","采样细分","REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT"--><span class="c4d_id">采样细分</span> <span class="range">[0..16]</span></p>
+<p><a id="hl_15" name="hl_15"></a>
+	<!--INDEX "3","层采样","hl_15"-->
+	<p><span class="HL_2">层采样</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT" name="REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","采样细分","REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT"-->
+	<span class="c4d_id">采样细分</span> <span class="range">[0..16]</span></p>
 <p>This setting is designed for use with the Standard Renderer only (i.e., not the Physical Renderer). It can be used to define the quality of matte reflections.</p>
 <p>Larger values will slow rendering and increase quality correspondingly.</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_CLAMP" name="REFLECTION_LAYER_SAMPLING_CLAMP"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CLAMP","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","限制次级","REFLECTION_LAYER_SAMPLING_CLAMP"--><span class="c4d_id">限制次级</span> <span class="range">[0..100]</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_CLAMP" name="REFLECTION_LAYER_SAMPLING_CLAMP"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CLAMP","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","限制次级","REFLECTION_LAYER_SAMPLING_CLAMP"-->
+	<span class="c4d_id">限制次级</span> <span class="range">[0..100]</span></p>
 <p>It can occur that a reflected HDR image/sky can produce extremely bright points (fireflies) on a third object - i.e., a reflection of a reflection. To prevent the sampling settings from being increased dramatically, this setting can be used to limit the intensity of this reflection. The higher the value, the more the intensity of the reflection will be restricted, thus reducing this effect.</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_CUTOFF" name="REFLECTION_LAYER_SAMPLING_CUTOFF"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CUTOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","切断","REFLECTION_LAYER_SAMPLING_CUTOFF"--><span class="c4d_id">切断</span> <span class="range">[0..1]</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_CUTOFF" name="REFLECTION_LAYER_SAMPLING_CUTOFF"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CUTOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","切断","REFLECTION_LAYER_SAMPLING_CUTOFF"-->
+	<span class="c4d_id">切断</span> <span class="range">[0..1]</span></p>
 <p>This is a threshold value that defines the degree to which weak reflections will be calculated, if at all. Let’s say you have a Project with numerous reflective objects. An object at the rear of the image that is reflected in a small object near the front can be omitted because its role in the overall image is so small. The smaller this value is, the more reflections that will be ignored. The image below is an example of how this setting can be applied (the very bright HDR image helps make the effect more pronounced):</p>
 <p><div class="image_full" style="max-width:660px"><img  src="../pics/038297.jpg"  ><span class="caption">If the effect at the top left takes place, then the <span class="command">切断</span> value needs to be reduced.</span></div></p>
 <p>A sphere with a Fresnel reflection reflects a HDRI sky. The <span class="command">切断</span> value on the left is too large; the corrected value is on the right.</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_EXIT_COLOR" name="REFLECTION_LAYER_SAMPLING_EXIT_COLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_EXIT_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","出口颜色","REFLECTION_LAYER_SAMPLING_EXIT_COLOR"--><span class="c4d_id">出口颜色</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_EXIT_COLOR" name="REFLECTION_LAYER_SAMPLING_EXIT_COLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_EXIT_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","出口颜色","REFLECTION_LAYER_SAMPLING_EXIT_COLOR"-->
+	<span class="c4d_id">出口颜色</span></p>
 <p><div class="image_full" style="max-width:1176px"><img  src="../pics/038298.jpg"  ><span class="caption">A fitting 出口颜色 is used to create a realistic-looking result without increasing the diffuse depth.</span></div></p>
 <p>A reflection depth can be defined in the Preferences menu that defines the number of reflections that should take place. For example, if you have two mirrors facing each other, this setting can be used to limit the number of reflections that take place. Otherwise an endless number of reflections would be rendered with a more-or-less endless amount of render time. The <span class="command">出口颜色</span> setting defines the color the reflection should assume in the end. In previous versions of Cinema 4D, this was black by default. However, as you can see in the image above, this produced unwanted black spots. This can be avoided if a fitting color is defined for the last reflection, as can be seen in the image above).</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS" name="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SEPARATE_PASS","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","分离通道","REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"--><span class="c4d_id">分离通道</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS" name="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SEPARATE_PASS","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","分离通道","REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"-->
+	<span class="c4d_id">分离通道</span></p>
 <p>Reflections can be split for Multi-Pass rendering so that only certain materials are output in 分离通道. To do so, this option must be enabled (details can be found <a href="ZMULTIPASS-MULTIPASSOBJECT_REFLECTIONDATA.html" target="">here</a>).</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_DIM" name="REFLECTION_LAYER_SAMPLING_DIM"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","距离减淡","REFLECTION_LAYER_SAMPLING_DIM"--><span class="c4d_id">距离减淡</span><br><a id="REFLECTION_LAYER_SAMPLING_DIM_DISTANCE" name="REFLECTION_LAYER_SAMPLING_DIM_DISTANCE"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_DISTANCE","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","距离","REFLECTION_LAYER_SAMPLING_DIM_DISTANCE"--><span class="c4d_id">距离</span> <span class="range">[0..10000000m]</span><br><a id="REFLECTION_LAYER_SAMPLING_DIM_FALLOFF" name="REFLECTION_LAYER_SAMPLING_DIM_FALLOFF"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_FALLOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","衰减","REFLECTION_LAYER_SAMPLING_DIM_FALLOFF"--><span class="c4d_id">衰减</span> <span class="range">[-1..1]</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_DIM" name="REFLECTION_LAYER_SAMPLING_DIM"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","距离减淡","REFLECTION_LAYER_SAMPLING_DIM"-->
+	<span class="c4d_id">距离减淡</span><br>
+	<a id="REFLECTION_LAYER_SAMPLING_DIM_DISTANCE" name="REFLECTION_LAYER_SAMPLING_DIM_DISTANCE"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_DISTANCE","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","距离","REFLECTION_LAYER_SAMPLING_DIM_DISTANCE"-->
+	<span class="c4d_id">距离</span> <span class="range">[0..10000000m]</span><br>
+	<a id="REFLECTION_LAYER_SAMPLING_DIM_FALLOFF" name="REFLECTION_LAYER_SAMPLING_DIM_FALLOFF"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_FALLOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","衰减","REFLECTION_LAYER_SAMPLING_DIM_FALLOFF"-->
+	<span class="c4d_id">衰减</span> <span class="range">[-1..1]</span></p>
 <p><div class="image_full" style="max-width:746px"><img  src="../pics/038299.jpg"  ><span class="caption">Left without, right with 距离减淡</span></div></p>
 <p>Contrary to what the real world, this setting can be used to omit objects from a material’s reflection depending on their distance from that material. If <span class="command">距离减淡</span> is disabled, all objects will be reflected. If enabled, the <span class="command">Distance</span> value defines the distance at which an object will no longer be reflected. The reflection falloff up to the <span class="command">Distance</span> value is defined using the <span class="command">衰减</span> value. A value of <span class="command_value">0</span> produces a linear falloff; other values produce the effects shown in the example above.</p>
 <p>The reflection of the Sky object was disabled because it is considered to be an endless distance away.</p>
-<p><a id="REFLECTION_LAYER_SAMPLING_DIM_COLOR" name="REFLECTION_LAYER_SAMPLING_DIM_COLOR"></a> <!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"--><!--INDEX "8","距离颜色","REFLECTION_LAYER_SAMPLING_DIM_COLOR"--><span class="c4d_id">距离颜色</span></p>
+<p><a id="REFLECTION_LAYER_SAMPLING_DIM_COLOR" name="REFLECTION_LAYER_SAMPLING_DIM_COLOR"></a> 
+	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
+	<!--INDEX "8","距离颜色","REFLECTION_LAYER_SAMPLING_DIM_COLOR"-->
+	<span class="c4d_id">距离颜色</span></p>
 <p>For this setting, imagine a sphere with a <span class="command">Distance</span> radius around the reflective object. This sphere’s color is reflected when the reflection samples are longer than the <span class="command">Distance</span> value defined. Normally, black would be the correct color in this case because it would prevent anything from being reflected. Other colors can be used depending on the intended result.</p>
 <p><a id="TRANS" name="TRANS"></a></p>
-<p><a id="hl_16" name="hl_16"></a><!--INDEX "3","* 透明度 * 标签","hl_16"--><p><span class="HL_1">* 透明度 * 标签</span></p>
-<p><div class="image_full" style="max-width:720px"><img  src="../pics/039458.jpg"  ><span class="caption">The <span class="command">Total Inner Reflection</span> is also part of the Reflectance channel; the Roughness was increased on the right.</span></div></p>
+<p><a id="hl_16" name="hl_16"></a>
+	<!--INDEX "3","* 透明度 * 标签","hl_16"-->
+	<p><span class="HL_1">* 透明度 * 标签</span></p>
+<p><div class="image_full" style="max-width:720px"><img  src="../pics/039458.jpg"  >
+	<span class="caption">The <span class="command">Total Inner Reflection</span> is also part of the Reflectance channel; the Roughness was increased on the right.</span></div></p>
 <p>A <span class="command">* 透明度 *</span> will be added when the material channel <span class="command">透明度</span> is enabled. This tab contains reflection settings, however without Color or Mask settings, among others. The settings in this tab let you control the inner total reflection’s reflective properties (which has not possible prior to R16).</p>
 <p>Normally, these settings do not have to be modified. If you’re not trying to achieve a very unusual effect, these settings can be left as they are.</p>
 <p>This tab cannot be copied or deleted.</p>
-<p><p><div class="hint"><span class="HL_hint">提示：<br></span>The <span class="command">Total Inner Reflection</span> must be enabled in the 透明度 channel and <span class="command">Refraction</span> should be set to <span class="command_value">0</span>.</div></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br>
+</span>The <span class="command">Total Inner Reflection</span> must be enabled in the 透明度 channel and <span class="command">Refraction</span> should be set to <span class="command_value">0</span>.</div></p>
 <p>
 
 </p>
