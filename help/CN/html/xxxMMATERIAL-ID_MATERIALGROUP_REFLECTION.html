@@ -420,7 +420,9 @@
 	<span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
 <p><span class="command">混合强度</span>决定了贴图和颜色的混合比例。</p>
 <p><a id="REP" name="REP"></a></p>
-<p><a id="hl_11" name="hl_11"></a><!--INDEX "3","层各向异性","hl_11"--><p><span class="HL_2">层各向异性</span></p>
+<p><a id="hl_11" name="hl_11"></a>
+	<!--INDEX "3","层各向异性","hl_11"-->
+	<p><span class="HL_2">层各向异性</span></p>
 <p><div class="image_full" style="max-width:1800px"><img  src="../pics/038349.jpg"  ><span class="caption">左图：无各向异性；右图：不同粗糙度设置的各向异性。一个带有 HDR 图像的天空对象用来创造反射环境。</span></div></p>
 <p>各向异性是当许多微小的划痕按照一定的方向排列在物体表面时产生的（如涂刷金属），这时高光和反射会被“拖”到这些划痕的方向上。除了微小的划痕，方向一致的凸起也会造成这样的效果。 </p>
 <p>要创建各向异性效果，需要将<span class="command">类型</span>设置为<span class="command_value">各向异性</span>， <span class="command">粗糙度</span>和<span class="command">各向异性</span>的数值要大于<span class="command_value">0%</span>，还要确认环境中有足够的反射，带有 HDRI 纹理的天空对象就非常适合用作反射环境。为了避免你对<span class="command">各向异性</span>的图案在物体上的投射方式感到困惑：这个过程遵循投射的正常法则。作为测试，可以将<span class="command">划痕</span>设为<span class="command_value">主级</span>，这时在材质编辑器顶部会显示出相应的预览，想象这个预览图被作为纹理进行投射。</p>
@@ -532,8 +534,8 @@
 	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_AMPLITUDELINK"-->
 	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:1400px"><img  src="../pics/038280.jpg"  
-	><span class="caption">Small and large values for amplitude, scale and length.</span></div></p>
-<p>These values are used to define the ridge depth. Note that you can also enter values in excess of <span class="command_value">100%</span> to create very deep ridges.</p>
+	><span class="caption">不同的振幅、缩放和长度。</span></div></p>
+<p>这些参数用来调节凸起的深度。注意，你还可以输入超过 <span class="command_value">100%</span> 的数值来创建更加强烈的效果。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_SCALEREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -551,7 +553,7 @@
 	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_SCALELINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p>这些设置用来设置凸起的宽度。</p>
+<p>这些参数用来设置凸起的宽度。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_LENGTHREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -569,7 +571,7 @@
 	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_LENGTHLINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p>These values are used to define the ridge length. Very high values lead to concentric (radial) or long ridges with a uniform depth (Planar), very small values lead to very short ridges.</p>
+<p>这些参数用来设置凸起的长度。较大的值会产生明显的同心效果（放射）或统一深度的长凸起（平面），较小的值则只会产生小的凸起。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL" name="REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_PRIMARY_VALUE_ATTENUATIONREAL","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
@@ -587,31 +589,32 @@
 	<!--AM_JUMP "REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK","REFLECTION_LAYER_ANISO_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_SECONDARY_VALUE_ATTENUATIONLINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p>These settings are similar to MIP Mapping for calculating ridge patterns based on their distance from the UV dimensions. In essence, they control the smoothing of the ridges. Small values produce more grainy but faster results and larger value produce correspondingly more blurred and slower results. Note that very large values can be entered here.</p>
+<p>这些设置与 MIP 贴图相似，它们基于 UV 坐标来计算凸起的图案，可以用来控制凸起的光滑程度。较小的值会产生很多颗粒，但是渲染速度较快；而较大的值会相应地产生更模糊的，也更慢的结果。注意，这里可以输入非常大的值。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="TEXTIL" name="TEXTIL"></a></p>
 <p><a id="hl_12" name="hl_12"></a><!--INDEX "3","层布料","hl_12"--><p><span class="HL_2">层布料</span></p>
 <p><div class="image_full" style="max-width:1054px"><img  src="../pics/038281.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
-<p>Cloth is most often made of yarn (and this in turn from fibers) that are woven to create a certain pattern. They are made up of structured surfaces that produce characteristic anisotropic specular highlights/reflections. This is why Cinema 4D has its own cloth mode - <span class="command_value">Irawan（织物）</span> - which can be selected in the <span class="command">类型</span> menu.</p>
-<p>The material channel Color can be disabled in conjunction with this mode.</p>
+<p>布料一般是用纱线（由纤维纺织而成）制作的，它们的表面会由于纺织结构形成一定的图案纹理，有着特征性的各向异性高光和反射。这也就是为什么 CINEMA 4D 有自己的布料类型——<span class="command_value">Irawan（织物）</span>——你可以在<span class="command">类型</span>菜单中选择它。</p>
+<p>在这个模式下不需要使用材质的颜色通道（不是层颜色）。</p>
 <p><a id="REFLECTION_LAYER_CLOTH_PRESET" name="REFLECTION_LAYER_CLOTH_PRESET"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_PRESET","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","预置","REFLECTION_LAYER_CLOTH_PRESET"-->
 	<span class="c4d_id">预置</span></p>
-<p>Here you will find a selection of presets with pre-defined values for each respective weave pattern.</p>
-<p>The following presets are available:</p>
+<p>这里包含了一些根据不同编织图案预先设置好参数的预设选项。</p>
+<p>具体如下：</p>
 <p><div class="image_full" style="max-width:1236px"><img  src="../pics/038282.jpg"  >
 	<span class="caption"></span></div></p>
-<p>If a preset’s settings are changed, it will automatically switch to <span class="command_value">Custom</span> mode.</p>
+<p>如果修改了预置的参数，它会自动变成<span class="command_value">自定义</span>模式。</p>
 <p><a id="KETT" name="KETT"></a></p>
 <p><a id="REFLECTION_LAYER_CLOTH_PATTERN" name="REFLECTION_LAYER_CLOTH_PATTERN"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_PATTERN","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","图案模式","REFLECTION_LAYER_CLOTH_PATTERN"-->
 	<span class="c4d_id">图案模式</span></p>
-<p>Woven cloth is made up of various warp and weft threads that are woven perpendicular to each other. When viewed close up, the Cinema 4D weave patterns look like this:</p>
-<p><div class="image_full" style="max-width:3554px"><img  src="../pics/038283.jpg"  ><span class="caption">Various weave patterns. Warp and weft patterns in dark and light gray.</span></div></p>
-<p>When viewed from a distance, these structures blend to form a characteristic cloth, which looks slightly differently, depending on the angle from which it is viewed. This isn’t surprising considering the fact that, in reality, warp and weft threads are made up of different yarn with different reflective properties. Polyester: for example, lining is made of very shiny elements that lie perpendicular to each other and have strong reflective properties (as can be seen at the far right of the image above).</p>
+<p>布料由不同的经线和纬线编织而成，它们相互垂直。仔细观察 CINEMA 4D 的纺织图案，你会发现它们像这样：</p>
+<p><div class="image_full" style="max-width:3554px"><img  src="../pics/038283.jpg"  >
+	<span class="caption">不同的纺织图案，经线和纬线有不同的灰度。</span></div></p>
+<p>在一定距离上观看，这些结构混合成一种布料独特的观感，根据观看角度的不同会产生轻微的区别，这是由于在真实世界中，经纬线是由反射率不同的纱线制成的。例如涤纶，它是由非常光滑的材料制成的，它们相互垂直，并且反射强烈（如上图中最右边的效果所示）。</p>
 <p><a id="REFLECTION_LAYER_CLOTH_QUALITY" name="REFLECTION_LAYER_CLOTH_QUALITY"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_CLOTH_QUALITY","REFLECTION_LAYER_CLOTH_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","品质","REFLECTION_LAYER_CLOTH_QUALITY"-->
