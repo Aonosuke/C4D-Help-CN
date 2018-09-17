@@ -1,44 +1,123 @@
 ---
-layoutdefault
+layout: default
 ---
 
-# C4D-Help-CN 
-This project translates CINEMA 4D help documents into Chinese basing on C4D R18.  
-  
-这个项目是对 CINEMA 4D 程序文档的翻译。  
-本文档基于 CINEMA 4D Studio R18 版本。   
+Text can be **bold**, _italic_, or ~~strikethrough~~.
+
+[Link to another page](./another-page.html).
+
+There should be whitespace between paragraphs.
+
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+
+# Header 1
+
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+## Header 2
+
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
+
+### Header 3
+
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
+```
+
+#### Header 4
+
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+
+##### Header 5
+
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+###### Header 6
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+### There's a horizontal rule below this.
+
+* * *
+
+### Here is an unordered list:
+
+*   Item foo
+*   Item bar
+*   Item baz
+*   Item zip
+
+### And an ordered list:
+
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
+
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
-<!--![Branching](./help/CN/pics/040157.jpg)
+### Definition lists can be used with HTML syntax.
 
-### 覆盖前请先备份原版文件。 
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
 
-帮助文件所在目录：  
-Windows 
-X:\Program Files\MAXON\CINEMA 4D R18\help
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+```
 
-macOS 
-/Applications/MAXON/CINEMA 4D R18/help
-
-将 help/CN 文件夹中的文件拷贝到你的 help 目录下的 US 文件夹中。 
-
-
-配置文件目录：  
-Windows 
-C:\用户\【你的用户名】\AppData\Roaming\MAXON\CINEMA 4D R18_1EBA1188\prefs\help\us
-
-macOS 
-/Users/【你的用户名】/Library/Preferences/MAXON/CINEMA 4D R18_50E4FAD5/prefs/help/us
-
-希望有熟悉 CINEMA 4D 操作的朋友能帮助审校中文文档。
-
-
-### [开始浏览文档](./help/CN/html/1001.html)-->
-
-<!--
-<iframe name="contents" src="help/CN/html/5425.html" style="width: 800px; height: 100%;" frameborder="0" scrolling="no"> </iframe>
-
-
-
-    onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>700?fdh:700)"
--->
+```
+The final element.
+```
