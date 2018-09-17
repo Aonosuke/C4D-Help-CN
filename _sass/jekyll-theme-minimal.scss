@@ -56,7 +56,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:1080px;
+  width:860px;
   margin:0 auto;
 }
 
@@ -105,7 +105,7 @@ img {
 }
 
 header {
-  width:240px;
+  width:270px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -117,14 +117,14 @@ ul.downloads {
   padding:0;
   background: #f4f4f4;
   border-radius:5px;
-  border:0px solid #e0e0e0;
-  width:240px;
+  border:1px solid #e0e0e0;
+  width:270px;
 }
 
 .downloads li {
-  width:240px;
-  float:center;
-  border-right:0px solid #e0e0e0;
+  width:89px;
+  float:left;
+  border-right:1px solid #e0e0e0;
   height:40px;
 }
 
@@ -160,9 +160,9 @@ strong {
   font-weight:700;
 }
 
-.downloads li{
+.downloads li + li + li {
   border-right:none;
-  width:240px;
+  width:89px;
 }
 
 .downloads a strong {
@@ -172,7 +172,7 @@ strong {
 }
 
 section {
-  width:800px;
+  width:500px;
   float:right;
   padding-bottom:50px;
 }
@@ -189,14 +189,14 @@ hr {
 }
 
 footer {
-  width:240px;
+  width:270px;
   float:left;
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-@media print, screen and (max-width: 1080px) {
+@media print, screen and (max-width: 960px) {
 
   div.wrapper {
     width:auto;
@@ -231,7 +231,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 800px) {
+@media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
   }
