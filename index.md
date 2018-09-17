@@ -35,4 +35,8 @@ macOS
 
 ### [开始浏览文档](./help/CN/html/1001.html)-->
 
-<iframe name="content" src="help/CN/html/5425.html" width="700" onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>700?fdh:700)" frameborder="0" scrolling="no"> </iframe>
+<iframe name="contents" src="help/CN/html/5425.html" style="width: 800px; height: 100%;" frameborder="0" scrolling="no"> </iframe>
+
+<!--
+    onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>700?fdh:700)"
+-->
