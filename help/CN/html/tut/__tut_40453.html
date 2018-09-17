@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>使用布尔和实例对象</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40453"-->
+		<!--VATER_ID "40480"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "使用布尔和实例对象"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+  <span class="link_back"><a href="../1000.html" target="_self">Cinema 4D / BodyPaint 3D 程序文档</a></span> 
+  <span class="link_back"><a href="__tut_1002.html" target="_self">教程</a></span> 
+  <span class="link_back"><a href="__tut_40480.html" target="_self">机械建模教程</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","使用布尔和实例对象",""--><p><span class="HL_group">使用布尔和实例对象</span></p><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","布尔计算基础","hl_1"--><p><span class="HL_1">布尔计算基础</span></p>
+<p>许多日常物品都可以用基本的圆柱体、球体或立方体创建，但很多时候你会要修剪出一个角、或在一个物体上打一个洞来实现想要的造型，如果你想用多边形工具来做这这些，首先需要将这些参数化的对象转换为可编辑多边形（<nobr><span class="menu">网格 | 转换</span></nobr><a href="../5664.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_12236.png" alt="" height="12" width="12"    border="0"><span class="text_command">转为可编辑对象</span></nobr></a>，或者按键盘上的<span class="command">C</span>键）。转换对象会丢失初始基本几何体的参数，例如可用来交互地给立方体添加圆角或设定球体细分的参数会被丢失。而利用布尔操作（<span class="command">布尔对象</span>），则可以避免转换基本几何体。</p>
+<p><div class="image_full" style="max-width:650px"><img  src="../../pics/tut_02xxxx/__tut_024062.jpg"  ><span class="caption">上图：初始对象。下图：各种布尔操作。</span></div></p>
+<p>在上图的上半部分中，显示的是使用相应布尔操作之前的两个初始对象。下图从左到右：
+	<span class="command_value">A 减 B</span>; 
+	<span class="command_value">A B 交集</span>; 
+	<span class="command_value">A B 补集</span>。剩下的功能是 
+	<span class="command_value">A 加 B</span> 合并两个对象并删除内部多边形（结果看起来跟上图的上半部分很像），操作的结果是由两个对象组成的“外壳” 。</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","实例对象","hl_2"--><p><span class="HL_1">实例对象</span></p>
+<p>布尔并不总是需要用到真实的对象。例如，实例可以作为占位符对象或这个对象组。实例相比复制有一个优点，对原始对象做出的更改也会应用到实例对象上。实例对象可以通过从 <nobr><span class="menu">创建 | 造型</span></nobr> 菜单中选择<a href="../OINSTANCE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5126.png" alt="" height="12" width="12"    border="0"><span class="text_command">实例</span></nobr></a>来单独创建，多个实例可以通过 <nobr><span class="menu">工具 | 环绕对象</span></nobr> 菜单的<a href="../TOOLDUPLICATE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_200000067.png" alt="" height="12" width="12"    border="0"><span class="text_command">复制</span></nobr></a>命令来创建。如果启用了实例参数中的<a href="../OINSTANCE-ID_OBJECTPROPERTIES.html#INSTANCEOBJECT_RENDERINSTANCE" target="_self"><span class="text_id">渲染实例</span></a>选项，对象的实例 — 不是复制 — 会被创建。这样做的好处是实例需要的内存远少于复制，可以渲染复杂的多的场景。例如，使用实例选项,一棵树可以作为一个实例来创建一整片森林，而不会对系统内存带来额外的负担。不过实例对象不能单独地进行修改（例如利用变形器）或用特定的参数单独编辑（使用不同的位置、缩放和旋转）。</p>
+<p>以下案例掩饰了使用布尔对象、基本几何体和实例创建一支铅笔。所有相关对象的属性会保留可编辑状态。</p>
+<p><p><div class="hint"><span class="HL_hint"></span><a href="__tut_40440.html" target="">铅笔建模</a><br></div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>铅笔建模 </title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "40440"-->
+		<!--VATER_ID "40453"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "铅笔建模 "-->
+		<!--APPS "11 16 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+ <span class="link_back"><a href="../1000.html" target="_self">Cinema 4D / BodyPaint 3D 程序文档</a></span> <span class="link_back"><a href="__tut_1002.html" target="_self">教程</a></span> <span class="link_back"><a href="__tut_40480.html" target="_self">机械建模教程</a></span> <span class="link_back"><a href="__tut_40453.html" target="_self">使用布尔和实例对象</a></span>
+
+<div class="in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","铅笔建模 ",""--><p><span class="HL_group">铅笔建模 </span></p><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","铅笔尖建模","hl_1"--><p><span class="HL_1">铅笔尖建模</span></p>
+<p>我们将从铅笔尖的建模开始。铅笔尖接近一个<a href="OCONE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5162.png" alt="" height="12" width="12"    border="0"><span class="text_command">圆锥</span></nobr></a>。在<span class="command">属性管理器</span>的对象标签页，设置<span class="command">顶部半径</span>为<span class="command_value">5</span>、<span class="command">底部半径</span>为<span class="command_value">59</span>、<a href="../OCONE-ID_OBJECTPROPERTIES.html#PRIM_CONE_HEIGHT" target="_self"><span class="text_id">高度</span></a>为<span class="command_value">250</span>。如果你想要创建一个更粗或更长的笔尖可以之后再修改这些数值。<span class="command">圆锥</span>的尖端是朝上的，即沿着 Y 轴的正方向。<span class="command">旋转分段</span>目前被设置为<span class="command_value">36</span>，如果在最终渲染中要给笔尖特写，你也可以增加到<span class="command_value">72</span>。因为我们要修剪圆锥的底部，增加<span class="command_value">旋转分段</span>会让边缘看上去更平滑。<span class="command">高度分段</span>可以设置为<span class="command_value">7</span>或<span class="command_value">8</span>。为了让铅笔尖看上去更真实，勾选<span class="command">封顶</span>标签下的<span class="command_value">封顶</span>选项并把顶部的高度和半径都设置为5。</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","地形对象","hl_2"--><p><span class="HL_1">地形对象</span></p>
+<p>修剪圆锥的底部边缘来制作锯齿状的边缘。首先，从 <nobr><span class="menu">创建 | 对象</span></nobr> 菜单中创建一个<a href="../OFRACTAL.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5169.png" alt="" height="12" width="12"    border="0"><span class="text_command">地形</span></nobr></a>对象。在<span class="command">属性管理器</span>中，勾选<a href="../OFRACTAL-ID_OBJECTPROPERTIES.html#PRIM_FRACTAL_SPHERICAL" target="_self"><span class="text_id">球状</span></a>选项让地形对象闭合。然后缩小<span class="command">地形对象</span>，让圆锥的底部被地形对象完全覆盖（见下图）。要缩放对象，你可以使用图标面板中的缩放工具，点击并拖动对象的手柄，或者在<span class="command">属性管理器</span>中手动输入数值。如果需要的话，沿 Y 轴移动<span class="command">地形对象</span>。当地形对象被正确放置时，只有圆锥的顶部，也就是构成铅笔尖的部分会从顶部冒出来。</p>
+<p><div class="image_full" style="max-width:850px"><img  src="../../pics/tut_02xxxx/__tut_023882.jpg"><span class="caption">按上图设置地形对象的参数。</span></div></p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","组合对象","hl_3"--><p><span class="HL_1">组合对象</span></p>
+<p>从 <nobr><span class="menu">创建 | 对象</span></nobr> 菜单中创建一个<a href="../OCYLINDER.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5170.png" alt="" height="12" width="12"    border="0"><span class="text_command">圆柱</span></nobr></a>几何体并缩放，使其整体长度和宽度比最终的铅笔稍大。你可以设置<a href="../OCYLINDER-ID_OBJECTPROPERTIES.html#PRIM_CYLINDER_RADIUS" target="_self"><span class="text_id">半径</span></a>为<span class="command_value">65</span>、<a href="../OCYLINDER-ID_OBJECTPROPERTIES.html#PRIM_CYLINDER_HEIGHT" target="_self"><span class="text_id">高度</span></a>为<span class="command_value">1800</span>。</p>
+<p>在垂直方向上移动圆柱体，让它的顶部完全位于地形对象内。以上步骤的目的是，我们可以组合这些图形为一个“外壳”，从这些对象的集合中可以创建一个辅助对象。从 <nobr><span class="menu">创建</span></nobr> 菜单中创建一个<a href="../OBOOLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_2/PLUGIN_Cmd_1010865.png" alt="" height="12" width="12"    border="0"><span class="text_command">布尔</span></nobr></a>对象，并将<span class="command">圆柱对象</span>和<span class="command">地形对象</span>作为<span class="command">布尔对象</span>的子对象。在<span class="command">属性管理器</span>中，设置<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_TYPE" target="_self"><span class="text_id">布尔类型</span></a>为 <span class="command_value">A 加 B</span>，这会让两个对象合并为一个单个的对象。所有不需要的内部表面会被自动删除。<a href="#quality" target="_self"><span class="text_id">高质量</span></a>选项是默认开启的。要进一步优化布尔对象上新的点，有需要的话，将多边形和 N-Gons 进行组合，<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_SINGLE_OBJECT" target="_self"><span class="text_id">创建单个对象</span></a>和<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_HIDE_NEW_EDGES" target="_self"><span class="text_id">隐藏新的边</span></a>选项也要启用（见上图）。你应该重命名这个布尔对象（在对象管理器中双击它的名称），让对象整体看上去更有条理，这个名字应该反映对象的功能，例如：布尔（合并）。</p>
+<p><div class="image_full" style="max-width:567px"><img  src="../../pics/tut_02xxxx/__tut_024066.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","减去对象","hl_4"--><p><span class="HL_1">减去对象</span></p>
+<p>要让铅笔尖可见，我们必须从圆锥中去除这个<span class="command">布尔对象</span>。首先，创建一个新的<a href="OBOOLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_2/PLUGIN_Cmd_1010865.png" alt="" height="12" width="12"    border="0"><span class="text_command">布尔</span></nobr></a>对象并设置其布尔类型为 <span class="command_value">A 减 B</span>。字母 "A” （第一个）和 "B” （第二个）表示这个布尔对象的子对象的顺序。因此，要实现预期的结果，圆锥应该是第一个子对象（“A”），而合并的<span class="command">布尔对象</span>是第二个子对象（“B”），否则圆锥对象的底部部分不会被删除。同样重命名这个布尔对象，例如：布尔（笔尖）。</p>
+<p><div class="image_full" style="max-width:595px"><img  src="../../pics/tut_02xxxx/__tut_024067.jpg"  ><span class="caption"></span></div></p>
+<p>笔尖边缘会切成什么样的锯齿取决于<span class="command">地形对象</span>的形状。使用地形对象的<a href="../OFRACTAL-ID_OBJECTPROPERTIES.html#PRIM_FRACTAL_SEED" target="_self"><span class="text_id">随机</span></a>参数（对象标签页）可以修改地形对象的形状，这在一些情况下非常有用，例如当你要创建一些有不同外观的铅笔时。</p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","使用 FFD 对象来自由变形","hl_5"--><p><span class="HL_1">使用 FFD 对象来自由变形</span></p>
+<p>要避免笔尖看起来太整齐，我们可以用一个<a href="" target="_self"><span class="text_command"></span></a> FFD 对象（<nobr><span class="menu">创建 | 变形器</span></nobr>）并将它缩放到比圆锥顶部稍大的尺寸。</p>
+<p><div class="image_full" style="max-width:1157px"><img  src="../../pics/tut_02xxxx/__tut_024068.jpg"  ><span class="caption">沿 Y 轴移动 FFD 对象，如果需要的话，将它与圆锥顶部居中对齐。</span></div></p>
+<p>在<span class="command">对象管理器</span>中，将 <span class="command">FFD 对象</span>作为圆锥对象的子对象。切换到点模式，然后移动 FFD 对象上的点来创建一个不平整的笔尖）（见下图）。在这个过程中圆锥底部的边缘应保持不变。尝试修改圆锥顶部让它看起来像已经用来书写过一样。</p>
+<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","使用挤压对象为铅笔杆建模","hl_6"--><p><span class="HL_1">使用挤压对象为铅笔杆建模</span></p>
+<p>现在我们开始建立铅笔杆的模型，这一步我们会使用<span class="command">挤压</span>对象和<span class="command">多边</span>样条，因为它可以让我们非常简单地修改六边形。之后我们可以轻易地调整角的数量、边长甚至圆角。<span class="command">挤压</span>对象可以让我们修改笔杆的长度以及它两端边缘的圆角造型。</p>
+<p><nobr><span class="menu">创建</span></nobr>菜单中创建一个<a href="../OSPLINENSIDE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5179.png" alt="" height="12" width="12"    border="0"><span class="text_command">多边</span></nobr></a>对象，设置它的<a href="../OSPLINENSIDE-ID_OBJECTPROPERTIES.html#PRIM_NSIDE_RADIUS" target="_self"><span class="text_id">半径</span></a>为<span class="command_value">43</span>、侧边为<span class="command_value">6</span>。启用<a href="../OSPLINENSIDE-ID_OBJECTPROPERTIES.html#PRIM_NSIDE_ROUNDING" target="_self"><span class="text_id">圆角</span></a>选项并将半径设置为<span class="command_value">5</span>。设置<span class="command">多边对象的平面</span>为 XZ。然后，创建一个<a href="../OEXTRUDE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5116.png" alt="" height="12" width="12"    border="0"><span class="text_command">挤压</span></nobr></a>对象，并将<span class="command">多边</span>作为它的子对象。在<span class="command">挤压</span>对象的<span class="command">属性管理器</span>设置中，设置<a href="../OEXTRUDE-ID_OBJECTPROPERTIES.html#EXTRUDEOBJECT_MOVE" target="_self"><span class="text_id">移动</span></a>值分别为 <span class="command_value">0</span>、<span class="command_value">2000</span> 和 <span class="command_value">0</span>，这会创建一个长度正确的铅笔杆。沿 Y 轴移动多边曲线到如下图所示的位置（如果需要的话可以使用全部视窗来调整）。</p>
+<p><div class="image_full" style="max-width:811px"><img  src="../../pics/tut_02xxxx/__tut_024069.jpg"  ><span class="caption"></span></div></p>
+<p>通过向上移动<span class="command">多边</span>移动，你之后可以调整铅笔的总长度。</p>
+<p><a id="hl_7" name="hl_7"></a><!--INDEX "3","圆角封顶","hl_7"--><p><span class="HL_1">圆角封顶</span></p>
+<p>切换到<span class="command">挤压</span>对象：<span class="command">封顶</span>标签页然后设置<a href="../OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_START" target="_self"><span class="text_id">顶端</span></a> 参数为<span class="command_value">圆角封顶</span>，分别设置<span class="command">步幅</span>和<span class="command">半径</span>值为<span class="command_value">3</span>，如果<a href="../OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_ROUNDING" target="_self"><span class="text_id">圆角类型</span></a>参数设置为<span class="command_value">突出</span>，对象的末端边缘会有一个小圆角，这个圆角包含三个分段。注意：圆角会自动增加对象的尺寸，如果要避免这个特点，可以启用<a href="../OEXTRUDE-ID_CAPSANDROUNDING.html#CAP_CONSTRAIN" target="_self"><span class="text_id">约束</span></a>选项，<span class="command">挤压</span>对象的末端要用封顶表面来封闭，而不带有任何额外的圆角。在使用布尔对象时，根据使用的<span class="command">布尔类型</span>，这些对象通常只有是封闭几何体时才会生效，这一点很重要。</p>
+<p><a id="hl_8" name="hl_8"></a><!--INDEX "3","用实例创建布尔对象","hl_8"--><p><span class="HL_1">用实例创建布尔对象</span></p>
+<p>接下来，我们要修剪位于笔尖下方的<span class="command">挤压</span>对象的一端，因此要将它不规则的边缘匹配到笔尖。我们会通过在增加的<span class="command">布尔对象</span>、<span class="command">地形对象</span>和<span class="command">挤压</span>对象之间创建一个交集来实现它。只有位于<span class="command">地形对象</span>和与它合并的<span class="command">圆柱对象</span>内部的<span class="command">挤压</span>对象交集会显示。</p>
+<p>在<span class="command">对象管理器</span>中，选择布尔（合并）对象，然后选择 <nobr><span class="menu">创建 | 造型 |</span></nobr> <a href="../OINSTANCE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5126.png" alt="" height="12" width="12"    border="0"><span class="text_command">实例</span></nobr></a>，它会创建一个<span class="command">布尔对象</span>的实例。要确保创建了正确对象的<span class="command">实例</span> ，只需要在<span class="command">对象管理器</span>中选择该实例对象，然后在<span class="command">属性管理器</span>的对象标签页查看它的<a href="../OINSTANCE-ID_OBJECTPROPERTIES.html#INSTANCEOBJECT_LINK" target="_self"><span class="text_id">参考对象</span></a>选框。如果在<span class="command">参考对象</span>选框中显示了不正确的对象名称，只要拖放正确的对象到这个选框即可。</p>
+<p>一个实例对象可以独立于它的参考对象进行移动和旋转，它甚至可以通过切换到<span class="command">模型</span>模式来独立地缩放。在模型模式下，一个对象的点是不可编辑的，而它的轴可以加长或缩短，因此，包含了可编辑点的对象可以使用这个模式来拉伸或缩放。例如，一个没有转为可编辑对象的球体可以被拉伸为一个椭球体甚至被压扁成一个圆盘。在我们的示例中，实例对象会保持不可编辑，这样做的优点是，我们之后可以修改<span class="command">地形对象</span>的形状，而<span class="command">实例对象</span>会同步更新。</p>
+<p><a id="hl_9" name="hl_9"></a><!--INDEX "3","使用两个对象创建交集","hl_9"--><p><span class="HL_1">使用两个对象创建交集</span></p>
+<p>创建一个新的<a href="../OBOOLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_2/PLUGIN_Cmd_1010865.png" alt="" height="12" width="12"    border="0"><span class="text_command">布尔</span></nobr></a>对象，其<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_TYPE" target="_self"><span class="text_id">布尔类型</span></a>为<span class="command_value">AB交集</span>。启用<span class="command">创建单个对象</span>和<span class="command">隐藏新的边</span>选项来优化几何体。将<span class="command">挤压</span>对象（笔杆）和<span class="command">实例对象</span>作为这个<span class="command">布尔对象</span>的子对象。在<span class="command">对象管理器</span>中选择新的<span class="command">布尔对象</span>，你会发现<span class="command">挤压</span>对象位于<span class="command">地形对象</span>上方的顶部部分被修剪掉了。重命名这个<span class="command">布尔</span>对象为：布尔（交集）。要让<span class="command">挤压</span>对象的边缘锐利，启用<span class="command">布尔对象</span>的<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_BREAK_CUT_EDGES" target="_self">的<span class="text_id">交叉处创建平滑着色(Phong)分割</span></a>选项。如果<span class="command">挤压</span>对象的底部被剪切了，<span class="command">地形</span>对象层级中的<span class="command">圆柱</span>对象必须加长，或者<span class="command">多边</span>对象必须向上多移动一些。</p>
+<p><div class="image_full" style="max-width:808px"><img  src="../../pics/tut_02xxxx/__tut_024070.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_10" name="hl_10"></a><!--INDEX "3","创建负形","hl_10"--><p><span class="HL_1">创建负形</span></p>
+<p>现在我们要做的是削尖铅笔尖，让它看起来更像是真实的笔尖。正如我们所看到的，笔尖是直接从笔杆中伸出来的，而没有从笔杆到笔尖逐渐变细的部分。我们要做的是用圆锥创建笔杆的这一部分，这个圆锥与之前用来创建笔尖的相同。要怎么做？圆锥和<span class="command">挤压</span>对象的交集可以创建我们需要的形状，但是同时会修剪掉笔杆的底部部分。我们需要一个表示要被修剪掉的部分的形状，为此我们还需要使用一个<span class="command">布尔对象</span>，然后从一个<span class="command">立方体对象</span>上去掉现有的圆锥的部分，来得到一个负形——有点像一个铅笔刀。选择圆锥然后创建一个<span class="text_id">实例对象</span>，现在我们需要创建一个用来修剪铅笔尖的形状（负形）。用一个<a href="../OCUBE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_1/PLUGIN_Cmd_5159.png" alt="" height="12" width="12" border="0"><span class="text_command">立方体</span></nobr></a>（<nobr><span class="menu">创建 | 对象</span></nobr>），立方体的精确尺寸不重要，只要让它完全包含圆锥实例即可。移动立方体，让圆锥对象的封顶面从立方体的底部稍稍伸出。从立方体中减去圆锥会产生我们想要的形状（见下图）。</p>
+<p><div class="image_full" style="max-width:936px"><img  src="../../pics/tut_02xxxx/__tut_024071.jpg"  ><span class="caption"></span></div></p>
+<p>创建一个新的<span class="command">布尔对象</span>（<nobr><span class="menu">创建 | 造型</span></nobr>），使用默认设置，<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_TYPE" target="_self"><span class="text_id">布尔类型</span></a>为<span class="command_value">A 减 B</span>，同样启用创建单个对象和隐藏新的边这两个选项来有优化得到的几何体。这在一步要注意子对象的层级顺序，因为必须从立方体中减去圆锥实例对象，在层级中立方体必须位于圆锥实例的上方（作为新布尔对象的子对象）。如果不小心放错了顺序，只需要在<span class="command">对象管理器</span>中将它们拖放到正确的顺序。将新的<span class="command">布尔</span>对象命名为：布尔（负形）。</p>
+<p><a id="hl_11" name="hl_11"></a><!--INDEX "3","完成铅笔模型","hl_11"--><p><span class="HL_1">完成铅笔模型</span></p>
+<p>我们还需要一步将刚刚创建的图形从笔杆上减去。你可能已经猜到了——我们会使用一个<a href="../OBOOLE.html" target="_self"><nobr><img class="text_cmd_icon" src="../../icons/PLUGIN_CMD_2/PLUGIN_Cmd_1010865.png" alt="" height="12" width="12"    border="0"><span class="text_command">布尔</span></nobr></a>对象来实现，其<span class="command">布尔类型</span>为<span class="command_value">A减B</span>。</p>
+<p>创建新的<span class="command">布尔对象</span>，这次不用启用<span class="command">创建单个对象</span>选项（稍后我们会解释原因）。将布尔（笔杆）和布尔（负形）作为新布尔对象的子对象，注意 布尔（笔杆）对象在层级中位于布尔（负形）对象上方，剩下的部分就是一个典型的逐渐变细的铅笔尖，而笔杆没有影响。</p>
+<p><div class="image_full" style="max-width:1080px"><img  src="../../pics/tut_02xxxx/__tut_024072.jpg"  ><span class="caption"></span></div></p>
+<p>点击下面的链接打开铅笔尖模型的文件：</p>
+<p><a id="__tut_024093" href="../../pics/__tut_024093_halvaropenc4d.png"><img src="../../pics/tut_02xxxx/__tut_024093_halvaropenc4d.png" ></a><br /><span class="caption"></span></p>
+<p> </p>
+<p><a id="hl_12" name="hl_12"></a><!--INDEX "3","准备材质","hl_12"--><p><span class="HL_1">准备材质</span></p>
+<p>我们在最后创建的<span class="command">布尔对象</span>中没有启用<a href="../OBOOLE-ID_OBJECTPROPERTIES.html#BOOLEOBJECT_SINGLE_OBJECT" target="_self"><span class="text_id">创建单个对象</span></a>选项，理由如下：</p>
+<p>如果两个对象通过一个布尔操作进行组合，它们各自的材质会在结果的布尔对象中得到保留。例如，如果从一个蓝色的立方体中减去一个红色的球体，则结果是这个蓝色的立方体有一个红色的切面。而如果创建了单个对象，所有的部件会组合成一个对象，在不将<span class="command">布尔</span>对象转换为<span class="command">多边形</span>对象时，只能指定一种材质。</p>
+<p>因为我们确实想要为笔尖的圆锥部分指定一个与笔杆不同的材质，所以不能启用<span class="command">创建单个对象</span>选项。</p>
+<p>现在我们可以将注意转到材质的应用上。布尔（笔尖）对象要指定一个几乎黑色的材质，因为它表示铅笔芯，而布尔（负形）对象要指定一个木材材质，铅笔剩下的部分则可以通过<span class="command">挤压</span>对象（笔杆）来纹理贴图，下图显示了赋予了纹理之后铅笔的外观。</p>
+<p><div class="image_full" style="max-width:578px"><img  src="../../pics/tut_02xxxx/__tut_024092.jpg"  ><span class="caption">为你的铅笔赋予纹理的示例。</span></div></p>
+<p><a id="hl_13" name="hl_13"></a><!--INDEX "3","对铅笔进行差异化","hl_13"--><p><span class="HL_1">对铅笔进行差异化</span></p>
+<p>我们铅笔所有相关的参数都是可以编辑的，即使是在制作动画时。<span class="command">多边对象</span>定义了铅笔的边数，而<span class="command">挤压</span>对象定义了铅笔的长度。确保<span class="command">挤压</span>对象的底部部分没有大过<span class="command">圆柱对象</span>。笔尖的造型可以用圆锥进行调节，笔尖和渐变木制部分的不规则过渡则可以通过<span class="command">地形对象</span>调整。如果你想在场景中创建多个铅笔，使用地形对象的“随机”可以改变不规则造型的形状。<span class="command">地形对象</span>的 Y <a href="../OFRACTAL-ID_OBJECTPROPERTIES.html#PRIM_FRACTAL_LEN" target="_self"><span class="text_id">尺寸</span></a>参数控制不规则过渡的大小，将这个值减少到 <span class="command_value">0</span> 会在铅笔尖和木制圆锥部分之间创建一个平滑的过渡。<a href="../OFRACTAL-ID_OBJECTPROPERTIES.html#PRIM_FRACTAL_SUBW" target="_self"><span class="text_id">宽度细分</span></a>控制<span class="command">地形对象</span>的细分曲面数量，增加这个数值可以用来丰富细节。</p>
+<p></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
