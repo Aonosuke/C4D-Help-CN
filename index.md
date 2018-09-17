@@ -2,14 +2,14 @@
 layoutdefault
 ---
 
-<!--# C4D-Help-CN 
+# C4D-Help-CN 
 This project translates CINEMA 4D help documents into Chinese basing on C4D R18.  
   
 这个项目是对 CINEMA 4D 程序文档的翻译。  
 本文档基于 CINEMA 4D Studio R18 版本。   
 
 
-![Branching](./help/CN/pics/040157.jpg)
+<!--![Branching](./help/CN/pics/040157.jpg)
 
 ### 覆盖前请先备份原版文件。 
 
@@ -35,7 +35,9 @@ macOS
 
 ### [开始浏览文档](./help/CN/html/1001.html)-->
 
+
 <iframe name="contents" src="help/CN/html/5425.html" style="width: 800px; height: 100%;" frameborder="0" scrolling="no"> </iframe>
+
 
 <!--
     onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>700?fdh:700)"
