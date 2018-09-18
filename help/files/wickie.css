@@ -186,9 +186,9 @@ img.text_cmd_icon                                   { float: none; width: auto; 
     }
   }
 
-  @media print, screen and (max-width: 400px) {
+  @media print, screen and (max-width: 500px) {
     body {
       word-wrap:break-word;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
