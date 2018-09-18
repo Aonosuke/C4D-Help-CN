@@ -56,7 +56,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  width:1080px;
   margin:0 auto;
 }
 
@@ -105,7 +105,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:240px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -118,7 +118,7 @@ ul.downloads {
   background: #f4f4f4;
   border-radius:5px;
   border:1px solid #e0e0e0;
-  width:270px;
+  width:240px;
 }
 
 .downloads li {
@@ -172,7 +172,7 @@ strong {
 }
 
 section {
-  width:500px;
+  width:800px;
   float:right;
   padding-bottom:50px;
 }
@@ -189,14 +189,14 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:240px;
   float:left;
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 1080px) {
 
   div.wrapper {
     width:auto;
@@ -231,7 +231,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 720px) {
+@media print, screen and (max-width: 800px) {
   body {
     word-wrap:break-word;
   }
@@ -249,7 +249,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 480px) {
+@media print, screen and (max-width: 600px) {
   body {
     padding:15px;
   }
