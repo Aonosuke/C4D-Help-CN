@@ -2,7 +2,7 @@ a:link            { color: #069; text-decoration: underline; }
 .link_back        { color: #069; font-size: xx-small; text-decoration: underline; display: inline-block; }
 .link_back + div  { margin-top:1em; }
 a:visited         { color: purple; text-decoration: underline; }
-a:hover           { }
+a:hover           { } 
 
 .HL_group             {                 font-size: 1.6em; font-weight: bold;   padding-top: 10px; display: inline-block; }
 .HL_atom              {                 font-size: 1.2em; font-weight: normal; }
@@ -177,3 +177,18 @@ img.text_cmd_icon                                   { float: none; width: auto; 
   .broadcast    .in-broadcast-page    .page_only_apps,
   .bodypaint3d  .in-bodypaint3d-page  .page_only_apps,
   .studio       .in-studio-page       .page_only_apps   { display: none; }
+
+
+  @media print, screen and (max-width: 1080px) {
+    div.wrapper {
+      width:auto;
+      margin:0;
+    }
+  }
+
+  @media print, screen and (max-width: 400px) {
+    body {
+      word-wrap:break-word;
+      font-size: 14px;
+    }
+  }
