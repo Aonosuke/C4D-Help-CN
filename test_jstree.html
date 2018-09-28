@@ -29,8 +29,8 @@
           </li>
         </ul>
       </div>
-  <div id="content">
-    <iframe name="contentframe" src="help/CN/html/5425.html" 
+  <div id="test">
+    <iframe name="content" src="help/CN/html/5425.html" 
     width="960" 
     height="800" 
     frameborder="0" scrolling="no"> </iframe>
@@ -61,11 +61,11 @@ $('#jstree').jstree({
 })
 
 $('#jstree').on('changed.jstree',function(e,data){
-    //当前选中节点的id
-        var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
-//获取节点href
-top.frames['contentframe'].location.href = urll;
-    });
+  //当前选中节点的id
+  var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
+  //获取节点href
+  top.frames['content'].location.href = urll;
+});
 
 
 });
