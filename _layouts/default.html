@@ -56,7 +56,7 @@
                 $('#jstree').jstree('select_node', 'child_node_1');
                 $.jstree.reference('#jstree').select_node('child_node_1');
               });
-              
+
               $('#jstree').jstree({   
                 "core" : { // core options go here
                   "multiple" : false, // no multiselection
@@ -67,9 +67,10 @@
               "plugins" : ["state"]  
              })
 
-$('#jstree').bind('select_node.jstree', function(e,data) { 
-    window.location.href = data.rslt.obj.attr("href"); 
-});
+$('#jstree').bind("select_node.jstree", function (e, data) {
+                var href = data.node.a_attr.href
+                document.location.href = href;
+            }) 
 
       });
 
