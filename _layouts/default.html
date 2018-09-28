@@ -56,12 +56,6 @@
                 $.jstree.reference('#jstree').select_node('child_node_1');
               });
 
-              $('#jstree').on('changed.jstree',function(e,data){
-                //当前选中节点的id
-                var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
-                $('content').attr('src', urll);
-               });
-
               $('#jstree').jstree({   
                 "core" : { // core options go here
                   "multiple" : false, // no multiselection
@@ -71,6 +65,12 @@
               },
               "plugins" : ["state"]  
              })
+            });
+
+            $('#jstree').on('changed.jstree',function(e,data){
+              //当前选中节点的id
+              var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
+              $('content').attr('src', urll);
             });
           </script>
 
