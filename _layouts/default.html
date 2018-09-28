@@ -44,22 +44,24 @@
           </div>
           <script>
             $(function () {
-            // bind to events triggered on the tree
+              // bind to events triggered on the tree
               $('#jstree').on("changed.jstree", function (e, data) {
                 console.log(data.selected);
               });
-            // interact with the tree - either way is OK
+
+              // interact with the tree - either way is OK
               $('button').on('click', function () {
                 $('#jstree').jstree(true).select_node('child_node_1');
                 $('#jstree').jstree('select_node', 'child_node_1');
                 $.jstree.reference('#jstree').select_node('child_node_1');
               });
+
               $('#jstree').on('changed.jstree',function(e,data){
-    //当前选中节点的id
-        var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
-//获取节点href
-        content.open(urll);
-    });
+                //当前选中节点的id
+                var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
+                var ifrm = document.getElementById("content");
+                ifrm.setAttribute("src","rull",0);
+               });
 
               $('#jstree').jstree({   
                 "core" : { // core options go here
