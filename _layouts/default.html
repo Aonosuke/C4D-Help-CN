@@ -53,11 +53,12 @@
                 }
               },
               "plugins" : ["state"]  
-             });
+             })
 
-$("#jstree").bind("select_node.jstree", function(e, data) {
-       window.open(jQuery(data.event.originalEvent.originalTarget).attr   ('href'), 'content');});
-       
+.bind('select_node.jstree', function(e,data) { 
+  document.content.location.href = data.rslt.obj.find('a').attr("href"); 
+});
+
       });
 
           </script>
