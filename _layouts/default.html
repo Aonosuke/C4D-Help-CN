@@ -55,8 +55,8 @@
               "plugins" : ["state"]  
              })
 
-.bind('select_node.jstree', function(e,data) { 
-  document.location.href = data.rslt.obj.find('a').attr("href"); 
+$('#jstree').bind('select_node.jstree', function(e,data) { 
+    window.location.href = data.rslt.obj.attr("href"); 
 });
 
       });
