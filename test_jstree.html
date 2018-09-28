@@ -9,52 +9,68 @@
   <script src="assets/js/dist/jstree.min.js"></script>
 </head>
 <body>
-    <div id="jstree">
-        <ul>
-          <li><a href="help/CN/html/1001.html" target="content">Cinema 4D 基础</a>
-            <ul>
-              <li><a href="help/CN/html/5425.html" target="content">概述</a></li>
-              <li><a href="help/CN/html/5426.html" target="content">视图和视窗</a></li>
-              <li><a href="help/CN/html/5215.html" target="content">配置</a></li>
-              <li><a href="help/CN/html/5697.html" target="content">渲染菜单</a>
-                <ul>
-                    <li><a href="help/CN/html/5698.html" target="content">渲染活动视图</a></li>
-                    <li><a href="help/CN/html/5700.html" target="content">区域渲染</a></li>
-                </ul>    
-              </li>
-              <li><a href="help/CN/html/5808.html" target="content">材质管理器</a></li>
-            </ul>
-          </li>
-          <li><a href="help/CN/html/tut/__tut_1002.html" target="content">Cinema 4D 教程</a>
-          </li>
-        </ul>
-      </div>
+
+  <div class="search_input" style="padding-bottom:20px">
+    <input type="text" id="searchMenu"  />
+  </div>
+
+  <div id="jstree">
+      <ul>
+        <li><a href="help/CN/html/1001.html" target="content">Cinema 4D 基础</a>
+          <ul>
+            <li><a href="help/CN/html/5425.html" target="content">概述</a></li>
+            <li><a href="help/CN/html/5426.html" target="content">视图和视窗</a></li>
+            <li><a href="help/CN/html/5215.html" target="content">配置</a></li>
+            <li><a href="help/CN/html/5697.html" target="content">渲染菜单</a>
+              <ul>
+                  <li><a href="help/CN/html/5698.html" target="content">渲染活动视图</a></li>
+                  <li><a href="help/CN/html/5700.html" target="content">区域渲染</a></li>
+              </ul>    
+            </li>
+            <li><a href="help/CN/html/5808.html" target="content">材质管理器</a></li>
+          </ul>
+        </li>
+        <li><a href="help/CN/html/tut/__tut_1002.html" target="content">Cinema 4D 教程</a>
+        </li>
+      </ul>
+  </div>
+
   <div id="test">
     <iframe name="content" src="help/CN/html/5425.html" 
     width="960" 
     height="800" 
     frameborder="0" scrolling="no"> </iframe>
   </div>
+
   <script> 
   $(function () {
 
-$('#jstree').jstree({   
-  "core" : { // core options go here
-    "multiple" : false, // no multiselection
-    "themes" : {
-    "icons": false
-  }
-},
-"plugins" : [""]  
-})
+    $('#jstree').jstree({   
+      "core" : { // core options go here
+        "multiple" : false, // no multiselection
+        "themes" : {
+         "icons": false
+        }
+      },
+    "plugins" : ["search"]  
+    })
 
-$('#jstree').on('changed.jstree',function(e,data){
-  //当前选中节点的id
-  var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
-  //获取节点href
-  top.frames['content'].location.href = urll;
-});
+    $('#jstree').on('changed.jstree',function(e,data){
+      //当前选中节点的id
+      var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
+      //获取节点href
+      top.frames['content'].location.href = urll;
+    });
 
+    var to = false;
+    $('#searchMenu').keyup(function () {
+      if(to) {
+        clearTimeout(to);
+      }
+      to = setTimeout(function () {
+        $('#jstree').jstree(true).search($('#searchMenu').val());
+      }, 250);
+    });
 
 });
   </script>

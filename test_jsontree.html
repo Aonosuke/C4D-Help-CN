@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jsTree test</title>
+  <link rel="stylesheet" href="assets/js/dist/themes/default/style.min.css" />
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/dist/jstree.min.js"></script>
+</head>
+<body>
+
+  <div class="search_input" style="padding-bottom:20px">
+    <input type="text" id="searchMenu"  />
+  </div>
+
+  <div id="jsMenu" class="treeview"></div>
+  
+  <div id="test">
+    <iframe name="content" src="help/CN/html/5425.html" 
+    width="960" 
+    height="800" 
+    frameborder="0" scrolling="no"> </iframe>
+  </div>
+
+  <script> 
+  
+    $(function () {
+
+      $('#jsMenu').jstree({
+        "core": {
+          "data": menuItems,
+          "multiple": false, // no multiselection
+          "themes": {
+            "icons": false,
+            //"dots": false,
+          }
+        },
+        "plugins": ["state", "search"]
+      })
+
+      //tree change时事件
+      $('#jsMenu').on("changed.jstree", function (e, data) {
+        console.log("The selected nodes are:");
+        console.log(data.node.id);              //选择的node id      
+        top.frames['content'].location.href = data.node.data;
+      });
+
+      var to = false;
+      $('#searchMenu').keyup(function () {
+        if (to) {
+          clearTimeout(to);
+        }
+        to = setTimeout(function () {
+          $('#jsMenu').jstree(true).search($('#searchMenu').val());
+        }, 250);
+      });
+
+    });
+
+    var menuItems =[
+      {"id": "1000", "data": "help/CN/html/1000.html", "text": "Cinema 4D 程序文档", "state": {"opened": true}, "children": [
+        {"id": "1014", "data": "help/CN/html/1014.html", "text": "Cinema 4D Studio"},
+        {"id": "1001", "data": "help/CN/html/1001.html", "text": "Cinema 4D 基础", "state": {"opened": true}, "children": [
+          {"id": "5425", "data": "help/CN/html/5425.html", "text": "概述"},
+          {"id": "5426", "data": "help/CN/html/5426.html", "text": "视图和视窗"},
+          {"id": "5215", "data": "help/CN/html/5215.html", "text": "配置"},
+          {"id": "5697", "data": "help/CN/html/5697.html", "text": "渲染菜单", "children": [
+            {"id": "5698", "data": "help/CN/html/5698.html", "text": "渲染活动视图"},
+            {"id": "5700", "data": "help/CN/html/5700.html", "text": "区域渲染"},
+          ]}
+        ]},
+        {"id":"1002", "data": "help/CN/html/tut/__tut_1002.html", "text": "Cinema 4D 教程", "children": [
+          {"id": "40480",  "data": "help/CN/html/tut/__tut_40480.html", "text": "机械建模教程"},
+        ]}
+      ]}
+    ]
+
+  </script>
+</body>
+</html>
