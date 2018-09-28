@@ -24,7 +24,7 @@
         <div id="jstree">
             <!-- in this example the tree is populated from inline HTML -->
             <ul class="jstree-no-icons">
-              <li><a href="#" onclick="window.open('help/CN/html/1001.html', 'conten')">Cinema 4D 基础</a>
+              <li><a href="help/CN/html/1001.html">Cinema 4D 基础</a>
                 <ul>
                   <li><a href="help/CN/html/5425.html">概述</a></li>
                   <li><a href="help/CN/html/5426.html">视图和视窗</a></li>
@@ -65,13 +65,13 @@
               },
               "plugins" : ["state"]  
              })
+
+$('#jstree').bind('select_node.jstree', function(e,data) { 
+    content.src = data.rslt.obj.find('a').attr("href"); 
+});
+
             });
 
-            $('#jstree').on('changed.jstree',function(e,data){
-              //当前选中节点的id
-              var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
-              $('content').attr('src', urll);
-            });
           </script>
 
       </header>
