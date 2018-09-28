@@ -54,6 +54,12 @@
                 $('#jstree').jstree('select_node', 'child_node_1');
                 $.jstree.reference('#jstree').select_node('child_node_1');
               });
+              $('#jstree li').each(function(){
+                $(this).find('a').click(function(){
+                var href = $(this).attr('href');
+                document.location.href = href ;
+                })
+              });
               $('#jstree').jstree({   
                 "core" : { // core options go here
                   "multiple" : false, // no multiselection
