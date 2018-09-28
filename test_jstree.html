@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jsTree test</title>
+  <!-- 2 load the theme CSS file -->
+  <link rel="stylesheet" href="assets/js/dist/themes/default/style.min.css" />
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/dist/jstree.min.js"></script>
+</head>
+<body>
+  <!-- 3 setup a container element -->
+  <div id="jstree">
+    <!-- in this example the tree is populated from inline HTML -->
+    <ul>
+      <li><a href="help/CN/html/1001.html" target="content">Cinema 4D 基础</a>
+        <ul>
+          <li id="child_node_1">Child node 1</li>
+          <li>Child node 2</li>
+        </ul>
+      </li>
+      <li><a href="#" onclick="window.open('help/CN/html/1001.html','content')">Cinema 4D 基础</li>
+      <li><a href="#" onclick="top.frames['contentframe'].location.href = 'help/CN/html/1001.html';">Cinema 4D 基础</li>
+    </ul>
+  </div>
+  <div id="content">
+    <iframe name="contentframe" src="help/CN/html/5425.html" 
+    width="960" 
+    height="800" 
+    frameborder="0" scrolling="no"> </iframe>
+  </div>
+  <script> 
+  $(function () {
+
+// bind to events triggered on the tree
+$('#jstree').on("changed.jstree", function (e, data) {
+  console.log(data.selected);
+});
+
+// interact with the tree - either way is OK
+$('button').on('click', function () {
+  $('#jstree').jstree(true).select_node('child_node_1');
+  $('#jstree').jstree('select_node', 'child_node_1');
+  $.jstree.reference('#jstree').select_node('child_node_1');
+});
+
+$('#jstree').jstree({   
+  "core" : { // core options go here
+    "multiple" : false, // no multiselection
+    "themes" : {
+    "icons": false
+  }
+},
+"plugins" : ["state"]  
+})
+
+$('#jstree').each(function(){
+   $(this).find('a').click(function(){
+       var href = $(this).attr('href');
+       top.frames['contentframe'].location.href = href ;
+   })
+  })
+
+});
+  </script>
+</body>
+</html>

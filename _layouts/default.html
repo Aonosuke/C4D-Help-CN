@@ -58,14 +58,22 @@
               });
 
               $('#jstree').jstree({   
-                "core" : { // core options go here
+                "core" : {
                   "multiple" : false, // no multiselection
                   "themes" : {
                   "icons": false
-                }
-              },
-              "plugins" : ["state"]  
-             })
+                  }
+                },
+                "plugins" : ["state"]  
+              })
+
+              // 节点超链接跳转 iframe
+              $('#jstree').each(function(){
+                $(this).find('a').click(function(){
+                var href = $(this).attr('href');
+                top.frames['contentframe'].location.href = href ;
+                })
+              })
 
       });
 
