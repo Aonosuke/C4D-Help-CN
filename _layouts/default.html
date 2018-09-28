@@ -24,37 +24,26 @@
         <div id="jstree">
             <!-- in this example the tree is populated from inline HTML -->
             <ul class="jstree-no-icons">
-              <li><a href="help/CN/html/1001.html">Cinema 4D 基础</a>
+              <li><a href="help/CN/html/1001.html" target="content">Cinema 4D 基础</a>
                 <ul>
-                  <li><a href="help/CN/html/5425.html">概述</a></li>
-                  <li><a href="help/CN/html/5426.html">视图和视窗</a></li>
-                  <li><a href="help/CN/html/5215.html">配置</a></li>
-                  <li><a href="help/CN/html/5697.html">渲染菜单</a>
+                  <li><a href="help/CN/html/5425.html" target="content">概述</a></li>
+                  <li><a href="help/CN/html/5426.html" target="content">视图和视窗</a></li>
+                  <li><a href="help/CN/html/5215.html" target="content">配置</a></li>
+                  <li><a href="help/CN/html/5697.html" target="content">渲染菜单</a>
                     <ul>
-                        <li><a href="help/CN/html/5698.html">渲染活动视图</a></li>
-                        <li><a href="help/CN/html/5700.html">区域渲染</a></li>
+                        <li><a href="help/CN/html/5698.html" target="content">渲染活动视图</a></li>
+                        <li><a href="help/CN/html/5700.html" target="content">区域渲染</a></li>
                     </ul>    
                   </li>
-                  <li><a href="help/CN/html/5808.html">材质管理器</a></li>
+                  <li><a href="help/CN/html/5808.html" target="content">材质管理器</a></li>
                 </ul>
               </li>
-              <li><a href="help/CN/html/__tut_1002.html">Cinema 4D 教程</a>
+              <li><a href="help/CN/html/__tut_1002.html" target="content">Cinema 4D 教程</a>
               </li>
             </ul>
           </div>
           <script>
             $(function () {
-              // bind to events triggered on the tree
-              $('#jstree').on("changed.jstree", function (e, data) {
-                console.log(data.selected);
-              });
-
-              // interact with the tree - either way is OK
-              $('button').on('click', function () {
-                $('#jstree').jstree(true).select_node('child_node_1');
-                $('#jstree').jstree('select_node', 'child_node_1');
-                $.jstree.reference('#jstree').select_node('child_node_1');
-              });
 
               $('#jstree').jstree({   
                 "core" : { // core options go here
@@ -64,13 +53,12 @@
                 }
               },
               "plugins" : ["state"]  
-             })
+             });
 
-$('#jstree').bind('select_node.jstree', function(e,data) { 
-    content.src = data.rslt.obj.find('a').attr("href"); 
-});
-
-            });
+$("#jstree").bind("select_node.jstree", function(e, data) {
+       window.open(jQuery(data.event.originalEvent.originalTarget).attr   ('href'), 'content');});
+       
+      });
 
           </script>
 
