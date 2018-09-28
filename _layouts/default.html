@@ -45,6 +45,18 @@
           <script>
             $(function () {
 
+              // bind to events triggered on the tree
+              $('#jstree').on("changed.jstree", function (e, data) {
+                console.log(data.selected);
+              });
+
+              // interact with the tree - either way is OK
+              $('button').on('click', function () {
+                $('#jstree').jstree(true).select_node('child_node_1');
+                $('#jstree').jstree('select_node', 'child_node_1');
+                $.jstree.reference('#jstree').select_node('child_node_1');
+              });
+              
               $('#jstree').jstree({   
                 "core" : { // core options go here
                   "multiple" : false, // no multiselection
