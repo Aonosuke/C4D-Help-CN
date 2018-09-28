@@ -9,20 +9,26 @@
   <script src="assets/js/dist/jstree.min.js"></script>
 </head>
 <body>
-  <!-- 3 setup a container element -->
-  <div id="jstree">
-    <!-- in this example the tree is populated from inline HTML -->
-    <ul>
-      <li><a href="help/CN/html/1001.html">Cinema 4D 基础</a>
+    <div id="jstree">
         <ul>
-          <li id="child_node_1">Child node 1</li>
-          <li>Child node 2</li>
+          <li><a href="help/CN/html/1001.html" target="content">Cinema 4D 基础</a>
+            <ul>
+              <li><a href="help/CN/html/5425.html" target="content">概述</a></li>
+              <li><a href="help/CN/html/5426.html" target="content">视图和视窗</a></li>
+              <li><a href="help/CN/html/5215.html" target="content">配置</a></li>
+              <li><a href="help/CN/html/5697.html" target="content">渲染菜单</a>
+                <ul>
+                    <li><a href="help/CN/html/5698.html" target="content">渲染活动视图</a></li>
+                    <li><a href="help/CN/html/5700.html" target="content">区域渲染</a></li>
+                </ul>    
+              </li>
+              <li><a href="help/CN/html/5808.html" target="content">材质管理器</a></li>
+            </ul>
+          </li>
+          <li><a href="help/CN/html/tut/__tut_1002.html" target="content">Cinema 4D 教程</a>
+          </li>
         </ul>
-      </li>
-      <li><a href="#" onclick="window.open('help/CN/html/1001.html','content')">Cinema 4D 基础</li>
-      <li><a href="#" onclick="top.frames['contentframe'].location.href = 'help/CN/html/1001.html';">Cinema 4D 基础</li>
-    </ul>
-  </div>
+      </div>
   <div id="content">
     <iframe name="contentframe" src="help/CN/html/5425.html" 
     width="960" 
@@ -54,12 +60,13 @@ $('#jstree').jstree({
 "plugins" : ["state"]  
 })
 
-$('#jstree').each(function(){
-   $(this).find('a').click(function(){
-       var href = $(this).attr('href');
-       top.frames['contentframe'].location.href = href ;
-   })
-  })
+$('#jstree').on('changed.jstree',function(e,data){
+    //当前选中节点的id
+        var urll=document.getElementById(data.instance.get_node(data.selected[0]).id+'_anchor').getAttribute("href");
+//获取节点href
+top.frames['contentframe'].location.href = urll;
+    });
+
 
 });
   </script>
