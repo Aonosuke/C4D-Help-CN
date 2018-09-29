@@ -19,7 +19,7 @@
 
 #sidebar{
   position: absolute;
-  top: 50px;
+  top: 51px;
   bottom: 0px;
   width: 280px;
 }
@@ -36,8 +36,8 @@
 
 #contentbox{
   position: absolute;
-  top: 50px;
-  bottom: 0px;
+  top: 51px;
+  bottom: 3px;
   left: 280px;
   right: 0px;
   padding-top: 15px;
