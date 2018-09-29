@@ -13,7 +13,7 @@
 }
 .jstree-anchor {
   display: inline-block;
-  color: black;
+  color: #646464;
   white-space: nowrap;
   padding: 0 4px 0 1px;
   margin: 0;
@@ -143,7 +143,7 @@
   padding: 0 2em 0 2em;
   text-decoration: none;
   width: auto;
-  color: black;
+  color: #646464;
   white-space: nowrap;
   line-height: 2.4em;
   text-shadow: 1px 1px 0 white;
@@ -386,8 +386,8 @@
   min-width: 24px;
 }
 .jstree-default .jstree-anchor {
-  line-height: 24px;
-  height: 24px;
+  line-height: 1.6em;
+  height: 1.6em;
 }
 .jstree-default .jstree-icon {
   width: 24px;
