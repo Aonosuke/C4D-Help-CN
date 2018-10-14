@@ -31,7 +31,16 @@
 }
 
 #jsMenu{
-  
+  position: absolute;
+  top: 45px;
+  bottom: 0px;
+  width: 280px;
+  padding-bottom: 20px;
+  overflow: auto;
+}
+
+#jsMenu::-webkit-scrollbar{
+  width: 4px;
 }
 
 #contentbox{

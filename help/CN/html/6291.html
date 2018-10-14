@@ -34,9 +34,9 @@
 <p></RELEASE_120></p>
 <p><a id="ABS" name="ABS"></a></p>
 <p>加载图像或视频时会出现以下情况：</p>
-<p><div class="image_full" style="max-width:484px"><img  src="../pics/030084.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:484px"><img  src="../pics/03xxxx/030084.jpg"  ><span class="caption"></span></div></p>
 <p>根据你所选择的选项，贴图/影片会被链接到绝对路径或相对路径。这表示：</p>
-<p>如果选择<span class="command">否</span>，纹理的“路径”会被保存为绝对路径，即 CINEMA 4D 会在这个路径下搜索纹理来渲染。但是，这在场景文件发送给其他工作人员时可能会产生问题，例如纹理在其他电脑上丢失。在大部分情况下最好使用相对路径（通过<a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_Cmd_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">保存工程(包含资源)…</span></nobr></a>命令可以将绝对路径转换为相对路径）。</p>
+<p>如果选择<span class="command">否</span>，纹理的“路径”会被保存为绝对路径，即 CINEMA 4D 会在这个路径下搜索纹理来渲染。但是，这在场景文件发送给其他工作人员时可能会产生问题，例如纹理在其他电脑上丢失。在大部分情况下最好使用相对路径（通过<a href="5595.html#PLUGIN_CMD_12255" target="_self"><nobr><img class="text_cmd_icon" src="../icons/PLUGIN_CMD_1/PLUGIN_Cmd_12255.png" alt="" height="12" width="12"    border="0"><span class="text_command">保存工程(包含资源)…</span></nobr></a>命令可以将绝对路径转换为相对路径）。</p>
 <p>如果选择<span class="command">是</span>，贴图/影片会被保存到场景文件所在目录的“tex”文件夹中，在发送场景文件时包含该文件夹，则不会丢失纹理。相对路径纹理在<a href="PREFSFILES-PREF_FILE_MAIN_GROUP.html#path" target="">这些情况</a>下也会被搜索。</p>
 <p><RELEASE_140 New functionality for copying materials with linked textures to other Projects.></p>
 <p>如果复制材质（带有相对纹理路径）到另一个工程中，而它无法找到贴图时，会弹出一个提醒窗口询问是否将路径信息修改为绝对路径（链接到原始路径）。如果选择<span class="command">否</span>，则需要手动将纹理复制到已知的 CINEMA 4D （相对）路径中。</p>
@@ -44,7 +44,7 @@
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>由于重新链接大量贴图或将它们设置为绝对或相对路径非常麻烦，因此可以用<a href="52276.html" target="">贴图管理器</a>来简单地实现上述操作。</div></p>
 <p>可以使用三角按钮、纹理框或三点按钮来加载贴图。点击按钮或纹理框，然后使用弹出的菜单或文件选择对话框来加载纹理。</p>
 <p>一旦加载了一个纹理，它的预览会出现在纹理框的下方，并在预览下方显示三个参数，分别是贴图的宽度、高度和位深。如果点击预览图像或贴图/着色器的名称，图像/着色器会被加载到材质编辑器，然后可以从外部编辑图像或修改着色器设置。</p>
-<p><div class="image_full" style="max-width:457px"><img  src="../pics/004295.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:457px"><img  src="../pics/004xxx/004295.jpg"  ><span class="caption"></span></div></p>
 <p>点击纹理框旁的三角按钮打开菜单来加载图像或通道着色器。菜单中还包含以下命令：</p>
 <p><!--INDEX "7","清除","no_command_1"--><a id="no_command_1" name="no_command_1"></a>   <span class="c4d_menu_id">清除</span></p>
 <p>从材质通道中移除纹理/图像。</p>
@@ -71,41 +71,41 @@
 <p><!--INDEX "7","着色器","no_command_11"--><a id="no_command_11" name="no_command_11"></a>   <span class="c4d_menu_id">着色器</span></p>
 <p>可以在菜单底部找到着色器列表，其中包含了所有安装的插件。</p>
 <p><!--INDEX "8","三点按钮、纹理框","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">三点按钮、纹理框</span></p>
-<p><div class="image_full" style="max-width:36px"><img  src="../pics/004297.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:36px"><img  src="../pics/004xxx/004297.jpg"  ><span class="caption"></span></div></p>
 <p>要加载位图到材质通道中，点击材质框或三点按钮，然后在打开的文件选择对话框中加载位图。参见<a href="XBITMAP.html" target="">位图着色器</a>。</p>
 <p><a id="INT" name="INT"></a></p>
 <p><!--INDEX "8","采样","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">采样</span> </p>
 <p>使用<span class="command">采样</span>来控制纹理的像素插值。对于动画或向地平线延伸（如地面）的静帧物体来说，<span class="command">MIP</span> 和 <span class="command">SAT</span> 是最佳的选择。</p>
 <p><span class="command">平方</span>、<span class="command">Alias 1</span>、<span class="command">Alias 2</span> 和 <span class="command">Alias 3</span> 一般只用在静态图片中，它们会产生干脆锐利的纹理，但是对于动画来说太过于锐利，容易造成动画画面闪烁。而 <span class="command">MIP</span> 和 <span class="command">SAT</span> 会轻微模糊贴图来避免闪烁。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004304.jpg"  ><span class="caption">示例纹理。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004304.jpg"  ><span class="caption">示例纹理。</span></div></p>
 <p><!--INDEX "10","无","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">无</span></p>
 <p>当<span class="command">采样</span>设为<span class="command_value">无</span>时，不会对原始贴图进行插值。这种方式的渲染速度快，但是往往效果不好，所以通常不使用它。在不插值的情况下纹理容易产生锯齿，可以使用高抗锯齿设置来减少这种情况。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004305.jpg"  ><span class="caption">无。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004305.jpg"  ><span class="caption">无。</span></div></p>
 <p><!--INDEX "10","圆环","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">圆环</span> </p>
 <p><span class="command">圆环</span>采样使用采样点周围环形区域的像素，使用这种模式渲染时间会增加，而效果看上去比使用“无”模式更加自然。但是正如示例中演示的，直线显示会出现问题，看上去像破损了一样。另外，在地平线附近贴图的锯齿也很严重。不过，<span class="command">圆环</span>采样对于非常小的贴图（如 3 × 3 像素）来说是一个不错的选择，它会让像素自然地混合。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004306.jpg"  ><span class="caption">圆环。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004306.jpg"  ><span class="caption">圆环。</span></div></p>
 <p><!--INDEX "10","平方","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">平方</span></p>
 <p><span class="command">平方</span>采样使用采样点周围正方形区域的像素，这会在贴图的像素之间产生比<span class="command">无</span>模式更加柔和的过度，图片质量也很好。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004307.jpg"  ><span class="caption">平方。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004307.jpg"  ><span class="caption">平方。</span></div></p>
 <p><!--INDEX "10","Alias 1、Alias 2、Alias 3","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Alias 1、Alias 2、Alias 3</span></p>
 <p><span class="command">Alias 1</span>、<span class="command">Alias 2</span> 和 <span class="command">Alias 3</span> 的混合强度比环形和平方更高，其中<span class="command">Alias 3</span> 的混合强度最高，<span class="command">Alias 1</span> 最低。在下图的示例中，使用 <span class="command">Alias 3</span> 都快无法分辨贴图了，因为其尺寸很小（16 × 16）。<span class="command">Alias 3</span> 可以产生比 <span class="command">Alias 1</span> 更平滑的结果，但是也会花费更多计算时间。</p>
 <p>然而，即使是 <span class="command">Alias 3</span> 也无法避免地平线附近的锯齿！</p>
-<p><div class="image_full" style="max-width:915px"><img  src="../pics/004308.jpg"  ><span class="caption">Alias 1、Alias 2、Alias 3。</span></div></p>
+<p><div class="image_full" style="max-width:915px"><img  src="../pics/004xxx/004308.jpg"  ><span class="caption">Alias 1、Alias 2、Alias 3。</span></div></p>
 <p><!--INDEX "10","MIP","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">MIP</span> </p>
 <p><span class="command">MIP</span> 表示 <span class="command">multum in parvo</span>，这是 <span class="command">many things in a small place（小范围内的大量物体）</span> 的拉丁文。当许多贴图位于单个屏幕像素范围内时，会基于这些已知的贴图像素计算近似值，像素混合十分平滑。<span class="command">MIP</span> 是默认的采样类型。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004309.jpg"  ><span class="caption">MIP。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004309.jpg"  ><span class="caption">MIP。</span></div></p>
 <p><!--INDEX "10","SAT","no_cycle_id_6"--><a id="no_cycle_id_6" name="no_cycle_id_6"></a> <span class="no_cycle_id">SAT</span> </p>
 <p><span class="command">SAT</span> 是 <span class="command">summed area tables（总和面积表）</span> 的缩写，它可以产生比 MIP 更好的近似计算结果。与 MIP 类似，近似计算是根据位于单个屏幕像素内的贴图像素来计算的。SAT 是质量最高的采样类型。</p>
-<p><div class="image_full" style="max-width:480px"><img  src="../pics/004310.jpg"  ><span class="caption">SAT。</span></div></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004310.jpg"  ><span class="caption">SAT。</span></div></p>
 <p> </p>
 <p><p><div class="hint"><span class="HL_hint"></span>SAT 支持的贴图最高分辨率是 4,000 × 4,000 像素，如果你设置为 SAT 采样却使用了超过这个尺寸的贴图，CINEMA 4D 会自动切换为 MIP 采样模式。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","MIP / SAT","hl_1"--><p><span class="HL_1">MIP / SAT</span></p>
 <p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图对于高质量动画和延伸向地平线的静物（如海洋）尤为重要。</p>
 <p>下面的两幅图片演示了 <span class="command">MIP</span> / <span class="command">SAT</span> 贴图。地板使用的是圆环采样，尽管整体质量还不错，但是随着向地平线延伸，它的质量迅速下降。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004311.jpg"  ><span class="caption">图1：使用 MIP 采样渲染。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004311.jpg"  ><span class="caption">图1：使用 MIP 采样渲染。</span></div></p>
 <p>这种糟糕的效果由于透视变形造成的，每个屏幕像素代表了靠近地平线的那些包含成百上千个贴图像素的地板。</p>
 <p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图使用这些像素来计算近似值。由于计算准确值会大量增加渲染时间，因此只会计算一个近似值。图2 设置了 2 × 2 超采样的边缘抗锯齿，材质使用 <span class="command">SAT</span> 采样。图片质量提升很大，包括球面上的反射。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004312.jpg"  ><span class="caption">图2：使用 SAT 采样渲染。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004312.jpg"  ><span class="caption">图2：使用 SAT 采样渲染。</span></div></p>
 <p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图的缺点是它们需要更多的内存。<span class="command">MIP</span> 贴图对每个纹理像素需要额外1字节内存，而 <span class="command">SAT</span> 需要额外12字节。虽然 <span class="command">SAT</span> 贴图产生的渲染质量比 <span class="command">MIP</span> 更好，但 <span class="command">MIP</span> 贴图使用的内存更少，因此它是默认的插值类型。</p>
 <p>根据经验，可以默认使用 <span class="command">MIP</span> 贴图，如果需要则更改为 <span class="command">SAT</span> 贴图。CINEMA 4D 着色器会自动使用  <span class="command">SAT</span> 贴图而不需要消耗额外的内存。</p>
 <p><span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图会影响渲染时间。一方面，<span class="command">MIP</span> 和 <span class="command">SAT</span> 贴图会略微增加渲染时间。另一方面，你可能需要减少抗锯齿设置。</p>

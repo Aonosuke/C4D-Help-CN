@@ -41,20 +41,20 @@
 <p><a id="VPAMBIENTOCCLUSION_CACHE_QUALITY" name="VPAMBIENTOCCLUSION_CACHE_QUALITY"></a> <!--INDEX "8","记录密度","VPAMBIENTOCCLUSION_CACHE_QUALITY"--><span class="c4d_id">记录密度</span></p>
 <p>不要对后文中描述的大量设置感到迷惑，因为环境吸收与<a href="VPGISETUP-GI_GROUP_IRRADIANCE.html" target="">辐照缓存</a>的原理类似，大部分设置都是相同的。在大部分情况下，你只需要调节<span class="command">记录密度</span>设置,这项设置相应地定义了下级参数（只有在环境吸收总是出错或者精确度不够的情况下才需要单独修改这些参数）。</p>
 <p>环境吸收工作原理的简述：在渲染过程中，会进行一些预计算（预解算），在这期间会对工程进行分析，以此来检查摄像机中最重要的区域（角落上的“着色点”、凹面区域等）的环境可见度，然后计算环境吸收数值：</p>
-<p><div class="image_full" style="max-width:791px"><img  src="../pics/037072.jpg"  ><span class="caption">环境吸收着色点会被安排在节点处并保存到环境吸收缓存中。</span></div></p>
+<p><div class="image_full" style="max-width:791px"><img  src="../pics/03xxxx/037072.jpg"  ><span class="caption">环境吸收着色点会被安排在节点处并保存到环境吸收缓存中。</span></div></p>
 <p>全部环境吸收数值会被缓存到环境吸收缓存中并保存为一个文件，以供之后使用。</p>
 <p>在第二步中，选择性计算的环境吸收数值会被插值和平滑。</p>
 <p>以下设置主要用来散布着色点（提醒：除这些设置外，<span class="command">基本</span>标签页中可以设置每个着色点会在半球内生成多少取样、它们的长度和效果的颜色）。</p>
 <p><a id="VPAMBIENTOCCLUSION_CACHE_ENABLE" name="VPAMBIENTOCCLUSION_CACHE_ENABLE"></a> <!--INDEX "8","启用缓存","VPAMBIENTOCCLUSION_CACHE_ENABLE"--><span class="c4d_id">启用缓存</span></p>
 <p>若禁用，环境吸收会按 CINEMA 4D R15 （&lt;R15）之前的版本中的方式运行：对每个像素计算环境可见度。若启用，会使用上文中所描述的环境吸收缓存。</p>
 <p><a id="VPAMBIENTOCCLUSION_CACHE_SAMPLES" name="VPAMBIENTOCCLUSION_CACHE_SAMPLES"></a> <!--INDEX "8","采样","VPAMBIENTOCCLUSION_CACHE_SAMPLES"--><span class="c4d_id">采样</span> <span class="range">[16..16384]</span></p>
-<p><div class="image_full" style="max-width:1100px"><img  src="../pics/037073.jpg"  ><span class="caption">左图：低<span class="command">采样</span>值；右图：高<span class="command">采样</span>值。模型由 Steen Winther 提供。</span></div></p>
+<p><div class="image_full" style="max-width:1100px"><img  src="../pics/03xxxx/037073.jpg"  ><span class="caption">左图：低<span class="command">采样</span>值；右图：高<span class="command">采样</span>值。模型由 Steen Winther 提供。</span></div></p>
 <p>这是每个着色点在半球范围内发出的采样数。如果环境吸收看上去呈斑点状，需要增大该参数值。</p>
 <p><a id="VPAMBIENTOCCLUSION_CACHE_RATE_MIN" name="VPAMBIENTOCCLUSION_CACHE_RATE_MIN"></a> <!--INDEX "8","最小比率","VPAMBIENTOCCLUSION_CACHE_RATE_MIN"--><span class="c4d_id">最小比率</span> <span class="range">[-8..4]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_RATE_MAX" name="VPAMBIENTOCCLUSION_CACHE_RATE_MAX"></a> <!--INDEX "8","最大比率","VPAMBIENTOCCLUSION_CACHE_RATE_MAX"--><span class="c4d_id">最大比率</span> <span class="range">[-8..4]</span></p>
-<p><div class="image_full" style="max-width:616px"><img  src="../pics/037074.jpg"  ><span class="caption"><span class="command">最小比率</span>和<span class="command">最大比率</span>，左图：-8/-8；右图：-8/+4。</span></div></p>
+<p><div class="image_full" style="max-width:616px"><img  src="../pics/03xxxx/037074.jpg"  ><span class="caption"><span class="command">最小比率</span>和<span class="command">最大比率</span>，左图：-8/-8；右图：-8/+4。</span></div></p>
 <p>这两个设置在多数情况下可以忽略，它们产生的影响基本看不见。<span class="command">最小比率</span>和<span class="command">最大比率</span>“最差”的设置（分别都设为 <span class="command_value">-8</span>）与“最好”（分别设为 <span class="command_value">-8</span> 和 <span class="command_value">+4</span>）的差别很小（见上图）。</p>
 <p>不过，还是需要注意它们的作用：当预解算完成（在这个阶段，渲染区块起初很大，并逐渐变小），渲染密度的分布会被设定。这是一个具有适应性的过程，在关键区域会被着重强调。<span class="command">最小比率</span>和<span class="command">最大比率</span>之间的区别定义了预解算的数量。</p>
-<p><div class="image_full" style="max-width:3204px"><img  src="../pics/037075.jpg"  ><span class="caption"><span class="command">最小比率</span>和<span class="command">最大比率</span>分别为 <span class="command_value">-7</span> 和 <span class="command_value">0</span>。</span></div></p>
+<p><div class="image_full" style="max-width:3204px"><img  src="../pics/03xxxx/037075.jpg"  ><span class="caption"><span class="command">最小比率</span>和<span class="command">最大比率</span>分别为 <span class="command_value">-7</span> 和 <span class="command_value">0</span>。</span></div></p>
 <p>将值设为 <span class="command_value">0</span> 时结果为全尺寸分辨率（像素尺寸 1*1）；将值设为 <span class="command_value">-1</span> 时像素尺寸为 2*2，<span class="command_value">-2</span> = 4*4，以此类推。<span class="command">最小比率</span>的数值因此应该低于或等于<span class="command">最大比率</span>值。也可以使用正值，这时会在亚像素区域进行缓存（这在有些情况下很有用，如丢失细节的情况下与<a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html#MATERIAL_DISPLACEMENT_SUBPOLY" target="">次多边形置换</a>一起使用时）。</p>
 <p><a id="VPAMBIENTOCCLUSION_CACHE_DENSITY" name="VPAMBIENTOCCLUSION_CACHE_DENSITY"></a> <!--INDEX "8","密度","VPAMBIENTOCCLUSION_CACHE_DENSITY"--><span class="c4d_id">密度</span> <span class="range">[10..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_DETAILS" name="VPAMBIENTOCCLUSION_CACHE_DETAILS"></a> <!--INDEX "8","最小间距","VPAMBIENTOCCLUSION_CACHE_DETAILS"--><span class="c4d_id">最小间距</span> <span class="range">[0..1000%]</span><br><a id="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT" name="VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"></a> <!--INDEX "8","最大间距","VPAMBIENTOCCLUSION_CACHE_MAX_LIMIT"--><span class="c4d_id">最大间距</span> <span class="range">[0..1000%]</span></p>
 <p>这三项设置一起说比较好，因为它们总是共同运作，简单的说，它们定义了一般着色点在关键和非关键区域的密度：<ul></p>

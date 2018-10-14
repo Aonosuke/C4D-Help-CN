@@ -30,10 +30,10 @@
 <p><PAGE_RELEASE_110></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","那么光线实际来自哪里？","hl_1"--><p><span class="HL_1">那么光线实际来自哪里？</span></p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","示例 1","hl_2"--><p><span class="HL_2">示例 1</span></p>
-<p><div class="image_full" style="max-width:1200px"><img  src="../pics/020170.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/02xxxx/020170.jpg"  ><span class="caption"></span></div></p>
 <p>对象被放置并添加了纹理/颜色，且完成了轻微反射的地面之后，你就可以照亮场景了。</p>
 <p>在这个场景中，除<a href="5798.html" target="">物理天空</a>外的光源只有左侧的两个辉光灯。</p>
-<p><div class="image_full" style="max-width:1199px"><img  src="../pics/020171.jpg"  ><span class="caption">场景中使用的物理天空和两个多边形灯光。</span></div></p>
+<p><div class="image_full" style="max-width:1199px"><img  src="../pics/02xxxx/020171.jpg"  ><span class="caption">场景中使用的物理天空和两个多边形灯光。</span></div></p>
 <p>房间的前面和背面是开放的，可以让大量的光线进入，两种类型的光通过这些开放的面进入房间，它们都来自于物理天空：<ul></p>
 <p><li> 投下区域阴影的黄色阳光</li>
 <li> 通过天空半球发射的偏蓝色天光。</li>
@@ -42,20 +42,20 @@
 <p>这几个光源足够在这个场景中实现真实的光照效果，而大量的工作是由全局光照完成的，使用的<span class="command">预设</span>为<span class="command_value">室内-高品质（高漫射深度）</span>。</p>
 <p>使用的天空对象轻微提高了<a href="OSKYSHADER-ID_SKY_GROUP_PHYSICAL_SKY.html#SKY_REAL_SKY_SKY_INTENSITY" target="">天空</a>的数值并大幅提高了<a href="OSKYSHADER-ID_SKY_GROUP_PHYSICAL_SUN.html#SKY_REAL_SKY_SUN_INTENSITY" target="">太阳</a>的数值。</p>
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","示例 2","hl_3"--><p><span class="HL_2">示例 2</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020172.jpg"  ><span class="caption">场景由 Holger Schömann 提供。</span></div> </p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020172.jpg"  ><span class="caption">场景由 Holger Schömann 提供。</span></div> </p>
 <p>除了地面瓷砖的散布反射和置换生成的地毯，场景中还使用了 HDRI 光照设置。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020173.jpg"  ><span class="caption">光线只能通过窗户和天井进入房间。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020173.jpg"  ><span class="caption">光线只能通过窗户和天井进入房间。</span></div></p>
 <p>这个房间有两个相当大的开口，光线可以通过它们进入——天井和窗户中的天光。两个开口都被设定为 <a href="32221.html" target="">GI 入口</a>，这样就可以将全局光照计算集中在正确的区域。光线是由<a href="OSKY.html" target="">天空</a>对象的 <a href="11801.html" target="">HDRI</a> 纹理生成的。</p>
 <p><a id="hl_4" name="hl_4"></a><!--INDEX "3","示例 3","hl_4"--><p><span class="HL_2">示例 3</span></p>
-<p><div class="image_full" style="max-width:1000px"><img  src="../pics/020174.jpg"  ><span class="caption">使用了4个区域光来照亮花瓶。</span></div></p>
+<p><div class="image_full" style="max-width:1000px"><img  src="../pics/02xxxx/020174.jpg"  ><span class="caption">使用了4个区域光来照亮花瓶。</span></div></p>
 <p>是什么让这个花瓶渲染效果这么好？实际上并没有什么特别的（除了优秀的场景本身……）：场景是通过四个略微偏蓝和偏橙的<a href="OLIGHT-LIGHT_GROUP_GENERAL.html#LIGHT_TYPE" target="">区域</a>光照亮的，并在“细节”标签页中将衰减设置为“平方倒数”。这种衰减类型很重要，因为它是模拟真实世界中光线衰减最准确的。另外，对这几个区域光启用了<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SHOWINREFLECTION" target="">反射可见</a>，这样可以在花瓶表面看到区域光的反射。</p>
 <p>如你在上图中所看到的，使用全局光照（<span class="command">辐照缓存+辐照缓存</span>，<span class="command">漫射深度</span> = 3）可以实现均匀和舒服的光线散布。</p>
 <p><a id="hl_5" name="hl_5"></a><!--INDEX "3","室外场景","hl_5"--><p><span class="HL_1">室外场景</span></p>
-<p><div class="image_full" style="max-width:981px"><img  src="../pics/020176.jpg"  ><span class="caption">左图：<span class="command">漫射深度</span> = <span class="command_value">1</span>；右图：漫射深度 = 3。可见的差别很小，但是渲染时间的差别很大。</span></div></p>
+<p><div class="image_full" style="max-width:981px"><img  src="../pics/02xxxx/020176.jpg"  ><span class="caption">左图：<span class="command">漫射深度</span> = <span class="command_value">1</span>；右图：漫射深度 = 3。可见的差别很小，但是渲染时间的差别很大。</span></div></p>
 <p>对主要被天空照亮的室外场景来说，<span class="command">漫射深度</span>设为<span class="command_value">1</span>将足够了，因为天空会从每一个方向发射光线，并且几乎所有对象的表面都能“看到”天空并被它的光线照亮。</p>
 <p><a id="32BIT" name="32BIT"></a></p>
 <p><a id="hl_6" name="hl_6"></a><!--INDEX "3","颜色映射和32位渲染","hl_6"--><p><span class="HL_1">颜色映射和32位渲染</span></p>
-<p><div class="image_full" style="max-width:1200px"><img  src="../pics/020177.jpg"  ><span class="caption">左图是一张正常的8位渲染图；右图是使用颜色映射渲染的图像。唯一的光源是一个多边形灯光（使用了发光材质的对象）。场景由 Holger Schömann 提供。</span></div></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/02xxxx/020177.jpg"  ><span class="caption">左图是一张正常的8位渲染图；右图是使用颜色映射渲染的图像。唯一的光源是一个多边形灯光（使用了发光材质的对象）。场景由 Holger Schömann 提供。</span></div></p>
 <p>要实现理想的渲染效果，平衡渲染图像中的亮度十分重要。很多时候场景中的亮度并不均匀，或者有不合适的亮度对比。如果场景被渲染得太暗，有时候艺术家倾向于提高光源的亮度，这时会发现一些区域会被照得过于明亮了。</p>
 <p>有两种方法可以避免这种情况：<ul></p>
 <p><li> <a href="VPCOLORMAPPING-ID_VIDEOPOSTPROPERTIES.html" target="">颜色映射</a></li>
@@ -63,7 +63,7 @@
 <p>两种方法所做的工作基本相同：它们用高颜色深度来渲染图片然后将其转换为8位图像。</p>
 <p><a id="GLAS" name="GLAS"></a></p>
 <p><a id="hl_7" name="hl_7"></a><!--INDEX "3","从全局光照中排除玻璃","hl_7"--><p><span class="HL_1">从全局光照中排除玻璃</span></p>
-<p><div class="image_full" style="max-width:751px"><img  src="../pics/020179.jpg"  ><span class="caption">可以用不同的方法将透明物体从全局光照中排除。从左到右渲染时间依次增加。注意中间图像中的阴影被渲染得很暗。</span></div></p>
+<p><div class="image_full" style="max-width:751px"><img  src="../pics/02xxxx/020179.jpg"  ><span class="caption">可以用不同的方法将透明物体从全局光照中排除。从左到右渲染时间依次增加。注意中间图像中的阴影被渲染得很暗。</span></div></p>
 <p>根据场景的不同，从全局光照中排除对象的方式有：<ul></p>
 <p><li> 使用合成标签（<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYGI" target="_self"><span class="text_id">全局光照可见</span></a>选项） </li>
 <li> 或者在材质通道中（<a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html#gi" target="">接收全局光照</a>选项或对焦散使用<span class="command">产生全局光照</span>）对特定材质“阻止”全局光照（根据<span class="command">接收全局光照</span>选项，这会对透明材质自动产生影响。参见<a href="VPGISETUP-GI_GROUP_OPTIONS.html#GI_SETUP_DATA_EXTRA_NON_DIFFUSE_CUTOFF" target="">玻璃/镜子优化</a>）。</li></ul><p></p>

@@ -28,11 +28,11 @@
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
 <img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi_self">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>透明</span></p><p></p>
 <p><!--INDEX "1","透明",""--></p>
-<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004324.jpg"  ><span class="caption"></span></div> </p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004xxx/004324.jpg"  ><span class="caption"></span></div> </p>
 <p>你可以在这里设置透明度。如果材质有颜色，则颜色会随着透明度的增加而减少，计算方法是：颜色百分比+透明度百分比=100%。因此透明度为 <span class="command_value">0%</span> 的白色材质颜色为白色（100%）、透明度为 <span class="command_value">50%</span> 时颜色为灰色（50%白）、透明度为 <span class="command_value">100%</span> 时没有颜色。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>在使用了吸收的情况下可以实现更好的效果（见下文）。</div></p>
 <p>使用三点按钮可以加载一个纹理作为透明贴图，贴图上像素的亮度越高，材质上对应区域的透明度也就越高。透明纹理贴图与幻灯片类似：红色部分只允许红色光通过、白色光允许所有光通过、黑色则不允许光线通过。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004326.jpg"  ><span class="caption">图 6：可以通过透明贴图或透明颜色来控制透明度。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004326.jpg"  ><span class="caption">图 6：可以通过透明贴图或透明颜色来控制透明度。</span></div></p>
 <p>对光源赋予透明材质可以创造光线映射或<span class="command">凝胶</span>，这时会根据纹理的颜色分布过滤光线，就像真实的凝胶一样。</p>
 <p><a id="MATERIAL_TRANSPARENCY_COLOR" name="MATERIAL_TRANSPARENCY_COLOR"></a> <!--INDEX "8","颜色","MATERIAL_TRANSPARENCY_COLOR"--><span class="c4d_id">颜色</span></p>
 <p>在大部分材质通道页面，可以使用取色器来选取颜色。</p>
@@ -43,26 +43,26 @@
 <p></p></div></p>
 <p><a id="MATERIAL_TRANSPARENCY_REFRACTION" name="MATERIAL_TRANSPARENCY_REFRACTION"></a> <!--INDEX "8","折射率","MATERIAL_TRANSPARENCY_REFRACTION"--><span class="c4d_id">折射率</span> <span class="range">[0.25..4]</span></p>
 <p>没有闭合的对象，例如没有封顶的半圆，在折射情况下会产生无法预期的结果，参见图 1 到 图 3，图中 <span class="command">n</span> 表示折射率。</p>
-<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004327.jpg"  ><span class="caption">图 1。</span></div> </p>
+<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004xxx/004327.jpg"  ><span class="caption">图 1。</span></div> </p>
 <p>当光线碰撞到一个有透明度和折射率的闭合表面（图 1）时，光线会偏转来模拟折射现象。偏转的光线可以看作进入了物体内部。当光线到达了物体的另一个表面（出射面）时会再次偏转。</p>
 <p>但是，当对象未闭合时，光线不会碰撞到物体的第二个表面（图 2），因此光线可能不会再次偏转，而折射效果会不准确。 </p>
-<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004328.jpg"  ><span class="caption">图 2。</span></div></p>
+<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004xxx/004328.jpg"  ><span class="caption">图 2。</span></div></p>
 <p>正因为如此，要确保场景中所有的透明表面都是闭合的（图 3）。</p>
-<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004329.jpg"  ><span class="caption">图 3。</span></div></p>
+<p><div class="image_limit" style="max-width: 100px"><img  src="../pics/004xxx/004329.jpg"  ><span class="caption">图 3。</span></div></p>
 <p><a id="MATERIAL_TRANSPARENCY_FRESNEL" name="MATERIAL_TRANSPARENCY_FRESNEL"></a> <!--INDEX "8","全内部反射","MATERIAL_TRANSPARENCY_FRESNEL"--><span class="c4d_id">全内部反射</span> </p>
 <p>当<span class="command">菲涅耳反射率</span>高于0%时，摄像机与物体表面之间的夹角会对透明效果产生影响。如果观察一块真实的玻璃，当眼睛与玻璃平行时（即视线与玻璃表面垂直），你会发现玻璃几乎没有反射，几乎所有光线都会通过玻璃。但是当从一个比较小的角度观察，玻璃会反射很多周围的环境。透明度和反射率会受到视角的影响。</p>
 <p>菲涅耳选项会模拟这种现象。</p>
 <p>注意，可以使用<span class="command">反射</span>通道的<a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html#trans" target="">* 透明度 *</a>设置对反射属性（<span class="command">粗糙度</span>、<span class="command">各向异性</span>等）进行微调。</p>
 <p>例如，假设<span class="command">菲涅耳反射率</span>为 100%，透明度设置为 RGB 80% / 80% / 80%，当视角为90°时，材质的透明度为80%、反射率为0%。当视角很小是，材质的透明度会接近0%，反射率为80%。如果除了透明度外输入了反射率，这个数值会添加到受视角影响的反射上。</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004330.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004330.jpg"  ><span class="caption"></span></div></p>
 <p>如果<span class="command">菲涅耳反射率</span>为0%，会直接使用透明度和反射率，因为这时它们不受视角影响。</p>
 <p><RELEASE_110 Exit Reflections can be disabled.></p>
 <p><a id="MATERIAL_TRANSPARENCY_EXITREFLECTIONS" name="MATERIAL_TRANSPARENCY_EXITREFLECTIONS"></a> <!--INDEX "8","双面反射","MATERIAL_TRANSPARENCY_EXITREFLECTIONS"--><span class="c4d_id">双面反射</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020033.jpg"  ><span class="caption">上图：启用<span class="command">双面反射</span>；下图：禁用<span class="command">双面反射</span>。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020033.jpg"  ><span class="caption">上图：启用<span class="command">双面反射</span>；下图：禁用<span class="command">双面反射</span>。</span></div></p>
 <p>当光线通过玻璃折射时会在两个表面产生略微不同的反射，一个在入射表面，另一个在出射表面。通常只有一个反射的效果会更好（尽管这是不真实的），这时需要禁用<span class="command">双面反射</span>选项。</p>
 <p></RELEASE_110></p>
 <p><a id="MATERIAL_TRANSPARENCY_FRESNELREFLECTIVITY" name="MATERIAL_TRANSPARENCY_FRESNELREFLECTIVITY"></a> <!--INDEX "8","菲涅耳反射率","MATERIAL_TRANSPARENCY_FRESNELREFLECTIVITY"--><span class="c4d_id">菲涅耳反射率</span> <span class="range">[0..100%]</span> </p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004331.jpg"  ><span class="caption">图 4：高<span class="command">菲涅耳反射率</span>（左）与低<span class="command">菲涅耳反射率</span>（右）。</span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004331.jpg"  ><span class="caption">图 4：高<span class="command">菲涅耳反射率</span>（左）与低<span class="command">菲涅耳反射率</span>（右）。</span></div></p>
 <p>菲涅耳反射率会影响菲涅耳反射的强度（见图 4）。</p>
 <p><a href="XSLAFRESNEL.html" target="">菲涅耳着色器</a>中提供了更多设置。</p>
 <p><a id="MATERIAL_TRANSPARENCY_ADDITIVE" name="MATERIAL_TRANSPARENCY_ADDITIVE"></a> <!--INDEX "8","附加","MATERIAL_TRANSPARENCY_ADDITIVE"--><span class="c4d_id">附加</span></p>
@@ -84,37 +84,37 @@
 <p><span class="command">混合强度</span>决定了贴图和颜色的混合比例。</p>
 <p><RELEASE_110 Realistic-looking glass using Absorption.></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","吸收","hl_1"--><p><span class="HL_1">吸收</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020034.jpg"  ><span class="caption">吸收绿色。</span></div> </p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020034.jpg"  ><span class="caption">吸收绿色。</span></div> </p>
 <p>当光进入透明介质时，它会减弱并在一定程度上改变颜色或变为另一种颜色（玻璃几乎不可能是完全无色的）。介质越厚，光线在穿过时就会变得越弱（玻璃并不是完全透明的）。这些现象可以使用下面两个参数进行模拟。下面的<span class="command">颜色</span>指的是透明通道页面顶部的<span class="command">颜色</span>。</p>
 <p><p><div class="hint"><span class="HL_hint">注意：<br></span><span class="command">吸收</span>在闭合的实体上效果最好，如果实体上有孔洞则会产生错误的结果。</div></p>
 <p><p><div class="hint"><span class="HL_hint">注意：<br></span>当光源的材质启用了<a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOW_TRANSPARENCY" target="">透明</a>，吸收颜色设置会让阴影产生颜色，但如果是软阴影则不会！</div></p>
 <p><a id="MATERIAL_TRANSPARENCY_ABSORPTIONCOLOR" name="MATERIAL_TRANSPARENCY_ABSORPTIONCOLOR"></a> <!--INDEX "8","吸收颜色","MATERIAL_TRANSPARENCY_ABSORPTIONCOLOR"--><span class="c4d_id">吸收颜色</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020035.jpg"  ><span class="caption">从左至右是不同的吸收颜色：绿色、蓝色、黑色（每个对象的颜色为<span class="command">白色</span>）。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020035.jpg"  ><span class="caption">从左至右是不同的吸收颜色：绿色、蓝色、黑色（每个对象的颜色为<span class="command">白色</span>）。</span></div></p>
 <p>当“光线”走过了<span class="command">吸收距离</span>参数设定的距离时，吸收颜色会与<span class="command">颜色</span>叠加。
 </p>
 <p>透明通道有两个颜色：它们的定义如下：<ul></p>
 <p><li> 颜色：在非常薄的对象上所表现的颜色（例如一块玻璃或一小摊水）</li>
 <li> 吸收颜色：大物体的颜色</li></ul><p></p>
 <p>在创建玻璃材质时，一般设置<span class="command">颜色</span>为白色，但并不总是这样：</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/020036.jpg"  ><span class="caption">液体的颜色设置：透明颜色为黄色，吸收颜色为胭脂红。</span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/02xxxx/020036.jpg"  ><span class="caption">液体的颜色设置：透明颜色为黄色，吸收颜色为胭脂红。</span></div></p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","装有液体的玻璃杯模型","hl_2"--><p><span class="HL_3">装有液体的玻璃杯模型</span></p>
 <p>建立装有液体的玻璃杯模型的最佳方法是分别给液体和玻璃杯建模。液体对象应该略微大过容器内壁。一般的玻璃杯（使用样条绘制截面，然后置于一个旋转对象下）外形如下：</p>
-<p><div class="image_limit" style="max-width: 120px"><img  src="../pics/020037.jpg"  ><span class="caption">缩放样条线建立液体模型，让它稍微嵌入到玻璃杯模型中。</span></div></p>
+<p><div class="image_limit" style="max-width: 120px"><img  src="../pics/02xxxx/020037.jpg"  ><span class="caption">缩放样条线建立液体模型，让它稍微嵌入到玻璃杯模型中。</span></div></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span><span class="command">凹陷/空洞对象</span></p>
-<p><div class="image_full" style="max-width:828px"><img  src="../pics/020038.jpg"  ><span class="caption">左：凹陷、吸收对象，无布尔；右：两个对象使用了不同的吸收材质。</p>
+<p><div class="image_full" style="max-width:828px"><img  src="../pics/02xxxx/020038.jpg"  ><span class="caption">左：凹陷、吸收对象，无布尔；右：两个对象使用了不同的吸收材质。</p>
 <p></span></div></p>
 <p>通过将凹陷对象作为较大对象的子对象，然后给它分配一个吸收材质，可以在不使用布尔对象的情况下创建有吸收颜色的凹陷对象。</div></p>
 <p><a id="MATERIAL_TRANSPARENCY_ABSORPTIONDISTANCE" name="MATERIAL_TRANSPARENCY_ABSORPTIONDISTANCE"></a> <!--INDEX "8","吸收距离","MATERIAL_TRANSPARENCY_ABSORPTIONDISTANCE"--><span class="c4d_id">吸收距离</span> <span class="range">[0..+∞m]</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/020039.jpg"  ><span class="caption"><span class="command">吸收距离</span>从左至右依次增加。最左边的值略大于0。所有玻璃的<span class="command">颜色</span>为白色、吸收颜色为绿色。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/02xxxx/020039.jpg"  ><span class="caption"><span class="command">吸收距离</span>从左至右依次增加。最左边的值略大于0。所有玻璃的<span class="command">颜色</span>为白色、吸收颜色为绿色。</p>
 <p></span></div></p>
 <p>使用这个设置可以设定吸收颜色替代<span class="command">颜色</span>之前光线要走过的距离。设置的值越低，吸收颜色就越深，即使玻璃的厚度很薄。如果设为 <span class="command_value">0</span>，则完全没有吸收颜色。</p>
 <p></RELEASE_110></p>
 <p><a id="MATERIAL_TRANSPARENCY_DISPERSION" name="MATERIAL_TRANSPARENCY_DISPERSION"></a> <!--INDEX "8","模糊","MATERIAL_TRANSPARENCY_DISPERSION"--><span class="c4d_id">模糊</span> <span class="range">[0..100%]</span></p>
-<p><div class="image_full" style="max-width:500px"><img  src="../pics/004332.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/004xxx/004332.jpg"  ><span class="caption"></span></div></p>
 <p>使用<span class="command">模糊</span>、<span class="command">最小采样</span>、<span class="command">最大采样</span>和<span class="command">采样精度</span>设置可以模糊透明效果。<span class="command">模糊</span>的数值决定了透明度的模糊程度，<span class="command_value">0%</span> 表示没有模糊，增加数值会增加模糊强度。</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004333.jpg"  ><span class="caption">从左上到右下：<span class="command">模糊</span>效果 <span class="command_value">0、5、10、15、20、25、30、35</span>。渲染时间会指数增加。</span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004333.jpg"  ><span class="caption">从左上到右下：<span class="command">模糊</span>效果 <span class="command_value">0、5、10、15、20、25、30、35</span>。渲染时间会指数增加。</span></div></p>
 <p>透明度模糊与反射模糊的设置是相互独立的，因此即使设置了透明度模糊，透明区域的反射也是清晰的（启用<a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html#MATERIAL_TRANSPARENCY_FRESNEL" target="_self"><span class="text_id">全内部反射</span></a>）。如果想要反射也变成模糊，需要在反射通道中进行相应的设置。</p>
-<p><div class="image_full" style="max-width:1110px"><img  src="../pics/036879.jpg"  ><span class="caption">左图：只在透明通道中启用模糊效果；右图：在反射通道中也启用了模糊（粗糙度）。</span></div></p>
+<p><div class="image_full" style="max-width:1110px"><img  src="../pics/03xxxx/036879.jpg"  ><span class="caption">左图：只在透明通道中启用模糊效果；右图：在反射通道中也启用了模糊（粗糙度）。</span></div></p>
 <p><a id="MATERIAL_TRANSPARENCY_MINSAMPLES" name="MATERIAL_TRANSPARENCY_MINSAMPLES"></a> <!--INDEX "8","最小采样","MATERIAL_TRANSPARENCY_MINSAMPLES"--><span class="c4d_id">最小采样</span> <span class="range">[1..10000]</span><br><a id="MATERIAL_TRANSPARENCY_MAXSAMPLES" name="MATERIAL_TRANSPARENCY_MAXSAMPLES"></a> <!--INDEX "8","最大采样","MATERIAL_TRANSPARENCY_MAXSAMPLES"--><span class="c4d_id">最大采样</span> <span class="range">[1..10000]</span></p>
 <p>当<span class="command">模糊</span>高于<span class="command_value">0%</span>时可以设置这些参数。</p>
 <p>提高<span class="command">最小采样</span>和/或<span class="command">最大采样</span>的数值会提高模糊质量，同时渲染时间也会增加。</p>

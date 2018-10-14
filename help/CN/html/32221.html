@@ -28,9 +28,9 @@
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
 <!--NO_SEARCH_END--><!--INDEX "2","GI 入口和多边形灯光：功能与布置",""--><p><span class="HL_group">GI 入口和多边形灯光：功能与布置</span></p><p></p>
 <p><PAGE_RELEASE_110></p>
-<p><div class="image_full" style="max-width:1161px"><img  src="../pics/020181.jpg"  ><span class="caption">使用 GI 入口来提高渲染质量。上面的准蒙特卡洛渲染中<span class="command">漫射深度</span>设为<span class="command_value">2</span>。与下图中使用了较低<span class="command">采样</span>的 GI 入口相比，上图的渲染花费了两倍的时间。</span></div></p>
+<p><div class="image_full" style="max-width:1161px"><img  src="../pics/02xxxx/020181.jpg"  ><span class="caption">使用 GI 入口来提高渲染质量。上面的准蒙特卡洛渲染中<span class="command">漫射深度</span>设为<span class="command_value">2</span>。与下图中使用了较低<span class="command">采样</span>的 GI 入口相比，上图的渲染花费了两倍的时间。</span></div></p>
 <p>简单的说，全局光照是基于随机分布的光线来计算的，光线被“发射”到场景中的无数个点上，以此决定每个特定区域的亮度或颜色。自然情况下，许多光线会到达与其光照无关的给定点。将大量光线集中在光线进入场景的区域更加重要，这会让光影的计算更准确。</p>
-<p><div class="image_full" style="max-width:785px"><img  src="../pics/020182.jpg"  ><span class="caption">光线被集中在 GI 入口和多边形灯光（<span class="command">漫射深度</span> = <span class="command_value">2</span>）。</span></div></p>
+<p><div class="image_full" style="max-width:785px"><img  src="../pics/02xxxx/020182.jpg"  ><span class="caption">光线被集中在 GI 入口和多边形灯光（<span class="command">漫射深度</span> = <span class="command_value">2</span>）。</span></div></p>
 <p>窗口、灯光或其他发射光线的物体（如电视机）可以用作放置 GI 入口或多边形灯光的对象，以此来优化全局光照计算。</p>
 <p>因此，当把 GI 入口和多边形灯光设置到发射光线的微小表面上时，它们是主要产生影响的，就像大部分室内的案例中光线通过窗户或门进入房间。在户外天空照明的情况下 GI 入口则没有用处。</p>
 <p>GI 入口和多边形灯光应用区域的区别：<ul></p>
@@ -41,7 +41,7 @@
 <p>在渲染室外场景时不需要 GI 入口和多边形灯光，这时的灯光主要来源于半球形的天空。</p>
 <p><p><div class="hint"><span class="HL_hint">注意：<br></span>GI 入口和多边形灯光的使用会增加图像的光影质量，这让使用较低的全局光照设置来实现相同或更好的质量（较低采样），并由此减少渲染时间成为现实。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","GI 入口应在放在哪里？","hl_1"--><p><span class="HL_1">GI 入口应在放在哪里？</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/020183.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/02xxxx/020183.jpg"  ><span class="caption"></span></div></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>因为算法的改变（从 R12 开始），我们推荐为每个 GI 入口创建一个单独的对象，而不是将室内的几个不相邻多边形创建为一个 GI 入口对象（如各个窗户），否则渲染时间会大幅增加。</div></p>
 <p>GI 入口应该被配置/合适于窗户。当放置到带有十字框架的窗户上时，多个 GI 入口会增加整体的质量。</p>
 <p>GI 入口通常由单一的多边形表面组成（如<span class="command">平面</span>几何体），它被放置到光线通过一个相当窄的开口进入室内的地方，法线的方向没有影响。将每个 GI 入口与相应的窗口或开口的大小相匹配，如果 GI 入口太大，如它穿进了周围的墙壁，则会出现不自然的结果（尤其是在准蒙特卡洛模式下）。不精确的 GI 入口会导致全局光照不准确以及更多噪点。</p>
