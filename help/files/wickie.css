@@ -1,8 +1,10 @@
 a:link            { color: #069; text-decoration: underline; }
 .link_back        { color: #069; font-size: xx-small; text-decoration: underline; display: inline-block; }
 .link_back + div  { margin-top:1em; }
-a:visited         { color: purple; text-decoration: underline; }
+a:visited         { text-decoration: underline; }
 a:hover           { } 
+
+a .c4d_group_navi   {text-decoration: none; }
 
 .HL_group             {                 font-size: 1.6em; font-weight: bold;   padding-top: 10px; display: inline-block; }
 .HL_atom              {                 font-size: 1.2em; font-weight: normal; }
@@ -19,11 +21,12 @@ a:hover           { }
 .c4d_id_cycle         { color: #000080; font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-style: italic; line-height: 14px; padding: 1px; border-color: gray; }
 .no_cycle_id          { color: #000080; font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-style: italic; line-height: 14px; padding: 1px; border-color: gray; }
 .c4d_group_navi       {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #c0c0c0; padding: 1px; border: solid 1px gray; }
-.c4d_group_navi_self  {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #f0f0f0; padding: 1px; border: solid 1px gray; }
+.c4d_group_navi a     {text-decoration: none; }
+.c4d_group_navi_self  {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #e0e0e0; padding: 1px; border: solid 1px gray; }
 .c4d_group            {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; background-color: #c0c0c0; list-style-type: circle; padding: 1px; border: solid 0 gray; }
 .c4d_subgroup         {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 16px; background-color: #c0c0c0; list-style-type: circle; list-style-image: url("subgroup.gif"); padding: 1px; border: solid 0 gray; }
 
-.hint                 { background-color: #e0e0e0; padding: 3px; border-color: #fb0206; clear: both; }
+.hint                 { background-color: #f0f0f0; padding: 3px; border-color: #fb0206; clear: both; }
 .HL_hint              { color: #272daf; font-weight: bold; border-top: 1px #646464; border-right: 1px #646464; outline-width: 2px; }
 .dir_page             { font-size: x-small; }
 .node_in              { color: #369; font-size: 1.6em; font-weight: bold; }
@@ -177,7 +180,6 @@ img.text_cmd_icon                                   { float: none; width: auto; 
   .broadcast    .in-broadcast-page    .page_only_apps,
   .bodypaint3d  .in-bodypaint3d-page  .page_only_apps,
   .studio       .in-studio-page       .page_only_apps   { display: none; }
-
 
   @media print, screen and (max-width: 1080px) {
     div.wrapper {

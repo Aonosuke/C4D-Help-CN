@@ -26,9 +26,20 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi_self">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>选项</span></p><p></p>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p>
+<a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi_self">选项</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a>
+<!--NO_SEARCH_END-->
+<p class="c4d_group"><span>选项</span></p><p></p>
 <p><a id="RDATA_OPTION_TRANSPARENCY" name="RDATA_OPTION_TRANSPARENCY"></a> <!--INDEX "8","透明","RDATA_OPTION_TRANSPARENCY"--><span class="c4d_id">透明</span></p>
-<p><div class="image_full" style="max-width:1281px"><img  src="../pics/020131.jpg"  ><span class="caption">激活透明、折射率、反射和投影选项的各种状态。如果所有四个选项都不启用，渲染的速度会非常快，但结果很不真实。</span></div></p>
+<p><div class="image_full" style="max-width:1281px"><img  src="../pics/02xxxx/020131.jpg"  ><span class="caption">激活透明、折射率、反射和投影选项的各种状态。如果所有四个选项都不启用，渲染的速度会非常快，但结果很不真实。</span></div></p>
 <p>这个选项定义了是否在计算中包含<span class="command">透明</span>或 <span class="command">Alpha</span> 通道。</p>
 <p><a id="RDATA_OPTION_REFRACTION" name="RDATA_OPTION_REFRACTION"></a> <!--INDEX "8","折射率","RDATA_OPTION_REFRACTION"--><span class="c4d_id">折射率</span></p>
 <p>定义了在渲染透明材质时是否包含折射率参数。像玻璃或水这种材质只有使用了折射看上去才会真实，但是渲染时间也会相应增加。如果场景中不包含折射光线的材质则不需要额外的渲染时间。</p>
@@ -48,20 +59,20 @@
 <p><span class="command">跟踪深度</span>决定了渲染器会穿过多少层透明对象（或使用 alpha 通道使其不可见的区域）。跟踪深度设置得越低，可以穿过的对象数量就越少。那些不能穿过的区域会被渲染为黑色。</p>
 <p>将<span class="command">跟踪深度</span>设为 <span class="command_value">1</span> 表示，对于一个像素，当光线碰到场景中的一个物体之后就会停止计算，因此不会看到透明度和 alpha 通道。</p>
 <p>将其设为 <span class="command_value">2</span> 表示，当光线碰到一个表面之后，会为透明度计算第二道光线。跟踪深度越高，进入场景中的光线就行进得越远，渲染的内容也更多。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003875.jpg"  ><span class="caption">结果中包含了透明度和 alpha 通道，并在追踪深度为 2、4、8 时进行渲染，这个参数最大可以设置为 500。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003875.jpg"  ><span class="caption">结果中包含了透明度和 alpha 通道，并在追踪深度为 2、4、8 时进行渲染，这个参数最大可以设置为 500。</p>
 <p></span></div></p>
 <p><a id="RDATA_REFLECTIONDEPTH" name="RDATA_REFLECTIONDEPTH"></a> <!--INDEX "8","反射深度","RDATA_REFLECTIONDEPTH"--><span class="c4d_id">反射深度</span> <span class="range">[1..200]</span></p>
 <p>当一道光线被发送到场景中时，它可以被反射面反射。在某些情况下，如两面对立放置的镜子，这道光线可能会被困在两面镜子之间永远反射，这时光线追踪就永远都无法完成渲染计算。为了防止这种情况，你可以设置最大的反射光线的最大值。</p>
 <p>你还可以使用<span class="command">反射深度</span>来限制渲染图片的时间。通常，只有第一次产生的反射是重要的，之后发声的反射对图像质量的作用很小，但是增加的渲染时间却相当长。</p>
 <p>反射深度设为 <span class="command">1</span> 表示，对于一个像素，当光线碰到场景中的一个物体后就会停止计算。因此不会看到反射。</p>
 <p>将其设为 <span class="command">2</span> 表示，当光线碰到一个表面之后，会为反射计算第二道光线。反射深度越高，进入场景中的光线就行进得越远，渲染的内容也更多。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003876.jpg"  ><span class="caption">结果中包含了反射对象，并在反射深度为 2、4、8 时进行渲染。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003876.jpg"  ><span class="caption">结果中包含了反射对象，并在反射深度为 2、4、8 时进行渲染。</p>
 <p></span></div></p>
 <p><a id="RDATA_SHADOWDEPTH" name="RDATA_SHADOWDEPTH"></a> <!--INDEX "8","投影深度","RDATA_SHADOWDEPTH"--><span class="c4d_id">投影深度</span> <span class="range">[0..500]</span></p>
 <p><span class="command">投影深度</span>与<span class="command">反射深度</span>类似，如果如果一个表面的点位于另一物体的阴影中，这个选项将使用额外的阴影光线来检查哪个阴影会从对象表面被投射，其投射方向为光源方向。</p>
 <p><span class="command">投影深度</span>设置定义了用什么投影深度来计算可见的阴影。例如，如果将数值降为 <span class="command_value">2</span>，则不会对反射、透明和折射光线计算投影。</p>
 <p>下面的示例是将<span class="command">投影深度</span>分别设为 <span class="command_value">2</span>、<span class="command_value">4</span>、<span class="command_value">8</span> 来进行渲染的。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003877.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003877.jpg"  ><span class="caption"></span></div></p>
 <p><a id="RDATA_LIMITREFLECTION" name="RDATA_LIMITREFLECTION"></a> <!--INDEX "8","限制反射仅为地板/天空","RDATA_LIMITREFLECTION"--><span class="c4d_id">限制反射仅为地板/天空</span></p>
 <p>启用这个选项会让光影追踪只在反射表面（不会在其他对象上）计算地板和天空的反射。这种方式对计算的要求不高，因此推荐用在时间比较紧急的情况下。</p>
 <p><a id="RDATA_LOD" name="RDATA_LOD"></a> <!--INDEX "8","细节级别","RDATA_LOD"--><span class="c4d_id">细节级别</span> <span class="range">[0..1000%]</span></p>
@@ -105,7 +116,7 @@
 <p><a id="RDATA_USELOD" name="RDATA_USELOD"></a> <!--INDEX "8","使用显示标签细节级别","RDATA_USELOD"--><span class="c4d_id">使用显示标签细节级别</span></p>
 <p>如果其启用这个选项，渲染器会使用显示标签中指定的细节级别。</p>
 <p><a id="RDATA_SHOWHUD" name="RDATA_SHOWHUD"></a> <!--INDEX "8","渲染 HUD","RDATA_SHOWHUD"--><span class="c4d_id">渲染 HUD</span></p>
-<p><div class="image_full" style="max-width:732px"><img  src="../pics/003878.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:732px"><img  src="../pics/003xxx/003878.jpg"  ><span class="caption"></span></div></p>
 <p>启用这个选项可以在渲染的图像或动画中显示 HUD。这在要在渲染中显示如帧时间等信息时很有用。要了解如何使用 HUD，请查看 <a href="5593.html" target="">HUD</a>。</p>
 <p><RELEASE_110 Doodles can also be integrated into renderings.></p>
 <p><a id="RDATA_RENDERDOODLE" name="RDATA_RENDERDOODLE"></a> <!--INDEX "8","渲染草绘","RDATA_RENDERDOODLE"--><span class="c4d_id">渲染草绘</span></p>
@@ -133,7 +144,7 @@
 <p></RELEASE_140></p>
 <p><RELEASE_115 New, optimized bucket rendering.></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","区块渲染","hl_1"--><p><span class="HL_1">区块渲染</span></p>
-<p><div class="image_full" style="max-width:633px"><img  src="../pics/024505.jpg"  ><span class="caption">每个进程核心会渲染一个“区块”。在上面的示例中，一个四核处理器正在运行。</span></div></p>
+<p><div class="image_full" style="max-width:633px"><img  src="../pics/02xxxx/024505.jpg"  ><span class="caption">每个进程核心会渲染一个“区块”。在上面的示例中，一个四核处理器正在运行。</span></div></p>
 <p>从 CINEMA 4D R11.5 开始，渲染是使用“区块”来完成的，每个方形区域使用单个进程或进程核心分别进行计算。在使用多进程渲染实例时，与之前的“渲染线”方式相比，这是一种优化的渲染方式。另外，对内存的利用也得到了优化，尤其是渲染高分辨率的图像时。</p>
 <p><a id="RDATA_BUCKETSEQUENCE" name="RDATA_BUCKETSEQUENCE"></a> <!--INDEX "8","区块顺序","RDATA_BUCKETSEQUENCE"--><span class="c4d_id">区块顺序</span></p>
 <p>在这里设置区块如何渲染图像。使用哪种顺序完全取决与你，各种顺序之间并没有优劣差别。</p>

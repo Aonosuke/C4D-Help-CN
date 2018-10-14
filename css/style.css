@@ -46,18 +46,18 @@
 }
 
 html, body{ 
-  font-size: 15px; 
+  font-size: 14px; 
   font-family: Noto-Sans-regular,Verdana, Arial, Helvetica, sans-serif; 
   color:rgb(22, 22, 22);
   background-color: #fff; 
-  line-height: 160%; 
+  line-height: 150%; 
   text-align: left;  
   margin: 0; 
   height: 100%;
   width: 100%;
 }
 
-a:link{ color:#637c80 }      /* 未访问的链接 */
+a:link{ color:#637c80 }       /* 未访问的链接 */
 a:visited{color:#637c80 }     /* 已访问的链接 */
 a:hover{ color:#637c80 }      /* 鼠标在链接上 */
-a:active{ color:#637c80 }  /* 点击激活链接 */
+a:active{ color:#637c80 }     /* 点击激活链接 */

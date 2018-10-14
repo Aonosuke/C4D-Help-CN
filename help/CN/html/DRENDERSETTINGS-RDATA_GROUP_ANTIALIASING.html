@@ -26,19 +26,30 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi_self">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>抗锯齿</span></p><p></p>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p>
+<a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi_self">抗锯齿</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a>
+<!--NO_SEARCH_END-->
+<p class="c4d_group"><span>抗锯齿</span></p><p></p>
 <p><!--INDEX "1","抗锯齿",""--></p>
 <p><!--INDEX "1","aa",""--></p>
 <p>抗锯齿会消除图片中的锯齿状边缘，它的原理是将每个像素分解为亚像素，比起每个像素只计算一种颜色，抗锯齿会计算多个色值然后计算均值来得到最终的像素颜色。</p>
-<p><div class="image_full" style="max-width:537px"><img  src="../pics/003840.jpg"  ><span class="caption">使用抗锯齿页面的设置，你可以消除锯齿状边缘。上图的右上角显示了没有抗锯齿的锯齿边缘，右下角则显示了应用抗锯齿之后的平滑效果。</span></div></p>
+<p><div class="image_full" style="max-width:537px"><img  src="../pics/003xxx/003840.jpg"  ><span class="caption">使用抗锯齿页面的设置，你可以消除锯齿状边缘。上图的右上角显示了没有抗锯齿的锯齿边缘，右下角则显示了应用抗锯齿之后的平滑效果。</span></div></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>CINEMA 4D 中的一些特性有它们自己的抗锯齿设置（如反射通道中的漫反射，各向异性等），在通过编辑渲染设置菜单添加抗锯齿设置之前请记住这一点。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","抗锯齿的原理","hl_1"--><p><span class="HL_1">抗锯齿的原理</span></p>
-<p><div class="image_full" style="max-width:1947px"><img  src="../pics/031329.jpg"  ><span class="caption">像素（显示为大方块）被细分为亚像素，每个亚像素会计算一个色值，相近的色值会统计到像素的色值中。</span></div></p>
+<p><div class="image_full" style="max-width:1947px"><img  src="../pics/03xxxx/031329.jpg"  ><span class="caption">像素（显示为大方块）被细分为亚像素，每个亚像素会计算一个色值，相近的色值会统计到像素的色值中。</span></div></p>
 <p>对渲染而言，首先，渲染摄像机角度会被分解成一个像素阵列（通过编辑渲染设置菜单中的<span class="command">宽度</span>和<span class="command">高度</span>参数定义）。每个像素上都会发生很多情况，例如一个对象的边缘会穿过它，一个纹理会将像素分裂成两种不同的颜色等等，但是每个像素都只能有一个色值，考虑到要保持视觉一致性、物体和边缘的自然过渡，计算图像是一项艰巨的任务。</p>
 <p>解决这些问题的一个方案是将每个像素分解为亚像素，并且为每个亚像素单独计算样本（及色值）。这个过程也被称为“超采样”（或“采样”）。</p>
 <p>第二步是根据设定的像素周围半径，来统计这些亚像素的色值（通过后面描述的 filter 来实现）。</p>
 <p><a id="RDATA_ANTIALIASING" name="RDATA_ANTIALIASING"></a> <!--INDEX "8","抗锯齿","RDATA_ANTIALIASING"--><span class="c4d_id">抗锯齿</span></p>
-<p><div class="image_full" style="max-width:685px"><img  src="../pics/031330.jpg"  ><span class="caption">从左至右：无、几何体（轻微模糊的纹理是抗锯齿滤镜的效果）、最佳。</span></div></p>
+<p><div class="image_full" style="max-width:685px"><img  src="../pics/03xxxx/031330.jpg"  ><span class="caption">从左至右：无、几何体（轻微模糊的纹理是抗锯齿滤镜的效果）、最佳。</span></div></p>
 <p><a id="RDATA_ANTIALIASING_NONE" name="RDATA_ANTIALIASING_NONE"></a><!--INDEX "10","无","RDATA_ANTIALIASING_NONE"--><span class="c4d_id_cycle">无</span></p>
 <p>输出的图像不会进行抗锯齿处理（如果有标签进行了不同的设置，那么会忽略这些设置）。对象和颜色边缘会出现阶梯状锯齿。</p>
 <p>这个模式很适合用来快速测试渲染，这时图像质量并不重要。</p>
@@ -52,9 +63,9 @@
 <p><span class="command">最小级别</span> 设定亚像素的最小值，这些亚像素总是会被渲染。默认值 <span class="command_value">1.1</span> 在大多数情况下足够。但是，如果在一些很细节的区域出现瑕疵，如投影消失，则应该使用较高的值。</p>
 <p><span class="command">最大级别</span> 是应用到关键区域（主要是高对比区域，如颜色边缘或透明材质后面的对象边缘）的亚像素颜色散布。如在渲染玻璃时要保证良好的细节，可以增大这个数值。</p>
 <p>在下图中，使用了两种设置的渲染结果之间的差别初看并不明显，如果你想要最好的渲染效果（当然，这会相应地导致更长的渲染时间），则需要对设置进行优化：</p>
-<p><div class="image_full" style="max-width:1200px"><img  src="../pics/031331.jpg"  ><span class="caption">更高的抗锯齿设置通常只会对在细节的地方得到更好的效果。在这个示例中，右图比左图多花费了10倍的渲染时间。</span></div></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/03xxxx/031331.jpg"  ><span class="caption">更高的抗锯齿设置通常只会对在细节的地方得到更好的效果。在这个示例中，右图比左图多花费了10倍的渲染时间。</span></div></p>
 <p><span class="command">阈值</span>定义了对于给定的像素，在颜色分离为何种程度时对其应用最大级别的抗锯齿。较小的数值会允许没有颜色分离，较大的数值则会在有较高的对比时才开始进行平滑。</p>
-<p><div class="image_full" style="max-width:1278px"><img  src="../pics/031332.jpg"  ><span class="caption">在<span class="command">最小级别</span>和<span class="command">最大级别</span>分别为 1×1 和 16×16 时，各种<span class="command">阈值</span>的数值。对各自的情况来说，高对比需要高<span class="command">阈值</span>来进行平滑。</span></div></p>
+<p><div class="image_full" style="max-width:1278px"><img  src="../pics/03xxxx/031332.jpg"  ><span class="caption">在<span class="command">最小级别</span>和<span class="command">最大级别</span>分别为 1×1 和 16×16 时，各种<span class="command">阈值</span>的数值。对各自的情况来说，高对比需要高<span class="command">阈值</span>来进行平滑。</span></div></p>
 <p>上图演示了一个位于玻璃块后面的灰度风扇。为什么要放在玻璃对象后面？根据上面的描述，没有玻璃的话，只有对象的边缘会进行平滑（只有当对象位于透明对象后面或在反射中时，适应性抗锯齿才会生效）。如你所见，低<span class="command">阈值</span>会对所有区域进行平滑，因为在应用平滑前， CINEMA 4D 允许最小的颜色分离。阈值越高，平滑前需要的对比也越高。</p>
 <p>在一个色彩平均的场景中，阈值（颜色）设置为 <span class="command_value">10%</span> 时，大约会对 40% 的像素产生影响；当阈值设置为 <span class="command_value">5%</span> 时，则会对大约 90% 的像素产生影响；当阈值设置为 <span class="command_value">0%</span> 时，会对渲染图像中的每一个像素进行抗锯齿，即使是那些不需要抗锯齿的区域。</p>
 <p>这三个参数对渲染速度有巨大的影响！设置过高会很容易成十倍地增加渲染时间，而渲染质量没有显著的区别。在大多数情况下，默认的数值通常就能渲染出非常不错的结果，也不用花费过多的时间。</p>
@@ -66,7 +77,7 @@
 <p>如果启用了而这个选项，你可以使用合成标签来单独对每个对象指定最小/最大级别和阈值。</p>
 <p><RELEASE_115  Improved antialiasing for alpha channels and Multi-Passes.></p>
 <p><a id="RDATA_AACONSIDERMULTIPASSES" name="RDATA_AACONSIDERMULTIPASSES"></a> <!--INDEX "8","考虑多通道","RDATA_AACONSIDERMULTIPASSES"--><span class="c4d_id">考虑多通道</span></p>
-<p><div class="image_full" style="max-width:746px"><img  src="../pics/024526.jpg"  ><span class="caption">位于一个玻璃立方体后面的对象的 alpha 通道（看起来像<span class="command">折射</span>通道）；图中右半部分启用了考虑多通道选项。</span></div></p>
+<p><div class="image_full" style="max-width:746px"><img  src="../pics/02xxxx/024526.jpg"  ><span class="caption">位于一个玻璃立方体后面的对象的 alpha 通道（看起来像<span class="command">折射</span>通道）；图中右半部分启用了考虑多通道选项。</span></div></p>
 <p>在某些实例中，多通道和 alpha 通道的抗锯齿质量会变得很糟。这会发生在这些情况中：如在一个厚度很薄的结构位于折射透明表面后面，并在黑色的背景下进行渲染。在这种实例中，应该启用这个选项。在许多案例中，降低<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AATHRESHOLD" target="_self"><span class="text_id">阈值</span></a>会很有用。</p>
 <p></RELEASE_115></p>
 <p><RELEASE_130 Re-organization of antialiasing filter, incl. new options.></p>
@@ -74,10 +85,10 @@
 <p>抗锯齿过滤器的工作原理简介如下：根据抗锯齿设置，通过使用各种选项，对每个像素会计算许多亚像素，然后对该像素合成这些颜色（一个像素只能有一种颜色）。这个过滤器对<span class="command_value">几何体</span>(对象边缘平滑)和<span class="command_value">最佳</span>（色彩边缘平滑）这两种抗锯齿类型都是有效的。</p>
 <p>一般来说，过滤器可以控制锐利的边缘如何被渲染。</p>
 <p><a id="FILTER" name="FILTER"></a></p>
-<p><div class="image_full" style="max-width:608px"><img  src="../pics/031333.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:608px"><img  src="../pics/03xxxx/031333.jpg"  ><span class="caption"></span></div></p>
 <p>上图是一条穿过图像的对角线边缘的9个像素。注意看中间的像素，使用了16个亚像素来计算该像素。其中15个是亮灰色，1个是红色。这些像素形成了一个曲线（这个案例中是 Mitchell）。把这个曲线想象成一个像素周围的平面，那么这个曲线定义了每个亚像素的影响度。因为滤镜尺寸（<span class="command">滤镜宽度</span>和<span class="command">滤镜高度</span>，即纳入考虑的亚像素范围）可以扩展到4像素，曲线可以延伸得更多。这意味着大部分的邻近像素会产生相同的亚像素，因此会得到相似的颜色。当然，这时边缘看起来就不再锐利了。</p>
 <p><a id="NEGATIVE" name="NEGATIVE"></a></p>
-<p><div class="image_full" style="max-width:1130px"><img  src="../pics/031334.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1130px"><img  src="../pics/03xxxx/031334.jpg"  ><span class="caption"></span></div></p>
 <p>观察上面的曲线，你会发现一些曲线（Mitchell、立方以及尤其是 Sinc）会降到 0 以下。这意味着在相应的边缘处会渲染反色，即使这些颜色在场景中并不存在。这会让边缘看起来更加锐利，但是在某些环境下这会产生一些问题（参见<span class="command">剪辑负成分</span>选项）。</p>
 <p>在大部分情况下，过滤选项对渲染速度没什么影响。</p>
 <p>建议在动画中使用软过滤，过于锐利的边缘会导致闪烁。</p>
@@ -85,7 +96,7 @@
 <p>滤镜宽度/高度定义了在计算像素颜色时，多少亚像素（从像素中心向外进行计算）会被纳入考虑（另见<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#filter" target="">这里</a>）。</p>
 <p>当启用了<span class="command">自定义尺寸</span>选项，<span class="command">滤镜宽度</span>和<span class="command">滤镜高度</span>会使用理想的数值并显示出来，这些数值与像素相关，也就是说，将这两个参数设置为 <span class="command_value">0.5</span> 表示距离像素中心点上下左右 0.5 像素范围内的亚像素（即该像素表面的所有亚像素）会纳入计算。更高的数值会相应地扩展到周围的像素，这会让渲染的颜色边缘不那么锐利。</p>
 <p><a id="RDATA_AACLIPNEGATIVE" name="RDATA_AACLIPNEGATIVE"></a> <!--INDEX "8","剪辑负成分","RDATA_AACLIPNEGATIVE"--><span class="c4d_id">剪辑负成分</span></p>
-<p><div class="image_full" style="max-width:579px"><img  src="../pics/031335.jpg"  ><span class="caption">一个过滤器函数的负区域会被剪掉。</span></div> </p>
+<p><div class="image_full" style="max-width:579px"><img  src="../pics/03xxxx/031335.jpg"  ><span class="caption">一个过滤器函数的负区域会被剪掉。</span></div> </p>
 <p>如你在<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#negative" target="">这里</a>看到的，一些过滤器（立方、Mitchell、Sinc）函数曲线会经过负数区域，如果启用了<span class="command">剪辑负成分</span>选项，那么负区域会被去掉。这有什么好处？当使用线性工作流程、高颜色浓度和32位渲染时，你可能在合成时碰到一些问题（合并带有 alpha 通道的图像）。观察上图中右侧插入的图像：渲染的立方体被指定了发光的材质，并使用了 <span class="command_value">Sinc</span> 抗锯齿过滤。左边禁用了<span class="command">剪辑负成分</span>选项，右边是开启后的结果。</p>
 <p></RELEASE_130></p>
 <p><a id="RDATA_AAMIPGLOBAL" name="RDATA_AAMIPGLOBAL"></a> <!--INDEX "8","MIP 缩放","RDATA_AAMIPGLOBAL"--><span class="c4d_id">MIP 缩放</span> <span class="range">[0..1000%]</span></p>
@@ -93,7 +104,7 @@
 <p>当使用直接面向摄像机的高细节纹理时，应该增加这个数值，通过抗锯齿会让连续线条的显示结果更好，没有断线。</p>
 <p><RELEASE_115  Switch between Raytracer and Scanliner.></p>
 <p><a id="RDATA_SMALLFRAGMENTS" name="RDATA_SMALLFRAGMENTS"></a> <!--INDEX "8","微片段","RDATA_SMALLFRAGMENTS"--><span class="c4d_id">微片段</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/024513.jpg"  ><span class="caption">光影追踪渲染这些类型的场景比扫描线要快得多。例如，标记的区域中每个像素都包含大量的多边形。</span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/02xxxx/024513.jpg"  ><span class="caption">光影追踪渲染这些类型的场景比扫描线要快得多。例如，标记的区域中每个像素都包含大量的多边形。</span></div></p>
 <p>因为渲染实例的引入，让渲染大量复杂对象成为可能。假设有一个包含了数千个多边形的完整房屋位于场景的地平线处，它离摄像机很远以至于在渲染时只涉及到一个像素。<span class="command">微片段</span>功能就是设计用来更加高效地渲染类似这种区域的（同样应用于有高级别细分曲面散布的区域）。</p>
 <p>CINEMA 4D 有两个内置的渲染进程：“扫描线”和“光影追踪”，它会自动的应用而不需要用户自行设置。在上面的场景中，“光影追踪”对这种类型的渲染比“扫描线”要快得多。</p>
 <p>你可能会认为光影追踪应该用来渲染每一个场景。不幸的是，这种方法也有一些缺点，它的抗锯齿效果较差，并且在渲染像上图那种高对比的自然场景时速度较慢。这就是<nobr><span class="text_id_cycle">混合</span></nobr>选项的作用，它结合了两种方法的优点。简单地说，如果一个图像区域的每个像素都有超过50个多边形是可见的，那么它会用光影追踪进行渲染，而扫描线会处理剩下的区域。默认的<nobr><span class="text_id_cycle">混合</span></nobr>选项对大部分渲染来说是正确的选择。<span class="command_value">仅扫描线</span>选项是用在 R11.5 之前版本中的渲染方式。</p>

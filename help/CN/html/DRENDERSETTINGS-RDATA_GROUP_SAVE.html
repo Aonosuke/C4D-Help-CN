@@ -26,7 +26,18 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi_self">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>保存</span></p><p></p>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p>
+<a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi_self">保存</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a>
+<!--NO_SEARCH_END-->
+<p class="c4d_group"><span>保存</span></p><p></p>
 <p><div class="only_body" align="left">             <!--INDEX "6","常规图像","RDATA_GROUP_SAVEIMAGE"--><a id="RDATA_GROUP_SAVEIMAGE" name="RDATA_GROUP_SAVEIMAGE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>常规图像</span></p>
 <p><a id="RDATA_SAVEIMAGE" name="RDATA_SAVEIMAGE"></a> <!--AM_JUMP "RDATA_SAVEIMAGE","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","保存","RDATA_SAVEIMAGE"--><span class="c4d_id">保存</span></p>
 <p>当渲染到图片查看器时自动保存图像或动画。</p>
@@ -87,7 +98,7 @@
 <p>具体如下：</p>
 <p><ol><li> HDR 格式在合成的时候可以作为图片处理格式。虽然普通的屏幕或打印机不能显示这种颜色深度，但是可以使用传统的颜色深度。<br><br>
 传统颜色深度的一个缺点是亮度限制。举个例子，一个 RGB 色值为255，255，255可以显示很好的白色。假设你想要在后期处理软件中调暗一张包含白色区域的图像，如一个被穿过窗户的阳关照亮的表面。这时白色的区域会变成灰色，然而这种情况下应该开始显示表面的真实颜色。<br><br>
-<div class="image_full" style="max-width:800px"><img  src="../pics/003825.jpg"  ><span class="caption">上图：原始图像；中图：输出为 TIFF 在Photoshop 中调暗；下图：原始图像输出为 32位，并用合适的软件调暗。</span></div><br>
+<div class="image_full" style="max-width:800px"><img  src="../pics/003xxx/003825.jpg"  ><span class="caption">上图：原始图像；中图：输出为 TIFF 在Photoshop 中调暗；下图：原始图像输出为 32位，并用合适的软件调暗。</span></div><br>
 如你在上面的示例中看到的，HDR 图像可以调暗（如使用 CINEMA 4D 的<span class="command">曝光</span>设置），而不用担心白色表面像传统图片格式一样变灰。上面的场景是被带有非常明亮灯光（<span class="command_value">400%</span>）的特定 GI 照亮的。<br><br>
 <p><div class="hint"><span class="HL_hint"></span>HDR 图像可以表述为一种无法用传统技术描述的颜色数据。</div><br>
 当你在图片查看器或在编辑视图中将图像渲染为 HDR，会使用一种特殊的 HDR 抗锯齿。初看起来图片有很多缺陷，这是因为实际上图片的显示必须降低到显示器的色彩范围。如果使用传统格式进行渲染，图像的抗锯齿则会很完美，因为颜色的深度被降到了8位或16位时，抗锯齿会发挥作用。32位的抗锯齿在渲染时没有颜色限制，也就是说，一个平滑的像素可以有一个远远高于100%的亮度值，因此这时会显示为白色。正确的32位抗锯齿是不可见的，但是在内部是存在的。<br><br>
@@ -144,7 +155,7 @@
 <p>Alpha 是一个与彩色图片有相同分辨率的灰度图，alpha 通道中，一个白色像素表示彩色图像中该处的的像素是显示的，而黑色像素表示不显示。</p>
 <p>你可以使用 alpha 通道在视频软件中进行合成。例如，你扫描了一张机场的照片，想要在它的跑道上渲染一台飞机。那么你可以在 CINEMA 4D 中渲染一架带有 alpha 通道的飞机，然后在你的合成软件中使用 alpha 通道来去掉飞机以外的部分，这样就可以显示出机场了。Alpha 通道图片的边缘是抗锯齿的，可以确保在合成图片中的过渡是平滑的。</p>
 <p>预叠加的 alpha 通道有一个明显的缺点，如下图所示。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003827.jpg"  ><span class="caption">从左至右：渲染的图片、alpha 通道、结果。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003827.jpg"  ><span class="caption">从左至右：渲染的图片、alpha 通道、结果。</span></div></p>
 <p>在示意图中，alpha 通道产生了一条深色的接缝，这是因为图像和 alpha 通道是通过抗锯齿渲染的，根据定义，彩色图片和 alpha 通道必须进行叠加，因此黑色被计算了两次。你可以通过使用“直接 Alpha”选项来避免这个问题。注意，直接 Alpha 只适合用来合成，对传统图片来说它们并没有什么作用。</p>
 <p><p><div class="hint">如果你在场景中使用了天空、地面、前景或背景，整个 alpha 通道是被遮住的。如果你需要 alpha 通道，请不要使用上述的任何对象。</p>
 <p>TARGA、TIFF、PICT、PSD 和 QuickTime 影片这些格式是自动包含 Alpha 通道的。如果你启用了分离 Alpha 或选择了一个不同图片格式，alpha 通道会单独保存为一个图片，这些文件在其文件名前会加上<span class="command">A_</span>，如 <span class="command">A_room.tif</span>，分离的 alpha 会被保存为 TIFF 格式。</p>
@@ -152,12 +163,12 @@
 <p><a id="STRAIGHT" name="STRAIGHT"></a></p>
 <p><a id="RDATA_STRAIGHTALPHA" name="RDATA_STRAIGHTALPHA"></a> <!--AM_JUMP "RDATA_STRAIGHTALPHA","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","直接 Alpha","RDATA_STRAIGHTALPHA"--><span class="c4d_id">直接 Alpha</span></p>
 <p>如果你的合成程序支持直接 alpha，你可以使用这个选项来避免预叠加 alpha 中产生的深色接缝。注意，直接 alpha 只适合用来合成，对传统图片来说它们并没有什么作用。</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003828.jpg"  ><span class="caption">从左至右：渲染的图片、alpha 通道、结果。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003828.jpg"  ><span class="caption">从左至右：渲染的图片、alpha 通道、结果。</span></div></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>不要在你的命名习惯中使用引号（“”或‘’）。</div></p>
 <p><a id="ALPHA" name="ALPHA"></a></p>
 <p><p><div class="hint"><span class="HL_hint">注意！<br></span>CINEMA 4D R11.5 之前的版本使用不同于 alpha 通道输出的方式来处理透明表面（通过 alpha 蒙版或<span class="command">透明度</span>通道）。</p>
 <p>示例：一个带有 alpha 蒙版的材质可以用来在平面上创建一个孔，这个平面位于一个巨大的作为背景的球体里面。渲染结果如下面的左图所示。假设你现在想要输出场景为一个 alpha 通道，其中只包含带孔的平面。要实现这一点，给背景（也就是球体）添加一个<span class="command">合成</span>标签。在先前版本的 CINEMA 4D 中，你要做的是禁用<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYCAMERA" target="_self"><span class="text_id">摄像机可见</span></a>选项。在 R11.5 及以上版本中，你还需要禁用<a href="TCOMPOSITING-ID_TAGPROPERTIES.html#COMPOSITINGTAG_SEENBYTRANSPARENCY" target="_self"><span class="text_id">透明度可见</span></a>选项来生成 alpha 通道图片，如下面的右图所示：</p>
-<p><div class="image_full" style="max-width:960px"><img  src="../pics/025933.jpg"  ><span class="caption">要生成如右图所示的 alpha 通道，上面提到的两个选项都必须在<span class="command">合成</span>标签中被禁用。</span></div></p>
+<p><div class="image_full" style="max-width:960px"><img  src="../pics/02xxxx/025933.jpg"  ><span class="caption">要生成如右图所示的 alpha 通道，上面提到的两个选项都必须在<span class="command">合成</span>标签中被禁用。</span></div></p>
 <p>这么做的原因在于渲染器的优化，现在渲染器会使用光影追踪来计算平面透明表面（包括 alpha 蒙版）。光影追踪必须通过<span class="command">合成</span>标签明确地指定，位于透明对象后方的物体不可见。</div></p>
 <p><a id="RDATA_SEPARATEALPHA" name="RDATA_SEPARATEALPHA"></a> <!--AM_JUMP "RDATA_SEPARATEALPHA","RDATA_GROUP_SAVEIMAGE","RDATA_GROUP_SAVE"--><!--INDEX "8","分离 Alpha","RDATA_SEPARATEALPHA"--><span class="c4d_id">分离 Alpha</span></p>
 <p>Alpha 通道通常包含在支持 alpha 通道的图像格式中，这也就意味着它们是作为图像文件的一部分来保存的。但是，如果你想要将 alpha 通道保存为一个单独的文件，可以启用这个选项。这时除了彩色图片（如 <span class="command">room.tif</span>），你还会得到一个包含 alpha 通道的文件（如 <span class="command">A_room.tif</span>）。</p>
@@ -173,7 +184,7 @@
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，这在 Team Render 中是无效的！</div></p>
 <p></RELEASE_110></p>
 <p><!--INDEX "6","QuickTime VR 选项","RDATA_GROUP_QUICKTIMEVR"--><a id="RDATA_GROUP_QUICKTIMEVR" name="RDATA_GROUP_QUICKTIMEVR"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>QuickTime VR 选项</span></p>
-<p><div class="image_full" style="max-width:1248px"><img  src="../pics/003896.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1248px"><img  src="../pics/003xxx/003896.jpg"  ><span class="caption"></span></div></p>
 <p>你可以利用这个页面上的选项来创建 QuickTime 虚拟全景和 QuickTime 虚拟对象影片。</p>
 <p><p><div class="hint"><span class="HL_hint"></span>镜头效果不能与 QuickTime 虚拟影片一起使用。</div></p>
 <p><p><div class="hint"><span class="HL_hint"></span>如果安装了可选的 Team Render 组件，注意，QuickTime 虚拟对象和全景影片不能使用 Team Render 或物理渲染器来进行渲染。</div></p>
@@ -248,7 +259,7 @@
 <p><!--INDEX "6","合成方案文件","RDATA_GROUP_PROJECTFILE"--><a id="RDATA_GROUP_PROJECTFILE" name="RDATA_GROUP_PROJECTFILE"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>合成方案文件</span></p>
 <p><!--INDEX "1","After Effects",""--></p>
 <p><!--INDEX "1","Aftereffects",""--></p>
-<p><div class="image_full" style="max-width:1524px"><img  src="../pics/003829.jpg"  ><span class="caption">一个合成的工程文件是由多个层组成的，每个层都可以单独编辑。</span></div></p>
+<p><div class="image_full" style="max-width:1524px"><img  src="../pics/003xxx/003829.jpg"  ><span class="caption">一个合成的工程文件是由多个层组成的，每个层都可以单独编辑。</span></div></p>
 <p><a id="COMP" name="COMP"></a></p>
 <p>CINEMA 4D 支持如下视频编辑软件：</p>
 <p><ul></p>
@@ -282,20 +293,20 @@
 点击<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#RDATA_PROJECTFILESAVE" target="_self"><span class="text_id">保存方案文件…</span></a>按钮可以创建创建一个合成文件但不必渲染整个场景。但是这只在已经渲染了所有通道的情况下有用。例如，如果你已经使用 Team Render 渲染了完整的动画，并包括全部多通道，那么你可以点击这个按钮来生成正确的合成文件。<br><br>
 <li> 将通过 CINEMA 4D 输出的合成文件导入到合成软件中。<br></ol><p></p>
 <p>要将多通道文件导入到合成软件中：</p>
-<p><div class="image_full" style="max-width:731px"><img  src="../pics/003831.jpg"  ><span class="caption">CINEMA 4D 的工程。</span></div></p>
+<p><div class="image_full" style="max-width:731px"><img  src="../pics/003xxx/003831.jpg"  ><span class="caption">CINEMA 4D 的工程。</span></div></p>
 <p><a id="AE" name="AE"></a></p>
 <p><!--INDEX "10","After Effects","no_cycle_id_1"--><a id="no_cycle_id_1" name="no_cycle_id_1"></a> <span class="no_cycle_id">After Effects</span></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>注意，After Effects 只能与上面第2点中描述的<a href="50775.html" target="">文件交换</a>配合使用。</div></p>
 <p>在 After Effects 中，导入 <span class="command">.aec</span> 文件（文件 | 导入 | 文件）。</p>
-<p><div class="image_full" style="max-width:443px"><img  src="../pics/003832.jpg"  ><span class="caption">After Effects 中的工程。</span></div></p>
-<p><div class="image_full" style="max-width:1404px"><img  src="../pics/003833.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:443px"><img  src="../pics/003xxx/003832.jpg"  ><span class="caption">After Effects 中的工程。</span></div></p>
+<p><div class="image_full" style="max-width:1404px"><img  src="../pics/003xxx/003833.jpg"  ><span class="caption"></span></div></p>
 <p>你需要将下列插件（位于 CINEMA 4D 程序目录的“Exchange Plugins/aftereffects/importer”文件夹中，选择对应你的操作系统和 After Effect 版本的插件）复制到 After Effects 的插件目录中（如果这个目录不存在，请使用“Effect”文件夹）：<ul></p>
 <p><li> PC：“C4Dimporter.aex”</li>
 <li> Mac OS：“C4Dimporter.plugin”（需要先解压）</li></ul><p></p>
 <p>其他合成软件可以加载这些数据而不需要插件。</p>
 <p>额外功能：<ul></p>
 <p><li> 分配给光源的投影密度也可以被导出（活动的）</li>
-<li> <span class="command">对象管理器</span>中的“渲染状态”也会影响导出。在下面的示例中，只有对象 <span class="command_value">2</span> 会被导出：</li><div class="image_limit" style="max-width: 119px"><img  src="../pics/024527.jpg"  ><span class="caption"></span></div></p>
+<li> <span class="command">对象管理器</span>中的“渲染状态”也会影响导出。在下面的示例中，只有对象 <span class="command_value">2</span> 会被导出：</li><div class="image_limit" style="max-width: 119px"><img  src="../pics/02xxxx/024527.jpg"  ><span class="caption"></span></div></p>
 <p><li> 所有现有的摄像机都会被导出（如果没有在“渲染状态”中禁用）</li>
 <li> 支持 XRefs（会被导出）</li>
 <li> After Effects 中的目录和灯光的逻辑命名</li>
@@ -310,24 +321,24 @@
 <p></ul><p></p>
 <p><a id="LIN" name="LIN"></a></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>当使用<a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">线性工作流程</span></a>时，确保在 After Effects 中启用了“线性”工作空间颜色（它只在有工作空间色彩空间的情况下可用，且应该被设置为 sRGB）。</div></p>
-<p><div class="image_full" style="max-width:534px"><img  src="../pics/031238.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:534px"><img  src="../pics/03xxxx/031238.jpg"  ><span class="caption"></span></div></p>
 <p><!--INDEX "10","Motion","no_cycle_id_2"--><a id="no_cycle_id_2" name="no_cycle_id_2"></a> <span class="no_cycle_id">Motion</span></p>
-<p><div class="image_full" style="max-width:277px"><img  src="../pics/003834.jpg"  ><span class="caption"></span></div></p>
-<p><div class="image_full" style="max-width:1024px"><img  src="../pics/003835.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:277px"><img  src="../pics/003xxx/003834.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1024px"><img  src="../pics/003xxx/003835.jpg"  ><span class="caption"></span></div></p>
 <p><RELEASE_140 Multi-Pass files, including the entire Project file, can now be output for The Foundry Nuke.></p>
 <p><!--INDEX "10","Nuke","no_cycle_id_3"--><a id="no_cycle_id_3" name="no_cycle_id_3"></a> <span class="no_cycle_id">Nuke</span></p>
 <p>打开相应的 <span class="command">*.nk</span> 文件：</p>
-<p><div class="image_full" style="max-width:335px"><img  src="../pics/035675.jpg"  ><span class="caption"></span></div></p>
-<p><div class="image_full" style="max-width:1011px"><img  src="../pics/035676.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:335px"><img  src="../pics/03xxxx/035675.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1011px"><img  src="../pics/03xxxx/035676.jpg"  ><span class="caption"></span></div></p>
 <p> </RELEASE_140></p>
 <p><!--INDEX "10","Final Cut Pro","no_cycle_id_4"--><a id="no_cycle_id_4" name="no_cycle_id_4"></a> <span class="no_cycle_id">Final Cut Pro</span></p>
 <p>在 Final Cut Pro 中，导入 <span class="command">.xml</span> 文件（文件 | 导入 | XML），忽略出现的警告。</p>
-<p><div class="image_full" style="max-width:585px"><img  src="../pics/003838.jpg"  ><span class="caption"></span></div></p>
-<p><div class="image_full" style="max-width:850px"><img  src="../pics/003839.jpg"  ><span class="caption">Final Cut Pro 中的工程。</span></div></p>
+<p><div class="image_full" style="max-width:585px"><img  src="../pics/003xxx/003838.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:850px"><img  src="../pics/003xxx/003839.jpg"  ><span class="caption">Final Cut Pro 中的工程。</span></div></p>
 <p><!--INDEX "10","Digital Fusion","no_cycle_id_5"--><a id="no_cycle_id_5" name="no_cycle_id_5"></a> <span class="no_cycle_id">Digital Fusion</span></p>
 <p>使用<span class="command">打开</span>命令打开从 CINEMA 4D 中导出的 <span class="command">*.comp</span> 文件。</p>
-<p><div class="image_full" style="max-width:270px"><img  src="../pics/012896.jpg"  ><span class="caption"></span></div></p>
-<p><div class="image_full" style="max-width:1564px"><img  src="../pics/012897.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:270px"><img  src="../pics/01xxxx/012896.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1564px"><img  src="../pics/01xxxx/012897.jpg"  ><span class="caption"></span></div></p>
 <p><RELEASE_130></p>
 <p><a id="RDATA_PROJECTFILEMARKER" name="RDATA_PROJECTFILEMARKER"></a> <!--AM_JUMP "RDATA_PROJECTFILEMARKER","RDATA_GROUP_PROJECTFILE","RDATA_GROUP_SAVE"--><!--INDEX "8","包括时间线标记","RDATA_PROJECTFILEMARKER"--><span class="c4d_id">包括时间线标记</span></p>
 <p>如果你在时间线中设置了 <a href="TLMARKER.html" target="">标记</a>，那么它们会被包含到合成文件中，包括它们的名称。</p>

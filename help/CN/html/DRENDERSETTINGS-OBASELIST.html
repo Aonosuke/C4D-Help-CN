@@ -26,7 +26,17 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p><a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi_self">基本</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> <a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>基本特性</span></p><p></p>
+<span class="HL_atom"><a href="DRENDERSETTINGS.html">渲染设置</a> </span><p></p>
+<a href="DRENDERSETTINGS-OBASELIST.html" target=""><span class="c4d_group_navi_self">基本</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OUTPUT.html" target=""><span class="c4d_group_navi">输出</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html" target=""><span class="c4d_group_navi">保存</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_MULTIPASS.html" target=""><span class="c4d_group_navi">多通道</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html" target=""><span class="c4d_group_navi">抗锯齿</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OVERRIDEMAT.html" target=""><span class="c4d_group_navi">材质覆写</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html" target=""><span class="c4d_group_navi">选项</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_STEREO.html" target=""><span class="c4d_group_navi">立体</span></a> 
+<a href="DRENDERSETTINGS-RDATA_GROUP_NET.html" target=""><span class="c4d_group_navi">Team Render</span></a>
+<!--NO_SEARCH_END--><p class="c4d_group"><span>基本特性</span></p><p></p>
 <p>基本特性</p>
 <p><a id="ID_BASELIST_NAME" name="ID_BASELIST_NAME"></a> <!--INDEX "8","名称","ID_BASELIST_NAME"--><span class="c4d_id">名称</span></p>
 <p>你可以在这里输入渲染设置的名称。</p>
@@ -63,7 +73,7 @@
 <li> 物理渲染器有很多缺陷，例如它不能与素描卡通、线描染器、高光（以及选择菜单中的一些其他效果）等一起使用；动态模糊不能与一些如 PyroCluster、可见灯光、对象辉光等特殊元素一起使用；还有，毛发渲染会慢得多，毛发多通道无法被渲染；最后，无法渲染硬投影（会渲染为区域阴影进行取代）。</li>
 <li> 当动态模糊与多通道和着色器（例如使用自己缓存的接近着色器和插件着色器）一起使用时会产生错误的结果。</li></ul><p></p>
 <p>物理渲染器中的一些效果现在在后期制作中已经可以被模拟了，虽然其中的大部分都是通过欺骗实现的，而且结果与真实渲染的效果并不相符。这可以应用到以下的情况，例如：</p>
-<p><div class="image_full" style="max-width:1600px"><img  src="../pics/031298.jpg"  ><span class="caption"></span></div><ul></p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/03xxxx/031298.jpg"  ><span class="caption"></span></div><ul></p>
 <p><li> 左图：你可以在图中看到一个玻璃立方体位于一些球体前方。这个立方体自身是模糊的，但是在它后面的球体是聚焦的。如果对一个深度图不包含其背后物体信息的透明物体应用了 2D 特效，那么玻璃立方体背后的所有物体都会被处理为失焦（模糊）。</li>
 <li> 右图：2D 动态模糊效果通常在边缘处有缺陷，因为没有位于渲染范围以外的物体的信息可用，但是对真实的 3D 动态模糊中不存在这个问题。</li></RELEASE_130></p>
 <p></ul><p></p>
