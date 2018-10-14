@@ -20,11 +20,10 @@ a .c4d_group_navi   {text-decoration: none; }
 .no_id                { color: #000080; font-size: 1.1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-weight: bold; position: relative; }
 .c4d_id_cycle         { color: #000080; font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-style: italic; line-height: 14px; padding: 1px; border-color: gray; }
 .no_cycle_id          { color: #000080; font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-style: italic; line-height: 14px; padding: 1px; border-color: gray; }
-.c4d_group_navi       {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #c0c0c0; padding: 1px; border: solid 1px gray; }
-.c4d_group_navi a     {text-decoration: none; }
-.c4d_group_navi_self  {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #e0e0e0; padding: 1px; border: solid 1px gray; }
-.c4d_group            {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; background-color: #c0c0c0; list-style-type: circle; padding: 1px; border: solid 0 gray; }
-.c4d_subgroup         {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 16px; background-color: #c0c0c0; list-style-type: circle; list-style-image: url("subgroup.gif"); padding: 1px; border: solid 0 gray; }
+.c4d_group_navi       {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #dddddd; padding: 4px; border: solid 1px gray; }
+.c4d_group_navi_self  {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 20px; background-color: #f8f8f8; padding: 4px; border: solid 1px gray; }
+.c4d_group            {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; font-weight: bold; line-height: 20px; background-color: #dddddd; list-style-type: circle; padding: 4px; border: solid 0 gray; }
+.c4d_subgroup         {                 font-size: 1em; font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif; line-height: 16px; background-color: #dddddd; list-style-type: circle; list-style-image: url("subgroup.gif"); padding: 1px; border: solid 0 gray; }
 
 .hint                 { background-color: #f0f0f0; padding: 3px; border-color: #fb0206; clear: both; }
 .HL_hint              { color: #272daf; font-weight: bold; border-top: 1px #646464; border-right: 1px #646464; outline-width: 2px; }
