@@ -59,7 +59,7 @@ img                                                 { -ms-interpolation-mode: bi
 .image_full + p                                     { display: block; }
 .image_line                                         { display: inline-block; }
 img.text_cmd_icon                                   { float: none; width: auto; margin-left: 0.5em; margin-right: 0em; }
-.caption                                            { color: #272daf; font-size: 1em; font-style: italic; line-height: 120%; margin-top: 5px; display: inline-block; }
+.caption                                            { color: #272daf; font-size: 0.9em; line-height: 160%; margin-top: 5px; display: inline-block; }
 .caption:empty                                      { display: none; }
 
 /* Text-Farbe */
