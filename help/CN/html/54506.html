@@ -34,7 +34,7 @@
 <p>标记的作用是什么？它是用在路径和文件名中的可变文本。当渲染或在图片查看器中显示时，它们会用如工程名称、当前摄像机、场次等工程属性替换路径和文件名。</p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","示例","hl_1"--><p><span class="HL_1">示例</span></p>
 <p>下面的案例对理解如何使用标记有所帮助：</p>
-<p><div class="image_full" style="max-width:1136px"><img  src="../pics/039583.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:1136px"><img  src="../pics/03xxxx/039583.jpg"  ><span class="caption"></span></div></p>
 <p>注意上图中的文件路径：<span class="command_value">Results/$take/$rs</span>。可变的 <span class="command_value">$take</span> 和 <span class="command_value">$rs</span> 就是标记（可以在下面找到全部可用的标记列表）。一个文件路径最后的标记（这里是表示渲染设置名称的 $rs）总是文件名，之前的标记（在这个示例中是表示场次名称的 $take）则表示目录名称。这不需要现存的目录，如果不存在则 CINEMA 4D 会创建它们。</p>
 <p>在上图的右边，<span class="command">属性管理器</span>窗口中标记了 12 个场次，它们有不同的名称和渲染设置（标记在左边：<span class="command_value">Small Resolution</span>、<span class="command_value">Normal Resolution</span> 和 <span class="command_value">Large Resolution</span>）。如果渲染了全部 12 个场次，每个目录名称（$take）会被场次名称替换（如 <span class="command_value">Analog</span>），而渲染的图像会保存在这些地方。图像的文件名（$rs）也会被相应地渲染设置名称所替代。</p>
 <p><a id="TOKEN" name="TOKEN"></a></p>

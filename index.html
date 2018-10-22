@@ -15,13 +15,6 @@
         <p id="title"><a href="https://github.com/Aonosuke/C4D-Help-CN" style="text-decoration: none">Cinema 4D 中文文档</a></p>
     </div>
   </div>
-
-  <div id="sidebar">
-    <div id="search_jstree" style="padding-bottom:10px">
-      <input type="text" id="searchMenu" placeholder="&nbsp搜索条目..." style="width:245px; height:16px; "/>
-    </div>
-    <div id="jsMenu" class="treeview"></div>
-  </div>
   
   <div id="contentbox">
     <iframe name="content" src="help/CN/html/1000.html" 
@@ -30,7 +23,29 @@
     frameborder="0"> </iframe>
   </div>
 
+  <div id="sidebar">
+    <div id="search_jstree" style="padding-bottom:10px">
+      <input type="text" id="searchMenu" placeholder="&nbsp搜索条目..." style="width:245px; height:16px; "/>
+    </div>
+    <div id="jsMenu" class="treeview"></div>
+  </div>
+
+  <div id="btn_showSidebar">
+    <button type="button" onclick="showSidebar()">显示目录</button>
+  </div>
+
   <script> 
+
+  function showSidebar() {
+    if(document.getElementById("sidebar").style.display == "block")
+    {
+      document.getElementById("sidebar").style.display = 'none';
+    }
+    else
+    {
+      document.getElementById("sidebar").style.display = 'block';
+    }
+  }
   
     $(function () {
 

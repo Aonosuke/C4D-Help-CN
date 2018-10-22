@@ -54,6 +54,27 @@
   border-color: #d0d0d0;
 }
 
+#btn_showSidebar{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+button {
+  background-color: #637c80;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
 html, body{ 
   font-size: 14px; 
   font-family: Noto-Sans-regular,Verdana, Arial, Helvetica, sans-serif; 
@@ -70,3 +91,16 @@ a:link{ color:#637c80 }       /* 未访问的链接 */
 a:visited{color:#637c80 }     /* 已访问的链接 */
 a:hover{ color:#637c80 }      /* 鼠标在链接上 */
 a:active{ color:#637c80 }     /* 点击激活链接 */
+
+@media screen and (max-width: 600px) {
+  #sidebar {
+    display: none;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 2px 0px 2px #d0d0d0;
+  }
+  #contentbox{
+    left: 0px;
+    border-style: none;
+  }
+}
