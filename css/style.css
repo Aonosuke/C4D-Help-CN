@@ -113,7 +113,7 @@ a:visited{color:#637c80 }     /* 已访问的链接 */
 a:hover{ color:#637c80 }      /* 鼠标在链接上 */
 a:active{ color:#637c80 }     /* 点击激活链接 */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1080px) {
   #sidebar {
     display: none;
     width: 70%;
