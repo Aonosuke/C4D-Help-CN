@@ -30,8 +30,12 @@
     <div id="jsMenu" class="treeview"></div>
   </div>
 
-  <div id="btn_showSidebar">
-    <button type="button" onclick="showSidebar()">显示目录</button>
+  <div id="div_showSidebar">
+    <button id="btn_show" type="button" onclick="showSidebar()">显示目录</button>
+  </div>
+
+  <div id="div_hideSidebar">
+    <button id="btn_hide" type="button" onclick="hideSidebar()"></button>
   </div>
 
   <script> 
@@ -40,10 +44,20 @@
     if(document.getElementById("sidebar").style.display == "block")
     {
       document.getElementById("sidebar").style.display = 'none';
+      document.getElementById("btn_show").innerHTML = "显示目录";
     }
     else
     {
       document.getElementById("sidebar").style.display = 'block';
+      document.getElementById("btn_show").innerHTML = "隐藏目录";
+    }
+  }
+
+  function hideSidebar() {
+    if(document.getElementById("sidebar").style.display == "block")
+    {
+      document.getElementById("sidebar").style.display = 'none';
+      document.getElementById("btn_show").innerHTML = "显示目录";
     }
   }
   
@@ -66,6 +80,13 @@
         console.log("The selected nodes are:");
         console.log(data.node.id);              //选择的node id      
         top.frames['content'].location.href = data.node.data;
+
+        if(document.getElementById("sidebar").style.display == "block")
+        {
+          document.getElementById("sidebar").style.display = 'none';
+          document.getElementById("btn_show").innerHTML = "显示目录";
+        }
+
       });
 
       var to = false;

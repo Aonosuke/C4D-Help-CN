@@ -180,16 +180,9 @@ img.text_cmd_icon                                   { float: none; width: auto; 
   .bodypaint3d  .in-bodypaint3d-page  .page_only_apps,
   .studio       .in-studio-page       .page_only_apps   { display: none; }
 
-  @media print, screen and (max-width: 1080px) {
-    div.wrapper {
-      width:auto;
-      margin:0;
-    }
-  }
-
-  @media print, screen and (max-width: 500px) {
+  @media print, screen and (max-width: 800px) {
     body {
       word-wrap:break-word;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
