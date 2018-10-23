@@ -50,6 +50,7 @@
     {
       document.getElementById("sidebar").style.display = 'block';
       document.getElementById("btn_show").innerHTML = "隐藏目录";
+      document.getElementById("div_hideSidebar").style.zIndex = 10;
     }
   }
 
@@ -58,6 +59,7 @@
     {
       document.getElementById("sidebar").style.display = 'none';
       document.getElementById("btn_show").innerHTML = "显示目录";
+      document.getElementById("div_hideSidebar").style.zIndex = -10;
     }
   }
   
