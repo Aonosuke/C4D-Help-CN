@@ -36,7 +36,12 @@ a .c4d_group_navi   {text-decoration: none; }
 .pic                  { margin-top: 0px; margin-right: 0px; }
 .pic_table            { margin-top: 10px; margin-right: 10px; }
 input                 { font: 10px monospace; }
-body                  { font-size: inherit; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #fff; line-height: 160%; text-align: left; max-width: 92%; margin:auto; word-wrap:break-word; }
+body                  { 
+  font-size: inherit; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #fff; line-height: 160%; text-align: left; 
+  max-width: 800px; margin:auto; 
+  padding-left: 20px;
+  padding-right: 20px;
+  word-wrap:break-word; }
 td                    { font-size: 0.9em; }
 .release              { color: #000080; font-size: x-small; }
 .release_marker       { padding-top: 0; padding-right: 4px; border-right: 1px solid #000080; }

@@ -67,8 +67,7 @@
   position: absolute;
   top: 51px;
   bottom: 3px;
-  right: 0px;
-  width: 50%;
+  width: 100%;
   z-index: -10;
   display: none;
 }
@@ -114,18 +113,19 @@ a:visited{color:#637c80 }     /* 已访问的链接 */
 a:hover{ color:#637c80 }      /* 鼠标在链接上 */
 a:active{ color:#637c80 }     /* 点击激活链接 */
 
-@media print, screen and (max-width: 810pt) {
+@media print, screen and (max-width: 1px) {
   #sidebar {
     display: none;
     width: 50%;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 2px 0px 2px #d0d0d0;
+    z-index: 100;
   }
   #contentbox{
     left: 0px;
     bottom: 4px;
     border-style: none;
-    font-size: 14pt;
+    font-size: 24px;
   }
 
   #div_showSidebar{
@@ -137,6 +137,6 @@ a:active{ color:#637c80 }     /* 点击激活链接 */
   }
 
   html, body{
-    font-size: 14pt;
+    font-size: 24px;
   }
 }

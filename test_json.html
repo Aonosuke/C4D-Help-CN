@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>json test</title>
+  <!-- 2 load the theme CSS file -->
+  <link rel="stylesheet" href="assets/js/dist/themes/default/style.min.css" />
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/dist/jstree.min.js"></script>
+</head>
+<body>
+    
+    <ul class="nav-list">test</ul>
+
+
+<script>
+    $.ajax({
+        type: "get",
+        url: "/js/test.json",
+        success: function (data) {
+            var list = "";
+            $.each(data, function (index, item) {
+                list += "<li>" + item.name;
+                var data2 = item.cc;
+                if (data2) {
+                    $.each(data2, function (index2, item2) {
+                        if (index2 === 0) {
+                            list += "<ul>";
+                        }
+                        list += "<li>" + item2.name;
+                        var data3 = item2.cc;
+                        if(data3) {
+                            $.each(data3, function (index3, item3) {
+                                if (index3 === 0) {
+                                    list += "<ul>";
+                                }
+                                list += "<li>" + item3.name + "</li>";
+                                if (index3 + 1 === data3.length) {
+                                    list += "</ul>";
+                                }
+                            });
+                        }
+                        list += "</li>";
+                        if (index2 + 1 === data2.length) {
+                            list += "</ul>";
+                        }
+                    });
+                }
+                list += "</li>";
+                console.log(list);
+            });
+            console.log(list);
+            $("#nav-list").append(list);
+        }
+    });
+</script>
+</body>
