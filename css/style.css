@@ -21,7 +21,7 @@
   position: absolute;
   top: 51px;
   bottom: 0px;
-  width: 280px;
+  width: 360px;
 }
 
 #search_jstree{
@@ -34,7 +34,7 @@
   position: absolute;
   top: 45px;
   bottom: 0px;
-  width: 280px;
+  width: 360px;
   padding-bottom: 20px;
   overflow: auto;
 }
@@ -47,7 +47,7 @@
   position: absolute;
   top: 51px;
   bottom: 3px;
-  left: 280px;
+  left: 360px;
   right: 0px;
   border-style: solid;
   border-width: 0 0 0 1px;

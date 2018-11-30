@@ -199,6 +199,7 @@ var menuItems =[
           {"id": "3510", "data": "help/CN/html/MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html", "text": "材质属性 / 材质编辑器：漫射"},
           {"id": "3511", "data": "help/CN/html/MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html", "text": "材质属性 / 材质编辑器：发光"},
           {"id": "3512", "data": "help/CN/html/MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html", "text": "材质属性 / 材质编辑器：透明"},
+          {"id": "3513", "data": "help/CN/html/MMATERIAL-ID_MATERIALGROUP_REFLECTION.html", "text": "材质属性 / 材质编辑器：反射"},
         ]},
       ]},
     ]},

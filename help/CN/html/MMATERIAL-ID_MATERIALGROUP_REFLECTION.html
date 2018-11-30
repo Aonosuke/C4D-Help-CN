@@ -783,9 +783,9 @@
 	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_STRENGTHLINK"-->
 	<span class="c4d_id">纹理</span></p>
 <p><div class="image_full" style="max-width:3341px"><img  src="../pics/03xxxx/038293.jpg"  >
-	<span class="caption">Increasing <span class="command">强度</span> values for <span class="command_value">Dielectric</span> and <span class="command_value">Conductor</span> (copper).</span></div></p>
-<p>The <span class="command">Strength</span> setting is used to define the reflections strength between <span class="command_value">0%</span> and <span class="command_value">100%</span>.</p>
-<p>The <span class="command">纹理</span> setting can be used to apply the previously described setting to an entire texture. The grayscale values of the texture loaded here control the setting as follows: white represents the setting’s full value and black = <span class="command_value">0</span>. In-between gray values have a corresponding effect.</p>
+	<span class="caption">增加<span class="command_value">绝缘体</span>和<span class="command_value">导体</span>的<span class="command">强度</span>值。</span></div></p>
+<p>这项<span class="command">强度</span>表示<span class="command_value">0%</span>到<span class="command_value">100%</span>之间的反射强度。</p>
+<p>可以将之前描述的<span class="command">纹理</span>设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_IORREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","折射率（IOR）","REFLECTION_LAYER_FRESNEL_VALUE_IORREAL"-->
@@ -802,23 +802,23 @@
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ETALINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ETALINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:3341px"><img  src="../pics/03xxxx/038294.jpg"  ><span class="caption">Increasing <span class="command">折射率（IOR）</span> values (dielectric material) from left to right.</span></div></p>
-<p>The IOR is mentioned mainly in conjunction with refractive light effects but it is also a measure for the angle of incidence for a material’s light reflections (regardless if it’s transparent or 不透明). As you can see in the image above, low values cause the material to reflect almost exclusively in regions at which the camera’s angle of view is extremely low. Larger values cause the reflection to move correspondingly more to the frontal regions.</p>
-<p>The <span class="command_value">Conductor</span> mode behaves similarly (however, the increase in reflection that corresponds to the increased IOR is not linear because it is also affected by the <span class="command">吸收</span> value; it is recommended that you use the preset values to achieve a higher degree of realism) but the reflections are generally much more pronounced.</p>
-<p>The <span class="command">Strength</span> slider can be used to seamlessly move from reflection (<span class="command_value">0%</span>) to full Fresnel reflection (<span class="command_value">100%</span>).</p>
+<p><div class="image_full" style="max-width:3341px"><img  src="../pics/03xxxx/038294.jpg"  ><span class="caption"><span class="command">折射率（IOR）</span>（绝缘体）从左至右递增。</span></div></p>
+<p>折射率（IOR）主要跟折射效果有关，但是在材质的反射中也用来测量入射角（无论是否透明）。如你在上图所见，折射率低的材质几乎只在摄像机视角极地的区域产生反射。折射率高的材质则会让反射区域扩大到正面区域。</p>
+<p><span class="command_value">导体</span>的性质与之类似（但是反射率的增加与折射率的增加并不是线性关系，因为它还受到<span class="command">吸收</span>的影响。推荐你是用预置的参数来让效果更加真实），但是通常反射效果会更加明显。</p>
+<p><span class="command">强度</span>滑块可以无缝地在反射（<span class="command_value">0%</span>）和全菲涅耳反射（<span class="command_value">100%</span>）之间滑动。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="REFLECTION_LAYER_FRESNEL_INVERTED" name="REFLECTION_LAYER_FRESNEL_INVERTED"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_INVERTED","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","反向","REFLECTION_LAYER_FRESNEL_INVERTED"-->
 	<span class="c4d_id">反向</span></p>
-<p>Enable this option to invert the Fresnel reflection. Example (on a sphere): the maximum reflection that is normally at the sphere’s center will be switched to its edges.</p>
+<p>勾选这个选项会反转菲涅耳反射。例如（在一个球面上）：正常情况下反射最强的是球体中间，反向之后会变成它的边缘。</p>
 <p><a id="REFLECTION_LAYER_FRESNEL_OPAQUE" name="REFLECTION_LAYER_FRESNEL_OPAQUE"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_OPAQUE","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","不透明","REFLECTION_LAYER_FRESNEL_OPAQUE"-->
 	<span class="c4d_id">不透明</span></p>
 <p><div class="image_full" style="max-width:400px"><img  src="../pics/03xxxx/038295.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
-<p>In some cases you might want to prevent the Fresnel effect from neighboring surfaces from affecting a given object. In the image above, a reflective surface with an alpha map lies on top of a red, diffuse layer. The <span class="command">不透明</span> option is disabled at the left: note how the red color from the underlying layer shines through while it is blocked on the right side of the image where the <span class="command">不透明</span> option is enabled.</p>
+<p>有时候你可能不想让菲涅耳效果出现在相邻的表面上相互影响。在上图中，一个带有 alpha 贴图的反射表面位于红色漫射层上方，左图未启用<span class="command">不透明</span>选项：注意看底下的红色层会穿透反射层而显示出来，而启用了<span class="command">不透明</span>选项的右图中底层的红色被反射层阻挡了。</p>
 <p><a id="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL" name="REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","吸收","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPREAL"-->
@@ -827,8 +827,8 @@
 	<!--AM_JUMP "REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK","REFLECTION_LAYER_FRESNEL_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","纹理","REFLECTION_LAYER_FRESNEL_VALUE_ABSORPLINK"-->
 	<span class="c4d_id">纹理</span></p>
-<p><div class="image_full" style="max-width:3062px"><img  src="../pics/03xxxx/038296.jpg"  ><span class="caption">The <span class="command">吸收</span> effect in conjunction with <span class="command">粗糙度</span> (IOR = 2.97).</span></div></p>
-<p>This setting is only available for the <span class="command">Conductor</span> mode. Increasing values will produce correspondingly stronger overall reflections. This setting can be used to fine-tune the degree of reflection.</p>
+<p><div class="image_full" style="max-width:3062px"><img  src="../pics/03xxxx/038296.jpg"  ><span class="caption">带有<span class="command">粗糙度</span>的<span class="command">吸收</span>效果（IOR = 2.97 ）。</span></div></p>
+<p>这项设置只有在<span class="command">导体</span>模式下才可以使用。增加数值会产生强化整体的反射效果，它可以用来调节反射程度。</p>
 <p>可以将之前描述的纹理设置应用到全部纹理。这里加载的纹理灰度值会产生如下效果：白色表示参数设置为最大值，黑色表示设置为 <span class="command_value">0</span>，灰色则会根据其亮度产生相应的效果。</p>
 <p><a id="SAMPLING" name="SAMPLING"></a></p>
 <p><a id="hl_15" name="hl_15"></a>
@@ -838,31 +838,31 @@
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","采样细分","REFLECTION_LAYER_SAMPLING_SAMPLE_COUNT"-->
 	<span class="c4d_id">采样细分</span> <span class="range">[0..16]</span></p>
-<p>This setting is designed for use with the Standard Renderer only (i.e., not the Physical Renderer). It can be used to define the quality of matte reflections.</p>
-<p>Larger values will slow rendering and increase quality correspondingly.</p>
+<p>这项设置只是用在标准渲染器中的（而非物理渲染器）。它可以用来调节哑光反射的质量。</p>
+<p>较高的数值会降低渲染速度、提高渲染质量。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_CLAMP" name="REFLECTION_LAYER_SAMPLING_CLAMP"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CLAMP","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","限制次级","REFLECTION_LAYER_SAMPLING_CLAMP"-->
 	<span class="c4d_id">限制次级</span> <span class="range">[0..100]</span></p>
-<p>It can occur that a reflected HDR image/sky can produce extremely bright points (fireflies) on a third object - i.e., a reflection of a reflection. To prevent the sampling settings from being increased dramatically, this setting can be used to limit the intensity of this reflection. The higher the value, the more the intensity of the reflection will be restricted, thus reducing this effect.</p>
+<p>有可能会发生这种情况：在一个物体表面反射的 HDR 图像/天空会产生很多高亮的光斑（即反射中的反射）。要防止采样的剧增，可以使用这项设置来限制反射的强度。数值越高，被限制的反射就越多，反射效果也就越弱。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_CUTOFF" name="REFLECTION_LAYER_SAMPLING_CUTOFF"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_CUTOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","切断","REFLECTION_LAYER_SAMPLING_CUTOFF"-->
 	<span class="c4d_id">切断</span> <span class="range">[0..1]</span></p>
-<p>This is a threshold value that defines the degree to which weak reflections will be calculated, if at all. Let’s say you have a Project with numerous reflective objects. An object at the rear of the image that is reflected in a small object near the front can be omitted because its role in the overall image is so small. The smaller this value is, the more reflections that will be ignored. The image below is an example of how this setting can be applied (the very bright HDR image helps make the effect more pronounced):</p>
-<p><div class="image_full" style="max-width:660px"><img  src="../pics/03xxxx/038297.jpg"  ><span class="caption">If the effect at the top left takes place, then the <span class="command">切断</span> value needs to be reduced.</span></div></p>
-<p>A sphere with a Fresnel reflection reflects a HDRI sky. The <span class="command">切断</span> value on the left is too large; the corrected value is on the right.</p>
+<p>这是一个阈值，它定义了会被计算的反射强度的程度（如果有的话）。假设一个场景中包含大量的反射物体，一个位于图像背面的物体在前面细小物体上的反射是可以忽略的，因为它在整个画面中无关紧要。这项数值越小，被忽略的反射就越多。下图是这项设置的使用示例（明亮的 HDR 图像能让效果更加明显）：</p>
+<p><div class="image_full" style="max-width:660px"><img  src="../pics/03xxxx/038297.jpg"  ><span class="caption">如果左上角出现了反射效果，则需要减小<span class="command">切断</span>值。</span></div></p>
+<p>一个带有菲涅耳反射的球体球体反射了 HDRI 天空。左图的<span class="command">切断</span>值太大，右图则是调整后的数值。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_EXIT_COLOR" name="REFLECTION_LAYER_SAMPLING_EXIT_COLOR"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_EXIT_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","出口颜色","REFLECTION_LAYER_SAMPLING_EXIT_COLOR"-->
 	<span class="c4d_id">出口颜色</span></p>
-<p><div class="image_full" style="max-width:1176px"><img  src="../pics/03xxxx/038298.jpg"  ><span class="caption">A fitting 出口颜色 is used to create a realistic-looking result without increasing the diffuse depth.</span></div></p>
-<p>A reflection depth can be defined in the Preferences menu that defines the number of reflections that should take place. For example, if you have two mirrors facing each other, this setting can be used to limit the number of reflections that take place. Otherwise an endless number of reflections would be rendered with a more-or-less endless amount of render time. The <span class="command">出口颜色</span> setting defines the color the reflection should assume in the end. In previous versions of Cinema 4D, this was black by default. However, as you can see in the image above, this produced unwanted black spots. This can be avoided if a fitting color is defined for the last reflection, as can be seen in the image above).</p>
+<p><div class="image_full" style="max-width:1176px"><img  src="../pics/03xxxx/038298.jpg"  ><span class="caption">合适的出口颜色可以产生真实的效果，而不需要增加漫射深度。</span></div></p>
+<p>可以在设置菜单中设置反射深度，它表示光线可以反射的次数。例如有两面相对放置的镜子，这项设置可以用来限制反射产生的次数，否则会无限反射下去，渲染时间也会无限增加。<span class="command">出口颜色</span>设置定义了反射最终叠加的颜色。在之前版本的 CINEMA 4D 中默认是黑色，但是如上图所示，这会产生糟糕的黑斑。如果为最终反射设置了合适的颜色，就可以避免这种情况。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS" name="REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_SEPARATE_PASS","REFLECTION_LAYER_MAIN_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","分离通道","REFLECTION_LAYER_SAMPLING_SEPARATE_PASS"-->
 	<span class="c4d_id">分离通道</span></p>
-<p>Reflections can be split for Multi-Pass rendering so that only certain materials are output in 分离通道. To do so, this option must be enabled (details can be found <a href="ZMULTIPASS-MULTIPASSOBJECT_REFLECTIONDATA.html" target="">here</a>).</p>
+<p>反射可以分离为多通道来渲染，这样只有特定材质会输出在分离通道中。要实现这一点，必须启用这个选项（详见<a href="ZMULTIPASS-MULTIPASSOBJECT_REFLECTIONDATA.html" target="">这里</a>）。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_DIM" name="REFLECTION_LAYER_SAMPLING_DIM"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","距离减淡","REFLECTION_LAYER_SAMPLING_DIM"-->
@@ -875,25 +875,25 @@
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_FALLOFF","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","衰减","REFLECTION_LAYER_SAMPLING_DIM_FALLOFF"-->
 	<span class="c4d_id">衰减</span> <span class="range">[-1..1]</span></p>
-<p><div class="image_full" style="max-width:746px"><img  src="../pics/03xxxx/038299.jpg"  ><span class="caption">Left without, right with 距离减淡</span></div></p>
-<p>Contrary to what the real world, this setting can be used to omit objects from a material’s reflection depending on their distance from that material. If <span class="command">距离减淡</span> is disabled, all objects will be reflected. If enabled, the <span class="command">Distance</span> value defines the distance at which an object will no longer be reflected. The reflection falloff up to the <span class="command">Distance</span> value is defined using the <span class="command">衰减</span> value. A value of <span class="command_value">0</span> produces a linear falloff; other values produce the effects shown in the example above.</p>
-<p>The reflection of the Sky object was disabled because it is considered to be an endless distance away.</p>
+<p><div class="image_full" style="max-width:746px"><img  src="../pics/03xxxx/038299.jpg"  ><span class="caption">左图未启用距离减淡，右图启用。</span></div></p>
+<p>这项设置可以根据物体与材质之间的距离来忽略材质对物体的反射。如果不启用<span class="command">距离减淡</span>，所有的物体都会被反射，启用后，<span class="command">距离</span>表示不会被反射的物体距离。反射会根据<span class="command">衰减</span>减弱到设置的<span class="command">距离</span>，<span class="command_value">0</span>表示衰减是线性的，其他数值的效果见上图的示例。</p>
+<p>对天空对象的反射是无效的，因为天空被看作是无限远的。</p>
 <p><a id="REFLECTION_LAYER_SAMPLING_DIM_COLOR" name="REFLECTION_LAYER_SAMPLING_DIM_COLOR"></a> 
 	<!--AM_JUMP "REFLECTION_LAYER_SAMPLING_DIM_COLOR","REFLECTION_LAYER_SAMPLING_GROUP","ID_MATERIALGROUP_REFLECTION"-->
 	<!--INDEX "8","距离颜色","REFLECTION_LAYER_SAMPLING_DIM_COLOR"-->
 	<span class="c4d_id">距离颜色</span></p>
-<p>For this setting, imagine a sphere with a <span class="command">Distance</span> radius around the reflective object. This sphere’s color is reflected when the reflection samples are longer than the <span class="command">Distance</span> value defined. Normally, black would be the correct color in this case because it would prevent anything from being reflected. Other colors can be used depending on the intended result.</p>
+<p>对于这项设置，想象一个球包围在反射性对象周围，当反射采样比设定的<span class="command">距离</span>远时，则球体的颜色会被反射。一般情况下黑色是比较合适的，因为这样可以防止反射任何物体，也可以根据想要的结果使用其他颜色。</p>
 <p><a id="TRANS" name="TRANS"></a></p>
 <p><a id="hl_16" name="hl_16"></a>
 	<!--INDEX "3","* 透明度 * 标签","hl_16"-->
 	<p><span class="HL_1">* 透明度 * 标签</span></p>
 <p><div class="image_full" style="max-width:720px"><img  src="../pics/03xxxx/039458.jpg"  >
-	<span class="caption">The <span class="command">Total Inner Reflection</span> is also part of the Reflectance channel; the Roughness was increased on the right.</span></div></p>
-<p>A <span class="command">* 透明度 *</span> will be added when the material channel <span class="command">透明度</span> is enabled. This tab contains reflection settings, however without Color or Mask settings, among others. The settings in this tab let you control the inner total reflection’s reflective properties (which has not possible prior to R16).</p>
-<p>Normally, these settings do not have to be modified. If you’re not trying to achieve a very unusual effect, these settings can be left as they are.</p>
-<p>This tab cannot be copied or deleted.</p>
+	<span class="caption"><span class="command">全内部反射</span>也是反射通道的一部分，右图增加了粗糙度。</span></div></p>
+<p>当材质启用了<span class="command">透明度</span>通道时，反射通道中会自动添加一个<span class="command">* 透明度 *</span>标签。这个标签包含了反射设置，但是没有颜色或遮罩设置。这些设置可以控制全内部反射的反射属性（R16 之前的版本不行）。</p>
+<p>如果你不是想要实现一些非常规的效果，通常这些数值不需要修改。</p>
+<p>这个标签不能被复制或删除。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br>
-</span>The <span class="command">Total Inner Reflection</span> must be enabled in the 透明度 channel and <span class="command">Refraction</span> should be set to <span class="command_value">0</span>.</div></p>
+</span>必须在透明通道中启用<span class="command">全内部反射</span>并且将<span class="command">折射率</span>设为<span class="command_value">0</span>。</div></p>
 <p>
 
 </p>
