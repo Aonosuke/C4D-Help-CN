@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：凹凸</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3516"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "13"-->
+		<!--TITLE "材质属性 / 材质编辑器：凹凸"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi_self">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>凹凸</span></p><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","关于凹凸贴图的说明","hl_1"--><p><span class="HL_1">关于凹凸贴图的说明</span></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004xxx/004347.jpg"  ><span class="caption"></span></div></p>
+<p>这个页面的设置可以模拟凹凸效果。</p>
+<p>图 2 展示了一个光滑表面的侧视图。</p>
+<p><div class="image_limit" style="max-width: 200px"><img  src="../pics/004xxx/004348.jpg"  ><span class="caption">图 2 。</span></div></p>
+<p>这个表面的亮度一致。但是如果给同一个表面添加了凹凸贴图，CINEMA 4D 会将贴图的亮度值看作表面的高度值（图 3）。</p>
+<p><div class="image_limit" style="max-width: 200px"><img  src="../pics/004xxx/004349.jpg"  ><span class="caption">图 3 。</span></div></p>
+<p>这些高度值会被转化为轮廓，它会影响法线矢量方向的斜度。虽然表面实际上是光滑的，通过法线矢量的变化，在渲染时会创建一个视觉上有 3D 凹凸结构的表面。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004350.jpg"  ><span class="caption"></span></div></p>
+<p><a id="WAYS" name="WAYS"></a></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","创建结构的方法","hl_2"--><p><span class="HL_2">创建结构的方法</span></p>
+<p>有四种基本方法可以在渲染时将结构添加到表面上。</p>
+<p><div class="image_full" style="max-width:3400px"><img  src="../pics/04xxxx/040324.jpg"  ><span class="caption">在凹凸贴图和法线之间有轻微的区别，但是在视差和次多边形置换之间有显著差别。渲染时间从左至右增加。</p>
+<p></span></div></p>
+<p>下面的方式按照渲染时间/质量依次排列（前三个是利用渲染时视觉上的计算，而次多边形置换是在表面产生了实际的凸起和凹陷，因此产生的结果最真实）：<ul></p>
+<p><li> 凹凸</li>
+<li> 法线</li>
+<li> 视差</li>
+<li> 次多边形置换（有限制，法线置换）</li></ul><p></p>
+<p>这几种方式的共同点是它们都会根据贴图的灰度值来决定高度和深度。因此什么时候要使用什么方式呢？</p>
+<p>一般可以遵循以下经验法则：<ul></p>
+<p><li> 高频细节（如地毯或细小划痕等）：凹凸或法线贴图</li>
+<li> 中频细节（如砖、树皮或鹅卵石铺面等）：视差贴图</li>
+<li> 低频细节或特写（如丘陵景观、轮廓等）：次多边形置换</li></ul><p></p>
+<p>不过，你还是需要试验来得到对场景最佳的效果。通常你需要在渲染质量和渲染时间之间找到平衡。</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","参数","hl_3"--><p><span class="HL_1">参数</span></p>
+<p><a id="MATERIAL_BUMP_STRENGTH" name="MATERIAL_BUMP_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_BUMP_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[-1000000..1000000%]</span></p>
+<p>凹凸的强度。强度越大，表面就越粗糙。如果将滑块移到左边，则可以选择负值来翻转凹凸贴图的效果：明亮的像素会让材质表面凹陷，而深色像素会让表面凸起。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>输入的数值可以大于<span class="command_value">100%</span>。在使用 <span class="command">MIP</span> 或 <span class="command">SAT</span> 贴图时高强度值尤为有用，因为这两种插值类型会让表面略微变平。</div></p>
+<p><a id="RELEASE_180_1" name="RELEASE_180_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p><a id="hl_4" name="hl_4"></a><!--INDEX "3","视差效果","hl_4"--><p><span class="HL_1">视差效果</span></p>
+<p><div class="image_full" style="max-width:1996px"><img  src="../pics/04xxxx/040325.jpg"  ><span class="caption"></span></div></p>
+<p>视差贴图是 CINEMA R18 包含的一种新的特性。它的效果接近次多边形置换，又不需要对物体进行细分曲面。它可以大量减少渲染时间。在程序中，视差贴图会弯曲 UV 坐标来模拟表面的凸起。颜色贴图也会按一定方式处理，让它的透视变形正确（如上面示例中右图的黑色条纹）。</p>
+<p><div class="image_full" style="max-width:2400px"><img  src="../pics/04xxxx/040326.jpg"  ><span class="caption">得益于其生动的效果，视差贴图也可以用在一些细微的效果上（注意看石块边缘的高光观感十分真实）。</p>
+<p></span></div></p>
+<p>不过，由于它不会改变几何形体本身，在使用视差贴图时也有一些限制：<ul></p>
+<p><li> 物体的轮廓依然是它本身的几何体造型，这也就意味着在边缘处模拟的凹凸会被忽略：</li>
+	<div class="image_full" style="max-width:647px"><img  src="../pics/04xxxx/040327.jpg"  ><span class="caption"></span></div></p>
+<p><li> 凸起不会产生投影</li>
+<li> 诸如反射、折射或环境吸收这样的渲染结果会出错，或者在凸起处不会有这些效果</li>
+<li> 在凸起很高的情况下，贴图在边缘处可能会变形</li>
+<li> 只能模拟垂直凸起（而次多边形置换还可以模拟水平偏移）</li>
+<li> 视差贴图需要配合 UV 坐标使用。没有 UV 坐标的着色器渲染结果会出错（例如噪波着色器需要将<span class="command">空间</span>设为 <span class="command_value">UV（二维）</span>）</li></ul><p></p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","视差设置","hl_5"--><p><span class="HL_1">视差设置</span></p>
+<p><span class="command">强度</span>和<span class="command">视差补偿</span>分别是单独的滑块：<span class="command">强度</span>根据凹凸效果决定着色，而<span class="command">视差补偿</span>计算贴图变形。同时使用两个设置的效果是最好的。</p>
+<p><a id="MATERIAL_BUMP_PARALLAX_HEIGHT" name="MATERIAL_BUMP_PARALLAX_HEIGHT"></a> <!--INDEX "8","视差补偿","MATERIAL_BUMP_PARALLAX_HEIGHT"--><span class="c4d_id">视差补偿</span> <span class="range">[-∞..+∞]</span></p>
+<p>这项设置决定了效果的强度，即 UV 坐标移动到虚拟高度的程度。要确保调节<span class="command">强度</span>设置（通常需要调高强度，为了计算视差效果不可以设为<span class="command_value">0</span>）产生真实的效果。</p>
+<p>也可以使用负值来反转效果：凸起的地方会凹陷，反之亦然。</p>
+<p>如果数值设为<span class="command_value">0</span>，则不会有视差效果，取而代之会使用凹凸贴图效果。</p>
+<p><a id="MATERIAL_BUMP_PARALLAX_SAMPLES" name="MATERIAL_BUMP_PARALLAX_SAMPLES"></a> <!--INDEX "8","视差采样","MATERIAL_BUMP_PARALLAX_SAMPLES"--><span class="c4d_id">视差采样</span> <span class="range">[2..2147483647]</span></p>
+<p><div class="image_full" style="max-width:1200px"><img  src="../pics/04xxxx/040328.jpg"  ><span class="caption">左图的<span class="command">视差采样</span>过低，右图则是正确的。</span></div></p>
+<p>通常这项参数不需要修改。但如果<span class="command">视差补偿</span>太大，会出现上图左边的情况。这时需要增加<span class="command">视差采样</span>数值。视差采样越高渲染时间也越长。</p>
+<p></p></div></p>
+<p><a id="MATERIAL_BUMP_MIPFALLOFF" name="MATERIAL_BUMP_MIPFALLOFF"></a> <!--INDEX "8","MIP 衰减","MATERIAL_BUMP_MIPFALLOFF"--><span class="c4d_id">MIP 衰减</span> </p>
+<p>通过启用<span class="command">MIP 衰减</span>，可以在使用凹凸贴图时强化 MIP/SAT 贴图效果，这时凹凸贴图会在远离摄像机的表面处减弱。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004313.jpg"  ><span class="caption">左图：禁用 MIP 衰减；右图：启用 MIP 衰减。</span></div></p>
+<p><a id="MATERIAL_BUMP_SHADER" name="MATERIAL_BUMP_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_BUMP_SHADER"--><span class="c4d_id">纹理</span></p>
+<p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
+<p>在这个通道中你使用纹理，凹凸贴图只会根据图像的灰度值进行计算。</p>
+<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","采样","hl_6"--><p><span class="HL_1">采样</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/02xxxx/023748.jpg"  ><span class="caption"></span></div></p>
+<p>为了让效果更真实，在凹凸贴图中使用合适的着色器非常重要（在这个示例中使用的是<a href="XWATER.html" target="">水面着色器</a>）。在上面的示例中，大的波浪是通过<a href="5953.html" target="">布料</a>实现的（边缘经过了调整，而且风作为单独的<a href="OWIND.html" target="">风力对象</a>也被应用到了<a href="CLOTHTAG-CLOTH_GROUP_FORCES.html" target="">布料标签</a>上）。这种光滑的波浪只能用手动方式创建。凹凸通道中的水面着色器则用来创建典型的“涟漪”，这样可以减轻建模工作。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

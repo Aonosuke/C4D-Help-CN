@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：环境</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3514"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "11"-->
+		<!--TITLE "材质属性 / 材质编辑器：环境"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p>
+<a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi_self">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>环境</span></p><p></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004xxx/004339.jpg"  ><span class="caption"></span></div></p>
+<p><span class="command">环境</span>通道使用纹理来模拟反射。与其他通道不同，这里的<span class="command">颜色</span>和<span class="command">纹理</span>是通过<span class="command">混合模式</span>来叠加的，而不是添加。</p>
+<p><div class="hint"><span class="HL_hint">提示：<br></span>
+	如果同时使用环境同栋阿和反射通道，确保反射通道的<span class="command">衰减</span>选项是<span class="command_value">添加</span>，否则环境通道无效。</div></p>
+<p>那么为什么要用环境属性替代反射呢？一个原因是你的场景可能没有足够的物体在反射时产生良好的效果，另一个原因是环境特性的渲染速度比反射要快。</p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004xxx/004340.jpg"  ><span class="caption">一个典型的环境贴图。</span></div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>
+	环境反射渲染速度很快，因为不需要光线跟踪。</div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004341.jpg"  >
+	<span class="caption">只使用了环境属性的反射。</span></div></p>
+<p><a id="MATERIAL_ENVIRONMENT_COLOR" name="MATERIAL_ENVIRONMENT_COLOR"></a> <!--INDEX "8","颜色","MATERIAL_ENVIRONMENT_COLOR"--><span class="c4d_id">颜色</span></p>
+<p>在大部分材质通道页面，可以使用取色器来选取颜色。</p>
+<p><a id="MATERIAL_ENVIRONMENT_BRIGHTNESS" name="MATERIAL_ENVIRONMENT_BRIGHTNESS"></a> <!--INDEX "8","亮度","MATERIAL_ENVIRONMENT_BRIGHTNESS"--><span class="c4d_id">亮度</span> <span class="range">[0..10000%]</span></p>
+<p>使用该设置来调整通道颜色的亮度。<span class="command">亮度</span>可以看作是一个乘数，并且可以设为大于<span class="command">100%</span>。</p>
+<p><a id="MATERIAL_ENVIRONMENT_SHADER" name="MATERIAL_ENVIRONMENT_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_ENVIRONMENT_SHADER"--><span class="c4d_id">纹理</span></p>
+<p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
+<p><a id="MATERIAL_ENVIRONMENT_TEXTUREMIXING" name="MATERIAL_ENVIRONMENT_TEXTUREMIXING"></a> <!--INDEX "8","混合模式","MATERIAL_ENVIRONMENT_TEXTUREMIXING"--><span class="c4d_id">混合模式</span></p>
+<p>这些参数会影响颜色和贴图的混合。所有通道的默认模式都是标准，除了环境通道的默认混合模式是正片叠底。不是所有通道都有混合模式。如果加载了贴图或2D着色器，它会位于颜色的上一层。</p>
+<p><a id="MATERIAL_TEXTUREMIXING_NORMAL" name="MATERIAL_TEXTUREMIXING_NORMAL"></a><!--INDEX "10","标准","MATERIAL_TEXTUREMIXING_NORMAL"--><span class="c4d_id_cycle">标准</span></p>
+<p>标准模式下，<span class="command">混合强度</span>表示贴图的透明度。如果数值设为 <span class="command_value">100%</span>，那么就只能看到贴图（记住，贴图位于顶层，因此如果它是不透明的，则无法见到它下面的颜色）。如果数值设为 <span class="command_value">70%</span>，则结果是 <span class="command_value">70%</span> 的贴图加上 <span class="command_value">30%</span> 的颜色。</p>
+<p>例如，通道的颜色为 RGB 255/255/0（黄色），贴图的一个像素色值为 RGB 255/0/0（红色），混合强度设为 <span class="command_value">50%</span>，则最终这个像素显示的颜色为 255/128/0（橙色）。</p>
+<p><a id="MATERIAL_TEXTUREMIXING_ADD" name="MATERIAL_TEXTUREMIXING_ADD"></a><!--INDEX "10","添加","MATERIAL_TEXTUREMIXING_ADD"--><span class="c4d_id_cycle">添加</span></p>
+<p>贴图的 RGB 值会加到颜色的 RGB 值上，最大值为 255，因此如果贴图像素色值为 RGB 0/255/255（青色），添加到颜色色值 255/255/0（黄色）上，则结果为255/255/255（白色）。</p>
+<p><a id="MATERIAL_TEXTUREMIXING_SUBTRACT" name="MATERIAL_TEXTUREMIXING_SUBTRACT"></a><!--INDEX "10","减去","MATERIAL_TEXTUREMIXING_SUBTRACT"--><span class="c4d_id_cycle">减去</span></p>
+<p>颜色的 RGB 值会减去贴图的 RGB 值。因此如果贴图像素色值为 RGB 255/255/255（白色），颜色色值为 255/0/0（红色），混合强度为100%，则显示结果为 0/255/255（青色）。</p>
+<p><a id="MATERIAL_TEXTUREMIXING_MULTIPLY" name="MATERIAL_TEXTUREMIXING_MULTIPLY"></a><!--INDEX "10","正片叠底","MATERIAL_TEXTUREMIXING_MULTIPLY"--><span class="c4d_id_cycle">正片叠底</span></p>
+<p>贴图的 RGB 值会乘以颜色的 RGB 值。如 RGB 255/128/0（橙色）乘 RGB 0/255/0（绿色），结果为 RGB 0/128/0（暗绿）。</p>
+<p><a id="MATERIAL_ENVIRONMENT_TEXTURESTRENGTH" name="MATERIAL_ENVIRONMENT_TEXTURESTRENGTH"></a> <!--INDEX "8","混合强度","MATERIAL_ENVIRONMENT_TEXTURESTRENGTH"--><span class="c4d_id">混合强度</span> <span class="range">[0..100%]</span></p>
+<p><span class="command">混合强度</span>决定了贴图和颜色的混合比例。</p>
+<p><a id="MATERIAL_ENVIRONMENT_TILESX" name="MATERIAL_ENVIRONMENT_TILESX"></a> <!--INDEX "8","水平平铺","MATERIAL_ENVIRONMENT_TILESX"--><span class="c4d_id">水平平铺</span> <span class="range">[0..+∞]</span><br><a id="MATERIAL_ENVIRONMENT_TILESY" name="MATERIAL_ENVIRONMENT_TILESY"></a> <!--INDEX "8","垂直平铺","MATERIAL_ENVIRONMENT_TILESY"--><span class="c4d_id">垂直平铺</span> <span class="range">[0..+∞]</span></p>
+<p>环境属性与材质的投射类型无关，它总是以球体包围在物体四周。使用<span class="command">水平平铺</span>和<span class="command">垂直平铺</span>可以设置水平方向和垂直方向的平铺数量。这两个设置替代了<span class="command">属性管理器</span>中纹理标签的平铺选项。</p>
+<p><a id="MATERIAL_ENVIRONMENT_EXCLUSIVE" name="MATERIAL_ENVIRONMENT_EXCLUSIVE"></a> <!--INDEX "8","反射专有","MATERIAL_ENVIRONMENT_EXCLUSIVE"--><span class="c4d_id">反射专有</span></p>
+<p>如果启用这个选项，环境反射只会出现在没有<span class="command">真正</span>反射（通过<span class="command">反射</span>通道产生）的地方。</p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/004xxx/004342.jpg"  ><span class="caption">左图：未启用反射专有，右图：启用反射专有。</span></div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

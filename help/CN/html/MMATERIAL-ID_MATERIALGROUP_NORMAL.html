@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：法线</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "5313"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "14"-->
+		<!--TITLE "材质属性 / 材质编辑器：法线"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi_self">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>法线</span></p><p></p>
+<p><!--INDEX "1","法线",""--></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004xxx/004379.jpg"  ><span class="caption"></span></div></p>
+<p>这个材质通道通过<span class="command">法线贴图</span>来使用法线纹理。什么是<span class="command">法线贴图</span>？</p>
+<p>法线贴图是一种从计算机游戏发展而来的技术，它可以在很短的渲染时间内，赋予一个低多边形物体（细节级别很低）富有细节、带有视觉结构的表面。</p>
+<p>凹凸贴图使用一个灰度位图来产生高度数据，而法线贴图使用一个包含法线方向信息的 RGB 贴图（法线可以指向各种方向）。</p>
+<p>法线贴图看起来是这个样子的：</p>
+<p><div class="image_full" style="max-width:1500px"><img  src="../pics/004xxx/004380.jpg"  ><span class="caption">法线纹理<span class="command">算法</span>设为<span class="command_value">对象</span></span></div></p>
+<p>这些<span class="command">怪异的</span>颜色包含了物体表面每个点的法线方向信息，红色、绿色、蓝色通道分别表示 X、Y、Z。法线方向不再由几何形体决定，而是由法线贴图决定。</p>
+<p>你可以使用<a href="TBAKETEXTURE.html" target="">烘焙纹理…</a>或<a href="5739.html" target="">烘焙对象…</a>选项来创建法线贴图，或者使用<a href="XNORMALIZER.html" target="">法线生成着色器</a>（它可以加载法线颜色贴图，通常是凹凸贴图）。</p>
+<p><div class="image_full" style="max-width:1593px"><img  src="../pics/004xxx/004381.jpg"  ><span class="caption">左图：使用次多边形置换的原始对象；右图：使用法线纹理的渲染结果。</span></div></p>
+<p>如果将法线贴图添加到<span class="command">法线</span>材质通道中，渲染结果接近原始的高多边形对象，尤其在灯光运动的情况下。这是因为阴影和高光会根据光源位置做出反应，渲染结果十分生动。</p>
+<p><div class="image_full" style="max-width:1600px"><img  src="../pics/004xxx/004382.jpg"  ><span class="caption">光源在不同位置时法线贴图的渲染效果。</span></div></p>
+<p>另外要注意在<a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html#ways" target="">创建结构的方法</a>一节中介绍的其他方法。</p>
+<p><a id="MATERIAL_NORMAL_STRENGTH" name="MATERIAL_NORMAL_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_NORMAL_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[0..100000%]</span></p>
+<p>决定了法线贴图的强度。不要使用过高的数值，因为效果会渐渐变得不真实。</p>
+<p>通常强度越高，视角就要越垂直于表面，这样看起来才会真实。</p>
+<p><a id="MATERIAL_NORMAL_SPACE" name="MATERIAL_NORMAL_SPACE"></a> <!--INDEX "8","算法","MATERIAL_NORMAL_SPACE"--><span class="c4d_id">算法</span></p>
+<p>有几种法线贴图的算法，这里不深入探讨，它们是：</p>
+<p><ul></p>
+<p><li> 相切：最常用的算法。法线方向根据所在的表面来决定。对于自身变形的对象来说这是最合适的算法，例如角色动画。这种贴图中主要是亮蓝色或亮绿色，这些是法线垂直于表面的区域。</li></ul><p><ul></p>
+<p><li> 对象：使用对象的坐标系来编码法线方向。这种贴图大部分会出现各种颜色。</li></ul><p><ul></p>
+<p><li> 全局：使用全局坐标系统来编码法线方向。它只适合用在没有动画的静态对象上。这种贴图也会出现各种颜色。</li></ul><p></p>
+<p>在选择算法时，你必须清楚创建法线贴图时使用的哪种算法，两种算法要匹配。如果要使用通过 CINEMA 4D 的<a href="TBAKETEXTURE.html" target="">烘焙纹理…</a>功能创建的法线贴图，也要在这里使用相同的设置。</p>
+<p><ul></p>
+<p><li> 法线生成着色器使用的是<span class="command_value">相切</span></li>
+<li> 如果一个法线贴图是在 CINEMA 4D 中烘焙的（烘焙纹理标签），在这里要使用相同的设置。</li></ul><p></p>
+<p><a id="MATERIAL_NORMAL_REVERSEX" name="MATERIAL_NORMAL_REVERSEX"></a> <!--INDEX "8","翻转 X (红)","MATERIAL_NORMAL_REVERSEX"--><span class="c4d_id">翻转 X (红)</span><br><a id="MATERIAL_NORMAL_REVERSEY" name="MATERIAL_NORMAL_REVERSEY"></a> <!--INDEX "8","翻转 Y (绿)","MATERIAL_NORMAL_REVERSEY"--><span class="c4d_id">翻转 Y (绿)</span><br><a id="MATERIAL_NORMAL_REVERSEZ" name="MATERIAL_NORMAL_REVERSEZ"></a> <!--INDEX "8","翻转 Z (蓝)","MATERIAL_NORMAL_REVERSEZ"--><span class="c4d_id">翻转 Z (蓝)</span><br><a id="MATERIAL_NORMAL_SWAP" name="MATERIAL_NORMAL_SWAP"></a> <!--INDEX "8","交换 Y & Z (Y 上)","MATERIAL_NORMAL_SWAP"--><span class="c4d_id">交换 Y & Z (Y 上)</span></p>
+<p>因为没有标准的创建法线贴图的算法，因此每个软件的处理方式有所不同：有些软件 Y 坐标是绿色，而有些是蓝色。为了最大程度兼容，可以使用这些设置来切换所有的颜色组成。</p>
+<p>下列经验可以应用在最常用的<span class="command">相切</span>算法中：<ul></p>
+<p><li> 如果法线贴图大部分是亮绿色，应该启用<span class="command">交换 Y & Z (Y 上)</span>。</li>
+<li> 如果法线贴图大部分是亮蓝色，应该禁用<span class="command">交换 Y & Z (Y 上)</span>。</li></ul><p></p>
+<p><a id="MATERIAL_NORMAL_SHADER" name="MATERIAL_NORMAL_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_NORMAL_SHADER"--><span class="c4d_id">纹理</span></p>
+<p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
