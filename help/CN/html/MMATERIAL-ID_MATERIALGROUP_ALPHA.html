@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：Alpha</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3517"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "15"-->
+		<!--TITLE "材质属性 / 材质编辑器：Alpha"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi_self">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Alpha</span></p><p></p>
+<p><!--INDEX "1","Alpha",""--></p>
+<p><!--INDEX "1","Alpha channel",""--></p>
+<p><!--INDEX "1","Genlocking",""--></p>
+<p><a id="LEAF" name="LEAF"></a></p>
+<p><div class="image_full" style="max-width:1110px"><img  src="../pics/02xxxx/023751.jpg"  >
+	<span class="caption">左图是将一个树叶贴图投射到各个略不相同的表面上。右图使用了 Alpha 通道，它“裁剪”出了叶片表面。场景版权  © Milan Soukup</span></div></p>
+<p>Alpha 通道让你可以使用一张图像来遮挡材质上的区域，让背景显露出来。它对于细节的提升十分有用。它的原理是定义材质的一些区域让其不可见，这样位于这些区域后方的材质或对象会显露出来。3D 树木就是一个经典的示例。比起给单独的树木进行建模，还可以把树木的图像添加到对象上，然后用 Alpha 通道剪出树木的轮廓。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>许多 CINEMA 4D 的<a href="5812.html" target="">着色器</a>有内置的 Alpha 通道。</div></p>
+<p>如果在渲染带有多个 Alpha 通道的对象时出现了黑色区域，可以在渲染设置的<span class="command">选项</span>页面增加<a href="DRENDERSETTINGS-RDATA_GROUP_OPTIONS.html#RDATA_RAYDEPTH" target="">跟踪深度</a></p>
+<p>如果将一个带有 Alpha 通道的材质应用到一个没有其他底层材质的对象上，那么该对象在 Alpha 通道允许显示底层材质的区域不可见。</p>
+<p>假设你想要讲一个扫描的树木放到场景中。首先，你需要创建一个材质，启用<span class="command">颜色</span>通道，选择一张树木图片作为颜色贴图，然后将这个材质分配一个对象，如矩形多边形。</p>
+<p>当渲染这个场景时，你会在这个矩形多边形上看到树木，但是树木周围的区域是不透明的，而是有一个蓝天背景（图 1）。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004352.jpg"  ><span class="caption">图 1 。</span></div></p>
+<p>现在编辑树木材质，启用 Alpha 通道，切换到 Alpha 通道并加载<span class="command">树木</span>贴图。先禁用<span class="command">柔和</span>选项，然后按住 Ctrl 点击想要去掉区域的颜色——在这个示例中，是树木周围的天空（图 2）。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004353.jpg"  ><span class="caption">图 2 。</span></div></p>
+<p>CINEMA 4D 会将颜色设置为这个颜色，并根据这个颜色来遮盖图片。现在这棵树周围没有天空背景了（前提是启用了光影着色或快速着色）。现在你可以在 Alpha 页面选择一个稍微不同的颜色，然后可以立即看到效果的变化。不过在叶片、树枝和树干周围仍然会残留一些背景，因此现在的结果还不完善。</p>
+<p>要得到更精确的结果，可以在图像编辑软件中创建 Alpha 通道然后添加到树木图像上。将这个图像加载到 Alpha 通道然后启用<span class="command">柔和</span>和<span class="command">图像 Alpha</span> 选项。现在贴图的遮罩就很干净了（图 3）。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004354.jpg"  ><span class="caption">图 3 。</span></div></p>
+<p>下面这个复杂的盒子使用了两个材质：一个有反射性的金色金属材质和一个哑光木材。要让木材可见，这两种颜色中有一个需要用黑白图进行遮罩。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004355.jpg"  ><span class="caption"></span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Alpha 通道和抗锯齿过滤器","hl_1"--><p><span class="HL_3">Alpha 通道和抗锯齿过滤器</span></p>
+<p><div class="image_full" style="max-width:1108px"><img  src="../pics/03xxxx/034786.jpg"  ><span class="caption"><span class="command">Sinc</span> 抗锯齿过滤器会扩大边缘。</span></div></p>
+<p>根据抗锯齿中的<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTER" target="_self"><span class="text_id">过滤</span></a>设置，Alpha 通道的边缘可以可以进行平滑。这可能会在接下来的合成中出现问题，尤其是当使用 <span class="command">Sinc</span> 过滤时，会出现如上图的问题。根据设置，抗锯齿过滤器的效果会超过对象边缘，这个问题可以通过选择其他过滤器或使用较小的<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTERSIZEX" target="_self"><span class="text_id">滤镜宽度</span></a>和<a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_AAFILTERSIZEY" target="_self"><span class="text_id">滤镜高度</span></a>来减少。</p>
+<p><a id="MATERIAL_ALPHA_COLOR" name="MATERIAL_ALPHA_COLOR"></a> <!--INDEX "8","颜色","MATERIAL_ALPHA_COLOR"--><span class="c4d_id">颜色</span><br><a id="MATERIAL_ALPHA_DELTA" name="MATERIAL_ALPHA_DELTA"></a> <!--INDEX "8","Alpha 容差（变量）","MATERIAL_ALPHA_DELTA"--><span class="c4d_id">Alpha 容差（变量）</span> </p>
+<p>如果对使用了抗锯齿的贴图进行裁剪，会在对象周围产生一个明亮的边界，这是由主贴图和 Alpha 颜色之间的颜色抗锯齿造成的。这个问题可以通过调节这两个滑块解决。</p>
+<p>你可以使用<span class="command">颜色</span>对图像中特定区域进行裁剪。使用这种方式，你需要从选择的图像中选择想要变成透明的颜色。缺点是你想要变透明的区域通常包含几种颜色，因此会在物体周围留下一圈杂色。但是通过设置<span class="command">Alpha 容差（变量）</span>颜色，你可以设置颜色偏离的程度，这有助于减少杂色残留。</p>
+<p>使用贴图内含的 Alpha 通道可以清晰精确地裁剪贴图（参见下面的<span class="command_value">图像 Alpha</span>）。</p>
+<p><a id="MATERIAL_ALPHA_INVERT" name="MATERIAL_ALPHA_INVERT"></a> <!--INDEX "8","反向","MATERIAL_ALPHA_INVERT"--><span class="c4d_id">反向</span></p>
+<p>这个选项会反向 alpha 通道，透明部分和实体部分将反转，这对颜色裁剪和贴图内置 Alpha 通道两种方式都有效。</p>
+<p><a id="MATERIAL_ALPHA_SOFT" name="MATERIAL_ALPHA_SOFT"></a> <!--INDEX "8","柔和","MATERIAL_ALPHA_SOFT"--><span class="c4d_id">柔和</span></p>
+<p>启用这个选项会让贴图边缘渐渐消失，这会让你有更多方法创建真是视觉的对象。<span class="command">柔和</span>默认是启用的，这时<span class="command">颜色</span>和<span class="command">Alpha 容差（变量）</span>是无效的。纹理贴图现在的作用是决定渐隐的范围。贴图中白色的像素表示该处的材质是<span class="command_value">100%</span>不透明的。如果贴图是黑色的，则是<span class="command_value">100%</span>透明的。</p>
+<p><a id="MATERIAL_ALPHA_IMAGEALPHA" name="MATERIAL_ALPHA_IMAGEALPHA"></a> <!--INDEX "8","图像 Alpha","MATERIAL_ALPHA_IMAGEALPHA"--><span class="c4d_id">图像 Alpha</span></p>
+<p>启用<span class="command">图像 Alpha</span>时，你可以使用加载的图像中已有的 Alpha 通道。支持 TIF、TGA、PICT、Photoshop PSD 和 QuickTime MOV 图像格式（所有 QuickTime 支持的格式）。如果图像中没有 Alpha 通道，那么图像 Alpha 通道选项会被忽略。可以使用反向功能来反转 Alpha 通道，而不需要在图像编辑软件中重新制作贴图。</p>
+<p><a id="MATERIAL_ALPHA_PREMULTIPLIED" name="MATERIAL_ALPHA_PREMULTIPLIED"></a> <!--INDEX "8","预乘","MATERIAL_ALPHA_PREMULTIPLIED"--><span class="c4d_id">预乘</span></p>
+<p>如果使用带有预乘 Alpha 通道，可以启用这个选项。要确认图像软件生成的是这种类型的 Alpha 通道。</p>
+<p><a id="MATERIAL_ALPHA_SHADER" name="MATERIAL_ALPHA_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_ALPHA_SHADER"--><span class="c4d_id">纹理</span></p>
+<p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

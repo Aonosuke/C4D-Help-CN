@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 		<meta name="generator" content="WICKIE">
-		<title>材质属性 / 材质编辑器: Displacement</title>
+		<title>材质属性 / 材质编辑器：置换</title>
 		<meta name="FORMATTER" content="wickie">
 		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
 		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
@@ -13,7 +13,7 @@
 		<!--PAGE_ID "3521"-->
 		<!--VATER_ID "3504"-->
 		<!--REIHENFOLGE "19"-->
-		<!--TITLE "材质属性 / 材质编辑器: Displacement"-->
+		<!--TITLE "材质属性 / 材质编辑器：置换"-->
 		<!--APPS "11 16 17 10 14 15"-->
 		<!--TYP "GROUP"-->
 	</head>
@@ -26,97 +26,102 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">Material</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi_self">Displacement</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Displacement</span></p><p></p>
-<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004370.jpg"  ><span class="caption"></span></div></p>
-<p>Displacement is similar to Bump, the difference being that here the object is actually (not just apparently) deformed. This difference is best seen at object edges. In the sphere example below, the left half of the sphere uses bump mapping, while the right half uses displacement mapping.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004371.jpg"  ><span class="caption"></span></div></p>
-<p>A bump map was used on the left half of the sphere and a displacement map on the right half. You can see that the edge of the sphere with the bump map applied is smooth and that the displacement edge is deformed. The slight deformation also leads to shadow effects within the object surface itself.</p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General Information","hl_1"--><p><span class="HL_1">General Information</span><ul></p>
-<p><li> Always disable the <span class="command">Perfect Sphere</span> option when creating a sphere. Leaving this option enabled will prevent a displacement map from being calculated.</li><li> If several displacement materials are assigned to a given object, the <span class="command">maximum</span> values will always be used. Example: An object has 2 different displacement materials on 2 selections. The first displacement material has a subdivision level of <span class="command_value">4</span> and the second <span class="command_value">6</span>. The entire object has a subdivision level of <span class="command_value">6</span>. Even though the entire object is subdivided, the displacement will only be applied to the defined selections.</li><li> If problems should occur when using the RGB (X, Y, Z local) mode, such as no local displacement, enabling the Texture tag’s <span class="command">Use UVW for Bump</span> option can help.</li><li> Please also not the following functions:</li>- <a href="49938.html" target="">Sculpting</a></p>
-<p>- <a href="TBAKETEXTURE-ID_BAKEOPTIONS.html#dis" target="">Bake Texture</a></p>
-<p>which can be used to create displacement textures.</p>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi_self">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>置换</span></p><p></p>
+<p><div class="image_limit" style="max-width: 400px"><img  src="../pics/004xxx/004370.jpg"  ><span class="caption"></span></div></p>
+<p>置换与凹凸类似，区别是使用置换的对象会产生形变（而不只是看上去的凹凸）。这种区别在对象边缘是最明显的。在下面的球体示例中，球体的左边边使用的是凹凸贴图，右图使用了置换贴图。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004371.jpg"  ><span class="caption"></span></div></p>
+<p>左半边使用了凹凸贴图而右半边使用了置换贴图。在使用凹凸贴图的球体边缘是平滑的，而使用了置换的边缘出现了形变，这种形变还会在对象表面上产生阴影效果。</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","概述","hl_1"--><p><span class="HL_1">概述</span><ul></p>
+<p><li> 创建球体时要禁用<span class="command">理想渲染</span>选项，否则置换贴图会失效。</li>
+<li> 如果给一个对象指定了数个置换材质，则会使用<span class="command">最大</span>的那个数值。例如：一个对象有两个选集分别使用了不同的置换材质，第一个置换材质的细分数级别是<span class="command_value">4</span>，而第二个是<span class="command_value">6</span>。整个对象的细分数级别则是<span class="command_value">6</span>。尽管整个对象是细分的，但是置换只会应用到指定的选集。</li>
+<li> 如果在使用 RGB (XYZ 对象) 模式时出现了问题，例如没有对象置换，启用纹理标签的<span class="command">使用凹凸 UVW</span>选项会有所帮助。</li>
+<li> 还需要注意下面的功能：</li>- <a href="49938.html" target="">雕刻</a></p>
+<p>- <a href="TBAKETEXTURE-ID_BAKEOPTIONS.html#dis" target="">烘焙纹理</a></p>
+<p>它们可以用来创建置换纹理。</p>
 <p></ul><p></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004178.jpg"  ><span class="caption"></span></div></p>
-<p><a id="MATERIAL_DISPLACEMENT_STRENGTH" name="MATERIAL_DISPLACEMENT_STRENGTH"></a> <!--INDEX "8","Strength","MATERIAL_DISPLACEMENT_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[-100..100%]</span></p>
-<p>This slider allows you to adjust the maximum displacement defined by the <span class="command">Height</span> setting (the <span class="command">Strength</span> and <span class="command">Height</span> values will be multiplied together to control the maximum displacement).</p>
-<p><a id="MATERIAL_DISPLACEMENT_HEIGHT" name="MATERIAL_DISPLACEMENT_HEIGHT"></a> <!--INDEX "8","Height","MATERIAL_DISPLACEMENT_HEIGHT"--><span class="c4d_id">Height</span> <span class="range">[-∞..+∞m]</span></p>
-<p>Defines the height of the displacement, which can be modified by <span class="command">Strength</span> value.</p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE" name="MATERIAL_DISPLACEMENT_TYPE"></a> <!--INDEX "8","Type","MATERIAL_DISPLACEMENT_TYPE"--><span class="c4d_id">Type</span></p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE_INTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_INTENSITY"></a><!--INDEX "10","Intensity","MATERIAL_DISPLACEMENT_TYPE_INTENSITY"--><span class="c4d_id_cycle">Intensity</span></p>
-<p><div class="image_full" style="max-width:645px"><img  src="../pics/004372.jpg"  ><span class="caption">Intensity mode (top) and Intensity (Centered) mode (bottom).</span></div></p>
-<p>In the <span class="command">Intensity</span> mode, the displacement takes place in the positive direction. Black parts in the displacement map produce no displacement, white parts produce maximum displacement.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/004373.jpg"  ><span class="caption">Intensity mode.</span></div></p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"></a><!--INDEX "10","Intensity (Centered)","MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"--><span class="c4d_id_cycle">Intensity (Centered)</span></p>
-<p>In the Intensity (Centered) mode, the displacement can take place in both positive and negative directions. A gray value of 50% results in no displacement. White produces maximum positive displacement, while black produces maximum negative displacement.</p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE_REDGREEN" name="MATERIAL_DISPLACEMENT_TYPE_REDGREEN"></a><!--INDEX "10","Red / Green","MATERIAL_DISPLACEMENT_TYPE_REDGREEN"--><span class="c4d_id_cycle">Red / Green</span></p>
-<p>The displacement can take place in the negative or positive direction according to the red and green values in the texture. Green values raise the displacement, red values lower the displacement. A black color results in no displacement, it is purely the red and green components that control the displacement. A pure green (RGB: 0,255,0) and a pure red (RGB 255,0,0) lead to maximum displacement in the positive and negative directions respectively.</p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL" name="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"></a><!--INDEX "10","RGB (XYZ Object)","MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"--><span class="c4d_id_cycle">RGB (XYZ Object)</span><br><a id="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD" name="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"></a><!--INDEX "10","RGB (XYZ World)","MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"--><span class="c4d_id_cycle">RGB (XYZ World)</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004178.jpg"  ><span class="caption"></span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_STRENGTH" name="MATERIAL_DISPLACEMENT_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_DISPLACEMENT_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[-100..100%]</span></p>
+<p>这个滑块可以调节由<span class="command">高度</span>设置定义的最大置换（<span class="command">强度</span>和<span class="command">高度</span>数值会相乘来决定最大置换）。</p>
+<p><a id="MATERIAL_DISPLACEMENT_HEIGHT" name="MATERIAL_DISPLACEMENT_HEIGHT"></a> <!--INDEX "8","高度","MATERIAL_DISPLACEMENT_HEIGHT"--><span class="c4d_id">高度</span> <span class="range">[-∞..+∞m]</span></p>
+<p>决定了置换的高度，它可以通过<span class="command">强度</span>值进行修改。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE" name="MATERIAL_DISPLACEMENT_TYPE"></a> <!--INDEX "8","类型","MATERIAL_DISPLACEMENT_TYPE"--><span class="c4d_id">类型</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_INTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_INTENSITY"></a><!--INDEX "10","强度","MATERIAL_DISPLACEMENT_TYPE_INTENSITY"--><span class="c4d_id_cycle">强度</span></p>
+<p><div class="image_full" style="max-width:645px"><img  src="../pics/004xxx/004372.jpg"  ><span class="caption">强度模式（图上半部分）和强度（中心）模式（图下半部分）。</span></div></p>
+<p>在<span class="command">强度</span>模式下，置换的方向是正向，置换贴图的黑色表示不发生置换，白色表示产生最大置换。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004373.jpg"  ><span class="caption">强度模式。</span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY" name="MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"></a><!--INDEX "10","强度（中心）","MATERIAL_DISPLACEMENT_TYPE_CENTEREDINTENSITY"--><span class="c4d_id_cycle">强度（中心）</span></p>
+<p>在强度（中心）模式下，置换会有正负两个方向。50% 的灰度表示不发生置换。白色表示正向最大置换，而黑色表示负向最大置换。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_REDGREEN" name="MATERIAL_DISPLACEMENT_TYPE_REDGREEN"></a><!--INDEX "10","红色/绿色","MATERIAL_DISPLACEMENT_TYPE_REDGREEN"--><span class="c4d_id_cycle">红色/绿色</span></p>
+<p>置换根据贴图的红色和绿色数值决定置换的政府方向。绿色数值会凸起置换，红色数值则会凹陷。黑色表示不发生置换，只有红色和绿色部分会决定置换。纯绿色（RGB：0,255,0）和纯红色（RGB：255,0,0）分别表示正向和负向的最大置换。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL" name="MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"></a><!--INDEX "10","RGB (XYZ 对象)","MATERIAL_DISPLACEMENT_TYPE_RGBLOCAL"--><span class="c4d_id_cycle">RGB (XYZ 对象)</span><br><a id="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD" name="MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"></a><!--INDEX "10","RGB (XYZ 世界)","MATERIAL_DISPLACEMENT_TYPE_RGBWORLD"--><span class="c4d_id_cycle">RGB (XYZ 世界)</span></p>
 <p><RELEASE_140 Displacement now also includes the RGB mode (XYZ Tangent).></p>
-<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT" name="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"></a><!--INDEX "10","RGB (XYZ Tangent)","MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"--><span class="c4d_id_cycle">RGB (XYZ Tangent)</span></p>
-<p>These modes control the displacement spatially according to the texture’s RGB components. The components define the following directions:</p>
+<p><a id="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT" name="MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"></a><!--INDEX "10","RGB (XYZ 切线)","MATERIAL_DISPLACEMENT_TYPE_RGBTANGENT"--><span class="c4d_id_cycle">RGB (XYZ 切线)</span></p>
+<p>这些模式会根据纹理的 RGB 组成来决定置换空间。颜色组成定义了下列方向：</p>
 <p><ul></p>
-<p><li> Red: X</li><li> Green: Y</li><li> Blue: Z</li></ul><p></p>
-<p>Depending on the mode selected, different coordinate systems will be used for deformation. The most flexible and recommended mode is <span class="command_value">RGB (XYZ Tangent)</span> (of course as long as the displacement texture was also created in this mode!) because this allows object deformations (e.g., via Deformers) that won’t result in faulty deformations, as can be the case with other modes. This mode is indispensable specially in conjunction with character animation, is brought to life by moving joints.</p>
-<p><div class="image_full" style="max-width:1175px"><img  src="../pics/036194.jpg"  ><span class="caption"></span></div></p>
-<p>The cylinder in the image above as a displacement texture applied to it and was deformed using a Bend deformer. The displacement texture created using <span class="command_value">RGB (XYZ Object</span> mode at the top right is faulty; the displacement texture at the bottom right is correct and was created using <span class="command_value">RGB (XYZ Tangent)</span> mode.</p>
+<p><li> 红：X</li>
+<li> 绿：Y</li>
+<li> 蓝：Z</li></ul><p></p>
+<p>根据选择的模式，会使用不同的坐标系进行形变。最灵活也是最推荐的模式是<span class="command_value">RGB (XYZ 切线)</span>（当然，要确认置换贴图是要使用这种模式来创建的！）因为它可以让对象形变（如通过变形器）而不会出错。这个模式在与角色动画一起使用时尤为重要，通过移动关节产生栩栩如生的效果。</p>
+<p><div class="image_full" style="max-width:1175px"><img  src="../pics/03xxxx/036194.jpg"  ><span class="caption"></span></div></p>
+<p>上图中的圆柱体使用了置换贴图，并且通过扭曲变形器进行变形。图中右上角通过<span class="command_value">RGB (XYZ 对象)</span>模式创建的置换纹理是错误的，而右下角通过<span class="command_value">RGB (XYZ 切线)</span>模式创建的是正确的。</p>
 <p></RELEASE_140></p>
-<p><a id="MATERIAL_DISPLACEMENT_SHADER" name="MATERIAL_DISPLACEMENT_SHADER"></a> <!--INDEX "8","Texture","MATERIAL_DISPLACEMENT_SHADER"--><span class="c4d_id">Texture</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_SHADER" name="MATERIAL_DISPLACEMENT_SHADER"></a> <!--INDEX "8","纹理","MATERIAL_DISPLACEMENT_SHADER"--><span class="c4d_id">纹理</span></p>
 <p>可以在这里设置一张纹理贴图或一个2D着色器。详情参见<a href="6291.html" target="">纹理</a>。</p>
 <p><a id="SUBPOLYD" name="SUBPOLYD"></a></p>
-<p><!--INDEX "6","Sub Polygon Displacement","ID_MATERIALGROUP_SUBPOLY"--><a id="ID_MATERIALGROUP_SUBPOLY" name="ID_MATERIALGROUP_SUBPOLY"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Sub Polygon Displacement</span></p>
-<p><p><div class="hint"><span class="HL_hint"></span>Only included in Cinema 4D Visualize, Studio.</div></p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY" name="MATERIAL_DISPLACEMENT_SUBPOLY"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Sub Polygon Displacement","MATERIAL_DISPLACEMENT_SUBPOLY"--><span class="c4d_id">Sub Polygon Displacement</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/023778.jpg"  ><span class="caption">Images of all Noise types in conjunction with SPD can also be found <a href="XSLANOISE.html" target="">here</a>.</span></div></p>
-<p>This activates SPD. If the option is disabled, normal displacement will be used (only existing object points will be affected). See <a href="5786.html" target="">Advanced Render / Sub-polygon Displacement</a>.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION" name="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Subdivision Level","MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"--><span class="c4d_id">Subdivision Level</span> <span class="range">[1..12]</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004169.jpg"  ><span class="caption">Balls of slime (two sphere primitives with their Render Perfect option disabled) with a subdivision of 2,4 and 8 (from bottom to top).</span></div></p>
-<p>This is where you determine the SPD subdivision. This goes for the entire object to which the material has been applied. It can be well worth the trouble to delete the object’s hidden sides in order to reduce the number of surfaces that must be subdivided.</p>
-<p>As is often the case, higher values produce better results but add to the render time.</p>
-<p>Note that you may need to change this value for each object. If you set the same SPD value for a Cube primitive and a Plane primitive, for example, the results will be different because the standard Cube has six polygons and the standard Plane 400. The same applies to an object that contains various subdivisions such as a character that has many more polygons for her face than for her legs. If you use the same SPD values for these parts, the nose polygons will be just as strongly subdivided as the much bigger polygons for the legs.</p>
-<p>For each existing polygon, the following polygon count will be calculated internally:</p>
+<p><!--INDEX "6","次多边形置换","ID_MATERIALGROUP_SUBPOLY"--><a id="ID_MATERIALGROUP_SUBPOLY" name="ID_MATERIALGROUP_SUBPOLY"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>次多边形置换</span></p>
+<p><p><div class="hint"><span class="HL_hint"></span>只在 CINEMA 4D Visualize, Studio 这两个版本中可用。</div></p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY" name="MATERIAL_DISPLACEMENT_SUBPOLY"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","次多边形置换","MATERIAL_DISPLACEMENT_SUBPOLY"--><span class="c4d_id">次多边形置换</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/02xxxx/023778.jpg"  ><span class="caption">可以在<a href="XSLANOISE.html" target="">这里</a>查看所有结合次多边形置换使用的噪波类型的图像。</span></div></p>
+<p>这会激活次多边形置换。如果禁用该选项，会使用普通的置换（只对对象上现有的点产生效果）。参见<a href="5786.html" target="">高级渲染/次多边形置换</a>。</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION" name="MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","细分数级别","MATERIAL_DISPLACEMENT_SUBPOLY_SUBDIVISION"--><span class="c4d_id">细分数级别</span> <span class="range">[1..12]</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004169.jpg"  ><span class="caption">细分数分别是2、4、8（从下到上）的粘液球（两个关闭了理想渲染的球体）。</span></div></p>
+<p>这里会介绍如何决定此多边形置换细分数，这适用于材质应用的整个对象。为了减少要细分的表面数量，可以删除对象隐藏的边。</p>
+<p>通常情况下，较高细分数的渲染效果更好，渲染时间也更长。</p>
+<p>注意，你可能需要对每个对象设置不同的细分数。例如，对一个立方体和一个平面设置了相同的细分数，结果会有所差别，因为标准立方体有 6 个多边形，而标准平面有 400 个。这对于包含各种不同细分数的对象也是一样的，例如一个人物的面部多边形要比腿部更多，如果对这些部分使用了相同的次多边形置换参数，鼻子的多边形会跟比它大得多的腿部多边形一样被细分。</p>
+<p>对于每个已有的多边形，程序会计算得到如下的细分多边形数量：</p>
 <p><ul></p>
-<p><li> Triangle: (2 to the power of Subdivision Level) * (2 to the power of Subdivision Level) / 2</li></ul><p><ul></p>
-<p><li> Quadrangle: (2 to the power of Subdivision Level) * (2 to the power of Subdivision Level)</li></ul><p></p>
-<p>A Subdivision Level of 8 would result in the following (internal) polygon count:</p>
-<p>Cube: 6*256*256 = 393,216 polygons.</p>
-<p>Plane: 400*256*256 = 26,214,400 polygons.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUND","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Round Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"--><span class="c4d_id">Round Geometry</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004170.jpg"  ><span class="caption">Round Geometry disabled (left) and enabled (right).</span></div></p>
-<p>Since SPD cannot calculate a normal Phong shading when it is applied, a special algorithm similar to that of the Subdivision Surface is used to ensure that the object is rounded before the SPD is rendered.</p>
-<p>This is specially designed to smooth surfaces that appear facetted after SPD rendering. Contours (polygon edges that have no adjoining polygons) remain unaffected if Round Contours is disabled.</p>
-<p>Since this can also cause unexpected results, as seen in the following example, you can also disable the option.</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004171.jpg"  ><span class="caption">Round Geometry disabled (left) and enabled (right).</span></div></p>
-<p>To apply the earth texture to this platonic body (icosahedron) without smoothing, simply disable the option.</p>
-<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Round Geometry and Subdivision Surface","hl_2"--><p><span class="HL_1">Round Geometry and Subdivision Surface</span></p>
-<p>As mentioned above, <span class="command">Round Geometry</span> uses an algorithm similar to the one used by Subdivision Surface. In some cases, you can do without Subdivision Surface entirely and use SPD to smooth instead. If you use SPD and Subdivision Surface on the same object, keep in mind that the subdivisions will be multiplied because the SPD subdivision will be applied to the object after it has been subdivided by Subdivision Surface.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Round Contour","MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"--><span class="c4d_id">Round Contour</span></p>
-<p>If this option is enabled, contours (polygons that have at least one adjoining polygon missing) will also be rounded. Disable the option for objects whose contours would be adversely affected by the smoothing, such as is pictured below where the Plane should retain its shape.</p>
-<p><div class="image_full" style="max-width:1143px"><img  src="../pics/004172.jpg"  ><span class="caption">Round Contours enabled (left) and disabled (right).</span></div></p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING" name="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Map Rounded Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"--><span class="c4d_id">Map Rounded Geometry</span></p>
-<p>This option determines whether the rounded geometry should be used to define the texture coordinates. In most cases this will lead to more intuitive results. It can also lead to fewer artifacts.</p>
-<p>Because the calculation can take up to 10% longer and in some cases the projection must be onto the non-rounded geometry, you have the option to disable this feature.</p>
-<p><div class="image_full" style="max-width:933px"><img  src="../pics/004173.jpg"  ><span class="caption">The texture with SPD (bottom left). Map Rounded Geometry enabled (left) and disabled (right).</span></div></p>
-<p>For this example, an SPD texture was applied to a Plane consisting of only one polygon with Round Geometry and Round Contours both enabled. The result on the left is what can normally be expected: the texture’s density has not been changed in the rounded areas. In contrast, the result pictured on the right shows that the texture was projected prior to rounding and was squashed during the rounding process.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT" name="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Map Resulting Geometry","MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"--><span class="c4d_id">Map Resulting Geometry</span></p>
+<p><li> 三角形：（2 的细分数级别次方）*（2 的细分数级别次方）/ 2</li></ul><p><ul></p>
+<p><li> 四边形：（2 的细分数级别次方）*（2 的细分数级别次方）</li></ul><p></p>
+<p>细分数级别为 8 时，结果多边形数量如下：</p>
+<p>立方体：6*256*256 = 393,216 面。</p>
+<p>平面：400*256*256 = 26,214,400 面.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUND","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","圆滑几何体","MATERIAL_DISPLACEMENT_SUBPOLY_ROUND"--><span class="c4d_id">圆滑几何体</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004170.jpg"  ><span class="caption">禁用圆滑几何体（图左）和启用（图右）。</span></div></p>
+<p>因为次多边形置换无法计算正常的 Phong 平滑着色，需要一种类似于细分曲面的特殊算法来确保在次多边形置换在渲染前是平滑的。</p>
+<p>它是专门设计用在来平滑那些在次多边形置换渲染后出现的细小面的。如果没有启用平滑等高线，则等高线（多边形上没有与其他多边形相邻的边）不会受到影响。</p>
+<p>因为这也可能引起预料外的结果，如下图所示的案例，你也可以禁用该选项。</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004171.jpg"  ><span class="caption">禁用圆滑几何体（图左）和启用（图右）。</span></div></p>
+<p>要将地球贴图应用到这个正多面体（二十面体）上而不对它平滑，只需要禁用该选项。</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","圆滑几何体和细分曲面","hl_2"--><p><span class="HL_1">圆滑几何体和细分曲面</span></p>
+<p>如上述，<span class="command">圆滑几何体</span>使用了一种类似细分曲面的算法。在一些情况下，可以完全不需要细分曲面，而使用次多边形置换来替代平滑。如果使用对同一个对象使用次多边形置换和细分曲面，细分会进行相乘，因为次多边形置换会在对象被细分曲面细分之后再次应用细分。</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR" name="MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","圆滑等高线","MATERIAL_DISPLACEMENT_SUBPOLY_ROUNDCONTOUR"--><span class="c4d_id">圆滑等高线</span></p>
+<p>如果启用这个选项，等高线（多边形上没有与其他多边形相邻的边）也会被圆滑。如果对象的等高线被平滑时会产生不利的结果，请禁用这个选项，例如下图中的平面需要保持它原来的轮廓。</p>
+<p><div class="image_full" style="max-width:1143px"><img  src="../pics/004xxx/004172.jpg"  ><span class="caption">启用圆滑等高线（图左）和禁用（图右）。</span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING" name="MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","映射圆滑几何体","MATERIAL_DISPLACEMENT_SUBPOLY_HQREMAPPING"--><span class="c4d_id">映射圆滑几何体</span></p>
+<p>这个选项决定了是否使用圆滑后的几何体来定义纹理坐标。在大多数情况下这会让结果更直观，同时瑕疵也会更少。</p>
+<p>因为它的计算会让时间增加 10%，并且在一些情况下贴图必须映射到未圆滑的结合体上，因此你也可以选择禁用这个选项。</p>
+<p><div class="image_full" style="max-width:933px"><img  src="../pics/004xxx/004173.jpg"  ><span class="caption">带有次多边形置换的纹理（左下角）。启用映射圆滑几何体（图左）和禁用（图右）。</span></div></p>
+<p>在这个示例中，一个次多边形置换纹理被应用到一个平面上，它只由一个启用了圆滑几何体和圆滑等高线的平面构成。图左的结果是可以预料到的：在圆滑区域的纹理密度不会改变。作为对比，图右的结果显示了纹理在圆滑前被投射，并在圆滑过程中被压扁。</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT" name="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","映射最终几何体","MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"--><span class="c4d_id">映射最终几何体</span></p>
 <p>Use this setting to define how the texture should be projected:</p>
 <p><ul></p>
 <p><li> Before applying the Sub-polygon Displacement (setting not active).</li></ul><p><ul></p>
 <p><li> After applying the Sub-polygon Displacement (setting active).</li></ul><p></p>
 <p>So what does this mean, exactly? Since applying the SPD will result in a new geometry being created, this would depend on when the subsequent texture projections should be applied (with the exception of displacement since this channel is a prerequisite for the effect itself). Different effects can result, depending on the shader, bitmap and method of projection used. In the example below, a texture was placed onto a layer as an initial step:</p>
-<p><div class="image_full" style="max-width:1462px"><img  src="../pics/004174.jpg"  ><span class="caption">Various projection effects: Left <span class="command">Map Resulting Geometry</span> not active, right <span class="command">Map Resulting Geometry</span> active.</span></div></p>
-<p>When mapping a cube you can clearly see how the colors are projected, depending on whether or not <span class="command">Map Resulting Geometry</span> has been activated. In contrast, no difference can be seen when using UVW Mapping since SPDs do not change any UV coordinates.</p>
+<p><div class="image_full" style="max-width:1462px"><img  src="../pics/004xxx/004174.jpg"  ><span class="caption">Various projection effects: Left <span class="command">映射最终几何体</span> not active, right <span class="command">映射最终几何体</span> active.</span></div></p>
+<p>When mapping a cube you can clearly see how the colors are projected, depending on whether or not <span class="command">映射最终几何体</span> has been activated. In contrast, no difference can be seen when using UVW Mapping since SPDs do not change any UV coordinates.</p>
 <p>3D-based shaders (e.g., noise, wood, rust, etc.) behave differently. Since they do not require UV coordinates, they can also be used to texture the edges of extreme displacements, as seen in the UVW mapping example below:</p>
-<p><div class="image_full" style="max-width:900px"><img  src="../pics/004175.jpg"  ><span class="caption">A 3D noise shader was used. Left: <span class="command">Map Resulting Geometry</span> not active; right <span class="command">Map Resulting Geometry</span> active.</span></div></p>
+<p><div class="image_full" style="max-width:900px"><img  src="../pics/004xxx/004175.jpg"  ><span class="caption">A 3D noise shader was used. Left: <span class="command">映射最终几何体</span> not active; right <span class="command">映射最终几何体</span> active.</span></div></p>
 <p>In general, activating this option is not recommended for animated objects that change their shape (normal position or rotation animations are o.k.) since it can cause textures to jump.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES" name="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Keep Original Edges","MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"--><span class="c4d_id">Keep Original Edges</span></p>
-<p><div class="image_full" style="max-width:421px"><img  src="../pics/004176.jpg"  ><span class="caption">From left to right: Keep Original Edges enabled, disabled, still disabled but with a lower Subdivision Level.</span></div></p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES" name="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","保持原始边","MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"--><span class="c4d_id">保持原始边</span></p>
+<p><div class="image_full" style="max-width:421px"><img  src="../pics/004xxx/004176.jpg"  ><span class="caption">From left to right: 保持原始边 enabled, disabled, still disabled but with a lower Subdivision Level.</span></div></p>
 <p>If this option is enabled, hard Phong edges will remain hard. If the option is disabled, the edges will be rounded according to the subdivision Level.</p>
 <p>The effects of this option mostly occur only when the Round Geometry option is disabled.</p>
-<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION" name="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","Best Distribution","MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"--><span class="c4d_id">Best Distribution</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004177.jpg"  ><span class="caption">Best Distribution enabled (left) and disabled (right).</span></div></p>
-<p>As you can see in the example above, the enabled Best Distribution option changes the direction of the displacements towards the Phong edges. The closer a displacement is to the edge, the closer it is brought to this edge and the closer it follows the virtually rounded Phong normal.</p>
+<p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION" name="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","最佳分布状态","MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"--><span class="c4d_id">最佳分布状态</span></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004177.jpg"  ><span class="caption">最佳分布状态 enabled (left) and disabled (right).</span></div></p>
+<p>As you can see in the example above, the enabled 最佳分布状态 option changes the direction of the displacements towards the Phong edges. The closer a displacement is to the edge, the closer it is brought to this edge and the closer it follows the virtually rounded Phong normal.</p>
 <p>What this is all good for: In most cases, this setting will ensure a soft, uninterrupted transition of the SPD over phong edges.</p>
-<p>If Best Distribution is deactivated (only makes sense if one of the intensity modes is set in the Type setting) each displacement will point up perpendicularly. This can lead to inflated displacements at the edges. This is a result of displacements that overlap edges and basically stand at a right angle to each other will have the space between them filled. Activate this option if modeling cities that are viewed from a greater distance or, for example, castle stones.</p>
+<p>If 最佳分布状态 is deactivated (only makes sense if one of the intensity modes is set in the Type setting) each displacement will point up perpendicularly. This can lead to inflated displacements at the edges. This is a result of displacements that overlap edges and basically stand at a right angle to each other will have the space between them filled. Activate this option if modeling cities that are viewed from a greater distance or, for example, castle stones.</p>
 <p>
 
 </p>
