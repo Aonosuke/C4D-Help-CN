@@ -101,27 +101,27 @@
 <p>这个选项决定了是否使用圆滑后的几何体来定义纹理坐标。在大多数情况下这会让结果更直观，同时瑕疵也会更少。</p>
 <p>因为它的计算会让时间增加 10%，并且在一些情况下贴图必须映射到未圆滑的结合体上，因此你也可以选择禁用这个选项。</p>
 <p><div class="image_full" style="max-width:933px"><img  src="../pics/004xxx/004173.jpg"  ><span class="caption">带有次多边形置换的纹理（左下角）。启用映射圆滑几何体（图左）和禁用（图右）。</span></div></p>
-<p>在这个示例中，一个次多边形置换纹理被应用到一个平面上，它只由一个启用了圆滑几何体和圆滑等高线的平面构成。图左的结果是可以预料到的：在圆滑区域的纹理密度不会改变。作为对比，图右的结果显示了纹理在圆滑前被投射，并在圆滑过程中被压扁。</p>
+<p>在这个示例中，一个次多边形置换纹理被应用到一个平面上，它只由一个启用了圆滑几何体和圆滑等高线的平面构成。图左的结果是可以预料到的：在圆滑区域的纹理密度不会改变。作为对比，图右的结果显示了纹理在圆滑前被投射，并在圆滑过程中被压缩。</p>
 <p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT" name="MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","映射最终几何体","MATERIAL_DISPLACEMENT_SUBPOLY_MAPRESULT"--><span class="c4d_id">映射最终几何体</span></p>
-<p>Use this setting to define how the texture should be projected:</p>
+<p>这项设置定义了纹理的映射方式：</p>
 <p><ul></p>
-<p><li> Before applying the Sub-polygon Displacement (setting not active).</li></ul><p><ul></p>
-<p><li> After applying the Sub-polygon Displacement (setting active).</li></ul><p></p>
-<p>So what does this mean, exactly? Since applying the SPD will result in a new geometry being created, this would depend on when the subsequent texture projections should be applied (with the exception of displacement since this channel is a prerequisite for the effect itself). Different effects can result, depending on the shader, bitmap and method of projection used. In the example below, a texture was placed onto a layer as an initial step:</p>
-<p><div class="image_full" style="max-width:1462px"><img  src="../pics/004xxx/004174.jpg"  ><span class="caption">Various projection effects: Left <span class="command">映射最终几何体</span> not active, right <span class="command">映射最终几何体</span> active.</span></div></p>
-<p>When mapping a cube you can clearly see how the colors are projected, depending on whether or not <span class="command">映射最终几何体</span> has been activated. In contrast, no difference can be seen when using UVW Mapping since SPDs do not change any UV coordinates.</p>
-<p>3D-based shaders (e.g., noise, wood, rust, etc.) behave differently. Since they do not require UV coordinates, they can also be used to texture the edges of extreme displacements, as seen in the UVW mapping example below:</p>
-<p><div class="image_full" style="max-width:900px"><img  src="../pics/004xxx/004175.jpg"  ><span class="caption">A 3D noise shader was used. Left: <span class="command">映射最终几何体</span> not active; right <span class="command">映射最终几何体</span> active.</span></div></p>
-<p>In general, activating this option is not recommended for animated objects that change their shape (normal position or rotation animations are o.k.) since it can cause textures to jump.</p>
+<p><li> 在应用次多边形置换之前（设置无效）。</li></ul><p><ul></p>
+<p><li> 在应用次多边形置换之后（设置生效）。</li></ul><p></p>
+<p>这到底是什么意思：因为应用次多边形置换会产生新的几何体，这个选项会决定之后的纹理在什么时候进行映射（置换除外，因为这个通道是产生效果的前提）。根据着色器、位图和使用的映射方式不同，会产生不同的效果。在下面的示例中，在第一步中给一个层添加了纹理：</p>
+<p><div class="image_full" style="max-width:1462px"><img  src="../pics/004xxx/004174.jpg"  ><span class="caption">不同的映射效果：图左未启用<span class="command">映射最终几何体</span>，图右启用<span class="command">映射最终几何体</span>。</span></div></p>
+<p>当给一个立方体添加贴图时你会清楚地看到颜色是如何映射的，这取决于<span class="command">映射最终几何体</span>是否启用。最为对比，当使用 UVW 贴图时则不会有差别，因为次多边形置换不会改变 UV 坐标。</p>
+<p>基于 3D 的着色器（如噪波、木材、铁锈等）的特性各不相同。由于不需要 UV 坐标，它们还可以用在极端置换的边缘处，如下面的 UVW 贴图示例：</p>
+<p><div class="image_full" style="max-width:900px"><img  src="../pics/004xxx/004175.jpg"  ><span class="caption">使用了 3D 噪波着色器。图左：<span class="command">映射最终几何体</span>未启用；图右：<span class="command">映射最终几何体</span>启用。</span></div></p>
+<p>一般对于会改变自身造型的动画对象，不推荐使用这个选项（但普通的位移或旋转动画可以），因为这会造成贴图抖动。</p>
 <p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES" name="MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","保持原始边","MATERIAL_DISPLACEMENT_SUBPOLY_KEEPEDGES"--><span class="c4d_id">保持原始边</span></p>
-<p><div class="image_full" style="max-width:421px"><img  src="../pics/004xxx/004176.jpg"  ><span class="caption">From left to right: 保持原始边 enabled, disabled, still disabled but with a lower Subdivision Level.</span></div></p>
-<p>If this option is enabled, hard Phong edges will remain hard. If the option is disabled, the edges will be rounded according to the subdivision Level.</p>
-<p>The effects of this option mostly occur only when the Round Geometry option is disabled.</p>
+<p><div class="image_full" style="max-width:421px"><img  src="../pics/004xxx/004176.jpg"  ><span class="caption">从左至右：保持原始边启用、禁用、禁用但是使用了较低的细分数级别。</span></div></p>
+<p>如果启用这个选项，Phong 硬边会保持为硬边。如果不启用，则这些边缘会根据细分数级别进行圆滑处理。</p>
+<p>这个选项的效果通常只有在禁用圆滑几何体选项时才会显示出来。</p>
 <p><a id="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION" name="MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION","ID_MATERIALGROUP_SUBPOLY","ID_MATERIALGROUP_DISPLACEMENT"--><!--INDEX "8","最佳分布状态","MATERIAL_DISPLACEMENT_SUBPOLY_DISTRIBUTION"--><span class="c4d_id">最佳分布状态</span></p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004177.jpg"  ><span class="caption">最佳分布状态 enabled (left) and disabled (right).</span></div></p>
-<p>As you can see in the example above, the enabled 最佳分布状态 option changes the direction of the displacements towards the Phong edges. The closer a displacement is to the edge, the closer it is brought to this edge and the closer it follows the virtually rounded Phong normal.</p>
-<p>What this is all good for: In most cases, this setting will ensure a soft, uninterrupted transition of the SPD over phong edges.</p>
-<p>If 最佳分布状态 is deactivated (only makes sense if one of the intensity modes is set in the Type setting) each displacement will point up perpendicularly. This can lead to inflated displacements at the edges. This is a result of displacements that overlap edges and basically stand at a right angle to each other will have the space between them filled. Activate this option if modeling cities that are viewed from a greater distance or, for example, castle stones.</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004xxx/004177.jpg"  ><span class="caption">图左启用最佳分布状态，图右禁用。</span></div></p>
+<p>如上图中的示例所示，启用最佳分布状态会改变置换朝向 Phong 边缘的方向。置换距离边缘越近，它会越朝向边缘，它也就越沿着 Phong 法线分布。</p>
+<p>这有什么作用：在大部分案例中，这项设置可以确保在使用了次多边形置换的 Phong 边缘处的过渡是自然的。</p>
+<p>如果不使用最佳分布状态，则每个置换的方向都是垂直的，这会导致在边缘处的置换出现拉伸。这种现象发生在覆盖边缘的置换上，而且基本它们相互之间形成的角度会填充空间间隔。在建立视野距离很远的城市模型或石砖时，应该启用这个选项。</p>
 <p>
 
 </p>

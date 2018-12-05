@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：光照</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3523"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "21"-->
+		<!--TITLE "材质属性 / 材质编辑器：光照"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi_self">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>光照</span></p><p></p>
+<p><div class="in-visualize in-studio " align="left">     <div class="only_marker" align ="right">         <div class="only_apps">             Function available in CINEMA 4D Visualize, Studio         </div>              <div class="only_body" align="left">             
+	下面的参数（除了<span class="command">建模</span>）可以用来单独地给材质添加或排除全局光照、焦散或调节控制效果强度。例如一个场景中有很多透明物体，如果要给每个物体都计算焦散会花很多时间，这时你可以设置哪些物体需要计算焦散。</p>
+<p>这个页面可以调节材质的漫射衰减、层级和粗糙度，像普通的光照模式设置一样（这对高光效果会产生显著的影响，当要制作砖块观感的材质而非塑料材质时，这会产生很大的差异）。部分参数只在 Oren-Nayar 模式下有效，在 Blinn 或 Phong 模式下会出现重影。</p>
+<p><a id="MATERIAL_GLOBALILLUM_GENERATE" name="MATERIAL_GLOBALILLUM_GENERATE"></a> <!--INDEX "8","产生全局光照","MATERIAL_GLOBALILLUM_GENERATE"--><span class="c4d_id">产生全局光照</span></p>
+<p>如果不希望某个材质对其他对象产生影响，可以禁用这个选项。</p>
+<p><a id="MATERIAL_GLOBALILLUM_GENERATE_STRENGTH" name="MATERIAL_GLOBALILLUM_GENERATE_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_GLOBALILLUM_GENERATE_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[0..10000%]</span></p>
+<p>这个设置定义了材质<span class="command">发射</span>的强度。默认数值是 100%，最大可以设置为 10000% 。</p>
+<p><a id="MATERIAL_GLOBALILLUM_RECEIVE" name="MATERIAL_GLOBALILLUM_RECEIVE"></a> <!--INDEX "8","接收全局光照","MATERIAL_GLOBALILLUM_RECEIVE"--><span class="c4d_id">接收全局光照</span></p>
+<p>如果不希望某个材质接收其他对象反射的亮度和颜色，可以禁用这个选项。</p>
+<p><a id="MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH" name="MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_GLOBALILLUM_RECEIVE_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[0..10000%]</span></p>
+<p>启用接收全局光照时，可以用这个参数设置该材质接收其他材质颜色和亮度的程度。</p>
+<p><a id="MATERIAL_GLOBALILLUM_SATURATION" name="MATERIAL_GLOBALILLUM_SATURATION"></a> <!--INDEX "8","饱和度","MATERIAL_GLOBALILLUM_SATURATION"--><span class="c4d_id">饱和度</span> <span class="range">[0..1000%]</span></p>
+<p>使用这项设置可以微调用在全局光照中的纹理饱和度。与之前所描述的<span class="command">饱和度</span>相比，这项设置只会影响全局光照的接收，而不影响材质本身所发出的颜色。</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004088.jpg"  ><span class="caption">中间的高饱和度区域。</span></div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","GI 入口和多边形灯光","hl_1"--><p><span class="HL_1">GI 入口和多边形灯光</span></p>
+<p>下面六个参数只适用于<a href="32219.html" target="">全局光照计算</a>。</p>
+<p>通过将 GI 入口或多边形灯光（使用启用了<span class="command">发光</span>通道材质的对象）设置为发光源（即非通常的 CINEMA 4D 灯光对象，但可以发光：GI 入口（如发光的天空）、多边形灯光（任意几何体）），投影的质量可以得到提升，这对于灯光和投影的计算尤为重要。对 GI 入口和 GI 区域光使用的描述参见<a href="32221.html" target="">这里</a>。</p>
+<p><RELEASE_130 GI Area light option for Physical Renderer’s GI mode.></p>
+<p><a id="MATERIAL_GLOBALILLUM_AREA" name="MATERIAL_GLOBALILLUM_AREA"></a> <!--INDEX "8","GI 区域光","MATERIAL_GLOBALILLUM_AREA"--><span class="c4d_id">GI 区域光</span></p>
+<p>如果启用了这个选项，会优化在该发光对象的全局发光计算方式，如果对象作为区域光，应该启用这个选项。更多信息参见 <a href="32221.html" target="">GI 入口和多边形灯光：功能和布置</a>、以及<a href="VPGISETUP-GI_GROUP_GENERAL.html#samp" target="">采样</a>。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>
+	在 CINEMA 4D R14 版本之前，在使用物理渲染器的全局光照时是不包含这个选项的，现在则没有这个问题了。</div></p>
+<p></RELEASE_130></p>
+<p><a id="MATERIAL_GLOBALILLUM_PORTAL" name="MATERIAL_GLOBALILLUM_PORTAL"></a> <!--INDEX "8","GI 入口","MATERIAL_GLOBALILLUM_PORTAL"--><span class="c4d_id">GI 入口</span></p>
+<p>启用这个选项会将物体设置为 GI 入口（确认同时开启了透明通道）。</p>
+<p>GI 入口通常是单多边形表面（如<span class="command">平面</span>几何体），它们被放置在光线会穿过的狭小开放区域。法线的方向无关紧要。详情参见<a href="32221.html" target="">这里</a>。</p>
+<p>如果不想对反光对象本身进行修改，你可以通过设置透明通道中的<span class="command">颜色</span>或<span class="command">亮度</span>来修改穿过 GI 入口的光线。</p>
+<p><a id="PPQMC" name="PPQMC"></a></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>
+	下面的焦散参数只会应用在光子焦散上，对全局光照焦散无效。这两种焦散类型的差别参见<a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">这里</a>。</div></p>
+<p><a id="MATERIAL_CAUSTICS_GENERATE" name="MATERIAL_CAUSTICS_GENERATE"></a> <!--INDEX "8","产生焦散","MATERIAL_CAUSTICS_GENERATE"--><span class="c4d_id">产生焦散</span></p>
+<p>启用这个选项会激活生成光子焦散。确保同时启用了透明（对于光线穿过位于玻璃中的液体产生的焦散）或反射（对于光线从曲面对象上反射时产生的焦散）通道。</p>
+<p><p><div class="hint"><span class="HL_hint">注意：<br></span>
+	当使用体积焦散时只有产生焦散参数是有效的。</div></p>
+<p><a id="MATERIAL_CAUSTICS_GENERATE_STRENGTH" name="MATERIAL_CAUSTICS_GENERATE_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_CAUSTICS_GENERATE_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[0..10000%]</span></p>
+<p>设置效果强度。</p>
+<p><a id="MATERIAL_CAUSTICS_RECEIVE" name="MATERIAL_CAUSTICS_RECEIVE"></a> <!--INDEX "8","接收焦散","MATERIAL_CAUSTICS_RECEIVE"--><span class="c4d_id">接收焦散</span></p>
+<p>启用/禁用材质对光子焦散的接收。</p>
+<p><a id="MATERIAL_CAUSTICS_RECEIVE_STRENGTH" name="MATERIAL_CAUSTICS_RECEIVE_STRENGTH"></a> <!--INDEX "8","强度","MATERIAL_CAUSTICS_RECEIVE_STRENGTH"--><span class="c4d_id">强度</span> <span class="range">[0..10000%]</span></p>
+<p>设置效果强度。</p>
+<p><a id="MATERIAL_CAUSTICS_SAMPLERADIUS" name="MATERIAL_CAUSTICS_SAMPLERADIUS"></a> <!--INDEX "8","半径","MATERIAL_CAUSTICS_SAMPLERADIUS"--><span class="c4d_id">半径</span> <span class="range">[0..+∞m]</span></p>
+<p>它指光子之间距离多远才会计算插值。高数值的效果较好，但是需要更多时间来计算。</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004056.jpg"  ><span class="caption">半径 = 1；可以看见很多光点一样的单独光子，因为光子之间不会插值。</span></div></p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004057.jpg"  ><span class="caption">半径 = 10。</span></div></p>
+<p><div class="image_full" style="max-width:443px"><img  src="../pics/03xxxx/039489.jpg"  ><span class="caption">半径 = 100。</span></div></p>
+<p>较高的距离会让光子焦散看上去更模糊。</p>
+<p>如果设置的数值过低，可以看到单独的光子。这会产生一种有趣的视觉效果，但是不适于真实渲染。较高的数值会对光子相互结合并插值，产生的效果更加真实。</p>
+<p><a id="MATERIAL_CAUSTICS_SAMPLES" name="MATERIAL_CAUSTICS_SAMPLES"></a> <!--INDEX "8","采样","MATERIAL_CAUSTICS_SAMPLES"--><span class="c4d_id">采样</span> <span class="range">[1..10000]</span></p>
+<p>这项设置定义了在半径范围内用来计算效果的光子最大数量。如输入 100，最多会有 100 个光子会纳入计算——超过这个数值的任何光子都会被忽略。采样和半径都会影响到效果的质量。</p>
+<p>总结：每个单位距离的半径内的采样越多，图像也更准确。增大半径会让效果模糊，同时需要更多渲染时间。</p>
+<p><a id="MATERIAL_ILLUMINATION_MODEL_BLINN" name="MATERIAL_ILLUMINATION_MODEL_BLINN"></a><!--INDEX "10","Blinn","MATERIAL_ILLUMINATION_MODEL_BLINN"--><span class="c4d_id_cycle">Blinn</span></p>
+<p>对金属和其他需要精确高光的材质，这个选项会让 Blinn 的效果更好。</p>
+<p>         </div>     </div> </div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
