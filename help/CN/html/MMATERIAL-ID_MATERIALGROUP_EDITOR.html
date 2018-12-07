@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>材质属性 / 材质编辑器：编辑</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32165"-->
+		<!--VATER_ID "3504"-->
+		<!--REIHENFOLGE "20"-->
+		<!--TITLE "材质属性 / 材质编辑器：编辑"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">CINEMA 4D Prime</a></span> <span class="link_back"><a href="5808.html" target="_self">材质管理器</a></span> <span class="link_back"><a href="MMATERIAL.html" target="_self">材质属性 / 材质编辑器</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/MMATERIAL.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="MMATERIAL.html">材质</a> </span><p></p><a href="MMATERIAL-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_COLOR.html" target=""><span class="c4d_group_navi">颜色</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DIFFUSION.html" target=""><span class="c4d_group_navi">漫射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_LUMINANCE.html" target=""><span class="c4d_group_navi">发光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_TRANSPARENCY.html" target=""><span class="c4d_group_navi">透明</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_REFLECTION.html" target=""><span class="c4d_group_navi">反射</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ENVIRONMENT.html" target=""><span class="c4d_group_navi">环境</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_FOG.html" target=""><span class="c4d_group_navi">烟雾</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_BUMP.html" target=""><span class="c4d_group_navi">凹凸</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_NORMAL.html" target=""><span class="c4d_group_navi">法线</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ALPHA.html" target=""><span class="c4d_group_navi">Alpha</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_GLOW.html" target=""><span class="c4d_group_navi">辉光</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html" target=""><span class="c4d_group_navi">置换</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_ILLUMINATION.html" target=""><span class="c4d_group_navi">光照</span></a> <a href="MMATERIAL-ID_MATERIALGROUP_EDITOR.html" target=""><span class="c4d_group_navi_self">编辑</span></a> <a href="MMATERIAL-ID_MATERIALASSIGNMENTS_GROUP.html" target=""><span class="c4d_group_navi">指定</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>编辑</span></p><p></p>
+<p><a id="MATERIAL_ANIMATEPREVIEW" name="MATERIAL_ANIMATEPREVIEW"></a> <!--INDEX "8","动画预览","MATERIAL_ANIMATEPREVIEW"--><span class="c4d_id">动画预览</span></p>
+<p>若启用，会在播放动画时显示运动的纹理、着色器。注意，对比较复杂的着色器需要很多内存，调整<a href="PREFSVIEW-PREFS_VIEW_GROUP.html#PREF_VIEW_REDRAWTIME" target="_self"><span class="text_id">重绘限制 (毫秒)</span></a>设置会有所帮助。</p>
+<p><a id="MATERIAL_PREVIEWSIZE" name="MATERIAL_PREVIEWSIZE"></a> <!--INDEX "8","纹理预览尺寸","MATERIAL_PREVIEWSIZE"--><span class="c4d_id">纹理预览尺寸</span></p>
+<p>这里包含一系列尺寸范围（跟你使用的显卡有关）。这个尺寸决定程序预览时纹理的分辨率（用于未渲染时的视窗显示），设置的尺寸越大，视窗中纹理的细节就越多。这里的尺寸不会影响到渲染结果。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>
+	增大纹理预览尺寸时需要注意，大尺寸需要更多内存并且会增加 CINEMA 4D 场景文件的大小。它还会影响硬件 OpenGL，因为纹理预览会加载到显存里面。</div></p>
+<p><a id="MATERIAL_EDITORDISPLAY" name="MATERIAL_EDITORDISPLAY"></a> <!--INDEX "8","编辑器显示","MATERIAL_EDITORDISPLAY"--><span class="c4d_id">编辑器显示</span></p>
+<p>这个菜单只有在使用<span class="command">增强 OpenGL</span>时可用。这里有一组可以开关的材质通道选项（没有通道指定效果）。这里的选项对最终渲染效果没有影响，默认的<span class="command">结合</span>选项表示<span class="command">正常的</span>视窗显示（将材质通道结合显示出来）。</p>
+<p><a id="MATERIAL_DISPLAY_USE_COLOR" name="MATERIAL_DISPLAY_USE_COLOR"></a> 
+	<!--INDEX "8","颜色","MATERIAL_DISPLAY_USE_COLOR"--><span class="c4d_id">颜色</span><br><a id="MATERIAL_DISPLAY_USE_DIFFUSION" name="MATERIAL_DISPLAY_USE_DIFFUSION"></a> 
+	<!--INDEX "8","漫射","MATERIAL_DISPLAY_USE_DIFFUSION"--><span class="c4d_id">漫射</span><br><a id="MATERIAL_DISPLAY_USE_LUMINANCE" name="MATERIAL_DISPLAY_USE_LUMINANCE"></a> 
+	<!--INDEX "8","发光","MATERIAL_DISPLAY_USE_LUMINANCE"--><span class="c4d_id">发光</span><br><a id="MATERIAL_DISPLAY_USE_TRANSPARENCY" name="MATERIAL_DISPLAY_USE_TRANSPARENCY"></a> 
+	<!--INDEX "8","透明","MATERIAL_DISPLAY_USE_TRANSPARENCY"--><span class="c4d_id">透明</span><br><a id="MATERIAL_DISPLAY_USE_ENVIRONMENT" name="MATERIAL_DISPLAY_USE_ENVIRONMENT"></a> 
+	<!--INDEX "8","环境","MATERIAL_DISPLAY_USE_ENVIRONMENT"--><span class="c4d_id">环境</span><br><a id="MATERIAL_DISPLAY_USE_BUMP" name="MATERIAL_DISPLAY_USE_BUMP"></a> 
+	<!--INDEX "8","凹凸","MATERIAL_DISPLAY_USE_BUMP"--><span class="c4d_id">凹凸</span><br><a id="MATERIAL_DISPLAY_USE_NORMAL" name="MATERIAL_DISPLAY_USE_NORMAL"></a> 
+	<!--INDEX "8","法线","MATERIAL_DISPLAY_USE_NORMAL"--><span class="c4d_id">法线</span><br><a id="MATERIAL_DISPLAY_USE_ALPHA" name="MATERIAL_DISPLAY_USE_ALPHA"></a> 
+	<!--INDEX "8","Alpha","MATERIAL_DISPLAY_USE_ALPHA"--><span class="c4d_id">Alpha</span></p>
+<p>上面列出的材质通道也可以通过<span class="command">增强 OpenGL</span>进行显示。这些材质通道都可以单独开启或关闭。</p>
+<p><a id="REFL" name="REFL"></a></p>
+<p><div class="in-prime in-visualize in-broadcast in-studio in-bodypaint3d " align="left">     <div class="only_marker" align ="right">         <div class="only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D         </div>              <div class="only_body" align="left">             </p>
+<p><a id="RELEASE_180_1" name="RELEASE_180_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","反射率预览","hl_1"--><p><span class="HL_1">反射率预览</span></p>
+<p>反射率预览可以在视窗中显示反射通道的近似效果，而不用渲染场景。尤其是金属材质的显示又快又好：</p>
+<p><div class="image_full" style="max-width:750px"><img  src="../pics/04xxxx/040506.jpg"  ><span class="caption">左图是 CINEMA R17 中的视窗视图（基本只能看见高光）；右图则是在 CINEMA R18 中启用了反射率预览。</span></div></p>
+<p>注意，只有天空对象（包括 HDRI 贴图）和物理天空对象可以被物体反射，如果场景中没有这两种对象，则会使用一个虚拟对象（不会被渲染）来模拟反射。</p>
+<p>反射率预览有以下限制：<ul></p>
+<p><li> 其他对象不会出现在反射中。</li>
+<li> 这里的反射并不是一种真实反射，而是一种被称为<span class="command_value">Matcap</span>的简化版（可以参考<a href="XARTSHADER.html" target="">艺术着色器</a>）。</li></ul><p></p>
+<p>反射率预览支持大部分反射通道的设置，包括多层叠加、遮罩、菲涅耳等。物体表面的纹理贴图大部分都不会影响预览（<span class="command">颜色</span>/<span class="command_value">颜色</span>和<span class="command">颜色</span><span class="command_value">遮罩</span>中的纹理除外）。</p>
+<p>可以在反射通道中设置反射类型（如 Beckmann、GGX、Phong 等），以下是支持的模式：<ul></p>
+<p><li> Beckmann</li>
+<li> GGX</li>
+<li> Phong</li>
+<li> Ward</li>
+<li> Oren-Nayar（漫射）</li>
+<li> Lambertian（漫射）</li></ul><p></p>
+<p>各向异性、织物和反射（传统）的显示则是简化的（不会显示天空的反射）。</p>
+<p>可以单独在每个视窗设置（或视窗的<nobr><span class="menu">选项 | 反射</span></nobr>菜单）中启用或禁用反射率预览：<a href="DBASEDRAW-BASEDRAW_GROUP_EFFECTS.html#BASEDRAW_DATA_HQ_REFLECTIONS" target="_self"><span class="text_id">反射</span></a>。</p>
+<p><!--INDEX "6","反射率预览","ID_MATERIALGROUP_REFLECTANCE_PREVIEW"--><a id="ID_MATERIALGROUP_REFLECTANCE_PREVIEW" name="ID_MATERIALGROUP_REFLECTANCE_PREVIEW"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>反射率预览</span></p>
+<p>可以调节以下几个参数来调节在视窗中显示的反射质量。</p>
+<p><a id="MATERIAL_VIEWPORT_REFLECTION_MAP_SIZE" name="MATERIAL_VIEWPORT_REFLECTION_MAP_SIZE"></a> <!--AM_JUMP "MATERIAL_VIEWPORT_REFLECTION_MAP_SIZE","ID_MATERIALGROUP_REFLECTANCE_PREVIEW","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","尺寸","MATERIAL_VIEWPORT_REFLECTION_MAP_SIZE"--><span class="c4d_id">尺寸</span> <span class="range">[1..2048]</span></p>
+<p><div class="image_full" style="max-width:1500px"><img  src="../pics/04xxxx/040507.jpg"  ><span class="caption">从左至右：分别是尺寸和采样的低数值、中数值、高数值。</span></div></p>
+<p><span class="command">尺寸</span>设置决定了物体上“反射”的纹理的分辨率，尺寸越大，显示效果就越好，相应计算时间也越长。</p>
+<p><a id="MATERIAL_VIEWPORT_REFLECTION_SAMPLES" name="MATERIAL_VIEWPORT_REFLECTION_SAMPLES"></a> <!--AM_JUMP "MATERIAL_VIEWPORT_REFLECTION_SAMPLES","ID_MATERIALGROUP_REFLECTANCE_PREVIEW","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","采样","MATERIAL_VIEWPORT_REFLECTION_SAMPLES"--><span class="c4d_id">采样</span> <span class="range">[1..1024]</span></p>
+<p>这项设置决定了不光滑区域（在反射通道中设置了<span class="command">粗糙度</span>的区域）的显示质量。采样越低产生的颗粒就越多，增加数值会让整体色调统一，且结果更加平滑。数值越高计算时间也越长。</p>
+<p><a id="MATERIAL_VIEWPORT_REFLECTION_ENVIRONMENT" name="MATERIAL_VIEWPORT_REFLECTION_ENVIRONMENT"></a> <!--AM_JUMP "MATERIAL_VIEWPORT_REFLECTION_ENVIRONMENT","ID_MATERIALGROUP_REFLECTANCE_PREVIEW","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","环境覆盖","MATERIAL_VIEWPORT_REFLECTION_ENVIRONMENT"--><span class="c4d_id">环境覆盖</span></p>
+<p>如果不想在场景中使用天空对象或物理天空来产生反射，可以在这里加载一个环境贴图，它会应用到该材质上。</p>
+<p></p></div></p>
+<p><a id="TESSEL" name="TESSEL"></a></p>
+<p><a id="RELEASE_180_2" name="RELEASE_180_2"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","视图 Tessellation","hl_2"--><p><span class="HL_1">视图 Tessellation</span></p>
+<p><div class="image_full" style="max-width:740px"><img  src="../pics/04xxxx/040508.jpg"  ><span class="caption">在视窗中显示的使用置换纹理创建的大峡谷模型，这要归功于视图 Tessellation。</span></div></p>
+<p>通过显卡功能，CINEMA 4D 可以在视窗中细化（tessellate）对象（只在视图中可用）。多边形会被分解为小三角形。</p>
+<p>细化（tessellation）不会被渲染（除非将<span class="command">渲染器</span>设为<span class="command_value">硬件 OpenGL</span>）。</p>
+<p>细化可以用来在视窗中直接显示置换的预览（不过跟渲染结果会有差别（见下图）），这意味着你不需要使用置换变形器。</p>
+<p>视图 Tessellation 在使用有置换动画效果时有所帮助（在上图的示例中，如果你制作摄像机围绕大峡谷运动的动画，视图 Tessellation 非常有用）。</p>
+<p>确保启用了置换通道，否则视图 Tessellation 对材质无效。</p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>
+	<a href="XSLANOISE.html" target="">噪波着色器</a>中的大部分噪波类型都可以在显卡上进行计算，只要启用了相应的选项（视窗：<nobr><span class="menu">选项 | 噪波</span></nobr> 菜单）。这让你可以查看高质量的结果。</div></p>
+<p>如果<span class="command">纹理预览尺寸</span>太小，会有一些瑕疵。</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","限制","hl_3"--><p><span class="HL_2">限制</span><ul></p>
+<p><li> 注意，置换效果的显示与渲染结果会有所差别，例如会出现错误的着色、网格穿孔等。</li>
+<li> 视图 Tessellation 不能与一些次多边形置换功能一起使用，如<a href="MMATERIAL-ID_MATERIALGROUP_DISPLACEMENT.html#MATERIAL_DISPLACEMENT_SUBPOLY_ROUND" target="_self"><span class="text_id">圆滑几何体</span></a>。</li>
+<li> 32 位纹理会被转换为 8 位，这可能会导致可见的色阶断层。</li></ul><p></p>
+<p><!--INDEX "6","视图 Tessellation","ID_MATERIALGROUP_TESSELLATION"--><a id="ID_MATERIALGROUP_TESSELLATION" name="ID_MATERIALGROUP_TESSELLATION"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>视图 Tessellation</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION" name="MATERIAL_DISPLACEMENT_TESSELLATION"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_TESSELLATION","ID_MATERIALGROUP_TESSELLATION","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","模式","MATERIAL_DISPLACEMENT_TESSELLATION"--><span class="c4d_id">模式</span></p>
+<p>在这里选择是否要对所选纹理启用视图 Tessellation，以及它的显示方式。有以下选项可用：</p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_NONE" name="MATERIAL_DISPLACEMENT_TESSELLATION_NONE"></a><!--INDEX "10","无","MATERIAL_DISPLACEMENT_TESSELLATION_NONE"--><span class="c4d_id_cycle">无</span></p>
+<p>视图 Tessellation 不启用。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM" name="MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM"></a><!--INDEX "10","统一","MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM"--><span class="c4d_id_cycle">统一</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM_LEVEL" name="MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM_LEVEL"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM_LEVEL","ID_MATERIALGROUP_TESSELLATION","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","统一级别","MATERIAL_DISPLACEMENT_TESSELLATION_UNIFORM_LEVEL"--><span class="c4d_id">统一级别</span> <span class="range">[1..+∞]</span></p>
+<p><div class="image_full" style="max-width:2160px"><img  src="../pics/04xxxx/040509.jpg"  >
+	<span class="caption">从左至右：统一级别设为 1、12、64。</span></div></p>
+<p>使用了该材质的对象会被统一细分，即相机与对象的距离跟细分效果无关。<span class="command">统一级别</span>表示细分数。</p>
+<p>注意，这里可以设置的数值取决于你所使用的显卡（通常是<span class="command_value">64</span>）。如果对象的多边形数量很少，这个数值是不够的（例如一个 1×1×1 的立方体）。因此需要先对这样的对象进行细分。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE" name="MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE"></a><!--INDEX "10","投射","MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE"--><span class="c4d_id_cycle">投射</span></p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE_LEVEL" name="MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE_LEVEL"></a> <!--AM_JUMP "MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE_LEVEL","ID_MATERIALGROUP_TESSELLATION","ID_MATERIALGROUP_EDITOR"--><!--INDEX "8","投射级别","MATERIAL_DISPLACEMENT_TESSELLATION_ADAPTIVE_LEVEL"--><span class="c4d_id">投射级别</span> <span class="range">[1..+∞]</span></p>
+<p><div class="image_full" style="max-width:2138px"><img  src="../pics/04xxxx/040510.jpg"  ><span class="caption">摄像机距离对象越近，细分效果越好。</span></div></p>
+<p>在这种模式下你可以设置当摄像机最靠近对象时的最大细分数（<span class="command_value">投射级别</span>）。摄像机距离越远，细分数就越少，这个过程是动态无缝的。</p>
+<p>这是一项非常使用的功能：如果一个对象距离摄像头很远，就没有必要对它进行高级别的细分，因为这时细节是看不见的。因此这项功能会加快显示速度。</p>
+<p><a id="MATERIAL_DISPLACEMENT_TESSELLATION_INFO" name="MATERIAL_DISPLACEMENT_TESSELLATION_INFO"></a> 
+<!--AM_JUMP "MATERIAL_DISPLACEMENT_TESSELLATION_INFO","ID_MATERIALGROUP_TESSELLATION","ID_MATERIALGROUP_EDITOR"-->
+<!--INDEX "8","GPU 最大级别","MATERIAL_DISPLACEMENT_TESSELLATION_INFO"--><span class="c4d_id">GPU 最大级别</span></p>
+<p>这里显示了你的显卡所能计算的最大显示级别。如果这里显示<span class="command">GPU 最大级别 0（没有支持的 GPU）</span>，请检查是否在设置菜单中禁用了<a href="PREFSOPENGL-PREF_OPENGL_MAIN_GROUP.html#PREF_OPENGL_HARDWARE" target="_self"><span class="text_id">硬件 OpenGL</span></a> 选项。</p>
+<p></p></div></p>
+<p>         </div>     </div> </div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
