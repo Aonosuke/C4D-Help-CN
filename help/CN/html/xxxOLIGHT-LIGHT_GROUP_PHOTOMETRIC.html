@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Light Object: Photometric</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "43080"-->
+		<!--VATER_ID "3909"-->
+		<!--REIHENFOLGE "8"-->
+		<!--TITLE "Light Object: Photometric"-->
+		<!--APPS "14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5177.html" target="_self">Create Menu</a></span> <span class="link_back"><a href="OLIGHT.html" target="_self">Light Object</a></span>
+
+<div class="in-visualize-page in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Visualize, Studio  </div>
+<img class="icon" src="../icons/OLIGHT.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="OLIGHT.html">Light Object</a> </span><p></p><a href="OLIGHT-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="OLIGHT-ID_BASEOBJECT_GROUP1.html" target=""><span class="c4d_group_navi">Coord.</span></a> <a href="OLIGHT-LIGHT_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">General</span></a> <a href="OLIGHT-LIGHT_GROUP_DETAILS.html" target=""><span class="c4d_group_navi">Details</span></a> <a href="OLIGHT-LIGHT_GROUP_VISIBILITY.html" target=""><span class="c4d_group_navi">Visibility</span></a> <a href="OLIGHT-LIGHT_GROUP_SHADOW.html" target=""><span class="c4d_group_navi">Shadow</span></a> <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target=""><span class="c4d_group_navi_self">Photometric</span></a> <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html" target=""><span class="c4d_group_navi">Caustics</span></a> <a href="OLIGHT-LIGHT_GROUP_NOISE.html" target=""><span class="c4d_group_navi">Noise</span></a> <a href="OLIGHT-LIGHT_GROUP_LENSEFFECTS.html" target=""><span class="c4d_group_navi">Lens</span></a> <a href="OLIGHT-LIGHT_GROUP_EXCLUSION.html" target=""><span class="c4d_group_navi">Project</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Photometric</span></p><p></p>
+<p><PAGE_RELEASE_120 Support for IES lights.></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General","hl_1"--><p><span class="HL_1">General</span></p>
+<p><div class="image_full" style="max-width:1181px"><img  src="../pics/030074.jpg"  ><span class="caption">Various IES lights (all use the orientation pictured at left) illuminate the wall and floor.</span></div></p>
+<p>Using the IES format (<span class="command">I</span>lluminating <span class="command">E</span>ngineering <span class="command">S</span>ociety); suffix: *.ies) light sources can be made to behave as real lights do. If you examine the above image closely you will see how complex the light dispersion of a light can be. These are mainly created using special reflectors that bundle, disperse or otherwise spread the light depending on the type of light used.</p>
+<p>An IES file contains the spatial emission of light around a given light source (as an ASCII file). These files are generated in laboratory tests (therefore also known as "photometric lights") and published by light manufacturers online.</p>
+<p>In Cinema 4D IES files are displayed in both the Picture Viewer and the Content Browser:</p>
+<p><div class="image_full" style="max-width:579px"><img  src="../pics/030073.jpg"  ><span class="caption">At left the IES files in the Picture Viewer/Content Browser. The light source’s Z axis points downward. At right a common but more difficult to interpret depiction of IES files, as is often found in catalogs.</span></div></p>
+<p>Using the Content Browser you can quickly and easily place an entire IES directory into your scene or place individual IES files per drag & drop into a light’s <span class="command">Filename</span> field.</p>
+<p><div class="image_full" style="max-width:704px"><img  src="../pics/030075.jpg"  ><span class="caption">A light from the company ERCO Leuchten GmbH.</span></div></p>
+<p>An IES light source is a light source with all normal Cinema 4D parameters. This means you can add features such as lens effects or noise, etc.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","How do I create an IES light?","hl_2"--><p><span class="HL_1">How do I create an IES light?</span><ul></p>
+<p><li> Create a light</li><li> In the <span class="command">General</span> tab, set <span class="command">Type</span> to <span class="command_value">IES</span></li><li> Position and rotate the light so its Z axis points in the direction of the emitted light </li><li> In the <span class="command">Photometric</span> tab, load an IES file into the <span class="command">Filename</span> field</li></ul><p></p>
+<p><a id="LIGHT_PHOTOMETRIC_UNITS" name="LIGHT_PHOTOMETRIC_UNITS"></a> <!--INDEX "8","Photometric Intensity","LIGHT_PHOTOMETRIC_UNITS"--><span class="c4d_id">Photometric Intensity</span></p>
+<p>If disabled, the usually extreme brightness at the origin of lights with invers quadratic falloff will be assumed, which often results in IES lights appearing too bright. However, this has the advantage that it remains independent of Cinema 4D units (it doesn’t matter if you model in millimeter or kilometer units).</p>
+<p>Inversely, this means that if you model "physically correctly/to scale" this option should be enabled (generally speaking, activating this option results in a more physically correct behavior).</p>
+<p>Attention: This option is not available for all IES files (depends on their internal structure).</p>
+<p><a id="LIGHT_PHOTOMETRIC_INTENSITY" name="LIGHT_PHOTOMETRIC_INTENSITY"></a> <!--INDEX "8","Intensity","LIGHT_PHOTOMETRIC_INTENSITY"--><span class="c4d_id">Intensity</span> <span class="range">[0..10000000]</span></p>
+<p>This intensity in Candela is the maximum intensity of the IES. The remaining brightness values will be applied in relation to this parameter and can then be adjusted in correlation with it.</p>
+<p><a id="LIGHT_PHOTOMETRIC_UNIT" name="LIGHT_PHOTOMETRIC_UNIT"></a> <!--INDEX "8","Units","LIGHT_PHOTOMETRIC_UNIT"--><span class="c4d_id">Units</span></p>
+<p>In addition to <span class="command">Intensity</span>, these 3 units can be applied to influence the light’s intensity (and they are not at all restricted to use with only IES lights):<ul></p>
+<p><li> Candela (cd): The light intensity is only dependent on the <span class="command">Intensity</span> value, independent of light shape (e.g., Spot) or size.</li><li> Lumen (lm): The light intensity is primarily dependent on the light shape, i.e., a Spot light’s intensity, for example, increases when its cone is narrowed.</li><li> Lux: If the <span class="command">Photometric Intensity</span> option is enabled (<span class="command">Area</span> light), the light intensity can be adjusted in <span class="command_value">Lux</span>. The light intensity is, logically enough, dependent on the size of the light source (e.g., <a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SIZEX" target="_self"><span class="text_id">Size X</span></a>). If, for example, the light’s surface is doubled, its intensity will also be twice as strong.</li></ul><p></p>
+<p><a id="LIGHT_PHOTOMETRIC_DATA" name="LIGHT_PHOTOMETRIC_DATA"></a> <!--INDEX "8","Photometric Data","LIGHT_PHOTOMETRIC_DATA"--><span class="c4d_id">Photometric Data</span></p>
+<p>Enables or disables the evaluation of IES data. If disabled, the light source will revert to being an Omni light source with adjustable Lumen or Candela intensity.</p>
+<p><a id="LIGHT_PHOTOMETRIC_FILE" name="LIGHT_PHOTOMETRIC_FILE"></a> <!--INDEX "8","Filename","LIGHT_PHOTOMETRIC_FILE"--><span class="c4d_id">Filename</span></p>
+<p>You can drag an IES file into this field where its name and complete path (location) will be displayed.</p>
+<p><span class="command">Attention!</span>: The IES file’s path will be displayed here but the IES data will be saved within the Cinema 4D file. Hence, the IES file itself does NOT have to accompany the Cinema 4D file when transferring files.</p>
+<p><a id="LIGHT_PHOTOMETRIC_SIZE" name="LIGHT_PHOTOMETRIC_SIZE"></a> <!--INDEX "8","Photometric Size","LIGHT_PHOTOMETRIC_SIZE"--><span class="c4d_id">Photometric Size</span></p>
+<p>Very often IES files contain information regarding the size of the actual light. Enabling this option will turn the IES light into an Area light (with the usual settings in the <span class="command">Details</span> tab, which will be assumed from the IES file).</p>
+<p>Otherwise the IES light will function as an Omni light.</p>
+<p><!--INDEX "6","Information","LIGHT_GROUP_PHOTOMETRIC_INFO"--><a id="LIGHT_GROUP_PHOTOMETRIC_INFO" name="LIGHT_GROUP_PHOTOMETRIC_INFO"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Information</span></p>
+<p>Here you will find various information saved within the IES file. However, not all IES files will contain this information. These fields will then remain empty.</p>
+<p><a id="LIGHT_PHOTOMETRIC_INFO_MANUFAC" name="LIGHT_PHOTOMETRIC_INFO_MANUFAC"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LUMCAT" name="LIGHT_PHOTOMETRIC_INFO_LUMCAT"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LUMINAIRE" name="LIGHT_PHOTOMETRIC_INFO_LUMINAIRE"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LAMPCAT" name="LIGHT_PHOTOMETRIC_INFO_LAMPCAT"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LAMP" name="LIGHT_PHOTOMETRIC_INFO_LAMP"></a> </p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

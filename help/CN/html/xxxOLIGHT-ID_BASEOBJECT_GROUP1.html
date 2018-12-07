@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Light Object: Coordinates</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3911"-->
+		<!--VATER_ID "3909"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "Light Object: Coordinates"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5177.html" target="_self">Create Menu</a></span> <span class="link_back"><a href="OLIGHT.html" target="_self">Light Object</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<img class="icon" src="../icons/OLIGHT.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="OLIGHT.html">Light Object</a> </span><p></p><a href="OLIGHT-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="OLIGHT-ID_BASEOBJECT_GROUP1.html" target=""><span class="c4d_group_navi_self">Coord.</span></a> <a href="OLIGHT-LIGHT_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">General</span></a> <a href="OLIGHT-LIGHT_GROUP_DETAILS.html" target=""><span class="c4d_group_navi">Details</span></a> <a href="OLIGHT-LIGHT_GROUP_VISIBILITY.html" target=""><span class="c4d_group_navi">Visibility</span></a> <a href="OLIGHT-LIGHT_GROUP_SHADOW.html" target=""><span class="c4d_group_navi">Shadow</span></a> <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target=""><span class="c4d_group_navi">Photometric</span></a> <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html" target=""><span class="c4d_group_navi">Caustics</span></a> <a href="OLIGHT-LIGHT_GROUP_NOISE.html" target=""><span class="c4d_group_navi">Noise</span></a> <a href="OLIGHT-LIGHT_GROUP_LENSEFFECTS.html" target=""><span class="c4d_group_navi">Lens</span></a> <a href="OLIGHT-LIGHT_GROUP_EXCLUSION.html" target=""><span class="c4d_group_navi">Project</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>Coordinates</span></p><p></p>
+<p><a id="ID_BASEOBJECT_REL_POSITION" name="ID_BASEOBJECT_REL_POSITION"></a> <!--INDEX "8","P","ID_BASEOBJECT_REL_POSITION"--><span class="c4d_id">P</span> <span class="range">[XYZ m]</span></p>
+<p>This value represents the position of the object in relation to the world coordinate system, or the parent coordinate system if the object lies within a hierarchy (see also <a href="5742.html" target="">Coordinate Manager</a>).</p>
+<p><a id="ID_BASEOBJECT_REL_SCALE" name="ID_BASEOBJECT_REL_SCALE"></a> <!--INDEX "8","S","ID_BASEOBJECT_REL_SCALE"--><span class="c4d_id">S</span> <span class="range">[XYZ ]</span></p>
+<p>This value represents the scale of the object in relation to the world coordinate system, or the parent coordinate system if the object lies within a hierarchy (see also <a href="5742.html" target="">Coordinate Manager</a>).</p>
+<p>Modifying the scale of the object using this value equates to scaling in <span class="command">Use Object Axis</span> mode, i.e., the object’s axis system will be modified (see also <a href="5494.html#unterschiedobjektmodell" target="">The difference between the Use Object Tool and Use Model Tool modes</a>).</p>
+<p><a id="ID_BASEOBJECT_REL_ROTATION" name="ID_BASEOBJECT_REL_ROTATION"></a> <!--INDEX "8","R","ID_BASEOBJECT_REL_ROTATION"--><span class="c4d_id">R</span> <span class="range">[HPB °]</span></p>
+<p>This value represents the angle of the object in relation to the world coordinate system, or the parent coordinate system if the object lies within a hierarchy (see also <a href="5742.html" target="">Coordinate Manager</a>).</p>
+<p><a id="ID_BASEOBJECT_ROTATION_ORDER" name="ID_BASEOBJECT_ROTATION_ORDER"></a> <!--INDEX "8","Order","ID_BASEOBJECT_ROTATION_ORDER"--><span class="c4d_id">Order</span></p>
+<p>This selection menu is only relevant for animators. The options in this menu can minimize the feared "gimbal locks".</p>
+<p>Take a look at the following example problem:</p>
+<p><div class="image_full" style="max-width:1406px"><img  src="../pics/031350.jpg"  ><span class="caption"></span></div></p>
+<p> </p>
+<p>We have a character set up for animation with complex hierarchies. Let’s say you want to animate the shoulder joint of the right arm in the front view with a presumably simple downward rotation. So we create keyframes for the fingertips in the up position and in the down position. If we now play the animation back and view it from the top, we will see that, instead of the expected downward movement only, the arm swerves slightly as well (at the top right of the image above). This is an example of the "gimbal lock" effect. Here it is relatively weak; but in extreme cases it can result in completely abnormal, corkscrew-type movements.</p>
+<p>How can the proper rotation order help reduce this effect? All you have to do is have a look at the joint axes PRIOR to animating to determine which of the axes will rotate the least during the planned animation. In our example it’s the X axis marked on the left. Now select one of the <span class="command">Order</span> options in which the X axis is on 2nd place. A very minimal and barely noticeable swerve still takes place but the result is far better than before.</p>
+<p>Another option that helps determine which rotation order is correct is the <a href="TOOLROTATE-MDATA_OBJECTAXIS_GROUP.html#MDATA_AXIS_GIMBALROTATION" target="_self"><span class="text_id">Gimballing Rotation</span></a> option. Enable this option and activate the <span class="command">Rotate</span> tool:</p>
+<p><div class="image_full" style="max-width:1675px"><img  src="../pics/031351.jpg"  ><span class="caption"><span class="command">Sequence</span> set to <span class="command_value">HPB</span> at left and to <span class="command_value">XYZ</span> at right.</span></div></p>
+<p>Using the rotation bands you can see directly (PRIOR to animating) whether or not the planned animation will work in a given direction. At the left of the image above you can see red, green and blue rotation bands arranged in a manner that appears to make a rotation (red arrow) impossible (none of the bands lies on the rotation plane). This animation will have problems with gimbal lock.</p>
+<p>Simply flip through the various <span class="command">Order</span> options until one of the bands lies on or near the rotational plane (in the image above: blue). When you create the animation now you will have very few problems with gimbal lock.</p>
+<p>A few additional comments regarding gimbal lock:</p>
+<p>It’s always risky if you set the 2nd (center value in marked range below) value to approx. 90° (or 270°) in correlation with the rotation order:</p>
+<p><div class="image_full" style="max-width:176px"><img  src="../pics/031352.jpg"  ><span class="caption"></span></div></p>
+<p> </p>
+<p>It’s best to always set the corresponding value at or near <span class="command_value">0°</span>.</p>
+<p>Traditionally, this problem can also be circumvented by animating a Parent Null Object.</p>
+<p>Frozen selections, which can be found farther down in the dialog window, can also be helpful.</p>
+<p><!--INDEX "6","Quaternion","ID_BASEOBJECT_QUATERNION_ROTATION"--><a id="ID_BASEOBJECT_QUATERNION_ROTATION" name="ID_BASEOBJECT_QUATERNION_ROTATION"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Quaternion</span></p>
+<p><a id="ID_BASEOBJECT_QUATERNION_ROTATION_INTERPOLATION" name="ID_BASEOBJECT_QUATERNION_ROTATION_INTERPOLATION"></a> <!--AM_JUMP "ID_BASEOBJECT_QUATERNION_ROTATION_INTERPOLATION","ID_BASEOBJECT_QUATERNION_ROTATION","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Quaternion Rotation","ID_BASEOBJECT_QUATERNION_ROTATION_INTERPOLATION"--><span class="c4d_id">Quaternion Rotation</span></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The functionality of the Quaternion tag (which now only appears when older scenes are loaded (prior to R18) and can no longer be generated as a new tag) has not been integrated as an object property.</div></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","General","hl_1"--><p><span class="HL_3">General</span></p>
+<p>Surely you’ve heard of the feared <span class="command">Gimbal Lock</span> in conjunction with character animation, for example - or have even experienced it personally!</p>
+<p>Gimbal lock occurs when the rotational value has <span class="command">P</span> +/- 90°, at which point heading <span class="command">H</span> and banking <span class="command">B</span> have the same effect. The result is that one of these dimensions is lost altogether and large rotational jumps occur even with the smallest of rotations.</p>
+<p>The Quaternion function, which works only on rotation animations, can help.</p>
+<p>By default, Cinema 4D uses the <span class="command">Euler Rotation</span> to interpolate objects’ rotations (Euler: gyro-system for decoupled rotation (HPB), interpolation in Euclidian (right-angle) 3D space).</p>
+<p>The Euler rotation’s individual components are interpolated individually, which means that the mean value from HPB (0, 0, 0) and HPB (60, 60, 60) would, for example, be HPB (30, 30, 30). The fact that a swing from 0, 0, 0 over 30, 30, 30 to 60, 60, 60 is not necessarily the shortest path can be tested in the Viewport.</p>
+<p>What is needed is an interpolation that takes the shortest path from A to B, which is also what the user would do if the path had to be animated manually.</p>
+<p>This is exactly what Quaternions do. A Quaternion will take the path from 0, 0, 0 to 60, 60, 60 via 35.104 °, 22.83 °, 35.104 °.</p>
+<p>The Quaternion creates no unnecessary motion and thus avoids <span class="command">Gimbal Lock</span>.</p>
+<p>You might wonder why a Quaternion animation is not in principle applied to all objects. The reason is that Quaternion interpolation also bears disadvantages. The Quaternion works fine as long as the change in rotation is less than 180°. Beyond this, problems can occur due to the fact that the Quaternion will always look for the shortest possible path.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The shortest path for a Quaternion Expression is always on a 3D sphere. This can be imagined as a rotation by the Quaternion interpolation around a fixed axis - the axis around which it can rotate with the smallest possible rotation. As a rule, this has nothing to do with the object axes and is different for each rotation.</div></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","Example","hl_2"--><p><span class="HL_3">Example</span></p>
+<p>Take a look at the following example:</p>
+<p><div class="image_full" style="max-width:956px"><img  src="../pics/040396.jpg"  ><span class="caption"></span></div></p>
+<p><ol><br><li> An object needs to be rotated more than 180° around a given axis.<br><li> A keyframe is set for the initial state, the Timeslider is moved to the frame at which the rotation will end and the object is rotated and the motion is set with keyframes. So far so good.<br>Regardless of whether or not the Quaternion function is used, nothing will change for the initial and final states. The Quaternion interpolation will only use a different method for reaching the same goal.<br><li> First, let’s look at the traditional Euler rotation method in Cinema 4D:<br>An object was rotated using keyframes (e.g., <span class="command">B</span> (bank) rotated 220°, which rotates the objects clockwise by 220°):<br><li> Now for the Quaternion method. As was already stated, this interpolation method will always look for the shortest possible path to the final state. The shortest path in this example, however, is not (from the viewer’s angle of view) the clockwise rotation of 220° but a rotation of 140° in the exact opposite direction.<br></ol><p></p>
+<p>Enabling the <span class="command">Quaternion Rotation</span> option activates the Quaternion animation for that object (the keyframe values will be identical Euler values and only the interpolation between the values will change accordingly). If this option is disabled, the Euler animation method will be used.</p>
+<p>Note that Quaternion interpolation only works on local rotation tracks and not on frozen coordinates (see <a href="OPOLYGON-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_FREEZE" target="_self"><span class="text_id">Freeze All</span></a>).</p>
+<p>A separate <a href="CKVALUE-ID_VKEY_PROPERTIES.html#ID_CKEY_QUAT_INTER" target="_self"><span class="text_id">Quaternion Interpolation</span></a> option is available in the keyframe properties that can be used to affect the interpolation temporally.</p>
+<p>The following differences to Euler animations will result:<ul></p>
+<p><li> In the Timeline, the names of the rotation tracks will be supplemented by a <span class="command_value">(Q)</span>, i.e., <span class="command_value">Rotation.P (Q)</span></li><li> In the Timeline, the three rotation tracks (Rotation.H/P/B) will be seen as a single unit, i.e., if one keyframe is moved to a different location in the animation (or created/deleted), the others will follow</li><li> Keyframe tangents are not supported by Quaternions</li><li> The display of Quaternions as FCurves is often not feasible from a technical point of view (especially for animations greater than 180° between two keyframes) and therefore bears little importance</li></ul><p></p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","When should Quaternion animations be used, and when not?","hl_3"--><p><span class="HL_3">When should Quaternion animations be used, and when not?</span></p>
+<p>Quaternion animations should be used if:<ul></p>
+<p><li> you have problems with Gimbal Lock and jumping axes.</li></ul><p></p>
+<p>Quaternion animations should not be used if:<ul></p>
+<p><li> the difference in rotation between 2 keyframes exceeds 180° (the rotation will be made along the shortest path)</li><li> you want to fine-tune FCurves (i.e., modify timing)</li></ul><p></p>
+<p><!--INDEX "6","Freeze Transformation","ID_BASEOBJECT_FROZEN_COORDS"--><a id="ID_BASEOBJECT_FROZEN_COORDS" name="ID_BASEOBJECT_FROZEN_COORDS"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Freeze Transformation</span></p>
+<p><a id="ID_BASEOBJECT_FREEZE" name="ID_BASEOBJECT_FREEZE"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Freeze All","ID_BASEOBJECT_FREEZE"--><span class="c4d_id">Freeze All</span></p>
+<p>This function will primarily be used for animations only.</p>
+<p>In 3D, the freezing of objects is also referred to as "zeroing out" (or also "dual transformation") because the local coordinates Position and Rotation will each be set to <span class="command_value">0</span> and Scale to <span class="command_value">1</span> without changing the object’s position or orientation (in the following we will only refer to Position and Rotation). The same is achieved when you create a Null Object, position and orient it exactly as the object and make the object a Child object of the Null Object. This is the method that was used prior to R12 as a workaround.</p>
+<p>You can picture the freezing of objects as follows: Internally, a Null Object with the coordinates of the selected object will be created. These coordinates will be copied to the <span class="command">Freeze Transformation</span> tab and will function as an offset to the null coordinates, i.e., any modifications made to the primary coordinates will be taken into account by the frozen coordinates.</p>
+<p>So what can this be used for? To explain we have to begin with the basics:</p>
+<p><div class="image_full" style="max-width:619px"><img  src="../pics/030745.jpg"  ><span class="caption"></span></div></p>
+<p>This scene contains two objects: Arm 2 has the local coodinates shown in the image above and is a Child object of Arm 1. The coordinates shown in the <span class="command">Attribute Manager</span> are always local coordinates (they reflect the coordinate system of the Parent object in the hierarchy). So far so good.</p>
+<p>We now want to animate Arm 2 so it rotates 45° around the X axis. Normally we would rotate the object using the rotation bands and set two keyframes:</p>
+<p><div class="image_full" style="max-width:1249px"><img  src="../pics/030746.jpg"  ><span class="caption"></span></div></p>
+<p>The result can be seen at the center of the image above. Even though the rotation took place around a single axis all three axes were modified. This is due to the fact that the Parent object’s coordinate system (Arm 1) has a different orientation from the local coordinates. Often, this behavior cannot be avoided. And in the Timeline, three F-Curves, that may have to be modified, don’t make things any easier. In addition, our example also suffers from animation Gimbal lock (see <a href="OCUBE-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_Quaternion_ROTATION_INTERPOLATION" target="_self"><span class="text_id">Quaternion Rotation</span></a>), which results in a subsequent rotation of the arm.</p>
+<p>All of these adverse effects can be avoided by freezing the transformation PRIOR to animating. This will copy the Position, Scale and Rotation values to the subordinate values of the same name and set the initial values back to <span class="command_value">0</span> and <span class="command_value">1</span>, respectively.</p>
+<p>This bears the following advantages:<ul></p>
+<p><li> Coordinate values that are awry will be zeroed out, which lets them be easily set back to their initial values. It is also easier to control parameters such as rotation via XPresso or sliders.</li><li> All animation F-Curves start at <span class="command_value">0</span>.</li><li> Gimbal lock can be prevented for one-dimensional rotations.</li></ul><p></p>
+<p>The <span class="command">Freeze All</span> command will freeze all coordinates (Position, Scale, Rotation), i.e., all primary coordinates will be set to <span class="command_value">0</span>.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The <span class="command">Freeze Transformation</span> command (<span class="command">Tools / Coordinates</span> menu) does the same for all selected objects.</div></p>
+<p> </p>
+<p></p>
+<p><a id="ID_BASEOBJECT_FROZEN_RESET" name="ID_BASEOBJECT_FROZEN_RESET"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_RESET","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Unfreeze All","ID_BASEOBJECT_FROZEN_RESET"--><span class="c4d_id">Unfreeze All</span></p>
+<p>The main coordinates will be offset with the frozen coordinates. Subsequently all frozen coordinates will be reset to <span class="command_value">0</span>.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>This can be done for all objects using a separate command (main menu: Tools / Coordinates / Unfreeze Transformation).</div></p>
+<p><a id="ID_BASEOBJECT_FROZEN_POSITION" name="ID_BASEOBJECT_FROZEN_POSITION"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_POSITION","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","P","ID_BASEOBJECT_FROZEN_POSITION"--><span class="c4d_id">P</span> <span class="range">[XYZ m]</span><br><a id="ID_BASEOBJECT_FROZEN_SCALE" name="ID_BASEOBJECT_FROZEN_SCALE"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_SCALE","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","S","ID_BASEOBJECT_FROZEN_SCALE"--><span class="c4d_id">S</span> <span class="range">[XYZ ]</span><br><a id="ID_BASEOBJECT_FROZEN_ROTATION" name="ID_BASEOBJECT_FROZEN_ROTATION"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_ROTATION","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","R","ID_BASEOBJECT_FROZEN_ROTATION"--><span class="c4d_id">R</span> <span class="range">[HPB °]</span></p>
+<p>These are the frozen coordinates that are taken over from the parent hierarchy.</p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The values for these frozen coordinates can be found in the XPresso Editor (Coordinates / Frozen Transformation) in the Input and Output Port menus. These coordinates can be modified here after being frozen, whereby the primary coordinates will remain set to <span class="command_value">0</span>.</div></p>
+<p><a id="ID_BASEOBJECT_FREEZE_P" name="ID_BASEOBJECT_FREEZE_P"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_P","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Freeze P","ID_BASEOBJECT_FREEZE_P"--><span class="c4d_id">Freeze P</span><br><a id="ID_BASEOBJECT_FREEZE_S" name="ID_BASEOBJECT_FREEZE_S"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_S","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Freeze S","ID_BASEOBJECT_FREEZE_S"--><span class="c4d_id">Freeze S</span><br><a id="ID_BASEOBJECT_FREEZE_R" name="ID_BASEOBJECT_FREEZE_R"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_R","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","Freeze R","ID_BASEOBJECT_FREEZE_R"--><span class="c4d_id">Freeze R</span></p>
+<p>These buttons can each be used to individually freeze the three primary coordinates:<ul></p>
+<p><li> Position</li><li> Scale</li><li> Rotation</li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>Note that the frozen position coordinates can be modified as a result of freezing the rotation values, which is a normal effect. For example, if a Child object is rotated (comparable to freezing), the position of the Child object must change accordingly if it is to stay in the same relative position.</div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
