@@ -91,7 +91,7 @@ var menuItems =[
         {"id": "5244", "data": "help/CN/html/5244.html", "text": "设置"},
         {"id": "32034", "data": "help/CN/html/32034.html", "text": "管理员信息"},
       ]},
-      {"id": "5177", "data": "help/CN/html/xxx5177.html", "text": "创建菜单", "children": [
+      {"id": "5177", "data": "help/CN/html/5177.html", "text": "创建菜单", "children": [
         {"id": "3909", "data": "help/CN/html/xxxOLIGHT.html", "text": "灯光（施工中）", "children": [
           {"id": "3910", "data": "help/CN/html/xxxOLIGHT-OBASELIST.html", "text": "灯光：基本"},
           {"id": "3911", "data": "help/CN/html/xxxOLIGHT-ID_BASEOBJECT_GROUP1.html", "text": "灯光：坐标"},
