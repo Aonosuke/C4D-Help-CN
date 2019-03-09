@@ -69,71 +69,80 @@
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
 	四元标签（只有加载 R18 之前版本的场景时会出现，并且不能再创建新的标签）的功能没有被继承到对象属性中。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","概述","hl_1"--><p><span class="HL_3">概述</span></p>
-<p>
-	Surely you’ve heard of the feared <span class="command">万向节锁</span> in conjunction with character animation, for example - or have even experienced it personally!</p>
-<p>万向节锁 occurs when the rotational value has <span class="command">P</span> +/- 90°, at which point heading <span class="command">H</span> and banking <span class="command">B</span> have the same effect. The result is that one of these dimensions is lost altogether and large rotational jumps occur even with the smallest of rotations.</p>
+<p>你可能听说过，甚至遇到过在角色动画中出现的<span class="command">万向节锁</span>问题。</p>
+<p>万向节锁会在旋转值为<span class="command">P</span> +/- 90° 时出现，对<span class="command">H</span>或<span class="command">B</span>进行同样的设置时也会产生这个现象，导致的结果是这些坐标中的其中一个会完全丢失，即使很小的旋转也会出现较大的旋转跳跃。</p>
 <p>四元功能只对制作旋转动画有用。</p>
 <p>默认情况下，CINEMA 4D 使用<span class="command">欧拉旋转</span>对物体的旋转进行插值（欧拉旋转：在欧几里得空间（直角）中对离散旋转（HPB）使用陀螺系统。）</p>
-<p>
-	The Euler rotation’s individual components are interpolated individually, which means that the mean value from HPB (0, 0, 0) and HPB (60, 60, 60) would, for example, be HPB (30, 30, 30). The fact that a swing from 0, 0, 0 over 30, 30, 30 to 60, 60, 60 is not necessarily the shortest path can be tested in the Viewport.</p>
-<p>What is needed is an interpolation that takes the shortest path from A to B, which is also what the user would do if the path had to be animated manually.</p>
-<p>This is exactly what Quaternions do. A Quaternion will take the path from 0, 0, 0 to 60, 60, 60 via 35.104 °, 22.83 °, 35.104 °.</p>
-<p>The Quaternion creates no unnecessary motion and thus avoids <span class="command">万向节锁</span>.</p>
-<p>You might wonder why a Quaternion animation is not in principle applied to all objects. The reason is that Quaternion interpolation also bears disadvantages. The Quaternion works fine as long as the change in rotation is less than 180°. Beyond this, problems can occur due to the fact that the Quaternion will always look for the shortest possible path.</p>
+<p>欧拉旋转的单个组件会单独计算插值，这意味着从 HPB (0, 0, 0) 到 HPB (60, 60, 60) 的平均值是 HPB (30, 30, 30)。而实际上在视窗的测试中，从 0, 0, 0 经过  30, 30, 30 到 60, 60, 60 的摆动不一定是最短的路径。</p>
+<p>现在需要的是一个从 A 到 B 的最短路径的插值，就像需要手动设置动画路径时你所作的那样。</p>
+<p>这也就是四元的作用。四元会让 0, 0, 0 通过 35.104 °, 22.83 °, 35.104 ° 到 60, 60, 60。</p>
+<p>四元不会出现不必要的运动，因此来避免<span class="command">万向节锁</span>效应。</p>
+<p>你可能会疑惑，那为什么四元动画不是对所有对象都适用？因为四元插值也有缺点，四元在旋转角度小于 180° 时效果很好，但如果超过这范围，由于四元会寻找最短的可能路径，这样就会出现问题。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
-	The shortest path for a Quaternion Expression is always on a 3D sphere. This can be imagined as a rotation by the Quaternion interpolation around a fixed axis - the axis around which it can rotate with the smallest possible rotation. As a rule, this has nothing to do with the object axes and is different for each rotation.</div></p>
+	四元表达式的最短路径始终位于三维球体上。这可以看作是四元插值围绕一组固定的坐标轴旋转——它可以以尽可能小的旋转围绕该轴旋转。通常，这与对象坐标轴轴无关，并且每个旋转相互独立。</div></p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","示例","hl_2"--><p><span class="HL_3">示例</span></p>
-<p>Take a look at the following example:</p>
+<p>观察下面的示例：</p>
 <p><div class="image_full" style="max-width:956px"><img  src="../pics/04xxxx/040396.jpg"  ><span class="caption"></span></div></p>
-<p><ol><br><li> An object needs to be rotated more than 180° around a given axis.<br><li> A keyframe is set for the initial state, the Timeslider is moved to the frame at which the rotation will end and the object is rotated and the motion is set with keyframes. So far so good.<br>Regardless of whether or not the Quaternion function is used, nothing will change for the initial and final states. The Quaternion interpolation will only use a different method for reaching the same goal.<br><li> First, let’s look at the traditional 欧拉旋转 method in Cinema 4D:<br>An object was rotated using keyframes (e.g., <span class="command">B</span> (bank) rotated 220°, which rotates the objects clockwise by 220°):<br><li> Now for the Quaternion method. As was already stated, this interpolation method will always look for the shortest possible path to the final state. The shortest path in this example, however, is not (from the viewer’s angle of view) the clockwise rotation of 220° but a rotation of 140° in the exact opposite direction.<br></ol><p></p>
-<p>Enabling the <span class="command">四元旋转</span> option activates the Quaternion animation for that object (the keyframe values will be identical Euler values and only the interpolation between the values will change accordingly). If this option is disabled, the Euler animation method will be used.</p>
-<p>Note that Quaternion interpolation only works on local rotation tracks and not on frozen coordinates (see <a href="OPOLYGON-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_FREEZE" target="_self"><span class="text_id">冻结全部</span></a>).</p>
-<p>A separate <a href="CKVALUE-ID_VKEY_PROPERTIES.html#ID_CKEY_QUAT_INTER" target="_self"><span class="text_id">Quaternion Interpolation</span></a> option is available in the keyframe properties that can be used to affect the interpolation temporally.</p>
-<p>The following differences to Euler animations will result:<ul></p>
-<p><li> In the Timeline, the names of the rotation tracks will be supplemented by a <span class="command_value">(Q)</span>, i.e., <span class="command_value">Rotation.P (Q)</span></li><li> In the Timeline, the three rotation tracks (Rotation.H/P/B) will be seen as a single unit, i.e., if one keyframe is moved to a different location in the animation (or created/deleted), the others will follow</li><li> Keyframe tangents are not supported by Quaternions</li><li> The display of Quaternions as FCurves is often not feasible from a technical point of view (especially for animations greater than 180° between two keyframes) and therefore bears little importance</li></ul><p></p>
+<p><ol><br>
+<li> 一个对象需要围绕给定的轴旋转 180° 以上。<br>
+<li> 在初始状态设置了一个关键帧，把时间线滑块移动到旋转结束的帧，旋转对象并设置关键帧。到目前为止一切正常。<br>
+	不管是否启用四元功能，初始状态和结束状态时不会改变的，四元插值只是使用一种不同的方式来实现同样的目标。<br>
+<li> 首先，CINEMA 4D 中传统的的欧拉旋转是这样的：<br>
+	对象使用关键帧进行旋转（例如设置<span class="command">B</span>(Bank) 旋转 220°，它表示对象顺时针旋转 220°）：<br>
+<li> 这时如果使用四元功能。就像之前所说的，这种插值方式总是会寻找最短的可能路径来达到最终状态。在示例中的最短路径不是顺时针（从摄像机的角度来看）旋转 220°，而是逆时针旋转 140°。<br></ol><p></p>
+<p>启用<span class="command">四元旋转</span>选项会为对象激活四元动画（关键帧数值仍然是欧拉数值，只有数值之间的插值会改变）。如果关闭这个选项，则仍然会使用欧拉动画算法。</p>
+<p>注意，四元插值只在局部旋转路径中有用，对冻结坐标则无效（参见<a href="OPOLYGON-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_FREEZE" target="_self"><span class="text_id">冻结全部</span></a>）。</p>
+<p>在关键帧属性中有一个单独的<a href="CKVALUE-ID_VKEY_PROPERTIES.html#ID_CKEY_QUAT_INTER" target="_self"><span class="text_id">四元插值</span></a>选项，它可以用来临时改变插值算法。</p>
+<p>它与欧拉变换动画的差别在于：<ul></p>
+<p><li> 在时间线窗口中，旋转轨迹的名称会添加一个后缀<span class="command_value">(Q)</span>，即<span class="command_value">旋转.P (Q)</span></li>
+<li> 在时间线窗口中，三个旋转轨迹（旋转.H/P/B）会被视为为一个整体，也就是说，如果将其中一个关键帧移动到另一个位置（或者新建/删除），其他的也会跟着一起移动。</li>
+<li> 四元旋转不支持关键帧切线（Keyframe tangents）。</li>
+<li> 从技术角度来看，四元旋转的F曲线显示经常是无效的（尤其是当两个关键帧之间的动画角度大于180°时），因此F曲线对四元来说没什么用。</li></ul><p></p>
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","应该在什么时候使用四元动画？","hl_3"--><p><span class="HL_3">应该在什么时候使用四元动画？</span></p>
-<p>Quaternion animations should be used if:<ul></p>
-<p><li> you have problems with 万向节锁 and jumping axes.</li></ul><p></p>
-<p>Quaternion animations should not be used if:<ul></p>
-<p><li> the difference in rotation between 2 keyframes exceeds 180° (the rotation will be made along the shortest path)</li><li> you want to fine-tune FCurves (i.e., modify timing)</li></ul><p></p>
+<p>在以下情况中应使用四元动画：<ul></p>
+<p><li> 当出现万向节锁问题或坐标轴跳动时。</li></ul><p></p>
+<p>在以下情况中不应使用四元动画：<ul></p>
+<p><li> 两个关键帧之间的旋转角度超过180°时（如果启用四元，旋转会沿着最短的路径进行）。</li>
+<li> 需要微调F曲线时（即调整动画时间）。</li></ul><p></p>
 <p><!--INDEX "6","冻结变换","ID_BASEOBJECT_FROZEN_COORDS"--><a id="ID_BASEOBJECT_FROZEN_COORDS" name="ID_BASEOBJECT_FROZEN_COORDS"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>冻结变换</span></p>
 <p><a id="ID_BASEOBJECT_FREEZE" name="ID_BASEOBJECT_FREEZE"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","冻结全部","ID_BASEOBJECT_FREEZE"--><span class="c4d_id">冻结全部</span></p>
-<p>This function will primarily be used for animations only.</p>
-<p>In 3D, the freezing of objects is also referred to as "zeroing out" (or also "dual transformation") because the local coordinates Position and Rotation will each be set to <span class="command_value">0</span> and Scale to <span class="command_value">1</span> without changing the object’s position or orientation (in the following we will only refer to Position and Rotation). The same is achieved when you create a Null Object, position and orient it exactly as the object and make the object a Child object of the Null Object. This is the method that was used prior to R12 as a workaround.</p>
-<p>You can picture the freezing of objects as follows: Internally, a Null Object with the coordinates of the selected object will be created. These coordinates will be copied to the <span class="command">冻结变换</span> tab and will function as an offset to the null coordinates, i.e., any modifications made to the primary coordinates will be taken into account by the frozen coordinates.</p>
-<p>So what can this be used for? To explain we have to begin with the basics:</p>
+<p>这个功能只使用在动画中。</p>
+<p>在 3D 中，冻结对象也被称为“清零”或“对偶变换”，因为局部坐标的位置和旋转会分别设置为<span class="command_value">0</span>并缩放为<span class="command_value">1</span>，而不改变对象的坐标或方向（下面我们的讨论只涉及位置和旋转）。当你创建一个空对象并将位置和角度设为与该对象一致，然后将对象作为空对象的子对象，这时也能实现一样的效果。这也是 R12 之前版本所使用的方法。</p>
+<p>你可以将冻结的对象想象成这样：首先创建一个跟所选对象坐标相同的空对象，将这些坐标复制到<span class="command">冻结变换</span>标签，它会当作相对空对象的偏移值，也就是说，对所选对象坐标做出的任何修改都是相对冻结坐标进行计算的。</p>
+<p>那么这有什么用呢？我们以这个简单的案例进行讲解：</p>
 <p><div class="image_full" style="max-width:619px"><img  src="../pics/03xxxx/030745.jpg"  ><span class="caption"></span></div></p>
-<p>This scene contains two objects: Arm 2 has the local coodinates shown in the image above and is a Child object of Arm 1. The coordinates shown in the <span class="command">Attribute Manager</span> are always local coordinates (they reflect the coordinate system of the Parent object in the hierarchy). So far so good.</p>
-<p>We now want to animate Arm 2 so it rotates 45° around the X axis. Normally we would rotate the object using the rotation bands and set two keyframes:</p>
+<p>这个场景包含两个对象：上图中 Arm 2 是 Arm 1 的子对象，显示的坐标轴是它的局部坐标。显示在<span class="command">属性管理器</span>中的则是局部坐标（它反映的是相对父对象坐标系的位置和角度）。目前为止没什么问题。</p>
+<p>现在我们要对 Arm 2 制作动画，将它沿 X 轴旋转45°。正常情况我们会使用旋转带来旋转对象，并设置两个关键帧：</p>
 <p><div class="image_full" style="max-width:1249px"><img  src="../pics/03xxxx/030746.jpg"  ><span class="caption"></span></div></p>
-<p>The result can be seen at the center of the image above. Even though the rotation took place around a single axis all three axes were modified. This is due to the fact that the Parent object’s coordinate system (Arm 1) has a different orientation from the local coordinates. Often, this behavior cannot be avoided. And in the Timeline, three F-Curves, that may have to be modified, don’t make things any easier. In addition, our example also suffers from animation 万向节锁 (see <a href="OCUBE-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_Quaternion_ROTATION_INTERPOLATION" target="_self"><span class="text_id">四元旋转</span></a>), which results in a subsequent rotation of the arm.</p>
-<p>All of these adverse effects can be avoided by freezing the transformation PRIOR to animating. This will copy the Position, Scale and Rotation values to the subordinate values of the same name and set the initial values back to <span class="command_value">0</span> and <span class="command_value">1</span>, respectively.</p>
-<p>This bears the following advantages:<ul></p>
-<p><li> Coordinate values that are awry will be zeroed out, which lets them be easily set back to their initial values. It is also easier to control parameters such as rotation via XPresso or sliders.</li><li> All animation F-Curves start at <span class="command_value">0</span>.</li><li> 万向节锁 can be prevented for one-dimensional rotations.</li></ul><p></p>
-<p>The <span class="command">冻结全部</span> command will freeze all coordinates (Position, Scale, Rotation), i.e., all primary coordinates will be set to <span class="command_value">0</span>.</p>
+<p>在上面中图可以看到旋转的结果。即使只沿一个轴进行旋转，所有三个轴都会发生变化。这是因为父对象（Arm 1）的坐标系与局部坐标系的方向不同。通常这种情况无法避免，并且在时间线中三条F曲线都可能会变化。更糟的是，这个案例在结下来的旋转中还会出现万向节锁效应（参见<a href="OCUBE-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_Quaternion_ROTATION_INTERPOLATION" target="_self"><span class="text_id">四元旋转</span></a>）。</p>
+<p>上面这些缺点都可以通过在制作动画<b>之前</b>冻结变换来避免。这会将位置、缩放和旋转的数值复制到同名的冻结数值，并分别将初始值设为<span class="command_value">0</span>和<span class="command_value">1</span>。</p>
+<p>这项功能有以下优点：<ul></p>
+<p><li> 偏移的坐标值会被清零，可以方便地将它们设置为初始值。并且可以比较容易地进行参数控制，例如通过 XPresso 进行旋转。</li>
+<li> 所有动画的F曲线都会以<span class="command_value">0</span>作为起点。</li>
+<li> 可以在单一方向旋转中避免万向节锁效应。</li></ul><p></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
-	The <span class="command">冻结变换</span> command (<span class="command">Tools / Coordinates</span> menu) does the same for all selected objects.</div></p>
-<p> </p>
+	<span class="command">冻结位移</span>命令（<span class="command">工具 | 坐标</span>菜单）会对所有选择的对象执行相同的命令。</div></p>
 <p></p>
 <p><a id="ID_BASEOBJECT_FROZEN_RESET" name="ID_BASEOBJECT_FROZEN_RESET"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_RESET","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","解冻全部","ID_BASEOBJECT_FROZEN_RESET"--><span class="c4d_id">解冻全部</span></p>
-<p>The main coordinates will be offset with the frozen coordinates. Subsequently all frozen coordinates will be reset to <span class="command_value">0</span>.</p>
+<p>主坐标会根据冻结坐标进行偏移，同时所有冻结坐标会被还原为初始值。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
-	This can be done for all objects using a separate command (main menu: Tools / Coordinates / Unfreeze Transformation).</div></p>
+	使用一个单独的命令（<span class="command">工具 | 坐标 | 解冻位移</span>）可以解冻所有对象。</div></p>
 <p><a id="ID_BASEOBJECT_FROZEN_POSITION" name="ID_BASEOBJECT_FROZEN_POSITION"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_POSITION","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","P","ID_BASEOBJECT_FROZEN_POSITION"--><span class="c4d_id">P</span> <span class="range">[XYZ m]</span><br>
 <a id="ID_BASEOBJECT_FROZEN_SCALE" name="ID_BASEOBJECT_FROZEN_SCALE"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_SCALE","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","S","ID_BASEOBJECT_FROZEN_SCALE"--><span class="c4d_id">S</span> <span class="range">[XYZ]</span><br>
 <a id="ID_BASEOBJECT_FROZEN_ROTATION" name="ID_BASEOBJECT_FROZEN_ROTATION"></a> <!--AM_JUMP "ID_BASEOBJECT_FROZEN_ROTATION","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","R","ID_BASEOBJECT_FROZEN_ROTATION"--><span class="c4d_id">R</span> <span class="range">[HPB °]</span></p>
-<p>These are the frozen coordinates that are taken over from the parent hierarchy.</p>
+<p>这些是从父级获取的冻结坐标。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
-	The values for these frozen coordinates can be found in the XPresso Editor (Coordinates / Frozen Transformation) in the Input and Output Port menus. These coordinates can be modified here after being frozen, whereby the primary coordinates will remain set to <span class="command_value">0</span>.</div></p>
+	这些冻结坐标中的数值还可以在 XPresso 编辑器中找到（坐标 | 冻结位移）。冻结之后你可以在这里修改这些坐标，这样原对象的坐标会保持为<span class="command_value">0</span>。</div></p>
 <p><a id="ID_BASEOBJECT_FREEZE_P" name="ID_BASEOBJECT_FREEZE_P"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_P","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","冻结 P","ID_BASEOBJECT_FREEZE_P"--><span class="c4d_id">冻结 P</span><br>
 <a id="ID_BASEOBJECT_FREEZE_S" name="ID_BASEOBJECT_FREEZE_S"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_S","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","冻结 S","ID_BASEOBJECT_FREEZE_S"--><span class="c4d_id">冻结 S</span><br>
 <a id="ID_BASEOBJECT_FREEZE_R" name="ID_BASEOBJECT_FREEZE_R"></a> <!--AM_JUMP "ID_BASEOBJECT_FREEZE_R","ID_BASEOBJECT_FROZEN_COORDS","ID_BASEOBJECT_GROUP1"--><!--INDEX "8","冻结 R","ID_BASEOBJECT_FREEZE_R"--><span class="c4d_id">冻结 R</span></p>
-<p>These buttons can each be used to individually freeze the three primary coordinates:<ul></p>
-<p><li> Position</li>
-<li> Scale</li>
-<li> Rotation</li></ul><p></p>
+<p>
+	这些按钮可以分别用来独立地冻结三个基本坐标：<ul></p>
+<p><li> 位置</li>
+<li> 缩放</li>
+<li> 旋转</li></ul><p></p>
 <p><p><div class="hint"><span class="HL_hint">注意：<br></span>
-	Note that the frozen position coordinates can be modified as a result of freezing the rotation values, which is a normal effect. For example, if a Child object is rotated (comparable to freezing), the position of the Child object must change accordingly if it is to stay in the same relative position.</div></p>
+	冻结旋转数值可能会导致冻结位置坐标被修改，这是正常情况。例如，如果旋转了一个子对象（相对于冻结），子对象的位置必须相应地改变，如果它要保持在相同的相对位置中。</div></p>
 <p>
 
 </p>

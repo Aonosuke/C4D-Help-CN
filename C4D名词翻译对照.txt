@@ -75,3 +75,7 @@ Linear Color Space Fix          修复线性色彩空间
 Gouraud Shading                 光影着色
 Gimbal Lock                     万向节锁
 Euler Rotation                  欧拉旋转
+Omni                            泛光灯
+Square Spot
+Infinite                        远光灯
+Area                            区域光

@@ -5,7 +5,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 		<meta name="generator" content="WICKIE">
-		<title>Light Object: General</title>
+		<title>灯光：常规</title>
 		<meta name="FORMATTER" content="wickie">
 		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
 		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
@@ -26,112 +26,119 @@
 
 <div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
 <div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
-<img class="icon" src="../icons/OLIGHT.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="OLIGHT.html">Light Object</a> </span><p></p><a href="OLIGHT-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="OLIGHT-ID_BASEOBJECT_GROUP1.html" target=""><span class="c4d_group_navi">坐标</span></a> <a href="OLIGHT-LIGHT_GROUP_GENERAL.html" target=""><span class="c4d_group_navi_self">General</span></a> <a href="OLIGHT-LIGHT_GROUP_DETAILS.html" target=""><span class="c4d_group_navi">细节</span></a> <a href="OLIGHT-LIGHT_GROUP_VISIBILITY.html" target=""><span class="c4d_group_navi">可见</span></a> <a href="OLIGHT-LIGHT_GROUP_SHADOW.html" target=""><span class="c4d_group_navi">投影</span></a> <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target=""><span class="c4d_group_navi">光度</span></a> <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html" target=""><span class="c4d_group_navi">焦散</span></a> <a href="OLIGHT-LIGHT_GROUP_NOISE.html" target=""><span class="c4d_group_navi">噪波</span></a> <a href="OLIGHT-LIGHT_GROUP_LENSEFFECTS.html" target=""><span class="c4d_group_navi">镜头光晕</span></a> <a href="OLIGHT-LIGHT_GROUP_EXCLUSION.html" target=""><span class="c4d_group_navi">工程</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>General</span></p><p></p>
-<p><a id="LIGHT_COLOR" name="LIGHT_COLOR"></a> <!--INDEX "8","Color","LIGHT_COLOR"--><span class="c4d_id">Color</span></p>
-<p>You can adjust the color of each of your lights using the slider controls and the text input boxes for each color element (RGB). You may change the color system (perhaps to HSV 0 … 255) using the drop-down list below the Color box.</p>
-<p>It is also possible to use the color sliders to achieve <span class="command">negative lighting</span> effects, which is discussed in detail later in this chapter.</p>
+<img class="icon" src="../icons/OLIGHT.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="OLIGHT.html">灯光</a> </span><p></p><a href="OLIGHT-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="OLIGHT-ID_BASEOBJECT_GROUP1.html" target=""><span class="c4d_group_navi">坐标</span></a> <a href="OLIGHT-LIGHT_GROUP_GENERAL.html" target=""><span class="c4d_group_navi_self">常规</span></a> <a href="OLIGHT-LIGHT_GROUP_DETAILS.html" target=""><span class="c4d_group_navi">细节</span></a> <a href="OLIGHT-LIGHT_GROUP_VISIBILITY.html" target=""><span class="c4d_group_navi">可见</span></a> <a href="OLIGHT-LIGHT_GROUP_SHADOW.html" target=""><span class="c4d_group_navi">投影</span></a> <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target=""><span class="c4d_group_navi">光度</span></a> <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html" target=""><span class="c4d_group_navi">焦散</span></a> <a href="OLIGHT-LIGHT_GROUP_NOISE.html" target=""><span class="c4d_group_navi">噪波</span></a> <a href="OLIGHT-LIGHT_GROUP_LENSEFFECTS.html" target=""><span class="c4d_group_navi">镜头光晕</span></a> <a href="OLIGHT-LIGHT_GROUP_EXCLUSION.html" target=""><span class="c4d_group_navi">工程</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>常规</span></p><p></p>
+<p><a id="LIGHT_COLOR" name="LIGHT_COLOR"></a> <!--INDEX "8","颜色","LIGHT_COLOR"--><span class="c4d_id">颜色</span></p>
+<p>你可以使用滑块或数值来调整每个灯光的颜色，使用滑块上方的按钮可以改变颜色系统（如 RGB、HSV 等）。</p>
+<p>使用颜色滑块还能实现<span class="command">negative lighting</span>效果，这在下文中会进行介绍。</p>
 <p><RELEASE_120 Light source color can be defined via its color temperature.></p>
-<p><a id="LIGHT_TEMPERATURE" name="LIGHT_TEMPERATURE"></a> <!--INDEX "8","Use Temperature","LIGHT_TEMPERATURE"--><span class="c4d_id">Use Temperature</span><br><a id="LIGHT_TEMPERATURE_MAIN" name="LIGHT_TEMPERATURE_MAIN"></a> <!--INDEX "8","Color Temperature","LIGHT_TEMPERATURE_MAIN"--><span class="c4d_id">Color Temperature</span> <span class="range">[1000..10000]</span></p>
-<p>The light color can be defined vie the <span class="command">Color Temperature</span> (click on the small arrow at the left of the <span class="command">Color</span> option) value, instead of using the RGB slider, when the <span class="command">Use Temperature</span> option is enabled (see also <a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_WHITE_BALANCE_TEMPERATURE" target="_self"><span class="text_id">White Balance (K)</span></a>).</p>
-<p>Note that this setting (contrary to the color chooser’s Kelvin temperature, which only interpolates and animates between RGB values internally) can be animated correctly.</p>
+<p><a id="LIGHT_TEMPERATURE" name="LIGHT_TEMPERATURE"></a> <!--INDEX "8","使用色温","LIGHT_TEMPERATURE"--><span class="c4d_id">使用色温</span><br><a id="LIGHT_TEMPERATURE_MAIN" name="LIGHT_TEMPERATURE_MAIN"></a> <!--INDEX "8","色温","LIGHT_TEMPERATURE_MAIN"--><span class="c4d_id">色温</span> <span class="range">[1000..10000]</span></p>
+<p>可以通过<span class="command">色温</span>值来设定灯光颜色（点击<span class="command">颜色</span>选项左侧的小三角），当启用<span class="command">使用色温</span>选项时，它会替代 RBG/HSV 颜色滑块。（另见<a href="OCAMERA-ID_OBJECTPROPERTIES.html#CAMERAOBJECT_WHITE_BALANCE_TEMPERATURE" target="_self"><span class="text_id">白平衡 (K)</span></a>）。</p>
+<p>注意，色温可以准确地制作动画，而颜色选择器中的开尔文温度只能被内部处理为 RBG 颜色并进行插值计算。</p>
 <p></RELEASE_120></p>
-<p><a id="LIGHT_BRIGHTNESS" name="LIGHT_BRIGHTNESS"></a> <!--INDEX "8","Intensity","LIGHT_BRIGHTNESS"--><span class="c4d_id">Intensity</span> <span class="range">[-10000000..10000000%]</span></p>
-<p>This value controls the overall brightness of the light source. While this control may be seen as just a way to brighten or dim your light source, it’s also capable of another interesting, and very useful, effect. Using a negative value with this option results in negative lighting. The color of your light source is important here. That color will not be added to the scene where a negative light source is in effect. With this technique you can artificially darken and shade specific areas of your scene.</p>
-<p>You can define how brightly a given light source should shine, regardless of its color. You can simulate anything from dim candlelight to bright sunlight. Values far beyond the 100% mark can also be entered.</p>
-<p>This type of lighting works even better when used with carefully constructed environment lighting and falloff ranges. A good understanding of environment lighting is needed.</p>
-<p><a id="LIGHT_TYPE" name="LIGHT_TYPE"></a> <!--INDEX "8","Type","LIGHT_TYPE"--><span class="c4d_id">Type</span></p>
-<p>Defines the light’s type.</p>
-<p><a id="LIGHT_TYPE_OMNI" name="LIGHT_TYPE_OMNI"></a><!--INDEX "10","Omni","LIGHT_TYPE_OMNI"--><span class="c4d_id_cycle">Omni</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003282.jpg"  ><span class="caption"></span></div></p>
-<p>An Omni light source acts like a real life light bulb — casting rays in all directions. Placing an Omni light in the center of your scene will illuminate your scene evenly.</p>
-<p><a id="LIGHT_TYPE_SPOT" name="LIGHT_TYPE_SPOT"></a><!--INDEX "10","Spot","LIGHT_TYPE_SPOT"--><span class="c4d_id_cycle">Spot</span><br><a id="LIGHT_TYPE_SPOTRECT" name="LIGHT_TYPE_SPOTRECT"></a><!--INDEX "10","Square Spot","LIGHT_TYPE_SPOTRECT"--><span class="c4d_id_cycle">Square Spot</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003283.jpg"  ><span class="caption"></span></div></p>
-<p>Spotlights cast their rays in just one direction, which is along the Z axis by default. Once created, they can be easily moved and rotated to light individual objects and specific areas of a scene. The spotlight source can project a round or a square cone of light.</p>
-<p>Square light cones are ideal for, amongst other things, the simulation of that which require a square picture to be cast onto a wall.</p>
-<p>Examples of round spotlights include car headlights and torches.</p>
-<p><a id="LIGHT_TYPE_DISTANT" name="LIGHT_TYPE_DISTANT"></a><!--INDEX "10","Infinite","LIGHT_TYPE_DISTANT"--><span class="c4d_id_cycle">Infinite</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003284.jpg"  ><span class="caption"></span></div></p>
-<p>The Infinite light type is so called because it mimics light that is cast from an infinite distance. Using a Infinite light would, for example, evenly illuminate the whole of a floor (provided the floor is flat). Since a Infinite light is infinite, the light has no actual origin. Thus the exact position of a Infinite light, near or far, has no effect on your scene’s objects. Only the actual direction in which the light is facing is important with this light source.</p>
-<p>Infinite light sources are suitable for simulating sunlight.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Owing to its characteristics, the Infinite light source itself cannot radiate visible light.</div></p>
-<p><a id="LIGHT_TYPE_AREA" name="LIGHT_TYPE_AREA"></a><!--INDEX "10","Area","LIGHT_TYPE_AREA"--><span class="c4d_id_cycle">Area</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003287.jpg"  ><span class="caption"></span></div></p>
+<p><a id="LIGHT_BRIGHTNESS" name="LIGHT_BRIGHTNESS"></a> <!--INDEX "8","强度","LIGHT_BRIGHTNESS"--><span class="c4d_id">强度</span> <span class="range">[-10000000..10000000%]</span></p>
+<p>这个数值控制光源的整体亮度。虽然它看起来只是调亮或调暗光源，但是它还有另一个有趣而且有用的效果。将强度设置为负值会产生负光照，这时光源的颜色会很重要，这个颜色不会被添加到负光源所照射的地方。使用这个特性可以人为地调暗或着色场景中的特定区域。</p>
+<p>你可以定义一个光源的明亮程度而不用考虑其亮度。亮度的数值可以远远大于100%，不管是暗淡的烛光还是明亮的阳光都可以进行模拟。</p>
+<p>这种灯光在配黑精心布置的环境光照和衰减范围时效果会更好，因此需要对环境光照有一定的理解。</p>
+<p><a id="LIGHT_TYPE" name="LIGHT_TYPE"></a> <!--INDEX "8","类型","LIGHT_TYPE"--><span class="c4d_id">类型</span></p>
+<p>定义灯光的类型。</p>
+<p><a id="LIGHT_TYPE_OMNI" name="LIGHT_TYPE_OMNI"></a><!--INDEX "10","泛光灯","LIGHT_TYPE_OMNI"--><span class="c4d_id_cycle">泛光灯</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003282.jpg"  ><span class="caption"></span></div></p>
+<p>泛光灯类似于真实世界中的灯泡——朝所有方向投射光线。在场景中间放置一个泛光灯能均匀地照亮场景。</p>
+<p><a id="LIGHT_TYPE_SPOT" name="LIGHT_TYPE_SPOT"></a><!--INDEX "10","聚光灯","LIGHT_TYPE_SPOT"--><span class="c4d_id_cycle">聚光灯</span></p>
+<p><a id="LIGHT_TYPE_SPOTRECT" name="LIGHT_TYPE_SPOTRECT"></a><!--INDEX "10","四方聚光灯","LIGHT_TYPE_SPOTRECT"--><span class="c4d_id_cycle">四方聚光灯</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003283.jpg"  ><span class="caption"></span></div></p>
+<p>聚光灯只会朝一个方向投射光线，默认方向是 Z 轴。你可以轻易地移动和旋转它来照亮单独的对象或场景中的特定区域。聚光灯可以投射圆形或方形的光锥。</p>
+<p>方形光锥对于需要将方形图像投射到墙上的情况是一个理想的选择。</p>
+<p>圆形光锥的案例有车头灯和手电筒等。</p>
+<p><a id="LIGHT_TYPE_DISTANT" name="LIGHT_TYPE_DISTANT"></a><!--INDEX "10","远光灯","LIGHT_TYPE_DISTANT"--><span class="c4d_id_cycle">远光灯</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003284.jpg"  ><span class="caption"></span></div></p>
+<p>这种灯光被称为远光灯是因为它模拟的是从无限远处投射来的光线，例如使用远光灯可以均匀地照亮一片地面（前提是地面时平坦的）。因为远光灯是无限远的，这种灯光没有实际的起点，因此远光灯的位置不会对场景产生影响，只有光源的方向是有意义的。</p>
+<p>远光灯适合用来模拟阳光。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>由于其特性，远光灯本身不能发射可见光。</div></p>
+<p><a id="LIGHT_TYPE_AREA" name="LIGHT_TYPE_AREA"></a><!--INDEX "10","区域光","LIGHT_TYPE_AREA"--><span class="c4d_id_cycle">区域光</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003287.jpg"  ><span class="caption"></span></div></p>
 <p>The light rays from an Area light expand from all points on its surface outwards in all directions.</p>
 <p>A rectangular computer screen is a good example of such a light. </p>
-<p>The resultant lighting and specular effects are somewhat different from those of an Omni light; specular highlights are more angular and the surface illumination is richer. The closer the light source is to the object, the more apparent this becomes.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003288.jpg"  ><span class="caption">However, an Area light with a small radius that is placed far way in a scene will hardly seem to differ from an Omni light source.</span></div></p>
+<p>The resultant lighting and specular effects are somewhat different from those of an 泛光灯 light; specular highlights are more angular and the surface illumination is richer. The closer the light source is to the object, the more apparent this becomes.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003288.jpg"  ><span class="caption">However, an Area light with a small radius that is placed far way in a scene will hardly seem to differ from an 泛光灯 light source.</span></div></p>
 <p><p><div class="hint"><span class="HL_hint"></span>As with Distant and Parallel lights, an Area light cannot be rendered as a visible light source.</div></p>
 <p>Improved Area Light Object</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/005436.jpg"  ><span class="caption">Natural light dispersion using an area light source.</span></div></p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/005xxx/005436.jpg"  ><span class="caption">Natural light dispersion using an area light source.</span></div></p>
 <p>The corresponding Area shadows behave in accordance with the Area light object .</p>
 <p>As you can see in the images above, the rectangular Area light on the right  (regulated with the use of <span class="command">Falloff Angle</span>) emulates very accurately light cast through a window.</p>
-<p><div class="image_full" style="max-width:720px"><img  src="../pics/005437.jpg"  ><span class="caption">Image Copyright Holger Schömann.</span></div></p>
-<p>The above scene was lit using one Omni light, an Area light with Area shadow, and rendered using Ambient Occlusion (<span class="command">Advanced Render</span>). The Area light is rectangular and was placed in the window opening.</p>
-<p><a id="LIGHT_TYPE_PARALLEL" name="LIGHT_TYPE_PARALLEL"></a><!--INDEX "10","Parallel","LIGHT_TYPE_PARALLEL"--><span class="c4d_id_cycle">Parallel</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003285.jpg"  ><span class="caption"></span></div></p>
+<p><div class="image_full" style="max-width:720px"><img  src="../pics/005xxx/005437.jpg"  ><span class="caption">Image Copyright Holger Schömann.</span></div></p>
+<p>The above scene was lit using one 泛光灯 light, an Area light with Area shadow, and rendered using Ambient Occlusion (<span class="command">Advanced Render</span>). The Area light is rectangular and was placed in the window opening.</p>
+<p><a id="LIGHT_TYPE_PARALLEL" name="LIGHT_TYPE_PARALLEL"></a><!--INDEX "10","平行光","LIGHT_TYPE_PARALLEL"--><span class="c4d_id_cycle">平行光</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003285.jpg"  ><span class="caption"></span></div></p>
 <p>Parallel lights resemble the <span class="command">Infinite</span> light. Unlike the Distant light source however, the Parallel light has an origin and simulates a large, single axis wall of light. By default, all Parallel lights will radiate light rays along the Z axis. These lights take the appearance of an infinitely large surface, radiating parallel light in a single direction; anything behind the point of origin will not be illuminated.</p>
 <p><p><div class="hint"><span class="HL_hint"></span>Like the distant light source, Parallel lights cannot be rendered as a visible light.</div></p>
-<p><a id="LIGHT_TYPE_PARSPOT" name="LIGHT_TYPE_PARSPOT"></a><!--INDEX "10","Parallel Spot","LIGHT_TYPE_PARSPOT"--><span class="c4d_id_cycle">Parallel Spot</span><br><a id="LIGHT_TYPE_PARSPOTRECT" name="LIGHT_TYPE_PARSPOTRECT"></a><!--INDEX "10","Square Parallel Spot","LIGHT_TYPE_PARSPOTRECT"--><span class="c4d_id_cycle">Square Parallel Spot</span></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003286.jpg"  ><span class="caption"></span></div></p>
+<p><a id="LIGHT_TYPE_PARSPOT" name="LIGHT_TYPE_PARSPOT"></a><!--INDEX "10","圆形平行聚光灯","LIGHT_TYPE_PARSPOT"--><span class="c4d_id_cycle">圆形平行聚光灯</span></p>
+<p><a id="LIGHT_TYPE_PARSPOTRECT" name="LIGHT_TYPE_PARSPOTRECT"></a><!--INDEX "10","四方平行聚光灯","LIGHT_TYPE_PARSPOTRECT"--><span class="c4d_id_cycle">四方平行聚光灯</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003286.jpg"  ><span class="caption"></span></div></p>
 <p>Parallel spotlights resemble the regular spotlight but do not have light cones to define falloff or distance. Instead, light rays are cast along cylinders and/or bars. The origin is important in defining which objects in a scene will be affected by this light. The radius of the spotlight can also be modified using the adjustment handles.</p>
 <p><a id="LIGHT_TYPE_PHOTOMETRIC" name="LIGHT_TYPE_PHOTOMETRIC"></a><!--INDEX "10","IES","LIGHT_TYPE_PHOTOMETRIC"--><span class="c4d_id_cycle">IES</span></p>
 <p>See <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target="">Photometric</a> tab, in which an IES file must be loaded.</p>
-<p><a id="LIGHT_SHADOWTYPE" name="LIGHT_SHADOWTYPE"></a> <!--INDEX "8","Shadow","LIGHT_SHADOWTYPE"--><span class="c4d_id">Shadow</span></p>
-<p>Defines the type of <a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOWTYPE_VIRTUAL" target="">shadow</a> generated by a light source.</p>
-<p>Select None if your light is to cast no shadow. This is a very helpful option in a scene with many lights, allowing you to turn on shadow-casting for the main lights only. Any real world photographer will envy you this option and its possibilities.</p>
-<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Render Time (overview)","hl_1"--><p><span class="HL_2">Render Time (overview)</span><ul></p>
-<p><li> Soft shadows are calculated far more quickly than hard shadows, hard shadows being much faster to calculate than area shadows.</li><li> Making a light visible in a rendered scene adds a negligible amount to its render time. Using a volumetric light increases render time, sometimes substantially, according to the Sample Distance.</li><li> Noise adds to render time, with hard and soft turbulence requiring more calculations than basic noise, while wavy turbulence roughly doubles rendering time over that of basic noise.</li><li> Using a high sample radius will increase the render time of soft shadows.</li><li> Area lights also add to render time, although not to the same extent as the processor intensive volumetric light.</li></ul><p></p>
-<p><a id="LIGHT_VLTYPE" name="LIGHT_VLTYPE"></a> <!--INDEX "8","Visible Light","LIGHT_VLTYPE"--><span class="c4d_id">Visible Light</span></p>
+<p><a id="LIGHT_SHADOWTYPE" name="LIGHT_SHADOWTYPE"></a> <!--INDEX "8","投影","LIGHT_SHADOWTYPE"--><span class="c4d_id">投影</span></p>
+<p>Defines the type of <a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOWTYPE_VIRTUAL" target="">投影</a> generated by a light source.</p>
+<p>Select None if your light is to cast no 投影. This is a very helpful option in a scene with many lights, allowing you to turn on shadow-casting for the main lights only. Any real world photographer will envy you this option and its possibilities.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","渲染时间（概述）","hl_1"--><p><span class="HL_2">渲染时间（概述）</span><ul></p>
+<p><li> Soft shadows are calculated far more quickly than hard shadows, hard shadows being much faster to calculate than area shadows.</li>
+<li> Making a light visible in a rendered scene adds a negligible amount to its render time. Using a volumetric light increases render time, sometimes substantially, according to the Sample Distance.</li>
+<li> Noise adds to render time, with hard and soft turbulence requiring more calculations than basic noise, while wavy turbulence roughly doubles rendering time over that of basic noise.</li>
+<li> Using a high sample radius will increase the render time of soft shadows.</li>
+<li> Area lights also add to render time, although not to the same extent as the processor intensive volumetric light.</li></ul><p></p>
+<p><a id="LIGHT_VLTYPE" name="LIGHT_VLTYPE"></a> <!--INDEX "8","可见灯光","LIGHT_VLTYPE"--><span class="c4d_id">可见灯光</span></p>
 <p>Defines the visibility of the light in a scene. This type of effect can be seen in a smoky room.</p>
 <p>This effect is comparable to fog, which does not diminish light, but rather adds to its brightness.</p>
-<p>With Visible Light, you can produce stunning effects including headlights, shimmering lights, laser beams and a host of atmospheric effects.</p>
+<p>With 可见灯光, you can produce stunning effects including headlights, shimmering lights, laser beams and a host of atmospheric effects.</p>
 <p>In nature, a light beam becomes visible when small particles such as dust, insects, smoke or fog are present in the air. For example, if a car headlight shines in fog, you will see its cone of light quite distinctly. In Cinema 4D, all light sources and/or the light cone emitted can be made visible.</p>
-<p><a id="LIGHT_VLTYPE_VISIBLE" name="LIGHT_VLTYPE_VISIBLE"></a><!--INDEX "10","Visible","LIGHT_VLTYPE_VISIBLE"--><span class="c4d_id_cycle">Visible</span></p>
-<p>If Visible Light is set to Visible on the General page, the light source will produce visible light that passes through all objects. For example, a visible light could be placed in the center of a planet’s sphere to simulate an atmosphere.</p>
+<p><a id="LIGHT_VLTYPE_VISIBLE" name="LIGHT_VLTYPE_VISIBLE"></a><!--INDEX "10","可见","LIGHT_VLTYPE_VISIBLE"--><span class="c4d_id_cycle">可见</span></p>
+<p>If 可见灯光 is set to Visible on the General page, the light source will produce 可见灯光 that passes through all objects. For example, a 可见灯光 could be placed in the center of a planet’s sphere to simulate an atmosphere.</p>
 <p>The Visible option is of special importance to the <a href="5455.html" target="">particle system</a>. Visible lights (with No Light Radiation enabled) lend themselves to a huge range of effects, such as nebula clouds, smoke, comet tails, fire and flames.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003338.jpg"  ><span class="caption"></span></div></p>
-<p><a id="LIGHT_VLTYPE_VOLUMETRIC" name="LIGHT_VLTYPE_VOLUMETRIC"></a><!--INDEX "10","Volumetric","LIGHT_VLTYPE_VOLUMETRIC"--><span class="c4d_id_cycle">Volumetric</span></p>
-<p>A visible light does not affect objects that lie in its cone of light — the light rays penetrate objects unhindered, casting no shadow in the visible light’s beam.</p>
-<p>In order for a shadow to be cast by a visible light, volumetric lighting must be used.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003338.jpg"  ><span class="caption"></span></div></p>
+<p><a id="LIGHT_VLTYPE_VOLUMETRIC" name="LIGHT_VLTYPE_VOLUMETRIC"></a><!--INDEX "10","正向测定体积","LIGHT_VLTYPE_VOLUMETRIC"--><span class="c4d_id_cycle">正向测定体积</span></p>
+<p>A 可见灯光 does not affect objects that lie in its cone of light — the light rays penetrate objects unhindered, casting no shadow in the visible light’s beam.</p>
+<p>In order for a shadow to be cast by a 可见灯光, volumetric lighting must be used.</p>
 <p>The parameters for the visible Volumetric light are taken from the light source’s shadow map values: Resolution X, Resolution Y, Sample Radius and Parallel Width.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003339.jpg"  ><span class="caption"></span></div></p>
-<p><a id="LIGHT_VLTYPE_INVERSEVOLUMETRIC" name="LIGHT_VLTYPE_INVERSEVOLUMETRIC"></a><!--INDEX "10","Inverse Volumetric","LIGHT_VLTYPE_INVERSEVOLUMETRIC"--><span class="c4d_id_cycle">Inverse Volumetric</span></p>
-<p>Enabling the Inverse Volumetric function has the interesting effect of inverting your volumetric light — that is, the light is visible where the light cone would normally be in shadow.</p>
-<p>Imagine a company logo, behind which you have placed an Inverse Volumetric light source. This inverts the light’s volumetric effect, giving the impression that the light is radiating from the logo itself.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003340.jpg"  ><span class="caption"></span></div></p>
-<p><a id="LIGHT_NOLIGHTRADIATION" name="LIGHT_NOLIGHTRADIATION"></a> <!--INDEX "8","No Illumination","LIGHT_NOLIGHTRADIATION"--><span class="c4d_id">No Illumination</span></p>
-<p>If you need to see just the visible light and/or its lens effects without the light source actually illuminating objects, enable this option. Should you need your light sources for special effects (such as the exhaust gas of a jet engine) enable this box for faster rendering.</p>
-<p><a id="LIGHT_SHOWILLUMINATION" name="LIGHT_SHOWILLUMINATION"></a> <!--INDEX "8","Show Illumination","LIGHT_SHOWILLUMINATION"--><span class="c4d_id">Show Illumination</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003339.jpg"  ><span class="caption"></span></div></p>
+<p><a id="LIGHT_VLTYPE_INVERSEVOLUMETRIC" name="LIGHT_VLTYPE_INVERSEVOLUMETRIC"></a><!--INDEX "10","反向测定体积","LIGHT_VLTYPE_INVERSEVOLUMETRIC"--><span class="c4d_id_cycle">反向测定体积</span></p>
+<p>Enabling the 反向测定体积 function has the interesting effect of inverting your volumetric light — that is, the light is visible where the light cone would normally be in shadow.</p>
+<p>Imagine a company logo, behind which you have placed an 反向测定体积 light source. This inverts the light’s volumetric effect, giving the impression that the light is radiating from the logo itself.</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003340.jpg"  ><span class="caption"></span></div></p>
+<p><a id="LIGHT_NOLIGHTRADIATION" name="LIGHT_NOLIGHTRADIATION"></a> <!--INDEX "8","没有光照","LIGHT_NOLIGHTRADIATION"--><span class="c4d_id">没有光照</span></p>
+<p>If you need to see just the 可见灯光 and/or its lens effects without the light source actually illuminating objects, enable this option. Should you need your light sources for special effects (such as the exhaust gas of a jet engine) enable this box for faster rendering.</p>
+<p><a id="LIGHT_SHOWILLUMINATION" name="LIGHT_SHOWILLUMINATION"></a> <!--INDEX "8","显示光照","LIGHT_SHOWILLUMINATION"--><span class="c4d_id">显示光照</span></p>
 <p>If this option is enabled, a wireframe approximation of the light’s illumination is shown in the viewports. This range can be adjusted by dragging the handles of the wireframe representation.</p>
-<p><a id="LIGHT_DETAILS_AMBIENT" name="LIGHT_DETAILS_AMBIENT"></a> <!--INDEX "8","Ambient Illumination","LIGHT_DETAILS_AMBIENT"--><span class="c4d_id">Ambient Illumination</span></p>
-<p>Normally the brightness of a surface is determined by the angle at which a ray of light hits it. The greater the angle between the ray and a tangent to the surface, the more the surface will be lit by the light. When Ambient Illumination is switched on, however, this physical law is waived. Here the angle does not matter. All surfaces are lit with the same intensity. This results in a much flatter look. Only the material color is considered in the lighting calculations.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003275.jpg"  ><span class="caption">Ambient illumination.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003276.jpg"  ><span class="caption">Ambient illumination with Falloff enabled.</span></div></td></p>
+<p><a id="LIGHT_DETAILS_AMBIENT" name="LIGHT_DETAILS_AMBIENT"></a> <!--INDEX "8","环境光照","LIGHT_DETAILS_AMBIENT"--><span class="c4d_id">环境光照</span></p>
+<p>Normally the brightness of a surface is determined by the angle at which a ray of light hits it. The greater the angle between the ray and a tangent to the surface, the more the surface will be lit by the light. When 环境光照 is switched on, however, this physical law is waived. Here the angle does not matter. All surfaces are lit with the same intensity. This results in a much flatter look. Only the material color is considered in the lighting calculations.</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003275.jpg"  ><span class="caption">环境光照.</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003276.jpg"  ><span class="caption">环境光照 with Falloff enabled.</span></div></td></p>
 <p>  </TR></TABLE>
-<p>With both Ambient Illumination and Falloff enabled for the light source, you can lighten specific regions of your scene in a similar way to how you darken them with Negative Lighting, explained earlier.</p>
-<p><a id="LIGHT_SHOWVISIBLELIGHT" name="LIGHT_SHOWVISIBLELIGHT"></a> <!--INDEX "8","Show Visible Light","LIGHT_SHOWVISIBLELIGHT"--><span class="c4d_id">Show Visible Light</span></p>
+<p>With both 环境光照 and Falloff enabled for the light source, you can lighten specific regions of your scene in a similar way to how you darken them with Negative Lighting, explained earlier.</p>
+<p><a id="LIGHT_SHOWVISIBLELIGHT" name="LIGHT_SHOWVISIBLELIGHT"></a> <!--INDEX "8","显示可见灯光","LIGHT_SHOWVISIBLELIGHT"--><span class="c4d_id">显示可见灯光</span></p>
 <p>Enable this option to show an approximation of the visible light in the viewports, not to be confused with illumination. Again, this range can be interactively adjusted via its handles.</p>
-<p><a id="LIGHT_DETAILS_DIFFUSE" name="LIGHT_DETAILS_DIFFUSE"></a> <!--INDEX "8","Diffuse","LIGHT_DETAILS_DIFFUSE"--><span class="c4d_id">Diffuse</span></p>
-<p>When <span class="command">Diffuse</span> is enabled, the color properties of an object are ignored by the light source; only specular surfacing is produced by the light. This can be useful for objects such as a golden signature, where you would like specular glints, but no lightening of the color properties.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003277.jpg"  ><span class="caption">Diffuse disabled.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003278.jpg"  ><span class="caption">Diffuse enabled.</span></div></td></p>
+<p><a id="LIGHT_DETAILS_DIFFUSE" name="LIGHT_DETAILS_DIFFUSE"></a> <!--INDEX "8","漫射","LIGHT_DETAILS_DIFFUSE"--><span class="c4d_id">漫射</span></p>
+<p>When <span class="command">漫射</span> is enabled, the color properties of an object are ignored by the light source; only specular surfacing is produced by the light. This can be useful for objects such as a golden signature, where you would like specular glints, but no lightening of the color properties.</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003277.jpg"  ><span class="caption">漫射 disabled.</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003278.jpg"  ><span class="caption">漫射 enabled.</span></div></td></p>
 <p>  </TR></TABLE>
-<p><a id="LIGHT_SHOWCLIPPING" name="LIGHT_SHOWCLIPPING"></a> <!--INDEX "8","Show Clipping","LIGHT_SHOWCLIPPING"--><span class="c4d_id">Show Clipping</span></p>
+<p><a id="LIGHT_SHOWCLIPPING" name="LIGHT_SHOWCLIPPING"></a> <!--INDEX "8","显示修剪","LIGHT_SHOWCLIPPING"--><span class="c4d_id">显示修剪</span></p>
 <p>Enabling this option shows an approximation of the selected light’s clipping range (the restriction of the light range) in the viewports and can be interactively adjusted with the wireframe’s handles.</p>
-<p><a id="LIGHT_DETAILS_SPECULAR" name="LIGHT_DETAILS_SPECULAR"></a> <!--INDEX "8","Specular","LIGHT_DETAILS_SPECULAR"--><span class="c4d_id">Specular</span></p>
+<p><a id="LIGHT_DETAILS_SPECULAR" name="LIGHT_DETAILS_SPECULAR"></a> <!--INDEX "8","高光","LIGHT_DETAILS_SPECULAR"--><span class="c4d_id">高光</span></p>
 <p>When this option is enabled, the light source produces no specular highlights on your scene’s objects. Imagine you have a bottle on a table with two or more light sources in the scene. The bottle may show too many specular highlights, with the glass material looking too busy. To avoid this, enable No Specular for some of the light sources.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003279.jpg"  ><span class="caption">This bottle is lit by two light sources, causing more highlights to develop than you would normally want.</span></div></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003280.jpg"  ><span class="caption">Specular option is enabled for one light source only. Now the highlights are fine.</span></div></p>
-<p><a id="LIGHT_DETAILS_SEPARATEPASS" name="LIGHT_DETAILS_SEPARATEPASS"></a> <!--INDEX "8","Separate Pass","LIGHT_DETAILS_SEPARATEPASS"--><span class="c4d_id">Separate Pass</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003279.jpg"  ><span class="caption">This bottle is lit by two light sources, causing more highlights to develop than you would normally want.</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003280.jpg"  ><span class="caption">Specular option is enabled for one light source only. Now the highlights are fine.</span></div></p>
+<p><a id="LIGHT_DETAILS_SEPARATEPASS" name="LIGHT_DETAILS_SEPARATEPASS"></a> <!--INDEX "8","分离通道","LIGHT_DETAILS_SEPARATEPASS"--><span class="c4d_id">分离通道</span></p>
 <p>If you enable this option, separate diffuse, specular and shadow layers will be created for the light source when you render (provided you have set the appropriate multi-pass parameters).</p>
 <p><RELEASE_110 Light Objects can be excluded from GI.></p>
-<p><a id="LIGHT_DETAILS_GI" name="LIGHT_DETAILS_GI"></a> <!--INDEX "8","GI Illumination","LIGHT_DETAILS_GI"--><span class="c4d_id">GI Illumination</span></p>
-<p><div class="image_full" style="max-width:829px"><img  src="../pics/020005.jpg"  ><span class="caption">Left: <span class="command">GI Illumination</span> disabled. Right: Enabled. Without GI illumination from both light sources the scene will be calculated with absolutely no GI.</span></div></p>
+<p><a id="LIGHT_DETAILS_GI" name="LIGHT_DETAILS_GI"></a> <!--INDEX "8","GI 照明","LIGHT_DETAILS_GI"--><span class="c4d_id">GI 照明</span></p>
+<p><div class="image_full" style="max-width:829px"><img  src="../pics/02xxxx/020005.jpg"  ><span class="caption">Left: <span class="command">GI 照明</span> disabled. Right: Enabled. Without GI 照明 from both light sources the scene will be calculated with absolutely no GI.</span></div></p>
 <p>Use this setting to define if objects illuminated by a given light source should "pass on" their light with regard to GI. If this option is disabled this light source’s illumination will affect objects (they will be illuminated) but these objects will not reflect light onto any other object(s).</p>
 <p></RELEASE_110></p>
 <p><RELEASE_140 Light source options After Effects Export.></p>
-<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>After Effects: Note that this option is designed for use in conjunction with <a href="50775.html" target="">exchange</a> described in point 2 above.</div></p>
-<p><a id="LIGHT_AFX" name="LIGHT_AFX"></a> <!--INDEX "8","Export to Compositing","LIGHT_AFX"--><span class="c4d_id">Export to Compositing</span></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>
+	After Effects: Note that this option is designed for use in conjunction with <a href="50775.html" target="">exchange</a> described in point 2 above.</div></p>
+<p><a id="LIGHT_AFX" name="LIGHT_AFX"></a> <!--INDEX "8","导出到合成","LIGHT_AFX"--><span class="c4d_id">导出到合成</span></p>
 <p>If enabled, the light source will be exported to a compositing application (see also <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#comp" target="">here</a>).</p>
 <p></RELEASE_140></p>
 <p>
