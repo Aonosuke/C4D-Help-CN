@@ -54,59 +54,59 @@
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003284.jpg"  ><span class="caption"></span></div></p>
 <p>这种灯光被称为远光灯是因为它模拟的是从无限远处投射来的光线，例如使用远光灯可以均匀地照亮一片地面（前提是地面时平坦的）。因为远光灯是无限远的，这种灯光没有实际的起点，因此远光灯的位置不会对场景产生影响，只有光源的方向是有意义的。</p>
 <p>远光灯适合用来模拟阳光。</p>
-<p><p><div class="hint"><span class="HL_hint"></span>由于其特性，远光灯本身不能发射可见光。</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>由于其特性，远光灯本身不能渲染为可见灯光。</div></p>
 <p><a id="LIGHT_TYPE_AREA" name="LIGHT_TYPE_AREA"></a><!--INDEX "10","区域光","LIGHT_TYPE_AREA"--><span class="c4d_id_cycle">区域光</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003287.jpg"  ><span class="caption"></span></div></p>
-<p>The light rays from an Area light expand from all points on its surface outwards in all directions.</p>
-<p>A rectangular computer screen is a good example of such a light. </p>
-<p>The resultant lighting and specular effects are somewhat different from those of an 泛光灯 light; specular highlights are more angular and the surface illumination is richer. The closer the light source is to the object, the more apparent this becomes.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003288.jpg"  ><span class="caption">However, an Area light with a small radius that is placed far way in a scene will hardly seem to differ from an 泛光灯 light source.</span></div></p>
-<p><p><div class="hint"><span class="HL_hint"></span>As with Distant and Parallel lights, an Area light cannot be rendered as a visible light source.</div></p>
-<p>Improved Area Light Object</p>
-<p><div class="image_full" style="max-width:800px"><img  src="../pics/005xxx/005436.jpg"  ><span class="caption">Natural light dispersion using an area light source.</span></div></p>
-<p>The corresponding Area shadows behave in accordance with the Area light object .</p>
-<p>As you can see in the images above, the rectangular Area light on the right  (regulated with the use of <span class="command">Falloff Angle</span>) emulates very accurately light cast through a window.</p>
-<p><div class="image_full" style="max-width:720px"><img  src="../pics/005xxx/005437.jpg"  ><span class="caption">Image Copyright Holger Schömann.</span></div></p>
-<p>The above scene was lit using one 泛光灯 light, an Area light with Area shadow, and rendered using Ambient Occlusion (<span class="command">Advanced Render</span>). The Area light is rectangular and was placed in the window opening.</p>
+<p>区域光会从它外表面的所有点向所有方向发射光线。</p>
+<p>譬如矩形的计算机屏幕很适合使用这种光源。</p>
+<p>整体的光照和高光效果在一定程度上与泛光灯有所区别：高光更加尖锐而且表面光照更加丰富。光源距离对象越近，这种效果就越明显。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003288.jpg"  ><span class="caption">但是，置于场景远处的小面积区域光与泛光灯的效果也几乎没有差别。</span></div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>与远光灯和平行光一样，区域光也不能作为可见灯光源被渲染。</div></p>
+<p>提升区域光效果</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/005xxx/005436.jpg"  ><span class="caption">使用区域光源的自然光散布。</span></div></p>
+<p>根据区域光会产生相应的区域阴影。</p>
+<p>如上图所示，右侧的矩形区域光（通常要对<span class="command">衰减角度</span>进行设置）可以精确地模拟出穿过窗户的光线。</p>
+<p><div class="image_full" style="max-width:720px"><img  src="../pics/005xxx/005437.jpg"  ><span class="caption">图像版权 © Holger Schömann。</span></div></p>
+<p>上面的场景是使用一个泛光灯和一个带有区域投影的区域光来照亮的，渲染时使用了环境吸收（<span class="command">高级渲染</span>）。矩形的区域光位于窗户处。</p>
 <p><a id="LIGHT_TYPE_PARALLEL" name="LIGHT_TYPE_PARALLEL"></a><!--INDEX "10","平行光","LIGHT_TYPE_PARALLEL"--><span class="c4d_id_cycle">平行光</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003285.jpg"  ><span class="caption"></span></div></p>
-<p>Parallel lights resemble the <span class="command">Infinite</span> light. Unlike the Distant light source however, the Parallel light has an origin and simulates a large, single axis wall of light. By default, all Parallel lights will radiate light rays along the Z axis. These lights take the appearance of an infinitely large surface, radiating parallel light in a single direction; anything behind the point of origin will not be illuminated.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Like the distant light source, Parallel lights cannot be rendered as a visible light.</div></p>
+<p>平行光与<span class="command">远光灯</span>类似，但是与远距离的光源不同，平行光有一个光源的起点，模拟的是一个巨大的、单方向的光墙。默认情况下，平行光会沿着 Z 轴发射光线，这些光线从一个无限大的表面平行地朝一个方向发出，而位于光源起点背后的东西则不会被照亮。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>与远光灯一样，平行光不能作为可见灯光被渲染。</div></p>
 <p><a id="LIGHT_TYPE_PARSPOT" name="LIGHT_TYPE_PARSPOT"></a><!--INDEX "10","圆形平行聚光灯","LIGHT_TYPE_PARSPOT"--><span class="c4d_id_cycle">圆形平行聚光灯</span></p>
 <p><a id="LIGHT_TYPE_PARSPOTRECT" name="LIGHT_TYPE_PARSPOTRECT"></a><!--INDEX "10","四方平行聚光灯","LIGHT_TYPE_PARSPOTRECT"--><span class="c4d_id_cycle">四方平行聚光灯</span></p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003286.jpg"  ><span class="caption"></span></div></p>
-<p>Parallel spotlights resemble the regular spotlight but do not have light cones to define falloff or distance. Instead, light rays are cast along cylinders and/or bars. The origin is important in defining which objects in a scene will be affected by this light. The radius of the spotlight can also be modified using the adjustment handles.</p>
+<p>平行聚光灯与常规的聚光灯类似，但没有光锥来设置衰减或距离，与之相对的，它的光线是柱形的。光源的位置很重要，它会决定场景中的哪些对象会被这个灯光所影响。聚光灯的半径可以通过调整控制点来设置。</p>
 <p><a id="LIGHT_TYPE_PHOTOMETRIC" name="LIGHT_TYPE_PHOTOMETRIC"></a><!--INDEX "10","IES","LIGHT_TYPE_PHOTOMETRIC"--><span class="c4d_id_cycle">IES</span></p>
-<p>See <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target="">Photometric</a> tab, in which an IES file must be loaded.</p>
+<p>参见<a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target="">光度</a>标签，你需要在这里加载一个 IES 文件。</p>
 <p><a id="LIGHT_SHADOWTYPE" name="LIGHT_SHADOWTYPE"></a> <!--INDEX "8","投影","LIGHT_SHADOWTYPE"--><span class="c4d_id">投影</span></p>
-<p>Defines the type of <a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOWTYPE_VIRTUAL" target="">投影</a> generated by a light source.</p>
-<p>Select None if your light is to cast no 投影. This is a very helpful option in a scene with many lights, allowing you to turn on shadow-casting for the main lights only. Any real world photographer will envy you this option and its possibilities.</p>
+<p>设置光源产生的<a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOWTYPE_VIRTUAL" target="">投影</a>类型。</p>
+<p>如果不想让灯光产生投影，可以选择“无”。这在场景中包含很多灯光时很有用，可以只让主灯光产生投影。所有摄影师都会嫉妒这项功能，而现在它成为了可能。</p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","渲染时间（概述）","hl_1"--><p><span class="HL_2">渲染时间（概述）</span><ul></p>
-<p><li> Soft shadows are calculated far more quickly than hard shadows, hard shadows being much faster to calculate than area shadows.</li>
-<li> Making a light visible in a rendered scene adds a negligible amount to its render time. Using a volumetric light increases render time, sometimes substantially, according to the Sample Distance.</li>
-<li> Noise adds to render time, with hard and soft turbulence requiring more calculations than basic noise, while wavy turbulence roughly doubles rendering time over that of basic noise.</li>
-<li> Using a high sample radius will increase the render time of soft shadows.</li>
-<li> Area lights also add to render time, although not to the same extent as the processor intensive volumetric light.</li></ul><p></p>
+<p><li> 软阴影比硬阴影的计算速度快得多，而硬阴影又比区域阴影快得多。</li>
+<li> 让场景中的一个灯光可见所增加渲染时间可以忽略不计。使用体积光会增加渲染时间，具体取决于采样距离。</li>
+<li> 噪波会增加渲染时间，柔性和刚性湍流比基本噪波所需要的计算量更大，而波状湍流的时间大致时基本噪波的两倍。</li>
+<li> 使用高采样半径会增加软阴影的渲染时间。</li>
+<li> 区域光也会增加渲染时间，但是不会达到需要大量计算的体积光的程度。</li></ul><p></p>
 <p><a id="LIGHT_VLTYPE" name="LIGHT_VLTYPE"></a> <!--INDEX "8","可见灯光","LIGHT_VLTYPE"--><span class="c4d_id">可见灯光</span></p>
-<p>Defines the visibility of the light in a scene. This type of effect can be seen in a smoky room.</p>
-<p>This effect is comparable to fog, which does not diminish light, but rather adds to its brightness.</p>
-<p>With 可见灯光, you can produce stunning effects including headlights, shimmering lights, laser beams and a host of atmospheric effects.</p>
-<p>In nature, a light beam becomes visible when small particles such as dust, insects, smoke or fog are present in the air. For example, if a car headlight shines in fog, you will see its cone of light quite distinctly. In Cinema 4D, all light sources and/or the light cone emitted can be made visible.</p>
+<p>定义场景中灯光的可见性。这种效果可以在充满烟雾的房间里面看到。</p>
+<p>与烟雾效果相比，它不会减弱光线，而会增加它的亮度。</p>
+<p>使用可见灯光你可以创造出震撼的效果，包括车头灯、闪光、镭射光以及一系列的大气效果。</p>
+<p>自然环境下，当空气中存在如灰尘、昆虫、烟雾时，光线会变得可见。例如，如果在烟雾中打开车头灯，你就能在远处看见它的光锥。在 C4D 中，所有光源和它产生的光锥都可以设置为可见。</p>
 <p><a id="LIGHT_VLTYPE_VISIBLE" name="LIGHT_VLTYPE_VISIBLE"></a><!--INDEX "10","可见","LIGHT_VLTYPE_VISIBLE"--><span class="c4d_id_cycle">可见</span></p>
-<p>If 可见灯光 is set to Visible on the General page, the light source will produce 可见灯光 that passes through all objects. For example, a 可见灯光 could be placed in the center of a planet’s sphere to simulate an atmosphere.</p>
-<p>The Visible option is of special importance to the <a href="5455.html" target="">particle system</a>. Visible lights (with No Light Radiation enabled) lend themselves to a huge range of effects, such as nebula clouds, smoke, comet tails, fire and flames.</p>
+<p>如果在常规页面将可见灯光设置为可见，那么光源会产生穿过所有物体的可见灯光。例如可以在一个行星球体的中心放置一个可见灯光来模拟大气。</p>
+<p>可见选项对<a href="5455.html" target="">粒子系统</a>尤为重要。可见灯光（with No Light Radiation enabled）在很多效果中都能发挥作用，例如星云、烟雾、彗尾、火焰等。</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003338.jpg"  ><span class="caption"></span></div></p>
 <p><a id="LIGHT_VLTYPE_VOLUMETRIC" name="LIGHT_VLTYPE_VOLUMETRIC"></a><!--INDEX "10","正向测定体积","LIGHT_VLTYPE_VOLUMETRIC"--><span class="c4d_id_cycle">正向测定体积</span></p>
-<p>A 可见灯光 does not affect objects that lie in its cone of light — the light rays penetrate objects unhindered, casting no shadow in the visible light’s beam.</p>
-<p>In order for a shadow to be cast by a 可见灯光, volumetric lighting must be used.</p>
-<p>The parameters for the visible Volumetric light are taken from the light source’s shadow map values: Resolution X, Resolution Y, Sample Radius and Parallel Width.</p>
+<p>可见灯光不会影响位于其光锥中的对象，光线可以不受阻碍地穿过物体，在可见灯光的光线内不会投下阴影。</p>
+<p>为了让可见灯光投下阴影，必须使用体积光。</p>
+<p>可见体积光的参数来自于光源的阴影贴图参数：水平精度、垂直精度、采样半径和平行光宽度。</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003339.jpg"  ><span class="caption"></span></div></p>
 <p><a id="LIGHT_VLTYPE_INVERSEVOLUMETRIC" name="LIGHT_VLTYPE_INVERSEVOLUMETRIC"></a><!--INDEX "10","反向测定体积","LIGHT_VLTYPE_INVERSEVOLUMETRIC"--><span class="c4d_id_cycle">反向测定体积</span></p>
-<p>Enabling the 反向测定体积 function has the interesting effect of inverting your volumetric light — that is, the light is visible where the light cone would normally be in shadow.</p>
-<p>Imagine a company logo, behind which you have placed an 反向测定体积 light source. This inverts the light’s volumetric effect, giving the impression that the light is radiating from the logo itself.</p>
+<p>选择反向测定体积会产生一种有趣的效果——体积光会反转，即正常情况下会出现阴影的地方会变成可见光线。</p>
+<p>想象一个置于反向测定体积光源后面的公司 Logo，这时灯光的体积效果会反转，产生一种 Logo 发光的效果。</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003340.jpg"  ><span class="caption"></span></div></p>
 <p><a id="LIGHT_NOLIGHTRADIATION" name="LIGHT_NOLIGHTRADIATION"></a> <!--INDEX "8","没有光照","LIGHT_NOLIGHTRADIATION"--><span class="c4d_id">没有光照</span></p>
-<p>If you need to see just the 可见灯光 and/or its lens effects without the light source actually illuminating objects, enable this option. Should you need your light sources for special effects (such as the exhaust gas of a jet engine) enable this box for faster rendering.</p>
+<p>如果你只想看见可见灯光和/或它的镜头光晕效果，而不需要灯光实际照亮对象，可以使用这个选项。如果你需要为特效使用灯光（例如喷气机后面的轨迹云），可以启用这个选项来加快渲染速度。</p>
 <p><a id="LIGHT_SHOWILLUMINATION" name="LIGHT_SHOWILLUMINATION"></a> <!--INDEX "8","显示光照","LIGHT_SHOWILLUMINATION"--><span class="c4d_id">显示光照</span></p>
 <p>If this option is enabled, a wireframe approximation of the light’s illumination is shown in the viewports. This range can be adjusted by dragging the handles of the wireframe representation.</p>
 <p><a id="LIGHT_DETAILS_AMBIENT" name="LIGHT_DETAILS_AMBIENT"></a> <!--INDEX "8","环境光照","LIGHT_DETAILS_AMBIENT"--><span class="c4d_id">环境光照</span></p>
