@@ -108,38 +108,38 @@
 <p><a id="LIGHT_NOLIGHTRADIATION" name="LIGHT_NOLIGHTRADIATION"></a> <!--INDEX "8","没有光照","LIGHT_NOLIGHTRADIATION"--><span class="c4d_id">没有光照</span></p>
 <p>如果你只想看见可见灯光和/或它的镜头光晕效果，而不需要灯光实际照亮对象，可以使用这个选项。如果你需要为特效使用灯光（例如喷气机后面的轨迹云），可以启用这个选项来加快渲染速度。</p>
 <p><a id="LIGHT_SHOWILLUMINATION" name="LIGHT_SHOWILLUMINATION"></a> <!--INDEX "8","显示光照","LIGHT_SHOWILLUMINATION"--><span class="c4d_id">显示光照</span></p>
-<p>If this option is enabled, a wireframe approximation of the light’s illumination is shown in the viewports. This range can be adjusted by dragging the handles of the wireframe representation.</p>
+<p>如果启用这个选项，会在编辑器中显示一个近似灯光照明的线框。可以通过拖动线框上的控制点来调整灯光范围。</p>
 <p><a id="LIGHT_DETAILS_AMBIENT" name="LIGHT_DETAILS_AMBIENT"></a> <!--INDEX "8","环境光照","LIGHT_DETAILS_AMBIENT"--><span class="c4d_id">环境光照</span></p>
-<p>Normally the brightness of a surface is determined by the angle at which a ray of light hits it. The greater the angle between the ray and a tangent to the surface, the more the surface will be lit by the light. When 环境光照 is switched on, however, this physical law is waived. Here the angle does not matter. All surfaces are lit with the same intensity. This results in a much flatter look. Only the material color is considered in the lighting calculations.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003275.jpg"  ><span class="caption">环境光照.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003276.jpg"  ><span class="caption">环境光照 with Falloff enabled.</span></div></td></p>
+<p>通常一个物体表面的亮度是由光线照射的角度来决定的。光线和表面切线之间的夹角越大，表面就会被照得越亮。当开启环境光照时，就不遵循这条物理法则了。这时光照角度时无关紧要的，所有的表面受到的光照强度是一样的。这样做的结果是会失去立体感。在光照计算中只有材质颜色会参与运算。</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003275.jpg"  ><span class="caption">环境光照。</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003276.jpg"  ><span class="caption">启用衰减的环境光照。</span></div></td></p>
 <p>  </TR></TABLE>
-<p>With both 环境光照 and Falloff enabled for the light source, you can lighten specific regions of your scene in a similar way to how you darken them with Negative Lighting, explained earlier.</p>
+<p>在灯光设置中同时启用环境光照和衰减，你可以照亮场景中的特定区域，与前面提到的用负灯光来让它们变暗的方法类似。</p>
 <p><a id="LIGHT_SHOWVISIBLELIGHT" name="LIGHT_SHOWVISIBLELIGHT"></a> <!--INDEX "8","显示可见灯光","LIGHT_SHOWVISIBLELIGHT"--><span class="c4d_id">显示可见灯光</span></p>
-<p>Enable this option to show an approximation of the visible light in the viewports, not to be confused with illumination. Again, this range can be interactively adjusted via its handles.</p>
+<p>启用这个选项会在编辑器中显示可见灯光的近似线框，不要与显示光照的线框搞混了。同样的，可以通过拖动线框上的控制点来调整它的范围。</p>
 <p><a id="LIGHT_DETAILS_DIFFUSE" name="LIGHT_DETAILS_DIFFUSE"></a> <!--INDEX "8","漫射","LIGHT_DETAILS_DIFFUSE"--><span class="c4d_id">漫射</span></p>
-<p>When <span class="command">漫射</span> is enabled, the color properties of an object are ignored by the light source; only specular surfacing is produced by the light. This can be useful for objects such as a golden signature, where you would like specular glints, but no lightening of the color properties.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003277.jpg"  ><span class="caption">漫射 disabled.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003278.jpg"  ><span class="caption">漫射 enabled.</span></div></td></p>
+<p>当启用<span class="command">漫射</span>时，灯光会忽略物体的颜色属性，而只会产生表面高光。这在像金字招牌这样的物体上会很有用，这时你需要的是闪亮的高光，而不需要照亮它本身的颜色。</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003277.jpg"  ><span class="caption">不启用漫射。</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003278.jpg"  ><span class="caption">启用漫射。</span></div></td></p>
 <p>  </TR></TABLE>
 <p><a id="LIGHT_SHOWCLIPPING" name="LIGHT_SHOWCLIPPING"></a> <!--INDEX "8","显示修剪","LIGHT_SHOWCLIPPING"--><span class="c4d_id">显示修剪</span></p>
-<p>Enabling this option shows an approximation of the selected light’s clipping range (the restriction of the light range) in the viewports and can be interactively adjusted with the wireframe’s handles.</p>
+<p>启用这个选项会在编辑器中近似地显示所选灯光的修剪范围（光照范围的限制），并且可以使用线框的把手交互式地进行调整。</p>
 <p><a id="LIGHT_DETAILS_SPECULAR" name="LIGHT_DETAILS_SPECULAR"></a> <!--INDEX "8","高光","LIGHT_DETAILS_SPECULAR"--><span class="c4d_id">高光</span></p>
-<p>When this option is enabled, the light source produces no specular highlights on your scene’s objects. Imagine you have a bottle on a table with two or more light sources in the scene. The bottle may show too many specular highlights, with the glass material looking too busy. To avoid this, enable No Specular for some of the light sources.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003279.jpg"  ><span class="caption">This bottle is lit by two light sources, causing more highlights to develop than you would normally want.</span></div></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003280.jpg"  ><span class="caption">Specular option is enabled for one light source only. Now the highlights are fine.</span></div></p>
+<p>当关闭这个选项时，灯光不会在物体上产生高光。假设你的桌子上有一个瓶子，同时有两个或多个灯光，那么瓶子表面可能会产生太多的高光，这会让玻璃材质看上去很杂乱。要避免这种情况，可以让部分灯管关闭高光选项。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003279.jpg"  ><span class="caption">这个瓶子是由两个灯光照亮的，产生了过多不必要的高光。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003280.jpg"  ><span class="caption">只有一个灯光启用了高光选项，这样瓶子上的高光看起来就好多了。</span></div></p>
 <p><a id="LIGHT_DETAILS_SEPARATEPASS" name="LIGHT_DETAILS_SEPARATEPASS"></a> <!--INDEX "8","分离通道","LIGHT_DETAILS_SEPARATEPASS"--><span class="c4d_id">分离通道</span></p>
-<p>If you enable this option, separate diffuse, specular and shadow layers will be created for the light source when you render (provided you have set the appropriate multi-pass parameters).</p>
+<p>如果启用这个选项，在渲染时会为灯光单独创建漫射、高光和投影层（前提是在多通道中设置了正确的参数）。</p>
 <p><RELEASE_110 Light Objects can be excluded from GI.></p>
 <p><a id="LIGHT_DETAILS_GI" name="LIGHT_DETAILS_GI"></a> <!--INDEX "8","GI 照明","LIGHT_DETAILS_GI"--><span class="c4d_id">GI 照明</span></p>
-<p><div class="image_full" style="max-width:829px"><img  src="../pics/02xxxx/020005.jpg"  ><span class="caption">Left: <span class="command">GI 照明</span> disabled. Right: Enabled. Without GI 照明 from both light sources the scene will be calculated with absolutely no GI.</span></div></p>
-<p>Use this setting to define if objects illuminated by a given light source should "pass on" their light with regard to GI. If this option is disabled this light source’s illumination will affect objects (they will be illuminated) but these objects will not reflect light onto any other object(s).</p>
+<p><div class="image_full" style="max-width:829px"><img  src="../pics/02xxxx/020005.jpg"  ><span class="caption">图左：关闭<span class="command">GI 照明</span>；图右：启用。两个光源都没有启用 GI 照明的情况下，则场景的计算不会使用全局光照。</span></div></p>
+<p>使用这项设置，可以设置被光源照射的物体是否按照全局光照“传递”它们的光线。如果关闭这个选项，灯光会影响物体（它们会被照亮），而物体不会将光线反射到其他物体上。</p>
 <p></RELEASE_110></p>
 <p><RELEASE_140 Light source options After Effects Export.></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
-	After Effects: Note that this option is designed for use in conjunction with <a href="50775.html" target="">exchange</a> described in point 2 above.</div></p>
+	After Effects：注意这个选项需要配合<a href="50775.html" target="">交换</a>使用。</div></p>
 <p><a id="LIGHT_AFX" name="LIGHT_AFX"></a> <!--INDEX "8","导出到合成","LIGHT_AFX"--><span class="c4d_id">导出到合成</span></p>
-<p>If enabled, the light source will be exported to a compositing application (see also <a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#comp" target="">here</a>).</p>
+<p>若启用，则光源会被导出到合成软件（参见<a href="DRENDERSETTINGS-RDATA_GROUP_SAVE.html#comp" target="">这里</a>）。</p>
 <p></RELEASE_140></p>
 <p>
 
