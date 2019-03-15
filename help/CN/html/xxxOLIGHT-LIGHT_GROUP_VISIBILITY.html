@@ -64,24 +64,25 @@
 	采样属性：40；渲染时间：35秒；可以清晰地看到可见灯光的光线丢失了连贯的边缘。<br>
 	采样属性：80；渲染时间：23秒；废片。</span></div></p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","为什么体积光在渲染时会消耗这么多时间？","hl_2"--><p><span class="HL_1">为什么体积光在渲染时会消耗这么多时间？</span></p>
-<p>当光线碰到一个光锥时，它不是唯一需要计算强度的光线。对光线的每个部分，CINEMA 4D 都需要查找光锥内可能会产生投影的对象。因此对光线的每个部分都需要从光源发出光线进行额外的光线跟踪计算。</p>
+<p>当光线碰到一个光锥时，它不是唯一需要计算强度的光线。对光线的每个部分，CINEMA 4D 都需要查找光锥内可能会产生投影的对象。因此对每个部分都需要从光源发出光线进行额外的光线跟踪计算。</p>
 <p>因为在不可能将烟雾中的分段收缩到一定长度以下，因此需要使用一个近似值；光锥的长度会被划分为一些相等的部分。</p>
-<p>假设光线跟踪的光线碰到了光锥，光锥起点和终点的距离是<span class="command_value">1,000</span>单位，采样属性设为<span class="command_value">50</span>单位，这时强度数值和阴影线需要计算20次（1000/50）。采样属性越小，计算时间就越长。</p>
+<p>假设光线跟踪的光线触碰到了光锥，其起点和终点的距离是<span class="command_value">1,000</span>单位，采样属性设为<span class="command_value">50</span>单位，这时强度数值和阴影线需要计算20次（1000/50）。采样属性越小，计算时间就越长。</p>
 <p>即使只划分了五个部分（那么在上面的示例中采样属性为<span class="command_value">200</span>），比起没有体积光的情况，每个光线跟踪光线和每次与光锥接触的计算也需要增加五倍。使用越来越精细的细分，所需要的处理时间会很快变成天文数字。</p>
-<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","为什么不使用一个合适的采样数量？","hl_3"--><p><span class="HL_1">为什么不使用一个合适的采样数量？</span></p>
-<p>Well, if the raytracer beam hits the light cone at its beginning, the distance between the entry and exit points might be, for example, <span class="command_value">100</span> units. But if the beam hits the cone further from the light source, this distance might grow to <span class="command_value">5,000</span> units or more.</p>
-<p>So if you used a fixed number of samples, at the narrow end of the cone a lot of unnecessary calculations would be made and later too few (which would result in artifacts).</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Volumetric lighting needs a lot of calculation time, therefore render such light sources only when it is absolutely necessary.</div>.</p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","为什么不使用一个合适的采样数量？","hl_3"--><p><span class="HL_1">为什么不使用固定的采样数量？</span></p>
+<p>如果光线跟踪触碰到的是光锥的起始点，它的入点和出点之间的距离可能是<span class="command_value">100</span>单位。但是如果触碰到的是光锥的远端，那么距离可能会增大到<span class="command_value">5,000</span>单位以上。</p>
+<p>因此如果使用了固定的采样值，光锥尖端处会进行大量不必要的运算，而在光锥远端又会太少（这会产生不自然感）。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>体积光需要大量的计算时间，因此只有在确实需要的时候再渲染它。</div></p>
 <p><a id="LIGHT_VISIBILITY_BRIGHTNESS" name="LIGHT_VISIBILITY_BRIGHTNESS"></a> <!--INDEX "8","亮度","LIGHT_VISIBILITY_BRIGHTNESS"--><span class="c4d_id">亮度</span> <span class="range">[0..10000%]</span></p>
-<p>This value is the brightness of the visible light source.</p>
+<p>这个数值表示可见光的亮度。</p>
 <p><a id="LIGHT_VISIBILITY_DUST" name="LIGHT_VISIBILITY_DUST"></a> <!--INDEX "8","尘埃","LIGHT_VISIBILITY_DUST"--><span class="c4d_id">尘埃</span> <span class="range">[0..100%]</span></p>
-<p>Determines the darkness of the light cone. With a 尘埃 value of more than <span class="command_value">0%</span>, 亮度 is subtracted instead of added.</p>
-<p>To ensure you see the full effect of this, lower the light’s brightness accordingly.</p>
-<p>The difference between a normal bright light and a dust-assigned light can be seen clearly in the following illustration. To the left is a bright, visible light. To the right a dark, dusty, somewhat sooty light.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003350.jpg"  ><span class="caption">To create a dark, dusty light, on the <span class="command">可见</span> tab, set <span class="command">亮度</span> to a low value.</span></div></p>
-<p>In principle, you can use dust in conjunction with <a href="5455.html" target="">particles</a> to create realistic fire and smoke.</p>
+<p>它会决定光锥的暗度。如果尘埃数值大于<span class="command_value">0%</span>，亮度会减小，而不是增加。</p>
+<p>如果要看到尘埃的全部效果，需要相应降低灯光亮度。</p>
+<p>下图中能清楚地看到普通灯光和设置了灰尘地灯光之间地差别。左边是一个明亮地可见灯光，右边则是一个灰暗的像煤灰一样的灯光。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003350.jpg"  ><span class="caption">要创建一个阴暗的灰尘灯光，需要调低<span class="command">可见</span>标签页的<span class="command">亮度</span>值。</span></div></p>
+<p>原则上尘埃可以配合<a href="5455.html" target="">粒子</a>一起使用来创建真实的火焰和烟雾效果。</p>
 <p><a id="LIGHT_VISIBILITY_DITHERING" name="LIGHT_VISIBILITY_DITHERING"></a> <!--INDEX "8","抖动","LIGHT_VISIBILITY_DITHERING"--><span class="c4d_id">抖动</span> <span class="range">[0..100%]</span></p>
-<p>This produces irregularities in the visible light, which can help to prevent unwanted banding or contouring in the visible light source.</p>
+<p>这会产生不规则的可见光，它可以避免
+	This produces irregularities in the visible light, which can help to prevent unwanted banding or contouring in the visible light source.</p>
 <p><p><div class="hint"><span class="HL_hint"></span>With certain light source combinations, such as visible lights that overlap, you may find that the 24-bit picture depth of your output device is insufficient and it may display color gradients in large steps. This display problem is known as <span class="command">contouring</span>. To avoid this problem, use the 抖动 option to give the visible light irregularity and help to smooth the color graduations.</div></p>
 <p><a id="LIGHT_VISIBILITY_CUSTOMCOLORS" name="LIGHT_VISIBILITY_CUSTOMCOLORS"></a> <!--INDEX "8","使用渐变","LIGHT_VISIBILITY_CUSTOMCOLORS"--><span class="c4d_id">使用渐变</span></p>
 <p><div class="image_full" style="max-width:853px"><img  src="../pics/003xxx/003351.jpg"  ><span class="caption">A visible light’s gradient. Left: Omni light; right: Spot light.</span></div></p>
