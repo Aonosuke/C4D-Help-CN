@@ -81,27 +81,26 @@
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003350.jpg"  ><span class="caption">要创建一个阴暗的灰尘灯光，需要调低<span class="command">可见</span>标签页的<span class="command">亮度</span>值。</span></div></p>
 <p>原则上尘埃可以配合<a href="5455.html" target="">粒子</a>一起使用来创建真实的火焰和烟雾效果。</p>
 <p><a id="LIGHT_VISIBILITY_DITHERING" name="LIGHT_VISIBILITY_DITHERING"></a> <!--INDEX "8","抖动","LIGHT_VISIBILITY_DITHERING"--><span class="c4d_id">抖动</span> <span class="range">[0..100%]</span></p>
-<p>这会产生不规则的可见光，它可以避免
-	This produces irregularities in the visible light, which can help to prevent unwanted banding or contouring in the visible light source.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>With certain light source combinations, such as visible lights that overlap, you may find that the 24-bit picture depth of your output device is insufficient and it may display color gradients in large steps. This display problem is known as <span class="command">contouring</span>. To avoid this problem, use the 抖动 option to give the visible light irregularity and help to smooth the color graduations.</div></p>
+<p>这会产生不规则的可见灯光，可以用来防止出现的带状或等高线外观的可见灯光。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>对于特定的灯光组合，例如相互叠加的可见灯光，你可能会发现输出的24位深度的图片是不够的，它的颜色渐变会出现较大的步幅。这种显示问题被称为<span class="command">等高线</span>。要避免这种情况，可以使用抖动选项给可见灯管增加不规则性，这样就会让颜色渐变更加平滑（译注：类似GIF的仿色功能）。</div></p>
 <p><a id="LIGHT_VISIBILITY_CUSTOMCOLORS" name="LIGHT_VISIBILITY_CUSTOMCOLORS"></a> <!--INDEX "8","使用渐变","LIGHT_VISIBILITY_CUSTOMCOLORS"--><span class="c4d_id">使用渐变</span></p>
-<p><div class="image_full" style="max-width:853px"><img  src="../pics/003xxx/003351.jpg"  ><span class="caption">A visible light’s gradient. Left: Omni light; right: Spot light.</span></div></p>
+<p><div class="image_full" style="max-width:853px"><img  src="../pics/003xxx/003351.jpg"  ><span class="caption">一个渐变的可见灯光。左图：泛光灯；右图：聚光灯。</span></div></p>
 <p><a id="LIGHT_VISIBILITY_GRADIENT" name="LIGHT_VISIBILITY_GRADIENT"></a> <!--INDEX "8","颜色","LIGHT_VISIBILITY_GRADIENT"--><span class="c4d_id">颜色</span></p>
-<p>使用渐变 allows for much more flexible creation of color- and brightness gradients.</p>
-<p><span class="command">使用衰减</span>, also in the <span class="command">可见</span> tab, must be activated.</p>
+<p>使用渐变可以创造更多变得颜色和亮度渐变效果。</p>
+<p>还需要在<span class="command">可见</span>标签页中启用<span class="command">使用衰减</span>。</p>
 <p><p><div class="hint"><span class="HL_hint"></span>注意：</p>
-<p><span class="command">Intensity</span> (<span class="command">General</span> tab) will now also affect the brightness of the visible light!</div></p>
+<p><span class="command">常规</span>标签页的<span class="command">强度</span>也会影响可见灯光的亮度！</div></p>
 <p><p><div class="hint"><span class="HL_hint"></span>注意：</p>
-<p>If <span class="command">使用渐变</span> is not active, the gradient defined in the <span class="command">Details</span> tab may not be applied.</div></p>
-<p><a id="LIGHT_VISIBILITY_ADDITIVE" name="LIGHT_VISIBILITY_ADDITIVE"></a> <!--INDEX "8","Additive","LIGHT_VISIBILITY_ADDITIVE"--><span class="c4d_id">Additive</span></p>
-<p>Enable this option if you want to mix the light beam additively with other light sources.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003352.jpg"  ><span class="caption">Additive enabled.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003353.jpg"  ><span class="caption">Additive disabled.</span></div></td></p>
+<p>如果不启用<span class="command">使用渐变</span>选项，那么在<span class="command">细节</span>标签页中设置的渐变是无效的。</div></p>
+<p><a id="LIGHT_VISIBILITY_ADDITIVE" name="LIGHT_VISIBILITY_ADDITIVE"></a> <!--INDEX "8","附加","LIGHT_VISIBILITY_ADDITIVE"--><span class="c4d_id">附加</span></p>
+<p>如果你想要将可见灯光与其他光源进行混合，可以启用这个选项。</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003352.jpg"  ><span class="caption">启用附加。</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003353.jpg"  ><span class="caption">未启用附加。</span></div></td></p>
 <p>  </TR></TABLE>
 <p><a id="LIGHT_VISIBILITY_ADAPTBRIGHTNESS" name="LIGHT_VISIBILITY_ADAPTBRIGHTNESS"></a> <!--INDEX "8","适合亮度","LIGHT_VISIBILITY_ADAPTBRIGHTNESS"--><span class="c4d_id">适合亮度</span></p>
-<p>This option prevents a light beam from being over-exposed. The brightness is reduced until the over-exposed effect disappears.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003354.jpg"  ><span class="caption">适合亮度 enabled.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003355.jpg"  ><span class="caption">适合亮度 disabled.</span></div></td></p>
+<p>这个选项可以防止光线过曝。亮度会降低到过曝效果消失。</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003354.jpg"  ><span class="caption">适合亮度。</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003355.jpg"  ><span class="caption">未启用适合亮度。</span></div></td></p>
 <p>  </TR></TABLE>
 <p>
 

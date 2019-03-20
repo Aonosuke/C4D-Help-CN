@@ -79,3 +79,4 @@ Omni                            泛光灯
 Square Spot
 Infinite                        远光灯
 Area                            区域光
+Contouring                      等高线（渲染时渐变出现阶梯状断层）
