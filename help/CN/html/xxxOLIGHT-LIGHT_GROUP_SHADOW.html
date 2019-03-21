@@ -59,40 +59,40 @@
 <p>如果启用这个选项，在细节标签页的修剪设置会应用到投影和照明中。</p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","软阴影","hl_1"--><p><span class="HL_1">软阴影</span></p>
 <p><a id="LIGHT_SHADOW_MAPSIZE" name="LIGHT_SHADOW_MAPSIZE"></a> <!--INDEX "8","投影贴图","LIGHT_SHADOW_MAPSIZE"--><span class="c4d_id">投影贴图</span></p>
-<p>The 投影贴图 settings are available only when soft shadow is selected. When using soft shadows, Cinema 4D initially sees the scene from the point of view of the light source and calculates the complete scene from this view. All objects seen in this view are interpreted as shadows for the scene. This results in Shadow Maps. 投影贴图 assigns memory for each shadow map. The smaller the memory assignment, the more pixelated the shadow will appear. This can result in a shadow with a jagged, staircase-like appearance at its edges. The more memory used for the shadow map, the smoother the shadow and its edges, but the higher the memory usage.</p>
-<p>By default, a standard size of <span class="command_value">250x250</span> is used. Shadow map size can be increased substantially if needed. In order to keep your shadow sharp and smoothly defined, your shadow map will need to increase in size. If you simply need to keep your shadow edge soft, you can increase the 采样半径. Again, this will increase render time.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>Rather than use a map with a doubled 投影贴图 size, you can achieve an equivalent soft edge by doubling the 采样半径.</div></p>
-<p>Sometimes when you have a small shadow map created by a very distant light source, spherical objects may cast rectangular shadows! You can remedy this by viewing the scene through your light source. A light source, like any other scene object, can be defined as a camera view. To do this, ensure the light source is selected and from the viewport, choose <span class="command">Cameras / Link Active Object</span>.</p>
-<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003328.jpg"  ><span class="caption">250x250 map size.</span></div></td></p>
-<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003329.jpg"  ><span class="caption">750x750 map size.</span></div></td></p>
+<p>只有选择软阴影的时候才可以使用投影贴图设置。在使用软阴影的时候，CINEMA 4D 会先从光源的起点处查看场景，然后从这个角度计算整个场景。从这个视点能看到的所有对象会被转换为投影。这个计算结果就是投影贴图。软件会给每个投影贴图分配内存。分配的内存越小，投影的像素颗粒感就越严重，其结果是产生锯齿状的边缘。投影贴图用的内存越多，投影及其边缘就越平滑。</p>
+<p>默认情况下会使用标准的<span class="command_value">250×250</span>分辨率。阴影贴图分辨率在需要的情况下可以设置得很大。为了让投影更加锐利和平滑，你应该提高其分辨率。如果你只是想让投影边缘保持柔和，那么可以增加采样半径，但这会增加渲染时间。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>除了使用两倍分辨率的投影贴图，你还可以将采样半径增加一倍，能得到同样的软边缘。</div></p>
+<p>有时候，场景中有投影是由一个很远的光源产生的，球体可能会投下矩形的阴影！从光源处查看场景能纠正这种问题。像场景中的其他对象一样，灯光也可以设置为摄像机视角。你需要在编辑器中选中灯光，然后选择<span class="command">摄像机 | 设置活动对象为摄像机</span>。</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003328.jpg"  ><span class="caption">250x250 贴图分辨率。</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003329.jpg"  ><span class="caption">750x750 贴图分辨率。</span></div></td></p>
 <p>  </TR></TABLE>
 <p><a id="LIGHT_SHADOW_MAPSIZEX" name="LIGHT_SHADOW_MAPSIZEX"></a> <!--INDEX "8","水平精度","LIGHT_SHADOW_MAPSIZEX"--><span class="c4d_id">水平精度</span> <span class="range">[40..10000]</span></p>
-<p>If the preset value of the map size does not give the desired result, adjust the <span class="command">Resolution X</span> manually. In general, set Resolution X (width) to the same value as Resolution Y (height).</p>
+<p>如果预设的贴图精度效果不理想，可以调整<span class="command">水平精度</span>。通常水平精度（宽度）与垂直精度（高度）保持一致。</p>
 <p><a id="LIGHT_SHADOW_MAPSIZEY" name="LIGHT_SHADOW_MAPSIZEY"></a> <!--INDEX "8","垂直精度","LIGHT_SHADOW_MAPSIZEY"--><span class="c4d_id">垂直精度</span> <span class="range">[40..10000]</span></p>
-<p>With a spotlight, you can provide a non-square shadow map by entering a value for Resolution Y.</p>
+<p>对于聚光灯，你可以提高垂直精度来避免出现方形投影。</p>
 <p><a id="LIGHT_SHADOW_MEMUSAGE" name="LIGHT_SHADOW_MEMUSAGE"></a> <!--INDEX "8","内存需求：","LIGHT_SHADOW_MEMUSAGE"--><span class="c4d_id">内存需求：</span></p>
-<p>Cinema 4D automatically calculates the maximum memory use for the shadow map, which is shown here. This helps you to estimate how much memory will be needed for the shadow maps.</p>
+<p>CINEMA 4D 会自动计算阴影贴图使用的最大内存，并显示在这里。这有助于估计投影贴图需要多少内存。</p>
 <p><a id="LIGHT_SHADOW_SAMPLERADIUS" name="LIGHT_SHADOW_SAMPLERADIUS"></a> <!--INDEX "8","采样半径","LIGHT_SHADOW_SAMPLERADIUS"--><span class="c4d_id">采样半径</span> <span class="range">[1..20]</span></p>
-<p>Determines the shadow map accuracy. The higher the value, the more accurate the shadow is, at the expense of a longer render time. If you must use a small shadow map, selecting a higher value will improve the shadow quality. So you can trade off render time against memory usage.</p>
+<p>这个参数决定了投影的准确性。数值越高，投影就越准确，但是需要更长地渲染时间。如果你必须使用较小的投影贴图，那么选择较高的采样半径可以提升投影质量。因此你可以用渲染时间换取内存消耗。</p>
 <p><a id="RELEASE_180_1" name="RELEASE_180_1"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p><a id="LIGHT_SHADOW_SAMPLEBOOST" name="LIGHT_SHADOW_SAMPLEBOOST"></a> <!--INDEX "8","采样半径增强","LIGHT_SHADOW_SAMPLEBOOST"--><span class="c4d_id">采样半径增强</span></p>
-<p>With animated lights it can happen that a cast shadow flickers and doesn’t move correctly. This is due to the fixed resolution of the shadow maps. The resolution has to b reduced to ensure that the shadows move correctly. Of course this will result in correspondingly sharper edges as the resolution increases, which in turn has to be compensated for with a larger <span class="command">采样半径</span> value. This will also increase render times.</p>
+<p>对于运动的灯光，可能会出现投影闪烁而且不能正确地随灯光移动的情况。这是由于固定的阴影贴图分辨率所导致的。分辨率必须降低来确保投影正确运动。当然，分辨率下降会导致边缘模糊，因此需要使用较大的<span class="command">采样半径</span>进行补偿，而这也会增加渲染时间。</p>
 <p><div class="image_full" style="max-width:2400px"><img  src="../pics/04xxxx/040870.jpg"  ><span class="caption"></span></div></p>
-<p>The <span class="command">Boost 采样半径</span> selection menu has been added to prevent the <span class="command">采样半径</span> value from having to be set too high. This enables a function that increases the 采样半径 and randomly disperses the samples. This replaces the stepping effect with noise, which is less noticable in animations.</p>
+<p>现在增加了<span class="command">增强采样半径</span>菜单来避免需要设置过高的<span class="command">采样半径</span>。这项功能会增加采样半径并随机分布采样点，它会用动画中不太显眼的噪点来替代台阶状的阴影效果。</p>
 <p></p></div></p>
 <p><a id="LIGHT_SHADOW_ABSOLUTE" name="LIGHT_SHADOW_ABSOLUTE"></a> <!--INDEX "8","绝对偏移","LIGHT_SHADOW_ABSOLUTE"--><span class="c4d_id">绝对偏移</span></p>
-<p>In general, leave this option enabled. If you disable the option, the distance of the shadow from the object depends also on the distance of the light source from the object — called relative bias. With relative bias, the further the light source is from the object, the further the shadow will be from the object. This behavior originated in Cinema 4D R5 and is present for compatibility reasons when loading old scenes.</p>
+<p>一般来说，可以保持开启这个选项。如果不启用，投影与对象距离还取决于光源距离对象的距离——这被称为相对偏移。如果使用相对偏移，光源距离对象越远，产生的投影距离对象也越远。这种性质是从 CINEMA 4D R5版本开始的，而现在只是为了兼容旧场景而得以保留。</p>
 <p><a href="OLIGHT-LIGHT_GROUP_SHADOW.html#LIGHT_SHADOW_RELATIVEBIAS" target="_self"><span class="text_id">偏移(相对)</span></a></p>
 <p><a id="LIGHT_SHADOW_ABSOLUTEBIAS" name="LIGHT_SHADOW_ABSOLUTEBIAS"></a> <!--INDEX "8","偏移(绝对)","LIGHT_SHADOW_ABSOLUTEBIAS"--><span class="c4d_id">偏移(绝对)</span> <span class="range">[0..+∞m]</span></p>
-<p>Occasionally, you may need to adjust the shadow’s position using the Bias value. A value of 1 m will suffice for most scenes. However, sometimes an adjustment may be necessary.</p>
-<p>When zooming the camera on extremely small objects, the distance between object and shadow will become apparent (see Figure 1). Correct the error by lowering the value (Figure 2). You may also at times have too small a Bias value — especially with very large objects — which can result in the object casting the shadow onto itself (Figure 3). In such cases, increase the Bias value.</p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003330.jpg"  ><span class="caption">Figure 1.</span></div></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003331.jpg"  ><span class="caption">Figure 2.</span></div></p>
-<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003332.jpg"  ><span class="caption">Figure 3.</span></div></p>
-<p><p><div class="hint"><span class="HL_hint"></span>The smaller an object is and the more you zoom in with the camera, the smaller the Bias value must be set. This ensures no gap between object and shadow is visible. If the object is excessively large and unwanted self-shadowing occurs, increase the Bias value. Generally speaking, a value of <span class="command_value">1 m</span> is usually adequate for objects up to a size of <span class="command_value">10,000 m</span> wide.</div></p>
+<p>有时候你可能需要使用这里的偏移值调整投影的位置。对于大多数场景，1m 就足够了，不过有时候还是需要调整。</p>
+<p>当摄像机放大非常小的物体时，物体何投影之间的距离会变得很明显（如图1）。通过降低这个参数可以修正这问题（图2）。有时可能偏移值太小——尤其是物体很大的时候——这会让投影出现在物体自身上面（图3）。如果出现这种情况，需要增大偏移值。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003330.jpg"  ><span class="caption">图1。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003331.jpg"  ><span class="caption">图2。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003332.jpg"  ><span class="caption">图3。</span></div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>物体越小，摄像机放大越大，需要设置的偏移量越小，这样能保证物体和投影之间可见的间隙。如果对象很大而不想出现投影到自身的情况，则需要增加偏移量。通常对于宽度低于<span class="command_value">10,000 m</span>的物体来说，<span class="command_value">1m</span>的偏移量是足够的。</div></p>
 <p><a id="LIGHT_SHADOW_PARALLELWIDTH" name="LIGHT_SHADOW_PARALLELWIDTH"></a> <!--INDEX "8","平行光宽度","LIGHT_SHADOW_PARALLELWIDTH"--><span class="c4d_id">平行光宽度</span> <span class="range">[-∞..+∞m]</span></p>
-<p>This setting will only be active for Distant and/or Parallel lights. This is a visible light concept known as a light cube. The light cube has its length and width dimensions set to the 平行光宽度 value, the depth (Z axis) of the light cube being infinite. Objects within the cube can cast shadows.</p>
-<p>This value cannot dynamically adapt to your scene, as it is possible for other objects to jump into the shadow-casting area during an animation. Therefore, a fixed value is used, which is entered here.</p>
-<p><p><div class="hint"><span class="HL_hint"></span>You can change the size of the shadow map. The lower this value, the more pixelated the shadow becomes. If the parallel light cube boundary had a dynamic value, these pixels would appear to jump, since the shadow map would otherwise vary dynamically in its size. In order to prevent this, a fixed value is used and any such shadow jumps are eliminated.</div></p>
+<p>这项设置只用在远光或平行光中。可以将它理解成一个发光立方体，它的长度和宽度设置为平行光宽度的数值，发光立方体的深度（Z轴）是无限长的。位于这个发光立方体中的对象会产生投影。</p>
+<p>这数值不会动态地适应场景，因为有可能在动画中其他物体会进入到投影区域。因此需要使用一个固定值，也就是在这里输入的数值。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>阴影贴图的分辨率是可以改变的，这个数值越低，像素化效果越严重。如果平行光立方体的边界是动态的，这些像素可能会抖动，因为阴影贴图的尺寸会动态地改变。为了防止这种情况，需要设置一个固定地平行光宽度，这样投影的抖动就会消除。</div></p>
 <p><a id="LIGHT_SHADOW_OUTLINE" name="LIGHT_SHADOW_OUTLINE"></a> <!--INDEX "8","轮廓投影","LIGHT_SHADOW_OUTLINE"--><span class="c4d_id">轮廓投影</span></p>
 <p>This option results in a thin shadow outline instead of a full shadow.</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003333.jpg"  ><span class="caption"></span></div></p>
