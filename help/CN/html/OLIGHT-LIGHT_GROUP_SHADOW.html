@@ -94,45 +94,52 @@
 <p>这数值不会动态地适应场景，因为有可能在动画中其他物体会进入到投影区域。因此需要使用一个固定值，也就是在这里输入的数值。</p>
 <p><p><div class="hint"><span class="HL_hint"></span>阴影贴图的分辨率是可以改变的，这个数值越低，像素化效果越严重。如果平行光立方体的边界是动态的，这些像素可能会抖动，因为阴影贴图的尺寸会动态地改变。为了防止这种情况，需要设置一个固定地平行光宽度，这样投影的抖动就会消除。</div></p>
 <p><a id="LIGHT_SHADOW_OUTLINE" name="LIGHT_SHADOW_OUTLINE"></a> <!--INDEX "8","轮廓投影","LIGHT_SHADOW_OUTLINE"--><span class="c4d_id">轮廓投影</span></p>
-<p>This option results in a thin shadow outline instead of a full shadow.</p>
+<p>启用这个选项会让投影渲染为一条轮廓线，而不是完整的投影。</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003333.jpg"  ><span class="caption"></span></div></p>
-<p><p><div class="hint"><span class="HL_hint"></span>When enabling this option, we recommend you use higher than usual values for the shadow map’s resolution and sample radius.</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>如果使用这个选项，建议设置比通常更高的阴影贴图的精度和采样半径。</div></p>
 <p><a id="RELEASE_180_2" name="RELEASE_180_2"></a><p><div class="release_marker" align="left"><p class="release" align="right">RELEASE 18</p><p><a id="LIGHT_SHADOW_HIGHQUALITY" name="LIGHT_SHADOW_HIGHQUALITY"></a> <!--INDEX "8","高品质","LIGHT_SHADOW_HIGHQUALITY"--><span class="c4d_id">高品质</span></p>
-<p>For Omni lights, 6 shadow maps will be created internally. Visible edges can occur where individual shadow maps transition if higher <span class="command">采样半径</span> values are used. Enabling this option will improve the quality of these transitions (but the render time will also increase).</p>
-<p><div class="image_full" style="max-width:1474px"><img  src="../pics/04xxxx/040869.jpg"  ><span class="caption"><span class="command">高品质</span> option disabled on left, enabled on right.</span></div></p>
+<p>对于泛光灯，软件内部会使用6个阴影贴图。如果使用较高的<span class="command">采样半径</span>，单独的投影贴图过渡的地方会出现可见的边缘。使用这个选项会提高这些过渡处的质量（但是会增加渲染时间）。</p>
+<p><div class="image_full" style="max-width:1474px"><img  src="../pics/04xxxx/040869.jpg"  ><span class="caption">图左未开启<span class="command">高品质</span>，图右开启。</span></div></p>
 <p></p></div></p>
 <p><a id="LIGHT_SHADOW_USECONE" name="LIGHT_SHADOW_USECONE"></a> <!--INDEX "8","投影锥体","LIGHT_SHADOW_USECONE"--><span class="c4d_id">投影锥体</span><br><a id="LIGHT_SHADOW_CONEANGLE" name="LIGHT_SHADOW_CONEANGLE"></a> <!--INDEX "8","角度","LIGHT_SHADOW_CONEANGLE"--><span class="c4d_id">角度</span> <span class="range">[0..170°]</span></p>
-<p>One of the drawbacks of Omni light sources is that six shadow maps must be computed in total, which can sometimes produce small artifacts at the edges of shadows. If 投影锥体 is enabled, the shadow production is limited to a cone, thus generating a single shadow map that is free from artifacts. This also has the advantage of speeding up render times. Set the vertex angle of the shadow cone using 角度.</p>
+<p>泛光灯的一个缺点是一共需要计算6个阴影贴图，有时候这会在投影边缘处出现不自然感。如果启用投影锥体，那么产生的投影会被限制在一个锥体里面，这样只会生成一个阴影贴图，避免了不自然的边缘。还有一个优点是会提高渲染速度。使用角度可以设置投影锥体的垂直角度。</p>
 <p><div class="image_full" style="max-width:640px"><img  src="../pics/003xxx/003334.jpg"  ><span class="caption"></span></div></p>
 <p><a id="LIGHT_SHADOW_SOFTCONE" name="LIGHT_SHADOW_SOFTCONE"></a> <!--INDEX "8","柔和锥体","LIGHT_SHADOW_SOFTCONE"--><span class="c4d_id">柔和锥体</span></p>
-<p>Enable this option to give the shadow cone a softer edge. This ensures that any object only partially in the shadow cone area casts a soft, fading shadow.</p>
+<p>启用这个选项会让投影锥体变成软边缘。这可以让只有部分位于投影锥体区域的对象投射柔和的、渐隐的阴影。</p>
 <p><a id="hl_2" name="hl_2"></a><!--INDEX "3","区域阴影","hl_2"--><p><span class="HL_1">区域阴影</span></p>
-<p>区域阴影 should preferably be used only when you have a little more time on your hands …</p>
-<p>The Area shadow’s shape can be controlled very precisely since the light source used to generate the Area shadow can be defined using the settings in the <span class="command">Details</span>标签页.</p>
-<p>Hence, the Area shadow can be controlled two ways:<ul></p>
-<p><li> Area shadow shape: <span class="command">Details</span>标签页 Area Shape, Object, Size X, Y, Z (see above)</li>
-<li> Area shadow quality: <span class="command">Shadow</span>标签页</li></ul><p></p>
+<p>一般只有在渲染时间充足的时候才会使用区域阴影。</p>
+<p>区域阴影的形状可以非常精确地控制，因为可以使用<span class="command">细节</span>标签页中的设置来调节生成区域阴影的灯光。</p>
+<p>因此，有两种方法可以控制区域阴影：<ul></p>
+<p><li> 区域阴影形状：<span class="command">细节</span>标签页的形状、对象、长宽高（见上文）。</li>
+<li> 区域阴影质量：<span class="command">投影</span>标签页</li></ul><p></p>
 <p><a id="LIGHT_SHADOW_ACCURACY" name="LIGHT_SHADOW_ACCURACY"></a> <!--INDEX "8","采样精度","LIGHT_SHADOW_ACCURACY"--><span class="c4d_id">采样精度</span> <span class="range">[0..100%]</span><br><a id="LIGHT_SHADOW_MINSAMPLES" name="LIGHT_SHADOW_MINSAMPLES"></a> <!--INDEX "8","最小取样值","LIGHT_SHADOW_MINSAMPLES"--><span class="c4d_id">最小取样值</span> <span class="range">[2..10000]</span><br><a id="LIGHT_SHADOW_MAXSAMPLES" name="LIGHT_SHADOW_MAXSAMPLES"></a> <!--INDEX "8","最大取样值","LIGHT_SHADOW_MAXSAMPLES"--><span class="c4d_id">最大取样值</span> <span class="range">[2..10000]</span></p>
-<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","Area Shadow Quality","hl_3"--><p><span class="HL_2">Area Shadow Quality</span></p>
-<p>The three settings <span class="command">Accuracy</span>, <span class="command">最小取样值</span> and <span class="command">最大取样值</span> can now be used to control the quality of your Area shadow.</p>
-<p>The basic algorithm is pretty complex so we will not discuss it here. What you should know, though: Samples are required to render 区域阴影. The more samples, the more homogeneous (less grainy) the rendering will be, and the longer it will take to render. Fewer samples, on the other hand, mean shorter render times.</p>
-<p>Of course you could render a scene with the maximum number of samples possible but this would not make any sense because parts of the scene would only require a minimum amount of samples and the scene would simply take much too long to render.</p>
-<p>This is why <span class="command">最小取样值</span> and <span class="command">最大取样值</span> are available. This gives you the ability to set many or few samples, as needed (as well as an interpolation between them).</p>
-<p>The <span class="command">Accuracy</span> setting determines how (and how many) samples will be allotted in order to achieve the best result. In the most critical areas, <span class="command">最大取样值</span> may be set to its highest value.</p>
-<p>The <span class="command">Accuracy</span> setting has the most influence in critical areas since high values lead to more samples being used. In less critical areas, the <span class="command">最小取样值</span> value is applied.</p>
-<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Follow these steps to achieve the optimal settings for your scene:","hl_4"--><p><span class="HL_2">Follow these steps to achieve the optimal settings for your scene:</span></p>
-<p><ol><br><li> Find out where the critical areas in your scene are (grainy areas).<br><li> Set <span class="command">最小取样值</span> and <span class="command">最大取样值</span> to the same value and render the scene using <span class="command">Render Region</span><br><li> Raise the <span class="command">最小取样值</span> and <span class="command">最大取样值</span> equally until you achieve a good result.<br><li> Lower <span class="command">最小取样值</span> to <span class="command_value">25%</span> of the <span class="command">最大取样值</span> value and set <span class="command">Accuracy</span> to <span class="command_value">50%</span>.<br><li> Finally, raise the <span class="command">Accuracy</span> setting until you have a result you are happy with.<br></ol><p></p>
-<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","Also, make a note of these rules of thumb:","hl_5"--><p><span class="HL_2">Also, make a note of these rules of thumb:</span></p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","区域阴影质量","hl_3"--><p><span class="HL_2">区域阴影质量</span></p>
+<p><span class="command">采样精度</span>、<span class="command">最小取样值</span>和<span class="command">最大取样值</span>这三项设置现在可以用来控制区域阴影的质量。</p>
+<p>基本算法非常复杂，因此在这里我们我们不展开讨论。但是我们需要知道的是，渲染区域阴影需要采样，采样越多，渲染效果一致性越好（颗粒越少），同时渲染时间也更长。反之采样越少，渲染时间也就越短。</p>
+<p>当然，你可以用可能的最大采样值来渲染场景，但是这并不合理，因为场景的部分区域只需要少量采样，而且会大量增加渲染时间。</p>
+<p>这也就是为什么需要设置<span class="command">最小取样值</span>和<span class="command">最大取样值</span>。它们让你可以根据需要设置采样的多少（以及它们之间的插值）。</p>
+<p><span class="command">采样精度</span>设置决定了采样会怎样分配（以及分配多少）来实现最佳渲染效果。在大部分关键区域，会被设置为<span class="command">最大取样值</span>。</p>
+<p><span class="command">采样精度</span>设置对关键区域的影响是最大的，因为较高的数值会使用更多采样。在非关键区域，则会使用<span class="command">最小取样值</span>。</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","按以下步骤优化场景设置：","hl_4"--><p><span class="HL_2">按以下步骤优化场景设置：</span></p>
+<p><ol><br>
+<li> 找出场景中关键区域的位置（颗粒区域）。<br>
+<li> 将<span class="command">最小取样值</span>和<span class="command">最大取样值</span>设置为相同的值，并使用<span class="command">区域渲染</span>来渲染场景。<br>
+<li> 同等地增加<span class="command">最小取样值</span>和<span class="command">最大取样值</span>直到效果最佳。<br>
+<li> 将<span class="command">最小取样值</span>设置为<span class="command">最大取样值</span>的<span class="command_value">25%</span>，然后将<span class="command">采样精度</span>设置为<span class="command_value">50%</span>。<br>
+<li> 最后，提高<span class="command">采样精度</span>直到得到满意的结果。<br></ol><p></p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","另外，记住这些经验法则：","hl_5"--><p><span class="HL_2">另外，记住这些经验法则：</span></p>
 <p><ul></p>
-<p><li> Quality can be improved the most by raising the <span class="command">最大取样值</span> and <span class="command">Accuracy</span> values, whereas 100% <span class="command">Accuracy</span> will not do you much good in combination with a very low <span class="command">最大取样值</span> value.</li><li> No matter which of the three settings you raise, render time will increase accordingly.</li><li> If <span class="command">最小取样值</span>=<span class="command">最大取样值</span>, <span class="command">Accuracy</span> will have no affect.</li></ul><p></p>
-<p>Examples:</p>
+<p><li> 通过增加<span class="command">最大取样值</span>和<span class="command">采样精度</span>可以最大限度提升渲染质量，但是如果<span class="command">最大取样值</span>很低，即使将<span class="command">采样精度</span>设为100%得到的效果也不会理想。</li>
+<li> 无论提高这三项设置中的哪一个，渲染时间都会相应地增加。</li>
+<li> 如果<span class="command">最小取样值</span>=<span class="command">最大取样值</span>，那么<span class="command">采样精度</span>不会对结果产生影响。</li></ul><p></p>
+<p>示例：</p>
 <p><div class="image_full" style="max-width:678px"><img  src="../pics/003xxx/003335.jpg"  ><span class="caption"></span></div></p>
-<p>In the previous image, <span class="command">Accuracy</span> has been set to 100% in the top half. As you can see, the quality is still not good (very grainy). <span class="command">最大取样值</span> is set too low. Much better results can be achieved by raising the <span class="command">最大取样值</span> value and lowering <span class="command">Accuracy</span>.</p>
-<p>In the image below you can see variations of the two most important settings, <span class="command">Accuracy</span> and <span class="command">最大取样值</span>, including approximate render times. Use these render times as points of reference only. Depending on the lighting effect(s) you use, the result can differ. The reference below is good for assessing render times when the <span class="command">最大取样值</span> value is doubled, for example.</p>
-<p><div class="image_full" style="max-width:1918px"><img  src="../pics/003xxx/003336.jpg"  ><span class="caption">At top: Various <span class="command">Accuracy</span> values; at bottom: various <span class="command">最大取样值</span> values; top left: the shape that casts the shadow, lit by an Area light.</span></div></p>
-<p><p><div class="hint"><span class="HL_hint"></span><a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_ANTIALIASING" target="">Anti-aliasing</a> can also reduce graininess (type: <span class="command">Best</span>). This will also affect render times, so you might want to first find out to what degree it is necessary, if at all. Remember, you can determine on a (Render) tag-to-tag basis which objects should be affected by <span class="command">Best</span> anti-aliasing.</div></p>
-<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","Limitations","hl_6"--><p><span class="HL_2">Limitations</span></p>
-<p>区域阴影 don’t work with PyroCluster clouds; these are rendered with hard shadows.</p>
+<p>在上图的上半部分中，<span class="command">采样精度</span>被设为100%。正如你所看到的，渲染质量不够理想（很多颗粒）。<span class="command">最大取样值</span>太低。在增加<span class="command">最大取样值</span>并降低<span class="command">采样精度</span>之后结果就好多了。</p>
+<p>在下图中你能看到<span class="command">采样精度</span>和<span class="command">最大取样值</span>这两个重要参数的组合，包括大致的渲染时间，这些渲染时间只是作为参考。根据使用灯光效果的不同，结果也会不同。下面的这些参考有助于对渲染时间进行评估，例如将<span class="command">最大取样值</span>设为2倍时。</p>
+<p><div class="image_full" style="max-width:1918px"><img  src="../pics/003xxx/003336.jpg"  ><span class="caption">上排：不同的<span class="command">采样精度</span>；下排：不同的<span class="command">最大取样值</span>；左上角：被区域光照亮产生投影的物体形状。</span></div></p>
+<p><p><div class="hint"><span class="HL_hint"></span><a href="DRENDERSETTINGS-RDATA_GROUP_ANTIALIASING.html#RDATA_ANTIALIASING" target="">抗锯齿</a>也能减少颗粒（类型：<span class="command">最佳</span>）。这同样也会影响渲染时间，因此你可能首先要弄清楚需要减少颗粒到什么程度。记住，你可以用标签来决定哪些对象需要受到<span class="command">最佳</span>抗锯齿的影响。</div></p>
+<p><a id="hl_6" name="hl_6"></a><!--INDEX "3","限制","hl_6"--><p><span class="HL_2">限制</span></p>
+<p>区域阴影对PyroCluster云无效，它们会被渲染为硬投影。</p>
 <p>
 
 </p>
