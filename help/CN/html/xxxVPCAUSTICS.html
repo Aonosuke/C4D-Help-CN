@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Photon Caustics</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32071"-->
+		<!--VATER_ID "5778"-->
+		<!--REIHENFOLGE "6"-->
+		<!--TITLE "Photon Caustics"-->
+		<!--APPS "14 15"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="1000.html" target="_self">Cinema 4D / BodyPaint 3D Program Documentation</a></span> <span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="5472.html" target="_self">CINEMA 4D Visualize, Broadcast, Studio</a></span> <span class="link_back"><a href="5778.html" target="_self">Advanced Render</a></span>
+
+<div class="in-visualize-page in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Visualize, Studio  </div>
+<!--INDEX "4","Caustics",""--><p><span class="HL_atom">Caustics </span><p></p><a href="VPCAUSTICS-ID_VIDEOPOSTPROPERTIES.html" target="">Basic</a><!--NO_SEARCH_END--><!--INDEX "2","Caustics",""--><p><span class="HL_group">Caustics</span></p><p></p>
+<p>With Advanced Render’s powerful caustics engine, you can create realistic patterns of focused light such as the bright patches that a whiskey tumbler casts onto a wooden floor. For a general introduction to caustics, including commonly-used terms, look up <span class="command">What are caustics?</span> in the index.</p>
+<p>You use three dialogs to set up caustics. On the Caustics page of the render settings, set the basic properties of the caustics effect such as its strength. On the Caustics page of each light source (<span class="command">Attribute Manager</span>), refine the effect for light sources. On the Illumination page of the Material Editor, fine-tune the caustics effect for any material. Note that you can also access the caustics settings for materials via the <span class="command">Attribute Manager</span>, provided that you have selected the desired material.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Parameters","hl_1"--><p><span class="HL_1">Parameters</span></p>
+<p><ol><br><li>  Use the options on the Photon Caustics page to define basic properties of the effect.<br><br><div class="image_full" style="max-width:553px"><img  src="../pics/004040.jpg"  ><span class="caption"></span></div> <br><br><li> You can refine the caustics effect for each material using the caustics settings on the Illumination page of the Material Editor or <span class="command">Attribute Manager</span>.<br><br><div class="image_full" style="max-width:599px"><img  src="../pics/004041.jpg"  ><span class="caption"></span></div><br>Enable this option if you want the material to generate Photon caustics. Enter the strength of the effect into the input box.<br><br>The material must be transparent and/or reflective in order to create a caustics effect.<br><br><li> You can switch on caustics for any light source and refine the effect using the light’s Caustics page in the <span class="command">Attribute Manager</span>.<br><br><div class="image_full" style="max-width:405px"><img  src="../pics/004042.jpg"  ><span class="caption"></span></div><br></ol><p></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>There are 2 types of caustics in Cinema 4D:<ul></p>
+<p><li> The photon caustics (these are described in this section): Faster than GI Caustics but must be generated using individual light sources. They can be rendered volumetrically.</li><li> <a href="VPGISETUP-GI_GROUP_OPTIONS.html#caustics" target="">GI-Caustics</a>: Not very precise caustics in conjunction with IR modes (a quick but effective trick: assign a Compositing tag with activated <a href="TCOMPOSITING-COMPOSITINGTAG_GROUPGI.html#COMPOSITINGTAG_GIQMC" target="">Enable Forced QMC Sampling</a>) but they do react to all illuminated surfaces within the scene.</li>Both caustics types are completely indpendent of one another and are rendered using completely different methods. However, they can be used either separately or combined.</div></p>
+<p></ul><p></p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","What are caustics?","hl_2"--><p><span class="HL_1">What are caustics?</span></p>
+<p>Caustics are patterns of focused light created by curved surfaces that are reflective or refractive.</p>
+<p>Advanced Render enables you to create both surface caustics and volume caustics.</p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/004043.jpg"  ><span class="caption">Copyright by Janine Pauke . Figure 1: The transparent sphere focuses light onto the tile to create a caustics effect (in this case, a bright spot).</span></div></p>
+<p><ul></p>
+<p><li> A surface caustics effect shows up on object surfaces only — examples are the transparent sphere and the ring (in both cases, the effect shows up on a surface: the floor).</li></ul><p></p>
+<p><div class="image_full" style="max-width:480px"><img  src="../pics/004044.jpg"  ><span class="caption">Figure 2: The metal ring shows a caustics effect generated by a reflective surface.</span></div></p>
+<p><ul></p>
+<p><li> Volume caustics are visible as they pass through 3D space — they do not need a surface to illuminate.</li>See Figure 3.</p>
+<p></ul><p></p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/004047.jpg"  ><span class="caption">Figure 3: The bright <span class="command">tail</span> extending from the sphere is a volume caustics effect.</span></div></p>
+<p><a id="hl_3" name="hl_3"></a><!--INDEX "3","The surface caustics algorithm","hl_3"--><p><span class="HL_1">The surface caustics algorithm</span></p>
+<p>For surface caustics, you need:<ul></p>
+<p><li> A light source that emits photons — enable surface caustics (in the <span class="command">Attribute Manager</span>, on the light’s Caustics page);</li><li> An object with a material that generates surface caustics — the material must be transparent or reflective or both. The object must be curved in a way that focuses light;</li><li> An object to receive the surface caustics.</li></ul><p></p>
+<p>Caustics are calculated in a very different way to global illumination and raytracing. Global illumination and raytracing send rays from the camera into the scene. With caustics, however, photons are sent from the light source into the scene. Each photon is given a starting energy. A photon’s energy is reduced as it passes through the scene and is reflected or refracted by object surfaces (Figure 4).</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004045.jpg"  ><span class="caption">Figure 4: A photon refracted by a sphere.</span></div></p>
+<p>When a photon hits a reflective or transparent surface, the photon is reflected or refracted. The photon loses some energy in the process and the material’s properties are taken into account.</p>
+<p>For example, if the surface reflects or refracts blue light only, the photon’s color changes to blue. If the photon still has some energy left at this point, it continues to fly through the scene. When the photon hits a surface that is neither reflective nor transparent, the photon ends its journey there and its values are stored in a data structure called the photon tree — later, the values in the photon tree will be interpolated to calculate the caustics effect.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>You can prevent a material from receiving the surface caustics effect. Photons that hit such surfaces will end their journey there and their values will not be saved in the photon tree — this prevents the material from receiving a caustics effect.</div></p>
+<p>Once all photons have ended their journey in one way or another, the values in the photon tree are interpolated to calculate the surface caustics effect for the image.</p>
+<p>Double-caustics are possible. This happens when an object focuses caustics onto another object that generates caustics. See Figure 5.</p>
+<p><div class="image_full" style="max-width:500px"><img  src="../pics/004046.jpg"  ><span class="caption">Figure 5: An example of double-caustics.</span></div></p>
+<p>The volume caustics algorithm</p>
+<p>Volume Photon caustics are calculated in a similar way to surface caustics. First you need the following:<ul></p>
+<p><li> A volumetric light source to send out photons — enable volume caustics (<span class="command">Attribute Manager</span>, Caustics page of the light source);</li><li> An object with a material that generates volume caustics — the material must be transparent or reflective or both. The object must be curved in a way that focuses light.</li></ul><p></p>
+<p>As with surface caustics, when a photon hits a reflective or transparent surface, the photon is reflected or refracted. The photon loses some energy in the process and the material’s properties are taken into account. For example, if the surface reflects or refracts green light only, the photon’s color changes to green. Provided the photon still has energy, it then continues to fly through the scene.</p>
+<p>In contrast to surface caustics, the photons of volume caustics are saved in the photon tree at regular intervals. When the photon hits a surface that is neither reflective nor transparent, the photon ends its journey there. Once all photons have completed their journey, the values in the photon tree are interpolated to calculate the volume caustics effect for the image.</p>
+<p><a id="hl_4" name="hl_4"></a><!--INDEX "3","Troubleshooting Surface Caustics","hl_4"--><p><span class="HL_1">Troubleshooting Surface Caustics</span></p>
+<p>The best Photon caustics settings depend on factors specific to the scene such as the distance between the light source and the object that is generating caustics. However, the following steps should help you to achieve a good result.</p>
+<p><ul></p>
+<p><li> On the light’s Caustics page (<span class="command">Attribute Manager</span>), set Energy to a high value (e.g., 100,000%) and Photons to a low value (e.g., 100). This will enable you to see the individual photons as points of light so that you can check if enough photons (if any at all) are reaching the important area. If you can’t see any photons, check the following:</li><li> Is the light pointing in the right direction?</li><li> Are the caustics options enabled in the following places?: render settings (Caustics page), light settings (<span class="command">Attribute Manager</span> / Caustics page) and Material Editor (Illumination page).</li><li> Does the object that should generate caustics have a reflective and/or transparent material?</li><li> Once you can see the photons, increase the Photons value (and perhaps the Energy) until you achieve a good caustics effect. To fine-tune the sharpness, adjust Radius and Samples on the Illumination tab (Material Editor).</li></ul><p></p>
+<p><a id="hl_5" name="hl_5"></a><!--INDEX "3","Troubleshooting Volume Caustics","hl_5"--><p><span class="HL_1">Troubleshooting Volume Caustics</span></p>
+<p>If you notice artifacts of the type illustrated below when rendering volume caustics, on the light’s Visibility tab, try reducing the Sample Distance value. This will, however, add to the render time.</p>
+<p><div class="image_full" style="max-width:490px"><img  src="../pics/004065.jpg"  ><span class="caption">Reduce the Sample Distance to remove the artifacts indicated above. For this example, Sample Distance was set to 25 (left) and 5 (right).</span></div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

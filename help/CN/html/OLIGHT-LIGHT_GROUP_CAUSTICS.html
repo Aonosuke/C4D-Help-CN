@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>灯光：焦散</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "3917"-->
+		<!--VATER_ID "3909"-->
+		<!--REIHENFOLGE "8"-->
+		<!--TITLE "灯光：焦散"-->
+		<!--APPS "14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">参考</a></span> <span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5177.html" target="_self">创建菜单</a></span> <span class="link_back"><a href="OLIGHT.html" target="_self">灯光</a></span>
+
+<div class="in-visualize-page in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Visualize, Studio  </div>
+<img class="icon" src="../icons/OLIGHT.png" alt="" height="24" width="24" border="1"> <span class="HL_atom"><a href="OLIGHT.html">灯光</a> </span><p></p><a href="OLIGHT-OBASELIST.html" target=""><span class="c4d_group_navi">基本</span></a> <a href="OLIGHT-ID_BASEOBJECT_GROUP1.html" target=""><span class="c4d_group_navi">坐标</span></a> <a href="OLIGHT-LIGHT_GROUP_GENERAL.html" target=""><span class="c4d_group_navi">常规</span></a> <a href="OLIGHT-LIGHT_GROUP_DETAILS.html" target=""><span class="c4d_group_navi">细节</span></a> <a href="OLIGHT-LIGHT_GROUP_VISIBILITY.html" target=""><span class="c4d_group_navi">可见</span></a> <a href="OLIGHT-LIGHT_GROUP_SHADOW.html" target=""><span class="c4d_group_navi">投影</span></a> <a href="OLIGHT-LIGHT_GROUP_PHOTOMETRIC.html" target=""><span class="c4d_group_navi">光度</span></a> <a href="OLIGHT-LIGHT_GROUP_CAUSTICS.html" target=""><span class="c4d_group_navi_self">焦散</span></a> <a href="OLIGHT-LIGHT_GROUP_NOISE.html" target=""><span class="c4d_group_navi">噪波</span></a> <a href="OLIGHT-LIGHT_GROUP_LENSEFFECTS.html" target=""><span class="c4d_group_navi">镜头光晕</span></a> <a href="OLIGHT-LIGHT_GROUP_EXCLUSION.html" target=""><span class="c4d_group_navi">工程</span></a><!--NO_SEARCH_END--><p class="c4d_group"><span>焦散</span></p><p></p>
+<p><p><div class="hint"><span class="HL_hint">提示：<br></span>
+	下面的描述包含在<a href="VPCAUSTICS.html" target="">焦散</a>设置中。</div></p>
+<p>关于焦散的更多细节可以参见<a href="VPCAUSTICS-ID_VIDEOPOSTPROPERTIES.html" target="">这里</a>。</p>
+<p><a id="LIGHT_CAUSTIC_ENABLE" name="LIGHT_CAUSTIC_ENABLE"></a> <!--INDEX "8","表面焦散","LIGHT_CAUSTIC_ENABLE"--><span class="c4d_id">表面焦散</span></p>
+<p>使用这个选项来激活灯光的表面焦散。</p>
+<p><a id="LIGHT_CAUSTIC_ENERGY" name="LIGHT_CAUSTIC_ENERGY"></a> <!--INDEX "8","能量","LIGHT_CAUSTIC_ENERGY"--><span class="c4d_id">能量</span> <span class="range">[0..+∞%]</span></p>
+<p>它定义了表面焦散光子的总体起始能量。能量的数值主要控制的是焦散效果的亮度，以及每个光子的反射和折射的最大次数。</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004060.jpg"  ><span class="caption">能量较低（10,000）的表面焦散。</span></div></p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004061.jpg"  ><span class="caption">能量较高（20,000）的表面焦散。</span></div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>虽然能量和光子参数是相互独立的，但这两个参数都会影响焦散效果。</div></p>
+<p><a id="LIGHT_CAUSTIC_PHOTONS" name="LIGHT_CAUSTIC_PHOTONS"></a> <!--INDEX "8","光子","LIGHT_CAUSTIC_PHOTONS"--><span class="c4d_id">光子</span> <span class="range">[10..10000000]</span></p>
+<p>光子数值会影响焦散效果精度——增加数值会让效果更好。但是，更大的数值也会意味着更长的渲染时间。这个数值定义了会用来计算表面焦散的光子数量。最佳数值通常是10,000 到 1,000,000 之间，这取决于场景的具体情况，如光源和产生焦散的对象之间的距离。</p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004xxx/004062.jpg"  ><span class="caption">低光子设置的示例：每个光子会显示为一个亮点。</span></div></p>
+<p>焦散的渲染时间主要取决于使用的光子数量，因此要尽量只使用这个效果所需的光子数量。</p>
+<p><p><div class="hint"><span class="HL_hint"></span>焦散效果的外观，即它的锐度，是在材质编辑器的光照页面中设置的。</div></p>
+<p><a id="LIGHT_VOLCAUSTIC_ENABLE" name="LIGHT_VOLCAUSTIC_ENABLE"></a> <!--INDEX "8","体积焦散","LIGHT_VOLCAUSTIC_ENABLE"--><span class="c4d_id">体积焦散</span></p>
+<p>启用这个选项来激活灯光的体积焦散。</p>
+<p>对于体积焦散，要确保灯光是体积光——在<span class="command">属性管理器</span>的常规标签页中，将可见灯光设置为正向测定体积或反向测定体积。</p>
+<p><a id="LIGHT_VOLCAUSTIC_ENERGY" name="LIGHT_VOLCAUSTIC_ENERGY"></a> <!--INDEX "8","能量","LIGHT_VOLCAUSTIC_ENERGY"--><span class="c4d_id">能量</span> <span class="range">[0..+∞%]</span></p>
+<p>它定义了体积焦散光子的总体起始能量。它会影响焦散效果的亮度和每个光子的反射和折射的最大次数。</p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004063.jpg"  ><span class="caption">正常能量设置。</span></div></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004xxx/004064.jpg"  ><span class="caption">能量设置过高。</span></div></p>
+<p><a id="LIGHT_VOLCAUSTIC_PHOTONS" name="LIGHT_VOLCAUSTIC_PHOTONS"></a> <!--INDEX "8","光子","LIGHT_VOLCAUSTIC_PHOTONS"--><span class="c4d_id">光子</span> <span class="range">[10..2000000]</span></p>
+<p>这个参数控制的是焦散效果的精度。增加数值会让效果更好。但是，更大的数值也会意味着更长的渲染时间。这个数值是灯光发出产生体积焦散的光子数量。根据步幅尺寸，会计算非常大量的光子数值并保存到光子树中。假设光源发出 1000 个光子，焦散效果长度是 100m，那么会计算 5000 个光子状态并保存到光子树中。所以要尽可能使用少量的光子。</p>
+<p>记住，泛光灯比其他类型的光源更加浪费资源，因为它会朝所有方向发出光子。性价比最高的焦散灯光是聚光灯，它可以将光束聚集在要产生焦散的对象上。</p>
+<p><a id="LIGHT_VOLCAUSTIC_FALLOFF" name="LIGHT_VOLCAUSTIC_FALLOFF"></a> <!--INDEX "8","衰减","LIGHT_VOLCAUSTIC_FALLOFF"--><span class="c4d_id">衰减</span></p>
+<p>这里设置灯光的亮度衰减，有以下选项可以选择：</p>
+<p><ul></p>
+<p><li> 无</li>
+<li> 线性</li>
+<li> 倒数</li>
+<li> 平方倒数</li>
+<li> 立方倒数</li>
+<li> 步幅</li></ul><p></p>
+<p>细节参见<a href="OLIGHT.html" target="">灯光</a>。</p>
+<p><a id="LIGHT_VOLCAUSTIC_INNERDISTANCE" name="LIGHT_VOLCAUSTIC_INNERDISTANCE"></a> <!--INDEX "8","内部距离","LIGHT_VOLCAUSTIC_INNERDISTANCE"--><span class="c4d_id">内部距离</span> <span class="range">[0..+∞m]</span></p>
+<p>参见<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#inneredistanz" target="">内部距离</a>。</p>
+<p><a id="LIGHT_VOLCAUSTIC_OUTERDISTANCE" name="LIGHT_VOLCAUSTIC_OUTERDISTANCE"></a> <!--INDEX "8","外部距离","LIGHT_VOLCAUSTIC_OUTERDISTANCE"--><span class="c4d_id">外部距离</span> <span class="range">[0..+∞m]</span></p>
+<p>参见<a href="OLIGHT-LIGHT_GROUP_DETAILS.html#dis" target="">外部距离</a>。</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

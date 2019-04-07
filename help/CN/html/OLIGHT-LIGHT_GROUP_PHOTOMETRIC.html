@@ -47,22 +47,22 @@
 <p>这也意味着如果你的模型是物理准确/真实比例的，你应该启用这个选项（通常启用这个选项能让结果物理上更准确）。</p>
 <p>注意：这个选项不是对所有 IES 文件都适用（取决于它们的内部结构）。</p>
 <p><a id="LIGHT_PHOTOMETRIC_INTENSITY" name="LIGHT_PHOTOMETRIC_INTENSITY"></a> <!--INDEX "8","强度","LIGHT_PHOTOMETRIC_INTENSITY"--><span class="c4d_id">强度</span> <span class="range">[0..10000000]</span></p>
-<p>This intensity in Candela is the maximum intensity of the IES. The remaining brightness values will be applied in relation to this parameter and can then be adjusted in correlation with it.</p>
+<p>这里的强度是 IES 的最大强度，其他的亮度值会根据这个参数相应变化。</p>
 <p><a id="LIGHT_PHOTOMETRIC_UNIT" name="LIGHT_PHOTOMETRIC_UNIT"></a> <!--INDEX "8","单位","LIGHT_PHOTOMETRIC_UNIT"--><span class="c4d_id">单位</span></p>
-<p>In addition to <span class="command">强度</span>, these 3 units can be applied to influence the light’s intensity (and they are not at all restricted to use with only IES lights):<ul></p>
-<p><li> Candela (cd): The light intensity is only dependent on the <span class="command">强度</span> value, independent of light shape (e.g., Spot) or size.</li>
-<li> Lumen (lm): The light intensity is primarily dependent on the light shape, i.e., a Spot light’s intensity, for example, increases when its cone is narrowed.</li>
-<li> Lux: If the <span class="command">光度强度</span> option is enabled (<span class="command">Area</span> light), the light intensity can be adjusted in <span class="command_value">Lux</span>. The light intensity is, logically enough, dependent on the size of the light source (e.g., <a href="OLIGHT-LIGHT_GROUP_DETAILS.html#LIGHT_AREADETAILS_SIZEX" target="_self"><span class="text_id">Size X</span></a>). If, for example, the light’s surface is doubled, its intensity will also be twice as strong.</li></ul><p></p>
+<p>除了<span class="command">强度</span>，这三个单位也会影响灯光的强度（而且它们不仅限于 IES 灯光）：<ul></p>
+<p><li> 烛光(cd)：灯光强度只由<span class="command">强度</span>值决定，与灯光的形状（如聚光灯）或尺寸无关。</li>
+<li> 流明(lm)：灯光强度主要由形状决定，例如聚光灯的强度会随光锥收窄而变高。</li>
+<li> 勒克斯(lx)：如果勾选了<span class="command">光度强度</span>选项（<span class="command">区域</span>灯光），灯光的强度可以由<span class="command_value">勒克斯(lx)</span>调节。灯光强度由光源的尺寸决定，例如，如果灯光的面积加倍，它的强度也会加倍。</li></ul><p></p>
 <p><a id="LIGHT_PHOTOMETRIC_DATA" name="LIGHT_PHOTOMETRIC_DATA"></a> <!--INDEX "8","光度数据","LIGHT_PHOTOMETRIC_DATA"--><span class="c4d_id">光度数据</span></p>
-<p>Enables or disables the evaluation of IES data. If disabled, the light source will revert to being an Omni light source with adjustable Lumen or Candela intensity.</p>
+<p>启用或禁用 IES 数据。如果不启用，灯光会变成一个泛光灯，以流明或烛光调节强度。</p>
 <p><a id="LIGHT_PHOTOMETRIC_FILE" name="LIGHT_PHOTOMETRIC_FILE"></a> <!--INDEX "8","文件名","LIGHT_PHOTOMETRIC_FILE"--><span class="c4d_id">文件名</span></p>
-<p>You can drag an IES file into this field where its name and complete path (location) will be displayed.</p>
-<p><span class="command">Attention!</span>: The IES file’s path will be displayed here but the IES data will be saved within the Cinema 4D file. Hence, the IES file itself does NOT have to accompany the Cinema 4D file when transferring files.</p>
+<p>可以拖放一个 IES 文件到这个文本框中，这里会显示它的文件名和完整路径。</p>
+<p><span class="command">注意</span>：IES 文件的路径会显示在这里，但是 IES 数据会保存在 CINEMA 4D 文件中。因此在转移文件时 IES 文件不需要与 CINEMA 4D 文件一起转移。</p>
 <p><a id="LIGHT_PHOTOMETRIC_SIZE" name="LIGHT_PHOTOMETRIC_SIZE"></a> <!--INDEX "8","光度尺寸","LIGHT_PHOTOMETRIC_SIZE"--><span class="c4d_id">光度尺寸</span></p>
-<p>Very often IES files contain information regarding the size of the actual light. Enabling this option will turn the IES light into an Area light (with the usual settings in the <span class="command">Details</span> tab, which will be assumed from the IES file).</p>
-<p>Otherwise the IES light will function as an Omni light.</p>
-<p><!--INDEX "6","Information","LIGHT_GROUP_PHOTOMETRIC_INFO"--><a id="LIGHT_GROUP_PHOTOMETRIC_INFO" name="LIGHT_GROUP_PHOTOMETRIC_INFO"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>Information</span></p>
-<p>Here you will find various information saved within the IES file. However, not all IES files will contain this information. These fields will then remain empty.</p>
+<p>通常 IES 文件包含真实灯光的信息，启用这个首选项会将 IES 灯光转换为区域光（<span class="command">细节</span>标签页里面的设置会根据 IES 文件进行相应配置）。</p>
+<p>否则 IES 灯光的功能与泛光灯一样。</p>
+<p><!--INDEX "6","信息","LIGHT_GROUP_PHOTOMETRIC_INFO"--><a id="LIGHT_GROUP_PHOTOMETRIC_INFO" name="LIGHT_GROUP_PHOTOMETRIC_INFO"></a><p class="c4d_subgroup"><img src="../../files/subgroup.gif" alt="" width="7" height="4" border="0">&nbsp;<span>信息</span></p>
+<p>这里会显示 IES 文件中的各种信息。但是不是所有 IES 文件都包含这些信息，这时信息区则是空的。</p>
 <p><a id="LIGHT_PHOTOMETRIC_INFO_MANUFAC" name="LIGHT_PHOTOMETRIC_INFO_MANUFAC"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LUMCAT" name="LIGHT_PHOTOMETRIC_INFO_LUMCAT"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LUMINAIRE" name="LIGHT_PHOTOMETRIC_INFO_LUMINAIRE"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LAMPCAT" name="LIGHT_PHOTOMETRIC_INFO_LAMPCAT"></a> <br><a id="LIGHT_PHOTOMETRIC_INFO_LAMP" name="LIGHT_PHOTOMETRIC_INFO_LAMP"></a> </p>
 <p>
 

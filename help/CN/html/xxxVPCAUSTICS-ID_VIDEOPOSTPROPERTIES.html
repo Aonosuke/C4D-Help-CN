@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Photon Caustics: Basic Properties</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "32072"-->
+		<!--VATER_ID "32071"-->
+		<!--REIHENFOLGE "1"-->
+		<!--TITLE "Photon Caustics: Basic Properties"-->
+		<!--APPS "14 15"-->
+		<!--TYP "GROUP"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">CINEMA 4D</a></span> <span class="link_back"><a href="5472.html" target="_self">CINEMA 4D Visualize, Broadcast, Studio</a></span> <span class="link_back"><a href="5778.html" target="_self">Advanced Render</a></span> <span class="link_back"><a href="VPCAUSTICS.html" target="_self">Photon Caustics</a></span>
+
+<div class="in-visualize-page in-studio-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Visualize, Studio  </div>
+<span class="HL_atom"><a href="VPCAUSTICS.html">Caustics</a> </span><p></p><!--NO_SEARCH_END--><p class="c4d_group"><span>Basic Properties</span></p><p></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>The following descriptions pertain to the <a href="VPCAUSTICS.html" target="">Photon Caustics</a> settings.</div></p>
+<p><a id="VPCAUSTICS_ENABLEDIFFUSE" name="VPCAUSTICS_ENABLEDIFFUSE"></a> <!--INDEX "8","Surface Caustics","VPCAUSTICS_ENABLEDIFFUSE"--><span class="c4d_id">Surface Caustics</span></p>
+<p>Enable this option to switch on surface caustics.</p>
+<p><a id="VPCAUSTICS_ENABLEVOLUME" name="VPCAUSTICS_ENABLEVOLUME"></a> <!--INDEX "8","Volume Caustics","VPCAUSTICS_ENABLEVOLUME"--><span class="c4d_id">Volume Caustics</span></p>
+<p>Enable this option to switch on volume caustics.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Ensure that your caustics light source is volumetric.</div></p>
+<p><a id="VPCAUSTICS_STRENGTH" name="VPCAUSTICS_STRENGTH"></a> <!--INDEX "8","Strength","VPCAUSTICS_STRENGTH"--><span class="c4d_id">Strength</span> <span class="range">[0..100000%]</span></p>
+<p>This sets the general brightness of the caustics effect.</p>
+<table  border="0" cellspacing="10" cellpadding="0"><TR><TD><div class="image_full" style="max-width:640px"><img  src="../pics/004049.jpg"  ><span class="caption">Volume caustics, normal strength.</span></div></td><TD><div class="image_full" style="max-width:640px"><img  src="../pics/004050.jpg"  ><span class="caption">Volume caustics, high strength.</span></div></td></TR></TABLE>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004048.jpg"  ><span class="caption">Surface caustics low strength, normal strength and high strength.</span></div></p>
+<p><a id="VPCAUSTICS_STEPSIZE" name="VPCAUSTICS_STEPSIZE"></a> <!--INDEX "8","Step Size","VPCAUSTICS_STEPSIZE"--><span class="c4d_id">Step Size</span> <span class="range">[0.001..+∞m]</span></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004051.jpg"  ><span class="caption">Big step size, small step size</span></div></p>
+<p>With volume caustics, photons are saved in the photon tree at regular intervals as defined by this value. For example, if the volume caustic effect is <span class="command_value">100m</span> long, you might set Step Size to <span class="command_value">5m</span> so that 20 different values are saved for each photon.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Lowering Step Size increases the accuracy of the effect but increases the render time also.</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>A lower Step Size produces a brighter effect. This is because more values are saved in the photon tree over the same distance.</div></p>
+<p><a id="VPCAUSTICS_SAMPLERADIUS" name="VPCAUSTICS_SAMPLERADIUS"></a> <!--INDEX "8","Sample Radius","VPCAUSTICS_SAMPLERADIUS"--><span class="c4d_id">Sample Radius</span> <span class="range">[0.001..+∞m]</span></p>
+<p>This specifies how close photons must be to one another in order to be interpolated. Higher values tend to produce better results but take longer to render.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>If you notice individual spots or dots in the render, increase the Sample Radius.</div></p>
+<p><div class="image_full" style="max-width:444px"><img  src="../pics/004052.jpg"  ><span class="caption"></span></div></p>
+<p><a id="VPCAUSTICS_SAMPLES" name="VPCAUSTICS_SAMPLES"></a> <!--INDEX "8","Samples","VPCAUSTICS_SAMPLES"--><span class="c4d_id">Samples</span> <span class="range">[1..10000]</span></p>
+<p>The Samples value represents the maximum number of photons within the sample distance that will be used to calculate the volume caustics.</p>
+<p>As a general rule, higher values produce a more accurate effect but add to the render time. If Samples is set too low, individual photons can be seen as small dots.</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:480px"><img  src="../pics/004053.jpg"  ><span class="caption">Samples set to 1</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:478px"><img  src="../pics/004054.jpg"  ><span class="caption">Samples set to 30.</span></div></td></p>
+<p>  </TR></TABLE>
+<p><a id="VPCAUSTICS_RECOMPUTE" name="VPCAUSTICS_RECOMPUTE"></a> <!--INDEX "8","Recompute","VPCAUSTICS_RECOMPUTE"--><span class="c4d_id">Recompute</span></p>
+<p><a id="VPCAUSTICS_RECOMPUTE_FIRSTTIME" name="VPCAUSTICS_RECOMPUTE_FIRSTTIME"></a><!--INDEX "10","First Time","VPCAUSTICS_RECOMPUTE_FIRSTTIME"--><span class="c4d_id_cycle">First Time</span></p>
+<p>With Recompute, the caustics data from a previous render can be reused to speed up rendering. This saves the time it takes to calculate the caustics effect, but keep in mind that a new calculation will be required if you make major changes to the scene such as if you move a caustics-generating light to a new position. See also <span class="command">Save Solution</span>. Use the Recompute drop-down list to choose when caustics should be recalculated.</p>
+<p>The scene’s caustics will be calculated for the first render only; future renders will reuse the data. Each time you render, Advanced Render checks if the scene has an <span class="command">Illum</span> folder. If no such folder is found, the folder is created, caustics are calculated and the caustics data is saved in the folder.</p>
+<p><a id="VPCAUSTICS_RECOMPUTE_ALWAYS" name="VPCAUSTICS_RECOMPUTE_ALWAYS"></a><!--INDEX "10","Always","VPCAUSTICS_RECOMPUTE_ALWAYS"--><span class="c4d_id_cycle">Always</span></p>
+<p>Caustics data is always recalculated when you render. This is the default setting since it ensures a correct effect each time you render.</p>
+<p><a id="VPCAUSTICS_RECOMPUTE_NEVER" name="VPCAUSTICS_RECOMPUTE_NEVER"></a><!--INDEX "10","Never","VPCAUSTICS_RECOMPUTE_NEVER"--><span class="c4d_id_cycle">Never</span></p>
+<p>Caustics are not recalculated when you render. Instead Advanced Render speeds up rendering by reusing the data in the scene’s <span class="command">Illum</span> folder. If this folder is not found, an alert appears. To remedy, set Recompute to First Time or Always.</p>
+<p><a id="VPCAUSTICS_SAVESOLUTION" name="VPCAUSTICS_SAVESOLUTION"></a> <!--INDEX "8","Save Solution","VPCAUSTICS_SAVESOLUTION"--><span class="c4d_id">Save Solution</span></p>
+<p>If you enable this option, the caustics data is saved in the scene’s <span class="command">Illum</span> folder when you render — the folder will be created if it does not exist yet. Depending on the Recompute setting, the saved data can be reused to speed up future renders.</p>
+<p>For animations: Caustics information will be saved for each frame of animation individually. Hence, a greater amount of memory will be required for longer animations.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>If you change the scene significantly, caustics will need to be recalculated to ensure an accurate effect (set Recompute to Always).</div></p>
+<p><a id="VPCAUSTICS_CAMERASOLUTION" name="VPCAUSTICS_CAMERASOLUTION"></a> <!--INDEX "8","Single Animation Solution","VPCAUSTICS_CAMERASOLUTION"--><span class="c4d_id">Single Animation Solution</span></p>
+<p>If the only object that moves in your animation is the camera, there is no need to recalculate caustics for each frame. Instead, enable this option to calculate caustics just once. The caustics data will be reused for all frames, giving you the same effect in a fraction of the usual render time. In addition to saving render time, this option helps you to create flicker-free caustics animation.</p>
+<p>If the option is disabled, caustics will be recalculated for each frame.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Enable Single Animation Solution for camera animations only - poor results are likely if other objects are moving in the scene.</div></p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>
