@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Bake Object</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "5739"-->
+		<!--VATER_ID "5746"-->
+		<!--REIHENFOLGE "2"-->
+		<!--TITLE "Bake Object"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5743.html" target="_self">Object Manager</a></span> <span class="link_back"><a href="5746.html" target="_self">Object Menu</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Bake Object",""--><p><span class="HL_group">Bake Object</span></p><p></p>
+<p><!--INDEX "7","Bake Object...",""--><!--PAGE_COMMAND "PLUGIN_Cmd_450000051"--><img class="cmd_icon" src="../icons/PLUGIN_Cmd_450000051.png" alt="" height="24" width="24" border="1"> </p>
+<p><!--INDEX "7","Base Object Dialog",""--><!--PAGE_COMMAND "DIALOG_BAKEOBJECT"--></p>
+<p><span class="command">Bake Object</span> is the one-click version of the <span class="command">Bake Texture</span> tag (o.k., maybe 2 or 3 clicks are really required … ). This is how it works:</p>
+<p><ol><li>  Select one or more objects to bake (all Child objects in a hierarchy will be baked as well).<br><br><li> Select <span class="command">Bake Object … </span> from the <span class="command">Objects</span> menu and make the appropriate settings in the window that opens.<br><br><li> Click on <span class="command">Bake</span>. A single(!) texture (that will be placed into the Luminance channel of a newly created material) will be calculated and assigned for each selected object. All material channels of the original material will be included in rendering.<br></ol><p></p>
+<p><p><div class="hint"><span class="HL_hint"></span>The baked object will not be contained in any light’s <span class="command">Include</span> or <span class="command">Exclude</span> list since the newly created object is not automatically added to these lists.</div></p>
+<p><p><div class="hint"><span class="HL_hint"></span>With reference to GI, light that falls on the reverse side of polygons will be ignored by the Baker!</div></p>
+<p><a id="GI" name="GI"></a></p>
+<p><p><div class="hint"><span class="HL_hint">Tip for baking GI:<br></span>When rendering <a href="32219.html" target="">GI</a> numerous automated processes are implemented that optimize the <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT" target="_self"><span class="text_id">Sample Count</span></a> and <a href="VPGISETUP-GI_GROUP_IRRADIANCE.html#GI_SETUP_DATA_IR_DENSITY_QUALITY" target="_self"><span class="text_id">Record Density</span></a> values. Unfortunately these do not work in conjunction with the <span class="command">Bake</span> functionality and are therefore (internally) reduced in quality, sometimes drastically. Setting these values manually (however longer render times can result, as with normal GI rendering) can help remedy this for:<ul></p>
+<p><li> Set <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT_METHOD" target="_self"><span class="text_id">Samples</span></a> to <nobr><span class="text_id_cycle">Custom Sample Count</span></nobr> and use a <a href="VPGISETUP-GI_GROUP_GENERAL.html#GI_SETUP_DATA_QMC_COUNT" target="_self"><span class="text_id">Sample Count</span></a> of around <span class="command_value">400</span>.</div></li></ul><p></p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Settings","hl_1"--><p><span class="HL_1">Settings</span></p>
+<p>Most of the following settings (and many more) can also be found in the <span class="command">Bake Texture … </span> tag, where all settings are described to the utmost detail.</p>
+<p>This is why the <span class="command">Bake Object … </span> functions will only be described briefly here.</p>
+<p><!--INDEX "8","Ambient Occlusion","no_id_1"--><a id="no_id_1" name="no_id_1"></a> <span class="no_id">Ambient Occlusion</span></p>
+<p>Color channels and Ambient Occlusion will be baked to two separate textures. The Ambient Occlusion texture will then be loaded to the <span class="command">Diffusion</span> channel.</p>
+<p><!--INDEX "8","Normal","no_id_2"--><a id="no_id_2" name="no_id_2"></a> <span class="no_id">Normal</span></p>
+<p>Bakes the Normal texture, which will subsequently be loaded into the <span class="command">Normal</span> material channel.</p>
+<p><!--INDEX "8","Illumination","no_id_3"--><a id="no_id_3" name="no_id_3"></a> <span class="no_id">Illumination</span></p>
+<p>If this option is active, the effects of various material channels (not including <span class="command">Reflectance</span>, <span class="command">Transparency</span>, <span class="command">Fog</span> or <span class="command">Glow</span>), including lighting and cast shadows will be baked. Hence, the most important material channels that constitute the surface of the object will be added to the texture. This functionality corresponds to the <span class="command">Bake Texture … </span> Tag’s Surface Color.</p>
+<p>If the option is not active, only the color channel will be baked.</p>
+<p>The baked material will be loaded into the <span class="command">Luminance</span> material channel.</p>
+<p><!--INDEX "8","Single Texture","no_id_4"--><a id="no_id_4" name="no_id_4"></a> <span class="no_id">Single Texture</span></p>
+<p>When active, this option will bake a single texture for numerous simultaneously selected objects. Of course the UV coordinates will be arranged in such a manner that a separate area for each object will be assigned to the texture.</p>
+<p>Deactivate this option if you want to bake a separate texture for each object.</p>
+<p><!--INDEX "8","Keep UVs","no_id_5"--><a id="no_id_5" name="no_id_5"></a> <span class="no_id">Keep UVs</span></p>
+<p>Enable this option if you have already set your UVs the way you want them (no UV polygons overlap). The UV mesh will then remain unchanged. When active, this option assures <span class="command">Optimal Mapping</span>.</p>
+<p><RELEASE_110 Object (Texture) baking can replace original objects.></p>
+<p><!--INDEX "8","Replace Objects","no_id_6"--><a id="no_id_6" name="no_id_6"></a> <span class="no_id">Replace Objects</span></p>
+<p>Enable this option if no new textures should be created during baking. The generated textures will be applied to the baked objects.</p>
+<p></RELEASE_110></p>
+<p><!--INDEX "8","Supersampling","no_id_7"--><a id="no_id_7" name="no_id_7"></a> <span class="no_id">Supersampling</span></p>
+<p><span class="command">Supersampling</span> sets the anti-aliasing during baking of the object’s texture (the anti-aliasing settings in the <span class="command">Render Settings … </span> have no influence when baking textures).</p>
+<p><!--INDEX "8","Pixel Border","no_id_8"--><a id="no_id_8" name="no_id_8"></a> <span class="no_id">Pixel Border</span></p>
+<p>Bakes a pixel border that extends beyond the UV polygons.</p>
+<p><!--INDEX "8","Width / Height","no_id_9"--><a id="no_id_9" name="no_id_9"></a> <span class="no_id">Width / Height</span></p>
+<p>Defines the width and height of the texture(s) to be baked.</p>
+<p><!--INDEX "8","Format / Options","no_id_10"--><a id="no_id_10" name="no_id_10"></a> <span class="no_id">Format / Options</span></p>
+<p>Select your bitmap’s file format here. If the format you select offers additional save options, the <span class="command">Options … </span> button will be made active.</p>
+<p><!--INDEX "8","Color Depth","no_id_11"--><a id="no_id_11" name="no_id_11"></a> <span class="no_id">Color Depth</span></p>
+<p>Select from 8-bit, 16-bit or 32-bit per channel.</p>
+<p>Not all file formats support all color depths!</p>
+<p><RELEASE_120 A color profile can be assigned to baked object textures (as well as in the Bake Texture tag).></p>
+<p><!--INDEX "8","Color Profile","no_id_12"--><a id="no_id_12" name="no_id_12"></a> <span class="no_id">Color Profile</span></p>
+<p>With this setting you can define which color profile should be embedded in the image/texture. In versions prior to R12, Cinema 4D automatically saved using the sRGB color profile. This can now be set to any color profile desired. However, you should only make changes to this setting if absolutely necessary.</p>
+<p>Note that many programs cannot read color profiles (for example, Windows 7 can only partially read color profiles).</p>
+<p>When using <a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#DOCUMENT_LINEARWORKFLOW" target="_self"><span class="text_id">Linear Workflow</span></a> in conjunction with Multi-Passes we recommend that you render with at least 16-bit color depth. If this is not possible, disable the Linear Workflow option to restore the normal Cinema 4D R12 properties (reason: Multi-Passes are saved with a linear profile. QuickTime cannot imbed color profiles and would therefore be read incorrectly when imported into external applications).</p>
+<p>More information regarding color management can be found <a href="DDOC-DOCUMENT_GROUP_PROJECTSETTINGS.html#col" target="">here</a>.</p>
+<p>Generally speaking, the default sRGB profile will be the correct profile.</p>
+<p>Clicking the button at the right will make the following menu items available for selection:</p>
+<p><!--INDEX "8","Color Management Disabled","no_id_13"--><a id="no_id_13" name="no_id_13"></a> <span class="no_id">Color Management Disabled</span></p>
+<p>No color profile will be embedded (will be read in accordance with the Project Settings or bitmap shader settings when the file is opened).</p>
+<p><!--INDEX "8","Load/Save","no_id_14"--><a id="no_id_14" name="no_id_14"></a> <span class="no_id">Load/Save</span></p>
+<p>Here you can load a color profile or save an existing one. These files have the extension "*.icc". If an image is loaded here, its color profile will be assumed.</p>
+<p><!--INDEX "8","Load From Monitor","no_id_15"--><a id="no_id_15" name="no_id_15"></a> <span class="no_id">Load From Monitor</span></p>
+<p>You can use monitor(hardware) profiles. However, this is not recommended since your monitor’s color profile will almost never match that of another monitor.</p>
+<p><!--INDEX "8","sRGB","no_id_16"--><a id="no_id_16" name="no_id_16"></a> <span class="no_id">sRGB</span></p>
+<p>Saves the image with sRGB color profile.</p>
+<p><!--INDEX "8","Linear","no_id_17"--><a id="no_id_17" name="no_id_17"></a> <span class="no_id">Linear</span></p>
+<p>Saves the image in a linear color profile.</p>
+<p></RELEASE_120></p>
+<p><!--INDEX "8","Path Name","no_id_18"--><a id="no_id_18" name="no_id_18"></a> <span class="no_id">Path Name</span></p>
+<p>Sets an absolute path to which the baked textures will be saved as a new material.</p>
+<p>Make sure Cinema 4D can later locate these files.</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

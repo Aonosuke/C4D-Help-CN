@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Texture Tag Menu</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "5748"-->
+		<!--VATER_ID "11057"-->
+		<!--REIHENFOLGE "9"-->
+		<!--TITLE "Texture Tag Menu"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP ""-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43666.html" target="_self">Reference</a></span> <span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5743.html" target="_self">Object Manager</a></span> <span class="link_back"><a href="11057.html" target="_self">Tags Menu</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--NO_SEARCH_END--><!--INDEX "2","Texture Tag Menu",""--><p><span class="HL_group">Texture Tag Menu</span></p><p></p>
+<p><!--INDEX "7","Generate UVW Coordinates","PLUGIN_CMD_12235"--><!--COMMAND "PLUGIN_CMD_12235"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12235.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12235" name="PLUGIN_CMD_12235"></a>   <span class="c4d_menu_id">Generate UVW Coordinates</span></p>
+<p><p><div class="hint"><span class="HL_hint">Tip:<br></span>You can also find many UVW functionalities in the BodyPaint 3D layout’s <a href="6375.html" target="">Edit UV</a> menu.</div></p>
+<p>You can use this command to generate UVW coordinates. This is especially useful for imported objects that do not have UVW coordinates. UVW coordinates prevent a texture from <span class="command">slipping</span> when you deform the object. You generate UVW coordinates starting from a normal projection mode such as Flat.</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","To generate UVW coordinates","hl_1"--><p><span class="HL_1">To generate UVW coordinates</span><ul></p>
+<p><li> Create a texture, allocate it to the object</li><li> Set the desired projection type such as Flat.</li><li> Generate UVW coordinates.</li><li> Deform the object.</li></ul><p></p>
+<p><div class="image_full" style="max-width:640px"><img  src="../pics/004029.jpg"  ><span class="caption"></span></div></p>
+<p>The effect of UVW coordinates is demonstrated in the picture above. The object to the left uses Cubic mapping. The texture slips when the object is deformed. The texture for the object to the right does not slip since its original cubic mapping has been fixed in place with UVW coordinates.</p>
+<p>You may use multiple Texture tags on an object, with each Texture tag assigned to a different UVW tag. To do this, add a new Texture tag to the object and set the desired projection type, such as flat mapping for a label. Next, choose Generate UVW coordinates. A new UVW geometry will be created and the selected Texture tag will switch over to UVW mapping so that the texture is fixed to the object’s surface.</p>
+<p>Each time Generate UVW Coordinates is used, a new UVW tag will appear in the <span class="command">Object Manager</span>. A Texture tag will use the first UVW tag that appears anywhere to the right of it in the tag list. If no UVW tag exists to the right of the Texture tag, then the Texture tag will use the first UVW tag on the tag list. In this way, different UVW tags can be assigned to different Texture tags.</p>
+<p>See <a href="TUVW.html" target="">UVW tag</a>.</p>
+<p>Note also that faulty projections can result if the geometry of the object to which the texture is applied is not subdivided sufficiently. In such cases you should increase the object’s subdivision.</p>
+<p><!--INDEX "7","Assign UVW Coordinates","PLUGIN_CMD_13577"--><!--COMMAND "PLUGIN_CMD_13577"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_13577.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_13577" name="PLUGIN_CMD_13577"></a>   <span class="c4d_menu_id">Assign UVW Coordinates</span></p>
+<p>This command enables you to texture an object with several different projection types using a single UVW geometry and a single Texture tag.</p>
+<p><a id="hl_2" name="hl_2"></a><!--INDEX "3","To assign UVW coordinates","hl_2"--><p><span class="HL_1">To assign UVW coordinates</span><ul></p>
+<p><li> Create a sphere and convert it into a polygon object with Make Editable.</li><li> Create a new material with a texture, e.g., the Checkerboard shader, and allocate it to the sphere.</li><li> Change the projection type from UVW Mapping to e.g., Flat.</li><li> Select several polygons.</li><li> In the <span class="command">Object Manager</span>, choose Tags / Assign UVW Coordinates.</li></ul><p></p>
+<p><div class="image_full" style="max-width:637px"><img  src="../pics/004030.jpg"  ><span class="caption"></span></div></p>
+<p><ul></p>
+<p><li> The selected polygons use <span class="command">Flat</span> projection while the unselected polygons continue to use the normal UVW mapping. If you deform the object, the texture remains fixed in the selected region as well.</li></ul><p></p>
+<p><p><div class="hint"><span class="HL_hint"></span>Selective UVW mapping is intended for you to optimize projection for a single texture. If you want to use more than one texture, use the Texture tag’s <a href="TTEXTURE-ID_TAGPROPERTIES.html#TEXTURETAG_RESTRICTION" target="">Selection</a> parameter.</div></p>
+<p>If the object has no UVW coordinates (i.e. no UVW tag), new coordinates are created automatically.</p>
+<p>UVW tag option: Lock UVW </p>
+<p>You may find that this option is enabled automatically when you import a scene from another program. The enabled option locks the UVW coordinates to prevent them being changed by BodyPaint 3D’s UV editing tools. This is useful for preventing accidental UVW changes.</p>
+<p><a id="AUFOBJEKTANPASSSEN" name="AUFOBJEKTANPASSSEN"></a><!--INDEX "7","Fit to Object","PLUGIN_CMD_12132"--><!--COMMAND "PLUGIN_CMD_12132"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12132.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12132" name="PLUGIN_CMD_12132"></a>   <span class="c4d_menu_id">Fit to Object</span> </p>
+<p>If you select this command, the texture will be made to cover the object completely — the texture will have a length of <span class="command_value">100%</span> in both the X and Y directions.</p>
+<p><div class="image_full" style="max-width:775px"><img  src="../pics/004031.jpg"  ><span class="caption"></span></div></p>
+<p><!--INDEX "7","Fit to Image …","PLUGIN_CMD_12192"--><!--COMMAND "PLUGIN_CMD_12192"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12192.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12192" name="PLUGIN_CMD_12192"></a>   <span class="c4d_menu_id">Fit to Image...</span> </p>
+<p>You must apply your texture with Flat projection if you want to use this command. Type the name of an image into the dialog. Cinema 4D calculates the image’s <span class="command">X</span> and <span class="command">Y</span> resolution and scales the texture in the V direction to constrain its proportions. You can use this command to ensure that your texture uses the correct proportions, thereby avoiding distortion.</p>
+<p><div class="image_full" style="max-width:775px"><img  src="../pics/004032.jpg"  ><span class="caption"></span></div></p>
+<p><!--INDEX "7","Fit to Region","PLUGIN_CMD_12193"--><!--COMMAND "PLUGIN_CMD_12193"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12193.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12193" name="PLUGIN_CMD_12193"></a>   <span class="c4d_menu_id">Fit to Region</span> </p>
+<p>You must apply your texture with Flat projection if you want to use this command. Use the mouse to drag a box. Cinema 4D fits the projection to this box.</p>
+<p><div class="image_full" style="max-width:775px"><img  src="../pics/004033.jpg"  ><span class="caption"></span></div></p>
+<p><!--INDEX "7","Adapt to Object Axis","PLUGIN_CMD_12130"--><!--COMMAND "PLUGIN_CMD_12130"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12130.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12130" name="PLUGIN_CMD_12130"></a>   <span class="c4d_menu_id">Adapt to Object Axis</span><br><!--INDEX "7","Adapt to World Axis","PLUGIN_CMD_12131"--><!--COMMAND "PLUGIN_CMD_12131"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12131.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12131" name="PLUGIN_CMD_12131"></a>   <span class="c4d_menu_id">Adapt to World Axis</span><br><!--INDEX "7","Adapt to View","PLUGIN_CMD_12133"--><!--COMMAND "PLUGIN_CMD_12133"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12133.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12133" name="PLUGIN_CMD_12133"></a>   <span class="c4d_menu_id">Adapt to View</span> </p>
+<p>Adapt To Object Axis and Adapt To World Axis rotate the texture axes in such a way that they are parallel to the object axes or world axes.</p>
+<table  border="0" cellspacing="10" cellpadding="0">  <TR>    <TD><div class="image_full" style="max-width:565px"><img  src="../pics/004034.jpg"  ><span class="caption">Adapt to Object Axis.</span></div></td></p>
+<p>    <TD><div class="image_full" style="max-width:565px"><img  src="../pics/004035.jpg"  ><span class="caption">Adapt to World Axis.</span></div></td></p>
+<p>  </TR></TABLE>
+<p>Adapt to View rotates the texture axes so that the texture is perpendicular to the viewing perspective. For a 3D viewport, this is the camera plane; for all other viewports, it is the work surface.</p>
+<p><div class="image_full" style="max-width:565px"><img  src="../pics/004036.jpg"  ><span class="caption">Adapt to View.</span></div></p>
+<p><!--INDEX "7","Mirror Horizontally","PLUGIN_CMD_12134"--><!--COMMAND "PLUGIN_CMD_12134"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12134.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12134" name="PLUGIN_CMD_12134"></a>   <span class="c4d_menu_id">Mirror Horizontally</span> </p>
+<p>Mirror Horizontally flips the texture horizontally. This effect is the same as if you were to view the texture’s reflection in a real mirror.</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004037.jpg"  ><span class="caption">Mirror Horizontally</span></div></p>
+<p><!--INDEX "7","Mirror Vertically","PLUGIN_CMD_12135"--><!--COMMAND "PLUGIN_CMD_12135"--><img class="cmd_icon" src="../icons/PLUGIN_CMD_12135.png" alt="" height="24" width="24"    border="1"> <a id="PLUGIN_CMD_12135" name="PLUGIN_CMD_12135"></a>   <span class="c4d_menu_id">Mirror Vertically</span></p>
+<p>Mirror Vertically flips the texture vertically, effectively turning the texture upside-down.</p>
+<p><div class="image_full" style="max-width:800px"><img  src="../pics/004038.jpg"  ><span class="caption">Mirror Vertically</span></div> </p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="generator" content="WICKIE">
+		<title>Texture Tag</title>
+		<meta name="FORMATTER" content="wickie">
+		<link href="../../files/wickie.css" type="text/css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="../../files/versionAppender.js"> </script>
+		<script type="text/javascript" src="../../files/linkRewriter.js"> </script> 
+		<!--PAGE_ID "4674"-->
+		<!--VATER_ID "5749"-->
+		<!--REIHENFOLGE "22"-->
+		<!--TITLE "Texture Tag"-->
+		<!--APPS "11 16 17 10 14 15"-->
+		<!--TYP "ATOM"-->
+	</head>
+
+<body bgcolor="#e0e0e0" link="black" vlink="#2a2a2a">
+
+
+<!--NO_SEARCH_START-->
+<span class="link_back"><a href="43668.html" target="_self">Cinema 4D</a></span> <span class="link_back"><a href="1001.html" target="_self">Cinema 4D Prime</a></span> <span class="link_back"><a href="5743.html" target="_self">Object Manager</a></span> <span class="link_back"><a href="11057.html" target="_self">Tags Menu</a></span> <span class="link_back"><a href="5749.html" target="_self">Cinema 4D Tags</a></span>
+
+<div class="in-lite-page in-prime-page in-visualize-page in-broadcast-page in-studio-page in-bodypaint3d-page ">  <div class="page_only_body">
+<div class="page_only_apps">             Function available in CINEMA 4D Prime, Visualize, Broadcast, Studio & BodyPaint 3D  </div>
+<!--INDEX "4","Texture Tag",""--><p><img class="icon" src="../icons/TTEXTURE.png" alt="" height="24" width="24" border="1"> <span class="HL_atom">Texture Tag </span><p></p><a href="TTEXTURE-OBASELIST.html" target=""><span class="c4d_group_navi">Basic</span></a> <a href="TTEXTURE-ID_TAGPROPERTIES.html" target=""><span class="c4d_group_navi">Tag</span></a> <a href="TTEXTURE-TEXTURETAG_COORDINATEGROUP.html" target=""><span class="c4d_group_navi">Coordinates</span></a><!--NO_SEARCH_END--><!--INDEX "2","Texture Tag",""--><p><span class="HL_group">Texture Tag</span></p><p></p>
+<p>This command creates a new  texture. Initially, no material is assigned. To assign a material, drag the material’s preview from the <span class="command">Material Manager</span> and drop it into the tag’s <span class="command">Material</span> box on the tag page of the <span class="command">Attribute Manager</span> (The normal workflow, however, is as follows: Drag a material from the <span class="command">Material Manager</span> onto an object. A properly linked Texture tag will automatically be created).</p>
+<p>You can also select multiple Texture tags and assign a material to all of them at the same time.</p>
+<p>You can assign as many Texture tags as you like to an object. This allows you to apply multiple texture layers to the same object. The texture priority increases to the right in the <span class="command">Object Manager</span>. In other words, the right-most texture is the top layer, the left-most texture is the bottom layer and the other textures are between these. The top layer will cover the object completely unless it is limited in size or has an alpha channel enabled. When a Texture tag is selected, the editor will display only that texture for the object; other textures on the object will be ignored.</p>
+<p><p><div class="hint"><span class="HL_hint"></span>If a child object has no Texture tags applied to it, it uses the Texture tag(s) of its parent. However, there is an exception: If a light has no Texture tag and is a child of another light, it will not inherit its parent’s Texture tags. This is to prevent child lights receiving gels automatically.</div></p>
+<p>When you assign a material to an object, a Texture tag is created and the tag’s settings appear in the <span class="command">Attribute Manager</span>. These texture settings define how the texture is mapped (i.e. placed) onto the object’s surface. For example, you may want the texture to be tiled (i.e. repeated) or you may want to place the texture on a specific part of the object. You can also have the texture mapped to one side only (decal mapping).</p>
+<p>To apply a texture to an object, do one of the following:<ul></p>
+<p><li> Drag the material from the <span class="command">Material Manager</span> and drop it on to the object’s name in the <span class="command">Object Manager</span>. The texture settings will appear in the <span class="command">Attribute Manager</span>. The mouse pointer will change during this process to indicate the add state:</li></ul><p></p>
+<p><div class="image_full" style="max-width:33px"><img  src="../pics/004530.jpg"  ><span class="caption"></span></div> </p>
+<p><ul></p>
+<p><li> Select the object in the <span class="command">Object Manager</span> and select the material in the <span class="command">Material Manager</span>. In the <span class="command">Material Manager</span>, choose <span class="command">Function / Apply</span>. The texture settings will appear in the <span class="command">Attribute Manager</span>.</li><li> Drag & drop a new material on to an existing Texture tag. The new material will replace the old one, but will inherit the existing Texture tag settings.</li><li> Drag & drop the material directly onto the object in the viewport. If you hold down the <nobr><span class="key">Ctrl/Cmd</span></nobr> key at the same time, a menu will appear if there is more than one object in the area where you drop the material. Use the menu to choose which object the material should be applied to.</li><li> Drag the object from the <span class="command">Object Manager</span> and drop it into the Assignment box on the material’s Assignment tab (<span class="command">Attribute Manager</span>). This method gives you a quick way to assign the same material to multiple objects.</li></ul><p></p>
+<p><div class="image_full" style="max-width:24px"><img  src="../pics/004531.jpg"  ><span class="caption"></span></div> </p>
+<p>When you assign a material to an object, a Texture tag is created and the tag’s settings appear in the <span class="command">Attribute Manager</span>. These texture settings define how the texture is mapped (i.e. placed) onto the object’s surface. For example, you may want the texture to be tiled (i.e. repeated) or you may want to place the texture on a specific part of the object. You can also have the texture mapped to one side only (decal mapping).</p>
+<p><a id="hl_1" name="hl_1"></a><!--INDEX "3","Applying different materials to shell, caps and fillet","hl_1"--><p><span class="HL_1">Applying different materials to shell, caps and fillet</span></p>
+<p>The shell, caps and fillet of a Generator object with caps (e.g., an Extrude object) can each be assigned a different material! To do so, the object can either be made editable or you can use the Selections (see below).</p>
+<p><p><div class="hint"><span class="HL_hint"></span>Note!</p>
+<p>Generator objects contain polygon selections for caps and fillet that are not visible. These can, though, also be used.</div></p>
+<p>If, for example, you want to apply a material to only the first cap of a given Generator object simply enter the name <span class="command">C1</span> in the material’s <span class="command">Selection</span> text field (use an upper case C). The following entries can also be made:</p>
+<p>C1 = Cap Start (Cap 1)</p>
+<p>C2 = Cap End (Cap 2)</p>
+<p>R1 = Fillet Start (Rounding 1)</p>
+<p>R2 = Fillet End (Rounding 2)</p>
+<p>
+
+</p>
+  </div>  </div>
+</body>
+
+</html>

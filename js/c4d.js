@@ -199,6 +199,45 @@ var menuItems =[
         {"id": "5706", "data": "help/CN/html/5706.html", "text": "清空光照缓存"},
         {"id": "53798", "data": "help/CN/html/53798.html", "text": "在网络中共享机器"},
       ]},
+      {"id": "5741", "data": "help/CN/html/xxx5741.html", "text": "帮助菜单"},
+      {"id": "5743", "data": "help/CN/html/xxx5743.html", "text": "对象管理器（施工中）", "children": [
+        {"id": "5744", "data": "help/CN/html/xxx5744.html", "text": "文件菜单", "children": [
+          {"id": "5771", "data": "help/CN/html/xxx5771.html", "text": "合并对象…"},
+          {"id": "5772", "data": "help/CN/html/xxx5772.html", "text": "保存所选对象为…"},
+          {"id": "5775", "data": "help/CN/html/xxx5775.html", "text": "加载/保存对象预置"},
+          {"id": "5776", "data": "help/CN/html/xxx5776.html", "text": "加载/保存预置标签"},
+        ]},
+        {"id": "5745", "data": "help/CN/html/xxx5745.html", "text": "编辑菜单"},
+        {"id": "11059", "data": "help/CN/html/xxx11059.html", "text": "查看", "children": [
+          {"id": "11061", "data": "help/CN/html/xxx11061.html", "text": "图标尺寸"},
+          {"id": "11062", "data": "help/CN/html/xxx11062.html", "text": "折叠"},
+          {"id": "11063", "data": "help/CN/html/xxx11063.html", "text": "设为根部"},
+          {"id": "11064", "data": "help/CN/html/xxx11064.html", "text": "转到主层"},
+          {"id": "11065", "data": "help/CN/html/xxx11065.html", "text": "向上一级"},
+          {"id": "11066", "data": "help/CN/html/xxx11066.html", "text": "转到第一激活对象"},
+          {"id": "11067", "data": "help/CN/html/xxx11067.html", "text": "显示搜索条"},
+          {"id": "11068", "data": "help/CN/html/xxx11068.html", "text": "显示路径条"},
+          {"id": "11069", "data": "help/CN/html/xxx11069.html", "text": "使用过滤"},
+          {"id": "11070", "data": "help/CN/html/xxx11070.html", "text": "平面目录树"},
+          {"id": "11071", "data": "help/CN/html/xxx11071.html", "text": "竖向标签"},
+          {"id": "11072", "data": "help/CN/html/xxx11072.html", "text": "按名称排列"},
+        ]},
+        {"id": "5746", "data": "help/CN/html/xxx5746.html", "text": "对象菜单", "children": [
+          {"id": "5369", "data": "help/CN/html/xxx5369.html", "text": "烘焙纹理", "children": [
+            {"id": "5370", "data": "help/CN/html/xxx5370.html", "text": "烘焙纹理：基本"},
+            {"id": "5371", "data": "help/CN/html/xxx5371.html", "text": "烘焙纹理：标签属性"},
+            {"id": "5372", "data": "help/CN/html/xxx5372.html", "text": "烘焙纹理：选项"},
+            {"id": "5373", "data": "help/CN/html/xxx5373.html", "text": "烘焙纹理：细节"},
+          ]},
+          {"id": "5739", "data": "help/CN/html/xxx5739.html", "text": "烘焙对象"},
+        ]},
+        {"id": "11057", "data": "help/CN/html/xxx11057.html", "text": "标签菜单", "children": [
+          {"id": "5749", "data": "help/CN/html/xxx5749.html", "text": "CINEMA 4D 标签"},
+          {"id": "5747", "data": "help/CN/html/xxx5747.html", "text": "标签菜单"},
+          {"id": "5748", "data": "help/CN/html/xxx5748.html", "text": "纹理标签菜单"},
+        ]},
+        {"id": "11060", "data": "help/CN/html/xxx11060.html", "text": "书签"},
+      ]},
       {"id": "5808", "data": "help/CN/html/5808.html", "text": "材质管理器", "children": [
         {"id": "5809", "data": "help/CN/html/5809.html", "text": "创建菜单"},
         {"id": "5810", "data": "help/CN/html/5810.html", "text": "编辑菜单"},
@@ -231,7 +270,7 @@ var menuItems =[
     {"id":"1002", "data": "help/CN/html/tut/__tut_1002.html", "text": "Cinema 4D 教程", "children": [
       {"id": "40480",  "data": "help/CN/html/tut/__tut_40480.html", "text": "机械建模教程", "children": [
         {"id": "40453", "data": "help/CN/html/tut/__tut_40453.html", "text": "使用布尔和实例对象", "children": [
-          {"id": "40440", "data": "help/CN/html/tut/__tut_40440.html", "text": "铅笔建模"}
+          {"id": "40440", "data": "help/CN/html/tut/__tut_40440.html", "text": "铅笔建模"},
         ]}
       ]},
     ]}
