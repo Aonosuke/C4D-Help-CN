@@ -199,7 +199,7 @@ var menuItems =[
         {"id": "5706", "data": "help/CN/html/5706.html", "text": "清空光照缓存"},
         {"id": "53798", "data": "help/CN/html/53798.html", "text": "在网络中共享机器"},
       ]},
-      {"id": "5741", "data": "help/CN/html/xxx5741.html", "text": "帮助菜单"},
+      {"id": "5741", "data": "help/CN/html/5741.html", "text": "帮助菜单"},
       {"id": "5743", "data": "help/CN/html/xxx5743.html", "text": "对象管理器（施工中）", "children": [
         {"id": "5744", "data": "help/CN/html/xxx5744.html", "text": "文件菜单", "children": [
           {"id": "5771", "data": "help/CN/html/xxx5771.html", "text": "合并对象…"},
