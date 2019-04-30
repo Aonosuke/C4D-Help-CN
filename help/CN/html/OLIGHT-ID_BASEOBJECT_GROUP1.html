@@ -47,17 +47,17 @@
 <p><a id="ID_BASEOBJECT_REL_ROTATION" name="ID_BASEOBJECT_REL_ROTATION"></a> <!--INDEX "8","R","ID_BASEOBJECT_REL_ROTATION"--><span class="c4d_id">R</span> <span class="range">[HPB °]</span></p>
 <p>这个数值表示对象相对世界坐标系的旋转角度。如果对象有层级关系，则是相对父坐标系（参见<a href="5742.html" target="">坐标管理器</a>）。</p>
 <p><a id="ID_BASEOBJECT_ROTATION_ORDER" name="ID_BASEOBJECT_ROTATION_ORDER"></a> <!--INDEX "8","顺序","ID_BASEOBJECT_ROTATION_ORDER"--><span class="c4d_id">顺序</span></p>
-<p>这个下拉菜单的选项只在动画中有用，这些选项能减弱“万向节锁”效应。</p>
+<p>这个下拉菜单的选项只在动画中有用，这些选项能减弱“万向节死锁”效应。</p>
 <p>让我们看看下面示例中的问题：</p>
 <p><div class="image_full" style="max-width:1406px"><img  src="../pics/03xxxx/031350.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
-<p>这里有带有复杂层级关系的动画角色。假设你想要在正视图中做一段左臂向下旋转的动画，因此我们要在指尖朝上和朝下的位置设置关键帧。如果现在从顶视图播放动画，除了我们期望的向下运动之外，手臂还会轻微的转向（上图的右上角）。这就是“万向节锁”效应。这个示例里面效果不太明显，但是在极端情况下，它会让动画变得很不正常，形成螺旋形的运动。</p>
+<p>这里有带有复杂层级关系的动画角色。假设你想要在正视图中做一段左臂向下旋转的动画，因此我们要在指尖朝上和朝下的位置设置关键帧。如果现在从顶视图播放动画，除了我们期望的向下运动之外，手臂还会轻微的转向（上图的右上角）。这就是“万向节死锁”效应。这个示例里面效果不太明显，但是在极端情况下，它会让动画变得很不正常，形成螺旋形的运动。</p>
 <p>如何设置正确的旋转顺序来减弱这种效应？你需要在制作动画之前观察关节坐标轴，看看哪个轴预计旋转的角度最小。在上面的示例中，是图左中标记的 X 轴。现在选择一个 X 轴位于第二位的<span class="command">顺序</span>选项，虽然仍然会出现轻微的抖动，但是结果比之前要好得多。</p>
 <p>另一个能帮助决定旋转顺序的是<a href="TOOLROTATE-MDATA_OBJECTAXIS_GROUP.html#MDATA_AXIS_GIMBALROTATION" target="_self"><span class="text_id">万向旋转</span></a>选项，启用这个选项然后使用<span class="command">旋转</span>工具：</p>
 <p><div class="image_full" style="max-width:1675px"><img  src="../pics/03xxxx/031351.jpg"  ><span class="caption">
 	图左中<span class="command">顺序</span>设为<span class="command_value">HPB</span>，图右为<span class="command_value">XYZ</span>。</span></div></p>
-<p>使用旋转带你可以直接看到（制作动画前）计划的动作是否会按预计的方向运动。在上图左边可以看到，红色、绿色和蓝色旋转带的位置很明显没法按红色箭头方向进行旋转（没有旋转带位于旋转平面上）。这样制作的动画就会出现万向节锁的问题。</p>
-<p>选择不同的<span class="command">顺序</span>选项，直到旋转带正好位于或接近旋转平面（上图中的蓝色旋转带），这时创建的动画中出现万向节锁的问题就比较小了：</p>
+<p>使用旋转带你可以直接看到（制作动画前）计划的动作是否会按预计的方向运动。在上图左边可以看到，红色、绿色和蓝色旋转带的位置很明显没法按红色箭头方向进行旋转（没有旋转带位于旋转平面上）。这样制作的动画就会出现万向节死锁的问题。</p>
+<p>选择不同的<span class="command">顺序</span>选项，直到旋转带正好位于或接近旋转平面（上图中的蓝色旋转带），这时创建的动画中出现万向节死锁的问题就比较小了：</p>
 <p>通常，如果将顺序中第二个参数（下图中标记的参数）设置为 90°（或 270°）左右的数值，容易出现上面的问题：</p>
 <p><div class="image_full" style="max-width:176px"><img  src="../pics/03xxxx/031352.jpg"  ><span class="caption"></span></div></p>
 <p> </p>
@@ -69,14 +69,14 @@
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
 	四元标签（只有加载 R18 之前版本的场景时会出现，并且不能再创建新的标签）的功能没有被继承到对象属性中。</div></p>
 <p><a id="hl_1" name="hl_1"></a><!--INDEX "3","概述","hl_1"--><p><span class="HL_3">概述</span></p>
-<p>你可能听说过，甚至遇到过在角色动画中出现的<span class="command">万向节锁</span>问题。</p>
-<p>万向节锁会在旋转值为<span class="command">P</span> +/- 90° 时出现，对<span class="command">H</span>或<span class="command">B</span>进行同样的设置时也会产生这个现象，导致的结果是这些坐标中的其中一个会完全丢失，即使很小的旋转也会出现较大的旋转跳跃。</p>
+<p>你可能听说过，甚至遇到过在角色动画中出现的<span class="command">万向节死锁</span>问题。</p>
+<p>万向节死锁会在旋转值为<span class="command">P</span> +/- 90° 时出现，对<span class="command">H</span>或<span class="command">B</span>进行同样的设置时也会产生这个现象，导致的结果是这些坐标中的其中一个会完全丢失，即使很小的旋转也会出现较大的旋转跳跃。</p>
 <p>四元功能只对制作旋转动画有用。</p>
 <p>默认情况下，CINEMA 4D 使用<span class="command">欧拉旋转</span>对物体的旋转进行插值（欧拉旋转：在欧几里得空间（直角）中对离散旋转（HPB）使用陀螺系统。）</p>
 <p>欧拉旋转的单个组件会单独计算插值，这意味着从 HPB (0, 0, 0) 到 HPB (60, 60, 60) 的平均值是 HPB (30, 30, 30)。而实际上在视窗的测试中，从 0, 0, 0 经过  30, 30, 30 到 60, 60, 60 的摆动不一定是最短的路径。</p>
 <p>现在需要的是一个从 A 到 B 的最短路径的插值，就像需要手动设置动画路径时你所作的那样。</p>
 <p>这也就是四元的作用。四元会让 0, 0, 0 通过 35.104 °, 22.83 °, 35.104 ° 到 60, 60, 60。</p>
-<p>四元不会出现不必要的运动，因此来避免<span class="command">万向节锁</span>效应。</p>
+<p>四元不会出现不必要的运动，因此来避免<span class="command">万向节死锁</span>效应。</p>
 <p>你可能会疑惑，那为什么四元动画不是对所有对象都适用？因为四元插值也有缺点，四元在旋转角度小于 180° 时效果很好，但如果超过这范围，由于四元会寻找最短的可能路径，这样就会出现问题。</p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
 	四元表达式的最短路径始终位于三维球体上。这可以看作是四元插值围绕一组固定的坐标轴旋转——它可以以尽可能小的旋转围绕该轴旋转。通常，这与对象坐标轴轴无关，并且每个旋转相互独立。</div></p>
@@ -100,7 +100,7 @@
 <li> 从技术角度来看，四元旋转的F曲线显示经常是无效的（尤其是当两个关键帧之间的动画角度大于180°时），因此F曲线对四元来说没什么用。</li></ul><p></p>
 <p><a id="hl_3" name="hl_3"></a><!--INDEX "3","应该在什么时候使用四元动画？","hl_3"--><p><span class="HL_3">应该在什么时候使用四元动画？</span></p>
 <p>在以下情况中应使用四元动画：<ul></p>
-<p><li> 当出现万向节锁问题或坐标轴跳动时。</li></ul><p></p>
+<p><li> 当出现万向节死锁问题或坐标轴跳动时。</li></ul><p></p>
 <p>在以下情况中不应使用四元动画：<ul></p>
 <p><li> 两个关键帧之间的旋转角度超过180°时（如果启用四元，旋转会沿着最短的路径进行）。</li>
 <li> 需要微调F曲线时（即调整动画时间）。</li></ul><p></p>
@@ -114,12 +114,12 @@
 <p>这个场景包含两个对象：上图中 Arm 2 是 Arm 1 的子对象，显示的坐标轴是它的局部坐标。显示在<span class="command">属性管理器</span>中的则是局部坐标（它反映的是相对父对象坐标系的位置和角度）。目前为止没什么问题。</p>
 <p>现在我们要对 Arm 2 制作动画，将它沿 X 轴旋转45°。正常情况我们会使用旋转带来旋转对象，并设置两个关键帧：</p>
 <p><div class="image_full" style="max-width:1249px"><img  src="../pics/03xxxx/030746.jpg"  ><span class="caption"></span></div></p>
-<p>在上面中图可以看到旋转的结果。即使只沿一个轴进行旋转，所有三个轴都会发生变化。这是因为父对象（Arm 1）的坐标系与局部坐标系的方向不同。通常这种情况无法避免，并且在时间线中三条F曲线都可能会变化。更糟的是，这个案例在结下来的旋转中还会出现万向节锁效应（参见<a href="OCUBE-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_Quaternion_ROTATION_INTERPOLATION" target="_self"><span class="text_id">四元旋转</span></a>）。</p>
+<p>在上面中图可以看到旋转的结果。即使只沿一个轴进行旋转，所有三个轴都会发生变化。这是因为父对象（Arm 1）的坐标系与局部坐标系的方向不同。通常这种情况无法避免，并且在时间线中三条F曲线都可能会变化。更糟的是，这个案例在结下来的旋转中还会出现万向节死锁效应（参见<a href="OCUBE-ID_BASEOBJECT_GROUP1.html#ID_BASEOBJECT_Quaternion_ROTATION_INTERPOLATION" target="_self"><span class="text_id">四元旋转</span></a>）。</p>
 <p>上面这些缺点都可以通过在制作动画<b>之前</b>冻结变换来避免。这会将位置、缩放和旋转的数值复制到同名的冻结数值，并分别将初始值设为<span class="command_value">0</span>和<span class="command_value">1</span>。</p>
 <p>这项功能有以下优点：<ul></p>
 <p><li> 偏移的坐标值会被清零，可以方便地将它们设置为初始值。并且可以比较容易地进行参数控制，例如通过 XPresso 进行旋转。</li>
 <li> 所有动画的F曲线都会以<span class="command_value">0</span>作为起点。</li>
-<li> 可以在单一方向旋转中避免万向节锁效应。</li></ul><p></p>
+<li> 可以在单一方向旋转中避免万向节死锁效应。</li></ul><p></p>
 <p><p><div class="hint"><span class="HL_hint">提示：<br></span>
 	<span class="command">冻结位移</span>命令（<span class="command">工具 | 坐标</span>菜单）会对所有选择的对象执行相同的命令。</div></p>
 <p></p>
